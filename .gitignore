@@ -6,7 +6,7 @@
 node_modules/
 
 # Data files (optional, if you don’t want raw CSVs in repo)
-data/*.csv
+# data/*.csv
 
 # Large generated JSON
-data/*.json
+# data/*.json
