@@ -1,5 +1,6 @@
 // document.addEventListener('DOMContentLoaded', () => {
 // Git test changes!
+// this is only for new-features, not main!
 //     let map = L.map('map').setView([46.6, 2.5], 3);
 //     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom:19 }).addTo(map);
 
