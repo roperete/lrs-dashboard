@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         panel2: { open: false, pinned: false, simulantId: null }
     };
     let compareMode = false;
+    let isProgrammaticMove = false;
 
     // Constants
     const euCountries = ["AUT", "BEL", "BGR", "HRV", "CYP", "CZE", "DNK", "EST", "FIN", "FRA",
@@ -185,11 +186,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Event listeners for filters with toggle behavior
         [typeFilter, countryFilter, mineralFilter, chemicalFilter].forEach(filter => {
-            filter.addEventListener('click', (e) => {
+            filter.addEventListener('mousedown', (e) => {
                 if (e.target.tagName === 'OPTION') {
+                    e.preventDefault();
                     const option = e.target;
                     option.selected = !option.selected;
-                    e.preventDefault();
                     updateMap();
                     updateSimulantCount();
 
@@ -288,8 +289,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Map interactions - minimize unpinned panels
+        // Map interactions - minimize unpinned panels (but not during programmatic moves)
         map.on('drag', () => {
+            if (isProgrammaticMove) return;
             if (!panelStates.panel1.pinned && panelStates.panel1.open) {
                 minimizePanel(1);
             }
@@ -299,6 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         map.on('zoomstart', () => {
+            if (isProgrammaticMove) return;
             if (!panelStates.panel1.pinned && panelStates.panel1.open) {
                 minimizePanel(1);
             }
@@ -534,7 +537,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const site = sites.find(site => site.simulant_id === simulant_id);
         if (site && site.lat && site.lon) {
             if (centerMap) {
-                setTimeout(() => map.flyTo([site.lat, site.lon], 7), 250);
+                isProgrammaticMove = true;
+                setTimeout(() => {
+                    map.flyTo([site.lat, site.lon], 7);
+                    map.once('moveend', () => {
+                        isProgrammaticMove = false;
+                    });
+                }, 250);
             }
             if (openPopup && markerMap[simulant_id]) {
                 markerMap[simulant_id].openPopup();
