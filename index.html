@@ -31,6 +31,13 @@
                 <select id="lrs-dropdown" class="select-modern" title="Select a simulant to view details">
                     <option value="">Search or select...</option>
                 </select>
+                <button id="clear-filters" class="btn-clear-filters" title="Reset all filters and return to home view">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                        </path>
+                    </svg>
+                    Clear All Filters
+                </button>
             </div>
 
             <div class="filter-divider"></div>
@@ -148,13 +155,31 @@
                 </select>
             </div>
 
-            <button id="clear-filters" class="btn-primary" title="Reset all filters and return to home view">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                    </path>
-                </svg>
-                Clear All Filters
-            </button>
+            <div class="filter-group">
+                <label title="Filter by institution">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path>
+                    </svg>
+                    Institution
+                </label>
+                <div class="select-all-wrapper">
+                    <button class="select-all-btn" data-target="institution-filter" data-action="select" title="Select all institutions">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        All
+                    </button>
+                    <button class="deselect-all-btn" data-target="institution-filter" data-action="deselect" title="Deselect all institutions">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        None
+                    </button>
+                </div>
+                <select id="institution-filter" multiple class="select-modern" title="Click to toggle selection">
+                </select>
+            </div>
         </div>
 
         <div class="sidebar-footer">
@@ -200,6 +225,13 @@
         <div class="panel-header">
             <h3 class="panel-title">Select a simulant</h3>
             <div class="panel-actions">
+                <button class="btn-search-sources" id="search-sources-1" title="Search Google Scholar for papers about this simulant">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    Sources
+                </button>
                 <button class="btn-icon compare-btn-panel" id="compare-btn-1" title="Compare with another simulant">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7"></rect>
@@ -258,6 +290,13 @@
         <div class="panel-header">
             <h3 class="panel-title">Select second simulant</h3>
             <div class="panel-actions">
+                <button class="btn-search-sources" id="search-sources-2" title="Search Google Scholar for papers about this simulant">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    Sources
+                </button>
                 <button class="btn-icon" id="pin-panel-2" title="Pin panel to keep it open">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 17v5m-3-2 3 3 3-3"></path>
