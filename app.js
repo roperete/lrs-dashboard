@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
         attributionControl: true
     }).setView([46.6, 2.5], 3);
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
         maxZoom: 19,
-        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
+        attribution: 'Tiles © Esri'
     }).addTo(map);
 
     // Custom moon icon
@@ -125,11 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const countryFilter = Array.from(document.getElementById('country-filter').selectedOptions).map(o => o.value);
         const mineralFilter = Array.from(document.getElementById('mineral-filter').selectedOptions).map(o => o.value);
         const chemicalFilter = Array.from(document.getElementById('chemical-filter').selectedOptions).map(o => o.value);
+        const institutionFilter = Array.from(document.getElementById('institution-filter').selectedOptions).map(o => o.value);
 
         let filtered = simulants.filter(s => {
             let keep = true;
             if (typeFilter.length) keep = keep && typeFilter.includes(s.type);
             if (countryFilter.length) keep = keep && countryFilter.includes(s.country_code);
+            if (institutionFilter.length) keep = keep && institutionFilter.includes(s.institution);
             if (mineralFilter.length) {
                 let sMinerals = minerals.filter(m => m.simulant_id === s.simulant_id).map(m => m.component_name);
                 keep = keep && mineralFilter.some(m => sMinerals.includes(m));
@@ -156,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const countryFilter = document.getElementById('country-filter');
         const mineralFilter = document.getElementById('mineral-filter');
         const chemicalFilter = document.getElementById('chemical-filter');
+        const institutionFilter = document.getElementById('institution-filter');
 
         simulants.forEach(s => {
             const opt = document.createElement('option');
@@ -192,8 +195,15 @@ document.addEventListener('DOMContentLoaded', () => {
             chemicalFilter.appendChild(opt);
         });
 
+        [...new Set(simulants.map(s => s.institution).filter(Boolean))].sort().forEach(i => {
+            const opt = document.createElement('option');
+            opt.value = i;
+            opt.text = i.replace(/\r?\n/g, ' ').trim(); // Clean up multiline institution names
+            institutionFilter.appendChild(opt);
+        });
+
         // Event listeners for filters with toggle behavior
-        [typeFilter, countryFilter, mineralFilter, chemicalFilter].forEach(filter => {
+        [typeFilter, countryFilter, mineralFilter, chemicalFilter, institutionFilter].forEach(filter => {
             filter.addEventListener('mousedown', (e) => {
                 if (e.target.tagName === 'OPTION') {
                     e.preventDefault();
@@ -277,6 +287,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 panel.classList.add('pinned');
             } else {
                 panel.classList.remove('pinned');
+            }
+        });
+
+        // Search Sources buttons - opens Google Scholar search for the simulant
+        document.getElementById('search-sources-1').addEventListener('click', function () {
+            const simulantId = panelStates.panel1.simulantId;
+            if (!simulantId) {
+                alert('Please select a simulant first');
+                return;
+            }
+            const s = simulants.find(x => x.simulant_id === simulantId);
+            if (s) {
+                const query = encodeURIComponent(`"${s.name}" lunar regolith`);
+                window.open(`https://scholar.google.com/scholar?q=${query}`, '_blank');
+            }
+        });
+
+        document.getElementById('search-sources-2').addEventListener('click', function () {
+            const simulantId = panelStates.panel2.simulantId;
+            if (!simulantId) {
+                alert('Please select a simulant first');
+                return;
+            }
+            const s = simulants.find(x => x.simulant_id === simulantId);
+            if (s) {
+                const query = encodeURIComponent(`"${s.name}" lunar regolith`);
+                window.open(`https://scholar.google.com/scholar?q=${query}`, '_blank');
             }
         });
 
@@ -421,6 +458,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const countryFilter = Array.from(document.getElementById('country-filter').selectedOptions).map(o => o.value);
         const mineralFilter = Array.from(document.getElementById('mineral-filter').selectedOptions).map(o => o.value);
         const chemicalFilter = Array.from(document.getElementById('chemical-filter').selectedOptions).map(o => o.value);
+        const institutionFilter = Array.from(document.getElementById('institution-filter').selectedOptions).map(o => o.value);
 
         let filtered = simulants.filter(s => {
             let keep = true;
@@ -434,6 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let sChemicals = chemicals.filter(c => c.simulant_id === s.simulant_id).map(c => c.component_name);
                 keep = keep && chemicalFilter.some(c => sChemicals.includes(c));
             }
+            if (institutionFilter.length) keep = keep && institutionFilter.includes(s.institution);
             return keep;
         });
 
@@ -747,7 +786,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Clear filters and navigate home
     document.getElementById('clear-filters').addEventListener('click', () => {
-        ['type-filter', 'country-filter', 'mineral-filter', 'chemical-filter'].forEach(id => {
+        ['type-filter', 'country-filter', 'mineral-filter', 'chemical-filter', 'institution-filter'].forEach(id => {
             const select = document.getElementById(id);
             if (select) {
                 Array.from(select.options).forEach(opt => opt.selected = false);
