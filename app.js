@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
         attributionControl: true
     }).setView([46.6, 2.5], 3);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
         maxZoom: 19,
-        attribution: '© OpenStreetMap contributors'
+        attribution: 'Tiles © Esri'
     }).addTo(map);
 
     // Custom moon icon
@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         panel2: { open: false, pinned: false, simulantId: null }
     };
     let compareMode = false;
+    let isProgrammaticMove = false;
 
     // Constants
     const euCountries = ["AUT", "BEL", "BGR", "HRV", "CYP", "CZE", "DNK", "EST", "FIN", "FRA",
@@ -53,7 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
         "Germany": "DEU", "Italy": "ITA", "China": "CHN",
         "Australia": "AUS", "Norway": "NOR", "Canada": "CAN",
         "Japan": "JPN", "South Korea": "KOR", "India": "IND",
-        "Turkey": "TUR", "Thailand": "THA"
+        "Turkey": "TUR", "Thailand": "THA", "Ital": "ITA", "Spain": "ESP"
+    };
+
+    // Display names for country codes in filters
+    const countryDisplayNames = {
+        "USA": "United States",
+        "UK": "United Kingdom",
+        "EU": "European Union",
+        "Ital": "Italy"
     };
 
     // Loading overlay
@@ -116,11 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const countryFilter = Array.from(document.getElementById('country-filter').selectedOptions).map(o => o.value);
         const mineralFilter = Array.from(document.getElementById('mineral-filter').selectedOptions).map(o => o.value);
         const chemicalFilter = Array.from(document.getElementById('chemical-filter').selectedOptions).map(o => o.value);
+        const institutionFilter = Array.from(document.getElementById('institution-filter').selectedOptions).map(o => o.value);
 
         let filtered = simulants.filter(s => {
             let keep = true;
             if (typeFilter.length) keep = keep && typeFilter.includes(s.type);
             if (countryFilter.length) keep = keep && countryFilter.includes(s.country_code);
+            if (institutionFilter.length) keep = keep && institutionFilter.includes(s.institution);
             if (mineralFilter.length) {
                 let sMinerals = minerals.filter(m => m.simulant_id === s.simulant_id).map(m => m.component_name);
                 keep = keep && mineralFilter.some(m => sMinerals.includes(m));
@@ -147,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const countryFilter = document.getElementById('country-filter');
         const mineralFilter = document.getElementById('mineral-filter');
         const chemicalFilter = document.getElementById('chemical-filter');
+        const institutionFilter = document.getElementById('institution-filter');
 
         simulants.forEach(s => {
             const opt = document.createElement('option');
@@ -165,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         [...new Set(simulants.map(s => s.country_code).filter(Boolean))].sort().forEach(c => {
             const opt = document.createElement('option');
             opt.value = c;
-            opt.text = c;
+            opt.text = countryDisplayNames[c] || c;
             countryFilter.appendChild(opt);
         });
 
@@ -183,13 +195,20 @@ document.addEventListener('DOMContentLoaded', () => {
             chemicalFilter.appendChild(opt);
         });
 
+        [...new Set(simulants.map(s => s.institution).filter(Boolean))].sort().forEach(i => {
+            const opt = document.createElement('option');
+            opt.value = i;
+            opt.text = i.replace(/\r?\n/g, ' ').trim(); // Clean up multiline institution names
+            institutionFilter.appendChild(opt);
+        });
+
         // Event listeners for filters with toggle behavior
-        [typeFilter, countryFilter, mineralFilter, chemicalFilter].forEach(filter => {
-            filter.addEventListener('click', (e) => {
+        [typeFilter, countryFilter, mineralFilter, chemicalFilter, institutionFilter].forEach(filter => {
+            filter.addEventListener('mousedown', (e) => {
                 if (e.target.tagName === 'OPTION') {
+                    e.preventDefault();
                     const option = e.target;
                     option.selected = !option.selected;
-                    e.preventDefault();
                     updateMap();
                     updateSimulantCount();
 
@@ -202,11 +221,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Select All buttons
-        document.querySelectorAll('.select-all-btn').forEach(btn => {
+        // Select All / Deselect All buttons
+        document.querySelectorAll('.select-all-btn, .deselect-all-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const targetId = btn.dataset.target;
+                const action = btn.dataset.action;
                 const select = document.getElementById(targetId);
-                Array.from(select.options).forEach(opt => opt.selected = true);
+                const shouldSelect = action === 'select';
+                Array.from(select.options).forEach(opt => opt.selected = shouldSelect);
                 updateMap();
                 updateSimulantCount();
                 if (targetId === 'country-filter') {
@@ -268,6 +290,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Search Sources buttons - opens Google Scholar search for the simulant
+        document.getElementById('search-sources-1').addEventListener('click', function () {
+            const simulantId = panelStates.panel1.simulantId;
+            if (!simulantId) {
+                alert('Please select a simulant first');
+                return;
+            }
+            const s = simulants.find(x => x.simulant_id === simulantId);
+            if (s) {
+                const query = encodeURIComponent(`"${s.name}" lunar regolith`);
+                window.open(`https://scholar.google.com/scholar?q=${query}`, '_blank');
+            }
+        });
+
+        document.getElementById('search-sources-2').addEventListener('click', function () {
+            const simulantId = panelStates.panel2.simulantId;
+            if (!simulantId) {
+                alert('Please select a simulant first');
+                return;
+            }
+            const s = simulants.find(x => x.simulant_id === simulantId);
+            if (s) {
+                const query = encodeURIComponent(`"${s.name}" lunar regolith`);
+                window.open(`https://scholar.google.com/scholar?q=${query}`, '_blank');
+            }
+        });
+
         // Compare buttons in panels
         document.getElementById('compare-btn-1').addEventListener('click', function () {
             if (!panelStates.panel1.simulantId) {
@@ -279,17 +328,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (compareMode) {
                 document.getElementById('info-panel-1').classList.add('comparison-mode');
-                document.getElementById('info-panel-2').style.display = 'flex';
                 openPanel(2);
             } else {
                 document.getElementById('info-panel-1').classList.remove('comparison-mode');
                 closePanel(2);
-                document.getElementById('info-panel-2').style.display = 'none';
             }
         });
 
-        // Map interactions - minimize unpinned panels
+        // Map interactions - minimize unpinned panels (but not during programmatic moves)
         map.on('drag', () => {
+            if (isProgrammaticMove) return;
             if (!panelStates.panel1.pinned && panelStates.panel1.open) {
                 minimizePanel(1);
             }
@@ -299,6 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         map.on('zoomstart', () => {
+            if (isProgrammaticMove) return;
             if (!panelStates.panel1.pinned && panelStates.panel1.open) {
                 minimizePanel(1);
             }
@@ -356,7 +405,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('compare-btn-1').classList.remove('active');
             document.getElementById('info-panel-1').classList.remove('comparison-mode');
             closePanel(2);
-            document.getElementById('info-panel-2').style.display = 'none';
         }
     }
 
@@ -373,7 +421,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (countryFilter.length === 1) {
-            title.textContent = `Simulants in ${countryFilter[0]}`;
+            title.textContent = `Simulants in ${countryDisplayNames[countryFilter[0]] || countryFilter[0]}`;
         } else {
             title.textContent = `Simulants in ${countryFilter.length} Countries`;
         }
@@ -410,6 +458,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const countryFilter = Array.from(document.getElementById('country-filter').selectedOptions).map(o => o.value);
         const mineralFilter = Array.from(document.getElementById('mineral-filter').selectedOptions).map(o => o.value);
         const chemicalFilter = Array.from(document.getElementById('chemical-filter').selectedOptions).map(o => o.value);
+        const institutionFilter = Array.from(document.getElementById('institution-filter').selectedOptions).map(o => o.value);
 
         let filtered = simulants.filter(s => {
             let keep = true;
@@ -423,6 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let sChemicals = chemicals.filter(c => c.simulant_id === s.simulant_id).map(c => c.component_name);
                 keep = keep && chemicalFilter.some(c => sChemicals.includes(c));
             }
+            if (institutionFilter.length) keep = keep && institutionFilter.includes(s.institution);
             return keep;
         });
 
@@ -441,7 +491,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (lat === 0 && lon === 0) return;
 
                 let marker = L.marker([lat, lon], { icon: moonIcon });
-                let popupContent = `<b>${s.name}</b><br>Type: ${s.type}<br>Country: ${s.country_code}`;
+                const countryName = s.country_code ? (countryDisplayNames[s.country_code] || s.country_code) : 'N/A';
+                let popupContent = `<b>${s.name}</b><br>Type: ${s.type || 'N/A'}<br>Country: ${countryName}`;
                 marker.bindPopup(popupContent);
                 marker.bindTooltip(s.name, { permanent: false, direction: "top" });
 
@@ -461,6 +512,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`Map updated: ${filtered.length} simulants`);
     }
 
+    // Helper to get country code from GeoJSON feature (some countries like France have iso_a3: -99)
+    function getCountryCode(props) {
+        const iso = props.iso_a3 || props.ISO_A3;
+        if (iso && iso !== -99 && iso !== '-99') return iso;
+        return props.adm0_a3 || props.ADM0_A3;
+    }
+
     // Highlight country
     function highlightCountry(countryCode) {
         if (!countryGeoJson || !countryCode) return;
@@ -470,12 +528,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (countryCode === "EU") {
             featuresToHighlight = countryGeoJson.features.filter(f =>
-                euCountries.includes(f.properties.iso_a3 || f.properties.ISO_A3)
+                euCountries.includes(getCountryCode(f.properties))
             );
         } else {
             const code = countryMap[countryCode] || countryCode;
             const feat = countryGeoJson.features.find(f =>
-                (f.properties.iso_a3 || f.properties.ISO_A3) === code ||
+                getCountryCode(f.properties) === code ||
                 (f.properties.iso_a2 || f.properties.ISO_A2) === code
             );
             if (feat) featuresToHighlight.push(feat);
@@ -508,12 +566,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (s.country_code === "EU") {
             featuresToHighlight = countryGeoJson.features.filter(f =>
-                euCountries.includes(f.properties.iso_a3 || f.properties.ISO_A3)
+                euCountries.includes(getCountryCode(f.properties))
             );
         } else {
             const code = countryMap[s.country_code] || s.country_code;
             const feat = countryGeoJson.features.find(f =>
-                (f.properties.iso_a3 || f.properties.ISO_A3) === code ||
+                getCountryCode(f.properties) === code ||
                 (f.properties.iso_a2 || f.properties.ISO_A2) === code
             );
             if (feat) featuresToHighlight.push(feat);
@@ -534,7 +592,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const site = sites.find(site => site.simulant_id === simulant_id);
         if (site && site.lat && site.lon) {
             if (centerMap) {
-                setTimeout(() => map.flyTo([site.lat, site.lon], 7), 250);
+                isProgrammaticMove = true;
+                setTimeout(() => {
+                    map.flyTo([site.lat, site.lon], 7);
+                    map.once('moveend', () => {
+                        isProgrammaticMove = false;
+                    });
+                }, 250);
             }
             if (openPopup && markerMap[simulant_id]) {
                 markerMap[simulant_id].openPopup();
@@ -550,7 +614,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateMineralChart(simulant_id, panelNum) {
         const chartKey = `mineral${panelNum}`;
-        const ctx = document.getElementById(`mineral-chart-${panelNum}`).getContext('2d');
+        const canvas = document.getElementById(`mineral-chart-${panelNum}`);
+        const ctx = canvas.getContext('2d');
 
         if (charts[chartKey]) charts[chartKey].destroy();
 
@@ -558,6 +623,11 @@ document.addEventListener('DOMContentLoaded', () => {
             .sort((a, b) => b.value_pct - a.value_pct);
 
         if (minSubset.length > 0) {
+            canvas.style.display = 'block';
+            const wrapper = canvas.parentElement;
+            const noDataMsg = wrapper.querySelector('.no-data-message');
+            if (noDataMsg) noDataMsg.remove();
+
             charts[chartKey] = new Chart(ctx, {
                 type: 'bar',
                 data: {
@@ -594,12 +664,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             });
+        } else {
+            canvas.style.display = 'none';
+            const wrapper = canvas.parentElement;
+            if (!wrapper.querySelector('.no-data-message')) {
+                const msg = document.createElement('p');
+                msg.className = 'no-data-message placeholder-text';
+                msg.textContent = 'Data not available. See references for more information.';
+                wrapper.appendChild(msg);
+            }
         }
     }
 
     function updateChemicalChart(simulant_id, panelNum) {
         const chartKey = `chemical${panelNum}`;
-        const ctx = document.getElementById(`chemical-chart-${panelNum}`).getContext('2d');
+        const canvas = document.getElementById(`chemical-chart-${panelNum}`);
+        const ctx = canvas.getContext('2d');
 
         if (charts[chartKey]) charts[chartKey].destroy();
 
@@ -610,22 +690,19 @@ document.addEventListener('DOMContentLoaded', () => {
         );
 
         if (chemSubset.length === 0) {
-            charts[chartKey] = new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    labels: ['No Data'],
-                    datasets: [{
-                        data: [1],
-                        backgroundColor: ['#e2e8f0']
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { display: false } }
-                }
-            });
+            canvas.style.display = 'none';
+            const wrapper = canvas.parentElement;
+            if (!wrapper.querySelector('.no-data-message')) {
+                const msg = document.createElement('p');
+                msg.className = 'no-data-message placeholder-text';
+                msg.textContent = 'Data not available. See references for more information.';
+                wrapper.appendChild(msg);
+            }
         } else {
+            canvas.style.display = 'block';
+            const wrapper = canvas.parentElement;
+            const noDataMsg = wrapper.querySelector('.no-data-message');
+            if (noDataMsg) noDataMsg.remove();
             charts[chartKey] = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
@@ -674,7 +751,34 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             refSubset.forEach(r => {
                 const div = document.createElement('div');
-                div.textContent = r.reference_text;
+                div.className = 'reference-item';
+
+                // Safely linkify URLs using DOM methods (no innerHTML with user content)
+                const urlRegex = /(https?:\/\/[^\s<>"{}|\\^`[\]]+)/g;
+                const text = r.reference_text || '';
+                let lastIndex = 0;
+                let match;
+
+                while ((match = urlRegex.exec(text)) !== null) {
+                    // Add text before the URL
+                    if (match.index > lastIndex) {
+                        div.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+                    }
+                    // Create anchor for the URL
+                    const anchor = document.createElement('a');
+                    anchor.href = match[1];
+                    anchor.target = '_blank';
+                    anchor.rel = 'noopener noreferrer';
+                    anchor.textContent = match[1];
+                    div.appendChild(anchor);
+                    lastIndex = urlRegex.lastIndex;
+                }
+
+                // Add remaining text after last URL
+                if (lastIndex < text.length) {
+                    div.appendChild(document.createTextNode(text.slice(lastIndex)));
+                }
+
                 refPanel.appendChild(div);
             });
         }
@@ -682,7 +786,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Clear filters and navigate home
     document.getElementById('clear-filters').addEventListener('click', () => {
-        ['type-filter', 'country-filter', 'mineral-filter', 'chemical-filter'].forEach(id => {
+        ['type-filter', 'country-filter', 'mineral-filter', 'chemical-filter', 'institution-filter'].forEach(id => {
             const select = document.getElementById(id);
             if (select) {
                 Array.from(select.options).forEach(opt => opt.selected = false);
@@ -692,6 +796,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Close country panel
         document.getElementById('country-panel').classList.remove('open');
+
+        // Close info panels
+        closePanel('1');
+        closePanel('2');
 
         updateMap();
         updateSimulantCount();
