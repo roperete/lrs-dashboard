@@ -815,6 +815,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile sidebar toggle
     const menuToggle = document.getElementById('menu-toggle');
+    const closeSidebar = document.getElementById('close-sidebar');
     const sidebar = document.getElementById('sidebar');
     const mobileOverlay = document.getElementById('mobile-overlay');
 
@@ -838,6 +839,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    closeSidebar.addEventListener('click', closeMobileSidebar);
     mobileOverlay.addEventListener('click', closeMobileSidebar);
 
     // Close sidebar when selecting a simulant on mobile
