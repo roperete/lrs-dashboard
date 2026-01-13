@@ -1,2 +1,28 @@
 CLAUDE.md
 .codemap/
+
+# Sensitive - API Keys and Credentials
+scripts/.env
+scripts/.env.local
+scripts/google-service-account-credentials.json
+**/credentials.json
+
+# Python Virtual Environment
+scripts/venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/.pytest_cache/
+
+# AI Pipeline Output Files (may contain extracted data)
+scripts/extraction_results.csv
+scripts/extraction_results_*.json
+scripts/pipeline_results.json
+
+# SQLite databases (if you add backend later)
+scripts/*.db
+scripts/*.sqlite
+
+# Temporary files
+scripts/*.log
+scripts/.DS_Store
