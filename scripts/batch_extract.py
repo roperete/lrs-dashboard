@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Batch extraction - Process all simulants using the pre-built index.
-Run build_pdf_index.py first to create the index.
+Batch extraction - Process all simulants.
+Automatically rebuilds the PDF index before extraction to pick up new files.
 
 Usage: python batch_extract.py
 """
@@ -18,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from extractors.document_extractor import DocumentExtractor
 from extractors.claude_extractor import ClaudeExtractor
 from config import PDF_DIRECTORY, EXTRACTABLE_FIELDS, CLAUDE_MODEL
+from build_pdf_index import build_index
 
 # Settings
 MAX_SOURCES_PER_SIMULANT = 10
@@ -169,6 +170,11 @@ def main():
     print("="*70)
     print(f"Model: {CLAUDE_MODEL}")
     print(f"Max sources per simulant: {MAX_SOURCES_PER_SIMULANT}")
+    print()
+
+    # Rebuild index to pick up any new files
+    print("Rebuilding document index...")
+    build_index()
     print()
 
     # Load index and data
