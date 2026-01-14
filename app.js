@@ -396,6 +396,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.querySelector(`#info-panel-${panelNum} .panel-title`).textContent =
             panelNum === '1' ? 'Select a simulant' : 'Select second simulant';
+        document.getElementById(`properties-panel-${panelNum}`).innerHTML =
+            '<p class="placeholder-text">Select a simulant to view properties</p>';
         document.getElementById(`references-panel-${panelNum}`).innerHTML =
             '<p class="placeholder-text">Select a simulant to view references</p>';
 
@@ -605,11 +607,73 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        updateProperties(simulant_id, panelNum);
         updateMineralChart(simulant_id, panelNum);
         updateChemicalChart(simulant_id, panelNum);
         updateReferences(simulant_id, panelNum);
 
         openPanel(panelNum);
+    }
+
+    function updateProperties(simulant_id, panelNum) {
+        const propPanel = document.getElementById(`properties-panel-${panelNum}`);
+        propPanel.innerHTML = '';
+
+        const s = simulants.find(x => x.simulant_id === simulant_id);
+        if (!s) {
+            propPanel.innerHTML = '<p class="placeholder-text">No properties available</p>';
+            return;
+        }
+
+        // Define properties to display with labels
+        const propertyDefs = [
+            { key: 'type', label: 'Type' },
+            { key: 'institution', label: 'Institution' },
+            { key: 'availability', label: 'Availability' },
+            { key: 'release_date', label: 'Release Date' },
+            { key: 'tons_produced_mt', label: 'Tons Produced (MT)' },
+            { key: 'density_g_cm3', label: 'Density (g/cm³)' },
+            { key: 'specific_gravity', label: 'Specific Gravity' },
+            { key: 'glass_content_percent', label: 'Glass Content (%)' },
+            { key: 'ti_content_percent', label: 'Ti Content (%)' },
+            { key: 'nanophase_iron_content', label: 'Nanophase Iron' },
+            { key: 'particle_size_distribution', label: 'Particle Size' },
+            { key: 'particle_morphology', label: 'Particle Morphology' },
+            { key: 'particle_ruggedness', label: 'Particle Ruggedness' },
+            { key: 'nasa_fom_score', label: 'NASA FoM Score' },
+            { key: 'notes', label: 'Notes' }
+        ];
+
+        const grid = document.createElement('div');
+        grid.className = 'properties-grid';
+
+        let hasProperties = false;
+        propertyDefs.forEach(prop => {
+            const value = s[prop.key];
+            if (value !== null && value !== undefined && value !== '' && value !== 'null') {
+                hasProperties = true;
+                const item = document.createElement('div');
+                item.className = 'property-item';
+
+                const label = document.createElement('span');
+                label.className = 'property-label';
+                label.textContent = prop.label;
+
+                const val = document.createElement('span');
+                val.className = 'property-value';
+                val.textContent = value;
+
+                item.appendChild(label);
+                item.appendChild(val);
+                grid.appendChild(item);
+            }
+        });
+
+        if (hasProperties) {
+            propPanel.appendChild(grid);
+        } else {
+            propPanel.innerHTML = '<p class="placeholder-text">No properties available</p>';
+        }
     }
 
     function updateMineralChart(simulant_id, panelNum) {
