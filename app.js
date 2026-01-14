@@ -401,6 +401,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Close unpinned panels when clicking on the map (not on markers)
+        map.on('click', (e) => {
+            // Don't close if clicking on a marker (marker clicks are handled separately)
+            if (e.originalEvent.target.closest('.leaflet-marker-icon')) return;
+
+            if (!panelStates.panel1.pinned && panelStates.panel1.open) {
+                minimizePanel(1);
+            }
+            if (!panelStates.panel2.pinned && panelStates.panel2.open) {
+                minimizePanel(2);
+            }
+        });
+
         // Country panel close button
         document.getElementById('close-country-panel').addEventListener('click', () => {
             document.getElementById('country-panel').classList.remove('open');
