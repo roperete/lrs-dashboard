@@ -193,6 +193,39 @@
         <div class="sidebar-footer">
             <p>Click on a marker to view details</p>
             <p class="data-count" id="simulant-count">Loading data...</p>
+            <div class="export-section">
+                <button id="export-btn" class="btn-export" title="Export simulant data">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Export Data
+                </button>
+                <div id="export-dropdown" class="export-dropdown">
+                    <button class="export-option" data-export="current" title="Export currently selected simulant">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        Current Simulant
+                    </button>
+                    <button class="export-option" data-export="filtered" title="Export all simulants matching current filters">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                        </svg>
+                        Filtered Results
+                    </button>
+                    <button class="export-option" data-export="all" title="Export all simulants in the database">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                        All Simulants
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 

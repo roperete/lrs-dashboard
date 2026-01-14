@@ -65,6 +65,51 @@ document.addEventListener('DOMContentLoaded', () => {
         "Ital": "Italy"
     };
 
+    // Institution website URLs
+    const institutionUrls = {
+        "Space Resource Technologies": "https://exolithsimulants.com/",
+        "Space Resources (Exolith Lab)": "https://exolithsimulants.com/",
+        "Hispansion": "https://www.hispansion.com/",
+        "Off Planet Research": "https://www.offplanetresearch.com/",
+        "NASA": "https://www.nasa.gov/",
+        "ESA": "https://www.esa.int/",
+        "ESA / Technical University of Bari": "https://www.esa.int/",
+        "ESA/Technical University Braunschweig": "https://www.esa.int/",
+        "JAXA, LETO": "https://global.jaxa.jp/",
+        "European Astronaut Centre (EAC": "https://www.esa.int/About_Us/EAC",
+        "Shimizu Corporation": "https://www.shimz.co.jp/en/",
+        "Colorado School of Mines": "https://www.mines.edu/",
+        "University of Minnesota": "https://twin-cities.umn.edu/",
+        "Technische Universität Berlin": "https://www.tu.berlin/en/",
+        "Technische Universität Braunschweig": "https://www.tu-braunschweig.de/en/",
+        "The University of Manchester": "https://www.manchester.ac.uk/",
+        "The University of Winnipeg": "https://www.uwinnipeg.ca/",
+        "Wuhan University": "https://en.whu.edu.cn/",
+        "Tongji University": "https://en.tongji.edu.cn/",
+        "Jilin University Changchun": "https://global.jlu.edu.cn/",
+        "Northeastern University": "https://english.neu.edu.cn/",
+        "China University of Mining and Technology": "https://www.cumt.edu.cn/",
+        "University of Geosciences": "https://en.cug.edu.cn/",
+        "Polish Academy of Sciences": "https://institution.pan.pl/",
+        "Goddard Space Center": "https://www.nasa.gov/goddard/",
+        "MSFC": "https://www.nasa.gov/marshall/",
+        "NASA-MSFC and USGS": "https://www.nasa.gov/marshall/",
+        "NASA and USGS": "https://www.nasa.gov/",
+        "NASA/USGS": "https://www.nasa.gov/",
+        "NASA/Washington Mills": "https://www.nasa.gov/",
+        "KIGAM": "https://www.kigam.re.kr/english/",
+        "ISAC": "https://www.isro.gov.in/ISAC.html",
+        "SolSys Mining": "https://solsysmining.com/",
+        "Hudson Resources Inc.": "https://hudsonresources.ca/",
+        "Orbitec, Inc.": "https://www.sncorp.com/",
+        "Astroport Space Technologies, Inc.": "https://www.astroport.space/",
+        "Space Zab Company": "https://www.spacezab.com/",
+        "Deltion Innovations Ltd. Canada": "https://www.deltion.ca/",
+        "Deltion Innovations Ltd": "https://www.deltion.ca/",
+        "NORCAT": "https://www.norcat.org/",
+        "UCF": "https://www.ucf.edu/"
+    };
+
     // Loading overlay
     function showLoading() {
         const overlay = document.createElement('div');
@@ -662,7 +707,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const val = document.createElement('span');
                 val.className = 'property-value';
-                val.textContent = value;
+
+                // Make institution clickable if URL is available
+                if (prop.key === 'institution') {
+                    const cleanValue = String(value).replace(/\r?\n/g, ' ').trim();
+                    const url = institutionUrls[cleanValue];
+                    if (url) {
+                        const link = document.createElement('a');
+                        link.href = url;
+                        link.target = '_blank';
+                        link.rel = 'noopener noreferrer';
+                        link.textContent = cleanValue;
+                        link.className = 'institution-link';
+                        val.appendChild(link);
+                    } else {
+                        val.textContent = cleanValue;
+                    }
+                } else {
+                    val.textContent = value;
+                }
 
                 item.appendChild(label);
                 item.appendChild(val);
@@ -932,5 +995,169 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth > 768) {
             closeMobileSidebar();
         }
+    });
+
+    // ===== EXPORT FUNCTIONALITY =====
+    const exportBtn = document.getElementById('export-btn');
+    const exportDropdown = document.getElementById('export-dropdown');
+
+    // Toggle export dropdown
+    exportBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        exportDropdown.classList.toggle('open');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!exportDropdown.contains(e.target) && !exportBtn.contains(e.target)) {
+            exportDropdown.classList.remove('open');
+        }
+    });
+
+    // Get filtered simulants based on current filters
+    function getFilteredSimulants() {
+        const typeFilter = Array.from(document.getElementById('type-filter').selectedOptions).map(o => o.value);
+        const countryFilter = Array.from(document.getElementById('country-filter').selectedOptions).map(o => o.value);
+        const mineralFilter = Array.from(document.getElementById('mineral-filter').selectedOptions).map(o => o.value);
+        const chemicalFilter = Array.from(document.getElementById('chemical-filter').selectedOptions).map(o => o.value);
+        const institutionFilter = Array.from(document.getElementById('institution-filter').selectedOptions).map(o => o.value);
+
+        return simulants.filter(s => {
+            let keep = true;
+            if (typeFilter.length) keep = keep && typeFilter.includes(s.type);
+            if (countryFilter.length) keep = keep && countryFilter.includes(s.country_code);
+            if (mineralFilter.length) {
+                let sMinerals = minerals.filter(m => m.simulant_id === s.simulant_id).map(m => m.component_name);
+                keep = keep && mineralFilter.some(m => sMinerals.includes(m));
+            }
+            if (chemicalFilter.length) {
+                let sChemicals = chemicals.filter(c => c.simulant_id === s.simulant_id).map(c => c.component_name);
+                keep = keep && chemicalFilter.some(c => sChemicals.includes(c));
+            }
+            if (institutionFilter.length) keep = keep && institutionFilter.includes(s.institution);
+            return keep;
+        });
+    }
+
+    // Export simulants to CSV
+    function exportToCSV(simulantsToExport, filename) {
+        if (!simulantsToExport || simulantsToExport.length === 0) {
+            alert('No simulants to export');
+            return;
+        }
+
+        // Define columns for export
+        const columns = [
+            { key: 'name', label: 'Name' },
+            { key: 'type', label: 'Type' },
+            { key: 'country_code', label: 'Country' },
+            { key: 'institution', label: 'Institution' },
+            { key: 'availability', label: 'Availability' },
+            { key: 'release_date', label: 'Release Date' },
+            { key: 'lunar_sample_reference', label: 'Lunar Sample Reference' },
+            { key: 'density_g_cm3', label: 'Density (g/cm³)' },
+            { key: 'specific_gravity', label: 'Specific Gravity' },
+            { key: 'glass_content_percent', label: 'Glass Content (%)' },
+            { key: 'ti_content_percent', label: 'Ti Content (%)' },
+            { key: 'particle_size_distribution', label: 'Particle Size' },
+            { key: 'particle_morphology', label: 'Particle Morphology' },
+            { key: 'nasa_fom_score', label: 'NASA FoM Score' },
+            { key: 'tons_produced_mt', label: 'Tons Produced (MT)' },
+            { key: 'notes', label: 'Notes' }
+        ];
+
+        // Build CSV header
+        const headers = columns.map(c => c.label);
+
+        // Add mineral and chemical composition columns dynamically
+        const allMineralNames = [...new Set(minerals.map(m => m.component_name).filter(Boolean))].sort();
+        const allChemicalNames = [...new Set(chemicals.filter(c => c.component_type === 'oxide' && c.component_name?.toLowerCase() !== 'sum').map(c => c.component_name).filter(Boolean))].sort();
+
+        allMineralNames.forEach(m => headers.push(`Mineral: ${m} (%)`));
+        allChemicalNames.forEach(c => headers.push(`Chemical: ${c} (wt%)`));
+
+        // Build CSV rows
+        const rows = simulantsToExport.map(s => {
+            const row = columns.map(col => {
+                let value = s[col.key];
+                if (value === null || value === undefined) return '';
+                // Clean multiline values and escape quotes
+                value = String(value).replace(/\r?\n/g, ' ').trim();
+                if (value.includes(',') || value.includes('"') || value.includes('\n')) {
+                    value = '"' + value.replace(/"/g, '""') + '"';
+                }
+                return value;
+            });
+
+            // Add mineral composition values
+            allMineralNames.forEach(mineralName => {
+                const mineralData = minerals.find(m => m.simulant_id === s.simulant_id && m.component_name === mineralName);
+                row.push(mineralData ? mineralData.value_pct : '');
+            });
+
+            // Add chemical composition values
+            allChemicalNames.forEach(chemName => {
+                const chemData = chemicals.find(c => c.simulant_id === s.simulant_id && c.component_name === chemName);
+                row.push(chemData ? chemData.value_wt_pct : '');
+            });
+
+            return row;
+        });
+
+        // Combine header and rows
+        const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+
+        // Download file
+        downloadFile(csvContent, filename, 'text/csv;charset=utf-8;');
+    }
+
+    // Download file helper
+    function downloadFile(content, filename, mimeType) {
+        const blob = new Blob([content], { type: mimeType });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }
+
+    // Handle export options
+    document.querySelectorAll('.export-option').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const exportType = btn.dataset.export;
+            const timestamp = new Date().toISOString().slice(0, 10);
+
+            switch (exportType) {
+                case 'current':
+                    const currentSimulantId = panelStates.panel1.simulantId;
+                    if (!currentSimulantId) {
+                        alert('Please select a simulant first');
+                        return;
+                    }
+                    const currentSimulant = simulants.find(s => s.simulant_id === currentSimulantId);
+                    if (currentSimulant) {
+                        exportToCSV([currentSimulant], `${currentSimulant.name.replace(/[^a-z0-9]/gi, '_')}_${timestamp}.csv`);
+                    }
+                    break;
+
+                case 'filtered':
+                    const filtered = getFilteredSimulants();
+                    if (filtered.length === 0) {
+                        alert('No simulants match the current filters');
+                        return;
+                    }
+                    exportToCSV(filtered, `lunar_simulants_filtered_${timestamp}.csv`);
+                    break;
+
+                case 'all':
+                    exportToCSV(simulants, `lunar_simulants_all_${timestamp}.csv`);
+                    break;
+            }
+
+            exportDropdown.classList.remove('open');
+        });
     });
 });

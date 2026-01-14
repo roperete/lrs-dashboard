@@ -299,6 +299,105 @@ body {
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
+/* Export section */
+.export-section {
+  margin-top: 16px;
+  position: relative;
+}
+
+.btn-export {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, var(--space-card) 0%, var(--space-surface) 100%);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-export:hover {
+  background: linear-gradient(135deg, var(--space-surface) 0%, var(--space-card) 100%);
+  border-color: var(--primary);
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
+.btn-export svg {
+  stroke: var(--primary);
+}
+
+.export-dropdown {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-bottom: 8px;
+  background: var(--space-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: var(--shadow-lg);
+  z-index: 1001;
+}
+
+.export-dropdown.open {
+  display: flex;
+}
+
+.export-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.export-option:hover {
+  background: var(--space-surface);
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+.export-option:hover svg {
+  stroke: var(--primary);
+}
+
+.export-option svg {
+  stroke: var(--text-muted);
+  flex-shrink: 0;
+  transition: stroke 0.2s ease;
+}
+
+.export-option:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.export-option:disabled:hover {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-secondary);
+}
+
+.export-option:disabled:hover svg {
+  stroke: var(--text-muted);
+}
+
 /* ===== MAP ===== */
 #map-container {
   position: fixed;
@@ -819,6 +918,18 @@ body {
   font-size: 13px;
   color: var(--text-primary);
   word-break: break-word;
+}
+
+.institution-link {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.institution-link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+  text-shadow: 0 0 8px var(--primary-glow);
 }
 
 /* Comparison mode properties */
