@@ -700,8 +700,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     datasets: [{
                         label: 'Mineral %',
                         data: minSubset.map(m => m.value_pct),
-                        backgroundColor: 'rgba(102, 126, 234, 0.8)',
-                        borderRadius: 6
+                        backgroundColor: 'rgba(0, 180, 216, 0.8)',
+                        borderColor: 'rgba(0, 180, 216, 1)',
+                        borderWidth: 1,
+                        borderRadius: 4
                     }]
                 },
                 options: {
@@ -711,19 +713,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     plugins: {
                         legend: { display: false },
                         tooltip: {
-                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            backgroundColor: 'rgba(20, 27, 45, 0.95)',
+                            titleColor: '#00b4d8',
+                            bodyColor: '#e8eaed',
+                            borderColor: 'rgba(0, 180, 216, 0.3)',
+                            borderWidth: 1,
                             padding: 12,
-                            cornerRadius: 8
+                            cornerRadius: 6
                         }
                     },
                     scales: {
                         x: {
                             beginAtZero: true,
                             max: 100,
-                            grid: { color: 'rgba(0, 0, 0, 0.05)' }
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#9aa0a6' }
                         },
                         y: {
-                            ticks: { autoSkip: false, font: { size: 11 } },
+                            ticks: { autoSkip: false, font: { size: 11 }, color: '#e8eaed' },
                             grid: { display: false }
                         }
                     }
@@ -775,11 +782,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     datasets: [{
                         data: chemSubset.map(c => c.value_wt_pct),
                         backgroundColor: [
-                            '#667eea', '#764ba2', '#f093fb', '#4facfe',
-                            '#43e97b', '#fa709a', '#fee140', '#30cfd0'
+                            '#00b4d8', '#fc3d21', '#fca311', '#48cae4',
+                            '#90e0ef', '#ff6b6b', '#c77dff', '#06d6a0'
                         ],
                         borderWidth: 2,
-                        borderColor: '#fff'
+                        borderColor: '#141b2d'
                     }]
                 },
                 options: {
@@ -791,13 +798,18 @@ document.addEventListener('DOMContentLoaded', () => {
                             labels: {
                                 padding: 10,
                                 font: { size: 11 },
-                                usePointStyle: true
+                                usePointStyle: true,
+                                color: '#e8eaed'
                             }
                         },
                         tooltip: {
-                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            backgroundColor: 'rgba(20, 27, 45, 0.95)',
+                            titleColor: '#00b4d8',
+                            bodyColor: '#e8eaed',
+                            borderColor: 'rgba(0, 180, 216, 0.3)',
+                            borderWidth: 1,
                             padding: 12,
-                            cornerRadius: 8
+                            cornerRadius: 6
                         }
                     }
                 }
