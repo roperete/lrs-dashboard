@@ -362,6 +362,31 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Download buttons in panels
+        document.getElementById('download-btn-1').addEventListener('click', function () {
+            const simulantId = panelStates.panel1.simulantId;
+            if (!simulantId) {
+                alert('Please select a simulant first');
+                return;
+            }
+            const s = simulants.find(x => x.simulant_id === simulantId);
+            if (s) {
+                downloadSimulantCSV(s);
+            }
+        });
+
+        document.getElementById('download-btn-2').addEventListener('click', function () {
+            const simulantId = panelStates.panel2.simulantId;
+            if (!simulantId) {
+                alert('Please select a simulant first');
+                return;
+            }
+            const s = simulants.find(x => x.simulant_id === simulantId);
+            if (s) {
+                downloadSimulantCSV(s);
+            }
+        });
+
         // Compare buttons in panels
         document.getElementById('compare-btn-1').addEventListener('click', function () {
             if (!panelStates.panel1.simulantId) {
@@ -1135,6 +1160,13 @@ document.addEventListener('DOMContentLoaded', () => {
         link.click();
         document.body.removeChild(link);
         URL.revokeObjectURL(url);
+    }
+
+    // Download single simulant CSV (used by panel download buttons)
+    function downloadSimulantCSV(simulant) {
+        const timestamp = new Date().toISOString().slice(0, 10);
+        const filename = `${simulant.name.replace(/[^a-z0-9]/gi, '_')}_${timestamp}.csv`;
+        exportToCSV([simulant], filename);
     }
 
     // Handle export options
