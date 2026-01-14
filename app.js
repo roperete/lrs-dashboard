@@ -1154,6 +1154,9 @@ document.addEventListener('DOMContentLoaded', () => {
         allMineralNames.forEach(m => headers.push(`Mineral: ${m} (%)`));
         allChemicalNames.forEach(c => headers.push(`Chemical: ${c} (wt%)`));
 
+        // Add references column
+        headers.push('References');
+
         // Build CSV rows
         const rows = simulantsToExport.map(s => {
             const row = columns.map(col => {
@@ -1178,6 +1181,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 const chemData = chemicals.find(c => c.simulant_id === s.simulant_id && c.component_name === chemName);
                 row.push(chemData ? chemData.value_wt_pct : '');
             });
+
+            // Add references (combined into single cell, separated by " | ")
+            const simRefs = references.filter(r => r.simulant_id === s.simulant_id);
+            let refsText = simRefs.map(r => r.reference_text).join(' | ');
+            // Escape for CSV
+            if (refsText.includes(',') || refsText.includes('"') || refsText.includes('\n')) {
+                refsText = '"' + refsText.replace(/"/g, '""') + '"';
+            }
+            row.push(refsText);
 
             return row;
         });
