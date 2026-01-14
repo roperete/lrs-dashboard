@@ -628,6 +628,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Define properties to display with labels
         const propertyDefs = [
             { key: 'type', label: 'Type' },
+            { key: 'lunar_sample_reference', label: 'Lunar Sample' },
             { key: 'institution', label: 'Institution' },
             { key: 'availability', label: 'Availability' },
             { key: 'release_date', label: 'Release Date' },

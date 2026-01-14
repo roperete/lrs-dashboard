@@ -39,6 +39,8 @@ EXTRACTABLE_FIELDS = [
     "tons_produced_mt",
     "notes",
     "type",
+    # Lunar sample reference
+    "lunar_sample_reference",
     # Physical properties
     "density_g_cm3",
     "specific_gravity",
@@ -84,6 +86,9 @@ BASIC INFO:
 - tons_produced_mt: Total tons produced in metric tons (number only)
 - notes: Any relevant notes about the simulant (composition, applications, special features)
 - type: Simulant type (e.g., "Mare", "Highland", "Geotechnical Simulant")
+
+LUNAR SAMPLE REFERENCE:
+- lunar_sample_reference: The lunar sample(s) this simulant is designed to replicate (e.g., "Apollo 17", "Apollo 11", "Luna 24", "Apollo 16 sample 64500", "Apollo 14 soil")
 
 PHYSICAL PROPERTIES:
 - density_g_cm3: Bulk density in g/cm³ (number only, e.g., 1.56)

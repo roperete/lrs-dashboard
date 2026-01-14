@@ -587,7 +587,8 @@
     "release_date": null,
     "tons_produced_mt": null,
     "notes": "Includes synthetic glass to match the Apollo 16 glass chemistry",
-    "glass_content_percent": 40
+    "glass_content_percent": 40,
+    "lunar_sample_reference": "Apollo 16"
   },
   {
     "simulant_id": "S053",
@@ -599,7 +600,8 @@
     "release_date": 2007.0,
     "tons_produced_mt": null,
     "notes": "developed for the simulation of Apollo 16 anorthositic regolith sample 64500",
-    "glass_content_percent": 42
+    "glass_content_percent": 42,
+    "lunar_sample_reference": "Apollo 16 sample 64500"
   },
   {
     "simulant_id": "S054",
@@ -710,7 +712,8 @@
     "availability": "Limited stock",
     "release_date": 2022.0,
     "tons_produced_mt": null,
-    "notes": "Best fit simulant to Apollo 14 soil R07 with distance d=10.00"
+    "notes": "Best fit simulant to Apollo 14 soil R07 with distance d=10.00",
+    "lunar_sample_reference": "Apollo 14 soil R07"
   },
   {
     "simulant_id": "S064",

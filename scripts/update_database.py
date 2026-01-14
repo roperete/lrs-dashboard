@@ -24,6 +24,7 @@ FIELDS_TO_UPDATE = [
     "tons_produced_mt",
     "notes",
     "type",
+    "lunar_sample_reference",
     "density_g_cm3",
     "specific_gravity",
     "particle_size_distribution",
