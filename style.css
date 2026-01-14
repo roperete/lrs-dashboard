@@ -755,8 +755,8 @@ body {
   gap: 6px;
   padding: 8px 12px;
   background: transparent;
-  color: var(--accent-gold);
-  border: 1px solid var(--accent-gold);
+  color: var(--primary);
+  border: 1px solid var(--primary);
   border-radius: 6px;
   font-size: 11px;
   font-weight: 600;
@@ -772,9 +772,9 @@ body {
 }
 
 .btn-download-simulant:hover {
-  background: var(--accent-gold);
+  background: var(--primary);
   color: var(--space-dark);
-  box-shadow: 0 0 12px rgba(252, 163, 17, 0.4);
+  box-shadow: var(--shadow-glow);
 }
 
 .compare-btn-panel {
@@ -978,29 +978,29 @@ body {
 
 /* ===== LEAFLET CUSTOMIZATION ===== */
 .leaflet-popup-content-wrapper {
-  background: #ffffff;
-  border: 1px solid var(--primary);
-  border-radius: 10px;
-  box-shadow: var(--shadow-lg), 0 0 15px var(--primary-glow);
+  background: #ffffff !important;
+  border: 1px solid var(--primary) !important;
+  border-radius: 10px !important;
+  box-shadow: var(--shadow-lg), 0 0 15px var(--primary-glow) !important;
 }
 
 .leaflet-popup-tip {
-  background: #ffffff;
-  border: 1px solid var(--primary);
+  background: #ffffff !important;
+  border: 1px solid var(--primary) !important;
 }
 
 .leaflet-popup-content {
-  margin: 16px;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #1a1a2e;
+  margin: 16px !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  color: #1a1a2e !important;
 }
 
 .leaflet-popup-content b {
-  color: #0077b6;
-  font-size: 15px;
-  display: block;
-  margin-bottom: 8px;
+  color: #0077b6 !important;
+  font-size: 15px !important;
+  display: block !important;
+  margin-bottom: 8px !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -1009,41 +1009,42 @@ body {
   background: var(--space-dark);
 }
 
-/* Marker cluster styling */
+/* Marker cluster styling - override Leaflet defaults */
 .marker-cluster {
-  background: rgba(0, 180, 216, 0.4);
+  background: rgba(0, 180, 216, 0.4) !important;
 }
 
 .marker-cluster div {
-  background: rgba(0, 180, 216, 0.8);
-  color: #1a1a2e;
-  font-weight: 700;
+  background: rgba(0, 180, 216, 0.9) !important;
+  color: #0a0e1a !important;
+  font-weight: 700 !important;
 }
 
 .marker-cluster-small {
-  background: rgba(0, 180, 216, 0.4);
+  background: rgba(0, 180, 216, 0.4) !important;
 }
 
 .marker-cluster-small div {
-  background: rgba(0, 180, 216, 0.8);
+  background: rgba(0, 180, 216, 0.9) !important;
+  color: #0a0e1a !important;
 }
 
 .marker-cluster-medium {
-  background: rgba(252, 163, 17, 0.4);
+  background: rgba(252, 163, 17, 0.4) !important;
 }
 
 .marker-cluster-medium div {
-  background: rgba(252, 163, 17, 0.8);
-  color: #1a1a2e;
+  background: rgba(252, 163, 17, 0.9) !important;
+  color: #0a0e1a !important;
 }
 
 .marker-cluster-large {
-  background: rgba(252, 61, 33, 0.4);
+  background: rgba(252, 61, 33, 0.4) !important;
 }
 
 .marker-cluster-large div {
-  background: rgba(252, 61, 33, 0.8);
-  color: #ffffff;
+  background: rgba(252, 61, 33, 0.9) !important;
+  color: #0a0e1a !important;
 }
 
 /* Dark map tiles overlay */

@@ -157,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         populateFilters();
         updateMap();
         initializePanels();
+        initializeExport();
         updateSimulantCount();
     }).catch(error => {
         hideLoading();
@@ -1036,21 +1037,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ===== EXPORT FUNCTIONALITY =====
-    const exportBtn = document.getElementById('export-btn');
-    const exportDropdown = document.getElementById('export-dropdown');
+    function initializeExport() {
+        const exportBtn = document.getElementById('export-btn');
+        const exportDropdown = document.getElementById('export-dropdown');
 
-    // Toggle export dropdown
-    exportBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        exportDropdown.classList.toggle('open');
-    });
+        // Toggle export dropdown
+        exportBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            exportDropdown.classList.toggle('open');
+        });
 
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!exportDropdown.contains(e.target) && !exportBtn.contains(e.target)) {
-            exportDropdown.classList.remove('open');
-        }
-    });
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!exportDropdown.contains(e.target) && !exportBtn.contains(e.target)) {
+                exportDropdown.classList.remove('open');
+            }
+        });
+
+        // Handle export options
+        document.querySelectorAll('.export-option').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const exportType = btn.dataset.export;
+                const timestamp = new Date().toISOString().slice(0, 10);
+
+                switch (exportType) {
+                    case 'current':
+                        const currentSimulantId = panelStates.panel1.simulantId;
+                        if (!currentSimulantId) {
+                            alert('Please select a simulant first');
+                            return;
+                        }
+                        const currentSimulant = simulants.find(s => s.simulant_id === currentSimulantId);
+                        if (currentSimulant) {
+                            exportToCSV([currentSimulant], `${currentSimulant.name.replace(/[^a-z0-9]/gi, '_')}_${timestamp}.csv`);
+                        }
+                        break;
+
+                    case 'filtered':
+                        const filtered = getFilteredSimulants();
+                        if (filtered.length === 0) {
+                            alert('No simulants match the current filters');
+                            return;
+                        }
+                        exportToCSV(filtered, `lunar_simulants_filtered_${timestamp}.csv`);
+                        break;
+
+                    case 'all':
+                        exportToCSV(simulants, `lunar_simulants_all_${timestamp}.csv`);
+                        break;
+                }
+
+                exportDropdown.classList.remove('open');
+            });
+        });
+    }
 
     // Get filtered simulants based on current filters
     function getFilteredSimulants() {
@@ -1168,41 +1208,4 @@ document.addEventListener('DOMContentLoaded', () => {
         const filename = `${simulant.name.replace(/[^a-z0-9]/gi, '_')}_${timestamp}.csv`;
         exportToCSV([simulant], filename);
     }
-
-    // Handle export options
-    document.querySelectorAll('.export-option').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const exportType = btn.dataset.export;
-            const timestamp = new Date().toISOString().slice(0, 10);
-
-            switch (exportType) {
-                case 'current':
-                    const currentSimulantId = panelStates.panel1.simulantId;
-                    if (!currentSimulantId) {
-                        alert('Please select a simulant first');
-                        return;
-                    }
-                    const currentSimulant = simulants.find(s => s.simulant_id === currentSimulantId);
-                    if (currentSimulant) {
-                        exportToCSV([currentSimulant], `${currentSimulant.name.replace(/[^a-z0-9]/gi, '_')}_${timestamp}.csv`);
-                    }
-                    break;
-
-                case 'filtered':
-                    const filtered = getFilteredSimulants();
-                    if (filtered.length === 0) {
-                        alert('No simulants match the current filters');
-                        return;
-                    }
-                    exportToCSV(filtered, `lunar_simulants_filtered_${timestamp}.csv`);
-                    break;
-
-                case 'all':
-                    exportToCSV(simulants, `lunar_simulants_all_${timestamp}.csv`);
-                    break;
-            }
-
-            exportDropdown.classList.remove('open');
-        });
-    });
 });
