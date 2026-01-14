@@ -18,6 +18,13 @@ scripts/venv/
 scripts/extraction_results.csv
 scripts/extraction_results_*.json
 scripts/pipeline_results.json
+scripts/extraction_results/
+scripts/test_results_*.json
+scripts/all_extractions.csv
+scripts/pdf_index.json
+
+# Database backups
+data/simulant_backup_*.json
 
 # SQLite databases (if you add backend later)
 scripts/*.db

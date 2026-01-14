@@ -71,7 +71,7 @@ class PDFExtractor:
             # Check if simulant is mentioned
             if simulant_name.lower() in text.lower():
                 # Extract context around mentions
-                excerpts = self._extract_context(text, simulant_name, context_size=1000)
+                excerpts = self._extract_context(text, simulant_name, context_size=4000)
 
                 for excerpt in excerpts:
                     results.append({

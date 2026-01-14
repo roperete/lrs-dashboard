@@ -59,6 +59,18 @@ class ClaudeExtractor:
 
             # Parse response
             response_text = message.content[0].text
+
+            # Strip markdown code blocks if present
+            if response_text.startswith('```'):
+                # Remove opening ```json or ```
+                lines = response_text.split('\n')
+                if lines[0].startswith('```'):
+                    lines = lines[1:]
+                # Remove closing ```
+                if lines and lines[-1].strip() == '```':
+                    lines = lines[:-1]
+                response_text = '\n'.join(lines)
+
             extracted_data = json.loads(response_text)
 
             return extracted_data
