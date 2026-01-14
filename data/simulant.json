@@ -74,7 +74,8 @@
     "availability": "Limited stock",
     "release_date": 2008.0,
     "tons_produced_mt": null,
-    "notes": "General-use mare simulant consisting of low-Ti basalt slag sourced from the volcanic area in Changbai Mountains, China. CLRS-1 appears to be another name for the same simulant."
+    "notes": "General-use mare simulant consisting of low-Ti basalt slag sourced from the volcanic area in Changbai Mountains, China. CLRS-1 appears to be another name for the same simulant.",
+    "lunar_sample_reference": "Apollo 14"
   },
   {
     "simulant_id": "S008",
@@ -155,7 +156,9 @@
     "tons_produced_mt": null,
     "notes": "Formulated to imitate lunar soil samples retrieved in Apollo missions. Contains 75% crystalline phase. Around 30% of cumulative volume overlaps with fly ash particle size range.",
     "particle_morphology": "angular",
-    "particle_ruggedness": "sharp"
+    "particle_ruggedness": "sharp",
+    "lunar_sample_reference": "Apollo missions",
+    "particle_size_distribution": "large particle size distribution"
   },
   {
     "simulant_id": "S015",
@@ -167,7 +170,8 @@
     "release_date": null,
     "tons_produced_mt": null,
     "notes": "Similar in composition to JSC-2A simulant",
-    "particle_ruggedness": "higher surface roughness"
+    "particle_ruggedness": "higher surface roughness",
+    "lunar_sample_reference": "Apollo 14"
   },
   {
     "simulant_id": "S016",
@@ -213,7 +217,8 @@
     "release_date": 1998.0,
     "tons_produced_mt": null,
     "notes": "Developed in Japan from Mount Fuji area basalts",
-    "glass_content_percent": 7.15
+    "glass_content_percent": 7.15,
+    "lunar_sample_reference": "Apollo 14 and 15"
   },
   {
     "simulant_id": "S020",
@@ -235,7 +240,8 @@
     "availability": "Available",
     "release_date": null,
     "tons_produced_mt": null,
-    "notes": "Contains the same basalt as FJS-1 but with olivine added. Developed for JAXA to represent the chemistry, mineralogy and geotechnical properties of mare basalt lunar regolith."
+    "notes": "Contains the same basalt as FJS-1 but with olivine added. Developed for JAXA to represent the chemistry, mineralogy and geotechnical properties of mare basalt lunar regolith.",
+    "lunar_sample_reference": "Apollo 14"
   },
   {
     "simulant_id": "S022",
@@ -257,7 +263,7 @@
     "availability": null,
     "release_date": 2008.0,
     "tons_produced_mt": null,
-    "notes": null
+    "notes": "Made from diabase"
   },
   {
     "simulant_id": "S024",
@@ -291,7 +297,8 @@
     "release_date": 2022.0,
     "tons_produced_mt": null,
     "notes": "consisting of anorthosite and contains some coarse particles up to 50 mm in size",
-    "particle_size_distribution": "up to 50 mm"
+    "particle_size_distribution": "up to 50 mm",
+    "lunar_sample_reference": "Apollo 16"
   },
   {
     "simulant_id": "S027",
@@ -427,7 +434,8 @@
     "availability": "Available",
     "release_date": 2020.0,
     "tons_produced_mt": null,
-    "notes": "Used in MICP (Microbially Induced Carbonate Precipitation) solidification studies, achieved compressive strengths in the range of 3-6 MPa demonstrating moderate solidification efficacy"
+    "notes": "Used in MICP (Microbially Induced Carbonate Precipitation) solidification studies, achieved compressive strengths in the range of 3-6 MPa demonstrating moderate solidification efficacy",
+    "lunar_sample_reference": "Apollo 16"
   },
   {
     "simulant_id": "S039",
@@ -471,7 +479,8 @@
     "availability": null,
     "release_date": 2005.0,
     "tons_produced_mt": null,
-    "notes": "intended use unknown"
+    "notes": "intended use unknown",
+    "lunar_sample_reference": "Apollo 14 mare soils"
   },
   {
     "simulant_id": "S043",
@@ -484,7 +493,8 @@
     "tons_produced_mt": null,
     "notes": "First high-Ti simulant proposed by Weiblen et al.",
     "particle_size_distribution": "ground into a Particle Size Distribution (PSD) to resemble lunar soil",
-    "ti_content_percent": 6.8
+    "ti_content_percent": 6.8,
+    "lunar_sample_reference": "Apollo 11"
   },
   {
     "simulant_id": "S044",
@@ -495,7 +505,8 @@
     "availability": "no longer produced",
     "release_date": 1971,
     "tons_produced_mt": null,
-    "notes": "highland simulant made of ground anorthosite from the Duluth Gabbro Complex, Minnesota"
+    "notes": "highland simulant made of ground anorthosite from the Duluth Gabbro Complex, Minnesota",
+    "lunar_sample_reference": "Apollo 16"
   },
   {
     "simulant_id": "S045",
@@ -506,7 +517,8 @@
     "availability": "MayBeAvailable",
     "release_date": 2009.0,
     "tons_produced_mt": null,
-    "notes": "Produced by gabbro which includes large quantity of feldspar (An90). Primary material mined from gabbro located on the north bank of the Yarlung Zangbo River in Tibet. Main components of the gabbro are pyroxene and anorthite."
+    "notes": "Produced by gabbro which includes large quantity of feldspar (An90). Primary material mined from gabbro located on the north bank of the Yarlung Zangbo River in Tibet. Main components of the gabbro are pyroxene and anorthite.",
+    "lunar_sample_reference": "lunar highland soil samples"
   },
   {
     "simulant_id": "S046",
@@ -529,7 +541,8 @@
     "release_date": 2007,
     "tons_produced_mt": null,
     "notes": "Part of NU-LHT series, includes NU-LHT-2M variant",
-    "glass_content_percent": 40
+    "glass_content_percent": 40,
+    "lunar_sample_reference": "Apollo 16"
   },
   {
     "simulant_id": "S048",
@@ -540,7 +553,8 @@
     "availability": "Production stopped",
     "release_date": null,
     "tons_produced_mt": null,
-    "notes": "dust simulant"
+    "notes": "dust simulant",
+    "lunar_sample_reference": "Apollo 16"
   },
   {
     "simulant_id": "S049",
@@ -552,7 +566,8 @@
     "release_date": 2009,
     "tons_produced_mt": null,
     "notes": "Shows segregation and stratification after handling",
-    "glass_content_percent": 40
+    "glass_content_percent": 40,
+    "lunar_sample_reference": "Apollo 16"
   },
   {
     "simulant_id": "S050",
@@ -563,7 +578,8 @@
     "availability": "Production stopped",
     "release_date": null,
     "tons_produced_mt": null,
-    "notes": "Breccia simulant variant of the NU-LHT series"
+    "notes": "Breccia simulant variant of the NU-LHT series",
+    "lunar_sample_reference": "Apollo 16"
   },
   {
     "simulant_id": "S051",
@@ -575,7 +591,8 @@
     "release_date": 2007,
     "tons_produced_mt": null,
     "notes": "Did not flow through the orifice under test conditions, showing different flow characteristics compared to other simulants",
-    "glass_content_percent": 40
+    "glass_content_percent": 40,
+    "lunar_sample_reference": "Apollo 16 regolith samples"
   },
   {
     "simulant_id": "S052",
@@ -646,7 +663,8 @@
     "availability": "Available",
     "release_date": 2010.0,
     "tons_produced_mt": null,
-    "notes": "Average highlands, Apollo based (general)- 70% anorthosite, 30% basaltic cinder"
+    "notes": "Average highlands, Apollo based (general)- 70% anorthosite, 30% basaltic cinder",
+    "lunar_sample_reference": "Apollo based"
   },
   {
     "simulant_id": "S058",
@@ -657,7 +675,8 @@
     "availability": "Available",
     "release_date": 2010.0,
     "tons_produced_mt": null,
-    "notes": "80% anorthosite, 20% basaltic cinder"
+    "notes": "80% anorthosite, 20% basaltic cinder",
+    "lunar_sample_reference": "Apollo based (general)"
   },
   {
     "simulant_id": "S059",
@@ -679,7 +698,8 @@
     "availability": "Available",
     "release_date": 2010,
     "tons_produced_mt": null,
-    "notes": "Average mare, Apollo based (general)- 90% basaltic cinder, 10% anorthosite"
+    "notes": "Average mare, Apollo based (general)- 90% basaltic cinder, 10% anorthosite",
+    "lunar_sample_reference": "Apollo based"
   },
   {
     "simulant_id": "S061",
@@ -690,7 +710,8 @@
     "availability": "Available",
     "release_date": 2010,
     "tons_produced_mt": null,
-    "notes": "h-Ti mare, Apollo based (general) - 77% basaltic cinder, 8.6% anorthosite, 14.4% ilmer"
+    "notes": "h-Ti mare, Apollo based (general) - 77% basaltic cinder, 8.6% anorthosite, 14.4% ilmer",
+    "lunar_sample_reference": "Apollo based"
   },
   {
     "simulant_id": "S062",
@@ -767,7 +788,8 @@
     "tons_produced_mt": null,
     "notes": "Made from basalt rock from Trad province, designed for biomining extraction of sodium, magnesium, iron, aluminum, titanium and silicon",
     "particle_morphology": "54.55% polygons and 45.45% rods",
-    "particle_ruggedness": "evenly distributed, uncluttered"
+    "particle_ruggedness": "evenly distributed, uncluttered",
+    "lunar_sample_reference": "Apollo missions"
   },
   {
     "simulant_id": "S068",
@@ -857,6 +879,7 @@
     "release_date": null,
     "tons_produced_mt": null,
     "notes": "Prepared based on particle size distribution data from samples returned by the Chang'e-5 mission",
-    "particle_morphology": "irregular"
+    "particle_morphology": "irregular",
+    "lunar_sample_reference": "Chang'e-5"
   }
 ]
