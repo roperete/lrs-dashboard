@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const institutionUrls = {
         "Space Resource Technologies": "https://exolithsimulants.com/",
         "Space Resources (Exolith Lab)": "https://exolithsimulants.com/",
-        "Hispansion": "https://www.hispansion.com/",
+        "Hispansion": "https://www.hispansion.io/",
         "Off Planet Research": "https://www.offplanetresearch.com/",
         "NASA": "https://www.nasa.gov/",
         "ESA": "https://www.esa.int/",
