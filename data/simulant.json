@@ -760,7 +760,9 @@
     "density_g_cm3": 1.67,
     "glass_content_percent": 19.2,
     "ti_content_percent": 0.82,
-    "nasa_fom_score": 91.7
+    "nasa_fom_score": 91.7,
+    "bulk_density": "1.67 g/cm\u00b3",
+    "particle_size_d50": "137.6 \u00b5m"
   },
   {
     "simulant_id": "S066",
@@ -775,7 +777,9 @@
     "density_g_cm3": 1.52,
     "glass_content_percent": 31.4,
     "ti_content_percent": 0.82,
-    "nasa_fom_score": 81.8
+    "nasa_fom_score": 81.8,
+    "bulk_density": "1.52 g/cm\u00b3",
+    "particle_size_d50": "48.4 \u00b5m"
   },
   {
     "simulant_id": "S067",

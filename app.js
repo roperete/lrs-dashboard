@@ -29,8 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Global state
     let countryLayer = null;
     let countryGeoJson = null;
-    let simulants = [], sites = [], minerals = [], chemicals = [], references = [];
+    let simulants = [], sites = [], minerals = [], chemicals = [], references = [], mineralGroups = [];
     let markerMap = {};
+    let mineralChartView = { 1: 'detailed', 2: 'detailed' }; // Track which view each panel is showing
     let charts = {
         mineral1: null,
         chemical1: null,
@@ -137,20 +138,23 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('./data/composition.json').then(r => r.json()),
         fetch('./data/chemical_composition.json').then(r => r.json()),
         fetch('./data/references.json').then(r => r.json()),
-        fetch('./data/countries.geojson').then(r => r.json())
-    ]).then(([simData, siteData, minData, chemData, refData, geoData]) => {
+        fetch('./data/countries.geojson').then(r => r.json()),
+        fetch('./data/mineral_groups.json').then(r => r.json()).catch(() => [])  // Optional file
+    ]).then(([simData, siteData, minData, chemData, refData, geoData, groupData]) => {
         simulants = simData;
         sites = siteData;
         minerals = minData;
         chemicals = chemData;
         references = refData;
         countryGeoJson = geoData;
+        mineralGroups = groupData;
 
         console.log('✓ Data loaded:', {
             simulants: simulants.length,
             sites: sites.length,
             minerals: minerals.length,
-            chemicals: chemicals.length
+            chemicals: chemicals.length,
+            mineralGroups: mineralGroups.length
         });
 
         hideLoading();
@@ -179,8 +183,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (countryFilter.length) keep = keep && countryFilter.includes(s.country_code);
             if (institutionFilter.length) keep = keep && institutionFilter.includes(s.institution);
             if (mineralFilter.length) {
-                let sMinerals = minerals.filter(m => m.simulant_id === s.simulant_id).map(m => m.component_name);
-                keep = keep && mineralFilter.some(m => sMinerals.includes(m));
+                // Separate detailed minerals from group filters
+                const detailedFilters = mineralFilter.filter(f => !f.startsWith('group:'));
+                const groupFilters = mineralFilter.filter(f => f.startsWith('group:')).map(f => f.replace('group:', ''));
+
+                const sMinerals = minerals.filter(m => m.simulant_id === s.simulant_id).map(m => m.component_name);
+                const sGroups = mineralGroups.filter(g => g.simulant_id === s.simulant_id).map(g => g.group_name);
+
+                const matchesDetailed = detailedFilters.length === 0 || detailedFilters.some(m => sMinerals.includes(m));
+                const matchesGroups = groupFilters.length === 0 || groupFilters.some(g => sGroups.includes(g));
+
+                keep = keep && (matchesDetailed || matchesGroups);
             }
             if (chemicalFilter.length) {
                 let sChemicals = chemicals.filter(c => c.simulant_id === s.simulant_id).map(c => c.component_name);
@@ -227,12 +240,33 @@ document.addEventListener('DOMContentLoaded', () => {
             countryFilter.appendChild(opt);
         });
 
-        [...new Set(minerals.map(m => m.component_name).filter(Boolean))].sort().forEach(m => {
-            const opt = document.createElement('option');
-            opt.value = m;
-            opt.text = m;
-            mineralFilter.appendChild(opt);
-        });
+        // Populate mineral filter with optgroups
+        const detailedMinerals = [...new Set(minerals.map(m => m.component_name).filter(Boolean))].sort();
+        const nasaGroups = [...new Set(mineralGroups.map(g => g.group_name).filter(Boolean))].sort();
+
+        if (detailedMinerals.length > 0) {
+            const detailedGroup = document.createElement('optgroup');
+            detailedGroup.label = 'Detailed Minerals';
+            detailedMinerals.forEach(m => {
+                const opt = document.createElement('option');
+                opt.value = m;
+                opt.text = m;
+                detailedGroup.appendChild(opt);
+            });
+            mineralFilter.appendChild(detailedGroup);
+        }
+
+        if (nasaGroups.length > 0) {
+            const groupsGroup = document.createElement('optgroup');
+            groupsGroup.label = 'NASA Mineral Groups';
+            nasaGroups.forEach(g => {
+                const opt = document.createElement('option');
+                opt.value = `group:${g}`;  // Prefix to distinguish from detailed
+                opt.text = g;
+                groupsGroup.appendChild(opt);
+            });
+            mineralFilter.appendChild(groupsGroup);
+        }
 
         [...new Set(chemicals.map(c => c.component_name).filter(Boolean))].sort().forEach(c => {
             const opt = document.createElement('option');
@@ -551,8 +585,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeFilter.length) keep = keep && typeFilter.includes(s.type);
             if (countryFilter.length) keep = keep && countryFilter.includes(s.country_code);
             if (mineralFilter.length) {
-                let sMinerals = minerals.filter(m => m.simulant_id === s.simulant_id).map(m => m.component_name);
-                keep = keep && mineralFilter.some(m => sMinerals.includes(m));
+                // Separate detailed minerals from group filters
+                const detailedFilters = mineralFilter.filter(f => !f.startsWith('group:'));
+                const groupFilters = mineralFilter.filter(f => f.startsWith('group:')).map(f => f.replace('group:', ''));
+
+                const sMinerals = minerals.filter(m => m.simulant_id === s.simulant_id).map(m => m.component_name);
+                const sGroups = mineralGroups.filter(g => g.simulant_id === s.simulant_id).map(g => g.group_name);
+
+                const matchesDetailed = detailedFilters.length === 0 || detailedFilters.some(m => sMinerals.includes(m));
+                const matchesGroups = groupFilters.length === 0 || groupFilters.some(g => sGroups.includes(g));
+
+                keep = keep && (matchesDetailed || matchesGroups);
             }
             if (chemicalFilter.length) {
                 let sChemicals = chemicals.filter(c => c.simulant_id === s.simulant_id).map(c => c.component_name);
@@ -692,6 +735,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         updateProperties(simulant_id, panelNum);
+        initializeMineralToggle(panelNum);  // Add toggle buttons before chart
         updateMineralChart(simulant_id, panelNum);
         updateChemicalChart(simulant_id, panelNum);
         updateReferences(simulant_id, panelNum);
@@ -779,31 +823,63 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function updateMineralChart(simulant_id, panelNum) {
+    function updateMineralChart(simulant_id, panelNum, viewType = null) {
         const chartKey = `mineral${panelNum}`;
         const canvas = document.getElementById(`mineral-chart-${panelNum}`);
         const ctx = canvas.getContext('2d');
 
+        // Use provided viewType or current view state
+        const currentView = viewType || mineralChartView[panelNum] || 'detailed';
+        mineralChartView[panelNum] = currentView;
+
         if (charts[chartKey]) charts[chartKey].destroy();
 
-        const minSubset = minerals.filter(m => m.simulant_id === simulant_id && m.value_pct > 0)
-            .sort((a, b) => b.value_pct - a.value_pct);
+        // Get data based on view type
+        let chartData = [];
+        let chartColor, chartLabel;
 
-        if (minSubset.length > 0) {
+        if (currentView === 'groups') {
+            // NASA Mineral Groups view
+            chartData = mineralGroups
+                .filter(g => g.simulant_id === simulant_id && g.value_pct > 0)
+                .sort((a, b) => b.value_pct - a.value_pct);
+            chartColor = { bg: 'rgba(255, 107, 107, 0.8)', border: 'rgba(255, 107, 107, 1)' };  // Coral
+            chartLabel = 'Group %';
+        } else {
+            // Detailed Minerals view
+            chartData = minerals
+                .filter(m => m.simulant_id === simulant_id && m.value_pct > 0)
+                .sort((a, b) => b.value_pct - a.value_pct);
+            chartColor = { bg: 'rgba(0, 180, 216, 0.8)', border: 'rgba(0, 180, 216, 1)' };  // Cyan
+            chartLabel = 'Mineral %';
+        }
+
+        // Update toggle button state
+        const toggleContainer = canvas.parentElement.querySelector('.mineral-view-toggle');
+        if (toggleContainer) {
+            toggleContainer.querySelectorAll('.toggle-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.view === currentView);
+            });
+        }
+
+        if (chartData.length > 0) {
             canvas.style.display = 'block';
             const wrapper = canvas.parentElement;
             const noDataMsg = wrapper.querySelector('.no-data-message');
             if (noDataMsg) noDataMsg.remove();
 
+            const labels = chartData.map(d => d.component_name || d.group_name);
+            const values = chartData.map(d => d.value_pct);
+
             charts[chartKey] = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: minSubset.map(m => m.component_name),
+                    labels: labels,
                     datasets: [{
-                        label: 'Mineral %',
-                        data: minSubset.map(m => m.value_pct),
-                        backgroundColor: 'rgba(0, 180, 216, 0.8)',
-                        borderColor: 'rgba(0, 180, 216, 1)',
+                        label: chartLabel,
+                        data: values,
+                        backgroundColor: chartColor.bg,
+                        borderColor: chartColor.border,
                         borderWidth: 1,
                         borderRadius: 4
                     }]
@@ -816,9 +892,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         legend: { display: false },
                         tooltip: {
                             backgroundColor: 'rgba(20, 27, 45, 0.95)',
-                            titleColor: '#00b4d8',
+                            titleColor: chartColor.border,
                             bodyColor: '#e8eaed',
-                            borderColor: 'rgba(0, 180, 216, 0.3)',
+                            borderColor: chartColor.bg.replace('0.8', '0.3'),
                             borderWidth: 1,
                             padding: 12,
                             cornerRadius: 6
@@ -844,10 +920,43 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!wrapper.querySelector('.no-data-message')) {
                 const msg = document.createElement('p');
                 msg.className = 'no-data-message placeholder-text';
-                msg.textContent = 'Data not available. See references for more information.';
+                msg.textContent = currentView === 'groups'
+                    ? 'Mineral group data not available for this simulant.'
+                    : 'Data not available. See references for more information.';
                 wrapper.appendChild(msg);
             }
         }
+    }
+
+    function initializeMineralToggle(panelNum) {
+        const canvas = document.getElementById(`mineral-chart-${panelNum}`);
+        const wrapper = canvas.parentElement;
+
+        // Check if toggle already exists
+        if (wrapper.querySelector('.mineral-view-toggle')) return;
+
+        // Create toggle container
+        const toggleContainer = document.createElement('div');
+        toggleContainer.className = 'mineral-view-toggle';
+        toggleContainer.innerHTML = `
+            <button class="toggle-btn active" data-view="detailed" data-panel="${panelNum}">Detailed</button>
+            <button class="toggle-btn" data-view="groups" data-panel="${panelNum}">NASA Groups</button>
+        `;
+
+        // Insert toggle before the canvas
+        wrapper.insertBefore(toggleContainer, canvas);
+
+        // Add click handlers
+        toggleContainer.querySelectorAll('.toggle-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const view = e.target.dataset.view;
+                const panel = parseInt(e.target.dataset.panel);
+                const simulantId = panelStates[`panel${panel}`].simulantId;
+                if (simulantId) {
+                    updateMineralChart(simulantId, panel, view);
+                }
+            });
+        });
     }
 
     function updateChemicalChart(simulant_id, panelNum) {
@@ -1091,8 +1200,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeFilter.length) keep = keep && typeFilter.includes(s.type);
             if (countryFilter.length) keep = keep && countryFilter.includes(s.country_code);
             if (mineralFilter.length) {
-                let sMinerals = minerals.filter(m => m.simulant_id === s.simulant_id).map(m => m.component_name);
-                keep = keep && mineralFilter.some(m => sMinerals.includes(m));
+                // Separate detailed minerals from group filters
+                const detailedFilters = mineralFilter.filter(f => !f.startsWith('group:'));
+                const groupFilters = mineralFilter.filter(f => f.startsWith('group:')).map(f => f.replace('group:', ''));
+
+                const sMinerals = minerals.filter(m => m.simulant_id === s.simulant_id).map(m => m.component_name);
+                const sGroups = mineralGroups.filter(g => g.simulant_id === s.simulant_id).map(g => g.group_name);
+
+                const matchesDetailed = detailedFilters.length === 0 || detailedFilters.some(m => sMinerals.includes(m));
+                const matchesGroups = groupFilters.length === 0 || groupFilters.some(g => sGroups.includes(g));
+
+                keep = keep && (matchesDetailed || matchesGroups);
             }
             if (chemicalFilter.length) {
                 let sChemicals = chemicals.filter(c => c.simulant_id === s.simulant_id).map(c => c.component_name);
