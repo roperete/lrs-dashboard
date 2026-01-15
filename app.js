@@ -932,32 +932,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 const div = document.createElement('div');
                 div.className = 'reference-item';
 
-                // Safely linkify URLs using DOM methods (no innerHTML with user content)
-                const urlRegex = /(https?:\/\/[^\s<>"{}|\\^`[\]]+)/g;
                 const text = r.reference_text || '';
-                let lastIndex = 0;
-                let match;
 
-                while ((match = urlRegex.exec(text)) !== null) {
-                    // Add text before the URL
-                    if (match.index > lastIndex) {
-                        div.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
-                    }
-                    // Create anchor for the URL
-                    const anchor = document.createElement('a');
-                    anchor.href = match[1];
-                    anchor.target = '_blank';
-                    anchor.rel = 'noopener noreferrer';
-                    anchor.textContent = match[1];
-                    div.appendChild(anchor);
-                    lastIndex = urlRegex.lastIndex;
-                }
+                // Create clickable reference link to Google Scholar
+                const refLink = document.createElement('a');
+                refLink.className = 'reference-link';
+                refLink.href = `https://scholar.google.com/scholar?q=${encodeURIComponent(text)}`;
+                refLink.target = '_blank';
+                refLink.rel = 'noopener noreferrer';
+                refLink.title = 'Search on Google Scholar';
+                refLink.textContent = text;
 
-                // Add remaining text after last URL
-                if (lastIndex < text.length) {
-                    div.appendChild(document.createTextNode(text.slice(lastIndex)));
-                }
-
+                div.appendChild(refLink);
                 refPanel.appendChild(div);
             });
         }

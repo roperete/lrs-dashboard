@@ -960,6 +960,31 @@ body {
   text-shadow: 0 0 8px var(--primary-glow);
 }
 
+/* Reference items */
+.reference-item {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.reference-item:last-child {
+  border-bottom: none;
+}
+
+.reference-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.5;
+  display: block;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.reference-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 /* Comparison mode properties */
 .info-panel.comparison-mode .properties-grid,
 .info-panel.comparison-panel .properties-grid {
