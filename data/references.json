@@ -2,361 +2,433 @@
   {
     "reference_id": "R001",
     "simulant_id": "S002",
-    "reference_text": "Bonanno, A., & Bernold, L. (2015). Exploratory review of sintered lunar soil based on the results of the thermal analysis of a lunar soil simulant. Journal of Aerospace Engineering, 28, 04014114. https://doi.org/10.1061/(ASCE)AS.1943-5525.000042"
+    "reference_text": "Bonanno, A., & Bernold, L. (2015). Exploratory review of sintered lunar soil based on the results of the thermal analysis of a lunar soil simulant. Journal of Aerospace Engineering, 28, 04014114. https://doi.org/10.1061/(ASCE)AS.1943-5525.000042",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R002",
     "simulant_id": "S003",
-    "reference_text": "Desai, C. S. (1991). Development and mechanical properties of structural materials from lunar simulant. In NASA Space Engineering Research Center for Utilization of Local Planetary Resources."
+    "reference_text": "Desai, C. S. (1991). Development and mechanical properties of structural materials from lunar simulant. In NASA Space Engineering Research Center for Utilization of Local Planetary Resources.",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R003",
     "simulant_id": "S004",
-    "reference_text": "Zhou, S., Lu, C., Zhu, X., & Li, F. (2021). Preparation and characterization of high-strength geopolymer based on BH-1 lunar soil simulant with low alkali content. Engineering, 7, 1631-1645. https://doi.org/10.1016/j.eng.2020.10.016"
+    "reference_text": "Zhou, S., Lu, C., Zhu, X., & Li, F. (2021). Preparation and characterization of high-strength geopolymer based on BH-1 lunar soil simulant with low alkali content. Engineering, 7, 1631-1645. https://doi.org/10.1016/j.eng.2020.10.016",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R004",
     "simulant_id": "S004",
-    "reference_text": "Zhou, S., Yang, Z., Zhang, R., Zhu, X., & Li, F. (2021). Preparation and evaluation of geopolymer based on BH-2 lunar regolith simulant under lunar surface temperature and vacuum condition. Acta Astronautica, 189, 90-98. https://doi.org/10.1016/j.actaastro.2021.08.039"
+    "reference_text": "Zhou, S., Yang, Z., Zhang, R., Zhu, X., & Li, F. (2021). Preparation and evaluation of geopolymer based on BH-2 lunar regolith simulant under lunar surface temperature and vacuum condition. Acta Astronautica, 189, 90-98. https://doi.org/10.1016/j.actaastro.2021.08.039",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R005",
     "simulant_id": "S005",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R006",
     "simulant_id": "S006",
-    "reference_text": "Suescun-Florez, E., Roslyakov, S., Iskander, M., & Baamer, M. (2015). Geotechnical properties of BP-1 lunar regolith simulant. Journal of Aerospace Engineering, 28."
+    "reference_text": "Suescun-Florez, E., Roslyakov, S., Iskander, M., & Baamer, M. (2015). Geotechnical properties of BP-1 lunar regolith simulant. Journal of Aerospace Engineering, 28.",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R007",
     "simulant_id": "S007",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R008",
     "simulant_id": "S007",
-    "reference_text": "Zheng, Y., Wang, S., Ouyang, Z., Zou, Y., Liu, J., Li, C., Li, X., & Feng, J. (2009). CAS-1 lunar soil simulant. Advances in Space Research, 43, 448-454. https://doi.org/10.1016/j.asr.2008.07.006"
+    "reference_text": "Zheng, Y., Wang, S., Ouyang, Z., Zou, Y., Liu, J., Li, C., Li, X., & Feng, J. (2009). CAS-1 lunar soil simulant. Advances in Space Research, 43, 448-454. https://doi.org/10.1016/j.asr.2008.07.006",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R009",
     "simulant_id": "S009",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R010",
     "simulant_id": "S010",
-    "reference_text": "Zheng, Y., Wang, S., Ouyang, Z., Zou, Y., Liu, J., Li, C., Li, X., & Feng, J. (2009). CAS-1 lunar soil simulant. Advances in Space Research, 43, 448-454. https://doi.org/10.1016/j.asr.2008.07.006"
+    "reference_text": "Zheng, Y., Wang, S., Ouyang, Z., Zou, Y., Liu, J., Li, C., Li, X., & Feng, J. (2009). CAS-1 lunar soil simulant. Advances in Space Research, 43, 448-454. https://doi.org/10.1016/j.asr.2008.07.006",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R011",
     "simulant_id": "S011",
-    "reference_text": "van Susante, P. J., & Dreyer, C. B. (2010). Lunar and planetary excavation prototype development and testing at the Colorado School of Mines. In Earth and Space 2010: Engineering, Science, Construction, and Operations in Challenging Environments (pp. 1191-1200)."
+    "reference_text": "van Susante, P. J., & Dreyer, C. B. (2010). Lunar and planetary excavation prototype development and testing at the Colorado School of Mines. In Earth and Space 2010: Engineering, Science, Construction, and Operations in Challenging Environments (pp. 1191-1200).",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R012",
     "simulant_id": "S012",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R013",
     "simulant_id": "S013",
-    "reference_text": "Li, R., Zhou, G., Yan, K., Chen, J., Chen, D., Cai, S., & Mo, P.-Q. (2022). Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation. International Journal of Mining Science and Technology, 32, 1-15. https://doi.org/10.1016/j.ijmst.2021.09.003"
+    "reference_text": "Li, R., Zhou, G., Yan, K., Chen, J., Chen, D., Cai, S., & Mo, P.-Q. (2022). Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation. International Journal of Mining Science and Technology, 32, 1-15. https://doi.org/10.1016/j.ijmst.2021.09.003",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R014",
     "simulant_id": "S014",
-    "reference_text": "Cesaretti, G., Dini, E., De Kestelier, X., Colla, V., & Pambaguian, L. (2014). Building components for an outpost on the lunar soil by means of a novel 3D printing technology. Acta Astronautica."
+    "reference_text": "Cesaretti, G., Dini, E., De Kestelier, X., Colla, V., & Pambaguian, L. (2014). Building components for an outpost on the lunar soil by means of a novel 3D printing technology. Acta Astronautica.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R015",
     "simulant_id": "S015",
-    "reference_text": "Sandeep, C. S., Senetakis, K., Cheung, D. K. H., Choi, C. E., Wang, Y., Coop, M. R., & Ng, C. W. W. (2019). Micromechanical behavior of DNA-IA lunar regolith simulant in comparison to Ottawa sand. Journal of Geophysical Research: Solid Earth."
+    "reference_text": "Sandeep, C. S., Senetakis, K., Cheung, D. K. H., Choi, C. E., Wang, Y., Coop, M. R., & Ng, C. W. W. (2019). Micromechanical behavior of DNA-IA lunar regolith simulant in comparison to Ottawa sand. Journal of Geophysical Research: Solid Earth.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R016",
     "simulant_id": "S016",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R017",
     "simulant_id": "S017",
-    "reference_text": "Manick, K., Gill, S., Mason, L., & Crowther, S. (2018). Fundamental properties characterisation of lunar regolith simulants at the ESA Sample Analogue Curation Facility. In 49th Lunar and Planetary Science Conference."
+    "reference_text": "Manick, K., Gill, S., Mason, L., & Crowther, S. (2018). Fundamental properties characterisation of lunar regolith simulants at the ESA Sample Analogue Curation Facility. In 49th Lunar and Planetary Science Conference.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R018",
     "simulant_id": "S018",
-    "reference_text": "Engelschion, V. S., Eriksson, S. R., Cowley, A., Fateri, M., Meurisse, A., Kueppers, U., & Sperl, M. (2020). EAC-1A: A novel large-volume lunar regolith simulant. Scientific Reports, 10. https://doi.org/10.1038/s41598-020-62312-4"
+    "reference_text": "Engelschion, V. S., Eriksson, S. R., Cowley, A., Fateri, M., Meurisse, A., Kueppers, U., & Sperl, M. (2020). EAC-1A: A novel large-volume lunar regolith simulant. Scientific Reports, 10. https://doi.org/10.1038/s41598-020-62312-4",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R019",
     "simulant_id": "S019",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R020",
     "simulant_id": "S021",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R021",
     "simulant_id": "S022",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R022",
     "simulant_id": "S023",
-    "reference_text": "Taylor, P. T., Lowman, P., Nagihara, S., Milam, M., & Nakamura, Y. (2008). Jurassic diabase from Leesburg, VA: A proposed lunar simulant. In NLSI Lunar Science Conference (p. 2054)."
+    "reference_text": "Taylor, P. T., Lowman, P., Nagihara, S., Milam, M., & Nakamura, Y. (2008). Jurassic diabase from Leesburg, VA: A proposed lunar simulant. In NLSI Lunar Science Conference (p. 2054).",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R023",
     "simulant_id": "S024",
-    "reference_text": "Oravec, H. A., Zeng, X., & Asnani, V. M. (2010). Design and characterization of GRC-1: A soil for lunar terramechanics testing in Earth-ambient conditions. Journal of Terramechanics, 47, 361-377. https://doi.org/10.1016/j.jterra.2010.04.006"
+    "reference_text": "Oravec, H. A., Zeng, X., & Asnani, V. M. (2010). Design and characterization of GRC-1: A soil for lunar terramechanics testing in Earth-ambient conditions. Journal of Terramechanics, 47, 361-377. https://doi.org/10.1016/j.jterra.2010.04.006",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R024",
     "simulant_id": "S026",
-    "reference_text": "Sun, X., Zhang, R., Li, X., Zou, M., Wang, C., & Chen, L. (2022). JLU-H: A novel lunar highland regolith simulant for use in large-scale engineering experiments. Planetary and Space Science, 221, 105562. https://doi.org/10.1016/j.pss.2022.105562"
+    "reference_text": "Sun, X., Zhang, R., Li, X., Zou, M., Wang, C., & Chen, L. (2022). JLU-H: A novel lunar highland regolith simulant for use in large-scale engineering experiments. Planetary and Space Science, 221, 105562. https://doi.org/10.1016/j.pss.2022.105562",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R025",
     "simulant_id": "S027",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R026",
     "simulant_id": "S028",
-    "reference_text": "Taylor, L. A., Pieters, C. M., & Britt, D. (2005). JSC-1 as the lunar soil simulant of choice. Meteoritics and Planetary Science."
+    "reference_text": "Taylor, L. A., Pieters, C. M., & Britt, D. (2005). JSC-1 as the lunar soil simulant of choice. Meteoritics and Planetary Science.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R027",
     "simulant_id": "S029",
-    "reference_text": "Wang, K., Zhang, Y., & Liu, J. (2022). Lunar regolith simulants for space exploration: A review. Biogeotechnics."
+    "reference_text": "Wang, K., Zhang, Y., & Liu, J. (2022). Lunar regolith simulants for space exploration: A review. Biogeotechnics.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R028",
     "simulant_id": "S030",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R029",
     "simulant_id": "S032",
-    "reference_text": "Kim, Y. J., Ryu, B. H., Jin, H., Lee, J., & Shin, H. S. (2021). Microstructural, mechanical, and thermal properties of microwave-sintered KLS-1 lunar regolith simulant. Ceramics International, 47, 26891-26897."
+    "reference_text": "Kim, Y. J., Ryu, B. H., Jin, H., Lee, J., & Shin, H. S. (2021). Microstructural, mechanical, and thermal properties of microwave-sintered KLS-1 lunar regolith simulant. Ceramics International, 47, 26891-26897.",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R030",
     "simulant_id": "S033",
-    "reference_text": "Yoo, S.-H., Kim, H.-D., Lim, J. H., & Park, J.-S. (2014). Development of KAU mechanical lunar simulants and drop test of lunar landing gears. Journal of the Korean Society for Aeronautical & Space Sciences, 42, 1037-1044. https://doi.org/10.5139/JKSAS.2014.42.12.1037"
+    "reference_text": "Yoo, S.-H., Kim, H.-D., Lim, J. H., & Park, J.-S. (2014). Development of KAU mechanical lunar simulants and drop test of lunar landing gears. Journal of the Korean Society for Aeronautical & Space Sciences, 42, 1037-1044. https://doi.org/10.5139/JKSAS.2014.42.12.1037",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R031",
     "simulant_id": "S034",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R032",
     "simulant_id": "S035",
-    "reference_text": "Hooper, D. M., Ximenes, S. W., Wells, R., Necsoiu, M., & Patrick, E. L. (2020). Introduction of LCATS-1, a geotechnical lunar regolith simulant for multi-purpose utilization. In 51st Annual Lunar and Planetary Science Conference (p. 2548)."
+    "reference_text": "Hooper, D. M., Ximenes, S. W., Wells, R., Necsoiu, M., & Patrick, E. L. (2020). Introduction of LCATS-1, a geotechnical lunar regolith simulant for multi-purpose utilization. In 51st Annual Lunar and Planetary Science Conference (p. 2548).",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R033",
     "simulant_id": "S036",
-    "reference_text": "Long-Fox, J., Landsman, Z., Easter, P., Millwater, C., & Britt, D. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Advances in Space Research, 71(12), 5400-5412."
+    "reference_text": "Long-Fox, J., Landsman, Z., Easter, P., Millwater, C., & Britt, D. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Advances in Space Research, 71(12), 5400-5412.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R034",
     "simulant_id": "S037",
-    "reference_text": "Long-Fox, J., Landsman, Z., Easter, P., Millwater, C., & Britt, D. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Advances in Space Research, 71(12), 5400-5412."
+    "reference_text": "Long-Fox, J., Landsman, Z., Easter, P., Millwater, C., & Britt, D. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Advances in Space Research, 71(12), 5400-5412.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R035",
     "simulant_id": "S038",
-    "reference_text": "Venugopal, I., Prabu, T., Muthukkumaran, K., & Annadurai, M. (2020). Development of a novel lunar highland soil simulant (LSS-ISAC-1) and its geotechnical properties for Chandrayaan missions. Planetary and Space Science, 194, 105116. https://doi.org/10.1016/j.pss.2020.105116"
+    "reference_text": "Venugopal, I., Prabu, T., Muthukkumaran, K., & Annadurai, M. (2020). Development of a novel lunar highland soil simulant (LSS-ISAC-1) and its geotechnical properties for Chandrayaan missions. Planetary and Space Science, 194, 105116. https://doi.org/10.1016/j.pss.2020.105116",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R036",
     "simulant_id": "S039",
-    "reference_text": "Bunker, K. L., & Lersch, T. L. (n.d.). Characterization of lunar dust simulants by automated particle analysis using scanning electron microscopy."
+    "reference_text": "Bunker, K. L., & Lersch, T. L. (n.d.). Characterization of lunar dust simulants by automated particle analysis using scanning electron microscopy.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R037",
     "simulant_id": "S042",
-    "reference_text": "LEAG-CAPTEM SWG. (2010). Status of lunar regolith simulants and demand for Apollo samples [Report]. http://www.lpi.usra.edu/leag/reports/SIM_SATReport2010.pdf"
+    "reference_text": "LEAG-CAPTEM SWG. (2010). Status of lunar regolith simulants and demand for Apollo samples [Report]. http://www.lpi.usra.edu/leag/reports/SIM_SATReport2010.pdf",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R038",
     "simulant_id": "S043",
-    "reference_text": "Weiblen, P., & Gordon, K. (1988). Characteristics of a simulant for lunar surface materials. In Second Conference on Lunar Bases and Space Activities of the 21st Century (p. 254)."
+    "reference_text": "Weiblen, P., & Gordon, K. (1988). Characteristics of a simulant for lunar surface materials. In Second Conference on Lunar Bases and Space Activities of the 21st Century (p. 254).",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R039",
     "simulant_id": "S045",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R040",
     "simulant_id": "S046",
-    "reference_text": "Li, C., Xie, K., Liu, A., & Shi, Z. (2019). The preparation and characterization of NEU-1 lunar soil simulants. JOM, 71, 1471-1476. https://doi.org/10.1007/s11837-019-03362-6"
+    "reference_text": "Li, C., Xie, K., Liu, A., & Shi, Z. (2019). The preparation and characterization of NEU-1 lunar soil simulants. JOM, 71, 1471-1476. https://doi.org/10.1007/s11837-019-03362-6",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R041",
     "simulant_id": "S047",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R042",
     "simulant_id": "S049",
-    "reference_text": "Stoeser, D., Rickman, D., & Wilson, S. (2011). Design and specifications for the highland regolith prototype simulants NU-LHT-1M and -2M (NASA/TM-2010-216438, pp. 1-13)."
+    "reference_text": "Stoeser, D., Rickman, D., & Wilson, S. (2011). Design and specifications for the highland regolith prototype simulants NU-LHT-1M and -2M (NASA/TM-2010-216438, pp. 1-13).",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R043",
     "simulant_id": "S051",
-    "reference_text": "Stoeser, D., Rickman, D., & Wilson, S. (2011). Design and specifications for the highland regolith prototype simulants NU-LHT-1M and -2M (NASA/TM-2010-216438, pp. 1-13)."
+    "reference_text": "Stoeser, D., Rickman, D., & Wilson, S. (2011). Design and specifications for the highland regolith prototype simulants NU-LHT-1M and -2M (NASA/TM-2010-216438, pp. 1-13).",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R044",
     "simulant_id": "S053",
-    "reference_text": "Battler, M. M., & Spray, J. G. (2009). The Shawmere anorthosite and OB-1 as lunar highland regolith simulants. Planetary and Space Science, 57(14-15), 2128-2131. https://doi.org/10.1016/j.pss.2009.09.003"
+    "reference_text": "Battler, M. M., & Spray, J. G. (2009). The Shawmere anorthosite and OB-1 as lunar highland regolith simulants. Planetary and Space Science, 57(14-15), 2128-2131. https://doi.org/10.1016/j.pss.2009.09.003",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R045",
     "simulant_id": "S053",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R046",
     "simulant_id": "S057",
-    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
+    "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R047",
     "simulant_id": "S062",
-    "reference_text": "Sueyoshi, K., Watanabe, T., Nakano, Y., Kanamori, H., Aoki, S., Miyahara, A., & Matsui, K. (2008). Reaction mechanism of various types of lunar soil simulants by hydrogen reduction. In Earth & Space 2008: Engineering, Science, Construction, and Operations in Challenging Environments (pp. 1-8)."
+    "reference_text": "Sueyoshi, K., Watanabe, T., Nakano, Y., Kanamori, H., Aoki, S., Miyahara, A., & Matsui, K. (2008). Reaction mechanism of various types of lunar soil simulants by hydrogen reduction. In Earth & Space 2008: Engineering, Science, Construction, and Operations in Challenging Environments (pp. 1-8).",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R048",
     "simulant_id": "S063",
-    "reference_text": "Toklu, Y. C., Calis Acikbas, N., Acikbas, G., Erdem Cercevik, A., & Akpinar, P. (2022). Turkish lunar regolith simulant TBG-1. Earth Space, 956-965."
+    "reference_text": "Toklu, Y. C., Calis Acikbas, N., Acikbas, G., Erdem Cercevik, A., & Akpinar, P. (2022). Turkish lunar regolith simulant TBG-1. Earth Space, 956-965.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R049",
     "simulant_id": "S064",
-    "reference_text": "Jiang, M. J., Li, L. Q., & Sun, Y. G. (2012). Properties of TJ-1 lunar soil simulant. Journal of Aerospace Engineering, 25(3), 463-469."
+    "reference_text": "Jiang, M. J., Li, L. Q., & Sun, Y. G. (2012). Properties of TJ-1 lunar soil simulant. Journal of Aerospace Engineering, 25(3), 463-469.",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R050",
     "simulant_id": "S065",
-    "reference_text": "Hispansion. (n.d.). Retrieved from https://www.hispansion.io"
+    "reference_text": "Hispansion. (n.d.). Retrieved from https://www.hispansion.io",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R051",
     "simulant_id": "S066",
-    "reference_text": "Hispansion. (n.d.). Retrieved from https://www.hispansion.io"
+    "reference_text": "Hispansion. (n.d.). Retrieved from https://www.hispansion.io",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R052",
     "simulant_id": "S067",
-    "reference_text": "Seehanam, S., Santironnarong, S., Meesuay, W., Soralump, S., Thowiwat, W., Jitklongsub, S., & Chancharoen, W. (2021). Development and mechanical properties of the first Thailand lunar simulant (TLS-01). In Proceedings of the 2nd Innovation Aviation & Aerospace Industry - International Conference 2021."
+    "reference_text": "Seehanam, S., Santironnarong, S., Meesuay, W., Soralump, S., Thowiwat, W., Jitklongsub, S., & Chancharoen, W. (2021). Development and mechanical properties of the first Thailand lunar simulant (TLS-01). In Proceedings of the 2nd Innovation Aviation & Aerospace Industry - International Conference 2021.",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R053",
     "simulant_id": "S068",
-    "reference_text": "Linke, S., Windisch, L., Kueter, N., Wanvik, J. E., Voss, A., Stoll, E., Schilde, C., & Kwade, A. (2020). TUBS-M and TUBS-T based modular regolith simulant system for the support of lunar ISRU activities. Planetary and Space Science, 180, 104747. https://doi.org/10.1016/j.pss.2019.104747"
+    "reference_text": "Linke, S., Windisch, L., Kueter, N., Wanvik, J. E., Voss, A., Stoll, E., Schilde, C., & Kwade, A. (2020). TUBS-M and TUBS-T based modular regolith simulant system for the support of lunar ISRU activities. Planetary and Space Science, 180, 104747. https://doi.org/10.1016/j.pss.2019.104747",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R054",
     "simulant_id": "S069",
-    "reference_text": "Linke, S., Windisch, L., Kueter, N., Wanvik, J. E., Voss, A., Stoll, E., Schilde, C., & Kwade, A. (2020). TUBS-M and TUBS-T based modular regolith simulant system for the support of lunar ISRU activities. Planetary and Space Science, 180, 104747. https://doi.org/10.1016/j.pss.2019.104747"
+    "reference_text": "Linke, S., Windisch, L., Kueter, N., Wanvik, J. E., Voss, A., Stoll, E., Schilde, C., & Kwade, A. (2020). TUBS-M and TUBS-T based modular regolith simulant system for the support of lunar ISRU activities. Planetary and Space Science, 180, 104747. https://doi.org/10.1016/j.pss.2019.104747",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R055",
     "simulant_id": "S070",
-    "reference_text": "Linke, S., Windisch, L., Kueter, N., Wanvik, J. E., Voss, A., Stoll, E., Schilde, C., & Kwade, A. (2020). TUBS-M and TUBS-T based modular regolith simulant system for the support of lunar ISRU activities. Planetary and Space Science, 180, 104747. https://doi.org/10.1016/j.pss.2019.104747"
+    "reference_text": "Linke, S., Windisch, L., Kueter, N., Wanvik, J. E., Voss, A., Stoll, E., Schilde, C., & Kwade, A. (2020). TUBS-M and TUBS-T based modular regolith simulant system for the support of lunar ISRU activities. Planetary and Space Science, 180, 104747. https://doi.org/10.1016/j.pss.2019.104747",
+    "reference_type": "composition"
   },
   {
     "reference_id": "R056",
     "simulant_id": "S071",
-    "reference_text": "Just, G. H., Joy, K. H., Roy, M. J., & Smith, K. L. (2020). Geotechnical characterisation of two new low-fidelity lunar regolith analogues (UoM-B and UoM-W) for use in large-scale engineering experiments. Acta Astronautica, 173, 414-424. https://doi.org/10.1016/j.actaastro.2020.04.025"
+    "reference_text": "Just, G. H., Joy, K. H., Roy, M. J., & Smith, K. L. (2020). Geotechnical characterisation of two new low-fidelity lunar regolith analogues (UoM-B and UoM-W) for use in large-scale engineering experiments. Acta Astronautica, 173, 414-424. https://doi.org/10.1016/j.actaastro.2020.04.025",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R057",
     "simulant_id": "S072",
-    "reference_text": "Just, G. H., Joy, K. H., Roy, M. J., & Smith, K. L. (2020). Geotechnical characterisation of two new low-fidelity lunar regolith analogues (UoM-B and UoM-W) for use in large-scale engineering experiments. Acta Astronautica, 173, 414-424. https://doi.org/10.1016/j.actaastro.2020.04.025"
+    "reference_text": "Just, G. H., Joy, K. H., Roy, M. J., & Smith, K. L. (2020). Geotechnical characterisation of two new low-fidelity lunar regolith analogues (UoM-B and UoM-W) for use in large-scale engineering experiments. Acta Astronautica, 173, 414-424. https://doi.org/10.1016/j.actaastro.2020.04.025",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R058",
     "simulant_id": "S025",
-    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA."
+    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R059",
     "simulant_id": "S052",
-    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA."
+    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R060",
     "simulant_id": "S054",
-    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA."
+    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R061",
     "simulant_id": "S058",
-    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA."
+    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R062",
     "simulant_id": "S060",
-    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA."
+    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R063",
     "simulant_id": "S040",
-    "reference_text": "Patzwald, J., Kleba-Ehrhardt, R., Schiperski, F., Griemsmann, T., Linke, S., Neumann, T., Overmeyer, L., Stoll, E., & Karl, D. (2025). Properties of novel LX lunar regolith simulant system - The base simulants: Part 1. Acta Astronautica, 231, 200-222."
+    "reference_text": "Patzwald, J., Kleba-Ehrhardt, R., Schiperski, F., Griemsmann, T., Linke, S., Neumann, T., Overmeyer, L., Stoll, E., & Karl, D. (2025). Properties of novel LX lunar regolith simulant system - The base simulants: Part 1. Acta Astronautica, 231, 200-222.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R064",
     "simulant_id": "S041",
-    "reference_text": "Patzwald, J., Kleba-Ehrhardt, R., Schiperski, F., Griemsmann, T., Linke, S., Neumann, T., Overmeyer, L., Stoll, E., & Karl, D. (2025). Properties of novel LX lunar regolith simulant system - The base simulants: Part 1. Acta Astronautica, 231, 200-222."
+    "reference_text": "Patzwald, J., Kleba-Ehrhardt, R., Schiperski, F., Griemsmann, T., Linke, S., Neumann, T., Overmeyer, L., Stoll, E., & Karl, D. (2025). Properties of novel LX lunar regolith simulant system - The base simulants: Part 1. Acta Astronautica, 231, 200-222.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R065",
     "simulant_id": "S008",
-    "reference_text": "Rickman, D. L., Wilson, S. A., Stoeser, D. B., Weinstein, M. A., & Edmunson, J. E. (2013). Manufacture of lunar regolith simulants (NASA/TM-2013-217491). NASA."
+    "reference_text": "Rickman, D. L., Wilson, S. A., Stoeser, D. B., Weinstein, M. A., & Edmunson, J. E. (2013). Manufacture of lunar regolith simulants (NASA/TM-2013-217491). NASA.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R066",
     "simulant_id": "S044",
-    "reference_text": "Taylor, L. A., Pieters, C. M., & Britt, D. (2016). Evaluations of lunar regolith simulants. Planetary and Space Science, 126, 1-7. https://doi.org/10.1016/j.pss.2016.04.005"
+    "reference_text": "Taylor, L. A., Pieters, C. M., & Britt, D. (2016). Evaluations of lunar regolith simulants. Planetary and Space Science, 126, 1-7. https://doi.org/10.1016/j.pss.2016.04.005",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R067",
     "simulant_id": "S050",
-    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA."
+    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R068",
     "simulant_id": "S055",
-    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA."
+    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R069",
     "simulant_id": "S056",
-    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA."
+    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R070",
     "simulant_id": "S059",
-    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA."
+    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R071",
     "simulant_id": "S061",
-    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA."
+    "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "reference_type": "usage"
   },
   {
     "reference_id": "R072",
     "simulant_id": "S075",
-    "reference_text": "Teng, Y., Wang, S., Cui, Y., & Pang, Y. (2025). Influence of loading conditions on mechanical behaviors of lunar regolith simulant WHU-1 based on Chang'e-5 returned samples. Acta Geotechnica. https://doi.org/10.1007/s11440-025-02553-7"
+    "reference_text": "Teng, Y., Wang, S., Cui, Y., & Pang, Y. (2025). Influence of loading conditions on mechanical behaviors of lunar regolith simulant WHU-1 based on Chang'e-5 returned samples. Acta Geotechnica. https://doi.org/10.1007/s11440-025-02553-7",
+    "reference_type": "usage"
   }
 ]

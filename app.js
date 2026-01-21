@@ -220,10 +220,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 const sMinerals = minerals.filter(m => m.simulant_id === s.simulant_id).map(m => m.component_name);
                 const sGroups = mineralGroups.filter(g => g.simulant_id === s.simulant_id).map(g => g.group_name);
 
-                const matchesDetailed = detailedFilters.length === 0 || detailedFilters.some(m => sMinerals.includes(m));
-                const matchesGroups = groupFilters.length === 0 || groupFilters.some(g => sGroups.includes(g));
-
-                keep = keep && (matchesDetailed || matchesGroups);
+                let matchesMineralFilter = true;
+                if (detailedFilters.length > 0 && groupFilters.length > 0) {
+                    // Both types selected - match either
+                    matchesMineralFilter = detailedFilters.some(m => sMinerals.includes(m)) ||
+                                          groupFilters.some(g => sGroups.includes(g));
+                } else if (detailedFilters.length > 0) {
+                    // Only detailed filters - must match detailed
+                    matchesMineralFilter = detailedFilters.some(m => sMinerals.includes(m));
+                } else if (groupFilters.length > 0) {
+                    // Only group filters - must match groups
+                    matchesMineralFilter = groupFilters.some(g => sGroups.includes(g));
+                }
+                keep = keep && matchesMineralFilter;
             }
             if (chemicalFilter.length) {
                 let sChemicals = chemicals.filter(c => c.simulant_id === s.simulant_id).map(c => c.component_name);
@@ -546,8 +555,10 @@ document.addEventListener('DOMContentLoaded', () => {
             panelNum === '1' ? 'Select a simulant' : 'Select second simulant';
         document.getElementById(`properties-panel-${panelNum}`).innerHTML =
             '<p class="placeholder-text">Select a simulant to view properties</p>';
-        document.getElementById(`references-panel-${panelNum}`).innerHTML =
+        document.getElementById(`composition-refs-${panelNum}`).innerHTML =
             '<p class="placeholder-text">Select a simulant to view references</p>';
+        document.getElementById(`usage-refs-${panelNum}`).innerHTML =
+            '<p class="placeholder-text"></p>';
 
         // If closing panel 1 and compare mode is on, turn it off
         if (panelNum === '1' && compareMode) {
@@ -631,10 +642,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 const sMinerals = minerals.filter(m => m.simulant_id === s.simulant_id).map(m => m.component_name);
                 const sGroups = mineralGroups.filter(g => g.simulant_id === s.simulant_id).map(g => g.group_name);
 
-                const matchesDetailed = detailedFilters.length === 0 || detailedFilters.some(m => sMinerals.includes(m));
-                const matchesGroups = groupFilters.length === 0 || groupFilters.some(g => sGroups.includes(g));
-
-                keep = keep && (matchesDetailed || matchesGroups);
+                let matchesMineralFilter = true;
+                if (detailedFilters.length > 0 && groupFilters.length > 0) {
+                    // Both types selected - match either
+                    matchesMineralFilter = detailedFilters.some(m => sMinerals.includes(m)) ||
+                                          groupFilters.some(g => sGroups.includes(g));
+                } else if (detailedFilters.length > 0) {
+                    // Only detailed filters - must match detailed
+                    matchesMineralFilter = detailedFilters.some(m => sMinerals.includes(m));
+                } else if (groupFilters.length > 0) {
+                    // Only group filters - must match groups
+                    matchesMineralFilter = groupFilters.some(g => sGroups.includes(g));
+                }
+                keep = keep && matchesMineralFilter;
             }
             if (chemicalFilter.length) {
                 let sChemicals = chemicals.filter(c => c.simulant_id === s.simulant_id).map(c => c.component_name);
@@ -1068,21 +1088,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateReferences(simulant_id, panelNum) {
-        const refPanel = document.getElementById(`references-panel-${panelNum}`);
-        refPanel.innerHTML = '';
+        const compositionPanel = document.getElementById(`composition-refs-${panelNum}`);
+        const usagePanel = document.getElementById(`usage-refs-${panelNum}`);
+
+        compositionPanel.innerHTML = '';
+        usagePanel.innerHTML = '';
 
         const refSubset = references.filter(r => r.simulant_id === simulant_id);
 
-        if (refSubset.length === 0) {
-            refPanel.innerHTML = '<p class="placeholder-text">No references available</p>';
+        // Separate by type
+        const compositionRefs = refSubset.filter(r => r.reference_type === 'composition');
+        const usageRefs = refSubset.filter(r => r.reference_type === 'usage' || !r.reference_type);
+
+        // Render composition sources
+        if (compositionRefs.length === 0) {
+            compositionPanel.innerHTML = '<p class="placeholder-text">No composition source available</p>';
         } else {
-            refSubset.forEach(r => {
+            compositionRefs.forEach(r => {
                 const div = document.createElement('div');
-                div.className = 'reference-item';
+                div.className = 'reference-item composition-ref';
 
                 const text = r.reference_text || '';
-
-                // Create clickable reference link to Google Scholar
                 const refLink = document.createElement('a');
                 refLink.className = 'reference-link';
                 refLink.href = `https://scholar.google.com/scholar?q=${encodeURIComponent(text)}`;
@@ -1092,7 +1118,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 refLink.textContent = text;
 
                 div.appendChild(refLink);
-                refPanel.appendChild(div);
+                compositionPanel.appendChild(div);
+            });
+        }
+
+        // Render usage studies
+        if (usageRefs.length === 0) {
+            usagePanel.innerHTML = '<p class="placeholder-text">No usage studies available</p>';
+        } else {
+            usageRefs.forEach(r => {
+                const div = document.createElement('div');
+                div.className = 'reference-item usage-ref';
+
+                const text = r.reference_text || '';
+                const refLink = document.createElement('a');
+                refLink.className = 'reference-link';
+                refLink.href = `https://scholar.google.com/scholar?q=${encodeURIComponent(text)}`;
+                refLink.target = '_blank';
+                refLink.rel = 'noopener noreferrer';
+                refLink.title = 'Search on Google Scholar';
+                refLink.textContent = text;
+
+                div.appendChild(refLink);
+                usagePanel.appendChild(div);
             });
         }
     }
@@ -1255,10 +1303,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 const sMinerals = minerals.filter(m => m.simulant_id === s.simulant_id).map(m => m.component_name);
                 const sGroups = mineralGroups.filter(g => g.simulant_id === s.simulant_id).map(g => g.group_name);
 
-                const matchesDetailed = detailedFilters.length === 0 || detailedFilters.some(m => sMinerals.includes(m));
-                const matchesGroups = groupFilters.length === 0 || groupFilters.some(g => sGroups.includes(g));
-
-                keep = keep && (matchesDetailed || matchesGroups);
+                let matchesMineralFilter = true;
+                if (detailedFilters.length > 0 && groupFilters.length > 0) {
+                    // Both types selected - match either
+                    matchesMineralFilter = detailedFilters.some(m => sMinerals.includes(m)) ||
+                                          groupFilters.some(g => sGroups.includes(g));
+                } else if (detailedFilters.length > 0) {
+                    // Only detailed filters - must match detailed
+                    matchesMineralFilter = detailedFilters.some(m => sMinerals.includes(m));
+                } else if (groupFilters.length > 0) {
+                    // Only group filters - must match groups
+                    matchesMineralFilter = groupFilters.some(g => sGroups.includes(g));
+                }
+                keep = keep && matchesMineralFilter;
             }
             if (chemicalFilter.length) {
                 let sChemicals = chemicals.filter(c => c.simulant_id === s.simulant_id).map(c => c.component_name);
@@ -1306,8 +1363,9 @@ document.addEventListener('DOMContentLoaded', () => {
         allMineralNames.forEach(m => headers.push(`Mineral: ${m} (%)`));
         allChemicalNames.forEach(c => headers.push(`Chemical: ${c} (wt%)`));
 
-        // Add references column
-        headers.push('References');
+        // Add references columns (separated by type)
+        headers.push('Composition Source');
+        headers.push('Usage Studies');
 
         // Build CSV rows
         const rows = simulantsToExport.map(s => {
@@ -1334,14 +1392,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 row.push(chemData ? chemData.value_wt_pct : '');
             });
 
-            // Add references (combined into single cell, separated by " | ")
+            // Add references (separated by type)
             const simRefs = references.filter(r => r.simulant_id === s.simulant_id);
-            let refsText = simRefs.map(r => r.reference_text).join(' | ');
-            // Escape for CSV
-            if (refsText.includes(',') || refsText.includes('"') || refsText.includes('\n')) {
-                refsText = '"' + refsText.replace(/"/g, '""') + '"';
+            const compositionRefs = simRefs.filter(r => r.reference_type === 'composition');
+            const usageRefs = simRefs.filter(r => r.reference_type === 'usage' || !r.reference_type);
+
+            // Composition source
+            let compText = compositionRefs.map(r => r.reference_text).join(' | ');
+            if (compText.includes(',') || compText.includes('"') || compText.includes('\n')) {
+                compText = '"' + compText.replace(/"/g, '""') + '"';
             }
-            row.push(refsText);
+            row.push(compText);
+
+            // Usage studies
+            let usageText = usageRefs.map(r => r.reference_text).join(' | ');
+            if (usageText.includes(',') || usageText.includes('"') || usageText.includes('\n')) {
+                usageText = '"' + usageText.replace(/"/g, '""') + '"';
+            }
+            row.push(usageText);
 
             return row;
         });

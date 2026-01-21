@@ -985,6 +985,39 @@ body {
   text-decoration: underline;
 }
 
+/* Reference sections (composition vs usage) */
+.references-section {
+  margin-bottom: 16px;
+}
+
+.references-section:last-child {
+  margin-bottom: 0;
+}
+
+.reference-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin: 0 0 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.composition-refs .reference-item {
+  background: rgba(0, 212, 255, 0.05);
+  border-left: 2px solid var(--primary);
+  padding-left: 12px;
+  margin-bottom: 8px;
+  border-radius: 0 4px 4px 0;
+}
+
+.usage-refs .reference-item {
+  background: rgba(255, 255, 255, 0.02);
+  margin-bottom: 8px;
+}
+
 /* Comparison mode properties */
 .info-panel.comparison-mode .properties-grid,
 .info-panel.comparison-panel .properties-grid {
