@@ -10,8 +10,99 @@
     "composition_id": "C002",
     "simulant_id": "S005",
     "component_type": "mineral",
-    "component_name": "Glass",
+    "component_name": "Volcanic Glass",
     "value_pct": 20.0
+  },
+  {
+    "composition_id": "C003",
+    "simulant_id": "S006",
+    "component_type": "mineral",
+    "component_name": "Magnetite",
+    "value_pct": 3.0
+  },
+  {
+    "composition_id": "C004",
+    "simulant_id": "S006",
+    "component_type": "mineral",
+    "component_name": "Hematite",
+    "value_pct": 2.0
+  },
+  {
+    "composition_id": "C005",
+    "simulant_id": "S006",
+    "component_type": "mineral",
+    "component_name": "Calcite",
+    "value_pct": 2.7
+  },
+  {
+    "composition_id": "C006",
+    "simulant_id": "S006",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 6.2
+  },
+  {
+    "composition_id": "C007",
+    "simulant_id": "S006",
+    "component_type": "mineral",
+    "component_name": "Augite",
+    "value_pct": 23.7
+  },
+  {
+    "composition_id": "C008",
+    "simulant_id": "S006",
+    "component_type": "mineral",
+    "component_name": "Quartz",
+    "value_pct": 1.7
+  },
+  {
+    "composition_id": "C009",
+    "simulant_id": "S006",
+    "component_type": "mineral",
+    "component_name": "Labradorite",
+    "value_pct": 60.7
+  },
+  {
+    "composition_id": "C010",
+    "simulant_id": "S007",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 2.33
+  },
+  {
+    "composition_id": "C011",
+    "simulant_id": "S007",
+    "component_type": "mineral",
+    "component_name": "Magnetite",
+    "value_pct": 3.03
+  },
+  {
+    "composition_id": "C012",
+    "simulant_id": "S007",
+    "component_type": "mineral",
+    "component_name": "Apatite",
+    "value_pct": 0.65
+  },
+  {
+    "composition_id": "C013",
+    "simulant_id": "S007",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 8.13
+  },
+  {
+    "composition_id": "C014",
+    "simulant_id": "S007",
+    "component_type": "mineral",
+    "component_name": "Pyroxene",
+    "value_pct": 22.34
+  },
+  {
+    "composition_id": "C015",
+    "simulant_id": "S007",
+    "component_type": "mineral",
+    "component_name": "Plagioclase",
+    "value_pct": 63.52
   },
   {
     "composition_id": "C016",
@@ -31,7 +122,7 @@
     "composition_id": "C018",
     "simulant_id": "S009",
     "component_type": "mineral",
-    "component_name": "Glass",
+    "component_name": "Volcanic Glass",
     "value_pct": 75.0
   },
   {
@@ -63,8 +154,71 @@
     "value_pct": 23.0
   },
   {
+    "composition_id": "C023",
+    "simulant_id": "S013",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 1.65
+  },
+  {
+    "composition_id": "C024",
+    "simulant_id": "S013",
+    "component_type": "mineral",
+    "component_name": "Magnetite",
+    "value_pct": 30.53
+  },
+  {
+    "composition_id": "C025",
+    "simulant_id": "S013",
+    "component_type": "mineral",
+    "component_name": "Hematite",
+    "value_pct": 1.03
+  },
+  {
+    "composition_id": "C026",
+    "simulant_id": "S013",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 1.66
+  },
+  {
+    "composition_id": "C027",
+    "simulant_id": "S013",
+    "component_type": "mineral",
+    "component_name": "Pyroxene",
+    "value_pct": 19.48
+  },
+  {
+    "composition_id": "C028",
+    "simulant_id": "S013",
+    "component_type": "mineral",
+    "component_name": "Plagioclase",
+    "value_pct": 41.02
+  },
+  {
+    "composition_id": "C029",
+    "simulant_id": "S013",
+    "component_type": "mineral",
+    "component_name": "Undifferentiated",
+    "value_pct": 3.31
+  },
+  {
+    "composition_id": "C030",
+    "simulant_id": "S013",
+    "component_type": "mineral",
+    "component_name": "Glass",
+    "value_pct": 1.32
+  },
+  {
     "composition_id": "C031",
     "simulant_id": "S014",
+    "component_type": "mineral",
+    "component_name": "Basaltic Ash",
+    "value_pct": 100.0
+  },
+  {
+    "composition_id": "C032",
+    "simulant_id": "S015",
     "component_type": "mineral",
     "component_name": "Basaltic Ash",
     "value_pct": 100.0
@@ -117,6 +271,258 @@
     "component_type": "mineral",
     "component_name": "Plagioclase",
     "value_pct": 65.0
+  },
+  {
+    "composition_id": "C040",
+    "simulant_id": "S018",
+    "component_type": "mineral",
+    "component_name": "Plagioclase",
+    "value_pct": 65.0
+  },
+  {
+    "composition_id": "C041",
+    "simulant_id": "S018",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 25.0
+  },
+  {
+    "composition_id": "C042",
+    "simulant_id": "S018",
+    "component_type": "mineral",
+    "component_name": "Pyroxene",
+    "value_pct": 10.0
+  },
+  {
+    "composition_id": "C043",
+    "simulant_id": "S019",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 3.65
+  },
+  {
+    "composition_id": "C044",
+    "simulant_id": "S019",
+    "component_type": "mineral",
+    "component_name": "Magnetite",
+    "value_pct": 0.04
+  },
+  {
+    "composition_id": "C045",
+    "simulant_id": "S019",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 4.94
+  },
+  {
+    "composition_id": "C046",
+    "simulant_id": "S019",
+    "component_type": "mineral",
+    "component_name": "Pyroxene",
+    "value_pct": 25.76
+  },
+  {
+    "composition_id": "C047",
+    "simulant_id": "S019",
+    "component_type": "mineral",
+    "component_name": "Plagioclase",
+    "value_pct": 56.02
+  },
+  {
+    "composition_id": "C048",
+    "simulant_id": "S019",
+    "component_type": "mineral",
+    "component_name": "Undifferentiated",
+    "value_pct": 2.44
+  },
+  {
+    "composition_id": "C049",
+    "simulant_id": "S019",
+    "component_type": "mineral",
+    "component_name": "Glass",
+    "value_pct": 7.15
+  },
+  {
+    "composition_id": "C050",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 0.1
+  },
+  {
+    "composition_id": "C051",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "Ti-magnetite",
+    "value_pct": 0.4
+  },
+  {
+    "composition_id": "C052",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "Cr-spinel",
+    "value_pct": 1.1
+  },
+  {
+    "composition_id": "C053",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "Apatite",
+    "value_pct": 0.1
+  },
+  {
+    "composition_id": "C054",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "Sulfide",
+    "value_pct": 1.0
+  },
+  {
+    "composition_id": "C055",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 9.0
+  },
+  {
+    "composition_id": "C056",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "Clinopyroxene",
+    "value_pct": 0.1
+  },
+  {
+    "composition_id": "C057",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "Quartz",
+    "value_pct": 0.2
+  },
+  {
+    "composition_id": "C058",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "Plagioclase",
+    "value_pct": 37.1
+  },
+  {
+    "composition_id": "C059",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "Albite",
+    "value_pct": 0.3
+  },
+  {
+    "composition_id": "C060",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "K-feldspar",
+    "value_pct": 1.4
+  },
+  {
+    "composition_id": "C061",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "Smectite",
+    "value_pct": 0.1
+  },
+  {
+    "composition_id": "C062",
+    "simulant_id": "S027",
+    "component_type": "mineral",
+    "component_name": "Glass",
+    "value_pct": 49.3
+  },
+  {
+    "composition_id": "C063",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "Glass",
+    "value_pct": 49.3
+  },
+  {
+    "composition_id": "C064",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "Plagioclase",
+    "value_pct": 37.1
+  },
+  {
+    "composition_id": "C065",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "Albite",
+    "value_pct": 0.3
+  },
+  {
+    "composition_id": "C066",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 9.0
+  },
+  {
+    "composition_id": "C067",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "Clinopyroxene",
+    "value_pct": 0.1
+  },
+  {
+    "composition_id": "C068",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "Cr-spinel",
+    "value_pct": 1.1
+  },
+  {
+    "composition_id": "C069",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "Ti-magnetite",
+    "value_pct": 0.4
+  },
+  {
+    "composition_id": "C070",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 0.1
+  },
+  {
+    "composition_id": "C071",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "K-silicate",
+    "value_pct": 1.4
+  },
+  {
+    "composition_id": "C072",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "Sulfide",
+    "value_pct": 1.0
+  },
+  {
+    "composition_id": "C073",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "Quartz",
+    "value_pct": 0.2
+  },
+  {
+    "composition_id": "C074",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "Chlorite",
+    "value_pct": 0.1
+  },
+  {
+    "composition_id": "C075",
+    "simulant_id": "S028",
+    "component_type": "mineral",
+    "component_name": "Apatite",
+    "value_pct": 0.1
   },
   {
     "composition_id": "C076",
@@ -210,6 +616,244 @@
     "value_pct": 49.3
   },
   {
+    "composition_id": "C089",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 0.1
+  },
+  {
+    "composition_id": "C090",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "Ti-magnetite",
+    "value_pct": 0.4
+  },
+  {
+    "composition_id": "C091",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "Cr-spinel",
+    "value_pct": 1.1
+  },
+  {
+    "composition_id": "C092",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "Apatite",
+    "value_pct": 0.1
+  },
+  {
+    "composition_id": "C093",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "Sulfide",
+    "value_pct": 1.0
+  },
+  {
+    "composition_id": "C094",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 9.0
+  },
+  {
+    "composition_id": "C095",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "Clinopyroxene",
+    "value_pct": 0.1
+  },
+  {
+    "composition_id": "C096",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "Quartz",
+    "value_pct": 0.2
+  },
+  {
+    "composition_id": "C097",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "Plagioclase",
+    "value_pct": 37.1
+  },
+  {
+    "composition_id": "C098",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "Albite",
+    "value_pct": 0.3
+  },
+  {
+    "composition_id": "C099",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "K-feldspar",
+    "value_pct": 1.4
+  },
+  {
+    "composition_id": "C100",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "Smectite",
+    "value_pct": 0.1
+  },
+  {
+    "composition_id": "C101",
+    "simulant_id": "S030",
+    "component_type": "mineral",
+    "component_name": "Glass",
+    "value_pct": 49.3
+  },
+  {
+    "composition_id": "C102",
+    "simulant_id": "S032",
+    "component_type": "mineral",
+    "component_name": "SiO2",
+    "value_pct": 48.0
+  },
+  {
+    "composition_id": "C103",
+    "simulant_id": "S032",
+    "component_type": "mineral",
+    "component_name": "TiO2",
+    "value_pct": 1.67
+  },
+  {
+    "composition_id": "C104",
+    "simulant_id": "S032",
+    "component_type": "mineral",
+    "component_name": "Al2O3",
+    "value_pct": 15.3
+  },
+  {
+    "composition_id": "C105",
+    "simulant_id": "S032",
+    "component_type": "mineral",
+    "component_name": "FeO",
+    "value_pct": 4.75
+  },
+  {
+    "composition_id": "C106",
+    "simulant_id": "S032",
+    "component_type": "mineral",
+    "component_name": "MgO",
+    "value_pct": 9.64
+  },
+  {
+    "composition_id": "C107",
+    "simulant_id": "S032",
+    "component_type": "mineral",
+    "component_name": "CaO",
+    "value_pct": 8.38
+  },
+  {
+    "composition_id": "C108",
+    "simulant_id": "S032",
+    "component_type": "mineral",
+    "component_name": "Na2O",
+    "value_pct": 1.67
+  },
+  {
+    "composition_id": "C109",
+    "simulant_id": "S032",
+    "component_type": "mineral",
+    "component_name": "K2O",
+    "value_pct": 3.42
+  },
+  {
+    "composition_id": "C110",
+    "simulant_id": "S032",
+    "component_type": "mineral",
+    "component_name": "P2O5",
+    "value_pct": 0.33
+  },
+  {
+    "composition_id": "C111",
+    "simulant_id": "S032",
+    "component_type": "mineral",
+    "component_name": "MnO",
+    "value_pct": 0.17
+  },
+  {
+    "composition_id": "C112",
+    "simulant_id": "S036",
+    "component_type": "mineral",
+    "component_name": "Anorthosite",
+    "value_pct": 74.4
+  },
+  {
+    "composition_id": "C113",
+    "simulant_id": "S036",
+    "component_type": "mineral",
+    "component_name": "Basaltic Glass",
+    "value_pct": 24.7
+  },
+  {
+    "composition_id": "C114",
+    "simulant_id": "S036",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 0.4
+  },
+  {
+    "composition_id": "C115",
+    "simulant_id": "S036",
+    "component_type": "mineral",
+    "component_name": "Bronzite",
+    "value_pct": 0.3
+  },
+  {
+    "composition_id": "C116",
+    "simulant_id": "S036",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 0.2
+  },
+  {
+    "composition_id": "C117",
+    "simulant_id": "S037",
+    "component_type": "mineral",
+    "component_name": "Pyroxene",
+    "value_pct": 32.8
+  },
+  {
+    "composition_id": "C118",
+    "simulant_id": "S037",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 11.1
+  },
+  {
+    "composition_id": "C119",
+    "simulant_id": "S037",
+    "component_type": "mineral",
+    "component_name": "Basaltic Glass",
+    "value_pct": 24.5
+  },
+  {
+    "composition_id": "C120",
+    "simulant_id": "S037",
+    "component_type": "mineral",
+    "component_name": "Plagioclase",
+    "value_pct": 19.8
+  },
+  {
+    "composition_id": "C121",
+    "simulant_id": "S037",
+    "component_type": "mineral",
+    "component_name": "Basalt",
+    "value_pct": 7.5
+  },
+  {
+    "composition_id": "C122",
+    "simulant_id": "S037",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 4.3
+  },
+  {
     "composition_id": "C123",
     "simulant_id": "S041",
     "component_type": "mineral",
@@ -245,6 +889,27 @@
     "value_pct": 2.0
   },
   {
+    "composition_id": "C128",
+    "simulant_id": "S045",
+    "component_type": "mineral",
+    "component_name": "Pyroxene + Hornblende",
+    "value_pct": 19.2
+  },
+  {
+    "composition_id": "C129",
+    "simulant_id": "S045",
+    "component_type": "mineral",
+    "component_name": "Plagioclase",
+    "value_pct": 60.0
+  },
+  {
+    "composition_id": "C130",
+    "simulant_id": "S045",
+    "component_type": "mineral",
+    "component_name": "Opaque + Glass",
+    "value_pct": 20.8
+  },
+  {
     "composition_id": "C131",
     "simulant_id": "S047",
     "component_type": "mineral",
@@ -257,6 +922,76 @@
     "component_type": "mineral",
     "component_name": "Glass",
     "value_pct": 19.7
+  },
+  {
+    "composition_id": "C133",
+    "simulant_id": "S053",
+    "component_type": "mineral",
+    "component_name": "Magnetite",
+    "value_pct": 0.3
+  },
+  {
+    "composition_id": "C134",
+    "simulant_id": "S053",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 0.04
+  },
+  {
+    "composition_id": "C135",
+    "simulant_id": "S053",
+    "component_type": "mineral",
+    "component_name": "Clinopyroxene",
+    "value_pct": 0.1
+  },
+  {
+    "composition_id": "C136",
+    "simulant_id": "S053",
+    "component_type": "mineral",
+    "component_name": "Quartz",
+    "value_pct": 0.3
+  },
+  {
+    "composition_id": "C137",
+    "simulant_id": "S053",
+    "component_type": "mineral",
+    "component_name": "Plagioclase",
+    "value_pct": 43.3
+  },
+  {
+    "composition_id": "C138",
+    "simulant_id": "S053",
+    "component_type": "mineral",
+    "component_name": "Smectite",
+    "value_pct": 0.5
+  },
+  {
+    "composition_id": "C139",
+    "simulant_id": "S053",
+    "component_type": "mineral",
+    "component_name": "Saponite",
+    "value_pct": 0.5
+  },
+  {
+    "composition_id": "C140",
+    "simulant_id": "S053",
+    "component_type": "mineral",
+    "component_name": "Undifferentiated",
+    "value_pct": 1.9
+  },
+  {
+    "composition_id": "C141",
+    "simulant_id": "S053",
+    "component_type": "mineral",
+    "component_name": "Plagioclase Glass",
+    "value_pct": 2.1
+  },
+  {
+    "composition_id": "C142",
+    "simulant_id": "S053",
+    "component_type": "mineral",
+    "component_name": "Glass",
+    "value_pct": 53.0
   },
   {
     "composition_id": "C143",
@@ -287,1165 +1022,150 @@
     "value_pct": 20.0
   },
   {
-    "composition_id": "C169",
-    "simulant_id": "S037",
-    "component_type": "mineral",
-    "component_name": "Bronzite",
-    "value_pct": 32.8
-  },
-  {
-    "composition_id": "C170",
-    "simulant_id": "S037",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 11.1
-  },
-  {
-    "composition_id": "C171",
-    "simulant_id": "S037",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 4.3
-  },
-  {
-    "composition_id": "C172",
-    "simulant_id": "S037",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 3.0
-  },
-  {
-    "composition_id": "C175",
-    "simulant_id": "S037",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 59.05
-  },
-  {
-    "composition_id": "C176",
-    "simulant_id": "S037",
-    "component_type": "mineral",
-    "component_name": "Illite",
-    "value_pct": 4.52
-  },
-  {
-    "composition_id": "C178",
-    "simulant_id": "S036",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 74.4
-  },
-  {
-    "composition_id": "C179",
-    "simulant_id": "S036",
-    "component_type": "mineral",
-    "component_name": "Bronzite",
-    "value_pct": 0.3
-  },
-  {
-    "composition_id": "C180",
-    "simulant_id": "S036",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 0.2
-  },
-  {
-    "composition_id": "C181",
-    "simulant_id": "S036",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 0.4
-  },
-  {
-    "composition_id": "C184",
-    "simulant_id": "S036",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 18.5
-  },
-  {
-    "composition_id": "C187",
-    "simulant_id": "S036",
-    "component_type": "mineral",
-    "component_name": "Illite",
-    "value_pct": 4.52
-  },
-  {
-    "composition_id": "C190",
+    "composition_id": "C147",
     "simulant_id": "S065",
     "component_type": "mineral",
-    "component_name": "Glass",
+    "component_name": "Anorthite",
     "value_pct": 57.0
   },
   {
-    "composition_id": "C191",
-    "simulant_id": "S066",
+    "composition_id": "C148",
+    "simulant_id": "S065",
+    "component_type": "mineral",
+    "component_name": "Augite",
+    "value_pct": 5.7
+  },
+  {
+    "composition_id": "C149",
+    "simulant_id": "S065",
+    "component_type": "mineral",
+    "component_name": "Forsterite",
+    "value_pct": 1.8
+  },
+  {
+    "composition_id": "C150",
+    "simulant_id": "S065",
+    "component_type": "mineral",
+    "component_name": "Lizardite",
+    "value_pct": 6.5
+  },
+  {
+    "composition_id": "C151",
+    "simulant_id": "S065",
+    "component_type": "mineral",
+    "component_name": "Analcime",
+    "value_pct": 2.6
+  },
+  {
+    "composition_id": "C152",
+    "simulant_id": "S065",
+    "component_type": "mineral",
+    "component_name": "Smectite",
+    "value_pct": 0.5
+  },
+  {
+    "composition_id": "C153",
+    "simulant_id": "S065",
+    "component_type": "mineral",
+    "component_name": "Illite",
+    "value_pct": 1.0
+  },
+  {
+    "composition_id": "C154",
+    "simulant_id": "S065",
+    "component_type": "mineral",
+    "component_name": "Quartz",
+    "value_pct": 1.2
+  },
+  {
+    "composition_id": "C155",
+    "simulant_id": "S065",
+    "component_type": "mineral",
+    "component_name": "Hornblende",
+    "value_pct": 2.1
+  },
+  {
+    "composition_id": "C156",
+    "simulant_id": "S065",
     "component_type": "mineral",
     "component_name": "Glass",
+    "value_pct": 19.2
+  },
+  {
+    "composition_id": "C157",
+    "simulant_id": "S066",
+    "component_type": "mineral",
+    "component_name": "Anorthite",
     "value_pct": 35.2
   },
   {
-    "composition_id": "C192",
-    "simulant_id": "S003",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 99.0
-  },
-  {
-    "composition_id": "C193",
-    "simulant_id": "S003",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 7.1
-  },
-  {
-    "composition_id": "C194",
-    "simulant_id": "S003",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 2.0
-  },
-  {
-    "composition_id": "C195",
-    "simulant_id": "S003",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 2.9
-  },
-  {
-    "composition_id": "C198",
-    "simulant_id": "S027",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 66.58
-  },
-  {
-    "composition_id": "C213",
-    "simulant_id": "S027",
+    "composition_id": "C158",
+    "simulant_id": "S066",
     "component_type": "mineral",
     "component_name": "Augite",
-    "value_pct": 26.5
+    "value_pct": 17.2
   },
   {
-    "composition_id": "C214",
-    "simulant_id": "S027",
+    "composition_id": "C159",
+    "simulant_id": "S066",
+    "component_type": "mineral",
+    "component_name": "Enstatite",
+    "value_pct": 1.9
+  },
+  {
+    "composition_id": "C160",
+    "simulant_id": "S066",
     "component_type": "mineral",
     "component_name": "Forsterite",
-    "value_pct": 11.6
+    "value_pct": 2.1
   },
   {
-    "composition_id": "C218",
-    "simulant_id": "S028",
+    "composition_id": "C161",
+    "simulant_id": "S066",
     "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 66.58
+    "component_name": "Lizardite",
+    "value_pct": 5.7
   },
   {
-    "composition_id": "C233",
-    "simulant_id": "S028",
+    "composition_id": "C162",
+    "simulant_id": "S066",
     "component_type": "mineral",
-    "component_name": "Augite",
-    "value_pct": 26.5
+    "component_name": "Analcime",
+    "value_pct": 3.8
   },
   {
-    "composition_id": "C234",
-    "simulant_id": "S028",
+    "composition_id": "C163",
+    "simulant_id": "S066",
     "component_type": "mineral",
-    "component_name": "Forsterite",
-    "value_pct": 11.6
-  },
-  {
-    "composition_id": "C237",
-    "simulant_id": "S049",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
+    "component_name": "Smectite",
     "value_pct": 1.2
   },
   {
-    "composition_id": "C239",
-    "simulant_id": "S049",
+    "composition_id": "C164",
+    "simulant_id": "S066",
     "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 23.3
-  },
-  {
-    "composition_id": "C240",
-    "simulant_id": "S049",
-    "component_type": "mineral",
-    "component_name": "Pyroxene",
+    "component_name": "Illite",
     "value_pct": 0.6
   },
   {
-    "composition_id": "C241",
-    "simulant_id": "S049",
-    "component_type": "mineral",
-    "component_name": "Clinopyroxene",
-    "value_pct": 0.6
-  },
-  {
-    "composition_id": "C242",
-    "simulant_id": "S049",
-    "component_type": "mineral",
-    "component_name": "Orthopyroxene",
-    "value_pct": 3.2
-  },
-  {
-    "composition_id": "C243",
-    "simulant_id": "S049",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 8.9
-  },
-  {
-    "composition_id": "C244",
-    "simulant_id": "S049",
-    "component_type": "mineral",
-    "component_name": "Agglutinate",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C245",
-    "simulant_id": "S049",
-    "component_type": "mineral",
-    "component_name": "Magnetite",
-    "value_pct": 11.0
-  },
-  {
-    "composition_id": "C246",
-    "simulant_id": "S049",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 2.9
-  },
-  {
-    "composition_id": "C247",
-    "simulant_id": "S051",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C250",
-    "simulant_id": "S051",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 5.11
-  },
-  {
-    "composition_id": "C251",
-    "simulant_id": "S051",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 27.77
-  },
-  {
-    "composition_id": "C252",
-    "simulant_id": "S051",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 59.05
-  },
-  {
-    "composition_id": "C259",
-    "simulant_id": "S051",
-    "component_type": "mineral",
-    "component_name": "Magnetite",
-    "value_pct": 11.0
-  },
-  {
-    "composition_id": "C262",
-    "simulant_id": "S006",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 66.58
-  },
-  {
-    "composition_id": "C263",
-    "simulant_id": "S006",
-    "component_type": "mineral",
-    "component_name": "Pyroxene",
-    "value_pct": 23.4
-  },
-  {
-    "composition_id": "C267",
-    "simulant_id": "S006",
-    "component_type": "mineral",
-    "component_name": "Hematite",
-    "value_pct": 2.86
-  },
-  {
-    "composition_id": "C274",
-    "simulant_id": "S006",
-    "component_type": "mineral",
-    "component_name": "Forsterite",
-    "value_pct": 11.6
-  },
-  {
-    "composition_id": "C276",
-    "simulant_id": "S006",
+    "composition_id": "C165",
+    "simulant_id": "S066",
     "component_type": "mineral",
     "component_name": "Quartz",
-    "value_pct": 0.4
-  },
-  {
-    "composition_id": "C277",
-    "simulant_id": "S008",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C278",
-    "simulant_id": "S008",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 70.0
-  },
-  {
-    "composition_id": "C279",
-    "simulant_id": "S008",
-    "component_type": "mineral",
-    "component_name": "Agglutinate",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C280",
-    "simulant_id": "S008",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C281",
-    "simulant_id": "S008",
-    "component_type": "mineral",
-    "component_name": "Pyroxene",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C282",
-    "simulant_id": "S008",
-    "component_type": "mineral",
-    "component_name": "Magnetite",
-    "value_pct": 11.0
-  },
-  {
-    "composition_id": "C284",
-    "simulant_id": "S008",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C286",
-    "simulant_id": "S060",
-    "component_type": "mineral",
-    "component_name": "Pyroxene",
-    "value_pct": 7.92
-  },
-  {
-    "composition_id": "C287",
-    "simulant_id": "S060",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 5.11
-  },
-  {
-    "composition_id": "C288",
-    "simulant_id": "S060",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 0.15
-  },
-  {
-    "composition_id": "C289",
-    "simulant_id": "S060",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 27.77
-  },
-  {
-    "composition_id": "C290",
-    "simulant_id": "S060",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 59.05
-  },
-  {
-    "composition_id": "C291",
-    "simulant_id": "S060",
-    "component_type": "mineral",
-    "component_name": "Illite",
-    "value_pct": 4.52
-  },
-  {
-    "composition_id": "C293",
-    "simulant_id": "S057",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 0.65
-  },
-  {
-    "composition_id": "C294",
-    "simulant_id": "S057",
-    "component_type": "mineral",
-    "component_name": "Illite",
-    "value_pct": 4.52
-  },
-  {
-    "composition_id": "C295",
-    "simulant_id": "S057",
-    "component_type": "mineral",
-    "component_name": "Norite",
-    "value_pct": 0.86
-  },
-  {
-    "composition_id": "C297",
-    "simulant_id": "S058",
-    "component_type": "mineral",
-    "component_name": "Pyroxene",
-    "value_pct": 7.92
-  },
-  {
-    "composition_id": "C298",
-    "simulant_id": "S058",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 5.11
-  },
-  {
-    "composition_id": "C299",
-    "simulant_id": "S058",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 0.15
-  },
-  {
-    "composition_id": "C300",
-    "simulant_id": "S058",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 27.77
-  },
-  {
-    "composition_id": "C301",
-    "simulant_id": "S058",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 59.05
-  },
-  {
-    "composition_id": "C302",
-    "simulant_id": "S058",
-    "component_type": "mineral",
-    "component_name": "Illite",
-    "value_pct": 4.52
-  },
-  {
-    "composition_id": "C304",
-    "simulant_id": "S011",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C305",
-    "simulant_id": "S011",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C306",
-    "simulant_id": "S011",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C307",
-    "simulant_id": "S011",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C308",
-    "simulant_id": "S053",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C311",
-    "simulant_id": "S053",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 5.11
-  },
-  {
-    "composition_id": "C312",
-    "simulant_id": "S053",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 27.77
-  },
-  {
-    "composition_id": "C313",
-    "simulant_id": "S053",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 59.05
-  },
-  {
-    "composition_id": "C320",
-    "simulant_id": "S053",
-    "component_type": "mineral",
-    "component_name": "Magnetite",
-    "value_pct": 11.0
-  },
-  {
-    "composition_id": "C321",
-    "simulant_id": "S018",
-    "component_type": "mineral",
-    "component_name": "Fayalite",
-    "value_pct": 2.0
-  },
-  {
-    "composition_id": "C322",
-    "simulant_id": "S018",
-    "component_type": "mineral",
-    "component_name": "Augite",
-    "value_pct": 2.2
-  },
-  {
-    "composition_id": "C323",
-    "simulant_id": "S019",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C324",
-    "simulant_id": "S019",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 66.58
-  },
-  {
-    "composition_id": "C325",
-    "simulant_id": "S019",
-    "component_type": "mineral",
-    "component_name": "Pyroxene",
-    "value_pct": 23.4
-  },
-  {
-    "composition_id": "C326",
-    "simulant_id": "S019",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 1.19
-  },
-  {
-    "composition_id": "C327",
-    "simulant_id": "S019",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 0.84
-  },
-  {
-    "composition_id": "C328",
-    "simulant_id": "S019",
-    "component_type": "mineral",
-    "component_name": "Magnetite",
-    "value_pct": 1.58
-  },
-  {
-    "composition_id": "C329",
-    "simulant_id": "S019",
-    "component_type": "mineral",
-    "component_name": "Hematite",
-    "value_pct": 2.86
-  },
-  {
-    "composition_id": "C330",
-    "simulant_id": "S019",
-    "component_type": "mineral",
-    "component_name": "Apatite",
-    "value_pct": 0.65
-  },
-  {
-    "composition_id": "C331",
-    "simulant_id": "S019",
-    "component_type": "mineral",
-    "component_name": "Clinopyroxene",
     "value_pct": 0.6
   },
   {
-    "composition_id": "C332",
-    "simulant_id": "S019",
+    "composition_id": "C166",
+    "simulant_id": "S066",
     "component_type": "mineral",
-    "component_name": "Orthopyroxene",
-    "value_pct": 3.2
+    "component_name": "Hornblende",
+    "value_pct": 0.3
   },
   {
-    "composition_id": "C333",
-    "simulant_id": "S019",
-    "component_type": "mineral",
-    "component_name": "Agglutinate",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C335",
-    "simulant_id": "S045",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C336",
-    "simulant_id": "S045",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C337",
-    "simulant_id": "S045",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C338",
-    "simulant_id": "S045",
+    "composition_id": "C167",
+    "simulant_id": "S066",
     "component_type": "mineral",
     "component_name": "Glass",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C340",
-    "simulant_id": "S030",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 23.3
-  },
-  {
-    "composition_id": "C341",
-    "simulant_id": "S030",
-    "component_type": "mineral",
-    "component_name": "Pyroxene",
-    "value_pct": 0.6
-  },
-  {
-    "composition_id": "C342",
-    "simulant_id": "S030",
-    "component_type": "mineral",
-    "component_name": "Clinopyroxene",
-    "value_pct": 0.6
-  },
-  {
-    "composition_id": "C343",
-    "simulant_id": "S030",
-    "component_type": "mineral",
-    "component_name": "Orthopyroxene",
-    "value_pct": 3.2
-  },
-  {
-    "composition_id": "C344",
-    "simulant_id": "S030",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 8.9
-  },
-  {
-    "composition_id": "C345",
-    "simulant_id": "S030",
-    "component_type": "mineral",
-    "component_name": "Agglutinate",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C346",
-    "simulant_id": "S030",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C347",
-    "simulant_id": "S030",
-    "component_type": "mineral",
-    "component_name": "Magnetite",
-    "value_pct": 11.0
-  },
-  {
-    "composition_id": "C348",
-    "simulant_id": "S030",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 2.9
-  },
-  {
-    "composition_id": "C349",
-    "simulant_id": "S043",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C352",
-    "simulant_id": "S043",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 5.11
-  },
-  {
-    "composition_id": "C353",
-    "simulant_id": "S043",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 27.77
-  },
-  {
-    "composition_id": "C354",
-    "simulant_id": "S043",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 59.05
-  },
-  {
-    "composition_id": "C361",
-    "simulant_id": "S043",
-    "component_type": "mineral",
-    "component_name": "Magnetite",
-    "value_pct": 11.0
-  },
-  {
-    "composition_id": "C362",
-    "simulant_id": "S024",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C363",
-    "simulant_id": "S024",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 0.65
-  },
-  {
-    "composition_id": "C364",
-    "simulant_id": "S024",
-    "component_type": "mineral",
-    "component_name": "Illite",
-    "value_pct": 4.52
-  },
-  {
-    "composition_id": "C365",
-    "simulant_id": "S024",
-    "component_type": "mineral",
-    "component_name": "Norite",
-    "value_pct": 0.86
-  },
-  {
-    "composition_id": "C366",
-    "simulant_id": "S024",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C367",
-    "simulant_id": "S024",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C368",
-    "simulant_id": "S007",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C372",
-    "simulant_id": "S007",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 0.84
-  },
-  {
-    "composition_id": "C373",
-    "simulant_id": "S007",
-    "component_type": "mineral",
-    "component_name": "Magnetite",
-    "value_pct": 1.58
-  },
-  {
-    "composition_id": "C374",
-    "simulant_id": "S007",
-    "component_type": "mineral",
-    "component_name": "Hematite",
-    "value_pct": 2.86
-  },
-  {
-    "composition_id": "C375",
-    "simulant_id": "S007",
-    "component_type": "mineral",
-    "component_name": "Apatite",
-    "value_pct": 0.65
-  },
-  {
-    "composition_id": "C377",
-    "simulant_id": "S007",
-    "component_type": "mineral",
-    "component_name": "Anorthite",
-    "value_pct": 58.5
-  },
-  {
-    "composition_id": "C378",
-    "simulant_id": "S007",
-    "component_type": "mineral",
-    "component_name": "Augite",
-    "value_pct": 26.5
-  },
-  {
-    "composition_id": "C379",
-    "simulant_id": "S007",
-    "component_type": "mineral",
-    "component_name": "Forsterite",
-    "value_pct": 11.6
-  },
-  {
-    "composition_id": "C380",
-    "simulant_id": "S007",
-    "component_type": "mineral",
-    "component_name": "Fayalite",
-    "value_pct": 4.1
-  },
-  {
-    "composition_id": "C381",
-    "simulant_id": "S007",
-    "component_type": "mineral",
-    "component_name": "Quartz",
-    "value_pct": 0.4
-  },
-  {
-    "composition_id": "C382",
-    "simulant_id": "S044",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C383",
-    "simulant_id": "S044",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C384",
-    "simulant_id": "S044",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C385",
-    "simulant_id": "S044",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C386",
-    "simulant_id": "S010",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C387",
-    "simulant_id": "S010",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C388",
-    "simulant_id": "S010",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C389",
-    "simulant_id": "S010",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C390",
-    "simulant_id": "S033",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C391",
-    "simulant_id": "S033",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C392",
-    "simulant_id": "S033",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C393",
-    "simulant_id": "S033",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C394",
-    "simulant_id": "S064",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 1.2
-  },
-  {
-    "composition_id": "C395",
-    "simulant_id": "S064",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C396",
-    "simulant_id": "S064",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C397",
-    "simulant_id": "S064",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 1.0
-  },
-  {
-    "composition_id": "C398",
-    "simulant_id": "S032",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 66.58
-  },
-  {
-    "composition_id": "C399",
-    "simulant_id": "S032",
-    "component_type": "mineral",
-    "component_name": "Pyroxene",
-    "value_pct": 23.4
-  },
-  {
-    "composition_id": "C400",
-    "simulant_id": "S032",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 1.19
-  },
-  {
-    "composition_id": "C401",
-    "simulant_id": "S032",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 0.87
-  },
-  {
-    "composition_id": "C402",
-    "simulant_id": "S032",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 0.84
-  },
-  {
-    "composition_id": "C403",
-    "simulant_id": "S032",
-    "component_type": "mineral",
-    "component_name": "Magnetite",
-    "value_pct": 1.58
-  },
-  {
-    "composition_id": "C404",
-    "simulant_id": "S032",
-    "component_type": "mineral",
-    "component_name": "Hematite",
-    "value_pct": 2.86
-  },
-  {
-    "composition_id": "C405",
-    "simulant_id": "S032",
-    "component_type": "mineral",
-    "component_name": "Apatite",
-    "value_pct": 0.65
-  },
-  {
-    "composition_id": "C406",
-    "simulant_id": "S038",
-    "component_type": "mineral",
-    "component_name": "Augite",
-    "value_pct": 2.2
-  },
-  {
-    "composition_id": "C407",
-    "simulant_id": "S013",
-    "component_type": "mineral",
-    "component_name": "Augite",
-    "value_pct": 2.2
-  },
-  {
-    "composition_id": "C408",
-    "simulant_id": "S013",
-    "component_type": "mineral",
-    "component_name": "Plagioclase",
-    "value_pct": 66.58
-  },
-  {
-    "composition_id": "C409",
-    "simulant_id": "S013",
-    "component_type": "mineral",
-    "component_name": "Pyroxene",
-    "value_pct": 23.4
-  },
-  {
-    "composition_id": "C410",
-    "simulant_id": "S013",
-    "component_type": "mineral",
-    "component_name": "Olivine",
-    "value_pct": 1.19
-  },
-  {
-    "composition_id": "C411",
-    "simulant_id": "S013",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 0.87
-  },
-  {
-    "composition_id": "C412",
-    "simulant_id": "S013",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 0.84
-  },
-  {
-    "composition_id": "C413",
-    "simulant_id": "S013",
-    "component_type": "mineral",
-    "component_name": "Magnetite",
-    "value_pct": 1.58
-  },
-  {
-    "composition_id": "C414",
-    "simulant_id": "S013",
-    "component_type": "mineral",
-    "component_name": "Hematite",
-    "value_pct": 2.86
-  },
-  {
-    "composition_id": "C415",
-    "simulant_id": "S013",
-    "component_type": "mineral",
-    "component_name": "Apatite",
-    "value_pct": 0.65
-  },
-  {
-    "composition_id": "C419",
-    "simulant_id": "S071",
-    "component_type": "mineral",
-    "component_name": "Ilmenite",
-    "value_pct": 0.87
-  },
-  {
-    "composition_id": "C420",
-    "simulant_id": "S071",
-    "component_type": "mineral",
-    "component_name": "Glass",
-    "value_pct": 0.84
-  },
-  {
-    "composition_id": "C421",
-    "simulant_id": "S071",
-    "component_type": "mineral",
-    "component_name": "Magnetite",
-    "value_pct": 1.58
-  },
-  {
-    "composition_id": "C422",
-    "simulant_id": "S071",
-    "component_type": "mineral",
-    "component_name": "Hematite",
-    "value_pct": 2.86
-  },
-  {
-    "composition_id": "C423",
-    "simulant_id": "S071",
-    "component_type": "mineral",
-    "component_name": "Apatite",
-    "value_pct": 0.65
-  },
-  {
-    "composition_id": "C424",
-    "simulant_id": "S071",
-    "component_type": "mineral",
-    "component_name": "Anorthite",
-    "value_pct": 58.5
-  },
-  {
-    "composition_id": "C425",
-    "simulant_id": "S071",
-    "component_type": "mineral",
-    "component_name": "Augite",
-    "value_pct": 26.5
-  },
-  {
-    "composition_id": "C426",
-    "simulant_id": "S071",
-    "component_type": "mineral",
-    "component_name": "Forsterite",
-    "value_pct": 11.6
-  },
-  {
-    "composition_id": "C427",
-    "simulant_id": "S071",
-    "component_type": "mineral",
-    "component_name": "Fayalite",
-    "value_pct": 4.1
-  },
-  {
-    "composition_id": "C428",
-    "simulant_id": "S071",
-    "component_type": "mineral",
-    "component_name": "Quartz",
-    "value_pct": 0.4
-  },
-  {
-    "composition_id": "C429",
-    "simulant_id": "S015",
-    "component_type": "mineral",
-    "component_name": "Augite",
-    "value_pct": 2.2
+    "value_pct": 31.4
   }
 ]
