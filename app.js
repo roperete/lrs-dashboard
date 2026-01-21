@@ -55,16 +55,37 @@ document.addEventListener('DOMContentLoaded', () => {
         "Germany": "DEU", "Italy": "ITA", "China": "CHN",
         "Australia": "AUS", "Norway": "NOR", "Canada": "CAN",
         "Japan": "JPN", "South Korea": "KOR", "India": "IND",
-        "Turkey": "TUR", "Thailand": "THA", "Ital": "ITA", "Spain": "ESP"
+        "Turkey": "TUR", "Thailand": "THA", "Ital": "ITA", "Spain": "ESP",
+        "Poland": "POL"
     };
+
+    // EU member country codes (both ISO and readable names used in database)
+    const euMemberCountryCodes = [
+        "EU", "Germany", "DEU", "France", "FRA", "Italy", "ITA", "Spain", "ESP",
+        "Poland", "POL", "Netherlands", "NLD", "Belgium", "BEL", "Austria", "AUT",
+        "Greece", "GRC", "Portugal", "PRT", "Sweden", "SWE", "Denmark", "DNK",
+        "Finland", "FIN", "Ireland", "IRL", "Czech Republic", "CZE", "Romania", "ROU",
+        "Hungary", "HUN", "Slovakia", "SVK", "Bulgaria", "BGR", "Croatia", "HRV",
+        "Lithuania", "LTU", "Slovenia", "SVN", "Latvia", "LVA", "Estonia", "EST",
+        "Cyprus", "CYP", "Luxembourg", "LUX", "Malta", "MLT"
+    ];
 
     // Display names for country codes in filters
     const countryDisplayNames = {
         "USA": "United States",
         "UK": "United Kingdom",
         "EU": "European Union",
-        "Ital": "Italy"
+        "Ital": "Italy",
+        "Poland": "Poland",
+        "Germany": "Germany",
+        "Spain": "Spain",
+        "Italy": "Italy"
     };
+
+    // Check if a country code is an EU member
+    function isEUMember(countryCode) {
+        return euMemberCountryCodes.includes(countryCode) || euCountries.includes(countryCode);
+    }
 
     // Institution website URLs
     const institutionUrls = {
@@ -180,7 +201,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let filtered = simulants.filter(s => {
             let keep = true;
             if (typeFilter.length) keep = keep && typeFilter.includes(s.type);
-            if (countryFilter.length) keep = keep && countryFilter.includes(s.country_code);
+            if (countryFilter.length) {
+                // Special handling for EU - include all EU member countries
+                const matchesCountry = countryFilter.some(filter => {
+                    if (filter === 'EU') {
+                        return isEUMember(s.country_code);
+                    }
+                    return filter === s.country_code;
+                });
+                keep = keep && matchesCountry;
+            }
             if (institutionFilter.length) keep = keep && institutionFilter.includes(s.institution);
             if (mineralFilter.length) {
                 // Separate detailed minerals from group filters
@@ -583,7 +613,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let filtered = simulants.filter(s => {
             let keep = true;
             if (typeFilter.length) keep = keep && typeFilter.includes(s.type);
-            if (countryFilter.length) keep = keep && countryFilter.includes(s.country_code);
+            if (countryFilter.length) {
+                // Special handling for EU - include all EU member countries
+                const matchesCountry = countryFilter.some(filter => {
+                    if (filter === 'EU') {
+                        return isEUMember(s.country_code);
+                    }
+                    return filter === s.country_code;
+                });
+                keep = keep && matchesCountry;
+            }
             if (mineralFilter.length) {
                 // Separate detailed minerals from group filters
                 const detailedFilters = mineralFilter.filter(f => !f.startsWith('group:'));
@@ -1198,7 +1237,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return simulants.filter(s => {
             let keep = true;
             if (typeFilter.length) keep = keep && typeFilter.includes(s.type);
-            if (countryFilter.length) keep = keep && countryFilter.includes(s.country_code);
+            if (countryFilter.length) {
+                // Special handling for EU - include all EU member countries
+                const matchesCountry = countryFilter.some(filter => {
+                    if (filter === 'EU') {
+                        return isEUMember(s.country_code);
+                    }
+                    return filter === s.country_code;
+                });
+                keep = keep && matchesCountry;
+            }
             if (mineralFilter.length) {
                 // Separate detailed minerals from group filters
                 const detailedFilters = mineralFilter.filter(f => !f.startsWith('group:'));
