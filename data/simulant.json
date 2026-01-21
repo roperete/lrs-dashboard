@@ -30,7 +30,8 @@
     "availability": null,
     "release_date": 1991.0,
     "tons_produced_mt": null,
-    "notes": null
+    "notes": null,
+    "friction_angle": "12.0\u00b0"
   },
   {
     "simulant_id": "S004",
@@ -218,7 +219,8 @@
     "tons_produced_mt": null,
     "notes": "Developed in Japan from Mount Fuji area basalts",
     "glass_content_percent": 7.15,
-    "lunar_sample_reference": "Apollo 14 and 15"
+    "lunar_sample_reference": "Apollo 14 and 15",
+    "bulk_density": "1.065 g/cm\u00b3"
   },
   {
     "simulant_id": "S020",
@@ -311,7 +313,8 @@
     "tons_produced_mt": 27.0,
     "notes": "Designed to have a high proportion of natural glass, made from welded tuff from a quarry north of Flagstaff, AZ, chosen because it had ~50% friable glass and was available in large quantities, composition only represents some 2-3% of the lunar surface, has only <<1% ilmenite",
     "particle_size_distribution": "<1mm",
-    "glass_content_percent": 50
+    "glass_content_percent": 50,
+    "bulk_density": "1.065 g/cm\u00b3"
   },
   {
     "simulant_id": "S028",
@@ -412,7 +415,11 @@
     "availability": "Available",
     "release_date": 2020.0,
     "tons_produced_mt": null,
-    "notes": "lunar regolith simulant used in earthworm colonization experiments for bioengineering approach supporting future crop growth in space"
+    "notes": "lunar regolith simulant used in earthworm colonization experiments for bioengineering approach supporting future crop growth in space",
+    "bulk_density": "0.81 g/cm\u00b3",
+    "particle_size_d50": "10.22 \u00b5m",
+    "cohesion": "0.205 kPa",
+    "friction_angle": "28.62\u00b0"
   },
   {
     "simulant_id": "S037",
@@ -423,7 +430,12 @@
     "availability": "Available",
     "release_date": 2020.0,
     "tons_produced_mt": null,
-    "notes": "lunar mare simulant made by mixing minerals from different places"
+    "notes": "lunar mare simulant made by mixing minerals from different places",
+    "nasa_fom_score": 1.5,
+    "bulk_density": "1.65 g/cm\u00b3",
+    "particle_size_d50": "138.86 \u00b5m",
+    "cohesion": "0.393 kPa",
+    "friction_angle": "34.84\u00b0"
   },
   {
     "simulant_id": "S038",
@@ -435,7 +447,8 @@
     "release_date": 2020.0,
     "tons_produced_mt": null,
     "notes": "Used in MICP (Microbially Induced Carbonate Precipitation) solidification studies, achieved compressive strengths in the range of 3-6 MPa demonstrating moderate solidification efficacy",
-    "lunar_sample_reference": "Apollo 16"
+    "lunar_sample_reference": "Apollo 16",
+    "bulk_density": "1.065 g/cm\u00b3"
   },
   {
     "simulant_id": "S039",
