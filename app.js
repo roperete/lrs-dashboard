@@ -921,6 +921,44 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        // Map detailed minerals to NASA groups for tooltip
+        const mineralToGroup = {
+            'Plagioclase': 'Plagioclase Feldspar',
+            'Anorthite': 'Plagioclase Feldspar',
+            'Labradorite': 'Plagioclase Feldspar',
+            'Bytownite': 'Plagioclase Feldspar',
+            'Albite': 'Plagioclase Feldspar',
+            'Anorthosite': 'Plagioclase Feldspar',
+            'Feldspar': 'Plagioclase Feldspar',
+            'Pyroxene': 'Pyroxene',
+            'Augite': 'Pyroxene',
+            'Clinopyroxene': 'Pyroxene',
+            'Orthopyroxene': 'Pyroxene',
+            'Bronzite': 'Pyroxene',
+            'Pigeonite': 'Pyroxene',
+            'Olivine': 'Olivine',
+            'Forsterite': 'Olivine',
+            'Fayalite': 'Olivine',
+            'Ilmenite': 'Ilmenite',
+            'Glass': 'Glass',
+            'Volcanic Glass': 'Glass',
+            'Agglutinate': 'Glass',
+            'Glass-rich Basalt': 'Glass'
+        };
+
+        // Get detailed minerals for this simulant that map to each group
+        const detailedByGroup = {};
+        if (currentView === 'groups') {
+            const simMinerals = minerals.filter(m => m.simulant_id === simulant_id && m.value_pct > 0);
+            simMinerals.forEach(m => {
+                const group = mineralToGroup[m.component_name];
+                if (group) {
+                    if (!detailedByGroup[group]) detailedByGroup[group] = [];
+                    detailedByGroup[group].push({ name: m.component_name, value: m.value_pct });
+                }
+            });
+        }
+
         if (chartData.length > 0) {
             canvas.style.display = 'block';
             const wrapper = canvas.parentElement;
@@ -956,7 +994,27 @@ document.addEventListener('DOMContentLoaded', () => {
                             borderColor: chartColor.bg.replace('0.8', '0.3'),
                             borderWidth: 1,
                             padding: 12,
-                            cornerRadius: 6
+                            cornerRadius: 6,
+                            callbacks: currentView === 'groups' ? {
+                                title: function(tooltipItems) {
+                                    return tooltipItems[0].label;
+                                },
+                                label: function(context) {
+                                    return `Total: ${context.raw.toFixed(1)}%`;
+                                },
+                                afterBody: function(tooltipItems) {
+                                    const groupName = tooltipItems[0].label;
+                                    const detailed = detailedByGroup[groupName];
+                                    if (detailed && detailed.length > 0) {
+                                        const lines = ['', 'Detailed minerals:'];
+                                        detailed.forEach(d => {
+                                            lines.push(`  • ${d.name}: ${d.value.toFixed(1)}%`);
+                                        });
+                                        return lines;
+                                    }
+                                    return [];
+                                }
+                            } : {}
                         }
                     },
                     scales: {

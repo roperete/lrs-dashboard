@@ -52,6 +52,10 @@ MINERAL_TO_GROUP = {
     'Volcanic Glass': 'Glass',
     'Agglutinate': 'Glass',
     'Basaltic Ash': 'Glass',                  # Treat as glassy material
+    'Glass-rich Basalt': 'Glass',             # Basalt with high glass content
+
+    # Anorthosite is plagioclase-rich rock
+    'Anorthosite': 'Plagioclase Feldspar',
 
     # Other minerals that don't fit NASA groups (will be tracked separately)
     # These are excluded from the standard 5 NASA groups

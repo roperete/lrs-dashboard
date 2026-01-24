@@ -1167,5 +1167,103 @@
     "component_type": "mineral",
     "component_name": "Glass",
     "value_pct": 31.4
+  },
+  {
+    "composition_id": "C168",
+    "simulant_id": "S076",
+    "component_type": "mineral",
+    "component_name": "Bronzite",
+    "value_pct": 32.8
+  },
+  {
+    "composition_id": "C169",
+    "simulant_id": "S076",
+    "component_type": "mineral",
+    "component_name": "Glass-rich Basalt",
+    "value_pct": 32.0
+  },
+  {
+    "composition_id": "C170",
+    "simulant_id": "S076",
+    "component_type": "mineral",
+    "component_name": "Anorthosite",
+    "value_pct": 19.8
+  },
+  {
+    "composition_id": "C171",
+    "simulant_id": "S076",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 11.1
+  },
+  {
+    "composition_id": "C172",
+    "simulant_id": "S076",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 4.3
+  },
+  {
+    "composition_id": "C173",
+    "simulant_id": "S077",
+    "component_type": "mineral",
+    "component_name": "Anorthosite",
+    "value_pct": 74.4
+  },
+  {
+    "composition_id": "C174",
+    "simulant_id": "S077",
+    "component_type": "mineral",
+    "component_name": "Glass-rich Basalt",
+    "value_pct": 24.7
+  },
+  {
+    "composition_id": "C175",
+    "simulant_id": "S077",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 0.4
+  },
+  {
+    "composition_id": "C176",
+    "simulant_id": "S077",
+    "component_type": "mineral",
+    "component_name": "Bronzite",
+    "value_pct": 0.3
+  },
+  {
+    "composition_id": "C177",
+    "simulant_id": "S077",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 0.2
+  },
+  {
+    "composition_id": "C178",
+    "simulant_id": "S078",
+    "component_type": "mineral",
+    "component_name": "Anorthosite",
+    "value_pct": 75.0
+  },
+  {
+    "composition_id": "C179",
+    "simulant_id": "S078",
+    "component_type": "mineral",
+    "component_name": "Glass-rich Basalt",
+    "value_pct": 25.0
+  },
+  {
+    "composition_id": "C180",
+    "simulant_id": "S079",
+    "component_type": "mineral",
+    "component_name": "Anorthosite",
+    "value_pct": 90.0
+  },
+  {
+    "composition_id": "C181",
+    "simulant_id": "S079",
+    "component_type": "mineral",
+    "component_name": "Glass-rich Basalt",
+    "value_pct": 10.0
   }
 ]

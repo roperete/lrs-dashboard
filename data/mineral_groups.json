@@ -748,5 +748,125 @@
     "simulant_id": "S066",
     "group_name": "Glass",
     "value_pct": 31.4
+  },
+  {
+    "group_id": "MG126",
+    "simulant_id": "S076",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 19.8
+  },
+  {
+    "group_id": "MG127",
+    "simulant_id": "S076",
+    "group_name": "Pyroxene",
+    "value_pct": 32.8
+  },
+  {
+    "group_id": "MG128",
+    "simulant_id": "S076",
+    "group_name": "Olivine",
+    "value_pct": 11.1
+  },
+  {
+    "group_id": "MG129",
+    "simulant_id": "S076",
+    "group_name": "Ilmenite",
+    "value_pct": 4.3
+  },
+  {
+    "group_id": "MG130",
+    "simulant_id": "S076",
+    "group_name": "Glass",
+    "value_pct": 32.0
+  },
+  {
+    "group_id": "MG131",
+    "simulant_id": "S077",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 74.4
+  },
+  {
+    "group_id": "MG132",
+    "simulant_id": "S077",
+    "group_name": "Pyroxene",
+    "value_pct": 0.3
+  },
+  {
+    "group_id": "MG133",
+    "simulant_id": "S077",
+    "group_name": "Olivine",
+    "value_pct": 0.2
+  },
+  {
+    "group_id": "MG134",
+    "simulant_id": "S077",
+    "group_name": "Ilmenite",
+    "value_pct": 0.4
+  },
+  {
+    "group_id": "MG135",
+    "simulant_id": "S077",
+    "group_name": "Glass",
+    "value_pct": 24.7
+  },
+  {
+    "group_id": "MG136",
+    "simulant_id": "S078",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 75.0
+  },
+  {
+    "group_id": "MG137",
+    "simulant_id": "S078",
+    "group_name": "Pyroxene",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG138",
+    "simulant_id": "S078",
+    "group_name": "Olivine",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG139",
+    "simulant_id": "S078",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG140",
+    "simulant_id": "S078",
+    "group_name": "Glass",
+    "value_pct": 25.0
+  },
+  {
+    "group_id": "MG141",
+    "simulant_id": "S079",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 90.0
+  },
+  {
+    "group_id": "MG142",
+    "simulant_id": "S079",
+    "group_name": "Pyroxene",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG143",
+    "simulant_id": "S079",
+    "group_name": "Olivine",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG144",
+    "simulant_id": "S079",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG145",
+    "simulant_id": "S079",
+    "group_name": "Glass",
+    "value_pct": 10.0
   }
 ]

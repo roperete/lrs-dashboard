@@ -1,0 +1,87 @@
+{
+  "_comment": "Manually curated composition data from spec sheets. Source: Space Resource Technologies Dec 2025",
+  "simulants": {
+    "LMS-2": {
+      "source": "LMS-2-SPEC-SHEET-DEC2025.pptx.pdf",
+      "minerals": {
+        "Bronzite": 32.8,
+        "Glass-rich Basalt": 32.0,
+        "Anorthosite": 19.8,
+        "Olivine": 11.1,
+        "Ilmenite": 4.3
+      },
+      "chemicals": {
+        "SiO2": 48.22,
+        "TiO2": 2.70,
+        "Al2O3": 12.40,
+        "FeO": 8.79,
+        "MnO": 0.06,
+        "MgO": 15.97,
+        "CaO": 7.65,
+        "Na2O": 1.73,
+        "K2O": 0.42,
+        "P2O5": 0.23
+      }
+    },
+    "LHS-2": {
+      "source": "LHS-2-SPEC-SHEET-DEC2025.pptx.pdf",
+      "minerals": {
+        "Anorthosite": 74.4,
+        "Glass-rich Basalt": 24.7,
+        "Ilmenite": 0.4,
+        "Bronzite": 0.3,
+        "Olivine": 0.2
+      },
+      "chemicals": {
+        "SiO2": 49.12,
+        "TiO2": 0.63,
+        "Al2O3": 26.29,
+        "Fe2O3": 3.20,
+        "MnO": 0.06,
+        "MgO": 2.86,
+        "CaO": 13.52,
+        "Na2O": 2.55,
+        "K2O": 0.34,
+        "P2O5": 0.17
+      }
+    },
+    "LHS-2E": {
+      "source": "LHS-2E-SPEC-SHEET-DEC2025.pptx.pdf",
+      "minerals": {
+        "Anorthosite": 75.0,
+        "Glass-rich Basalt": 25.0
+      },
+      "chemicals": {
+        "SiO2": 47.10,
+        "TiO2": 0.46,
+        "Al2O3": 26.35,
+        "Fe2O3": 3.44,
+        "MnO": 0.05,
+        "MgO": 1.28,
+        "CaO": 17.47,
+        "Na2O": 2.36,
+        "K2O": 0.51,
+        "P2O5": 0.96
+      }
+    },
+    "LSP-2": {
+      "source": "LSP-2-SPEC-SHEET-DEC2025.pptx.pdf",
+      "minerals": {
+        "Anorthosite": 90.0,
+        "Glass-rich Basalt": 10.0
+      },
+      "chemicals": {
+        "SiO2": 47.13,
+        "TiO2": 0.16,
+        "Al2O3": 27.96,
+        "FeO": 1.24,
+        "MnO": 0.02,
+        "MgO": 0.71,
+        "CaO": 17.50,
+        "Na2O": 4.02,
+        "K2O": 0.42,
+        "P2O5": 0.83
+      }
+    }
+  }
+}
