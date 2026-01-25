@@ -24,7 +24,12 @@ scripts/all_extractions.csv
 scripts/pdf_index.json
 
 # Database backups
-data/simulant_backup_*.json
+data/*_backup_*.json
+temp_*.json
+
+# Copy files
+*copy*.py
+*copy*.js
 
 # SQLite databases (if you add backend later)
 scripts/*.db
