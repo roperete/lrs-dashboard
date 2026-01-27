@@ -1371,20 +1371,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 padding: 10,
                                 font: { size: 11 },
                                 usePointStyle: true,
-                                color: '#e8eaed',
-                                generateLabels: function(chart) {
-                                    const data = chart.data;
-                                    return data.labels.map((label, i) => ({
-                                        text: `${label} (${data.datasets[0].data[i]}%)`,
-                                        fontColor: '#e8eaed',
-                                        fillStyle: data.datasets[0].backgroundColor[i],
-                                        strokeStyle: data.datasets[0].borderColor,
-                                        lineWidth: data.datasets[0].borderWidth,
-                                        pointStyle: 'circle',
-                                        hidden: !chart.getDataVisibility(i),
-                                        index: i
-                                    }));
-                                }
+                                color: '#e8eaed'
                             }
                         },
                         tooltip: {
