@@ -794,7 +794,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         updateProperties(simulant_id, panelNum);
-        initializeMineralToggle(panelNum);  // Add toggle buttons before chart
+        initializeMineralToggle(panelNum);
+        initializeChemicalToggle(panelNum);
         updateMineralChart(simulant_id, panelNum);
         updateChemicalChart(simulant_id, panelNum);
         updateReferences(simulant_id, panelNum);
@@ -968,10 +969,27 @@ document.addEventListener('DOMContentLoaded', () => {
             const labels = chartData.map(d => d.component_name || d.group_name);
             const values = chartData.map(d => d.value_pct);
 
+            // Build label with percentage for Y-axis
+            const labelsWithPct = labels.map((l, i) => `${l} (${values[i].toFixed(1)}%)`);
+
+            // Render table view (always rebuild, shown/hidden by display mode)
+            renderMineralTable(panelNum, labels, values, currentView, detailedByGroup);
+
+            // Apply display mode
+            const displayMode = mineralDisplayMode[panelNum] || 'chart';
+            const tableEl = document.getElementById(`mineral-table-${panelNum}`);
+            if (displayMode === 'table') {
+                canvas.style.display = 'none';
+                if (tableEl) tableEl.style.display = 'block';
+            } else {
+                canvas.style.display = 'block';
+                if (tableEl) tableEl.style.display = 'none';
+            }
+
             charts[chartKey] = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: labels,
+                    labels: labelsWithPct,
                     datasets: [{
                         label: chartLabel,
                         data: values,
@@ -997,13 +1015,13 @@ document.addEventListener('DOMContentLoaded', () => {
                             cornerRadius: 6,
                             callbacks: currentView === 'groups' ? {
                                 title: function(tooltipItems) {
-                                    return tooltipItems[0].label;
+                                    return labels[tooltipItems[0].dataIndex];
                                 },
                                 label: function(context) {
                                     return `Total: ${context.raw.toFixed(1)}%`;
                                 },
                                 afterBody: function(tooltipItems) {
-                                    const groupName = tooltipItems[0].label;
+                                    const groupName = labels[tooltipItems[0].dataIndex];
                                     const detailed = detailedByGroup[groupName];
                                     if (detailed && detailed.length > 0) {
                                         const lines = ['', 'Detailed minerals:'];
@@ -1014,7 +1032,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                     }
                                     return [];
                                 }
-                            } : {}
+                            } : {
+                                title: function(tooltipItems) {
+                                    return labels[tooltipItems[0].dataIndex];
+                                },
+                                label: function(context) {
+                                    return `${context.raw.toFixed(1)}%`;
+                                }
+                            }
                         }
                     },
                     scales: {
@@ -1045,6 +1070,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    let mineralDisplayMode = { 1: 'chart', 2: 'chart' };
+
     function initializeMineralToggle(panelNum) {
         const canvas = document.getElementById(`mineral-chart-${panelNum}`);
         const wrapper = canvas.parentElement;
@@ -1052,7 +1079,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check if toggle already exists
         if (wrapper.querySelector('.mineral-view-toggle')) return;
 
-        // Create toggle container
+        // Create data type toggle (Detailed / NASA Groups)
         const toggleContainer = document.createElement('div');
         toggleContainer.className = 'mineral-view-toggle';
         toggleContainer.innerHTML = `
@@ -1060,10 +1087,26 @@ document.addEventListener('DOMContentLoaded', () => {
             <button class="toggle-btn" data-view="groups" data-panel="${panelNum}">NASA Groups</button>
         `;
 
-        // Insert toggle before the canvas
-        wrapper.insertBefore(toggleContainer, canvas);
+        // Create display mode toggle (Chart / Table)
+        const displayToggle = document.createElement('div');
+        displayToggle.className = 'mineral-display-toggle';
+        displayToggle.innerHTML = `
+            <button class="display-btn active" data-display="chart" data-panel="${panelNum}" title="Chart view">&#9776;</button>
+            <button class="display-btn" data-display="table" data-panel="${panelNum}" title="Table view">&#9638;</button>
+        `;
 
-        // Add click handlers
+        // Create table container
+        const tableContainer = document.createElement('div');
+        tableContainer.id = `mineral-table-${panelNum}`;
+        tableContainer.className = 'mineral-table-container';
+        tableContainer.style.display = 'none';
+
+        // Insert elements
+        wrapper.insertBefore(toggleContainer, canvas);
+        toggleContainer.appendChild(displayToggle);
+        canvas.parentNode.insertBefore(tableContainer, canvas.nextSibling);
+
+        // Data type toggle handlers
         toggleContainer.querySelectorAll('.toggle-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const view = e.target.dataset.view;
@@ -1074,6 +1117,191 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+
+        // Display mode toggle handlers
+        displayToggle.querySelectorAll('.display-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const mode = e.target.dataset.display;
+                const panel = parseInt(e.target.dataset.panel);
+                mineralDisplayMode[panel] = mode;
+                displayToggle.querySelectorAll('.display-btn').forEach(b => b.classList.toggle('active', b.dataset.display === mode));
+                const cv = document.getElementById(`mineral-chart-${panel}`);
+                const tb = document.getElementById(`mineral-table-${panel}`);
+                if (mode === 'table') {
+                    cv.style.display = 'none';
+                    tb.style.display = 'block';
+                } else {
+                    cv.style.display = 'block';
+                    tb.style.display = 'none';
+                }
+                // Refresh to rebuild table content
+                const simulantId = panelStates[`panel${panel}`].simulantId;
+                if (simulantId) updateMineralChart(simulantId, panel);
+            });
+        });
+    }
+
+    function renderMineralTable(panelNum, labels, values, currentView, detailedByGroup) {
+        const container = document.getElementById(`mineral-table-${panelNum}`);
+        if (!container) return;
+        container.innerHTML = '';
+
+        if (labels.length === 0) return;
+
+        const table = document.createElement('table');
+        table.className = 'mineral-data-table';
+
+        // Header
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+        const th1 = document.createElement('th');
+        th1.textContent = currentView === 'groups' ? 'NASA Group' : 'Mineral';
+        const th2 = document.createElement('th');
+        th2.textContent = '%';
+        headerRow.appendChild(th1);
+        headerRow.appendChild(th2);
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        // Body
+        const tbody = document.createElement('tbody');
+        labels.forEach((label, i) => {
+            const row = document.createElement('tr');
+            const tdName = document.createElement('td');
+            tdName.textContent = label;
+            const tdVal = document.createElement('td');
+            tdVal.textContent = values[i].toFixed(1);
+            tdVal.className = 'mineral-table-value';
+            row.appendChild(tdName);
+            row.appendChild(tdVal);
+            tbody.appendChild(row);
+
+            // For groups view, show detailed minerals as sub-rows
+            if (currentView === 'groups' && detailedByGroup[label]) {
+                detailedByGroup[label].forEach(d => {
+                    const subRow = document.createElement('tr');
+                    subRow.className = 'mineral-table-subrow';
+                    const subName = document.createElement('td');
+                    subName.textContent = d.name;
+                    const subVal = document.createElement('td');
+                    subVal.textContent = d.value.toFixed(1);
+                    subVal.className = 'mineral-table-value';
+                    subRow.appendChild(subName);
+                    subRow.appendChild(subVal);
+                    tbody.appendChild(subRow);
+                });
+            }
+        });
+
+        // Total row
+        const total = values.reduce((a, b) => a + b, 0);
+        const totalRow = document.createElement('tr');
+        totalRow.className = 'mineral-table-total';
+        const totalLabel = document.createElement('td');
+        totalLabel.textContent = 'Total';
+        const totalVal = document.createElement('td');
+        totalVal.textContent = total.toFixed(1);
+        totalVal.className = 'mineral-table-value';
+        totalRow.appendChild(totalLabel);
+        totalRow.appendChild(totalVal);
+        tbody.appendChild(totalRow);
+
+        table.appendChild(tbody);
+        container.appendChild(table);
+    }
+
+    let chemicalDisplayMode = { 1: 'chart', 2: 'chart' };
+
+    function initializeChemicalToggle(panelNum) {
+        const canvas = document.getElementById(`chemical-chart-${panelNum}`);
+        const wrapper = canvas.parentElement;
+
+        if (wrapper.querySelector('.mineral-display-toggle')) return;
+
+        const displayToggle = document.createElement('div');
+        displayToggle.className = 'mineral-display-toggle chemical-display-toggle';
+        displayToggle.innerHTML = `
+            <button class="display-btn active" data-display="chart" data-panel="${panelNum}" title="Chart view">&#9776;</button>
+            <button class="display-btn" data-display="table" data-panel="${panelNum}" title="Table view">&#9638;</button>
+        `;
+
+        const tableContainer = document.createElement('div');
+        tableContainer.id = `chemical-table-${panelNum}`;
+        tableContainer.className = 'mineral-table-container';
+        tableContainer.style.display = 'none';
+
+        wrapper.insertBefore(displayToggle, canvas);
+        canvas.parentNode.insertBefore(tableContainer, canvas.nextSibling);
+
+        displayToggle.querySelectorAll('.display-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const mode = e.target.dataset.display;
+                const panel = parseInt(e.target.dataset.panel);
+                chemicalDisplayMode[panel] = mode;
+                displayToggle.querySelectorAll('.display-btn').forEach(b => b.classList.toggle('active', b.dataset.display === mode));
+                const cv = document.getElementById(`chemical-chart-${panel}`);
+                const tb = document.getElementById(`chemical-table-${panel}`);
+                if (mode === 'table') {
+                    cv.style.display = 'none';
+                    if (tb) tb.style.display = 'block';
+                } else {
+                    cv.style.display = 'block';
+                    if (tb) tb.style.display = 'none';
+                }
+                const simulantId = panelStates[`panel${panel}`].simulantId;
+                if (simulantId) updateChemicalChart(simulantId, panel);
+            });
+        });
+    }
+
+    function renderChemicalTable(panelNum, labels, values) {
+        const container = document.getElementById(`chemical-table-${panelNum}`);
+        if (!container) return;
+        container.innerHTML = '';
+
+        if (labels.length === 0) return;
+
+        const table = document.createElement('table');
+        table.className = 'mineral-data-table';
+
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+        const th1 = document.createElement('th');
+        th1.textContent = 'Oxide';
+        const th2 = document.createElement('th');
+        th2.textContent = 'wt%';
+        headerRow.appendChild(th1);
+        headerRow.appendChild(th2);
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        const tbody = document.createElement('tbody');
+        labels.forEach((label, i) => {
+            const row = document.createElement('tr');
+            const tdName = document.createElement('td');
+            tdName.textContent = label;
+            const tdVal = document.createElement('td');
+            tdVal.textContent = values[i].toFixed(2);
+            tdVal.className = 'mineral-table-value';
+            row.appendChild(tdName);
+            row.appendChild(tdVal);
+            tbody.appendChild(row);
+        });
+
+        const total = values.reduce((a, b) => a + b, 0);
+        const totalRow = document.createElement('tr');
+        totalRow.className = 'mineral-table-total';
+        const totalLabel = document.createElement('td');
+        totalLabel.textContent = 'Total';
+        const totalVal = document.createElement('td');
+        totalVal.textContent = total.toFixed(2);
+        totalVal.className = 'mineral-table-value';
+        totalRow.appendChild(totalLabel);
+        totalRow.appendChild(totalVal);
+        tbody.appendChild(totalRow);
+
+        table.appendChild(tbody);
+        container.appendChild(table);
     }
 
     function updateChemicalChart(simulant_id, panelNum) {
@@ -1087,10 +1315,21 @@ document.addEventListener('DOMContentLoaded', () => {
             c.simulant_id === simulant_id &&
             c.component_type === 'oxide' &&
             c.component_name?.toLowerCase() !== 'sum'
-        );
+        ).sort((a, b) => b.value_wt_pct - a.value_wt_pct);
+
+        const chemLabels = chemSubset.map(c => c.component_name);
+        const chemValues = chemSubset.map(c => c.value_wt_pct);
+
+        // Always render table
+        renderChemicalTable(panelNum, chemLabels, chemValues);
+
+        // Apply display mode
+        const displayMode = chemicalDisplayMode[panelNum] || 'chart';
+        const tableEl = document.getElementById(`chemical-table-${panelNum}`);
 
         if (chemSubset.length === 0) {
             canvas.style.display = 'none';
+            if (tableEl) tableEl.style.display = 'none';
             const wrapper = canvas.parentElement;
             if (!wrapper.querySelector('.no-data-message')) {
                 const msg = document.createElement('p');
@@ -1099,16 +1338,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 wrapper.appendChild(msg);
             }
         } else {
-            canvas.style.display = 'block';
             const wrapper = canvas.parentElement;
             const noDataMsg = wrapper.querySelector('.no-data-message');
             if (noDataMsg) noDataMsg.remove();
+
+            if (displayMode === 'table') {
+                canvas.style.display = 'none';
+                if (tableEl) tableEl.style.display = 'block';
+            } else {
+                canvas.style.display = 'block';
+                if (tableEl) tableEl.style.display = 'none';
+            }
+
             charts[chartKey] = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: chemSubset.map(c => c.component_name),
+                    labels: chemLabels,
                     datasets: [{
-                        data: chemSubset.map(c => c.value_wt_pct),
+                        data: chemValues,
                         backgroundColor: [
                             '#00b4d8', '#fc3d21', '#fca311', '#48cae4',
                             '#90e0ef', '#ff6b6b', '#c77dff', '#06d6a0'
@@ -1127,7 +1374,19 @@ document.addEventListener('DOMContentLoaded', () => {
                                 padding: 10,
                                 font: { size: 11 },
                                 usePointStyle: true,
-                                color: '#e8eaed'
+                                color: '#e8eaed',
+                                generateLabels: function(chart) {
+                                    const data = chart.data;
+                                    return data.labels.map((label, i) => ({
+                                        text: `${label} (${data.datasets[0].data[i]}%)`,
+                                        fillStyle: data.datasets[0].backgroundColor[i],
+                                        strokeStyle: data.datasets[0].borderColor,
+                                        lineWidth: data.datasets[0].borderWidth,
+                                        pointStyle: 'circle',
+                                        hidden: !chart.getDataVisibility(i),
+                                        index: i
+                                    }));
+                                }
                             }
                         },
                         tooltip: {

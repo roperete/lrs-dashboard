@@ -1375,3 +1375,96 @@ body {
   background: #ff6b6b;
   box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
 }
+
+/* ===== DISPLAY MODE TOGGLE (Chart/Table) ===== */
+.mineral-display-toggle {
+  display: flex;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.mineral-display-toggle .display-btn {
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+  line-height: 1;
+}
+
+.mineral-display-toggle .display-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mineral-display-toggle .display-btn.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.chemical-display-toggle {
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+/* ===== MINERAL DATA TABLE ===== */
+.mineral-table-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.mineral-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.mineral-data-table thead th {
+  text-align: left;
+  padding: 6px 10px;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  background: var(--card-bg);
+}
+
+.mineral-data-table tbody td {
+  padding: 5px 10px;
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.mineral-data-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.mineral-table-value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.mineral-table-subrow td {
+  padding-left: 24px !important;
+  color: var(--text-secondary) !important;
+  font-size: 11px;
+}
+
+.mineral-table-subrow td:first-child::before {
+  content: "\2022  ";
+  color: var(--text-muted);
+}
+
+.mineral-table-total td {
+  font-weight: 600;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--primary) !important;
+}
