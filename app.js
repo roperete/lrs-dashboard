@@ -969,27 +969,27 @@ document.addEventListener('DOMContentLoaded', () => {
             const labels = chartData.map(d => d.component_name || d.group_name);
             const values = chartData.map(d => d.value_pct);
 
-            // Build label with percentage for Y-axis
-            const labelsWithPct = labels.map((l, i) => `${l} (${values[i].toFixed(1)}%)`);
-
             // Render table view (always rebuild, shown/hidden by display mode)
             renderMineralTable(panelNum, labels, values, currentView, detailedByGroup);
 
             // Apply display mode
             const displayMode = mineralDisplayMode[panelNum] || 'chart';
             const tableEl = document.getElementById(`mineral-table-${panelNum}`);
+            const wrapper = canvas.parentElement;
             if (displayMode === 'table') {
                 canvas.style.display = 'none';
                 if (tableEl) tableEl.style.display = 'block';
+                wrapper.classList.add('table-active');
             } else {
                 canvas.style.display = 'block';
                 if (tableEl) tableEl.style.display = 'none';
+                wrapper.classList.remove('table-active');
             }
 
             charts[chartKey] = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: labelsWithPct,
+                    labels: labels,
                     datasets: [{
                         label: chartLabel,
                         data: values,
@@ -1127,12 +1127,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 displayToggle.querySelectorAll('.display-btn').forEach(b => b.classList.toggle('active', b.dataset.display === mode));
                 const cv = document.getElementById(`mineral-chart-${panel}`);
                 const tb = document.getElementById(`mineral-table-${panel}`);
+                const wr = cv.parentElement;
                 if (mode === 'table') {
                     cv.style.display = 'none';
                     tb.style.display = 'block';
+                    wr.classList.add('table-active');
                 } else {
                     cv.style.display = 'block';
                     tb.style.display = 'none';
+                    wr.classList.remove('table-active');
                 }
                 // Refresh to rebuild table content
                 const simulantId = panelStates[`panel${panel}`].simulantId;
@@ -1241,12 +1244,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 displayToggle.querySelectorAll('.display-btn').forEach(b => b.classList.toggle('active', b.dataset.display === mode));
                 const cv = document.getElementById(`chemical-chart-${panel}`);
                 const tb = document.getElementById(`chemical-table-${panel}`);
+                const wr = cv.parentElement;
                 if (mode === 'table') {
                     cv.style.display = 'none';
                     if (tb) tb.style.display = 'block';
+                    wr.classList.add('table-active');
                 } else {
                     cv.style.display = 'block';
                     if (tb) tb.style.display = 'none';
+                    wr.classList.remove('table-active');
                 }
                 const simulantId = panelStates[`panel${panel}`].simulantId;
                 if (simulantId) updateChemicalChart(simulantId, panel);
@@ -1345,9 +1351,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (displayMode === 'table') {
                 canvas.style.display = 'none';
                 if (tableEl) tableEl.style.display = 'block';
+                wrapper.classList.add('table-active');
             } else {
                 canvas.style.display = 'block';
                 if (tableEl) tableEl.style.display = 'none';
+                wrapper.classList.remove('table-active');
             }
 
             charts[chartKey] = new Chart(ctx, {
@@ -1379,6 +1387,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     const data = chart.data;
                                     return data.labels.map((label, i) => ({
                                         text: `${label} (${data.datasets[0].data[i]}%)`,
+                                        fontColor: '#e8eaed',
                                         fillStyle: data.datasets[0].backgroundColor[i],
                                         strokeStyle: data.datasets[0].borderColor,
                                         lineWidth: data.datasets[0].borderWidth,

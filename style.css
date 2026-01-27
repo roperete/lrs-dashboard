@@ -851,6 +851,11 @@ body {
 .chart-wrapper {
   position: relative;
   height: 250px;
+  overflow: visible;
+}
+
+.chart-wrapper.table-active {
+  height: auto;
 }
 
 .chart-wrapper canvas {
@@ -1413,8 +1418,24 @@ body {
 
 /* ===== MINERAL DATA TABLE ===== */
 .mineral-table-container {
-  max-height: 400px;
+  max-height: 280px;
   overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.2) transparent;
+}
+
+.mineral-table-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.mineral-table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mineral-table-container::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
 }
 
 .mineral-data-table {
