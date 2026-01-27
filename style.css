@@ -1495,20 +1495,21 @@ body {
 
 /* ===== SPONSOR BADGE ===== */
 .sponsor-badge {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 6px;
-  margin-top: 8px;
-  padding: 4px 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
+  margin-top: 16px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
   text-decoration: none;
   transition: background 0.2s;
 }
 
 .sponsor-badge:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .sponsor-badge span {
@@ -1519,7 +1520,7 @@ body {
 }
 
 .sponsor-badge img {
-  height: 20px;
+  height: 40px;
   width: auto;
   object-fit: contain;
 }
