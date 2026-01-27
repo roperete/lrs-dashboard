@@ -1487,12 +1487,39 @@ body {
 
 /* ===== VERSION TAG ===== */
 .version-tag {
-  position: fixed;
-  bottom: 6px;
-  right: 10px;
   font-size: 10px;
   color: var(--text-muted);
   opacity: 0.5;
-  pointer-events: none;
-  z-index: 9999;
+  margin-left: 4px;
+}
+
+/* ===== SPONSOR BADGE ===== */
+.sponsor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.sponsor-badge:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sponsor-badge span {
+  font-size: 10px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sponsor-badge img {
+  height: 20px;
+  width: auto;
+  object-fit: contain;
 }
