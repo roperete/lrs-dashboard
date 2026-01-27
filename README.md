@@ -159,12 +159,9 @@ This project is open source. Simulant data is compiled from publicly available s
 
 ## Acknowledgments
 
-- CNES (Centre National d'Etudes Spatiales)
-- NASA Astromaterials Research and Exploration Science (ARES)
-- European Space Agency (ESA)
-- All institutions producing lunar regolith simulants
-- Researchers who published characterization data
+- [Spring Institute for Forest on the Moon](https://thespringinstitute.com) — Development
+- [CNES (Centre National d'Etudes Spatiales)](https://cnes.fr) — Sponsor, [Spaceship program](https://cnes.fr/en/spaceship)
 
 ---
 
-*Developed by Spring Institute for Forest on the Moon, sponsored by CNES*
+*Developed by [Spring Institute for Forest on the Moon](https://thespringinstitute.com), sponsored by [CNES Spaceship](https://cnes.fr/en/spaceship)*
