@@ -851,11 +851,6 @@ body {
 .chart-wrapper {
   position: relative;
   height: 250px;
-  overflow: visible;
-}
-
-.chart-wrapper.table-active {
-  height: auto;
 }
 
 .chart-wrapper canvas {
@@ -1418,7 +1413,7 @@ body {
 
 /* ===== MINERAL DATA TABLE ===== */
 .mineral-table-container {
-  max-height: 280px;
+  max-height: 250px;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
