@@ -1406,6 +1406,36 @@ body {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* ===== LUNAR REFERENCE DROPDOWN ===== */
+.lunar-ref-select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.lunar-ref-select:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.lunar-ref-select option {
+  background: var(--space-dark);
+  color: var(--text-primary);
+}
+
+.lunar-ref-header {
+  color: #fca311 !important;
+}
+
+.lunar-ref-value {
+  color: #fca311 !important;
+}
+
 .chemical-display-toggle {
   justify-content: flex-end;
   margin-bottom: 8px;

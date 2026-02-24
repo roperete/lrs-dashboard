@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let countryLayer = null;
     let countryGeoJson = null;
     let simulants = [], sites = [], minerals = [], chemicals = [], references = [], mineralGroups = [];
+    let simulantExtra = [], lunarReference = [], mineralSourcing = [];
     let markerMap = {};
     let mineralChartView = { 1: 'detailed', 2: 'detailed' }; // Track which view each panel is showing
     let charts = {
@@ -160,8 +161,11 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('./data/chemical_composition.json').then(r => r.json()),
         fetch('./data/references.json').then(r => r.json()),
         fetch('./data/countries.geojson').then(r => r.json()),
-        fetch('./data/mineral_groups.json').then(r => r.json()).catch(() => [])  // Optional file
-    ]).then(([simData, siteData, minData, chemData, refData, geoData, groupData]) => {
+        fetch('./data/mineral_groups.json').then(r => r.json()).catch(() => []),
+        fetch('./data/simulant_extra.json').then(r => r.json()).catch(() => []),
+        fetch('./data/lunar_reference.json').then(r => r.json()).catch(() => []),
+        fetch('./data/mineral_sourcing.json').then(r => r.json()).catch(() => [])
+    ]).then(([simData, siteData, minData, chemData, refData, geoData, groupData, extraData, lunarData, sourcingData]) => {
         simulants = simData;
         sites = siteData;
         minerals = minData;
@@ -169,13 +173,18 @@ document.addEventListener('DOMContentLoaded', () => {
         references = refData;
         countryGeoJson = geoData;
         mineralGroups = groupData;
+        simulantExtra = extraData;
+        lunarReference = lunarData;
+        mineralSourcing = sourcingData;
 
         console.log('✓ Data loaded:', {
             simulants: simulants.length,
             sites: sites.length,
             minerals: minerals.length,
             chemicals: chemicals.length,
-            mineralGroups: mineralGroups.length
+            mineralGroups: mineralGroups.length,
+            lunarReference: lunarReference.length,
+            mineralSourcing: mineralSourcing.length
         });
 
         hideLoading();
@@ -813,6 +822,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Merge extra data if available
+        const extra = simulantExtra.find(x => x.simulant_id === simulant_id) || {};
+
         // Define properties to display with labels
         const propertyDefs = [
             { key: 'type', label: 'Type' },
@@ -821,6 +833,12 @@ document.addEventListener('DOMContentLoaded', () => {
             { key: 'availability', label: 'Availability' },
             { key: 'release_date', label: 'Release Date' },
             { key: 'tons_produced_mt', label: 'Tons Produced (MT)' },
+            { key: 'application', label: 'Application', source: 'extra' },
+            { key: 'feedstock', label: 'Feedstock', source: 'extra' },
+            { key: 'classification', label: 'Classification', source: 'extra' },
+            { key: 'replica_of', label: 'Replica Of', source: 'extra' },
+            { key: 'petrographic_class', label: 'Petrographic Class', source: 'extra' },
+            { key: 'grain_size_mm', label: 'Grain Size (mm)', source: 'extra' },
             { key: 'density_g_cm3', label: 'Density (g/cm³)' },
             { key: 'specific_gravity', label: 'Specific Gravity' },
             { key: 'glass_content_percent', label: 'Glass Content (%)' },
@@ -838,7 +856,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let hasProperties = false;
         propertyDefs.forEach(prop => {
-            const value = s[prop.key];
+            const value = prop.source === 'extra' ? extra[prop.key] : s[prop.key];
             if (value !== null && value !== undefined && value !== '' && value !== 'null') {
                 hasProperties = true;
                 const item = document.createElement('div');
@@ -1208,6 +1226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let chemicalDisplayMode = { 1: 'chart', 2: 'chart' };
+    let chemicalRefMission = { 1: '', 2: '' };
 
     function initializeChemicalToggle(panelNum) {
         const canvas = document.getElementById(`chemical-chart-${panelNum}`);
@@ -1217,7 +1236,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const displayToggle = document.createElement('div');
         displayToggle.className = 'mineral-display-toggle chemical-display-toggle';
+
+        // Build lunar reference dropdown options
+        let refOptions = '<option value="">No comparison</option>';
+        lunarReference.forEach(r => {
+            refOptions += `<option value="${r.mission}">${r.mission}</option>`;
+        });
+
         displayToggle.innerHTML = `
+            <select class="lunar-ref-select" data-panel="${panelNum}" title="Compare with lunar soil">
+                ${refOptions}
+            </select>
             <button class="display-btn active" data-display="chart" data-panel="${panelNum}" title="Chart view">&#9776;</button>
             <button class="display-btn" data-display="table" data-panel="${panelNum}" title="Table view">&#9638;</button>
         `;
@@ -1249,6 +1278,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (simulantId) updateChemicalChart(simulantId, panel);
             });
         });
+
+        // Lunar reference dropdown handler
+        const refSelect = displayToggle.querySelector('.lunar-ref-select');
+        refSelect.addEventListener('change', (e) => {
+            const panel = parseInt(e.target.dataset.panel);
+            chemicalRefMission[panel] = e.target.value;
+            const simulantId = panelStates[`panel${panel}`].simulantId;
+            if (simulantId) updateChemicalChart(simulantId, panel);
+        });
+    }
+
+    function getLunarRefData(mission, labels) {
+        if (!mission) return null;
+        const ref = lunarReference.find(r => r.mission === mission);
+        if (!ref) return null;
+        return labels.map(l => ref.chemical_composition[l] || 0);
     }
 
     function renderChemicalTable(panelNum, labels, values) {
@@ -1257,6 +1302,9 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML = '';
 
         if (labels.length === 0) return;
+
+        const mission = chemicalRefMission[panelNum];
+        const refValues = getLunarRefData(mission, labels);
 
         const table = document.createElement('table');
         table.className = 'mineral-data-table';
@@ -1269,6 +1317,12 @@ document.addEventListener('DOMContentLoaded', () => {
         th2.textContent = 'wt%';
         headerRow.appendChild(th1);
         headerRow.appendChild(th2);
+        if (refValues) {
+            const th3 = document.createElement('th');
+            th3.textContent = mission;
+            th3.className = 'lunar-ref-header';
+            headerRow.appendChild(th3);
+        }
         thead.appendChild(headerRow);
         table.appendChild(thead);
 
@@ -1282,6 +1336,12 @@ document.addEventListener('DOMContentLoaded', () => {
             tdVal.className = 'mineral-table-value';
             row.appendChild(tdName);
             row.appendChild(tdVal);
+            if (refValues) {
+                const tdRef = document.createElement('td');
+                tdRef.textContent = refValues[i] ? refValues[i].toFixed(2) : '-';
+                tdRef.className = 'mineral-table-value lunar-ref-value';
+                row.appendChild(tdRef);
+            }
             tbody.appendChild(row);
         });
 
@@ -1295,6 +1355,12 @@ document.addEventListener('DOMContentLoaded', () => {
         totalVal.className = 'mineral-table-value';
         totalRow.appendChild(totalLabel);
         totalRow.appendChild(totalVal);
+        if (refValues) {
+            const totalRef = document.createElement('td');
+            totalRef.textContent = refValues.reduce((a, b) => a + b, 0).toFixed(2);
+            totalRef.className = 'mineral-table-value lunar-ref-value';
+            totalRow.appendChild(totalRef);
+        }
         tbody.appendChild(totalRow);
 
         table.appendChild(tbody);
@@ -1347,45 +1413,108 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (tableEl) tableEl.style.display = 'none';
             }
 
-            charts[chartKey] = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: chemLabels,
-                    datasets: [{
-                        data: chemValues,
-                        backgroundColor: [
-                            '#00b4d8', '#fc3d21', '#fca311', '#48cae4',
-                            '#90e0ef', '#ff6b6b', '#c77dff', '#06d6a0'
-                        ],
-                        borderWidth: 2,
-                        borderColor: '#141b2d'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: {
-                                padding: 10,
-                                font: { size: 11 },
-                                usePointStyle: true,
-                                color: '#e8eaed'
+            const mission = chemicalRefMission[panelNum];
+            const refValues = getLunarRefData(mission, chemLabels);
+
+            if (refValues) {
+                // Bar chart for comparison mode
+                const simName = (simulants.find(x => x.simulant_id === simulant_id) || {}).name || 'Simulant';
+                charts[chartKey] = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: chemLabels,
+                        datasets: [
+                            {
+                                label: simName,
+                                data: chemValues,
+                                backgroundColor: 'rgba(0, 180, 216, 0.8)',
+                                borderColor: 'rgba(0, 180, 216, 1)',
+                                borderWidth: 1,
+                                borderRadius: 3
+                            },
+                            {
+                                label: mission,
+                                data: refValues,
+                                backgroundColor: 'rgba(252, 163, 17, 0.6)',
+                                borderColor: 'rgba(252, 163, 17, 1)',
+                                borderWidth: 1,
+                                borderRadius: 3
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { padding: 10, font: { size: 11 }, usePointStyle: true, color: '#e8eaed' }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(20, 27, 45, 0.95)',
+                                titleColor: '#00b4d8',
+                                bodyColor: '#e8eaed',
+                                borderColor: 'rgba(0, 180, 216, 0.3)',
+                                borderWidth: 1,
+                                padding: 12,
+                                cornerRadius: 6
                             }
                         },
-                        tooltip: {
-                            backgroundColor: 'rgba(20, 27, 45, 0.95)',
-                            titleColor: '#00b4d8',
-                            bodyColor: '#e8eaed',
-                            borderColor: 'rgba(0, 180, 216, 0.3)',
-                            borderWidth: 1,
-                            padding: 12,
-                            cornerRadius: 6
+                        scales: {
+                            x: {
+                                ticks: { color: '#9aa0a6', font: { size: 10 } },
+                                grid: { color: 'rgba(255, 255, 255, 0.05)' }
+                            },
+                            y: {
+                                beginAtZero: true,
+                                ticks: { color: '#9aa0a6' },
+                                grid: { color: 'rgba(255, 255, 255, 0.05)' }
+                            }
                         }
                     }
-                }
-            });
+                });
+            } else {
+                // Doughnut chart (default)
+                charts[chartKey] = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: chemLabels,
+                        datasets: [{
+                            data: chemValues,
+                            backgroundColor: [
+                                '#00b4d8', '#fc3d21', '#fca311', '#48cae4',
+                                '#90e0ef', '#ff6b6b', '#c77dff', '#06d6a0'
+                            ],
+                            borderWidth: 2,
+                            borderColor: '#141b2d'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 10,
+                                    font: { size: 11 },
+                                    usePointStyle: true,
+                                    color: '#e8eaed'
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(20, 27, 45, 0.95)',
+                                titleColor: '#00b4d8',
+                                bodyColor: '#e8eaed',
+                                borderColor: 'rgba(0, 180, 216, 0.3)',
+                                borderWidth: 1,
+                                padding: 12,
+                                cornerRadius: 6
+                            }
+                        }
+                    }
+                });
+            }
         }
     }
 

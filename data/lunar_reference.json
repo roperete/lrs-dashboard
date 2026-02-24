@@ -1,0 +1,269 @@
+[
+  {
+    "mission": "Apollo 11",
+    "landing_site": "Sea of Tranquility (Mare Tranquillitatis)",
+    "coordinates": {
+      "lat": 0.6875,
+      "lon": 23.4333
+    },
+    "type": "Mare (High-Ti Basalt)",
+    "sample_id": "10084",
+    "sample_description": "Bulk regolith soil, most extensively characterized lunar sample",
+    "chemical_composition": {
+      "SiO2": 42.2,
+      "TiO2": 7.8,
+      "Al2O3": 13.6,
+      "Cr2O3": 0.3,
+      "FeO": 15.3,
+      "MnO": 0.2,
+      "MgO": 7.8,
+      "CaO": 11.9,
+      "Na2O": 0.47,
+      "K2O": 0.16,
+      "P2O5": 0.05
+    },
+    "mineral_composition": {
+      "Plagioclase": 21.0,
+      "Pyroxene": 36.0,
+      "Olivine": 2.0,
+      "Ilmenite": 15.0,
+      "Agglutinates": 18.0,
+      "Glass": 5.0,
+      "Other": 3.0
+    },
+    "sources": [
+      "Meyer, C. (2009). Lunar Sample Compendium: 10084. NASA Johnson Space Center.",
+      "Heiken, G.H., Vaniman, D.T., & French, B.M. (1991). Lunar Sourcebook. Cambridge University Press.",
+      "Korotev, R.L. The chemical composition of lunar soil. Washington University in St. Louis."
+    ]
+  },
+  {
+    "mission": "Apollo 12",
+    "landing_site": "Ocean of Storms (Oceanus Procellarum)",
+    "coordinates": {
+      "lat": -3.0128,
+      "lon": -23.4219
+    },
+    "type": "Mare (Low-Ti Basalt)",
+    "sample_id": "12070",
+    "sample_description": "Bulk regolith soil from ALSEP site, well-gardened surface soil",
+    "chemical_composition": {
+      "SiO2": 46.3,
+      "TiO2": 3.0,
+      "Al2O3": 12.9,
+      "Cr2O3": 0.34,
+      "FeO": 15.1,
+      "MnO": 0.22,
+      "MgO": 9.3,
+      "CaO": 10.7,
+      "Na2O": 0.54,
+      "K2O": 0.31,
+      "P2O5": 0.4
+    },
+    "mineral_composition": {
+      "Plagioclase": 23.0,
+      "Pyroxene": 46.0,
+      "Olivine": 6.0,
+      "Ilmenite": 4.0,
+      "Agglutinates": 14.0,
+      "Glass": 5.0,
+      "Other": 2.0
+    },
+    "sources": [
+      "Meyer, C. (2007). Lunar Sample Compendium: 12070. NASA Johnson Space Center.",
+      "Heiken, G.H., Vaniman, D.T., & French, B.M. (1991). Lunar Sourcebook. Cambridge University Press.",
+      "Korotev, R.L. The chemical composition of lunar soil. Washington University in St. Louis."
+    ]
+  },
+  {
+    "mission": "Apollo 14",
+    "landing_site": "Fra Mauro Highlands",
+    "coordinates": {
+      "lat": -3.6453,
+      "lon": -17.4714
+    },
+    "type": "Highland (KREEP-rich)",
+    "sample_id": "14163",
+    "sample_description": "Comprehensive regolith soil from Fra Mauro formation, KREEP-rich highland material",
+    "chemical_composition": {
+      "SiO2": 48.1,
+      "TiO2": 1.7,
+      "Al2O3": 17.4,
+      "Cr2O3": 0.23,
+      "FeO": 10.4,
+      "MnO": 0.14,
+      "MgO": 9.4,
+      "CaO": 10.7,
+      "Na2O": 0.7,
+      "K2O": 0.55,
+      "P2O5": 0.51
+    },
+    "mineral_composition": {
+      "Plagioclase": 37.0,
+      "Pyroxene": 27.0,
+      "Olivine": 5.0,
+      "Ilmenite": 1.0,
+      "Agglutinates": 20.0,
+      "Glass": 7.0,
+      "Other": 3.0
+    },
+    "sources": [
+      "Meyer, C. (2011). Lunar Sample Compendium: 14163/14259. NASA Johnson Space Center.",
+      "Heiken, G.H., Vaniman, D.T., & French, B.M. (1991). Lunar Sourcebook. Cambridge University Press.",
+      "Korotev, R.L. The chemical composition of lunar soil. Washington University in St. Louis."
+    ]
+  },
+  {
+    "mission": "Apollo 15",
+    "landing_site": "Hadley-Apennine (Hadley Rille / Apennine Mountains)",
+    "coordinates": {
+      "lat": 26.1322,
+      "lon": 3.6339
+    },
+    "type": "Mare/Highland boundary (Low-Ti Basalt with Highland component)",
+    "sample_id": "15271",
+    "sample_description": "Reference regolith soil from station 2 near Hadley Rille, mare-highland mixed soil",
+    "chemical_composition": {
+      "SiO2": 46.8,
+      "TiO2": 1.4,
+      "Al2O3": 14.6,
+      "Cr2O3": 0.37,
+      "FeO": 14.3,
+      "MnO": 0.19,
+      "MgO": 11.5,
+      "CaO": 10.8,
+      "Na2O": 0.39,
+      "K2O": 0.21,
+      "P2O5": 0.18
+    },
+    "mineral_composition": {
+      "Plagioclase": 27.0,
+      "Pyroxene": 41.0,
+      "Olivine": 8.0,
+      "Ilmenite": 2.0,
+      "Agglutinates": 15.0,
+      "Glass": 5.0,
+      "Other": 2.0
+    },
+    "sources": [
+      "Meyer, C. (2010). Lunar Sample Compendium: 15271. Lunar and Planetary Institute.",
+      "Heiken, G.H., Vaniman, D.T., & French, B.M. (1991). Lunar Sourcebook. Cambridge University Press.",
+      "Korotev, R.L. The chemical composition of lunar soil. Washington University in St. Louis."
+    ]
+  },
+  {
+    "mission": "Apollo 16",
+    "landing_site": "Descartes Highlands (Cayley Plains)",
+    "coordinates": {
+      "lat": -8.9734,
+      "lon": 15.5011
+    },
+    "type": "Highland (Feldspathic / Anorthositic)",
+    "sample_id": "60501",
+    "sample_description": "Bulk regolith soil from station LM/ALSEP area, feldspathic highland regolith",
+    "chemical_composition": {
+      "SiO2": 45.0,
+      "TiO2": 0.54,
+      "Al2O3": 27.3,
+      "Cr2O3": 0.1,
+      "FeO": 5.1,
+      "MnO": 0.07,
+      "MgO": 5.7,
+      "CaO": 15.7,
+      "Na2O": 0.46,
+      "K2O": 0.17,
+      "P2O5": 0.11
+    },
+    "mineral_composition": {
+      "Plagioclase": 60.0,
+      "Pyroxene": 13.0,
+      "Olivine": 3.0,
+      "Ilmenite": 0.5,
+      "Agglutinates": 17.0,
+      "Glass": 4.0,
+      "Other": 2.5
+    },
+    "sources": [
+      "Meyer, C. (2010). Lunar Sample Compendium: 60050/60500. NASA Johnson Space Center.",
+      "Heiken, G.H., Vaniman, D.T., & French, B.M. (1991). Lunar Sourcebook. Cambridge University Press.",
+      "Korotev, R.L. The chemical composition of lunar soil. Washington University in St. Louis.",
+      "Laul, J.C. & Schmitt, R.A. (1973). Chemical composition of Apollo 15, 16, and 17 samples. Proc. 4th Lunar Sci. Conf., 1349-1367."
+    ]
+  },
+  {
+    "mission": "Apollo 17",
+    "landing_site": "Taurus-Littrow Valley",
+    "coordinates": {
+      "lat": 20.1908,
+      "lon": 30.7717
+    },
+    "type": "Mare/Highland boundary (High-Ti Basalt with Highland component)",
+    "sample_id": "71501",
+    "sample_description": "Bulk regolith soil from station 1A near Steno Crater, mare-highland mixed regolith",
+    "chemical_composition": {
+      "SiO2": 43.2,
+      "TiO2": 4.2,
+      "Al2O3": 17.1,
+      "Cr2O3": 0.33,
+      "FeO": 12.2,
+      "MnO": 0.17,
+      "MgO": 10.4,
+      "CaO": 11.8,
+      "Na2O": 0.4,
+      "K2O": 0.13,
+      "P2O5": 0.12
+    },
+    "mineral_composition": {
+      "Plagioclase": 32.0,
+      "Pyroxene": 31.0,
+      "Olivine": 5.0,
+      "Ilmenite": 7.0,
+      "Agglutinates": 16.0,
+      "Glass": 6.0,
+      "Other": 3.0
+    },
+    "sources": [
+      "Meyer, C. (2010). Lunar Sample Compendium: 71500/71501. Lunar and Planetary Institute.",
+      "Heiken, G.H., Vaniman, D.T., & French, B.M. (1991). Lunar Sourcebook. Cambridge University Press.",
+      "Korotev, R.L. The chemical composition of lunar soil. Washington University in St. Louis.",
+      "Laul, J.C. & Schmitt, R.A. (1973). Chemical composition of Apollo 15, 16, and 17 samples. Proc. 4th Lunar Sci. Conf., 1349-1367."
+    ]
+  },
+  {
+    "mission": "Chang'e-5",
+    "landing_site": "Northern Oceanus Procellarum (Mons Ruemker)",
+    "coordinates": {
+      "lat": 43.06,
+      "lon": -51.92
+    },
+    "type": "Mare (Young Low-Ti Basalt, ~2.0 Ga)",
+    "sample_id": "CE5C0400",
+    "sample_description": "Scooped regolith from lunar surface, youngest known mare basalt (~2.0 Ga), low-Ti/low-Al/low-K type",
+    "chemical_composition": {
+      "SiO2": 42.2,
+      "TiO2": 5.12,
+      "Al2O3": 10.8,
+      "Cr2O3": 0.49,
+      "FeO": 22.7,
+      "MnO": 0.28,
+      "MgO": 6.3,
+      "CaO": 10.3,
+      "Na2O": 0.33,
+      "K2O": 0.08,
+      "P2O5": 0.12
+    },
+    "mineral_composition": {
+      "Plagioclase": 37.5,
+      "Pyroxene": 39.4,
+      "Olivine": 9.8,
+      "Fe-Ti_Oxides": 1.9,
+      "Glass": 8.3,
+      "Other": 3.1
+    },
+    "sources": [
+      "Li, C., Hu, H., Yang, M.F. et al. (2022). Characteristics of the lunar samples returned by the Chang'E-5 mission. National Science Review, 9(2), nwab188.",
+      "Zong, K., Wang, Z., Li, J. et al. (2022). Bulk compositions of the Chang'E-5 lunar soil. Geochimica et Cosmochimica Acta, 335, 284-296.",
+      "Xu, Y., Tian, H., Zhang, C. et al. (2022). Simultaneous analysis of particle size and mineralogy for Chang'E-5 lunar soil. Science China Earth Sciences, 65, 1-14."
+    ]
+  }
+]
