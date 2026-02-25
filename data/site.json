@@ -353,20 +353,20 @@
   {
     "site_id": "X040",
     "simulant_id": "S040",
-    "site_name": "USA",
+    "site_name": "TU Berlin",
     "site_type": "Lab",
-    "country_code": "USA",
-    "lat": 38.9072,
-    "lon": -77.0369
+    "country_code": "Germany",
+    "lat": 52.52,
+    "lon": 13.405
   },
   {
     "site_id": "X041",
     "simulant_id": "S041",
-    "site_name": "USA",
+    "site_name": "TU Berlin",
     "site_type": "Lab",
-    "country_code": "USA",
-    "lat": 38.9072,
-    "lon": -77.0369
+    "country_code": "Germany",
+    "lat": 52.52,
+    "lon": 13.405
   },
   {
     "site_id": "X042",
