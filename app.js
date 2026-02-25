@@ -848,6 +848,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { key: 'particle_morphology', label: 'Particle Morphology' },
             { key: 'particle_ruggedness', label: 'Particle Ruggedness' },
             { key: 'nasa_fom_score', label: 'NASA FoM Score' },
+            { key: 'reference', label: 'Reference', source: 'extra' },
             { key: 'notes', label: 'Notes' }
         ];
 
