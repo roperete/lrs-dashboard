@@ -119,20 +119,26 @@
   {
     "site_id": "X014",
     "simulant_id": "S014",
-    "site_name": "ESA / Technical University of Bari",
-    "site_type": "Lab",
-    "country_code": "Italy",
-    "lat": 41.9028,
-    "lon": 12.4964
+    "site_name": "ESA Headquarters",
+    "site_type": "Government Agency",
+    "country_code": "France",
+    "lat": 48.8455,
+    "lon": 2.2870,
+    "address": "8-10 rue Mario Nikis, 75738 Paris Cedex 15, France",
+    "website": "https://www.esa.int/",
+    "related_site_ids": ["X015"]
   },
   {
     "site_id": "X015",
     "simulant_id": "S015",
-    "site_name": "ESA / Technical University of Bari",
-    "site_type": "Lab",
+    "site_name": "Technical University of Bari",
+    "site_type": "University",
     "country_code": "Italy",
-    "lat": 41.9028,
-    "lon": 12.4964
+    "lat": 41.1203,
+    "lon": 16.8683,
+    "address": "Via Amendola 126/b, 70126 Bari, Italy",
+    "website": "https://www.uniba.it/",
+    "related_site_ids": ["X014"]
   },
   {
     "site_id": "X016",
@@ -162,13 +168,28 @@
     "lon": 13.405
   },
   {
-    "site_id": "X019",
+    "site_id": "X019_1",
     "simulant_id": "S019",
-    "site_name": "JAXA, LETO",
-    "site_type": "Lab",
+    "site_name": "JAXA Headquarters",
+    "site_type": "Government Agency",
     "country_code": "Japan",
-    "lat": 35.6895,
-    "lon": 139.6917
+    "lat": 35.6532,
+    "lon": 139.5360,
+    "address": "7-44-1 Jindaji Higashi-machi, Chofu-shi, Tokyo 182-8522, Japan",
+    "website": "https://global.jaxa.jp/",
+    "related_site_ids": ["X019_2"]
+  },
+  {
+    "site_id": "X019_2",
+    "simulant_id": "S019",
+    "site_name": "LETO Research Group",
+    "site_type": "Research Group",
+    "country_code": "Japan",
+    "lat": 35.6532,
+    "lon": 139.5360,
+    "address": "Tokyo, Japan",
+    "website": "https://www.jaxa.jp/",
+    "related_site_ids": ["X019_1"]
   },
   {
     "site_id": "X020",
@@ -353,20 +374,26 @@
   {
     "site_id": "X040",
     "simulant_id": "S040",
-    "site_name": "TU Berlin",
-    "site_type": "Lab",
+    "site_name": "Technische Universität Berlin",
+    "site_type": "University",
     "country_code": "Germany",
-    "lat": 52.52,
-    "lon": 13.405
+    "lat": 52.5072,
+    "lon": 13.3225,
+    "address": "Straße des 17. Juni 135, 10623 Berlin, Germany",
+    "website": "https://www.tu-berlin.de/",
+    "related_site_ids": ["X041"]
   },
   {
     "site_id": "X041",
     "simulant_id": "S041",
-    "site_name": "TU Berlin",
-    "site_type": "Lab",
+    "site_name": "Technische Universität Berlin",
+    "site_type": "University",
     "country_code": "Germany",
-    "lat": 52.52,
-    "lon": 13.405
+    "lat": 52.5072,
+    "lon": 13.3225,
+    "address": "Straße des 17. Juni 135, 10623 Berlin, Germany",
+    "website": "https://www.tu-berlin.de/",
+    "related_site_ids": ["X040"]
   },
   {
     "site_id": "X042",
@@ -395,14 +422,29 @@
     "lat": 38.9072,
     "lon": -77.0369
   },
-  {
-    "site_id": "X045",
+{
+    "site_id": "X045_1",
     "simulant_id": "S045",
-    "site_name": "National\r\nAstronomical\r\nObservatories,\r\nChinese Academy of\r\nSciences ",
-    "site_type": "Lab",
+    "site_name": "National Astronomical Observatories of China",
+    "site_type": "Government Research Center",
     "country_code": "China",
-    "lat": 39.9042,
-    "lon": 116.4074
+    "lat": 40.0110,
+    "lon": 116.3885,
+    "address": "20A Datun Road, Chaoyang District, Beijing, China 100101",
+    "website": "https://www.nao.cas.cn/",
+    "related_site_ids": ["X045_2"]
+  },
+  {
+    "site_id": "X045_2",
+    "simulant_id": "S045",
+    "site_name": "Chinese Academy of Sciences",
+    "site_type": "Government Agency",
+    "country_code": "China",
+    "lat": 39.9115,
+    "lon": 116.3308,
+    "address": "52 Sanlihe Rd., Xicheng District, Beijing, China 100864",
+    "website": "https://english.cas.cn/",
+    "related_site_ids": ["X045_1"]
   },
   {
     "site_id": "X046",
@@ -413,14 +455,29 @@
     "lat": 42.338900,
     "lon": -71.088600
   },
-  {
-    "site_id": "X047",
+{
+    "site_id": "X047_1",
     "simulant_id": "S047",
-    "site_name": "NASA-MSFC and USGS",
-    "site_type": "Lab",
+    "site_name": "NASA Marshall Space Flight Center",
+    "site_type": "Government Research Center",
     "country_code": "USA",
-    "lat": 34.616667,
-    "lon": -86.666667
+    "lat": 34.6614,
+    "lon": -86.6713,
+    "address": "Redstone Arsenal, Huntsville, AL 35812, USA",
+    "website": "https://www.nasa.gov/centers/marshall/home/index.html",
+    "related_site_ids": ["X047_2"]
+  },
+  {
+    "site_id": "X047_2",
+    "simulant_id": "S047",
+    "site_name": "United States Geological Survey",
+    "site_type": "Government Agency",
+    "country_code": "USA",
+    "lat": 38.9497,
+    "lon": -77.3676,
+    "address": "12201 Sunrise Valley Drive, Reston, VA 20192, USA",
+    "website": "https://www.usgs.gov/",
+    "related_site_ids": ["X047_1"]
   },
   {
     "site_id": "X048",
@@ -605,29 +662,38 @@
   {
     "site_id": "X068",
     "simulant_id": "S068",
-    "site_name": "Technical University Braunschweig",
-    "site_type": "Lab",
+    "site_name": "Technische Universität Braunschweig",
+    "site_type": "University",
     "country_code": "Germany",
-    "lat": 52.2736,
-    "lon": 10.5297
+    "lat": 52.2740,
+    "lon": 10.5245,
+    "address": "Universitaetsplatz 2, 38106 Braunschweig, Germany",
+    "website": "https://www.tu-braunschweig.de/",
+    "related_site_ids": ["X069", "X070"]
   },
   {
     "site_id": "X069",
     "simulant_id": "S069",
-    "site_name": "TU Braunschweig",
-    "site_type": "Lab",
+    "site_name": "Technische Universität Braunschweig",
+    "site_type": "University",
     "country_code": "Germany",
-    "lat": 52.2736,
-    "lon": 10.5297
+    "lat": 52.2740,
+    "lon": 10.5245,
+    "address": "Universitaetsplatz 2, 38106 Braunschweig, Germany",
+    "website": "https://www.tu-braunschweig.de/",
+    "related_site_ids": ["X068", "X070"]
   },
   {
     "site_id": "X070",
     "simulant_id": "S070",
-    "site_name": "TU Braunschweig",
-    "site_type": "Lab",
+    "site_name": "Technische Universität Braunschweig",
+    "site_type": "University",
     "country_code": "Germany",
-    "lat": 52.2736,
-    "lon": 10.5297
+    "lat": 52.2740,
+    "lon": 10.5245,
+    "address": "Universitaetsplatz 2, 38106 Braunschweig, Germany",
+    "website": "https://www.tu-braunschweig.de/",
+    "related_site_ids": ["X068", "X069"]
   },
   {
     "site_id": "X071",

@@ -176,8 +176,26 @@ document.addEventListener('DOMContentLoaded', () => {
         simulantExtra = extraData;
         lunarReference = lunarData;
         mineralSourcing = sourcingData;
-
-        console.log('✓ Data loaded:', {
+        // Process sites into a map for quick lookup
+        const siteMap = {};
+        const relatedSitesMap = {};
+        
+        sites.forEach(site ={> {
+            if (!siteMap[site.simulant_id]) {
+                siteMap[site.simulant_id] = [];
+            }
+            siteMap[site.simulant_id].push(site);
+            
+            // Build related sites map
+            if (site.related_site_ids) {
+                site.related_site_ids.forEach(relatedId ={> {
+                    if (!relatedSitesMap[relatedId]) {
+                        relatedSitesMap[relatedId] = [];
+                    }
+                    relatedSitesMap[relatedId].push(site);
+                });
+            }
+        });
             simulants: simulants.length,
             sites: sites.length,
             minerals: minerals.length,
