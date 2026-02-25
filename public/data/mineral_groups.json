@@ -1,0 +1,872 @@
+[
+  {
+    "group_id": "MG001",
+    "simulant_id": "S005",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 25.0
+  },
+  {
+    "group_id": "MG002",
+    "simulant_id": "S005",
+    "group_name": "Pyroxene",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG003",
+    "simulant_id": "S005",
+    "group_name": "Olivine",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG004",
+    "simulant_id": "S005",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG005",
+    "simulant_id": "S005",
+    "group_name": "Glass",
+    "value_pct": 20.0
+  },
+  {
+    "group_id": "MG006",
+    "simulant_id": "S006",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 60.7
+  },
+  {
+    "group_id": "MG007",
+    "simulant_id": "S006",
+    "group_name": "Pyroxene",
+    "value_pct": 23.7
+  },
+  {
+    "group_id": "MG008",
+    "simulant_id": "S006",
+    "group_name": "Olivine",
+    "value_pct": 6.2
+  },
+  {
+    "group_id": "MG009",
+    "simulant_id": "S006",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG010",
+    "simulant_id": "S006",
+    "group_name": "Glass",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG011",
+    "simulant_id": "S007",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 63.52
+  },
+  {
+    "group_id": "MG012",
+    "simulant_id": "S007",
+    "group_name": "Pyroxene",
+    "value_pct": 22.34
+  },
+  {
+    "group_id": "MG013",
+    "simulant_id": "S007",
+    "group_name": "Olivine",
+    "value_pct": 8.13
+  },
+  {
+    "group_id": "MG014",
+    "simulant_id": "S007",
+    "group_name": "Ilmenite",
+    "value_pct": 2.33
+  },
+  {
+    "group_id": "MG015",
+    "simulant_id": "S007",
+    "group_name": "Glass",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG016",
+    "simulant_id": "S009",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 15.0
+  },
+  {
+    "group_id": "MG017",
+    "simulant_id": "S009",
+    "group_name": "Pyroxene",
+    "value_pct": 3.33
+  },
+  {
+    "group_id": "MG018",
+    "simulant_id": "S009",
+    "group_name": "Olivine",
+    "value_pct": 3.33
+  },
+  {
+    "group_id": "MG019",
+    "simulant_id": "S009",
+    "group_name": "Ilmenite",
+    "value_pct": 3.33
+  },
+  {
+    "group_id": "MG020",
+    "simulant_id": "S009",
+    "group_name": "Glass",
+    "value_pct": 75.0
+  },
+  {
+    "group_id": "MG021",
+    "simulant_id": "S012",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 9.0
+  },
+  {
+    "group_id": "MG022",
+    "simulant_id": "S012",
+    "group_name": "Pyroxene",
+    "value_pct": 20.0
+  },
+  {
+    "group_id": "MG023",
+    "simulant_id": "S012",
+    "group_name": "Olivine",
+    "value_pct": 48.0
+  },
+  {
+    "group_id": "MG024",
+    "simulant_id": "S012",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG025",
+    "simulant_id": "S012",
+    "group_name": "Glass",
+    "value_pct": 23.0
+  },
+  {
+    "group_id": "MG026",
+    "simulant_id": "S013",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 41.02
+  },
+  {
+    "group_id": "MG027",
+    "simulant_id": "S013",
+    "group_name": "Pyroxene",
+    "value_pct": 19.48
+  },
+  {
+    "group_id": "MG028",
+    "simulant_id": "S013",
+    "group_name": "Olivine",
+    "value_pct": 1.66
+  },
+  {
+    "group_id": "MG029",
+    "simulant_id": "S013",
+    "group_name": "Ilmenite",
+    "value_pct": 1.65
+  },
+  {
+    "group_id": "MG030",
+    "simulant_id": "S013",
+    "group_name": "Glass",
+    "value_pct": 1.32
+  },
+  {
+    "group_id": "MG031",
+    "simulant_id": "S014",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG032",
+    "simulant_id": "S014",
+    "group_name": "Pyroxene",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG033",
+    "simulant_id": "S014",
+    "group_name": "Olivine",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG034",
+    "simulant_id": "S014",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG035",
+    "simulant_id": "S014",
+    "group_name": "Glass",
+    "value_pct": 100.0
+  },
+  {
+    "group_id": "MG036",
+    "simulant_id": "S015",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG037",
+    "simulant_id": "S015",
+    "group_name": "Pyroxene",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG038",
+    "simulant_id": "S015",
+    "group_name": "Olivine",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG039",
+    "simulant_id": "S015",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG040",
+    "simulant_id": "S015",
+    "group_name": "Glass",
+    "value_pct": 100.0
+  },
+  {
+    "group_id": "MG041",
+    "simulant_id": "S016",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG042",
+    "simulant_id": "S016",
+    "group_name": "Pyroxene",
+    "value_pct": 0.4
+  },
+  {
+    "group_id": "MG043",
+    "simulant_id": "S016",
+    "group_name": "Olivine",
+    "value_pct": 0.2
+  },
+  {
+    "group_id": "MG044",
+    "simulant_id": "S016",
+    "group_name": "Ilmenite",
+    "value_pct": 0.1
+  },
+  {
+    "group_id": "MG045",
+    "simulant_id": "S016",
+    "group_name": "Glass",
+    "value_pct": 9.0
+  },
+  {
+    "group_id": "MG046",
+    "simulant_id": "S017",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 65.0
+  },
+  {
+    "group_id": "MG047",
+    "simulant_id": "S017",
+    "group_name": "Pyroxene",
+    "value_pct": 10.0
+  },
+  {
+    "group_id": "MG048",
+    "simulant_id": "S017",
+    "group_name": "Olivine",
+    "value_pct": 25.0
+  },
+  {
+    "group_id": "MG049",
+    "simulant_id": "S017",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG050",
+    "simulant_id": "S017",
+    "group_name": "Glass",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG051",
+    "simulant_id": "S018",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 65.0
+  },
+  {
+    "group_id": "MG052",
+    "simulant_id": "S018",
+    "group_name": "Pyroxene",
+    "value_pct": 10.0
+  },
+  {
+    "group_id": "MG053",
+    "simulant_id": "S018",
+    "group_name": "Olivine",
+    "value_pct": 25.0
+  },
+  {
+    "group_id": "MG054",
+    "simulant_id": "S018",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG055",
+    "simulant_id": "S018",
+    "group_name": "Glass",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG056",
+    "simulant_id": "S019",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 56.02
+  },
+  {
+    "group_id": "MG057",
+    "simulant_id": "S019",
+    "group_name": "Pyroxene",
+    "value_pct": 25.76
+  },
+  {
+    "group_id": "MG058",
+    "simulant_id": "S019",
+    "group_name": "Olivine",
+    "value_pct": 4.94
+  },
+  {
+    "group_id": "MG059",
+    "simulant_id": "S019",
+    "group_name": "Ilmenite",
+    "value_pct": 3.65
+  },
+  {
+    "group_id": "MG060",
+    "simulant_id": "S019",
+    "group_name": "Glass",
+    "value_pct": 7.15
+  },
+  {
+    "group_id": "MG061",
+    "simulant_id": "S027",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 37.4
+  },
+  {
+    "group_id": "MG062",
+    "simulant_id": "S027",
+    "group_name": "Pyroxene",
+    "value_pct": 0.1
+  },
+  {
+    "group_id": "MG063",
+    "simulant_id": "S027",
+    "group_name": "Olivine",
+    "value_pct": 9.0
+  },
+  {
+    "group_id": "MG064",
+    "simulant_id": "S027",
+    "group_name": "Ilmenite",
+    "value_pct": 0.1
+  },
+  {
+    "group_id": "MG065",
+    "simulant_id": "S027",
+    "group_name": "Glass",
+    "value_pct": 49.3
+  },
+  {
+    "group_id": "MG066",
+    "simulant_id": "S028",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 37.4
+  },
+  {
+    "group_id": "MG067",
+    "simulant_id": "S028",
+    "group_name": "Pyroxene",
+    "value_pct": 0.1
+  },
+  {
+    "group_id": "MG068",
+    "simulant_id": "S028",
+    "group_name": "Olivine",
+    "value_pct": 9.0
+  },
+  {
+    "group_id": "MG069",
+    "simulant_id": "S028",
+    "group_name": "Ilmenite",
+    "value_pct": 0.1
+  },
+  {
+    "group_id": "MG070",
+    "simulant_id": "S028",
+    "group_name": "Glass",
+    "value_pct": 49.3
+  },
+  {
+    "group_id": "MG071",
+    "simulant_id": "S029",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 37.4
+  },
+  {
+    "group_id": "MG072",
+    "simulant_id": "S029",
+    "group_name": "Pyroxene",
+    "value_pct": 0.1
+  },
+  {
+    "group_id": "MG073",
+    "simulant_id": "S029",
+    "group_name": "Olivine",
+    "value_pct": 9.0
+  },
+  {
+    "group_id": "MG074",
+    "simulant_id": "S029",
+    "group_name": "Ilmenite",
+    "value_pct": 0.1
+  },
+  {
+    "group_id": "MG075",
+    "simulant_id": "S029",
+    "group_name": "Glass",
+    "value_pct": 49.3
+  },
+  {
+    "group_id": "MG076",
+    "simulant_id": "S030",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 37.4
+  },
+  {
+    "group_id": "MG077",
+    "simulant_id": "S030",
+    "group_name": "Pyroxene",
+    "value_pct": 0.1
+  },
+  {
+    "group_id": "MG078",
+    "simulant_id": "S030",
+    "group_name": "Olivine",
+    "value_pct": 9.0
+  },
+  {
+    "group_id": "MG079",
+    "simulant_id": "S030",
+    "group_name": "Ilmenite",
+    "value_pct": 0.1
+  },
+  {
+    "group_id": "MG080",
+    "simulant_id": "S030",
+    "group_name": "Glass",
+    "value_pct": 49.3
+  },
+  {
+    "group_id": "MG081",
+    "simulant_id": "S036",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 74.4
+  },
+  {
+    "group_id": "MG082",
+    "simulant_id": "S036",
+    "group_name": "Pyroxene",
+    "value_pct": 0.3
+  },
+  {
+    "group_id": "MG083",
+    "simulant_id": "S036",
+    "group_name": "Olivine",
+    "value_pct": 0.2
+  },
+  {
+    "group_id": "MG084",
+    "simulant_id": "S036",
+    "group_name": "Ilmenite",
+    "value_pct": 0.4
+  },
+  {
+    "group_id": "MG085",
+    "simulant_id": "S036",
+    "group_name": "Glass",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG086",
+    "simulant_id": "S037",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 19.8
+  },
+  {
+    "group_id": "MG087",
+    "simulant_id": "S037",
+    "group_name": "Pyroxene",
+    "value_pct": 32.8
+  },
+  {
+    "group_id": "MG088",
+    "simulant_id": "S037",
+    "group_name": "Olivine",
+    "value_pct": 11.1
+  },
+  {
+    "group_id": "MG089",
+    "simulant_id": "S037",
+    "group_name": "Ilmenite",
+    "value_pct": 4.3
+  },
+  {
+    "group_id": "MG090",
+    "simulant_id": "S037",
+    "group_name": "Glass",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG091",
+    "simulant_id": "S041",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 93.0
+  },
+  {
+    "group_id": "MG092",
+    "simulant_id": "S041",
+    "group_name": "Pyroxene",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG093",
+    "simulant_id": "S041",
+    "group_name": "Olivine",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG094",
+    "simulant_id": "S041",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG095",
+    "simulant_id": "S041",
+    "group_name": "Glass",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG096",
+    "simulant_id": "S045",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 60.0
+  },
+  {
+    "group_id": "MG097",
+    "simulant_id": "S045",
+    "group_name": "Pyroxene",
+    "value_pct": 9.6
+  },
+  {
+    "group_id": "MG098",
+    "simulant_id": "S045",
+    "group_name": "Olivine",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG099",
+    "simulant_id": "S045",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG100",
+    "simulant_id": "S045",
+    "group_name": "Glass",
+    "value_pct": 10.4
+  },
+  {
+    "group_id": "MG101",
+    "simulant_id": "S047",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG102",
+    "simulant_id": "S047",
+    "group_name": "Pyroxene",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG103",
+    "simulant_id": "S047",
+    "group_name": "Olivine",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG104",
+    "simulant_id": "S047",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG105",
+    "simulant_id": "S047",
+    "group_name": "Glass",
+    "value_pct": 19.7
+  },
+  {
+    "group_id": "MG106",
+    "simulant_id": "S053",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 43.3
+  },
+  {
+    "group_id": "MG107",
+    "simulant_id": "S053",
+    "group_name": "Pyroxene",
+    "value_pct": 0.1
+  },
+  {
+    "group_id": "MG108",
+    "simulant_id": "S053",
+    "group_name": "Olivine",
+    "value_pct": 0.04
+  },
+  {
+    "group_id": "MG109",
+    "simulant_id": "S053",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG110",
+    "simulant_id": "S053",
+    "group_name": "Glass",
+    "value_pct": 53.0
+  },
+  {
+    "group_id": "MG111",
+    "simulant_id": "S067",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 35.4
+  },
+  {
+    "group_id": "MG112",
+    "simulant_id": "S067",
+    "group_name": "Pyroxene",
+    "value_pct": 23.5
+  },
+  {
+    "group_id": "MG113",
+    "simulant_id": "S067",
+    "group_name": "Olivine",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG114",
+    "simulant_id": "S067",
+    "group_name": "Ilmenite",
+    "value_pct": 14.5
+  },
+  {
+    "group_id": "MG115",
+    "simulant_id": "S067",
+    "group_name": "Glass",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG116",
+    "simulant_id": "S065",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 57.0
+  },
+  {
+    "group_id": "MG117",
+    "simulant_id": "S065",
+    "group_name": "Pyroxene",
+    "value_pct": 5.7
+  },
+  {
+    "group_id": "MG118",
+    "simulant_id": "S065",
+    "group_name": "Olivine",
+    "value_pct": 1.8
+  },
+  {
+    "group_id": "MG119",
+    "simulant_id": "S065",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG120",
+    "simulant_id": "S065",
+    "group_name": "Glass",
+    "value_pct": 19.2
+  },
+  {
+    "group_id": "MG121",
+    "simulant_id": "S066",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 35.2
+  },
+  {
+    "group_id": "MG122",
+    "simulant_id": "S066",
+    "group_name": "Pyroxene",
+    "value_pct": 19.1
+  },
+  {
+    "group_id": "MG123",
+    "simulant_id": "S066",
+    "group_name": "Olivine",
+    "value_pct": 2.1
+  },
+  {
+    "group_id": "MG124",
+    "simulant_id": "S066",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG125",
+    "simulant_id": "S066",
+    "group_name": "Glass",
+    "value_pct": 31.4
+  },
+  {
+    "group_id": "MG126",
+    "simulant_id": "S076",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 19.8
+  },
+  {
+    "group_id": "MG127",
+    "simulant_id": "S076",
+    "group_name": "Pyroxene",
+    "value_pct": 32.8
+  },
+  {
+    "group_id": "MG128",
+    "simulant_id": "S076",
+    "group_name": "Olivine",
+    "value_pct": 11.1
+  },
+  {
+    "group_id": "MG129",
+    "simulant_id": "S076",
+    "group_name": "Ilmenite",
+    "value_pct": 4.3
+  },
+  {
+    "group_id": "MG130",
+    "simulant_id": "S076",
+    "group_name": "Glass",
+    "value_pct": 32.0
+  },
+  {
+    "group_id": "MG131",
+    "simulant_id": "S077",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 74.4
+  },
+  {
+    "group_id": "MG132",
+    "simulant_id": "S077",
+    "group_name": "Pyroxene",
+    "value_pct": 0.3
+  },
+  {
+    "group_id": "MG133",
+    "simulant_id": "S077",
+    "group_name": "Olivine",
+    "value_pct": 0.2
+  },
+  {
+    "group_id": "MG134",
+    "simulant_id": "S077",
+    "group_name": "Ilmenite",
+    "value_pct": 0.4
+  },
+  {
+    "group_id": "MG135",
+    "simulant_id": "S077",
+    "group_name": "Glass",
+    "value_pct": 24.7
+  },
+  {
+    "group_id": "MG136",
+    "simulant_id": "S078",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 75.0
+  },
+  {
+    "group_id": "MG137",
+    "simulant_id": "S078",
+    "group_name": "Pyroxene",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG138",
+    "simulant_id": "S078",
+    "group_name": "Olivine",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG139",
+    "simulant_id": "S078",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG140",
+    "simulant_id": "S078",
+    "group_name": "Glass",
+    "value_pct": 25.0
+  },
+  {
+    "group_id": "MG141",
+    "simulant_id": "S079",
+    "group_name": "Plagioclase Feldspar",
+    "value_pct": 90.0
+  },
+  {
+    "group_id": "MG142",
+    "simulant_id": "S079",
+    "group_name": "Pyroxene",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG143",
+    "simulant_id": "S079",
+    "group_name": "Olivine",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG144",
+    "simulant_id": "S079",
+    "group_name": "Ilmenite",
+    "value_pct": 0
+  },
+  {
+    "group_id": "MG145",
+    "simulant_id": "S079",
+    "group_name": "Glass",
+    "value_pct": 10.0
+  }
+]

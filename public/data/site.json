@@ -1,0 +1,1415 @@
+[
+  {
+    "site_id": "X001",
+    "simulant_id": "S001",
+    "site_name": "AGH University of Technology, Krakow",
+    "site_type": "Lab",
+    "country_code": "Poland",
+    "lat": 50.066,
+    "lon": 19.9181
+  },
+  {
+    "site_id": "X002",
+    "simulant_id": "S002",
+    "site_name": "Australian Space Agency, Sydney",
+    "site_type": "Lab",
+    "country_code": "Australia",
+    "lat": -33.8688,
+    "lon": 151.2093
+  },
+  {
+    "site_id": "X003",
+    "simulant_id": "S003",
+    "site_name": "University of Arizona, Tucson, AZ",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 32.2319,
+    "lon": -110.9501
+  },
+  {
+    "site_id": "X004",
+    "simulant_id": "S004",
+    "site_name": "Beihang University, Beijing",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9831,
+    "lon": 116.353
+  },
+  {
+    "site_id": "X005",
+    "simulant_id": "S005",
+    "site_name": "China",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9042,
+    "lon": 116.4074
+  },
+  {
+    "site_id": "X006",
+    "simulant_id": "S006",
+    "site_name": "NASA Kennedy Space Center, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.5729,
+    "lon": -80.649
+  },
+  {
+    "site_id": "X007",
+    "simulant_id": "S007",
+    "site_name": "Chinese Academy of Sciences, Beijing",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9775,
+    "lon": 116.3297
+  },
+  {
+    "site_id": "X008",
+    "simulant_id": "S008",
+    "site_name": "NORCAT, Sudbury, ON",
+    "site_type": "Lab",
+    "country_code": "Canada",
+    "lat": 46.4917,
+    "lon": -80.993
+  },
+  {
+    "site_id": "X009",
+    "simulant_id": "S009",
+    "site_name": "Chinese Academy of Sciences, Beijing",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9775,
+    "lon": 116.3297
+  },
+  {
+    "site_id": "X010",
+    "simulant_id": "S010",
+    "site_name": "Chinese Academy of Sciences, Beijing",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9775,
+    "lon": 116.3297
+  },
+  {
+    "site_id": "X011",
+    "simulant_id": "S011",
+    "site_name": "Colorado School of Mines, Golden, CO",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 39.7514,
+    "lon": -105.2233
+  },
+  {
+    "site_id": "X012",
+    "simulant_id": "S012",
+    "site_name": "China University of Geosciences, Wuhan",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 30.533,
+    "lon": 114.3967
+  },
+  {
+    "site_id": "X013",
+    "simulant_id": "S013",
+    "site_name": "China University of Mining and Technology, Xuzhou",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 34.2175,
+    "lon": 117.1431
+  },
+  {
+    "site_id": "X014",
+    "simulant_id": "S014",
+    "site_name": "Monolite / Technical University of Bari, Italy",
+    "site_type": "Lab",
+    "country_code": "Italy",
+    "lat": 40.7268,
+    "lon": 17.1743
+  },
+  {
+    "site_id": "X015",
+    "simulant_id": "S015",
+    "site_name": "Monolite / Technical University of Bari, Italy",
+    "site_type": "Lab",
+    "country_code": "Italy",
+    "lat": 40.7268,
+    "lon": 17.1743
+  },
+  {
+    "site_id": "X016",
+    "simulant_id": "S016",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X017",
+    "simulant_id": "S017",
+    "site_name": "European Astronaut Centre, Cologne",
+    "site_type": "Lab",
+    "country_code": "Germany (ESA)",
+    "lat": 50.8555,
+    "lon": 7.1215
+  },
+  {
+    "site_id": "X018",
+    "simulant_id": "S018",
+    "site_name": "European Astronaut Centre, Cologne",
+    "site_type": "Lab",
+    "country_code": "Germany (ESA)",
+    "lat": 50.8555,
+    "lon": 7.1215
+  },
+  {
+    "site_id": "X019",
+    "simulant_id": "S019",
+    "site_name": "JAXA Tsukuba Space Center",
+    "site_type": "Lab",
+    "country_code": "Japan",
+    "lat": 36.05,
+    "lon": 140.1325
+  },
+  {
+    "site_id": "X020",
+    "simulant_id": "S020",
+    "site_name": "JAXA Tsukuba Space Center",
+    "site_type": "Lab",
+    "country_code": "Japan",
+    "lat": 36.05,
+    "lon": 140.1325
+  },
+  {
+    "site_id": "X021",
+    "simulant_id": "S021",
+    "site_name": "JAXA Tsukuba Space Center",
+    "site_type": "Lab",
+    "country_code": "Japan",
+    "lat": 36.05,
+    "lon": 140.1325
+  },
+  {
+    "site_id": "X022",
+    "simulant_id": "S022",
+    "site_name": "JAXA Tsukuba Space Center",
+    "site_type": "Lab",
+    "country_code": "Japan",
+    "lat": 36.05,
+    "lon": 140.1325
+  },
+  {
+    "site_id": "X023",
+    "simulant_id": "S023",
+    "site_name": "NASA Goddard Space Flight Center, Greenbelt, MD",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 38.991,
+    "lon": -76.8527
+  },
+  {
+    "site_id": "X024",
+    "simulant_id": "S024",
+    "site_name": "NASA Glenn Research Center, Cleveland, OH",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 41.415,
+    "lon": -81.8625
+  },
+  {
+    "site_id": "X025",
+    "simulant_id": "S025",
+    "site_name": "Hudson Resources Inc.",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 61.2181,
+    "lon": -149.9003
+  },
+  {
+    "site_id": "X026",
+    "simulant_id": "S026",
+    "site_name": "Jilin University, Changchun",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 43.8825,
+    "lon": 125.3306
+  },
+  {
+    "site_id": "X027",
+    "simulant_id": "S027",
+    "site_name": "Orbitec, Madison, WI",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 43.0731,
+    "lon": -89.4012
+  },
+  {
+    "site_id": "X028",
+    "simulant_id": "S028",
+    "site_name": "Orbitec, Madison, WI",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 43.0731,
+    "lon": -89.4012
+  },
+  {
+    "site_id": "X029",
+    "simulant_id": "S029",
+    "site_name": "Orbitec, Madison, WI",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 43.0731,
+    "lon": -89.4012
+  },
+  {
+    "site_id": "X030",
+    "simulant_id": "S030",
+    "site_name": "Orbitec, Madison, WI",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 43.0731,
+    "lon": -89.4012
+  },
+  {
+    "site_id": "X031",
+    "simulant_id": "S031",
+    "site_name": "KIGAM, Daejeon",
+    "site_type": "Lab",
+    "country_code": "South Korea",
+    "lat": 36.3721,
+    "lon": 127.3645
+  },
+  {
+    "site_id": "X032",
+    "simulant_id": "S032",
+    "site_name": "KICT, Goyang",
+    "site_type": "Lab",
+    "country_code": "South Korea",
+    "lat": 37.66,
+    "lon": 126.8764
+  },
+  {
+    "site_id": "X033",
+    "simulant_id": "S033",
+    "site_name": "South Korea",
+    "site_type": "Lab",
+    "country_code": "South Korea",
+    "lat": 37.5665,
+    "lon": 126.978
+  },
+  {
+    "site_id": "X034",
+    "simulant_id": "S034",
+    "site_name": "Shimizu Corporation, Tokyo",
+    "site_type": "Lab",
+    "country_code": "Japan",
+    "lat": 35.6686,
+    "lon": 139.764
+  },
+  {
+    "site_id": "X035",
+    "simulant_id": "S035",
+    "site_name": "Astroport Space Technologies, Houston, TX",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 29.5594,
+    "lon": -95.09
+  },
+  {
+    "site_id": "X036",
+    "simulant_id": "S036",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X037",
+    "simulant_id": "S037",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X038",
+    "simulant_id": "S038",
+    "site_name": "ISRO Satellite Centre, Bangalore",
+    "site_type": "Lab",
+    "country_code": "India",
+    "lat": 12.9667,
+    "lon": 77.5667
+  },
+  {
+    "site_id": "X039",
+    "simulant_id": "S039",
+    "site_name": "SolSys Mining, Oslo",
+    "site_type": "Lab",
+    "country_code": "Norway",
+    "lat": 59.9139,
+    "lon": 10.7522
+  },
+  {
+    "site_id": "X040",
+    "simulant_id": "S040",
+    "site_name": "Technische Universität Berlin",
+    "site_type": "Lab",
+    "country_code": "Germany",
+    "lat": 52.5125,
+    "lon": 13.3268
+  },
+  {
+    "site_id": "X041",
+    "simulant_id": "S041",
+    "site_name": "Technische Universität Berlin",
+    "site_type": "Lab",
+    "country_code": "Germany",
+    "lat": 52.5125,
+    "lon": 13.3268
+  },
+  {
+    "site_id": "X042",
+    "simulant_id": "S042",
+    "site_name": "Shimizu Corporation, Tokyo",
+    "site_type": "Lab",
+    "country_code": "Japan",
+    "lat": 35.6686,
+    "lon": 139.764
+  },
+  {
+    "site_id": "X043",
+    "simulant_id": "S043",
+    "site_name": "University of Minnesota, Minneapolis, MN",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 44.974,
+    "lon": -93.2277
+  },
+  {
+    "site_id": "X044",
+    "simulant_id": "S044",
+    "site_name": "University of Minnesota, Minneapolis, MN",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 44.974,
+    "lon": -93.2277
+  },
+  {
+    "site_id": "X045",
+    "simulant_id": "S045",
+    "site_name": "National Astronomical Observatories, Beijing",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9775,
+    "lon": 116.388
+  },
+  {
+    "site_id": "X046",
+    "simulant_id": "S046",
+    "site_name": "Northeastern University, Shenyang",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 41.8427,
+    "lon": 123.409
+  },
+  {
+    "site_id": "X047",
+    "simulant_id": "S047",
+    "site_name": "USA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 38.9072,
+    "lon": -77.0369
+  },
+  {
+    "site_id": "X048",
+    "simulant_id": "S048",
+    "site_name": "NASA MSFC / USGS, Huntsville, AL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 34.7304,
+    "lon": -86.5861
+  },
+  {
+    "site_id": "X049",
+    "simulant_id": "S049",
+    "site_name": "NASA MSFC / USGS, Huntsville, AL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 34.7304,
+    "lon": -86.5861
+  },
+  {
+    "site_id": "X050",
+    "simulant_id": "S050",
+    "site_name": "NASA MSFC / USGS, Huntsville, AL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 34.7304,
+    "lon": -86.5861
+  },
+  {
+    "site_id": "X051",
+    "simulant_id": "S051",
+    "site_name": "NASA MSFC / USGS, Huntsville, AL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 34.7304,
+    "lon": -86.5861
+  },
+  {
+    "site_id": "X052",
+    "simulant_id": "S052",
+    "site_name": "NASA MSFC, Huntsville, AL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 34.7304,
+    "lon": -86.5861
+  },
+  {
+    "site_id": "X053",
+    "simulant_id": "S053",
+    "site_name": "NORCAT, Sudbury, ON",
+    "site_type": "Lab",
+    "country_code": "Canada",
+    "lat": 46.4917,
+    "lon": -80.993
+  },
+  {
+    "site_id": "X054",
+    "simulant_id": "S054",
+    "site_name": "Deltion Innovations, Sudbury, ON",
+    "site_type": "Lab",
+    "country_code": "Canada",
+    "lat": 46.4917,
+    "lon": -80.993
+  },
+  {
+    "site_id": "X055",
+    "simulant_id": "S055",
+    "site_name": "Off Planet Research, Everett, WA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 47.979,
+    "lon": -122.2021
+  },
+  {
+    "site_id": "X056",
+    "simulant_id": "S056",
+    "site_name": "Off Planet Research, Everett, WA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 47.979,
+    "lon": -122.2021
+  },
+  {
+    "site_id": "X057",
+    "simulant_id": "S057",
+    "site_name": "Off Planet Research, Everett, WA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 47.979,
+    "lon": -122.2021
+  },
+  {
+    "site_id": "X058",
+    "simulant_id": "S058",
+    "site_name": "Off Planet Research, Everett, WA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 47.979,
+    "lon": -122.2021
+  },
+  {
+    "site_id": "X059",
+    "simulant_id": "S059",
+    "site_name": "Off Planet Research, Everett, WA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 47.979,
+    "lon": -122.2021
+  },
+  {
+    "site_id": "X060",
+    "simulant_id": "S060",
+    "site_name": "Off Planet Research, Everett, WA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 47.979,
+    "lon": -122.2021
+  },
+  {
+    "site_id": "X061",
+    "simulant_id": "S061",
+    "site_name": "Off Planet Research, Everett, WA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 47.979,
+    "lon": -122.2021
+  },
+  {
+    "site_id": "X062",
+    "simulant_id": "S062",
+    "site_name": "Shimizu Corporation, Tokyo",
+    "site_type": "Lab",
+    "country_code": "Japan",
+    "lat": 35.6686,
+    "lon": 139.764
+  },
+  {
+    "site_id": "X063",
+    "simulant_id": "S063",
+    "site_name": "Turkish Space Agency, Ankara",
+    "site_type": "Lab",
+    "country_code": "Turkey",
+    "lat": 39.9334,
+    "lon": 32.8597
+  },
+  {
+    "site_id": "X064",
+    "simulant_id": "S064",
+    "site_name": "Tongji University, Shanghai",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 31.2833,
+    "lon": 121.501
+  },
+  {
+    "site_id": "X065",
+    "simulant_id": "S065",
+    "site_name": "Hispansion, Madrid",
+    "site_type": "Lab",
+    "country_code": "Spain",
+    "lat": 40.4168,
+    "lon": -3.7038
+  },
+  {
+    "site_id": "X066",
+    "simulant_id": "S066",
+    "site_name": "Hispansion, Madrid",
+    "site_type": "Lab",
+    "country_code": "Spain",
+    "lat": 40.4168,
+    "lon": -3.7038
+  },
+  {
+    "site_id": "X067",
+    "simulant_id": "S067",
+    "site_name": "Space Zab Company, Bangkok",
+    "site_type": "Lab",
+    "country_code": "Thailand",
+    "lat": 13.7563,
+    "lon": 100.5018
+  },
+  {
+    "site_id": "X068",
+    "simulant_id": "S068",
+    "site_name": "European Astronaut Centre, Cologne",
+    "site_type": "Lab",
+    "country_code": "Germany",
+    "lat": 50.8555,
+    "lon": 7.1215
+  },
+  {
+    "site_id": "X069",
+    "simulant_id": "S069",
+    "site_name": "TU Braunschweig",
+    "site_type": "Lab",
+    "country_code": "Germany",
+    "lat": 52.2731,
+    "lon": 10.5298
+  },
+  {
+    "site_id": "X070",
+    "simulant_id": "S070",
+    "site_name": "TU Braunschweig",
+    "site_type": "Lab",
+    "country_code": "Germany",
+    "lat": 52.2731,
+    "lon": 10.5298
+  },
+  {
+    "site_id": "X071",
+    "simulant_id": "S071",
+    "site_name": "University of Manchester",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 53.4668,
+    "lon": -2.2339
+  },
+  {
+    "site_id": "X072",
+    "simulant_id": "S072",
+    "site_name": "University of Manchester",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 53.4668,
+    "lon": -2.2339
+  },
+  {
+    "site_id": "X073",
+    "simulant_id": "S073",
+    "site_name": "University of Winnipeg",
+    "site_type": "Lab",
+    "country_code": "Canada",
+    "lat": 49.8913,
+    "lon": -97.154
+  },
+  {
+    "site_id": "X074",
+    "simulant_id": "S074",
+    "site_name": "University of Winnipeg",
+    "site_type": "Lab",
+    "country_code": "Canada",
+    "lat": 49.8913,
+    "lon": -97.154
+  },
+  {
+    "site_id": "X075",
+    "simulant_id": "S075",
+    "site_name": "Wuhan University, Wuhan",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 30.54,
+    "lon": 114.362
+  },
+  {
+    "site_id": "X076",
+    "simulant_id": "S076",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X077",
+    "simulant_id": "S077",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X078",
+    "simulant_id": "S078",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X079",
+    "simulant_id": "S079",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X080",
+    "simulant_id": "S080",
+    "site_name": "Chinese Academy of Sciences, Beijing",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9775,
+    "lon": 116.3297
+  },
+  {
+    "site_id": "X081",
+    "simulant_id": "S081",
+    "site_name": "Zybek Advanced Products, Golden, CO",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 39.7555,
+    "lon": -105.2211
+  },
+  {
+    "site_id": "X082",
+    "simulant_id": "S082",
+    "site_name": "NASA Glenn Research Center, Cleveland, OH",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 41.415,
+    "lon": -81.8625
+  },
+  {
+    "site_id": "X083",
+    "simulant_id": "S083",
+    "site_name": "Chinese Academy of Sciences, Beijing",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9775,
+    "lon": 116.3297
+  },
+  {
+    "site_id": "X084",
+    "simulant_id": "S084",
+    "site_name": "Chinese Academy of Sciences, Beijing",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9775,
+    "lon": 116.3297
+  },
+  {
+    "site_id": "X085",
+    "simulant_id": "S085",
+    "site_name": "Zybek Advanced Products, Golden, CO",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 39.7555,
+    "lon": -105.2211
+  },
+  {
+    "site_id": "X086",
+    "simulant_id": "S086",
+    "site_name": "NASA MSFC / USGS, Huntsville, AL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 34.7304,
+    "lon": -86.5861
+  },
+  {
+    "site_id": "X087",
+    "simulant_id": "S087",
+    "site_name": "NASA MSFC / USGS, Huntsville, AL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 34.7304,
+    "lon": -86.5861
+  },
+  {
+    "site_id": "X088",
+    "simulant_id": "S088",
+    "site_name": "NASA MSFC / USGS, Huntsville, AL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 34.7304,
+    "lon": -86.5861
+  },
+  {
+    "site_id": "X089",
+    "simulant_id": "S089",
+    "site_name": "NASA MSFC / USGS, Huntsville, AL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 34.7304,
+    "lon": -86.5861
+  },
+  {
+    "site_id": "X090",
+    "simulant_id": "S090",
+    "site_name": "NASA MSFC / USGS, Huntsville, AL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 34.7304,
+    "lon": -86.5861
+  },
+  {
+    "site_id": "X091",
+    "simulant_id": "S091",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X092",
+    "simulant_id": "S092",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X093",
+    "simulant_id": "S093",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X094",
+    "simulant_id": "S094",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X095",
+    "simulant_id": "S095",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X096",
+    "simulant_id": "S096",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X097",
+    "simulant_id": "S097",
+    "site_name": "Space Resource Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.6024,
+    "lon": -81.2001
+  },
+  {
+    "site_id": "X098",
+    "simulant_id": "S098",
+    "site_name": "Off Planet Research, Everett, WA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 47.979,
+    "lon": -122.2021
+  },
+  {
+    "site_id": "X099",
+    "simulant_id": "S099",
+    "site_name": "Off Planet Research, Everett, WA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 47.979,
+    "lon": -122.2021
+  },
+  {
+    "site_id": "X100",
+    "simulant_id": "S100",
+    "site_name": "Off Planet Research, Everett, WA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 47.979,
+    "lon": -122.2021
+  },
+  {
+    "site_id": "X101",
+    "simulant_id": "S101",
+    "site_name": "Off Planet Research, Everett, WA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 47.979,
+    "lon": -122.2021
+  },
+  {
+    "site_id": "X102",
+    "simulant_id": "S102",
+    "site_name": "Off Planet Research, Everett, WA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 47.979,
+    "lon": -122.2021
+  },
+  {
+    "site_id": "X103",
+    "simulant_id": "S103",
+    "site_name": "Colorado School of Mines, Golden, CO",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 39.7514,
+    "lon": -105.2233
+  },
+  {
+    "site_id": "X104",
+    "simulant_id": "S104",
+    "site_name": "Colorado School of Mines, Golden, CO",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 39.7514,
+    "lon": -105.2233
+  },
+  {
+    "site_id": "X105",
+    "simulant_id": "S105",
+    "site_name": "Colorado School of Mines, Golden, CO",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 39.7514,
+    "lon": -105.2233
+  },
+  {
+    "site_id": "X106",
+    "simulant_id": "S106",
+    "site_name": "Colorado School of Mines, Golden, CO",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 39.7514,
+    "lon": -105.2233
+  },
+  {
+    "site_id": "X107",
+    "simulant_id": "S107",
+    "site_name": "Colorado School of Mines, Golden, CO",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 39.7514,
+    "lon": -105.2233
+  },
+  {
+    "site_id": "X108",
+    "simulant_id": "S108",
+    "site_name": "Outward Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.5383,
+    "lon": -81.3792
+  },
+  {
+    "site_id": "X109",
+    "simulant_id": "S109",
+    "site_name": "Outward Technologies, Orlando, FL",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 28.5383,
+    "lon": -81.3792
+  },
+  {
+    "site_id": "X110",
+    "simulant_id": "S110",
+    "site_name": "University of Minnesota, Minneapolis, MN",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 44.974,
+    "lon": -93.2277
+  },
+  {
+    "site_id": "X111",
+    "simulant_id": "S111",
+    "site_name": "University of Minnesota, Minneapolis, MN",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 44.974,
+    "lon": -93.2277
+  },
+  {
+    "site_id": "X112",
+    "simulant_id": "S112",
+    "site_name": "NASA Johnson Space Center, Houston, TX",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 29.5594,
+    "lon": -95.09
+  },
+  {
+    "site_id": "X113",
+    "simulant_id": "S113",
+    "site_name": "NASA Johnson Space Center, Houston, TX",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 29.5594,
+    "lon": -95.09
+  },
+  {
+    "site_id": "X114",
+    "simulant_id": "S114",
+    "site_name": "NASA Johnson Space Center, Houston, TX",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 29.5594,
+    "lon": -95.09
+  },
+  {
+    "site_id": "X115",
+    "simulant_id": "S115",
+    "site_name": "NASA Johnson Space Center, Houston, TX",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 29.5594,
+    "lon": -95.09
+  },
+  {
+    "site_id": "X116",
+    "simulant_id": "S116",
+    "site_name": "NASA Johnson Space Center, Houston, TX",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 29.5594,
+    "lon": -95.09
+  },
+  {
+    "site_id": "X117",
+    "simulant_id": "S117",
+    "site_name": "NASA Goddard Space Flight Center, Greenbelt, MD",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 38.991,
+    "lon": -76.8527
+  },
+  {
+    "site_id": "X118",
+    "simulant_id": "S118",
+    "site_name": "USA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 38.9072,
+    "lon": -77.0369
+  },
+  {
+    "site_id": "X119",
+    "simulant_id": "S119",
+    "site_name": "Carnegie Mellon University, Pittsburgh, PA",
+    "site_type": "Lab",
+    "country_code": "USA",
+    "lat": 40.4433,
+    "lon": -79.9436
+  },
+  {
+    "site_id": "X120",
+    "simulant_id": "S120",
+    "site_name": "Hong Kong Polytechnic University",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 22.3035,
+    "lon": 114.1796
+  },
+  {
+    "site_id": "X121",
+    "simulant_id": "S121",
+    "site_name": "Beihang University, Beijing",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9831,
+    "lon": 116.353
+  },
+  {
+    "site_id": "X122",
+    "simulant_id": "S122",
+    "site_name": "Tongji University, Shanghai",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 31.2833,
+    "lon": 121.501
+  },
+  {
+    "site_id": "X123",
+    "simulant_id": "S123",
+    "site_name": "Northeastern University, Shenyang",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 41.8427,
+    "lon": 123.409
+  },
+  {
+    "site_id": "X124",
+    "simulant_id": "S124",
+    "site_name": "Northeastern University, Shenyang",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 41.8427,
+    "lon": 123.409
+  },
+  {
+    "site_id": "X125",
+    "simulant_id": "S125",
+    "site_name": "China University of Geosciences, Wuhan",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 30.533,
+    "lon": 114.3967
+  },
+  {
+    "site_id": "X126",
+    "simulant_id": "S126",
+    "site_name": "Huazhong University of Science and Technology, Wuhan",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 30.5131,
+    "lon": 114.413
+  },
+  {
+    "site_id": "X127",
+    "simulant_id": "S127",
+    "site_name": "China",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9042,
+    "lon": 116.4074
+  },
+  {
+    "site_id": "X128",
+    "simulant_id": "S128",
+    "site_name": "China",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9042,
+    "lon": 116.4074
+  },
+  {
+    "site_id": "X129",
+    "simulant_id": "S129",
+    "site_name": "China",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9042,
+    "lon": 116.4074
+  },
+  {
+    "site_id": "X130",
+    "simulant_id": "S130",
+    "site_name": "China",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9042,
+    "lon": 116.4074
+  },
+  {
+    "site_id": "X131",
+    "simulant_id": "S131",
+    "site_name": "China",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9042,
+    "lon": 116.4074
+  },
+  {
+    "site_id": "X132",
+    "simulant_id": "S132",
+    "site_name": "China",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9042,
+    "lon": 116.4074
+  },
+  {
+    "site_id": "X133",
+    "simulant_id": "S133",
+    "site_name": "China",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9042,
+    "lon": 116.4074
+  },
+  {
+    "site_id": "X134",
+    "simulant_id": "S134",
+    "site_name": "China",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9042,
+    "lon": 116.4074
+  },
+  {
+    "site_id": "X135",
+    "simulant_id": "S135",
+    "site_name": "China",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9042,
+    "lon": 116.4074
+  },
+  {
+    "site_id": "X136",
+    "simulant_id": "S136",
+    "site_name": "China",
+    "site_type": "Lab",
+    "country_code": "China",
+    "lat": 39.9042,
+    "lon": 116.4074
+  },
+  {
+    "site_id": "X137",
+    "simulant_id": "S137",
+    "site_name": "TU Braunschweig",
+    "site_type": "Lab",
+    "country_code": "Germany",
+    "lat": 52.2731,
+    "lon": 10.5298
+  },
+  {
+    "site_id": "X138",
+    "simulant_id": "S138",
+    "site_name": "Technische Universität Berlin",
+    "site_type": "Lab",
+    "country_code": "Germany",
+    "lat": 52.5125,
+    "lon": 13.3268
+  },
+  {
+    "site_id": "X139",
+    "simulant_id": "S139",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X140",
+    "simulant_id": "S140",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X141",
+    "simulant_id": "S141",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X142",
+    "simulant_id": "S142",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X143",
+    "simulant_id": "S143",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X144",
+    "simulant_id": "S144",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X145",
+    "simulant_id": "S145",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X146",
+    "simulant_id": "S146",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X147",
+    "simulant_id": "S147",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X148",
+    "simulant_id": "S148",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X149",
+    "simulant_id": "S149",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X150",
+    "simulant_id": "S150",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X151",
+    "simulant_id": "S151",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X152",
+    "simulant_id": "S152",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+  },
+  {
+    "site_id": "X153",
+    "simulant_id": "S153",
+    "site_name": "Spain",
+    "site_type": "Lab",
+    "country_code": "Spain",
+    "lat": 40.4168,
+    "lon": -3.7038
+  },
+  {
+    "site_id": "X154",
+    "simulant_id": "S154",
+    "site_name": "Korea Aerospace University, Goyang",
+    "site_type": "Lab",
+    "country_code": "South Korea",
+    "lat": 37.6009,
+    "lon": 126.8646
+  },
+  {
+    "site_id": "X155",
+    "simulant_id": "S155",
+    "site_name": "India",
+    "site_type": "Lab",
+    "country_code": "India",
+    "lat": 28.6139,
+    "lon": 77.209
+  },
+  {
+    "site_id": "X156",
+    "simulant_id": "S156",
+    "site_name": "Thailand",
+    "site_type": "Lab",
+    "country_code": "Thailand",
+    "lat": 13.7563,
+    "lon": 100.5018
+  },
+  {
+    "site_id": "X157",
+    "simulant_id": "S157",
+    "site_name": "Russia",
+    "site_type": "Lab",
+    "country_code": "Russia",
+    "lat": 55.7558,
+    "lon": 37.6173
+  }
+]
