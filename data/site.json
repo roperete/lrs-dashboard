@@ -409,27 +409,27 @@
     "simulant_id": "S046",
     "site_name": "Northeastern University",
     "site_type": "Lab",
-    "country_code": "China",
-    "lat": 39.9042,
-    "lon": 116.4074
+    "country_code": "USA",
+    "lat": 42.338900,
+    "lon": -71.088600
   },
   {
     "site_id": "X047",
     "simulant_id": "S047",
-    "site_name": "NASA-MSFC and USGS\r",
+    "site_name": "NASA-MSFC and USGS",
     "site_type": "Lab",
     "country_code": "USA",
-    "lat": 38.9072,
-    "lon": -77.0369
+    "lat": 34.616667,
+    "lon": -86.666667
   },
   {
     "site_id": "X048",
     "simulant_id": "S048",
-    "site_name": "USA",
+    "site_name": "Off Planet Research",
     "site_type": "Lab",
     "country_code": "USA",
-    "lat": 38.9072,
-    "lon": -77.0369
+    "lat": 47.973156,
+    "lon": -122.231837
   },
   {
     "site_id": "X049",
@@ -488,65 +488,65 @@
   {
     "site_id": "X055",
     "simulant_id": "S055",
-    "site_name": "Off Planet Research",
+    "site_name": "Colorado School of Mines",
     "site_type": "Lab",
     "country_code": "USA",
-    "lat": 38.9072,
-    "lon": -77.0369
+    "lat": 39.750700,
+    "lon": -105.221200
   },
   {
     "site_id": "X056",
     "simulant_id": "S056",
-    "site_name": "Off Planet Research",
+    "site_name": "Space Resource Technologies",
     "site_type": "Lab",
     "country_code": "USA",
-    "lat": 38.9072,
-    "lon": -77.0369
+    "lat": 28.670033,
+    "lon": -81.207344
   },
   {
     "site_id": "X057",
     "simulant_id": "S057",
-    "site_name": "Off Planet Research",
+    "site_name": "Space Resource Technologies",
     "site_type": "Lab",
     "country_code": "USA",
-    "lat": 38.9072,
-    "lon": -77.0369
+    "lat": 28.670033,
+    "lon": -81.207344
   },
   {
     "site_id": "X058",
     "simulant_id": "S058",
-    "site_name": "Off Planet Research",
+    "site_name": "Space Resource Technologies",
     "site_type": "Lab",
     "country_code": "USA",
-    "lat": 38.9072,
-    "lon": -77.0369
+    "lat": 28.670033,
+    "lon": -81.207344
   },
   {
     "site_id": "X059",
     "simulant_id": "S059",
-    "site_name": "Off Planet Research",
+    "site_name": "Space Resource Technologies",
     "site_type": "Lab",
     "country_code": "USA",
-    "lat": 38.9072,
-    "lon": -77.0369
+    "lat": 28.670033,
+    "lon": -81.207344
   },
   {
     "site_id": "X060",
     "simulant_id": "S060",
-    "site_name": "Off Planet Research",
+    "site_name": "Space Resource Technologies",
     "site_type": "Lab",
     "country_code": "USA",
-    "lat": 38.9072,
-    "lon": -77.0369
+    "lat": 28.670033,
+    "lon": -81.207344
   },
   {
     "site_id": "X061",
     "simulant_id": "S061",
-    "site_name": "Off Planet Research",
+    "site_name": "Space Resource Technologies",
     "site_type": "Lab",
     "country_code": "USA",
-    "lat": 38.9072,
-    "lon": -77.0369
+    "lat": 28.670033,
+    "lon": -81.207344
   },
   {
     "site_id": "X062",
