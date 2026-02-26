@@ -1,4 +1,4 @@
-import React, { useRef, forwardRef, useImperativeHandle, useCallback } from 'react';
+import React, { useRef, useEffect, forwardRef, useImperativeHandle, useCallback } from 'react';
 import Globe, { GlobeMethods } from 'react-globe.gl';
 
 export interface GlobeViewHandle {
@@ -18,6 +18,7 @@ interface GlobeViewProps {
   clusterPoints: ClusterPoint[];
   onPointClick: (point: any) => void;
   onClusterClick: (cluster: ClusterPoint, event: MouseEvent) => void;
+  onAltitudeChange?: (altitude: number) => void;
 }
 
 function createClusterBadge(d: ClusterPoint, onClick: (d: ClusterPoint, e: MouseEvent) => void): HTMLElement {
@@ -53,12 +54,26 @@ function createClusterBadge(d: ClusterPoint, onClick: (d: ClusterPoint, e: Mouse
 }
 
 export const GlobeView = forwardRef<GlobeViewHandle, GlobeViewProps>(
-  ({ planet, singlePoints, clusterPoints, onPointClick, onClusterClick }, ref) => {
+  ({ planet, singlePoints, clusterPoints, onPointClick, onClusterClick, onAltitudeChange }, ref) => {
     const globeRef = useRef<GlobeMethods>(null);
+    const lastAltRef = useRef(0);
 
     useImperativeHandle(ref, () => ({
       pointOfView: (coords, ms) => globeRef.current?.pointOfView(coords, ms),
     }));
+
+    // Poll altitude from globe controls (no native onZoom event)
+    useEffect(() => {
+      if (!onAltitudeChange) return;
+      const interval = setInterval(() => {
+        const pov = globeRef.current?.pointOfView();
+        if (pov && Math.abs(pov.altitude - lastAltRef.current) > 0.05) {
+          lastAltRef.current = pov.altitude;
+          onAltitudeChange(pov.altitude);
+        }
+      }, 200);
+      return () => clearInterval(interval);
+    }, [onAltitudeChange]);
 
     const htmlElementAccessor = useCallback((d: any) =>
       createClusterBadge(d, onClusterClick),

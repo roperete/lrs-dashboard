@@ -9,6 +9,7 @@ import { useFilters } from './hooks/useFilters';
 import { useMapState } from './hooks/useMapState';
 import { usePanelState } from './hooks/usePanelState';
 import { lunarSites } from './lunarData';
+import { clusterByDistance, altitudeToRadius } from './utils/clusterPoints';
 
 import { LoadingScreen } from './components/controls/LoadingScreen';
 import { LegendWidget } from './components/controls/LegendWidget';
@@ -66,7 +67,25 @@ export default function App() {
   const selectedSimulant2 = useMemo(() => simulants.find(s => s.simulant_id === panelState.panel2.simulantId) || null, [simulants, panelState.panel2.simulantId]);
   const selectedLunarSite = useMemo(() => lunarSites.find(s => s.id === panelState.selectedLunarSiteId) || null, [panelState.selectedLunarSiteId]);
 
-  // Globe point data — split into singles and clusters
+  // Globe altitude state for zoom-reactive clustering
+  const [globeAltitude, setGlobeAltitude] = useState(2.5);
+  const handleAltitudeChange = useCallback((alt: number) => setGlobeAltitude(alt), []);
+
+  // Raw Earth points (stable unless data/filters change)
+  const rawEarthPoints = useMemo(() => {
+    if (mapState.planet !== 'earth') return [];
+    return displayedSimulants.map(s => {
+      const site = siteBySimulant.get(s.simulant_id);
+      return site && site.lat != null && site.lon != null ? {
+        simulant_id: s.simulant_id, name: s.name, country_code: s.country_code,
+        site_name: site.site_name, lat: site.lat!, lon: site.lon!,
+        color: s.type?.toLowerCase().includes('highland') ? '#06b6d4' : '#10b981',
+        type: s.type,
+      } : null;
+    }).filter(Boolean) as any[];
+  }, [mapState.planet, displayedSimulants, siteBySimulant]);
+
+  // Globe point data — zoom-reactive clustering
   const { singlePoints, clusterPoints } = useMemo(() => {
     if (mapState.planet === 'moon') {
       const moonPoints = lunarSites.map(s => ({
@@ -76,40 +95,10 @@ export default function App() {
       }));
       return { singlePoints: moonPoints, clusterPoints: [] as ClusterPoint[] };
     }
-    const raw = displayedSimulants.map(s => {
-      const site = siteBySimulant.get(s.simulant_id);
-      return site && site.lat != null && site.lon != null ? {
-        simulant_id: s.simulant_id, name: s.name, country_code: s.country_code,
-        site_name: site.site_name, lat: site.lat!, lon: site.lon!,
-        color: s.type?.toLowerCase().includes('highland') ? '#06b6d4' : '#10b981',
-        type: s.type,
-      } : null;
-    }).filter(Boolean) as any[];
-
-    // Group by exact coordinates
-    const groups = new Map<string, any[]>();
-    for (const p of raw) {
-      const key = `${p.lat}:${p.lon}`;
-      const g = groups.get(key);
-      if (g) g.push(p); else groups.set(key, [p]);
-    }
-
-    const singles: any[] = [];
-    const clusters: ClusterPoint[] = [];
-    for (const group of groups.values()) {
-      if (group.length === 1) {
-        singles.push(group[0]);
-      } else {
-        clusters.push({
-          lat: group[0].lat,
-          lon: group[0].lon,
-          count: group.length,
-          simulants: group,
-        });
-      }
-    }
+    const radius = altitudeToRadius(mapState.viewMode === 'globe' ? globeAltitude : 0);
+    const { singles, clusters } = clusterByDistance(rawEarthPoints, radius);
     return { singlePoints: singles, clusterPoints: clusters };
-  }, [mapState.planet, displayedSimulants, siteBySimulant]);
+  }, [mapState.planet, mapState.viewMode, rawEarthPoints, globeAltitude]);
 
   // Cluster popover state (for 3D globe)
   const [clusterPopover, setClusterPopover] = useState<{
@@ -226,6 +215,7 @@ export default function App() {
             onClusterClick={(cluster, event) => {
               setClusterPopover({ x: event.clientX, y: event.clientY, simulants: cluster.simulants });
             }}
+            onAltitudeChange={handleAltitudeChange}
           />
         ) : (
           <LeafletMap
