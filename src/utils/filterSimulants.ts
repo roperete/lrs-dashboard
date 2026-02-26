@@ -63,9 +63,18 @@ export function filterSimulants(
       if (!hasMatch) return false;
     }
 
-    // Institution filter
+    // Institution filter (with NASA grouping)
     if (filters.institution.length > 0) {
-      if (!filters.institution.includes(s.institution || '')) return false;
+      const hasNASA = filters.institution.includes('NASA (all)');
+      const inst = s.institution || '';
+      const match = filters.institution.includes(inst) ||
+        (hasNASA && inst.toLowerCase().includes('nasa'));
+      if (!match) return false;
+    }
+
+    // Availability filter
+    if (filters.availability.length > 0) {
+      if (!filters.availability.includes(s.availability)) return false;
     }
 
     return true;

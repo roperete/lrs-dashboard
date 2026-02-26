@@ -162,6 +162,7 @@ export interface FilterState {
   mineral: string[];
   chemical: string[];
   institution: string[];
+  availability: string[];
 }
 
 export interface PanelState {

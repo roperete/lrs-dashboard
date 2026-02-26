@@ -18,6 +18,7 @@ interface SidebarProps {
     detailedMinerals: string[];
     groupMinerals: string[];
     chemicals: string[];
+    availabilities: string[];
   };
   setFilter: (key: keyof FilterState, values: string[]) => void;
   clearAllFilters: () => void;

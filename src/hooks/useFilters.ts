@@ -3,7 +3,7 @@ import type { Simulant, Composition, ChemicalComposition, MineralGroup, FilterSt
 import { filterSimulants } from '../utils/filterSimulants';
 
 const emptyFilters: FilterState = {
-  type: [], country: [], mineral: [], chemical: [], institution: [],
+  type: [], country: [], mineral: [], chemical: [], institution: [], availability: [],
 };
 
 export function useFilters(
@@ -43,7 +43,9 @@ export function useFilters(
   const filterOptions = useMemo(() => {
     const types = [...new Set(simulants.map(s => s.type))].sort();
     const countries = [...new Set(simulants.map(s => s.country_code))].filter(Boolean).sort();
-    const institutions = [...new Set(simulants.map(s => s.institution).filter(Boolean))].sort();
+    const rawInstitutions = [...new Set(simulants.map(s => s.institution).filter(Boolean))].sort();
+    const hasNASA = rawInstitutions.some(i => i.toLowerCase().includes('nasa'));
+    const institutions = hasNASA ? ['NASA (all)', ...rawInstitutions] : rawInstitutions;
 
     const detailedMinerals = [...new Set(compositions.map(c => c.component_name))].sort();
     const groupMinerals = [...new Set(mineralGroups.map(g => g.group_name))].sort();
@@ -54,7 +56,9 @@ export function useFilters(
         .map(c => c.component_name)
     )].sort();
 
-    return { types, countries, institutions, detailedMinerals, groupMinerals, chemicals };
+    const availabilities = [...new Set(simulants.map(s => s.availability).filter(Boolean))].sort();
+
+    return { types, countries, institutions, detailedMinerals, groupMinerals, chemicals, availabilities };
   }, [simulants, compositions, mineralGroups, chemicalCompositions]);
 
   return {

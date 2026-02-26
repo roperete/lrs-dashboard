@@ -13,6 +13,7 @@ interface FilterPanelProps {
     detailedMinerals: string[];
     groupMinerals: string[];
     chemicals: string[];
+    availabilities: string[];
   };
   setFilter: (key: keyof FilterState, values: string[]) => void;
   clearAllFilters: () => void;
@@ -61,6 +62,13 @@ export function FilterPanel({ filters, filterOptions, setFilter, clearAllFilters
         selected={filters.chemical}
         options={filterOptions.chemicals.map(c => ({ label: c, value: c }))}
         onChange={values => setFilter('chemical', values)}
+      />
+
+      <FilterSelect
+        label="Availability"
+        selected={filters.availability}
+        options={filterOptions.availabilities.map(a => ({ label: a, value: a }))}
+        onChange={values => setFilter('availability', values)}
       />
 
       <FilterSelect

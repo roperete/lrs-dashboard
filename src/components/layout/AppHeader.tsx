@@ -28,10 +28,10 @@ export function AppHeader({
             <div className="p-2 bg-emerald-500 rounded-lg shadow-[0_0_20px_rgba(16,185,129,0.4)]">
               <Database size={24} className="text-slate-950" />
             </div>
-            <h1 className="text-2xl font-bold tracking-tight text-white">LRS <span className="text-emerald-500">SPATIAL</span></h1>
+            <h1 className="text-xl font-bold tracking-tight text-white">Lunar Regolith Simulant <span className="text-emerald-500">Database</span></h1>
           </div>
           <p className="text-xs text-slate-400 font-mono uppercase tracking-[0.2em] ml-12">
-            {planet === 'earth' ? 'Geospatial Simulant Intelligence' : 'Lunar Landing & Sample Analysis'}
+            Interactive Research Tool
           </p>
         </div>
 
