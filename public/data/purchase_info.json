@@ -1,105 +1,15 @@
 [
   {
-    "simulant_id": "S001",
-    "vendor": "Space Research Centre, Polish Academy of Sciences",
-    "url": "https://www.cbk.waw.pl/en/",
-    "price_note": "Contact institution directly; produced from quarry waste material"
-  },
-  {
-    "simulant_id": "S004",
-    "vendor": "Beihang University",
-    "url": "https://ev.buaa.edu.cn/",
-    "price_note": "Contact institution; not commercially available"
-  },
-  {
-    "simulant_id": "S121",
-    "vendor": "Beihang University",
-    "url": "https://ev.buaa.edu.cn/",
-    "price_note": "Contact institution; not commercially available"
-  },
-  {
     "simulant_id": "S006",
     "vendor": "NASA Kennedy Space Center / Swamp Works",
     "url": "https://ares.jsc.nasa.gov/projects/simulants/bp-1.html",
     "price_note": "Commercial basalt by-product; available in industrial quantities; contact NASA KSC Swamp Works"
   },
   {
-    "simulant_id": "S007",
-    "vendor": "Chinese Academy of Sciences",
-    "url": "https://english.cas.cn/",
-    "price_note": "Contact institution; produced from Changbai Mountains basaltic scoria"
-  },
-  {
-    "simulant_id": "S008",
-    "vendor": "NORCAT (Northern Centre for Advanced Technology)",
-    "url": "https://www.norcat.org/",
-    "price_note": "Produced for Canadian Space Agency; contact NORCAT for availability"
-  },
-  {
-    "simulant_id": "S010",
-    "vendor": "Institute of Geochemistry, Chinese Academy of Sciences",
-    "url": "https://english.gyig.cas.cn/",
-    "price_note": "Chinese national standard sample GSB 01-2186-2008; contact institution"
-  },
-  {
-    "simulant_id": "S084",
-    "vendor": "Institute of Geochemistry, Chinese Academy of Sciences",
-    "url": "https://english.gyig.cas.cn/",
-    "price_note": "Contact institution; highland variant"
-  },
-  {
-    "simulant_id": "S012",
-    "vendor": "China University of Geosciences (Wuhan) / Qian Xuesen Laboratory",
-    "url": "https://en.cug.edu.cn/",
-    "price_note": "Contact institution; based on Jilin Province low-Ti basalt"
-  },
-  {
-    "simulant_id": "S013",
-    "vendor": "China University of Mining and Technology",
-    "url": "https://english.cumt.edu.cn/",
-    "price_note": "Contact institution; magnetic-sensitive simulant for gravity simulation"
-  },
-  {
     "simulant_id": "S011",
     "vendor": "Colorado School of Mines, Space Resources Program",
     "url": "https://space.mines.edu/simulants/",
     "price_note": "Contact institution; research-grade simulant"
-  },
-  {
-    "simulant_id": "S014",
-    "vendor": "National Geophysical Research Institute, India",
-    "url": "https://www.ngri.res.in/",
-    "price_note": "Contact institution; Indian-developed simulant"
-  },
-  {
-    "simulant_id": "S015",
-    "vendor": "National Geophysical Research Institute, India",
-    "url": "https://www.ngri.res.in/",
-    "price_note": "Contact institution; variant of DNA-1"
-  },
-  {
-    "simulant_id": "S016",
-    "vendor": "University of Stuttgart / DLR",
-    "url": "https://www.uni-stuttgart.de/en/",
-    "price_note": "Contact institution; specialized dust simulant"
-  },
-  {
-    "simulant_id": "S017",
-    "vendor": "Rheinische Provinzial-Basalt- u. Lavawerke (RPBL)",
-    "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/LUNA_is_taking_shape",
-    "price_note": "Basanite from Siebengebirge Volcanic Field, Germany; produced for ESA LUNA facility; contact ESA EAC"
-  },
-  {
-    "simulant_id": "S018",
-    "vendor": "ESA European Astronaut Centre",
-    "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/LUNA_is_taking_shape",
-    "price_note": "Novel large-volume simulant; contact ESA for availability"
-  },
-  {
-    "simulant_id": "S019",
-    "vendor": "Shimizu Corporation, Japan",
-    "url": "https://www.shimz.co.jp/en/",
-    "price_note": "~US$4/kg; contact Shimizu Corporation"
   },
   {
     "simulant_id": "S024",
@@ -112,12 +22,6 @@
     "vendor": "NASA Glenn Research Center",
     "url": "https://ares.jsc.nasa.gov/projects/simulants/dust-testing-facilities/glenn-research-center.html",
     "price_note": "Silica sand/silt mixture; contact NASA Glenn Research Center"
-  },
-  {
-    "simulant_id": "S126",
-    "vendor": "Huazhong University of Science and Technology",
-    "url": "https://english.hust.edu.cn/",
-    "price_note": "Contact institution; used for lunar brick/construction research"
   },
   {
     "simulant_id": "S028",
@@ -136,24 +40,6 @@
     "vendor": "NASA Johnson Space Center",
     "url": "https://ares.jsc.nasa.gov/projects/simulants/jsc-1-1a.html",
     "price_note": "Fine variant; no longer available outside NASA centers"
-  },
-  {
-    "simulant_id": "S032",
-    "vendor": "Korea Institute of Civil Engineering and Building Technology",
-    "url": "https://www.kict.re.kr/eng/",
-    "price_note": "Korean low-Ti mare simulant; contact institution"
-  },
-  {
-    "simulant_id": "S033",
-    "vendor": "Hanyang University / Korea Aerospace University",
-    "url": "https://simulantdb.com/simulants/kohls1.php",
-    "price_note": "Availability unclear; contact institution"
-  },
-  {
-    "simulant_id": "S034",
-    "vendor": "Shimane University, Japan",
-    "url": "https://simulantdb.com/",
-    "price_note": "Contact institution; Japanese highland simulant"
   },
   {
     "simulant_id": "S036",
@@ -178,60 +64,6 @@
     "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
     "url": "https://spaceresourcetech.com/products/lms-1d-lunar-mare-dust-simulant",
     "price_note": "$120/kg; fine dust variant"
-  },
-  {
-    "simulant_id": "S040",
-    "vendor": "GFZ German Research Centre for Geosciences",
-    "url": "https://www.gfz-potsdam.de/en/",
-    "price_note": "Large quantities available upon request; contact GFZ"
-  },
-  {
-    "simulant_id": "S041",
-    "vendor": "GFZ German Research Centre for Geosciences",
-    "url": "https://www.gfz-potsdam.de/en/",
-    "price_note": "Large quantities available upon request; contact GFZ"
-  },
-  {
-    "simulant_id": "S042",
-    "vendor": "Shimizu Corporation, Japan",
-    "url": "https://www.shimz.co.jp/en/",
-    "price_note": "Contact Shimizu Corporation; Apollo 11 mare simulant"
-  },
-  {
-    "simulant_id": "S043",
-    "vendor": "University of Minnesota",
-    "url": "https://simulantdb.com/simulants/mls1.php",
-    "price_note": "Currently not available; quarrying plans pending; high-Ti basalt from Duluth, MN"
-  },
-  {
-    "simulant_id": "S044",
-    "vendor": "University of Minnesota",
-    "url": "https://simulantdb.com/simulants/mls1.php",
-    "price_note": "Currently not available; contact institution"
-  },
-  {
-    "simulant_id": "S045",
-    "vendor": "National Astronomical Observatories, Chinese Academy of Sciences",
-    "url": "https://english.nao.cas.cn/",
-    "price_note": "Contact institution; lunar highland simulant"
-  },
-  {
-    "simulant_id": "S046",
-    "vendor": "Northeastern University, Shenyang, China",
-    "url": "https://english.neu.edu.cn/",
-    "price_note": "Contact institution; low-Ti variant (NEU-1a) and high-Ti variant (NEU-1b)"
-  },
-  {
-    "simulant_id": "S123",
-    "vendor": "Northeastern University, Shenyang, China",
-    "url": "https://english.neu.edu.cn/",
-    "price_note": "Contact institution; low-Ti variant"
-  },
-  {
-    "simulant_id": "S124",
-    "vendor": "Northeastern University, Shenyang, China",
-    "url": "https://english.neu.edu.cn/",
-    "price_note": "Contact institution; high-Ti variant"
   },
   {
     "simulant_id": "S047",
@@ -268,83 +100,5 @@
     "vendor": "Off Planet Research",
     "url": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
     "price_note": "Contact for quote via offplanetresearch.com/contact-us; lunar mare simulant"
-  },
-  {
-    "simulant_id": "S062",
-    "vendor": "JAXA / Japanese researchers",
-    "url": "https://simulantdb.com/",
-    "price_note": "Contact JAXA; volcanic basalt-based simulant from Japan"
-  },
-  {
-    "simulant_id": "S064",
-    "vendor": "Tongji University, Shanghai, China",
-    "url": "https://en.tongji.edu.cn/",
-    "price_note": "Contact institution; red volcanic ash from northern China"
-  },
-  {
-    "simulant_id": "S122",
-    "vendor": "Tongji University, Shanghai, China",
-    "url": "https://en.tongji.edu.cn/",
-    "price_note": "Contact institution; SiC-spiked variant (specific gravity 2.90)"
-  },
-  {
-    "simulant_id": "S065",
-    "vendor": "Contact originating institution",
-    "url": "https://simulantdb.com/",
-    "price_note": "Limited availability information"
-  },
-  {
-    "simulant_id": "S066",
-    "vendor": "Contact originating institution",
-    "url": "https://simulantdb.com/",
-    "price_note": "Limited availability information"
-  },
-  {
-    "simulant_id": "S067",
-    "vendor": "Contact originating institution",
-    "url": "https://simulantdb.com/",
-    "price_note": "Limited availability information"
-  },
-  {
-    "simulant_id": "S137",
-    "vendor": "TU Braunschweig, Germany",
-    "url": "https://www.tu-braunschweig.de/en/",
-    "price_note": "Contact institution; 50:50 mix of TUBS-M and TUBS-T"
-  },
-  {
-    "simulant_id": "S068",
-    "vendor": "TU Braunschweig, Germany",
-    "url": "https://www.tu-braunschweig.de/en/",
-    "price_note": "Contact institution; highland-type modular simulant"
-  },
-  {
-    "simulant_id": "S069",
-    "vendor": "TU Braunschweig, Germany",
-    "url": "https://www.tu-braunschweig.de/en/",
-    "price_note": "Contact institution; maria-type basaltic simulant"
-  },
-  {
-    "simulant_id": "S070",
-    "vendor": "TU Braunschweig, Germany",
-    "url": "https://www.tu-braunschweig.de/en/",
-    "price_note": "Contact institution; highland-type anorthositic simulant"
-  },
-  {
-    "simulant_id": "S071",
-    "vendor": "University of Manchester, UK",
-    "url": "https://www.manchester.ac.uk/",
-    "price_note": "Low-fidelity geotechnical simulant; availability unclear; contact institution"
-  },
-  {
-    "simulant_id": "S072",
-    "vendor": "University of Manchester, UK",
-    "url": "https://www.manchester.ac.uk/",
-    "price_note": "Low-fidelity geotechnical simulant; availability unclear; contact institution"
-  },
-  {
-    "simulant_id": "S153",
-    "vendor": "University of La Laguna / CSIC, Spain",
-    "url": "https://www.nature.com/articles/s41598-022-20960-8",
-    "price_note": "Sourced from Tao geosite, Lanzarote (Canary Islands); contact institution"
   }
 ]
