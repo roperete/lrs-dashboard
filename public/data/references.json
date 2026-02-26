@@ -430,5 +430,17 @@
     "simulant_id": "S075",
     "reference_text": "Teng, Y., Wang, S., Cui, Y., & Pang, Y. (2025). Influence of loading conditions on mechanical behaviors of lunar regolith simulant WHU-1 based on Chang'e-5 returned samples. Acta Geotechnica. https://doi.org/10.1007/s11440-025-02553-7",
     "reference_type": "usage"
+  },
+  {
+    "reference_id": "R073",
+    "simulant_id": "S158",
+    "reference_text": "Alberquilla, F., et al. (2025). LUSIC-1 (Lunar Simulant IBeA-Carabela): A Novel Methodology for Developing Apollo 17 Lunar Soil Simulants. Proc. VIII Iberian Congress on Planetary Sciences. https://ui.adsabs.harvard.edu/abs/2025psss.confE.126A/abstract",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R074",
+    "simulant_id": "S158",
+    "reference_text": "Alberquilla, F., et al. (2025). From La Palma to Space: Green Moon Project's Experiment on Lunar Soil Simulant (LUSIC-1) for Crop Cultivation in Low Earth Orbit. Proc. VIII Iberian Congress on Planetary Sciences. https://ui.adsabs.harvard.edu/abs/2025psss.confE..59A/abstract",
+    "reference_type": "usage"
   }
 ]

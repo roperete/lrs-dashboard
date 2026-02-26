@@ -10,7 +10,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Bednarz, S., et al. (2013). Research of formed lunar Regholit analog agk-2010. Arch. Min. Sci. 58, 551–556. https://doi.org/10.2478/amsc-2013-0037"
+    "reference": "Bednarz, S., et al. (2013). Research of formed lunar Regholit analog agk-2010. Arch. Min. Sci. 58, 551\u2013556. https://doi.org/10.2478/amsc-2013-0037"
   },
   {
     "simulant_id": "S002",
@@ -49,7 +49,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Zhou, S., et al. (2021). Preparation and characterization of high-strength geopolymer based on BH-1 lunar soil simulant... Engineering 7(11), 1631–1645. https://doi.org/10.1016/j.eng.2020.10.016"
+    "reference": "Zhou, S., et al. (2021). Preparation and characterization of high-strength geopolymer based on BH-1 lunar soil simulant... Engineering 7(11), 1631\u20131645. https://doi.org/10.1016/j.eng.2020.10.016"
   },
   {
     "simulant_id": "S005",
@@ -62,7 +62,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Sun, H., et al. (2017). Developing a new controllable lunar dust simulant: BHLD20. Planet. Space Sci. 141, 17–24. https://doi.org/10.1016/j.pss.2017.04.010"
+    "reference": "Sun, H., et al. (2017). Developing a new controllable lunar dust simulant: BHLD20. Planet. Space Sci. 141, 17\u201324. https://doi.org/10.1016/j.pss.2017.04.010"
   },
   {
     "simulant_id": "S006",
@@ -88,7 +88,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Zheng, Y., et al. (2009). CAS-1 lunar soil simulant. Adv. Space Res. 43(3), 448–454. https://doi.org/10.1016/j.asr.2008.07.006"
+    "reference": "Zheng, Y., et al. (2009). CAS-1 lunar soil simulant. Adv. Space Res. 43(3), 448\u2013454. https://doi.org/10.1016/j.asr.2008.07.006"
   },
   {
     "simulant_id": "S008",
@@ -114,7 +114,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Tang, H., et al. (2017). A lunar dust simulant: CLDS-i. Adv. Space Res. 59(4), 1156–1160. https://doi.org/10.1016/j.asr.2016.11.023"
+    "reference": "Tang, H., et al. (2017). A lunar dust simulant: CLDS-i. Adv. Space Res. 59(4), 1156\u20131160. https://doi.org/10.1016/j.asr.2016.11.023"
   },
   {
     "simulant_id": "S010",
@@ -127,7 +127,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Tang, H., et al. (2017). A lunar dust simulant: CLDS-i. Adv. Space Res. 59(4), 1156–1160. https://doi.org/10.1016/j.asr.2016.11.023"
+    "reference": "Tang, H., et al. (2017). A lunar dust simulant: CLDS-i. Adv. Space Res. 59(4), 1156\u20131160. https://doi.org/10.1016/j.asr.2016.11.023"
   },
   {
     "simulant_id": "S011",
@@ -166,7 +166,7 @@
     "grain_size_mm": 0.077,
     "specific_gravity": 3.45,
     "publicly_available_composition": false,
-    "reference": "Li, R., et al. (2022). Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation. Int. J. Min. Sci. Technol. 32, 1–15. https://doi.org/10.1016/j.ijmst.2021.09.003"
+    "reference": "Li, R., et al. (2022). Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation. Int. J. Min. Sci. Technol. 32, 1\u201315. https://doi.org/10.1016/j.ijmst.2021.09.003"
   },
   {
     "simulant_id": "S014",
@@ -179,7 +179,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Cesaretti, G., et al. (2014). Building components for an outpost on the Lunar soil... Acta Astronaut. 93, 430–450. https://doi.org/10.1016/j.actaastro.2013.07.034"
+    "reference": "Cesaretti, G., et al. (2014). Building components for an outpost on the Lunar soil... Acta Astronaut. 93, 430\u2013450. https://doi.org/10.1016/j.actaastro.2013.07.034"
   },
   {
     "simulant_id": "S015",
@@ -218,7 +218,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Engelschiøn, V.S., et al. (2020). EAC-1A: A novel large-volume lunar regolith simulant. Sci. Rep. 10, 5473. https://doi.org/10.1038/s41598-020-62312-4"
+    "reference": "Engelschi\u00f8n, V.S., et al. (2020). EAC-1A: A novel large-volume lunar regolith simulant. Sci. Rep. 10, 5473. https://doi.org/10.1038/s41598-020-62312-4"
   },
   {
     "simulant_id": "S018",
@@ -231,7 +231,7 @@
     "grain_size_mm": 0.011,
     "specific_gravity": 1.45,
     "publicly_available_composition": false,
-    "reference": "Engelschiøn, V.S., et al. (2020). EAC-1A: A novel large-volume lunar regolith simulant. Sci. Rep. 10, 5473. https://doi.org/10.1038/s41598-020-62312-4"
+    "reference": "Engelschi\u00f8n, V.S., et al. (2020). EAC-1A: A novel large-volume lunar regolith simulant. Sci. Rep. 10, 5473. https://doi.org/10.1038/s41598-020-62312-4"
   },
   {
     "simulant_id": "S019",
@@ -309,7 +309,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Oravec, H.A., Zeng, X., Asnani, V.M. (2010). Design and characterization of GRC-1... J. Terramechanics 47(6):361–377. https://doi.org/10.1016/j.jterra.2010.04.006"
+    "reference": "Oravec, H.A., Zeng, X., Asnani, V.M. (2010). Design and characterization of GRC-1... J. Terramechanics 47(6):361\u2013377. https://doi.org/10.1016/j.jterra.2010.04.006"
   },
   {
     "simulant_id": "S025",
@@ -322,7 +322,7 @@
     "grain_size_mm": null,
     "specific_gravity": 0.95,
     "publicly_available_composition": false,
-    "reference": "Gruener, J.E., et al. (2020). Greenland ‘white mountain’ anorthosite: A new lunar polar regolith simulant component. 51st LPSC, Abst. 2326."
+    "reference": "Gruener, J.E., et al. (2020). Greenland \u2018white mountain\u2019 anorthosite: A new lunar polar regolith simulant component. 51st LPSC, Abst. 2326."
   },
   {
     "simulant_id": "S026",
@@ -465,7 +465,7 @@
     "grain_size_mm": 0.085,
     "specific_gravity": 1.38,
     "publicly_available_composition": false,
-    "reference": "Long-Fox, J.M., et al. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Adv. Space Res. 71, 5400–5412. https://doi.org/10.1016/j.asr.2023.02.034"
+    "reference": "Long-Fox, J.M., et al. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Adv. Space Res. 71, 5400\u20135412. https://doi.org/10.1016/j.asr.2023.02.034"
   },
   {
     "simulant_id": "S037",
@@ -478,7 +478,7 @@
     "grain_size_mm": 0.113,
     "specific_gravity": 1.58,
     "publicly_available_composition": false,
-    "reference": "Long-Fox, J.M., et al. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Adv. Space Res. 71, 5400–5412. https://doi.org/10.1016/j.asr.2023.02.034"
+    "reference": "Long-Fox, J.M., et al. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Adv. Space Res. 71, 5400\u20135412. https://doi.org/10.1016/j.asr.2023.02.034"
   },
   {
     "simulant_id": "S038",
@@ -517,7 +517,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Patzwald, J., et al. (2025). Properties of novel LX lunar regolith simulant system — The base simulants: Part 1. Acta Astronautica 231, 200–222. https://doi.org/10.1016/j.actaastro.2025.02.030"
+    "reference": "Patzwald, J., et al. (2025). Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1. Acta Astronautica 231, 200\u2013222. https://doi.org/10.1016/j.actaastro.2025.02.030"
   },
   {
     "simulant_id": "S041",
@@ -530,7 +530,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Patzwald, J., et al. (2025). Properties of novel LX lunar regolith simulant system — The base simulants: Part 1. Acta Astronautica 231, 200–222. https://doi.org/10.1016/j.actaastro.2025.02.030"
+    "reference": "Patzwald, J., et al. (2025). Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1. Acta Astronautica 231, 200\u2013222. https://doi.org/10.1016/j.actaastro.2025.02.030"
   },
   {
     "simulant_id": "S042",
@@ -556,7 +556,7 @@
     "grain_size_mm": 0.197,
     "specific_gravity": 1.59,
     "publicly_available_composition": false,
-    "reference": "Weiblen, P.W., Murawa, M.J., Reid, K.J. (1990). Preparation of simulants for lunar surface materials. ASCE, 98–106."
+    "reference": "Weiblen, P.W., Murawa, M.J., Reid, K.J. (1990). Preparation of simulants for lunar surface materials. ASCE, 98\u2013106."
   },
   {
     "simulant_id": "S044",
@@ -582,7 +582,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Li, Y., et al. (2009). NAO-1: Lunar highland soil simulant developed in China. J. Aerosp. Eng. 22(1), 53–57. https://doi.org/10.1061/(ASCE)0893-1321(2009)22:1(53)"
+    "reference": "Li, Y., et al. (2009). NAO-1: Lunar highland soil simulant developed in China. J. Aerosp. Eng. 22(1), 53\u201357. https://doi.org/10.1061/(ASCE)0893-1321(2009)22:1(53)"
   },
   {
     "simulant_id": "S046",
@@ -595,7 +595,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Li, C., et al. (2019). The preparation and characterization of NEU-1 lunar soil simulants. JOM 71(4), 1471–1476. https://doi.org/10.1007/s11837-019-03362-6"
+    "reference": "Li, C., et al. (2019). The preparation and characterization of NEU-1 lunar soil simulants. JOM 71(4), 1471\u20131476. https://doi.org/10.1007/s11837-019-03362-6"
   },
   {
     "simulant_id": "S047",
@@ -660,7 +660,7 @@
     "grain_size_mm": 0.125,
     "specific_gravity": 1.37,
     "publicly_available_composition": false,
-    "reference": "Zeng, X., et al. (2010). Geotechnical properties of NT-LHT-2M lunar highland simulant. J. Aerosp. Eng. 23 (4) 213–218. https://doi.org/10.1061/(ASCE)AS.1943-5525.0000026"
+    "reference": "Zeng, X., et al. (2010). Geotechnical properties of NT-LHT-2M lunar highland simulant. J. Aerosp. Eng. 23 (4) 213\u2013218. https://doi.org/10.1061/(ASCE)AS.1943-5525.0000026"
   },
   {
     "simulant_id": "S052",
@@ -810,7 +810,7 @@
     "name": "TBG-1",
     "classification": "General Purpose",
     "application": "General",
-    "replica_of": "Apollo 14, Chang’E-5",
+    "replica_of": "Apollo 14, Chang\u2019E-5",
     "feedstock": "Terrestrial regolith",
     "petrographic_class": null,
     "grain_size_mm": null,
@@ -829,7 +829,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Jiang, M., et al. (2012). Properties of TJ-1 lunar soil simulant. J. Aerosp. Eng. 25(3), 463–469. https://doi.org/10.1061/(ASCE)AS.1943-5525.0000129"
+    "reference": "Jiang, M., et al. (2012). Properties of TJ-1 lunar soil simulant. J. Aerosp. Eng. 25(3), 463\u2013469. https://doi.org/10.1061/(ASCE)AS.1943-5525.0000129"
   },
   {
     "simulant_id": "S065",
@@ -920,7 +920,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Just, G.H., et al. (2020). Geotechnical characterisation of two new low-fidelity lunar regolith analogues... Acta Astronaut. 173, 414–424. https://doi.org/10.1016/j.actaastro.2020.04.025"
+    "reference": "Just, G.H., et al. (2020). Geotechnical characterisation of two new low-fidelity lunar regolith analogues... Acta Astronaut. 173, 414\u2013424. https://doi.org/10.1016/j.actaastro.2020.04.025"
   },
   {
     "simulant_id": "S072",
@@ -933,7 +933,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": "Just, G.H., et al. (2020). Geotechnical characterisation of two new low-fidelity lunar regolith analogues... Acta Astronaut. 173, 414–424. https://doi.org/10.1016/j.actaastro.2020.04.025"
+    "reference": "Just, G.H., et al. (2020). Geotechnical characterisation of two new low-fidelity lunar regolith analogues... Acta Astronaut. 173, 414\u2013424. https://doi.org/10.1016/j.actaastro.2020.04.025"
   },
   {
     "simulant_id": "S073",
@@ -1048,7 +1048,7 @@
     "petrographic_class": null,
     "grain_size_mm": null,
     "publicly_available_composition": false,
-    "reference": "Zocca, A., et al. (2020). Investigation of the sintering and melting of JSC-2A lunar regolith simulant. Ceram Int 46, 14097–14104. https://doi.org/10.1016/j.ceramint.2020.02.212",
+    "reference": "Zocca, A., et al. (2020). Investigation of the sintering and melting of JSC-2A lunar regolith simulant. Ceram Int 46, 14097\u201314104. https://doi.org/10.1016/j.ceramint.2020.02.212",
     "specific_gravity": null,
     "replica_of": "Apollo 14"
   },
@@ -1074,7 +1074,7 @@
     "petrographic_class": null,
     "grain_size_mm": null,
     "publicly_available_composition": false,
-    "reference": "Tang, H., et al. (2017). A lunar dust simulant: CLDS-i. Adv. Space Res. 59(4), 1156–1160. https://doi.org/10.1016/j.asr.2016.11.023",
+    "reference": "Tang, H., et al. (2017). A lunar dust simulant: CLDS-i. Adv. Space Res. 59(4), 1156\u20131160. https://doi.org/10.1016/j.asr.2016.11.023",
     "specific_gravity": null,
     "replica_of": "High-Ti Mare"
   },
@@ -1087,7 +1087,7 @@
     "petrographic_class": null,
     "grain_size_mm": null,
     "publicly_available_composition": false,
-    "reference": "Carter, J. L., et al. (2005). New Lunar Simulants: JSC–2 and JSC–3. Abstracts for Lunar Regolith Simulant Materials Workshop.",
+    "reference": "Carter, J. L., et al. (2005). New Lunar Simulants: JSC\u20132 and JSC\u20133. Abstracts for Lunar Regolith Simulant Materials Workshop.",
     "specific_gravity": null,
     "replica_of": "Apollo 14"
   },
@@ -1412,7 +1412,7 @@
     "petrographic_class": null,
     "grain_size_mm": null,
     "publicly_available_composition": false,
-    "reference": "Weiblen, P.W., Murawa, M.J., Reid, K.J. (1990). Preparation of simulants for lunar surface materials. ASCE, 98–106.",
+    "reference": "Weiblen, P.W., Murawa, M.J., Reid, K.J. (1990). Preparation of simulants for lunar surface materials. ASCE, 98\u2013106.",
     "specific_gravity": null,
     "replica_of": "Apollo 11"
   },
@@ -1542,7 +1542,7 @@
     "petrographic_class": null,
     "grain_size_mm": null,
     "publicly_available_composition": false,
-    "reference": "Zou, Y., et al. (2024). Development and characterization of the PolyU-1 lunar regolith simulant based on Chang’e-5 returned samples. Int. J. Min. Sci. Technol. 34, 1317–1326. https://doi.org/10.1016/j.ijmst.2024.08.006",
+    "reference": "Zou, Y., et al. (2024). Development and characterization of the PolyU-1 lunar regolith simulant based on Chang\u2019e-5 returned samples. Int. J. Min. Sci. Technol. 34, 1317\u20131326. https://doi.org/10.1016/j.ijmst.2024.08.006",
     "specific_gravity": null,
     "replica_of": "Chang'e-5"
   },
@@ -1555,7 +1555,7 @@
     "petrographic_class": null,
     "grain_size_mm": null,
     "publicly_available_composition": false,
-    "reference": "Zhou, S., et al. (2021). Preparation and evaluation of geopolymer based on BH-2 lunar regolith simulant... Acta Astronaut. 189, 90–98. https://doi.org/10.1016/j.actaastro.2021.08.039",
+    "reference": "Zhou, S., et al. (2021). Preparation and evaluation of geopolymer based on BH-2 lunar regolith simulant... Acta Astronaut. 189, 90\u201398. https://doi.org/10.1016/j.actaastro.2021.08.039",
     "specific_gravity": null,
     "replica_of": "Apollo 17"
   },
@@ -1581,7 +1581,7 @@
     "petrographic_class": null,
     "grain_size_mm": null,
     "publicly_available_composition": false,
-    "reference": "Li, C., et al. (2019). The preparation and characterization of NEU-1 lunar soil simulants. JOM 71(4), 1471–1476. https://doi.org/10.1007/s11837-019-03362-6",
+    "reference": "Li, C., et al. (2019). The preparation and characterization of NEU-1 lunar soil simulants. JOM 71(4), 1471\u20131476. https://doi.org/10.1007/s11837-019-03362-6",
     "specific_gravity": null,
     "replica_of": "Low-Ti Mare"
   },
@@ -1594,7 +1594,7 @@
     "petrographic_class": null,
     "grain_size_mm": null,
     "publicly_available_composition": false,
-    "reference": "Li, C., et al. (2019). The preparation and characterization of NEU-1 lunar soil simulants. JOM 71(4), 1471–1476. https://doi.org/10.1007/s11837-019-03362-6",
+    "reference": "Li, C., et al. (2019). The preparation and characterization of NEU-1 lunar soil simulants. JOM 71(4), 1471\u20131476. https://doi.org/10.1007/s11837-019-03362-6",
     "specific_gravity": null,
     "replica_of": "Low-Ti Mare"
   },
@@ -1776,7 +1776,7 @@
     "petrographic_class": null,
     "grain_size_mm": null,
     "publicly_available_composition": false,
-    "reference": "Patzwald, J., et al. (2025). Properties of novel LX lunar regolith simulant system — The base simulants: Part 1. Acta Astronautica 231, 200–222. https://doi.org/10.1016/j.actaastro.2025.02.030",
+    "reference": "Patzwald, J., et al. (2025). Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1. Acta Astronautica 231, 200\u2013222. https://doi.org/10.1016/j.actaastro.2025.02.030",
     "specific_gravity": null,
     "replica_of": "Mixed"
   },
@@ -2039,5 +2039,18 @@
     "specific_gravity": null,
     "publicly_available_composition": null,
     "reference": null
+  },
+  {
+    "simulant_id": "S158",
+    "name": "LuSIC-1",
+    "classification": "Geochemical / Mineralogical",
+    "application": "General Purpose, Agriculture",
+    "replica_of": "Apollo 17 Mare",
+    "feedstock": "Tephrite/basanite lava from Tajogaite volcano (2021 eruption), La Palma, Canary Islands",
+    "petrographic_class": "Alkali basalt",
+    "grain_size_mm": null,
+    "specific_gravity": null,
+    "publicly_available_composition": false,
+    "reference": "Alberquilla, F., et al. (2025). LUSIC-1: A Novel Methodology for Developing Apollo 17 Lunar Soil Simulants."
   }
 ]

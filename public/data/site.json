@@ -353,7 +353,7 @@
   {
     "site_id": "X040",
     "simulant_id": "S040",
-    "site_name": "Technische Universität Berlin",
+    "site_name": "Technische Universit\u00e4t Berlin",
     "site_type": "Lab",
     "country_code": "Germany",
     "lat": 52.5125,
@@ -362,7 +362,7 @@
   {
     "site_id": "X041",
     "simulant_id": "S041",
-    "site_name": "Technische Universität Berlin",
+    "site_name": "Technische Universit\u00e4t Berlin",
     "site_type": "Lab",
     "country_code": "Germany",
     "lat": 52.5125,
@@ -1235,7 +1235,7 @@
   {
     "site_id": "X138",
     "simulant_id": "S138",
-    "site_name": "Technische Universität Berlin",
+    "site_name": "Technische Universit\u00e4t Berlin",
     "site_type": "Lab",
     "country_code": "Germany",
     "lat": 52.5125,
@@ -1411,5 +1411,14 @@
     "country_code": "Russia",
     "lat": 55.7558,
     "lon": 37.6173
+  },
+  {
+    "site_id": "X158",
+    "simulant_id": "S158",
+    "site_name": "IBeA Research Group / UPV-EHU (source: Tajogaite, La Palma)",
+    "site_type": "Lab",
+    "country_code": "ESP",
+    "lat": 28.6133,
+    "lon": -17.8653
   }
 ]

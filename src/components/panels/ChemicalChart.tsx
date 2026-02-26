@@ -12,7 +12,7 @@ interface ChemicalChartProps {
 }
 
 export function ChemicalChart({ chemicalCompositions, lunarReferences, simulantName }: ChemicalChartProps) {
-  const [displayMode, setDisplayMode] = useState<'chart' | 'table'>('chart');
+  const [displayMode, setDisplayMode] = useState<'chart' | 'table'>('table');
   const [lunarRefMission, setLunarRefMission] = useState('');
 
   const chemData = useMemo(() =>
