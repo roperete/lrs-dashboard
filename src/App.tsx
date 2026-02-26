@@ -15,7 +15,7 @@ import { LegendWidget } from './components/controls/LegendWidget';
 import { ExportMenu } from './components/controls/ExportMenu';
 import { AppHeader } from './components/layout/AppHeader';
 import { MapToolbar } from './components/layout/MapToolbar';
-import { GlobeView, type GlobeViewHandle } from './components/map/GlobeView';
+import { GlobeView, type GlobeViewHandle, type ClusterPoint } from './components/map/GlobeView';
 import { LeafletMap } from './components/map/LeafletMap';
 import { Sidebar } from './components/sidebar/Sidebar';
 import { SimulantPanel } from './components/panels/SimulantPanel';
@@ -66,14 +66,15 @@ export default function App() {
   const selectedSimulant2 = useMemo(() => simulants.find(s => s.simulant_id === panelState.panel2.simulantId) || null, [simulants, panelState.panel2.simulantId]);
   const selectedLunarSite = useMemo(() => lunarSites.find(s => s.id === panelState.selectedLunarSiteId) || null, [panelState.selectedLunarSiteId]);
 
-  // Globe point data — offset co-located points in a spiral
-  const globeData = useMemo(() => {
+  // Globe point data — split into singles and clusters
+  const { singlePoints, clusterPoints } = useMemo(() => {
     if (mapState.planet === 'moon') {
-      return lunarSites.map(s => ({
+      const moonPoints = lunarSites.map(s => ({
         id: s.id, name: s.name, mission: s.mission, date: s.date,
         lat: s.lat, lon: s.lng,
         color: s.type === 'Apollo' ? '#f59e0b' : s.type === 'Luna' ? '#ef4444' : '#3b82f6',
       }));
+      return { singlePoints: moonPoints, clusterPoints: [] as ClusterPoint[] };
     }
     const raw = displayedSimulants.map(s => {
       const site = siteBySimulant.get(s.simulant_id);
@@ -81,36 +82,50 @@ export default function App() {
         simulant_id: s.simulant_id, name: s.name, country_code: s.country_code,
         site_name: site.site_name, lat: site.lat!, lon: site.lon!,
         color: s.type?.toLowerCase().includes('highland') ? '#06b6d4' : '#10b981',
+        type: s.type,
       } : null;
     }).filter(Boolean) as any[];
 
-    // Group by location (rounded to 0.1 degree) and spiral-offset co-located points
+    // Group by exact coordinates
     const groups = new Map<string, any[]>();
     for (const p of raw) {
-      const key = `${Math.round(p.lat * 10)}:${Math.round(p.lon * 10)}`;
+      const key = `${p.lat}:${p.lon}`;
       const g = groups.get(key);
       if (g) g.push(p); else groups.set(key, [p]);
     }
-    const result: any[] = [];
+
+    const singles: any[] = [];
+    const clusters: ClusterPoint[] = [];
     for (const group of groups.values()) {
       if (group.length === 1) {
-        result.push(group[0]);
+        singles.push(group[0]);
       } else {
-        // Spiral offset for co-located points
-        const OFFSET = 0.8; // degrees
-        for (let i = 0; i < group.length; i++) {
-          const angle = (2 * Math.PI * i) / group.length;
-          const r = OFFSET * (0.5 + i * 0.15);
-          result.push({
-            ...group[i],
-            lat: group[i].lat + r * Math.cos(angle),
-            lon: group[i].lon + r * Math.sin(angle),
-          });
-        }
+        clusters.push({
+          lat: group[0].lat,
+          lon: group[0].lon,
+          count: group.length,
+          simulants: group,
+        });
       }
     }
-    return result;
+    return { singlePoints: singles, clusterPoints: clusters };
   }, [mapState.planet, displayedSimulants, siteBySimulant]);
+
+  // Cluster popover state (for 3D globe)
+  const [clusterPopover, setClusterPopover] = useState<{
+    x: number; y: number; simulants: any[];
+  } | null>(null);
+
+  // Close popover on outside click
+  useEffect(() => {
+    if (!clusterPopover) return;
+    const handler = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('[data-cluster-popover]')) setClusterPopover(null);
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, [clusterPopover]);
 
   // --- Event handlers ---
 
@@ -206,7 +221,11 @@ export default function App() {
           <GlobeView
             ref={globeRef}
             planet={mapState.planet} baseLayer={mapState.baseLayer}
-            globeData={globeData} onPointClick={handleGlobePointClick}
+            singlePoints={singlePoints} clusterPoints={clusterPoints}
+            onPointClick={handleGlobePointClick}
+            onClusterClick={(cluster, event) => {
+              setClusterPopover({ x: event.clientX, y: event.clientY, simulants: cluster.simulants });
+            }}
           />
         ) : (
           <LeafletMap
@@ -222,6 +241,26 @@ export default function App() {
           />
         )}
       </div>
+
+      {/* Cluster popover (3D globe) */}
+      {clusterPopover && (
+        <div data-cluster-popover
+          className="fixed z-[60] bg-slate-900/95 backdrop-blur-xl border border-slate-700 rounded-xl shadow-2xl p-2 min-w-[220px] max-h-[300px] overflow-y-auto"
+          style={{ left: Math.min(clusterPopover.x + 12, window.innerWidth - 240), top: clusterPopover.y - 8 }}
+        >
+          <div className="text-[10px] text-slate-500 uppercase tracking-wider font-bold px-2 py-1.5 border-b border-slate-800 mb-1">
+            {clusterPopover.simulants.length} simulants at this location
+          </div>
+          {clusterPopover.simulants.map((s: any) => (
+            <button key={s.simulant_id}
+              className="w-full text-left px-2 py-2 rounded-lg hover:bg-slate-800 transition-colors flex items-center gap-2"
+              onClick={() => { handleGlobePointClick(s); setClusterPopover(null); }}>
+              <span className="text-emerald-400 font-medium text-sm">{s.name}</span>
+              <span className="text-slate-500 text-xs ml-auto">{s.type}</span>
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Mobile overlay */}
       <AnimatePresence>
