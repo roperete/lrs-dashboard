@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import type {
   Simulant, Site, Composition, ChemicalComposition, Reference,
-  MineralGroup, SimulantExtra, LunarReference, MineralSourcing
+  MineralGroup, SimulantExtra, LunarReference, MineralSourcing, PurchaseInfo
 } from '../types';
 
 export interface DataState {
@@ -16,6 +16,7 @@ export interface DataState {
   simulantExtra: SimulantExtra[];
   lunarReference: LunarReference[];
   mineralSourcing: MineralSourcing[];
+  purchaseInfo: PurchaseInfo[];
   countriesGeoJson: GeoJSON.FeatureCollection | null;
 }
 
@@ -34,6 +35,7 @@ export function useData(): DataState {
     simulantExtra: [],
     lunarReference: [],
     mineralSourcing: [],
+    purchaseInfo: [],
     countriesGeoJson: null,
   });
 
@@ -43,12 +45,12 @@ export function useData(): DataState {
       'chemical_composition.json', 'references.json',
       'mineral_groups.json', 'simulant_extra.json',
       'lunar_reference.json', 'mineral_sourcing.json',
-      'countries.geojson',
+      'purchase_info.json', 'countries.geojson',
     ];
 
-    Promise.all(files.map(f => fetch(DATA_BASE + f).then(r => r.json())))
+    Promise.all(files.map(f => fetch(DATA_BASE + f).then(r => r.ok ? r.json() : [])))
       .then(([simulants, sites, compositions, chemicalCompositions, references,
-              mineralGroups, simulantExtra, lunarReference, mineralSourcing, countriesGeoJson]) => {
+              mineralGroups, simulantExtra, lunarReference, mineralSourcing, purchaseInfo, countriesGeoJson]) => {
         setState({
           loading: false,
           error: null,
@@ -61,7 +63,8 @@ export function useData(): DataState {
           simulantExtra,
           lunarReference,
           mineralSourcing,
-          countriesGeoJson,
+          purchaseInfo: Array.isArray(purchaseInfo) ? purchaseInfo : [],
+          countriesGeoJson: countriesGeoJson?.type ? countriesGeoJson : null,
         });
       })
       .catch(err => {

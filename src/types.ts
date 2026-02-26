@@ -10,6 +10,18 @@ export interface Simulant {
   notes: string;
   specific_gravity: number | null;
   lunar_sample_reference: string;
+  // Physical properties (sparse — not all simulants have these)
+  bulk_density?: number | string | null;
+  cohesion?: number | string | null;
+  friction_angle?: number | string | null;
+  density_g_cm3?: number | null;
+  particle_size_d50?: number | null;
+  particle_size_distribution?: string | null;
+  particle_morphology?: string | null;
+  particle_ruggedness?: string | null;
+  glass_content_percent?: number | null;
+  nasa_fom_score?: number | null;
+  ti_content_percent?: number | null;
 }
 
 export interface Site {
@@ -79,8 +91,44 @@ export interface LunarReference {
 }
 
 export interface MineralSourcing {
+  mineral_name: string;
+  chemistry?: string;
+  source_mineral?: string;
+  description?: string;
+  description_simple?: string;
+  mineral_locations?: string;
+  mining_locations?: string;
+  mining_company?: string;
+  mine_active?: boolean;
+  ethical_compliance?: string;
+  available_france?: boolean;
+  available_europe?: boolean;
+  available_schengen?: boolean;
+  supplier?: string;
+  further_reading?: string;
+  european_sources?: string;
+}
+
+export interface PurchaseInfo {
   simulant_id: string;
-  [key: string]: unknown;
+  vendor: string;
+  url: string;
+  price_note?: string;
+}
+
+export interface PhysicalProperties {
+  bulk_density?: number;
+  cohesion?: number;
+  friction_angle?: number;
+  specific_gravity?: number;
+  particle_size_d50?: number;
+  particle_size_distribution?: string;
+  particle_morphology?: string;
+  particle_ruggedness?: string;
+  density_g_cm3?: number;
+  glass_content_percent?: number;
+  nasa_fom_score?: number;
+  ti_content_percent?: number;
 }
 
 export interface LunarSite {

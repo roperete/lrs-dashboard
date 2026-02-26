@@ -26,9 +26,9 @@ export function PanelShell({
 }: PanelShellProps) {
   return (
     <motion.div
-      initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
+      initial={{ x: '100%', y: 0 }} animate={{ x: 0, y: 0 }} exit={{ x: '100%', y: 0 }}
       transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-      className="fixed right-0 top-0 h-full w-full sm:w-[450px] bg-slate-900/95 backdrop-blur-xl border-l border-slate-800 z-[1000] overflow-y-auto shadow-2xl"
+      className="fixed right-0 bottom-0 h-[70vh] w-full sm:top-0 sm:bottom-auto sm:h-full sm:w-[450px] bg-slate-900/95 backdrop-blur-xl border-l border-t sm:border-t-0 border-slate-800 z-[1000] overflow-y-auto shadow-2xl rounded-t-2xl sm:rounded-none"
     >
       <div className="p-6">
         <div className="flex justify-between items-start mb-6">

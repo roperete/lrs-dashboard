@@ -1664,5 +1664,40 @@
     "component_type": "oxide",
     "component_name": "CaO",
     "value_wt_pct": 8.8
+  },
+  {
+    "simulant_id": "S040",
+    "oxide": "Chemistry",
+    "value_wt_pct": {
+      "SiO2": 49.96,
+      "TiO2": 2.33,
+      "Al2O3": 13.98,
+      "FeO": 10.23,
+      "MgO": 8.18,
+      "CaO": 7.88,
+      "Na2O": 3.41,
+      "K2O": 1.85,
+      "MnO": 0.2,
+      "Cr2O3": 0.04,
+      "P2O5": 0.56,
+      "LOI": 0.74,
+      "Sum": 100.14
+    }
+  },
+  {
+    "simulant_id": "S122",
+    "oxide": "Oxides",
+    "value_wt_pct": {
+      "SiO2": 47.7,
+      "TiO2": 2.29,
+      "Al2O3": 16.2,
+      "FeO": 10.75,
+      "MgO": 5.04,
+      "CaO": 8.21,
+      "Na2O": 2.0,
+      "K2O": 4.92,
+      "P2O5": 0.58,
+      "MnO": 0.15
+    }
   }
 ]

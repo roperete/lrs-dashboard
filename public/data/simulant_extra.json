@@ -504,7 +504,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": null
+    "reference": "Kristin L. Bunker, Traci L. Lersch, Characterization of Lunar Dust Simulants by Automated\nParticle Analysis using Scanning Electron Microscopy"
   },
   {
     "simulant_id": "S040",
@@ -608,7 +608,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": null
+    "reference": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The Potential for Lunar and Martian Regolith Simulants to Sustain Plant Growth: A Multidisciplinary Overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821"
   },
   {
     "simulant_id": "S048",
@@ -881,7 +881,7 @@
     "grain_size_mm": null,
     "specific_gravity": null,
     "publicly_available_composition": false,
-    "reference": null
+    "reference": "Stefan Linke, Lisa Windisch, Nico Kueter, Jan Egil Wanvik, Anna Voss, Enrico Stoll, Carsten Schilde, Arno Kwade,\nTUBS-M and TUBS-T based modular Regolith Simulant System for the support of lunar ISRU activities,\nPlanetary and Space Science,\nVolume 180,\n2020,\n104747,\nISSN 0032-0633,\nhttps://doi.org/10.1016/j.pss.2019.104747."
   },
   {
     "simulant_id": "S069",

@@ -1,8 +1,9 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect } from 'react';
 import {
   MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents,
   Polyline, Polygon, Circle,
 } from 'react-leaflet';
+import MarkerClusterGroup from 'react-leaflet-cluster';
 import L from 'leaflet';
 import type { Simulant, Site, CustomMarker, CustomPolygon, LunarSite } from '../../types';
 
@@ -57,6 +58,20 @@ const landerIcon = L.divIcon({
   popupAnchor: [0, -18],
 });
 
+// Custom cluster icon creator
+function createClusterIcon(cluster: any) {
+  const count = cluster.getChildCount();
+  const size = count < 10 ? 36 : count < 50 ? 42 : 48;
+  return L.divIcon({
+    className: '',
+    html: `<div style="width:${size}px;height:${size}px;display:flex;align-items:center;justify-content:center;background:rgba(16,185,129,0.25);border:2px solid #10b981;border-radius:50%;box-shadow:0 0 12px rgba(16,185,129,0.5);backdrop-filter:blur(4px);">
+      <span style="color:#10b981;font-weight:700;font-size:${size < 42 ? 13 : 15}px;">${count}</span>
+    </div>`,
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+  });
+}
+
 function MapController({ center, zoom }: { center: [number, number]; zoom: number }) {
   const map = useMap();
   useEffect(() => { map.setView(center, zoom); }, [map, center, zoom]);
@@ -106,23 +121,34 @@ export function LeafletMap({
       <MapController center={mapCenter} zoom={mapZoom} />
       <MapEvents onMapClick={onMapClick} />
 
-      {/* Earth simulant markers — moon icons */}
-      {planet === 'earth' && filteredSimulants.map(sim => {
-        const site = siteBySimulant.get(sim.simulant_id);
-        if (!site || site.lat === null || site.lon === null) return null;
-        const icon = sim.type?.toLowerCase().includes('highland') ? highlandIcon : moonIcon;
-        return (
-          <Marker key={sim.simulant_id} position={[site.lat!, site.lon!]} icon={icon}
-            eventHandlers={{ click: () => onSimulantClick(sim.simulant_id, site.lat!, site.lon!) }}>
-            <Popup className="custom-popup">
-              <div className="text-center">
-                <p className="font-bold text-emerald-400">{sim.name}</p>
-                <p className="text-xs text-slate-400">{sim.type} | {sim.country_code}</p>
-              </div>
-            </Popup>
-          </Marker>
-        );
-      })}
+      {/* Earth simulant markers — clustered with spiderfication */}
+      {planet === 'earth' && (
+        <MarkerClusterGroup
+          iconCreateFunction={createClusterIcon}
+          spiderfyOnMaxZoom
+          showCoverageOnHover={false}
+          maxClusterRadius={40}
+          spiderfyDistanceMultiplier={1.5}
+          animate
+        >
+          {filteredSimulants.map(sim => {
+            const site = siteBySimulant.get(sim.simulant_id);
+            if (!site || site.lat === null || site.lon === null) return null;
+            const icon = sim.type?.toLowerCase().includes('highland') ? highlandIcon : moonIcon;
+            return (
+              <Marker key={sim.simulant_id} position={[site.lat!, site.lon!]} icon={icon}
+                eventHandlers={{ click: () => onSimulantClick(sim.simulant_id, site.lat!, site.lon!) }}>
+                <Popup className="custom-popup">
+                  <div className="text-center">
+                    <p className="font-bold text-emerald-400">{sim.name}</p>
+                    <p className="text-xs text-slate-400">{sim.type} | {sim.country_code}</p>
+                  </div>
+                </Popup>
+              </Marker>
+            );
+          })}
+        </MarkerClusterGroup>
+      )}
 
       {/* Moon site markers — lunar lander icons */}
       {planet === 'moon' && lunarSites.map(site => (

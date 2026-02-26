@@ -38,6 +38,7 @@ export default function App() {
     loading, simulants, compositions, chemicalCompositions, references, mineralGroups,
     lunarReference, compositionBySimulant, chemicalBySimulant, referencesBySimulant,
     mineralGroupsBySimulant, extraBySimulant, siteBySimulant,
+    mineralSourcingByMineral, purchaseBySimulant, physicalPropsBySimulant,
   } = data;
 
   const globeRef = useRef<GlobeViewHandle>(null);
@@ -285,6 +286,9 @@ export default function App() {
             mineralGroups={mineralGroupsBySimulant.get(selectedSimulant.simulant_id) || []}
             extra={extraBySimulant.get(selectedSimulant.simulant_id)}
             lunarReferences={lunarReference}
+            physicalProperties={physicalPropsBySimulant.get(selectedSimulant.simulant_id)}
+            purchaseInfo={purchaseBySimulant.get(selectedSimulant.simulant_id)}
+            mineralSourcingByMineral={mineralSourcingByMineral}
             pinned={panelState.panel1.pinned}
             onClose={() => panelState.closePanel(1)}
             onTogglePin={() => panelState.togglePin(1)}

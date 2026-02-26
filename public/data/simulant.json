@@ -525,7 +525,7 @@
     "type": "Highlands",
     "country_code": "Norway",
     "institution": "SolSys Mining",
-    "availability": null,
+    "availability": "Unknown",
     "release_date": null,
     "tons_produced_mt": null,
     "notes": "A novel feature of this simulant is that it contains no\nprocessed mineral concentrates but rather focuses on natural rock using resources\nlocal to Norway"
@@ -629,7 +629,7 @@
     "type": "Highlands",
     "country_code": "USA",
     "institution": "NASA-MSFC and USGS\r",
-    "availability": "Limited stock",
+    "availability": "Limited Stock",
     "release_date": 2007,
     "tons_produced_mt": null,
     "notes": "Part of NU-LHT series, includes NU-LHT-2M variant",
@@ -738,7 +738,7 @@
     "type": "Mechanical Simulant",
     "country_code": "USA",
     "institution": "Off Planet Research",
-    "availability": "Availability TBD",
+    "availability": "Unknown",
     "release_date": null,
     "tons_produced_mt": null,
     "notes": "Agglutinate component made out of any of the above simulants"
@@ -919,7 +919,7 @@
     "type": "High & Low Ti-mare",
     "country_code": "Germany",
     "institution": "ESA",
-    "availability": "Currently available",
+    "availability": "Available",
     "release_date": null,
     "tons_produced_mt": null,
     "notes": "Produced using a flexible preparation method where basalt is supplemented with minerals or sintered glass to achieve specific objectives"
@@ -1123,7 +1123,7 @@
     "type": "Highlands",
     "country_code": "China",
     "institution": "Chinese Academy of Sciences",
-    "availability": "Research",
+    "availability": "Available",
     "release_date": null,
     "tons_produced_mt": null,
     "notes": "National Astronomical Observatories simulant"

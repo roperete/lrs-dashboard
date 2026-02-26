@@ -11,3 +11,4 @@ tmp/
 app/
 fetch.js
 metadata.json
+*.bak

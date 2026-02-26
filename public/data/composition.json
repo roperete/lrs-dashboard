@@ -1419,5 +1419,61 @@
     "component_type": "mineral",
     "component_name": "Hematite",
     "value_pct": 3.4
+  },
+  {
+    "simulant_id": "S040",
+    "group": "Oxides",
+    "component_name": "Magnetite",
+    "value_pct": 5.0,
+    "component_type": "mineral",
+    "composition_id": "C204"
+  },
+  {
+    "simulant_id": "S040",
+    "group": "Nesosilicates_inosilicates",
+    "component_name": "Olivine",
+    "value_pct": 15.0,
+    "component_type": "mineral",
+    "composition_id": "C205"
+  },
+  {
+    "simulant_id": "S040",
+    "group": "Nesosilicates_inosilicates",
+    "component_name": "Augite",
+    "value_pct": 24.0,
+    "component_type": "mineral",
+    "composition_id": "C206"
+  },
+  {
+    "simulant_id": "S040",
+    "group": "Tectosilicates_Quartz_Zeolite",
+    "component_name": "Zeolite",
+    "value_pct": 1.0,
+    "component_type": "mineral",
+    "composition_id": "C207"
+  },
+  {
+    "simulant_id": "S040",
+    "group": "Tectosilicates_Quartz_Zeolite",
+    "component_name": "Analcime",
+    "value_pct": 3.0,
+    "component_type": "mineral",
+    "composition_id": "C208"
+  },
+  {
+    "simulant_id": "S040",
+    "group": "Tectosilicates_Plagioclases",
+    "component_name": "Plagioclase",
+    "value_pct": 31.0,
+    "component_type": "mineral",
+    "composition_id": "C209"
+  },
+  {
+    "simulant_id": "S040",
+    "group": "Tectosilicates_K_feldspars",
+    "component_name": "Anorthoclase",
+    "value_pct": 17.0,
+    "component_type": "mineral",
+    "composition_id": "C210"
   }
 ]

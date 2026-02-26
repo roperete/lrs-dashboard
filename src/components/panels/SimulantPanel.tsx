@@ -1,11 +1,14 @@
 import React from 'react';
 import { PanelShell } from '../ui/PanelShell';
 import { SimulantProperties } from './SimulantProperties';
+import { PhysicalPropertiesSection } from './PhysicalPropertiesSection';
+import { PurchaseSection } from './PurchaseSection';
+import { MineralSourcingSection } from './MineralSourcingSection';
 import { MineralChart } from './MineralChart';
 import { ChemicalChart } from './ChemicalChart';
 import { ReferencesSection } from './ReferencesSection';
 import { downloadSimulantCSV } from '../../utils/csv';
-import type { Simulant, Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, LunarReference } from '../../types';
+import type { Simulant, Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, LunarReference, PhysicalProperties, PurchaseInfo, MineralSourcing } from '../../types';
 
 interface SimulantPanelProps {
   simulant: Simulant;
@@ -15,6 +18,9 @@ interface SimulantPanelProps {
   mineralGroups: MineralGroup[];
   extra?: SimulantExtra;
   lunarReferences: LunarReference[];
+  physicalProperties?: PhysicalProperties;
+  purchaseInfo?: PurchaseInfo;
+  mineralSourcingByMineral: Map<string, MineralSourcing>;
   pinned?: boolean;
   onClose: () => void;
   onTogglePin?: () => void;
@@ -24,7 +30,8 @@ interface SimulantPanelProps {
 
 export function SimulantPanel({
   simulant, compositions, chemicalCompositions, references, mineralGroups, extra,
-  lunarReferences, pinned, onClose, onTogglePin, onCompare, compareActive,
+  lunarReferences, physicalProperties, purchaseInfo, mineralSourcingByMineral,
+  pinned, onClose, onTogglePin, onCompare, compareActive,
 }: SimulantPanelProps) {
   return (
     <PanelShell
@@ -43,11 +50,20 @@ export function SimulantPanel({
       <div className="space-y-8">
         <SimulantProperties simulant={simulant} extra={extra} />
 
+        {physicalProperties && <PhysicalPropertiesSection properties={physicalProperties} />}
+
+        <PurchaseSection availability={simulant.availability} purchaseInfo={purchaseInfo} />
+
         <MineralChart
           compositions={compositions}
           mineralGroups={mineralGroups}
           lunarReferences={lunarReferences}
           simulantName={simulant.name}
+        />
+
+        <MineralSourcingSection
+          compositions={compositions}
+          mineralSourcingByMineral={mineralSourcingByMineral}
         />
 
         <ChemicalChart
