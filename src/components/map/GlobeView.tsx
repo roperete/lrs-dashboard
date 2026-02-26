@@ -14,7 +14,6 @@ export interface ClusterPoint {
 
 interface GlobeViewProps {
   planet: 'earth' | 'moon';
-  baseLayer: 'satellite' | 'streets';
   singlePoints: any[];
   clusterPoints: ClusterPoint[];
   onPointClick: (point: any) => void;
@@ -32,19 +31,19 @@ function createClusterBadge(d: ClusterPoint, onClick: (d: ClusterPoint, e: Mouse
     display: flex; align-items: center; justify-content: center;
     cursor: pointer;
     font-weight: 700; font-size: ${size < 42 ? 13 : 15}px; color: #10b981;
-    box-shadow: 0 0 12px rgba(16,185,129,0.35);
+    box-shadow: 0 0 8px rgba(16,185,129,0.25);
     user-select: none;
-    transition: transform 0.15s, box-shadow 0.15s;
+    transition: box-shadow 0.2s, border-color 0.2s;
     pointer-events: auto;
   `;
   el.textContent = String(d.count);
   el.addEventListener('mouseenter', () => {
-    el.style.transform = 'scale(1.15)';
-    el.style.boxShadow = '0 0 20px rgba(16,185,129,0.6)';
+    el.style.boxShadow = '0 0 16px rgba(16,185,129,0.5)';
+    el.style.borderColor = '#34d399';
   });
   el.addEventListener('mouseleave', () => {
-    el.style.transform = 'scale(1)';
-    el.style.boxShadow = '0 0 12px rgba(16,185,129,0.35)';
+    el.style.boxShadow = '0 0 8px rgba(16,185,129,0.25)';
+    el.style.borderColor = '#10b981';
   });
   el.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -54,7 +53,7 @@ function createClusterBadge(d: ClusterPoint, onClick: (d: ClusterPoint, e: Mouse
 }
 
 export const GlobeView = forwardRef<GlobeViewHandle, GlobeViewProps>(
-  ({ planet, baseLayer, singlePoints, clusterPoints, onPointClick, onClusterClick }, ref) => {
+  ({ planet, singlePoints, clusterPoints, onPointClick, onClusterClick }, ref) => {
     const globeRef = useRef<GlobeMethods>(null);
 
     useImperativeHandle(ref, () => ({
@@ -70,9 +69,7 @@ export const GlobeView = forwardRef<GlobeViewHandle, GlobeViewProps>(
         ref={globeRef}
         globeImageUrl={planet === 'moon'
           ? "https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/moon-landing-sites/lunar_surface.jpg"
-          : baseLayer === 'satellite'
-            ? "https://unpkg.com/three-globe/example/img/earth-night.jpg"
-            : "https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg"}
+          : "https://unpkg.com/three-globe/example/img/earth-night.jpg"}
         bumpImageUrl={planet === 'moon'
           ? "https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/moon-landing-sites/lunar_bumpmap.jpg"
           : "https://unpkg.com/three-globe/example/img/earth-topology.png"}

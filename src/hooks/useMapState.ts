@@ -4,7 +4,6 @@ import type { CustomMarker, CustomPolygon } from '../types';
 export function useMapState() {
   const [viewMode, setViewMode] = useState<'globe' | 'map'>('globe');
   const [planet, setPlanet] = useState<'earth' | 'moon'>('earth');
-  const [baseLayer, setBaseLayer] = useState<'satellite' | 'streets'>('satellite');
   const [mapCenter, setMapCenter] = useState<[number, number]>([20, 0]);
   const [mapZoom, setMapZoom] = useState(2);
   const [geocodingQuery, setGeocodingQuery] = useState('');
@@ -14,10 +13,6 @@ export function useMapState() {
   const [tempPolygonPoints, setTempPolygonPoints] = useState<[number, number][]>([]);
   const [proximityCenter, setProximityCenter] = useState<[number, number] | null>(null);
   const [proximityRadius, setProximityRadius] = useState(1000);
-
-  const toggleBaseLayer = useCallback(() => {
-    setBaseLayer(prev => prev === 'satellite' ? 'streets' : 'satellite');
-  }, []);
 
   const addCustomMarker = useCallback((lat: number, lng: number) => {
     const marker: CustomMarker = {
@@ -51,7 +46,6 @@ export function useMapState() {
   return {
     viewMode, setViewMode,
     planet, setPlanet,
-    baseLayer, toggleBaseLayer,
     mapCenter, setMapCenter,
     mapZoom, setMapZoom,
     geocodingQuery, setGeocodingQuery,

@@ -220,7 +220,7 @@ export default function App() {
         {mapState.viewMode === 'globe' ? (
           <GlobeView
             ref={globeRef}
-            planet={mapState.planet} baseLayer={mapState.baseLayer}
+            planet={mapState.planet}
             singlePoints={singlePoints} clusterPoints={clusterPoints}
             onPointClick={handleGlobePointClick}
             onClusterClick={(cluster, event) => {
@@ -229,7 +229,7 @@ export default function App() {
           />
         ) : (
           <LeafletMap
-            planet={mapState.planet} baseLayer={mapState.baseLayer}
+            planet={mapState.planet}
             mapCenter={mapState.mapCenter} mapZoom={mapState.mapZoom}
             filteredSimulants={displayedSimulants} siteBySimulant={siteBySimulant}
             lunarSites={lunarSites}
@@ -335,7 +335,6 @@ export default function App() {
         planet={mapState.planet} viewMode={mapState.viewMode}
         drawingMode={mapState.drawingMode}
         tempPolygonPointsCount={mapState.tempPolygonPoints.length}
-        onToggleBaseLayer={mapState.toggleBaseLayer}
         onLocate={handleLocate}
         onSetDrawingMode={handleSetDrawingMode}
         onFinishPolygon={mapState.finishPolygon}

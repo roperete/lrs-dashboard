@@ -85,7 +85,6 @@ function MapEvents({ onMapClick }: { onMapClick: (e: L.LeafletMouseEvent) => voi
 
 interface LeafletMapProps {
   planet: 'earth' | 'moon';
-  baseLayer: 'satellite' | 'streets';
   mapCenter: [number, number];
   mapZoom: number;
   filteredSimulants: Simulant[];
@@ -102,7 +101,7 @@ interface LeafletMapProps {
 }
 
 export function LeafletMap({
-  planet, baseLayer, mapCenter, mapZoom,
+  planet, mapCenter, mapZoom,
   filteredSimulants, siteBySimulant, lunarSites,
   customMarkers, customPolygons, tempPolygonPoints,
   proximityCenter, proximityRadius,
@@ -110,9 +109,7 @@ export function LeafletMap({
 }: LeafletMapProps) {
   const tileUrl = planet === 'moon'
     ? 'https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-moon-basemap-v0-1/all/{z}/{x}/{y}.png'
-    : baseLayer === 'satellite'
-      ? 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
-      : 'https://{s}.tile.openstreetmap.org/{z}/{y}/{x}.png';
+    : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
 
   return (
     <MapContainer center={mapCenter} zoom={mapZoom}
