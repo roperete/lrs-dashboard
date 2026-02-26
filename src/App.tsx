@@ -66,7 +66,7 @@ export default function App() {
   const selectedSimulant2 = useMemo(() => simulants.find(s => s.simulant_id === panelState.panel2.simulantId) || null, [simulants, panelState.panel2.simulantId]);
   const selectedLunarSite = useMemo(() => lunarSites.find(s => s.id === panelState.selectedLunarSiteId) || null, [panelState.selectedLunarSiteId]);
 
-  // Globe point data
+  // Globe point data — offset co-located points in a spiral
   const globeData = useMemo(() => {
     if (mapState.planet === 'moon') {
       return lunarSites.map(s => ({
@@ -75,14 +75,41 @@ export default function App() {
         color: s.type === 'Apollo' ? '#f59e0b' : s.type === 'Luna' ? '#ef4444' : '#3b82f6',
       }));
     }
-    return displayedSimulants.map(s => {
+    const raw = displayedSimulants.map(s => {
       const site = siteBySimulant.get(s.simulant_id);
-      return site ? {
+      return site && site.lat != null && site.lon != null ? {
         simulant_id: s.simulant_id, name: s.name, country_code: s.country_code,
-        site_name: site.site_name, lat: site.lat, lon: site.lon,
+        site_name: site.site_name, lat: site.lat!, lon: site.lon!,
         color: s.type?.toLowerCase().includes('highland') ? '#06b6d4' : '#10b981',
       } : null;
-    }).filter(Boolean);
+    }).filter(Boolean) as any[];
+
+    // Group by location (rounded to 0.1 degree) and spiral-offset co-located points
+    const groups = new Map<string, any[]>();
+    for (const p of raw) {
+      const key = `${Math.round(p.lat * 10)}:${Math.round(p.lon * 10)}`;
+      const g = groups.get(key);
+      if (g) g.push(p); else groups.set(key, [p]);
+    }
+    const result: any[] = [];
+    for (const group of groups.values()) {
+      if (group.length === 1) {
+        result.push(group[0]);
+      } else {
+        // Spiral offset for co-located points
+        const OFFSET = 0.8; // degrees
+        for (let i = 0; i < group.length; i++) {
+          const angle = (2 * Math.PI * i) / group.length;
+          const r = OFFSET * (0.5 + i * 0.15);
+          result.push({
+            ...group[i],
+            lat: group[i].lat + r * Math.cos(angle),
+            lon: group[i].lon + r * Math.sin(angle),
+          });
+        }
+      }
+    }
+    return result;
   }, [mapState.planet, displayedSimulants, siteBySimulant]);
 
   // --- Event handlers ---
