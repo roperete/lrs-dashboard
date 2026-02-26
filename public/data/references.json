@@ -442,5 +442,131 @@
     "simulant_id": "S158",
     "reference_text": "Alberquilla, F., et al. (2025). From La Palma to Space: Green Moon Project's Experiment on Lunar Soil Simulant (LUSIC-1) for Crop Cultivation in Low Earth Orbit. Proc. VIII Iberian Congress on Planetary Sciences. https://ui.adsabs.harvard.edu/abs/2025psss.confE..59A/abstract",
     "reference_type": "usage"
+  },
+  {
+    "reference_id": "R075",
+    "simulant_id": "S038",
+    "reference_text": "S. Anbazhagan, I. Venugopal, A lunar soil simulant (LSS-ISAC-1) for the lunar exploration programme of the Indian Space Research Organisation, 2021 https://doi.org/10.1016/j.icarus.2021.114511",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R076",
+    "simulant_id": "S012",
+    "reference_text": "X.X. He, L. Xiao, LUNAR REGOLITH SIMULANT CUG-1A, 2010 https://ui.adsabs.harvard.edu/abs/2010LPI....41.1183H",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R077",
+    "simulant_id": "S080",
+    "reference_text": "Ruan Renhao, Yang Wei, A moderate-Ti lunar mare soil simulant: IGG-01, 2024 https://doi.org/10.1016/j.actaastro.2024.08.010",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R078",
+    "simulant_id": "S120",
+    "reference_text": "Zou Yuan, Wu Huangyu, Development and characterization of the PolyU-1 lunar regolith simulant based on Chang e-5 returned samples, 2024 https://doi.org/10.1016/j.ijmst.2024.08.006",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R079",
+    "simulant_id": "S019",
+    "reference_text": "Maki Syou, Jing Han, Magnetism of Simulated Lunar Regolith of FJS-1, 2014 http://www.bmfsa.org/archive/journal-E/19-2/e2014-19-2-sl01.pdf",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R080",
+    "simulant_id": "S067",
+    "reference_text": "Chancharoen Wares, Seehanam Saran, Development and Mechanical properties of the first Thailand lunar regolith simulant (TLS-01), 2021 https://doi.org/10.3390/IAAI-2021-10583",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R081",
+    "simulant_id": "S032",
+    "reference_text": "Ryu Byung-Hyun, Wang Cheng-Can, Development of a Korean Lunar Simulant(KLS-1) and its Possible Further Recommendations, 2018 https://doi.org/10.1061/(ASCE)AS.1943-5525.0000798",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R082",
+    "simulant_id": "S006",
+    "reference_text": "D.B. Stoeser, D.L. Rickman, Preliminary Geological Findings on the BP-1 Simulant, 2010 https://ntrs.nasa.gov/api/citations/20100036344/downloads/20100036344.pdf",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R083",
+    "simulant_id": "S082",
+    "reference_text": "He Chunmei, Zeng Xiangwu, Geotechnical Properties of GRC-3 Lunar Simulant, 2013 https://doi.org/10.1061/(ASCE)AS.1943-5525.0000162",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R084",
+    "simulant_id": "S036",
+    "reference_text": "Yin Kexin, Cheng Zhichao, Shear properties of LHS-1 and LMS-1 Lunar regolith simulants, 2023 https://doi.org/10.1016/j.pss.2022.105630",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R085",
+    "simulant_id": "S037",
+    "reference_text": "Yin Kexin, Cheng Zhichao, Shear properties of LHS-1 and LMS-1 Lunar regolith simulants, 2023 https://doi.org/10.1016/j.pss.2022.105630",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R086",
+    "simulant_id": "S027",
+    "reference_text": "D.S. McKay, J.L. Carter, JSC-1: A NEW LUNAR SOIL SIMULANT, 1994 https://www.lpi.usra.edu/lunar/strategies/jsc_lunar_simulant.pdf?q=jsc",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R087",
+    "simulant_id": "S028",
+    "reference_text": "K.A. Alshibli, A. Hasan, Strength Properties of JSC-1A Lunar Regolith Simulant, 2009 https://doi.org/10.1061/(ASCE)GT.1943-5606.0000068",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R088",
+    "simulant_id": "S103",
+    "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R089",
+    "simulant_id": "S105",
+    "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R090",
+    "simulant_id": "S043",
+    "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R091",
+    "simulant_id": "S089",
+    "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R092",
+    "simulant_id": "S054",
+    "reference_text": "ARES | Exploration Science Projects | Lunar Regolith Simulants | OB-1, 2010 https://ares.jsc.nasa.gov/projects/simulants/ob-1.html",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R093",
+    "simulant_id": "S058",
+    "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R094",
+    "simulant_id": "S060",
+    "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "reference_type": "composition"
+  },
+  {
+    "reference_id": "R095",
+    "simulant_id": "S045",
+    "reference_text": "Yongquan Li, Jianzhong Liu, NAO-1: Lunar Highland Soil Simulant Developed in China, 2009 https://doi.org/10.1061/(ASCE)0893-1321(2009)22:1(53)",
+    "reference_type": "composition"
   }
 ]

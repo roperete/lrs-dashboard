@@ -76,7 +76,10 @@
     "tons_produced_mt": null,
     "notes": "Discovered as waste pile in aggregate quarry",
     "specific_gravity": 1.43,
-    "lunar_sample_reference": "Low-Ti Mare"
+    "lunar_sample_reference": "Low-Ti Mare",
+    "bulk_density": 1.65,
+    "friction_angle": 45.0,
+    "cohesion": 1.0
   },
   {
     "simulant_id": "S007",
@@ -89,7 +92,9 @@
     "tons_produced_mt": null,
     "notes": "Derived from Changbai Mountains scoria",
     "lunar_sample_reference": "Apollo 14",
-    "specific_gravity": null
+    "specific_gravity": null,
+    "friction_angle": 33.3,
+    "cohesion": 1.0
   },
   {
     "simulant_id": "S008",
@@ -155,7 +160,10 @@
     "tons_produced_mt": null,
     "notes": "Demonstrates comparatively lower softening point and can achieve densification with reduced energy input relative to JSC-2",
     "specific_gravity": null,
-    "lunar_sample_reference": "Mare"
+    "lunar_sample_reference": "Mare",
+    "bulk_density": 1.45,
+    "friction_angle": 21.0,
+    "cohesion": 5.0
   },
   {
     "simulant_id": "S013",
@@ -239,7 +247,9 @@
     "notes": "Large-volume simulant for LUNA facility",
     "particle_size_distribution": "d50=181",
     "specific_gravity": 1.45,
-    "lunar_sample_reference": "Low-Ti Mare"
+    "lunar_sample_reference": "Low-Ti Mare",
+    "bulk_density": 1.95,
+    "cohesion": 0.38
   },
   {
     "simulant_id": "S019",
@@ -254,7 +264,9 @@
     "glass_content_percent": 7.15,
     "lunar_sample_reference": "Apollo 14",
     "bulk_density": "1.065 g/cm\u00b3",
-    "specific_gravity": null
+    "specific_gravity": null,
+    "friction_angle": 39.4,
+    "cohesion": 8.13
   },
   {
     "simulant_id": "S020",
@@ -362,7 +374,9 @@
     "glass_content_percent": 50,
     "bulk_density": "1.065 g/cm\u00b3",
     "specific_gravity": 2.92,
-    "lunar_sample_reference": "Apollo 14"
+    "lunar_sample_reference": "Apollo 14",
+    "friction_angle": 45.0,
+    "cohesion": 1.0
   },
   {
     "simulant_id": "S028",
@@ -376,7 +390,10 @@
     "notes": "Mass-produced replica of JSC-1",
     "particle_size_distribution": "<1mm",
     "specific_gravity": 2.92,
-    "lunar_sample_reference": "Apollo 14"
+    "lunar_sample_reference": "Apollo 14",
+    "bulk_density": 1.63,
+    "friction_angle": 45.85,
+    "cohesion": 1.9
   },
   {
     "simulant_id": "S029",
@@ -429,7 +446,9 @@
     "tons_produced_mt": null,
     "notes": "Cheorwon basalt derived",
     "specific_gravity": 1.99,
-    "lunar_sample_reference": "Apollo 14"
+    "lunar_sample_reference": "Apollo 14",
+    "friction_angle": 44.91,
+    "cohesion": 1.85
   },
   {
     "simulant_id": "S033",
@@ -517,7 +536,9 @@
     "notes": "Derived from Sittampundi anorthosite",
     "lunar_sample_reference": "Highlands",
     "bulk_density": "1.065 g/cm\u00b3",
-    "specific_gravity": null
+    "specific_gravity": null,
+    "friction_angle": 36.34,
+    "cohesion": 0.343
   },
   {
     "simulant_id": "S039",
@@ -582,7 +603,10 @@
     "particle_size_distribution": "ground into a Particle Size Distribution (PSD) to resemble lunar soil",
     "ti_content_percent": 6.8,
     "lunar_sample_reference": "Apollo 11",
-    "specific_gravity": 1.59
+    "specific_gravity": 1.59,
+    "bulk_density": 1.84,
+    "friction_angle": 51.85,
+    "cohesion": 0.8
   },
   {
     "simulant_id": "S044",
@@ -608,7 +632,10 @@
     "tons_produced_mt": null,
     "notes": "Derived from Tibet gabbro",
     "lunar_sample_reference": "Highlands",
-    "specific_gravity": null
+    "specific_gravity": null,
+    "bulk_density": 1.93,
+    "friction_angle": 46.57,
+    "cohesion": 95.3
   },
   {
     "simulant_id": "S046",
@@ -730,7 +757,10 @@
     "notes": "Variant of OB-1",
     "glass_content_percent": 40,
     "specific_gravity": 1.51,
-    "lunar_sample_reference": "Apollo 16"
+    "lunar_sample_reference": "Apollo 16",
+    "bulk_density": 1.57,
+    "friction_angle": 35.0,
+    "cohesion": 15.0
   },
   {
     "simulant_id": "S055",
@@ -780,7 +810,10 @@
     "tons_produced_mt": null,
     "notes": "80% anorthosite, 20% basaltic cinder",
     "lunar_sample_reference": "Farside lunar highlands",
-    "specific_gravity": null
+    "specific_gravity": null,
+    "bulk_density": 1.41,
+    "friction_angle": 36.0,
+    "cohesion": 12.0
   },
   {
     "simulant_id": "S059",
@@ -806,7 +839,10 @@
     "tons_produced_mt": null,
     "notes": "90% basaltic cinder, 10% anorthosite",
     "lunar_sample_reference": "High-Ti Mare",
-    "specific_gravity": 1.31
+    "specific_gravity": 1.31,
+    "bulk_density": 1.43,
+    "friction_angle": 40.0,
+    "cohesion": 7.0
   },
   {
     "simulant_id": "S061",
@@ -911,7 +947,9 @@
     "particle_morphology": "54.55% polygons and 45.45% rods",
     "particle_ruggedness": "evenly distributed, uncluttered",
     "lunar_sample_reference": "Mare",
-    "specific_gravity": null
+    "specific_gravity": null,
+    "friction_angle": 42.2,
+    "cohesion": 4.9
   },
   {
     "simulant_id": "S068",
@@ -1014,7 +1052,10 @@
     "tons_produced_mt": null,
     "notes": "Prepared based on particle size distribution data from samples returned by the Chang'e-5 mission",
     "particle_morphology": "irregular",
-    "lunar_sample_reference": "Chang'e-5"
+    "lunar_sample_reference": "Chang'e-5",
+    "bulk_density": 1.65,
+    "friction_angle": 40.57,
+    "cohesion": 9.9
   },
   {
     "simulant_id": "S076",
@@ -1089,7 +1130,10 @@
     "tons_produced_mt": null,
     "notes": "Moderate-Ti lunar mare simulant",
     "specific_gravity": null,
-    "lunar_sample_reference": "General"
+    "lunar_sample_reference": "General",
+    "bulk_density": 1.69,
+    "friction_angle": 41.8,
+    "cohesion": 19.2
   },
   {
     "simulant_id": "S081",
@@ -1115,7 +1159,9 @@
     "tons_produced_mt": null,
     "notes": "Standard vehicle mobility simulant",
     "specific_gravity": null,
-    "lunar_sample_reference": "General"
+    "lunar_sample_reference": "General",
+    "bulk_density": 1.73,
+    "friction_angle": 42.8
   },
   {
     "simulant_id": "S083",
@@ -1204,7 +1250,10 @@
     "tons_produced_mt": null,
     "specific_gravity": null,
     "notes": "Glass component offset by agglutinate glass",
-    "lunar_sample_reference": "Apollo 16"
+    "lunar_sample_reference": "Apollo 16",
+    "bulk_density": 1.56,
+    "friction_angle": 38.0,
+    "cohesion": 8.0
   },
   {
     "simulant_id": "S090",
@@ -1386,7 +1435,10 @@
     "tons_produced_mt": null,
     "specific_gravity": 1.5,
     "notes": "70% anorthosite, 30% basaltic cinder",
-    "lunar_sample_reference": "Apollo 14 soils"
+    "lunar_sample_reference": "Apollo 14 soils",
+    "bulk_density": 1.7,
+    "friction_angle": 32.0,
+    "cohesion": 12.0
   },
   {
     "simulant_id": "S104",
@@ -1412,7 +1464,10 @@
     "tons_produced_mt": null,
     "specific_gravity": null,
     "notes": "100% basaltic cinder",
-    "lunar_sample_reference": "Low-to-moderate-Ti Mare"
+    "lunar_sample_reference": "Low-to-moderate-Ti Mare",
+    "bulk_density": 1.63,
+    "friction_angle": 36.0,
+    "cohesion": 12.0
   },
   {
     "simulant_id": "S106",
@@ -1607,7 +1662,10 @@
     "tons_produced_mt": null,
     "specific_gravity": null,
     "notes": "High-fidelity matching Chang'e-5 samples",
-    "lunar_sample_reference": "Chang'e-5"
+    "lunar_sample_reference": "Chang'e-5",
+    "bulk_density": 1.58,
+    "friction_angle": 40.3,
+    "cohesion": 13.5
   },
   {
     "simulant_id": "S121",
