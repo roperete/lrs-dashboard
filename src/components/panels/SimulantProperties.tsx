@@ -30,7 +30,20 @@ export function SimulantProperties({ simulant, extra }: SimulantPropertiesProps)
     if (extra.application) props.push(['Application', extra.application]);
     if (extra.feedstock) props.push(['Feedstock', extra.feedstock]);
     if (extra.grain_size_mm) props.push(['Grain Size (mm)', extra.grain_size_mm]);
-    if (extra.petrographic_class) props.push(['Petrographic Class', extra.petrographic_class]);
+    if (extra.petrographic_class) {
+      let petroDisplay = extra.petrographic_class;
+      try {
+        const parsed = JSON.parse(extra.petrographic_class);
+        if (parsed?.Rocks) {
+          petroDisplay = Object.entries(parsed.Rocks as Record<string, number>)
+            .filter(([, v]) => v > 0)
+            .sort(([, a], [, b]) => b - a)
+            .map(([k, v]) => `${k} ${v}%`)
+            .join(', ') || extra.petrographic_class;
+        }
+      } catch { /* plain string, use as-is */ }
+      props.push(['Petrographic Class', petroDisplay]);
+    }
   }
 
   const institutionUrl = simulant.institution ? getInstitutionUrl(simulant.institution) : null;

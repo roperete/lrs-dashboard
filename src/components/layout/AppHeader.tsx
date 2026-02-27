@@ -75,7 +75,7 @@ export function AppHeader({
             <form onSubmit={onGeocode} className="hidden lg:flex bg-slate-900/80 backdrop-blur-md border border-slate-800 p-1 rounded-xl gap-1">
               <div className="relative">
                 <Navigation className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" size={14} />
-                <input type="text" placeholder="Go to address..." value={geocodingQuery}
+                <input type="text" placeholder="Go to..." value={geocodingQuery}
                   onChange={(e) => onGeocodingQueryChange(e.target.value)}
                   className="bg-transparent border-none py-2 pl-9 pr-4 text-sm focus:outline-none w-48" />
               </div>

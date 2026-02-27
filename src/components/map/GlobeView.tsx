@@ -47,14 +47,20 @@ function createClusterBadge(d: ClusterPoint, onClick: (d: ClusterPoint, e: Mouse
     el.style.boxShadow = '0 0 8px rgba(16,185,129,0.25)';
     el.style.borderColor = '#10b981';
   });
+  // Debounce click to distinguish single vs double click
+  let clickTimer: ReturnType<typeof setTimeout> | null = null;
   el.addEventListener('click', (e) => {
     e.stopPropagation();
-    onClick(d, e);
+    if (clickTimer) { clearTimeout(clickTimer); clickTimer = null; return; }
+    clickTimer = setTimeout(() => { clickTimer = null; onClick(d, e); }, 250);
   });
   el.addEventListener('dblclick', (e) => {
     e.stopPropagation();
+    if (clickTimer) { clearTimeout(clickTimer); clickTimer = null; }
     onDblClick(d);
   });
+  // Pass wheel events through to the globe for zooming
+  el.addEventListener('wheel', (e) => { el.style.pointerEvents = 'none'; requestAnimationFrame(() => { el.style.pointerEvents = 'auto'; }); }, { passive: true });
   return el;
 }
 

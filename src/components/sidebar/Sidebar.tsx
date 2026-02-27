@@ -3,7 +3,6 @@ import { Database, Search, ChevronLeft, ArrowRightLeft, ChevronDown } from 'luci
 import { motion } from 'motion/react';
 import { DynamicFilterPanel } from './DynamicFilterPanel';
 import { SimulantList } from './SimulantList';
-import { ProximitySearch } from './ProximitySearch';
 import type { Simulant, LunarSite, DynamicFilter, FilterProperty } from '../../types';
 
 interface SidebarProps {
@@ -34,11 +33,6 @@ interface SidebarProps {
   onSelectLunarSite: (id: string) => void;
   onCompareClick: () => void;
   onClose: () => void;
-  proximityCenter: [number, number] | null;
-  proximityRadius: number;
-  onSetProximityCenter: () => void;
-  onClearProximityCenter: () => void;
-  onProximityRadiusChange: (r: number) => void;
   totalCount: number;
 }
 
@@ -57,7 +51,7 @@ export function Sidebar(props: SidebarProps) {
           <div>
             <h2 className="text-lg font-bold text-white tracking-tight">Lunar Regolith Simulants</h2>
             <p className="text-[10px] text-slate-500 uppercase tracking-widest">
-              Interactive Database <span className="text-emerald-400 font-semibold">v2.3.0</span>
+              Interactive Database <span className="text-emerald-400 font-semibold">v2.5.0</span>
             </p>
           </div>
           <button onClick={props.onClose} className="p-1.5 hover:bg-slate-800 rounded-lg text-slate-500">
@@ -83,17 +77,6 @@ export function Sidebar(props: SidebarProps) {
             onUpdateFilter={props.onUpdateFilter}
             onRemoveFilter={props.onRemoveFilter}
             onClearAll={props.clearAllFilters}
-          />
-        )}
-
-        {/* Proximity Search (Earth only) */}
-        {props.planet === 'earth' && (
-          <ProximitySearch
-            proximityCenter={props.proximityCenter}
-            proximityRadius={props.proximityRadius}
-            onSetCenter={props.onSetProximityCenter}
-            onClearCenter={props.onClearProximityCenter}
-            onRadiusChange={props.onProximityRadiusChange}
           />
         )}
 
