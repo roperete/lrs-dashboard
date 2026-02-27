@@ -217,7 +217,8 @@ export default function App() {
               simulants={displayedSimulants}
               selectedSimulantId={panelState.panel1.simulantId}
               chemicalBySimulant={chemicalBySimulant}
-              physicalPropsBySimulant={physicalPropsBySimulant}
+              compositionBySimulant={compositionBySimulant}
+              referencesBySimulant={referencesBySimulant}
               onSelectSimulant={(id) => panelState.selectSimulant(id)}
             />
           </div>

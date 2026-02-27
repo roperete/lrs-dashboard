@@ -1,46 +1,29 @@
 import React, { useState, useMemo } from 'react';
-import { ChevronUp, ChevronDown } from 'lucide-react';
+import { ChevronUp, ChevronDown, Check } from 'lucide-react';
 import { cn } from '../../utils/cn';
 import { getCountryDisplay } from '../../utils/countryUtils';
-import type { Simulant, ChemicalComposition, PhysicalProperties } from '../../types';
+import type { Simulant, ChemicalComposition, Composition, Reference } from '../../types';
 
 type SortDir = 'asc' | 'desc';
-type SortKey = 'name' | 'type' | 'country' | 'institution' | 'availability' | 'lunar_sample_reference' | 'year' | 'sio2' | 'bulk_density' | 'cohesion';
+type SortKey = 'name' | 'type' | 'country' | 'institution' | 'availability' | 'lunar_sample_reference' | 'year' | 'has_chemistry' | 'has_mineralogy' | 'reference';
 
 interface SimulantTableProps {
   simulants: Simulant[];
   selectedSimulantId: string | null;
   chemicalBySimulant: Map<string, ChemicalComposition[]>;
-  physicalPropsBySimulant: Map<string, PhysicalProperties>;
+  compositionBySimulant: Map<string, Composition[]>;
+  referencesBySimulant: Map<string, Reference[]>;
   onSelectSimulant: (id: string) => void;
 }
 
-function getSiO2(id: string, chemicalBySimulant: Map<string, ChemicalComposition[]>): number | null {
-  const chems = chemicalBySimulant.get(id);
-  if (!chems) return null;
-  const sio2 = chems.find(c => c.component_name.toLowerCase() === 'sio2');
-  return sio2 ? sio2.value_wt_pct : null;
-}
-
-function getBulkDensity(id: string, physicalPropsBySimulant: Map<string, PhysicalProperties>): number | null {
-  const props = physicalPropsBySimulant.get(id);
-  if (!props || props.bulk_density == null) return null;
-  return typeof props.bulk_density === 'number' ? props.bulk_density : null;
-}
-
-function getCohesion(id: string, physicalPropsBySimulant: Map<string, PhysicalProperties>): number | null {
-  const props = physicalPropsBySimulant.get(id);
-  if (!props || props.cohesion == null) return null;
-  return typeof props.cohesion === 'number' ? props.cohesion : null;
-}
-
-function formatNum(v: number | null): string {
-  if (v == null) return '\u2014';
-  return v.toFixed(1);
+function getFirstReference(id: string, referencesBySimulant: Map<string, Reference[]>): string {
+  const refs = referencesBySimulant.get(id);
+  if (!refs || refs.length === 0) return '';
+  return refs[0].reference_text || '';
 }
 
 export function SimulantTable({
-  simulants, selectedSimulantId, chemicalBySimulant, physicalPropsBySimulant, onSelectSimulant,
+  simulants, selectedSimulantId, chemicalBySimulant, compositionBySimulant, referencesBySimulant, onSelectSimulant,
 }: SimulantTableProps) {
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
@@ -59,8 +42,8 @@ export function SimulantTable({
     const dir = sortDir === 'asc' ? 1 : -1;
 
     arr.sort((a, b) => {
-      let va: string | number | null;
-      let vb: string | number | null;
+      let va: string | number | boolean | null;
+      let vb: string | number | boolean | null;
 
       switch (sortKey) {
         case 'name': va = a.name.toLowerCase(); vb = b.name.toLowerCase(); break;
@@ -70,9 +53,9 @@ export function SimulantTable({
         case 'availability': va = (a.availability || '').toLowerCase(); vb = (b.availability || '').toLowerCase(); break;
         case 'lunar_sample_reference': va = (a.lunar_sample_reference || '').toLowerCase(); vb = (b.lunar_sample_reference || '').toLowerCase(); break;
         case 'year': va = typeof a.release_date === 'number' ? a.release_date : null; vb = typeof b.release_date === 'number' ? b.release_date : null; break;
-        case 'sio2': va = getSiO2(a.simulant_id, chemicalBySimulant); vb = getSiO2(b.simulant_id, chemicalBySimulant); break;
-        case 'bulk_density': va = getBulkDensity(a.simulant_id, physicalPropsBySimulant); vb = getBulkDensity(b.simulant_id, physicalPropsBySimulant); break;
-        case 'cohesion': va = getCohesion(a.simulant_id, physicalPropsBySimulant); vb = getCohesion(b.simulant_id, physicalPropsBySimulant); break;
+        case 'has_chemistry': va = chemicalBySimulant.has(a.simulant_id) ? 1 : 0; vb = chemicalBySimulant.has(b.simulant_id) ? 1 : 0; break;
+        case 'has_mineralogy': va = compositionBySimulant.has(a.simulant_id) ? 1 : 0; vb = compositionBySimulant.has(b.simulant_id) ? 1 : 0; break;
+        case 'reference': va = getFirstReference(a.simulant_id, referencesBySimulant).toLowerCase() || null; vb = getFirstReference(b.simulant_id, referencesBySimulant).toLowerCase() || null; break;
         default: return 0;
       }
 
@@ -88,26 +71,36 @@ export function SimulantTable({
     });
 
     return arr;
-  }, [simulants, sortKey, sortDir, chemicalBySimulant, physicalPropsBySimulant]);
+  }, [simulants, sortKey, sortDir, chemicalBySimulant, compositionBySimulant, referencesBySimulant]);
 
   const SortIcon = ({ col }: { col: SortKey }) => {
     if (sortKey !== col) return <span className="w-4" />;
     return sortDir === 'asc' ? <ChevronUp size={14} /> : <ChevronDown size={14} />;
   };
 
-  const TH = ({ col, label, align = 'left' }: { col: SortKey; label: string; align?: 'left' | 'right' }) => (
+  const TH = ({ col, label, align = 'left' }: { col: SortKey; label: string; align?: 'left' | 'right' | 'center' }) => (
     <th
       onClick={() => toggleSort(col)}
       className={cn(
         "py-2.5 px-3 text-xs font-bold text-slate-500 uppercase tracking-wider cursor-pointer select-none hover:text-slate-300 transition-colors whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10",
         align === 'right' && 'text-right',
+        align === 'center' && 'text-center',
         sortKey === col && 'text-emerald-400',
       )}
     >
-      <span className={cn("inline-flex items-center gap-1", align === 'right' && 'justify-end')}>
+      <span className={cn("inline-flex items-center gap-1", align === 'right' && 'justify-end', align === 'center' && 'justify-center')}>
         {label}<SortIcon col={col} />
       </span>
     </th>
+  );
+
+  const BoolCell = ({ value }: { value: boolean }) => (
+    <td className="py-2 px-3 text-center">
+      {value
+        ? <Check size={16} className="inline text-emerald-400" />
+        : <span className="text-slate-600">\u2014</span>
+      }
+    </td>
   );
 
   return (
@@ -122,14 +115,15 @@ export function SimulantTable({
             <TH col="availability" label="Availability" />
             <TH col="lunar_sample_reference" label="Lunar Ref" />
             <TH col="year" label="Year" align="right" />
-            <TH col="sio2" label="SiO2 wt%" align="right" />
-            <TH col="bulk_density" label="Bulk Density" align="right" />
-            <TH col="cohesion" label="Cohesion" align="right" />
+            <TH col="has_chemistry" label="Chem" align="center" />
+            <TH col="has_mineralogy" label="Min" align="center" />
+            <TH col="reference" label="Reference" />
           </tr>
         </thead>
         <tbody>
           {sorted.map((s, i) => {
             const isSelected = s.simulant_id === selectedSimulantId;
+            const ref = getFirstReference(s.simulant_id, referencesBySimulant);
             return (
               <tr
                 key={s.simulant_id}
@@ -150,9 +144,9 @@ export function SimulantTable({
                 <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.availability || '\u2014'}</td>
                 <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.lunar_sample_reference || '\u2014'}</td>
                 <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{typeof s.release_date === 'number' ? s.release_date : '\u2014'}</td>
-                <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{formatNum(getSiO2(s.simulant_id, chemicalBySimulant))}</td>
-                <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{formatNum(getBulkDensity(s.simulant_id, physicalPropsBySimulant))}</td>
-                <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{formatNum(getCohesion(s.simulant_id, physicalPropsBySimulant))}</td>
+                <BoolCell value={chemicalBySimulant.has(s.simulant_id)} />
+                <BoolCell value={compositionBySimulant.has(s.simulant_id)} />
+                <td className="py-2 px-3 text-slate-400 max-w-[300px] truncate" title={ref || undefined}>{ref || '\u2014'}</td>
               </tr>
             );
           })}
