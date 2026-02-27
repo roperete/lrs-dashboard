@@ -568,5 +568,95 @@
     "simulant_id": "S045",
     "reference_text": "Yongquan Li, Jianzhong Liu, NAO-1: Lunar Highland Soil Simulant Developed in China, 2009 https://doi.org/10.1061/(ASCE)0893-1321(2009)22:1(53)",
     "reference_type": "composition"
+  },
+  {
+    "reference_id": "R096",
+    "simulant_id": "S012",
+    "reference_text": "X.X. He, L. Xiao, LUNAR REGOLITH SIMULANT CUG-1A, 2010 https://ui.adsabs.harvard.edu/abs/2010LPI....41.1183H",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R097",
+    "simulant_id": "S007",
+    "reference_text": "Yongchun Zheng, Shijie Wang, CAS-1 lunar soil simulant, 2009 https://doi.org/10.1016/j.asr.2008.07.006",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R098",
+    "simulant_id": "S080",
+    "reference_text": "Ruan Renhao, Yang Wei, A moderate-Ti lunar mare soil simulant: IGG-01, 2024 https://doi.org/10.1016/j.actaastro.2024.08.010",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R099",
+    "simulant_id": "S075",
+    "reference_text": "Teng Yue, Wang Shun, Influence of loading conditions on mechanical behaviors of lunar regolith simulant WHU-1 based on Chang e-5 returned samples, 2025 https://doi.org/10.1007/s11440-025-02553-7",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R100",
+    "simulant_id": "S019",
+    "reference_text": "Maki Syou, Jing Han, Magnetism of Simulated Lunar Regolith of FJS-1, 2014 http://www.bmfsa.org/archive/journal-E/19-2/e2014-19-2-sl01.pdf",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R101",
+    "simulant_id": "S018",
+    "reference_text": "V.S. Engelschion, S.R. Eriksson, EAC-1A: A novel large-volume lunar regolith simulant, 2020 https://doi.org/10.1038/s41598-020-62312-4",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R102",
+    "simulant_id": "S082",
+    "reference_text": "He Chunmei, Zeng Xiangwu, Geotechnical Properties of GRC-3 Lunar Simulant, 2013 https://doi.org/10.1061/(ASCE)AS.1943-5525.0000162",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R103",
+    "simulant_id": "S027",
+    "reference_text": "D.S. McKay, J.L. Carter, JSC-1: A NEW LUNAR SOIL SIMULANT, 1994 https://www.lpi.usra.edu/lunar/strategies/jsc_lunar_simulant.pdf?q=jsc",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R104",
+    "simulant_id": "S103",
+    "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R105",
+    "simulant_id": "S105",
+    "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R106",
+    "simulant_id": "S043",
+    "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R107",
+    "simulant_id": "S089",
+    "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R108",
+    "simulant_id": "S054",
+    "reference_text": "ARES | Exploration Science Projects | Lunar Regolith Simulants | OB-1, 2010 https://ares.jsc.nasa.gov/projects/simulants/ob-1.html",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R109",
+    "simulant_id": "S058",
+    "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R110",
+    "simulant_id": "S060",
+    "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "reference_type": "geotechnical"
   }
 ]

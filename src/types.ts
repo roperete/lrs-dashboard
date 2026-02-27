@@ -141,6 +141,12 @@ export interface LunarSite {
   samples_returned?: string;
   description: string;
   type: 'Apollo' | 'Luna' | 'Chang-e' | 'Other';
+  geotechnical?: {
+    bulk_density?: number;
+    friction_angle?: number;
+    cohesion?: number;
+    bearing_capacity?: number;
+  };
 }
 
 export interface CustomMarker {

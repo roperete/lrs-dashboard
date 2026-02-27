@@ -71,7 +71,10 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite }: LunarS
             <TH col="mission" label="Mission" />
             <TH col="type" label="Program" />
             <TH col="date" label="Date" />
-            <TH col="samples" label="Samples Returned" />
+            <TH col="samples" label="Samples" />
+            <th className="py-2.5 px-3 text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10 text-right">Density</th>
+            <th className="py-2.5 px-3 text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10 text-right">Friction</th>
+            <th className="py-2.5 px-3 text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10 text-right">Cohesion</th>
           </tr>
         </thead>
         <tbody>
@@ -95,6 +98,9 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite }: LunarS
                 <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.type}</td>
                 <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.date}</td>
                 <td className="py-2 px-3 text-slate-300 whitespace-nowrap">{s.samples_returned || '\u2014'}</td>
+                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.bulk_density ?? '\u2014'}</td>
+                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.friction_angle != null ? `${s.geotechnical.friction_angle}\u00B0` : '\u2014'}</td>
+                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.cohesion != null ? `${s.geotechnical.cohesion} kPa` : '\u2014'}</td>
               </tr>
             );
           })}

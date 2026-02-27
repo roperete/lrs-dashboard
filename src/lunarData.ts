@@ -10,7 +10,8 @@ export const lunarSites: LunarSite[] = [
     lng: 23.47297,
     samples_returned: '21.5 kg',
     description: 'First human landing on the Moon. Collected basaltic rocks and breccias.',
-    type: 'Apollo'
+    type: 'Apollo',
+    geotechnical: { bulk_density: 1.61, friction_angle: 40.7, cohesion: 1.06, bearing_capacity: 10.0 }
   },
   {
     id: 'A12',
@@ -21,7 +22,8 @@ export const lunarSites: LunarSite[] = [
     lng: -23.42157,
     samples_returned: '34.3 kg',
     description: 'Landed near Surveyor 3. Collected basaltic samples from the Oceanus Procellarum.',
-    type: 'Apollo'
+    type: 'Apollo',
+    geotechnical: { bulk_density: 1.65, friction_angle: 31.8, cohesion: 1.04, bearing_capacity: 8.5 }
   },
   {
     id: 'A14',
@@ -32,7 +34,8 @@ export const lunarSites: LunarSite[] = [
     lng: -17.47136,
     samples_returned: '42.3 kg',
     description: 'Landed in the Fra Mauro highlands. Collected impact-derived breccias.',
-    type: 'Apollo'
+    type: 'Apollo',
+    geotechnical: { bulk_density: 1.54, friction_angle: 39.0, cohesion: 0.18 }
   },
   {
     id: 'A15',
@@ -43,7 +46,8 @@ export const lunarSites: LunarSite[] = [
     lng: 3.63386,
     samples_returned: '77.3 kg',
     description: 'First use of the Lunar Roving Vehicle. Collected samples from the Apennine Front and Hadley Rille.',
-    type: 'Apollo'
+    type: 'Apollo',
+    geotechnical: { bulk_density: 1.70, friction_angle: 48.1, cohesion: 0.77 }
   },
   {
     id: 'A16',
@@ -54,7 +58,8 @@ export const lunarSites: LunarSite[] = [
     lng: 15.49812,
     samples_returned: '95.7 kg',
     description: 'Landed in the lunar highlands. Collected ancient crustal rocks (anorthosites).',
-    type: 'Apollo'
+    type: 'Apollo',
+    geotechnical: { bulk_density: 1.68, friction_angle: 47.5, cohesion: 0.77 }
   },
   {
     id: 'A17',
@@ -65,7 +70,8 @@ export const lunarSites: LunarSite[] = [
     lng: 30.77168,
     samples_returned: '110.5 kg',
     description: 'Final Apollo mission. Collected orange soil and diverse rock types from a valley.',
-    type: 'Apollo'
+    type: 'Apollo',
+    geotechnical: { bulk_density: 1.81, friction_angle: 36.7, cohesion: 0.60 }
   },
   {
     id: 'L16',
@@ -76,7 +82,8 @@ export const lunarSites: LunarSite[] = [
     lng: 56.30,
     samples_returned: '101 g',
     description: 'First robotic sample return mission. Collected mare basalt.',
-    type: 'Luna'
+    type: 'Luna',
+    geotechnical: { bulk_density: 1.44, friction_angle: 26.7, cohesion: 3.81 }
   },
   {
     id: 'L20',
@@ -87,7 +94,8 @@ export const lunarSites: LunarSite[] = [
     lng: 56.55,
     samples_returned: '55 g',
     description: 'Robotic sample return from the highlands near Mare Fecunditatis.',
-    type: 'Luna'
+    type: 'Luna',
+    geotechnical: { bulk_density: 1.31, friction_angle: 24.4, cohesion: 4.66 }
   },
   {
     id: 'L24',
@@ -98,7 +106,8 @@ export const lunarSites: LunarSite[] = [
     lng: 62.21,
     samples_returned: '170 g',
     description: 'Final Soviet Luna mission. Collected samples from Mare Crisium.',
-    type: 'Luna'
+    type: 'Luna',
+    geotechnical: { bulk_density: 1.85 }
   },
   {
     id: 'CE5',
@@ -110,6 +119,93 @@ export const lunarSites: LunarSite[] = [
     samples_returned: '1.73 kg',
     description: 'First Chinese sample return mission. Collected young volcanic rocks.',
     type: 'Chang-e'
+  },
+  {
+    id: 'CE3',
+    name: "Chang'e 3 - Mare Imbrium",
+    mission: "Chang'e 3",
+    date: 'December 14, 2013',
+    lat: 44.1214,
+    lng: -19.5116,
+    description: 'First Chinese lunar lander. Deployed Yutu rover on the Mare Imbrium.',
+    type: 'Chang-e',
+    geotechnical: { bulk_density: 1.63 }
+  },
+  {
+    id: 'CE4',
+    name: "Chang'e 4 - Von Karman Crater",
+    mission: "Chang'e 4",
+    date: 'January 3, 2019',
+    lat: -45.4446,
+    lng: 177.5991,
+    description: 'First landing on the lunar far side. Deployed Yutu-2 rover in the South Pole-Aitken basin.',
+    type: 'Chang-e'
+  },
+  {
+    id: 'CH3',
+    name: 'Chandrayaan 3 - Shiv Shakti Point',
+    mission: 'Chandrayaan 3',
+    date: 'August 23, 2023',
+    lat: -69.3726,
+    lng: 32.3188,
+    description: 'First Indian lunar landing. Pragyan rover explored near the south pole.',
+    type: 'Other',
+    geotechnical: { bulk_density: 1.30 }
+  },
+  {
+    id: 'S1',
+    name: 'Surveyor 1 - Flamsteed P',
+    mission: 'Surveyor 1',
+    date: 'June 2, 1966',
+    lat: -2.474,
+    lng: -43.339,
+    description: 'First US soft landing on the Moon. Conducted surface mechanics experiments.',
+    type: 'Other',
+    geotechnical: { bulk_density: 1.50, friction_angle: 41.7, cohesion: 4.52, bearing_capacity: 40.0 }
+  },
+  {
+    id: 'S3',
+    name: 'Surveyor 3 - Oceanus Procellarum',
+    mission: 'Surveyor 3',
+    date: 'April 20, 1967',
+    lat: -3.0155,
+    lng: -23.4219,
+    description: 'Equipped with soil mechanics surface sampler. Later visited by Apollo 12.',
+    type: 'Other',
+    geotechnical: { bulk_density: 1.50, friction_angle: 42.0, cohesion: 0.47, bearing_capacity: 40.0 }
+  },
+  {
+    id: 'L13',
+    name: 'Luna 13 - Oceanus Procellarum',
+    mission: 'Luna 13',
+    date: 'December 24, 1966',
+    lat: 18.87,
+    lng: -62.05,
+    description: 'Soviet lander with soil mechanics probe. Measured regolith bearing capacity.',
+    type: 'Luna',
+    geotechnical: { bulk_density: 0.80, friction_angle: 32.0, cohesion: 0.49, bearing_capacity: 68.0 }
+  },
+  {
+    id: 'L17',
+    name: 'Luna 17 - Mare Imbrium',
+    mission: 'Luna 17',
+    date: 'November 17, 1970',
+    lat: 38.28,
+    lng: -35.00,
+    description: 'Deployed Lunokhod 1, the first robotic rover on the Moon.',
+    type: 'Luna',
+    geotechnical: { friction_angle: 34.3, cohesion: 2.25, bearing_capacity: 33.3 }
+  },
+  {
+    id: 'L21',
+    name: 'Luna 21 - Le Monnier Crater',
+    mission: 'Luna 21',
+    date: 'January 15, 1973',
+    lat: 25.85,
+    lng: 30.45,
+    description: 'Deployed Lunokhod 2. Traversed 37 km across the lunar surface.',
+    type: 'Luna',
+    geotechnical: { friction_angle: 22.5, cohesion: 5.0, bearing_capacity: 40.0 }
   },
   {
     id: 'CE6',
