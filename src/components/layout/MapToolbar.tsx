@@ -4,7 +4,7 @@ import { cn } from '../../utils/cn';
 
 interface MapToolbarProps {
   planet: 'earth' | 'moon';
-  viewMode: 'globe' | 'map';
+  viewMode: 'globe' | 'map' | 'table';
   drawingMode: 'none' | 'marker' | 'polygon';
   tempPolygonPointsCount: number;
   onToggleEarthTexture?: () => void;

@@ -1,17 +1,17 @@
 import React from 'react';
 import {
   Database, Globe as GlobeIcon, Moon as MoonIcon,
-  Map as MapIcon, Navigation, ChevronRight,
+  Map as MapIcon, Table2, Navigation, ChevronRight,
 } from 'lucide-react';
 import { cn } from '../../utils/cn';
 
 interface AppHeaderProps {
   planet: 'earth' | 'moon';
-  viewMode: 'globe' | 'map';
+  viewMode: 'globe' | 'map' | 'table';
   geocodingQuery: string;
   sidebarOpen?: boolean;
   onPlanetChange: (p: 'earth' | 'moon') => void;
-  onViewModeChange: (v: 'globe' | 'map') => void;
+  onViewModeChange: (v: 'globe' | 'map' | 'table') => void;
   onGeocodingQueryChange: (q: string) => void;
   onGeocode: (e: React.FormEvent) => void;
 }
@@ -62,6 +62,11 @@ export function AppHeader({
               className={cn("flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-sm font-medium transition-all",
                 viewMode === 'map' ? "bg-emerald-500 text-slate-950" : "text-slate-400 hover:text-white")}>
               <MapIcon size={16} /><span className="hidden sm:inline">2D</span>
+            </button>
+            <button onClick={() => onViewModeChange('table')}
+              className={cn("flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-sm font-medium transition-all",
+                viewMode === 'table' ? "bg-emerald-500 text-slate-950" : "text-slate-400 hover:text-white")}>
+              <Table2 size={16} /><span className="hidden sm:inline">Table</span>
             </button>
           </div>
 

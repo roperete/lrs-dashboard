@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import type { CustomMarker, CustomPolygon } from '../types';
 
 export function useMapState() {
-  const [viewMode, setViewMode] = useState<'globe' | 'map'>('globe');
+  const [viewMode, setViewMode] = useState<'globe' | 'map' | 'table'>('globe');
   const [planet, setPlanet] = useState<'earth' | 'moon'>('earth');
   const [mapCenter, setMapCenter] = useState<[number, number]>([20, 0]);
   const [mapZoom, setMapZoom] = useState(2);

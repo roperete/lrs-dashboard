@@ -22,6 +22,7 @@ import { Sidebar } from './components/sidebar/Sidebar';
 import { SimulantPanel } from './components/panels/SimulantPanel';
 import { LunarSitePanel } from './components/panels/LunarSitePanel';
 import { ComparisonPanel } from './components/panels/ComparisonPanel';
+import { SimulantTable } from './components/table/SimulantTable';
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint);
@@ -209,35 +210,49 @@ export default function App() {
       />
 
       {/* Visualization */}
-      <div className="absolute inset-0 z-0">
-        {mapState.viewMode === 'globe' ? (
-          <GlobeView
-            ref={globeRef}
-            planet={mapState.planet} earthTexture={earthTexture}
-            singlePoints={singlePoints} clusterPoints={clusterPoints}
-            onPointClick={handleGlobePointClick}
-            onClusterClick={(cluster, event) => {
-              setClusterPopover({ x: event.clientX, y: event.clientY, simulants: cluster.simulants });
-            }}
-            onAltitudeChange={handleAltitudeChange}
-          />
-        ) : (
-          <LeafletMap
-            planet={mapState.planet}
-            mapCenter={mapState.mapCenter} mapZoom={mapState.mapZoom}
-            filteredSimulants={displayedSimulants} siteBySimulant={siteBySimulant}
-            lunarSites={lunarSites}
-            customMarkers={mapState.customMarkers} customPolygons={mapState.customPolygons}
-            tempPolygonPoints={mapState.tempPolygonPoints}
-            proximityCenter={mapState.proximityCenter} proximityRadius={mapState.proximityRadius}
-            onSimulantClick={handleSimulantClick} onLunarSiteClick={handleLunarSiteClick}
-            onMapClick={handleMapClick}
-          />
-        )}
-      </div>
+      {mapState.viewMode === 'table' ? (
+        <div className={`absolute inset-0 z-0 pt-24 pb-4 transition-[padding] duration-300 ${isSidebarOpen ? 'pl-[21rem]' : 'pl-4'} pr-4`}>
+          <div className="h-full bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden">
+            <SimulantTable
+              simulants={displayedSimulants}
+              selectedSimulantId={panelState.panel1.simulantId}
+              chemicalBySimulant={chemicalBySimulant}
+              physicalPropsBySimulant={physicalPropsBySimulant}
+              onSelectSimulant={(id) => panelState.selectSimulant(id)}
+            />
+          </div>
+        </div>
+      ) : (
+        <div className="absolute inset-0 z-0">
+          {mapState.viewMode === 'globe' ? (
+            <GlobeView
+              ref={globeRef}
+              planet={mapState.planet} earthTexture={earthTexture}
+              singlePoints={singlePoints} clusterPoints={clusterPoints}
+              onPointClick={handleGlobePointClick}
+              onClusterClick={(cluster, event) => {
+                setClusterPopover({ x: event.clientX, y: event.clientY, simulants: cluster.simulants });
+              }}
+              onAltitudeChange={handleAltitudeChange}
+            />
+          ) : (
+            <LeafletMap
+              planet={mapState.planet}
+              mapCenter={mapState.mapCenter} mapZoom={mapState.mapZoom}
+              filteredSimulants={displayedSimulants} siteBySimulant={siteBySimulant}
+              lunarSites={lunarSites}
+              customMarkers={mapState.customMarkers} customPolygons={mapState.customPolygons}
+              tempPolygonPoints={mapState.tempPolygonPoints}
+              proximityCenter={mapState.proximityCenter} proximityRadius={mapState.proximityRadius}
+              onSimulantClick={handleSimulantClick} onLunarSiteClick={handleLunarSiteClick}
+              onMapClick={handleMapClick}
+            />
+          )}
+        </div>
+      )}
 
       {/* Cluster popover (3D globe) */}
-      {clusterPopover && (
+      {clusterPopover && mapState.viewMode !== 'table' && (
         <div data-cluster-popover
           className="fixed z-[60] bg-slate-900/95 backdrop-blur-xl border border-slate-700 rounded-xl shadow-2xl p-2 min-w-[220px] max-h-[300px] overflow-y-auto"
           style={{ left: Math.min(clusterPopover.x + 12, window.innerWidth - 240), top: clusterPopover.y - 8 }}
@@ -324,16 +339,18 @@ export default function App() {
         </button>
       )}
 
-      {/* Right toolbar */}
-      <MapToolbar
-        planet={mapState.planet} viewMode={mapState.viewMode}
-        drawingMode={mapState.drawingMode}
-        tempPolygonPointsCount={mapState.tempPolygonPoints.length}
-        onToggleEarthTexture={toggleEarthTexture}
-        onLocate={handleLocate}
-        onSetDrawingMode={handleSetDrawingMode}
-        onFinishPolygon={mapState.finishPolygon}
-      />
+      {/* Right toolbar (hidden in table mode) */}
+      {mapState.viewMode !== 'table' && (
+        <MapToolbar
+          planet={mapState.planet} viewMode={mapState.viewMode}
+          drawingMode={mapState.drawingMode}
+          tempPolygonPointsCount={mapState.tempPolygonPoints.length}
+          onToggleEarthTexture={toggleEarthTexture}
+          onLocate={handleLocate}
+          onSetDrawingMode={handleSetDrawingMode}
+          onFinishPolygon={mapState.finishPolygon}
+        />
+      )}
 
       {/* Detail panels */}
       <AnimatePresence>
@@ -384,7 +401,9 @@ export default function App() {
         />
       </div>
 
-      <LegendWidget planet={mapState.planet} sidebarOpen={isSidebarOpen} />
+      {mapState.viewMode !== 'table' && (
+        <LegendWidget planet={mapState.planet} sidebarOpen={isSidebarOpen} />
+      )}
     </div>
   );
 }
