@@ -66,7 +66,7 @@ const landerIcons: Record<string, L.DivIcon> = {
   Apollo: makeLanderIcon('#f59e0b'),
   Luna: makeLanderIcon('#ef4444'),
   'Chang-e': makeLanderIcon('#3b82f6'),
-  Other: makeLanderIcon('#8b5cf6'),
+  Other: makeLanderIcon('#a855f7'),
 };
 
 // Custom cluster icon creator

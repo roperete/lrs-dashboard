@@ -127,16 +127,14 @@ export function Sidebar(props: SidebarProps) {
           </span>
         </div>
 
-        <button
-          onClick={() => {
-            const u = [97,108,118,97,114,111].map(c => String.fromCharCode(c)).join('');
-            const d = [116,104,101,115,112,114,105,110,103,105,110,115,116,105,116,117,116,101,46,99,111,109].map(c => String.fromCharCode(c)).join('');
-            window.location.href = `mailto:${u}@${d}?subject=${encodeURIComponent('LRS Database Feedback')}`;
-          }}
-          className="w-full flex items-center justify-center gap-2 py-2 bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 rounded-lg text-xs text-slate-500 hover:text-slate-300 transition-all"
+        <a
+          href="https://thespringinstitute.com/contact-us/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full flex items-center justify-center gap-2 py-2 bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 rounded-lg text-xs text-slate-500 hover:text-slate-300 transition-all no-underline"
         >
           <MessageSquare size={12} />Report Issue / Feedback
-        </button>
+        </a>
 
         {/* CNES Sponsor Badge */}
         <a href="https://cnes.fr" target="_blank" rel="noopener noreferrer"

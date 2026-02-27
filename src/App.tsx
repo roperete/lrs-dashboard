@@ -94,7 +94,7 @@ export default function App() {
       const moonPoints = lunarSites.map(s => ({
         id: s.id, name: s.name, mission: s.mission, date: s.date,
         lat: s.lat, lon: s.lng,
-        color: s.type === 'Apollo' ? '#f59e0b' : s.type === 'Luna' ? '#ef4444' : '#3b82f6',
+        color: s.type === 'Apollo' ? '#f59e0b' : s.type === 'Luna' ? '#ef4444' : s.type === 'Chang-e' ? '#3b82f6' : '#a855f7',
       }));
       return { singlePoints: moonPoints, clusterPoints: [] as ClusterPoint[] };
     }
@@ -209,18 +209,14 @@ export default function App() {
               <SimulantTable
                 simulants={displayedSimulants}
                 selectedSimulantId={panelState.panel1.simulantId}
-                compareSimulantId={panelState.panel2.simulantId}
                 chemicalBySimulant={chemicalBySimulant}
                 compositionBySimulant={compositionBySimulant}
                 referencesBySimulant={referencesBySimulant}
                 onSelectSimulant={(id) => panelState.selectSimulant(id)}
-                onToggleCompare={(id) => {
-                  if (panelState.panel2.simulantId === id) {
-                    panelState.closePanel(2);
-                  } else {
-                    panelState.openPanel(2, id);
-                    panelState.setShowComparison(true);
-                  }
+                onCompareSelected={(id1, id2) => {
+                  panelState.openPanel(1, id1);
+                  panelState.openPanel(2, id2);
+                  panelState.setShowComparison(true);
                 }}
                 onExportSelected={(selected) => {
                   const ts = new Date().toISOString().slice(0, 10);
