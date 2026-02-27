@@ -26,6 +26,7 @@ import { exportToCSV } from './utils/csv';
 const GlobeView = lazy(() => import('./components/map/GlobeView').then(m => ({ default: m.GlobeView })));
 const LeafletMap = lazy(() => import('./components/map/LeafletMap').then(m => ({ default: m.LeafletMap })));
 const ComparisonPanel = lazy(() => import('./components/panels/ComparisonPanel').then(m => ({ default: m.ComparisonPanel })));
+const CrossComparisonPanel = lazy(() => import('./components/panels/CrossComparisonPanel').then(m => ({ default: m.CrossComparisonPanel })));
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint);
@@ -67,6 +68,7 @@ export default function App() {
   const selectedSimulant = useMemo(() => simulants.find(s => s.simulant_id === panelState.panel1.simulantId) || null, [simulants, panelState.panel1.simulantId]);
   const selectedSimulant2 = useMemo(() => simulants.find(s => s.simulant_id === panelState.panel2.simulantId) || null, [simulants, panelState.panel2.simulantId]);
   const selectedLunarSite = useMemo(() => lunarSites.find(s => s.id === panelState.selectedLunarSiteId) || null, [panelState.selectedLunarSiteId]);
+  const selectedLunarRef = useMemo(() => lunarReference.find(r => r.mission === panelState.selectedLunarRefMission) || null, [lunarReference, panelState.selectedLunarRefMission]);
 
   // Globe altitude state for zoom-reactive clustering
   const [globeAltitude, setGlobeAltitude] = useState(2.5);
@@ -365,6 +367,9 @@ export default function App() {
             lunarReferences={lunarReference}
             physicalProperties={physicalPropsBySimulant.get(selectedSimulant.simulant_id)}
             purchaseInfo={purchaseBySimulant.get(selectedSimulant.simulant_id)}
+            selectedLunarRefMission={panelState.selectedLunarRefMission}
+            onSelectLunarRef={panelState.setSelectedLunarRefMission}
+            onOpenCrossComparison={() => panelState.setShowCrossComparison(true)}
             pinned={panelState.panel1.pinned}
             onClose={() => panelState.closePanel(1)}
             onTogglePin={() => panelState.togglePin(1)}
@@ -385,6 +390,18 @@ export default function App() {
               composition2={compositionBySimulant.get(selectedSimulant2.simulant_id) || []}
               chemicalComposition2={chemicalBySimulant.get(selectedSimulant2.simulant_id) || []}
               onClose={() => panelState.setShowComparison(false)}
+            />
+          </Suspense>
+        )}
+        {panelState.showCrossComparison && selectedSimulant && selectedLunarRef && (
+          <Suspense fallback={null}>
+            <CrossComparisonPanel
+              simulant={selectedSimulant}
+              chemicalCompositions={chemicalBySimulant.get(selectedSimulant.simulant_id) || []}
+              compositions={compositionBySimulant.get(selectedSimulant.simulant_id) || []}
+              mineralGroups={mineralGroupsBySimulant.get(selectedSimulant.simulant_id) || []}
+              lunarRef={selectedLunarRef}
+              onClose={() => panelState.setShowCrossComparison(false)}
             />
           </Suspense>
         )}

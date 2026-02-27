@@ -9,6 +9,8 @@ export function usePanelState() {
   const [compareMode, setCompareMode] = useState(false);
   const [selectedLunarSiteId, setSelectedLunarSiteId] = useState<string | null>(null);
   const [showComparison, setShowComparison] = useState(false);
+  const [selectedLunarRefMission, setSelectedLunarRefMission] = useState<string | null>(null);
+  const [showCrossComparison, setShowCrossComparison] = useState(false);
 
   const openPanel = useCallback((panelNum: 1 | 2, simulantId: string) => {
     const setter = panelNum === 1 ? setPanel1 : setPanel2;
@@ -51,10 +53,11 @@ export function usePanelState() {
 
   return {
     panel1, panel2, compareMode, showComparison,
-    selectedLunarSiteId,
+    selectedLunarSiteId, selectedLunarRefMission, showCrossComparison,
     openPanel, closePanel, minimizeUnpinned, togglePin, toggleCompare,
     selectSimulant,
     setSelectedLunarSiteId,
     setShowComparison,
+    setSelectedLunarRefMission, setShowCrossComparison,
   };
 }
