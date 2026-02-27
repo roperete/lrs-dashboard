@@ -1,5 +1,5 @@
-import React from 'react';
-import { Database, Search, ChevronLeft, ArrowRightLeft } from 'lucide-react';
+import React, { useState } from 'react';
+import { Database, Search, ChevronLeft, ArrowRightLeft, ChevronDown } from 'lucide-react';
 import { motion } from 'motion/react';
 import { DynamicFilterPanel } from './DynamicFilterPanel';
 import { SimulantList } from './SimulantList';
@@ -43,6 +43,8 @@ interface SidebarProps {
 }
 
 export function Sidebar(props: SidebarProps) {
+  const [listOpen, setListOpen] = useState(false);
+
   return (
     <motion.div
       initial={{ x: '-100%' }} animate={{ x: 0 }} exit={{ x: '-100%' }}
@@ -104,19 +106,32 @@ export function Sidebar(props: SidebarProps) {
         )}
       </div>
 
-      {/* List */}
+      {/* Collapsible simulant list */}
       <div className="flex-1 overflow-y-auto px-4 pb-4 pt-2 custom-scrollbar">
-        <SimulantList
-          planet={props.planet}
-          simulants={props.filteredSimulants}
-          lunarSites={props.lunarSites}
-          selectedSimulantId={props.selectedSimulantId}
-          selectedSimulantId2={props.selectedSimulantId2}
-          selectedLunarSiteId={props.selectedLunarSiteId}
-          onSelectSimulant={props.onSelectSimulant}
-          onSelectCompare={props.onSelectCompare}
-          onSelectLunarSite={props.onSelectLunarSite}
-        />
+        <button
+          onClick={() => setListOpen(!listOpen)}
+          className="w-full flex items-center justify-between py-2 px-1 text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-slate-300 transition-colors"
+        >
+          <span>
+            {props.planet === 'earth'
+              ? `All Simulants (${props.filteredSimulants.length})`
+              : `All Missions (${props.lunarSites.length})`}
+          </span>
+          <ChevronDown size={14} className={`transition-transform ${listOpen ? 'rotate-180' : ''}`} />
+        </button>
+        {listOpen && (
+          <SimulantList
+            planet={props.planet}
+            simulants={props.filteredSimulants}
+            lunarSites={props.lunarSites}
+            selectedSimulantId={props.selectedSimulantId}
+            selectedSimulantId2={props.selectedSimulantId2}
+            selectedLunarSiteId={props.selectedLunarSiteId}
+            onSelectSimulant={props.onSelectSimulant}
+            onSelectCompare={props.onSelectCompare}
+            onSelectLunarSite={props.onSelectLunarSite}
+          />
+        )}
       </div>
 
       {/* Footer */}

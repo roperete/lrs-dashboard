@@ -223,10 +223,19 @@ export default function App() {
             <SimulantTable
               simulants={displayedSimulants}
               selectedSimulantId={panelState.panel1.simulantId}
+              compareSimulantId={panelState.panel2.simulantId}
               chemicalBySimulant={chemicalBySimulant}
               compositionBySimulant={compositionBySimulant}
               referencesBySimulant={referencesBySimulant}
               onSelectSimulant={(id) => panelState.selectSimulant(id)}
+              onToggleCompare={(id) => {
+                if (panelState.panel2.simulantId === id) {
+                  panelState.closePanel(2);
+                } else {
+                  panelState.openPanel(2, id);
+                  panelState.setShowComparison(true);
+                }
+              }}
             />
           </div>
         </div>
