@@ -47,6 +47,13 @@ export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const isMobile = useIsMobile();
 
+  // Ensure splash screen shows for at least 1 second
+  const [splashDone, setSplashDone] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setSplashDone(true), 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const mapState = useMapState();
   const panelState = usePanelState();
   const filterState = useFilters(simulants, compositions, chemicalCompositions, mineralGroups, chemicalBySimulant, compositionBySimulant, referencesBySimulant);
@@ -196,7 +203,7 @@ export default function App() {
     if (mode !== 'polygon') mapState.setTempPolygonPoints([]);
   }, [mapState]);
 
-  if (loading) return <LoadingScreen />;
+  if (loading || !splashDone) return <LoadingScreen />;
 
   return (
     <div className="h-screen w-screen bg-slate-950 overflow-hidden relative font-sans text-slate-200">
