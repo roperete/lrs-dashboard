@@ -13,7 +13,7 @@ interface MineralChartProps {
 }
 
 export function MineralChart({ compositions, mineralGroups, lunarReferences, simulantName }: MineralChartProps) {
-  const [view, setView] = useState<'detailed' | 'groups'>('detailed');
+  const [view, setView] = useState<'detailed' | 'groups'>('groups');
   const [displayMode, setDisplayMode] = useState<'chart' | 'table'>('table');
   const [lunarRefMission, setLunarRefMission] = useState('');
 
