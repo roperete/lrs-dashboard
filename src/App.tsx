@@ -1,7 +1,6 @@
-import React, { useState, useMemo, useRef, useCallback, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useCallback, useEffect, lazy, Suspense } from 'react';
 import { AnimatePresence } from 'motion/react';
 import { ChevronRight, Menu } from 'lucide-react';
-import L from 'leaflet';
 
 import { useDataContext } from './context/DataContext';
 import { useFilters } from './hooks/useFilters';
@@ -9,21 +8,24 @@ import { useMapState } from './hooks/useMapState';
 import { usePanelState } from './hooks/usePanelState';
 import { lunarSites } from './lunarData';
 import { clusterByDistance, altitudeToRadius } from './utils/clusterPoints';
+import type { GlobeViewHandle, ClusterPoint } from './components/map/GlobeView';
 
 import { LoadingScreen } from './components/controls/LoadingScreen';
 import { LegendWidget } from './components/controls/LegendWidget';
 import { ExportMenu } from './components/controls/ExportMenu';
 import { AppHeader } from './components/layout/AppHeader';
 import { MapToolbar } from './components/layout/MapToolbar';
-import { GlobeView, type GlobeViewHandle, type ClusterPoint } from './components/map/GlobeView';
-import { LeafletMap } from './components/map/LeafletMap';
 import { Sidebar } from './components/sidebar/Sidebar';
 import { SimulantPanel } from './components/panels/SimulantPanel';
 import { LunarSitePanel } from './components/panels/LunarSitePanel';
-import { ComparisonPanel } from './components/panels/ComparisonPanel';
 import { SimulantTable } from './components/table/SimulantTable';
 import { LunarSampleTable } from './components/table/LunarSampleTable';
 import { exportToCSV } from './utils/csv';
+
+// Lazy-loaded heavy components (three.js, leaflet, recharts)
+const GlobeView = lazy(() => import('./components/map/GlobeView').then(m => ({ default: m.GlobeView })));
+const LeafletMap = lazy(() => import('./components/map/LeafletMap').then(m => ({ default: m.LeafletMap })));
+const ComparisonPanel = lazy(() => import('./components/panels/ComparisonPanel').then(m => ({ default: m.ComparisonPanel })));
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint);
@@ -149,7 +151,7 @@ export default function App() {
     });
   }, [mapState, flyTo]);
 
-  const handleMapClick = useCallback((_e: L.LeafletMouseEvent) => {
+  const handleMapClick = useCallback((_e: any) => {
     // No-op: drawing and proximity features removed
   }, []);
 
@@ -228,27 +230,29 @@ export default function App() {
         </div>
       ) : (
         <div className="absolute inset-0 z-0">
-          {mapState.viewMode === 'globe' ? (
-            <GlobeView
-              ref={globeRef}
-              planet={mapState.planet} earthTexture={earthTexture}
-              singlePoints={singlePoints} clusterPoints={clusterPoints}
-              onPointClick={handleGlobePointClick}
-              onClusterClick={(cluster, event) => {
-                setClusterPopover({ x: event.clientX, y: event.clientY, simulants: cluster.simulants });
-              }}
-              onAltitudeChange={handleAltitudeChange}
-            />
-          ) : (
-            <LeafletMap
-              planet={mapState.planet}
-              mapCenter={mapState.mapCenter} mapZoom={mapState.mapZoom}
-              filteredSimulants={displayedSimulants} siteBySimulant={siteBySimulant}
-              lunarSites={lunarSites}
-              onSimulantClick={handleSimulantClick} onLunarSiteClick={handleLunarSiteClick}
-              onMapClick={handleMapClick}
-            />
-          )}
+          <Suspense fallback={<LoadingScreen />}>
+            {mapState.viewMode === 'globe' ? (
+              <GlobeView
+                ref={globeRef}
+                planet={mapState.planet} earthTexture={earthTexture}
+                singlePoints={singlePoints} clusterPoints={clusterPoints}
+                onPointClick={handleGlobePointClick}
+                onClusterClick={(cluster, event) => {
+                  setClusterPopover({ x: event.clientX, y: event.clientY, simulants: cluster.simulants });
+                }}
+                onAltitudeChange={handleAltitudeChange}
+              />
+            ) : (
+              <LeafletMap
+                planet={mapState.planet}
+                mapCenter={mapState.mapCenter} mapZoom={mapState.mapZoom}
+                filteredSimulants={displayedSimulants} siteBySimulant={siteBySimulant}
+                lunarSites={lunarSites}
+                onSimulantClick={handleSimulantClick} onLunarSiteClick={handleLunarSiteClick}
+                onMapClick={handleMapClick}
+              />
+            )}
+          </Suspense>
         </div>
       )}
 
@@ -372,15 +376,17 @@ export default function App() {
           <LunarSitePanel site={selectedLunarSite} onClose={() => panelState.setSelectedLunarSiteId(null)} />
         )}
         {panelState.showComparison && selectedSimulant && selectedSimulant2 && (
-          <ComparisonPanel
-            simulant1={selectedSimulant}
-            composition1={compositionBySimulant.get(selectedSimulant.simulant_id) || []}
-            chemicalComposition1={chemicalBySimulant.get(selectedSimulant.simulant_id) || []}
-            simulant2={selectedSimulant2}
-            composition2={compositionBySimulant.get(selectedSimulant2.simulant_id) || []}
-            chemicalComposition2={chemicalBySimulant.get(selectedSimulant2.simulant_id) || []}
-            onClose={() => panelState.setShowComparison(false)}
-          />
+          <Suspense fallback={null}>
+            <ComparisonPanel
+              simulant1={selectedSimulant}
+              composition1={compositionBySimulant.get(selectedSimulant.simulant_id) || []}
+              chemicalComposition1={chemicalBySimulant.get(selectedSimulant.simulant_id) || []}
+              simulant2={selectedSimulant2}
+              composition2={compositionBySimulant.get(selectedSimulant2.simulant_id) || []}
+              chemicalComposition2={chemicalBySimulant.get(selectedSimulant2.simulant_id) || []}
+              onClose={() => panelState.setShowComparison(false)}
+            />
+          </Suspense>
         )}
       </AnimatePresence>
 

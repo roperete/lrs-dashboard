@@ -8,6 +8,17 @@ export default defineConfig(({mode}) => {
   return {
     base: '/lrs-dashboard/',
     plugins: [react(), tailwindcss()],
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor-three': ['three', 'react-globe.gl'],
+            'vendor-leaflet': ['leaflet', 'react-leaflet', 'react-leaflet-cluster'],
+            'vendor-recharts': ['recharts'],
+          },
+        },
+      },
+    },
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
