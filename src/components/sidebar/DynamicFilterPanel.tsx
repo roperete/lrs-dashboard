@@ -56,6 +56,8 @@ export function DynamicFilterPanel({
         ]};
       case 'chemical':
         return { options: filterOptions.chemicals.map(c => ({ label: c, value: c })) };
+      case 'lunar_ref':
+        return { options: (filterOptions as any).lunarRefs?.map((r: string) => ({ label: r, value: r })) || [] };
       default:
         return {};
     }
@@ -89,7 +91,7 @@ export function DynamicFilterPanel({
         </button>
 
         {menuOpen && (
-          <div className="absolute top-full left-0 right-0 mt-1 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-[100] max-h-60 overflow-y-auto">
+          <div className="absolute bottom-full left-0 right-0 mb-1 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-[100] max-h-60 overflow-y-auto">
             {FILTER_PROPERTIES.map(p => (
               <button key={p.property}
                 onClick={() => { onAddFilter(p.property); setMenuOpen(false); }}

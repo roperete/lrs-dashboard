@@ -35,6 +35,7 @@ export function SimulantTable({
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
   const [checkedIds, setCheckedIds] = useState<Set<string>>(new Set());
+  const [expandedRefId, setExpandedRefId] = useState<string | null>(null);
 
   const toggleChecked = (id: string) => {
     setCheckedIds(prev => {
@@ -152,47 +153,66 @@ export function SimulantTable({
             const isCompare = s.simulant_id === compareSimulantId;
             const ref = getFirstReference(s.simulant_id, referencesBySimulant);
             return (
-              <tr
-                key={s.simulant_id}
-                onClick={() => onSelectSimulant(s.simulant_id)}
-                className={cn(
-                  "cursor-pointer transition-colors border-b border-slate-800/50",
-                  isSelected
-                    ? "bg-emerald-500/15 hover:bg-emerald-500/20"
-                    : isCompare
-                      ? "bg-blue-500/10 hover:bg-blue-500/15"
-                      : i % 2 === 0
-                        ? "bg-slate-900/40 hover:bg-slate-800/60"
-                        : "bg-slate-900/20 hover:bg-slate-800/60",
+              <React.Fragment key={s.simulant_id}>
+                <tr
+                  onClick={() => onSelectSimulant(s.simulant_id)}
+                  className={cn(
+                    "cursor-pointer transition-colors border-b border-slate-800/50",
+                    isSelected
+                      ? "bg-emerald-500/15 hover:bg-emerald-500/20"
+                      : isCompare
+                        ? "bg-blue-500/10 hover:bg-blue-500/15"
+                        : i % 2 === 0
+                          ? "bg-slate-900/40 hover:bg-slate-800/60"
+                          : "bg-slate-900/20 hover:bg-slate-800/60",
+                  )}
+                >
+                  <td className="py-2 px-2 text-center">
+                    <input type="checkbox" checked={checkedIds.has(s.simulant_id)}
+                      onChange={(e) => { e.stopPropagation(); toggleChecked(s.simulant_id); }}
+                      onClick={(e) => e.stopPropagation()}
+                      className="accent-emerald-500 cursor-pointer" />
+                  </td>
+                  <td className={cn("py-2 px-3 font-medium whitespace-nowrap", isSelected ? "text-emerald-400" : "text-slate-200")}>{s.name}</td>
+                  <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.type || DASH}</td>
+                  <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{getCountryDisplay(s.country_code)}</td>
+                  <td className="py-2 px-3 text-slate-400 max-w-[200px] truncate">{s.institution || DASH}</td>
+                  <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.availability || DASH}</td>
+                  <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.lunar_sample_reference || DASH}</td>
+                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{typeof s.release_date === 'number' ? s.release_date : DASH}</td>
+                  <td className="py-2 px-3 text-center">
+                    {chemicalBySimulant.has(s.simulant_id)
+                      ? <Check size={16} className="inline text-emerald-400" />
+                      : <span className="text-slate-600">{DASH}</span>
+                    }
+                  </td>
+                  <td className="py-2 px-3 text-center">
+                    {compositionBySimulant.has(s.simulant_id)
+                      ? <Check size={16} className="inline text-emerald-400" />
+                      : <span className="text-slate-600">{DASH}</span>
+                    }
+                  </td>
+                  <td className="py-2 px-3 text-slate-400 max-w-[300px] truncate cursor-pointer hover:text-slate-200 transition-colors"
+                    title={ref ? 'Click to expand' : undefined}
+                    onClick={(e) => { e.stopPropagation(); if (ref) setExpandedRefId(expandedRefId === s.simulant_id ? null : s.simulant_id); }}>
+                    {ref || DASH}
+                  </td>
+                </tr>
+                {expandedRefId === s.simulant_id && ref && (
+                  <tr className="bg-slate-800/30">
+                    <td colSpan={11} className="px-6 py-3">
+                      <p className="text-xs text-slate-300 leading-relaxed whitespace-normal">{ref}</p>
+                      {(referencesBySimulant.get(s.simulant_id)?.length || 0) > 1 && (
+                        <div className="mt-2 space-y-1">
+                          {referencesBySimulant.get(s.simulant_id)!.slice(1).map((r, idx) => (
+                            <p key={idx} className="text-xs text-slate-400 leading-relaxed whitespace-normal">{r.reference_text}</p>
+                          ))}
+                        </div>
+                      )}
+                    </td>
+                  </tr>
                 )}
-              >
-                <td className="py-2 px-2 text-center">
-                  <input type="checkbox" checked={checkedIds.has(s.simulant_id)}
-                    onChange={(e) => { e.stopPropagation(); toggleChecked(s.simulant_id); }}
-                    onClick={(e) => e.stopPropagation()}
-                    className="accent-emerald-500 cursor-pointer" />
-                </td>
-                <td className={cn("py-2 px-3 font-medium whitespace-nowrap", isSelected ? "text-emerald-400" : "text-slate-200")}>{s.name}</td>
-                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.type || DASH}</td>
-                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{getCountryDisplay(s.country_code)}</td>
-                <td className="py-2 px-3 text-slate-400 max-w-[200px] truncate">{s.institution || DASH}</td>
-                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.availability || DASH}</td>
-                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.lunar_sample_reference || DASH}</td>
-                <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{typeof s.release_date === 'number' ? s.release_date : DASH}</td>
-                <td className="py-2 px-3 text-center">
-                  {chemicalBySimulant.has(s.simulant_id)
-                    ? <Check size={16} className="inline text-emerald-400" />
-                    : <span className="text-slate-600">{DASH}</span>
-                  }
-                </td>
-                <td className="py-2 px-3 text-center">
-                  {compositionBySimulant.has(s.simulant_id)
-                    ? <Check size={16} className="inline text-emerald-400" />
-                    : <span className="text-slate-600">{DASH}</span>
-                  }
-                </td>
-                <td className="py-2 px-3 text-slate-400 max-w-[300px] truncate" title={ref || undefined}>{ref || DASH}</td>
-              </tr>
+              </React.Fragment>
             );
           })}
         </tbody>

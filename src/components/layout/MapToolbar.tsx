@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { Layers, Locate, Maximize, Minimize } from 'lucide-react';
+import { Layers, Locate, Maximize, Minimize, Home } from 'lucide-react';
 import { cn } from '../../utils/cn';
 
 interface MapToolbarProps {
@@ -7,11 +7,12 @@ interface MapToolbarProps {
   viewMode: 'globe' | 'map' | 'table';
   onToggleEarthTexture?: () => void;
   onLocate: () => void;
+  onHome: () => void;
 }
 
 export function MapToolbar({
   planet, viewMode,
-  onToggleEarthTexture, onLocate,
+  onToggleEarthTexture, onLocate, onHome,
 }: MapToolbarProps) {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
@@ -48,6 +49,10 @@ export function MapToolbar({
             <Locate size={20} />
           </button>
         )}
+        <button onClick={onHome}
+          className="p-3 bg-slate-800 hover:bg-slate-700 rounded-xl text-slate-400 hover:text-emerald-400 transition-all shadow-lg" title="Reset View">
+          <Home size={20} />
+        </button>
       </div>
     </div>
   );

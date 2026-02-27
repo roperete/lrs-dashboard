@@ -22,6 +22,7 @@ import { SimulantPanel } from './components/panels/SimulantPanel';
 import { LunarSitePanel } from './components/panels/LunarSitePanel';
 import { ComparisonPanel } from './components/panels/ComparisonPanel';
 import { SimulantTable } from './components/table/SimulantTable';
+import { LunarSampleTable } from './components/table/LunarSampleTable';
 import { exportToCSV } from './utils/csv';
 
 function useIsMobile(breakpoint = 768) {
@@ -47,10 +48,10 @@ export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const isMobile = useIsMobile();
 
-  // Ensure splash screen shows for at least 1 second
+  // Ensure splash screen shows for at least 2 seconds
   const [splashDone, setSplashDone] = useState(false);
   useEffect(() => {
-    const timer = setTimeout(() => setSplashDone(true), 1000);
+    const timer = setTimeout(() => setSplashDone(true), 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -198,27 +199,35 @@ export default function App() {
       {mapState.viewMode === 'table' ? (
         <div className={`absolute inset-0 z-0 pt-24 pb-4 transition-[padding] duration-300 ${isSidebarOpen ? 'pl-[21rem]' : 'pl-4'} pr-4`}>
           <div className="h-full bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden">
-            <SimulantTable
-              simulants={displayedSimulants}
-              selectedSimulantId={panelState.panel1.simulantId}
-              compareSimulantId={panelState.panel2.simulantId}
-              chemicalBySimulant={chemicalBySimulant}
-              compositionBySimulant={compositionBySimulant}
-              referencesBySimulant={referencesBySimulant}
-              onSelectSimulant={(id) => panelState.selectSimulant(id)}
-              onToggleCompare={(id) => {
-                if (panelState.panel2.simulantId === id) {
-                  panelState.closePanel(2);
-                } else {
-                  panelState.openPanel(2, id);
-                  panelState.setShowComparison(true);
-                }
-              }}
-              onExportSelected={(selected) => {
-                const ts = new Date().toISOString().slice(0, 10);
-                exportToCSV(selected, compositions, chemicalCompositions, references, `lrs_selected_${ts}.csv`);
-              }}
-            />
+            {mapState.planet === 'moon' ? (
+              <LunarSampleTable
+                sites={lunarSites}
+                selectedSiteId={panelState.selectedLunarSiteId}
+                onSelectSite={(id) => panelState.setSelectedLunarSiteId(id)}
+              />
+            ) : (
+              <SimulantTable
+                simulants={displayedSimulants}
+                selectedSimulantId={panelState.panel1.simulantId}
+                compareSimulantId={panelState.panel2.simulantId}
+                chemicalBySimulant={chemicalBySimulant}
+                compositionBySimulant={compositionBySimulant}
+                referencesBySimulant={referencesBySimulant}
+                onSelectSimulant={(id) => panelState.selectSimulant(id)}
+                onToggleCompare={(id) => {
+                  if (panelState.panel2.simulantId === id) {
+                    panelState.closePanel(2);
+                  } else {
+                    panelState.openPanel(2, id);
+                    panelState.setShowComparison(true);
+                  }
+                }}
+                onExportSelected={(selected) => {
+                  const ts = new Date().toISOString().slice(0, 10);
+                  exportToCSV(selected, compositions, chemicalCompositions, references, `lrs_selected_${ts}.csv`);
+                }}
+              />
+            )}
           </div>
         </div>
       ) : (
@@ -335,6 +344,11 @@ export default function App() {
           planet={mapState.planet} viewMode={mapState.viewMode}
           onToggleEarthTexture={toggleEarthTexture}
           onLocate={handleLocate}
+          onHome={() => {
+            mapState.setMapCenter([46.6, 2.3]); // France/Europe
+            mapState.setMapZoom(4);
+            flyTo(46.6, 2.3, 2.5);
+          }}
         />
       )}
 
@@ -351,7 +365,6 @@ export default function App() {
             lunarReferences={lunarReference}
             physicalProperties={physicalPropsBySimulant.get(selectedSimulant.simulant_id)}
             purchaseInfo={purchaseBySimulant.get(selectedSimulant.simulant_id)}
-            mineralSourcingByMineral={mineralSourcingByMineral}
             pinned={panelState.panel1.pinned}
             onClose={() => panelState.closePanel(1)}
             onTogglePin={() => panelState.togglePin(1)}
