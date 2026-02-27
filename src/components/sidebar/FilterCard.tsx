@@ -59,7 +59,7 @@ function CategoricalInput({ filter, options, groups, onUpdate }: {
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-[100] max-h-48 overflow-y-auto">
+        <div className="absolute top-full left-0 right-0 mt-1 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-[100] max-h-48 overflow-y-auto overflow-x-hidden">
           <div className="flex items-center gap-2 p-1.5 border-b border-slate-700">
             <button onClick={() => onUpdate(allOptions.map(o => o.value))}
               className="text-[10px] px-1.5 py-0.5 bg-slate-700 hover:bg-slate-600 rounded text-emerald-400 font-bold">All</button>

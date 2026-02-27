@@ -3,12 +3,11 @@ import { PanelShell } from '../ui/PanelShell';
 import { SimulantProperties } from './SimulantProperties';
 import { PhysicalPropertiesSection } from './PhysicalPropertiesSection';
 import { PurchaseSection } from './PurchaseSection';
-import { MineralSourcingSection } from './MineralSourcingSection';
 import { MineralChart } from './MineralChart';
 import { ChemicalChart } from './ChemicalChart';
 import { ReferencesSection } from './ReferencesSection';
 import { downloadSimulantCSV } from '../../utils/csv';
-import type { Simulant, Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, LunarReference, PhysicalProperties, PurchaseInfo, MineralSourcing } from '../../types';
+import type { Simulant, Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, LunarReference, PhysicalProperties, PurchaseInfo } from '../../types';
 
 interface SimulantPanelProps {
   simulant: Simulant;
@@ -20,7 +19,6 @@ interface SimulantPanelProps {
   lunarReferences: LunarReference[];
   physicalProperties?: PhysicalProperties;
   purchaseInfo?: PurchaseInfo;
-  mineralSourcingByMineral: Map<string, MineralSourcing>;
   pinned?: boolean;
   onClose: () => void;
   onTogglePin?: () => void;
@@ -30,7 +28,7 @@ interface SimulantPanelProps {
 
 export function SimulantPanel({
   simulant, compositions, chemicalCompositions, references, mineralGroups, extra,
-  lunarReferences, physicalProperties, purchaseInfo, mineralSourcingByMineral,
+  lunarReferences, physicalProperties, purchaseInfo,
   pinned, onClose, onTogglePin, onCompare, compareActive,
 }: SimulantPanelProps) {
   return (
@@ -41,9 +39,6 @@ export function SimulantPanel({
       pinned={pinned}
       onClose={onClose}
       onTogglePin={onTogglePin}
-      onSearchSources={() => {
-        window.open(`https://scholar.google.com/scholar?q=${encodeURIComponent(simulant.name + ' lunar regolith')}`, '_blank');
-      }}
       onDownload={() => downloadSimulantCSV(simulant, compositions, chemicalCompositions, references)}
       onCompare={onCompare}
       compareActive={compareActive}
@@ -62,18 +57,13 @@ export function SimulantPanel({
           simulantName={simulant.name}
         />
 
-        <MineralSourcingSection
-          compositions={compositions}
-          mineralSourcingByMineral={mineralSourcingByMineral}
-        />
-
         <ChemicalChart
           chemicalCompositions={chemicalCompositions}
           lunarReferences={lunarReferences}
           simulantName={simulant.name}
         />
 
-        <ReferencesSection references={references} />
+        <ReferencesSection references={references} simulantName={simulant.name} />
       </div>
     </PanelShell>
   );

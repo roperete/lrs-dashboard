@@ -1,9 +1,10 @@
 import React from 'react';
-import { BookOpen, ExternalLink } from 'lucide-react';
+import { BookOpen, ExternalLink, Search } from 'lucide-react';
 import type { Reference } from '../../types';
 
 interface ReferencesSectionProps {
   references: Reference[];
+  simulantName?: string;
 }
 
 /** Extract the first URL from text, if any */
@@ -56,8 +57,8 @@ function ReferenceCard({ reference, index }: { reference: Reference; index: numb
   );
 }
 
-export function ReferencesSection({ references }: ReferencesSectionProps) {
-  if (references.length === 0) return null;
+export function ReferencesSection({ references, simulantName }: ReferencesSectionProps) {
+  if (references.length === 0 && !simulantName) return null;
 
   const compSources = references.filter(r => r.reference_type === 'composition');
   const usageStudies = references.filter(r => r.reference_type === 'usage' || (!r.reference_type && r.reference_type !== 'composition'));
@@ -86,6 +87,22 @@ export function ReferencesSection({ references }: ReferencesSectionProps) {
             {usageStudies.map((r, i) => <ReferenceCard key={r.reference_id} reference={r} index={i} />)}
           </div>
         </div>
+      )}
+
+      {simulantName && (
+        <a
+          href={`https://scholar.google.com/scholar?q=${encodeURIComponent(simulantName + ' lunar regolith simulant')}`}
+          target="_blank" rel="noopener noreferrer"
+          className="flex items-center gap-3 p-3 mt-4 bg-emerald-500/5 hover:bg-emerald-500/10 border border-emerald-500/20 rounded-xl transition-all group"
+        >
+          <div className="p-2 bg-emerald-500/10 rounded-lg group-hover:bg-emerald-500/20 transition-colors">
+            <Search size={16} className="text-emerald-400" />
+          </div>
+          <div>
+            <p className="text-sm font-medium text-emerald-400">Find Citing Sources</p>
+            <p className="text-[10px] text-slate-500">Search Google Scholar for papers citing {simulantName}</p>
+          </div>
+        </a>
       )}
     </div>
   );

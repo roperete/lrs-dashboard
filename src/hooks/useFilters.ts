@@ -13,7 +13,7 @@ export const FILTER_PROPERTIES: FilterPropertyMeta[] = [
   { property: 'has_mineralogy', label: 'Has Mineralogy Data', type: 'boolean' },
   { property: 'year', label: 'Year', type: 'range' },
   { property: 'reference', label: 'Reference', type: 'text' },
-  { property: 'lunar_ref', label: 'Lunar Sample Ref', type: 'text' },
+  { property: 'lunar_ref', label: 'Lunar Sample Ref', type: 'categorical' },
 ];
 
 let nextId = 1;
@@ -76,7 +76,9 @@ export function useFilters(
 
     const availabilities = [...new Set(simulants.map(s => s.availability).filter(Boolean))].sort();
 
-    return { types, countries, institutions, detailedMinerals, groupMinerals, chemicals, availabilities };
+    const lunarRefs = [...new Set(simulants.map(s => s.lunar_sample_reference).filter(Boolean))].sort() as string[];
+
+    return { types, countries, institutions, detailedMinerals, groupMinerals, chemicals, availabilities, lunarRefs };
   }, [simulants, compositions, mineralGroups, chemicalCompositions]);
 
   return {

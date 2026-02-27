@@ -58,7 +58,7 @@ export function LoadingScreen() {
           {/* Developed by The Spring Institute */}
           <div className="flex flex-col items-center gap-2">
             <span className="text-[10px] text-slate-600 uppercase tracking-wider">Developed by</span>
-            <span className="text-sm font-semibold text-slate-300 tracking-wide">The Spring Institute</span>
+            <img src={import.meta.env.BASE_URL + 'assets/spring-logo.png'} alt="The Spring Institute" className="h-12 w-auto object-contain" />
           </div>
         </div>
       </motion.div>

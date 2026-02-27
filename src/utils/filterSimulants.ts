@@ -124,9 +124,7 @@ export function filterSimulantsDynamic(
         }
 
         case 'lunar_ref': {
-          const q = (f.values[0] || '').toLowerCase();
-          if (!q) break;
-          if (!(s.lunar_sample_reference || '').toLowerCase().includes(q)) return false;
+          if (!f.values.includes(s.lunar_sample_reference || '')) return false;
           break;
         }
       }

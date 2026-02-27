@@ -2,7 +2,6 @@ import React, { useState, useMemo, useRef, useCallback, useEffect } from 'react'
 import { AnimatePresence } from 'motion/react';
 import { ChevronRight, Menu } from 'lucide-react';
 import L from 'leaflet';
-import * as turf from '@turf/turf';
 
 import { useDataContext } from './context/DataContext';
 import { useFilters } from './hooks/useFilters';
@@ -23,6 +22,8 @@ import { SimulantPanel } from './components/panels/SimulantPanel';
 import { LunarSitePanel } from './components/panels/LunarSitePanel';
 import { ComparisonPanel } from './components/panels/ComparisonPanel';
 import { SimulantTable } from './components/table/SimulantTable';
+import { LunarSampleTable } from './components/table/LunarSampleTable';
+import { exportToCSV } from './utils/csv';
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint);
@@ -47,10 +48,10 @@ export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const isMobile = useIsMobile();
 
-  // Ensure splash screen shows for at least 1 second
+  // Ensure splash screen shows for at least 2 seconds
   const [splashDone, setSplashDone] = useState(false);
   useEffect(() => {
-    const timer = setTimeout(() => setSplashDone(true), 1000);
+    const timer = setTimeout(() => setSplashDone(true), 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -58,17 +59,7 @@ export default function App() {
   const panelState = usePanelState();
   const filterState = useFilters(simulants, compositions, chemicalCompositions, mineralGroups, chemicalBySimulant, compositionBySimulant, referencesBySimulant);
 
-  // Proximity filtering on top of filter results
-  const displayedSimulants = useMemo(() => {
-    if (!mapState.proximityCenter) return filterState.filteredSimulants;
-    return filterState.filteredSimulants.filter(s => {
-      const site = siteBySimulant.get(s.simulant_id);
-      if (!site || site.lat === null || site.lon === null) return false;
-      const from = turf.point([mapState.proximityCenter![1], mapState.proximityCenter![0]]);
-      const to = turf.point([site.lon!, site.lat!]);
-      return turf.distance(from, to) <= mapState.proximityRadius;
-    });
-  }, [filterState.filteredSimulants, mapState.proximityCenter, mapState.proximityRadius, siteBySimulant]);
+  const displayedSimulants = filterState.filteredSimulants;
 
   // Lookup selected entities
   const selectedSimulant = useMemo(() => simulants.find(s => s.simulant_id === panelState.panel1.simulantId) || null, [simulants, panelState.panel1.simulantId]);
@@ -158,17 +149,9 @@ export default function App() {
     });
   }, [mapState, flyTo]);
 
-  const handleMapClick = useCallback((e: L.LeafletMouseEvent) => {
-    if (!mapState.proximityCenter && mapState.drawingMode === 'none') {
-      mapState.setProximityCenter([e.latlng.lat, e.latlng.lng]);
-      return;
-    }
-    if (mapState.drawingMode === 'marker') {
-      mapState.addCustomMarker(e.latlng.lat, e.latlng.lng);
-    } else if (mapState.drawingMode === 'polygon') {
-      mapState.addPolygonPoint([e.latlng.lat, e.latlng.lng]);
-    }
-  }, [mapState]);
+  const handleMapClick = useCallback((_e: L.LeafletMouseEvent) => {
+    // No-op: drawing and proximity features removed
+  }, []);
 
   const handleGlobePointClick = useCallback((p: any) => {
     if (mapState.planet === 'moon') {
@@ -198,10 +181,6 @@ export default function App() {
     mapState.setViewMode('globe');
   }, [mapState]);
 
-  const handleSetDrawingMode = useCallback((mode: 'none' | 'marker' | 'polygon') => {
-    mapState.setDrawingMode(mode);
-    if (mode !== 'polygon') mapState.setTempPolygonPoints([]);
-  }, [mapState]);
 
   if (loading || !splashDone) return <LoadingScreen />;
 
@@ -220,23 +199,35 @@ export default function App() {
       {mapState.viewMode === 'table' ? (
         <div className={`absolute inset-0 z-0 pt-24 pb-4 transition-[padding] duration-300 ${isSidebarOpen ? 'pl-[21rem]' : 'pl-4'} pr-4`}>
           <div className="h-full bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden">
-            <SimulantTable
-              simulants={displayedSimulants}
-              selectedSimulantId={panelState.panel1.simulantId}
-              compareSimulantId={panelState.panel2.simulantId}
-              chemicalBySimulant={chemicalBySimulant}
-              compositionBySimulant={compositionBySimulant}
-              referencesBySimulant={referencesBySimulant}
-              onSelectSimulant={(id) => panelState.selectSimulant(id)}
-              onToggleCompare={(id) => {
-                if (panelState.panel2.simulantId === id) {
-                  panelState.closePanel(2);
-                } else {
-                  panelState.openPanel(2, id);
-                  panelState.setShowComparison(true);
-                }
-              }}
-            />
+            {mapState.planet === 'moon' ? (
+              <LunarSampleTable
+                sites={lunarSites}
+                selectedSiteId={panelState.selectedLunarSiteId}
+                onSelectSite={(id) => panelState.setSelectedLunarSiteId(id)}
+              />
+            ) : (
+              <SimulantTable
+                simulants={displayedSimulants}
+                selectedSimulantId={panelState.panel1.simulantId}
+                compareSimulantId={panelState.panel2.simulantId}
+                chemicalBySimulant={chemicalBySimulant}
+                compositionBySimulant={compositionBySimulant}
+                referencesBySimulant={referencesBySimulant}
+                onSelectSimulant={(id) => panelState.selectSimulant(id)}
+                onToggleCompare={(id) => {
+                  if (panelState.panel2.simulantId === id) {
+                    panelState.closePanel(2);
+                  } else {
+                    panelState.openPanel(2, id);
+                    panelState.setShowComparison(true);
+                  }
+                }}
+                onExportSelected={(selected) => {
+                  const ts = new Date().toISOString().slice(0, 10);
+                  exportToCSV(selected, compositions, chemicalCompositions, references, `lrs_selected_${ts}.csv`);
+                }}
+              />
+            )}
           </div>
         </div>
       ) : (
@@ -258,9 +249,6 @@ export default function App() {
               mapCenter={mapState.mapCenter} mapZoom={mapState.mapZoom}
               filteredSimulants={displayedSimulants} siteBySimulant={siteBySimulant}
               lunarSites={lunarSites}
-              customMarkers={mapState.customMarkers} customPolygons={mapState.customPolygons}
-              tempPolygonPoints={mapState.tempPolygonPoints}
-              proximityCenter={mapState.proximityCenter} proximityRadius={mapState.proximityRadius}
               onSimulantClick={handleSimulantClick} onLunarSiteClick={handleLunarSiteClick}
               onMapClick={handleMapClick}
             />
@@ -281,7 +269,7 @@ export default function App() {
             <button key={s.simulant_id}
               className="w-full text-left px-2 py-2 rounded-lg hover:bg-slate-800 transition-colors flex items-center gap-2"
               onClick={() => { handleGlobePointClick(s); setClusterPopover(null); }}>
-              <span className="text-emerald-400 font-medium text-sm">{s.name}</span>
+              <span className={`font-medium text-sm ${s.type?.toLowerCase().includes('highland') ? 'text-cyan-400' : 'text-emerald-400'}`}>{s.name}</span>
               <span className="text-slate-500 text-xs ml-auto">{s.type}</span>
             </button>
           ))}
@@ -337,14 +325,6 @@ export default function App() {
             }}
             onCompareClick={() => panelState.setShowComparison(true)}
             onClose={() => setIsSidebarOpen(false)}
-            proximityCenter={mapState.proximityCenter}
-            proximityRadius={mapState.proximityRadius}
-            onSetProximityCenter={() => {
-              if (mapState.viewMode === 'map') alert('Click on the map to set proximity center');
-              else handleLocate();
-            }}
-            onClearProximityCenter={() => mapState.setProximityCenter(null)}
-            onProximityRadiusChange={mapState.setProximityRadius}
             totalCount={simulants.length}
           />
         )}
@@ -362,12 +342,13 @@ export default function App() {
       {mapState.viewMode !== 'table' && (
         <MapToolbar
           planet={mapState.planet} viewMode={mapState.viewMode}
-          drawingMode={mapState.drawingMode}
-          tempPolygonPointsCount={mapState.tempPolygonPoints.length}
           onToggleEarthTexture={toggleEarthTexture}
           onLocate={handleLocate}
-          onSetDrawingMode={handleSetDrawingMode}
-          onFinishPolygon={mapState.finishPolygon}
+          onHome={() => {
+            mapState.setMapCenter([46.6, 2.3]); // France/Europe
+            mapState.setMapZoom(4);
+            flyTo(46.6, 2.3, 2.5);
+          }}
         />
       )}
 
@@ -384,7 +365,6 @@ export default function App() {
             lunarReferences={lunarReference}
             physicalProperties={physicalPropsBySimulant.get(selectedSimulant.simulant_id)}
             purchaseInfo={purchaseBySimulant.get(selectedSimulant.simulant_id)}
-            mineralSourcingByMineral={mineralSourcingByMineral}
             pinned={panelState.panel1.pinned}
             onClose={() => panelState.closePanel(1)}
             onTogglePin={() => panelState.togglePin(1)}

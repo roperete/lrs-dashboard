@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Database, Search, ChevronLeft, ArrowRightLeft, ChevronDown } from 'lucide-react';
+import { Database, Search, ChevronLeft, ArrowRightLeft, ChevronDown, MessageSquare } from 'lucide-react';
 import { motion } from 'motion/react';
 import { DynamicFilterPanel } from './DynamicFilterPanel';
 import { SimulantList } from './SimulantList';
-import { ProximitySearch } from './ProximitySearch';
 import type { Simulant, LunarSite, DynamicFilter, FilterProperty } from '../../types';
 
 interface SidebarProps {
@@ -34,11 +33,6 @@ interface SidebarProps {
   onSelectLunarSite: (id: string) => void;
   onCompareClick: () => void;
   onClose: () => void;
-  proximityCenter: [number, number] | null;
-  proximityRadius: number;
-  onSetProximityCenter: () => void;
-  onClearProximityCenter: () => void;
-  onProximityRadiusChange: (r: number) => void;
   totalCount: number;
 }
 
@@ -57,7 +51,7 @@ export function Sidebar(props: SidebarProps) {
           <div>
             <h2 className="text-lg font-bold text-white tracking-tight">Lunar Regolith Simulants</h2>
             <p className="text-[10px] text-slate-500 uppercase tracking-widest">
-              Interactive Database <span className="text-emerald-400 font-semibold">v2.3.0</span>
+              Interactive Database <span className="text-emerald-400 font-semibold">v2.6.0</span>
             </p>
           </div>
           <button onClick={props.onClose} className="p-1.5 hover:bg-slate-800 rounded-lg text-slate-500">
@@ -83,17 +77,6 @@ export function Sidebar(props: SidebarProps) {
             onUpdateFilter={props.onUpdateFilter}
             onRemoveFilter={props.onRemoveFilter}
             onClearAll={props.clearAllFilters}
-          />
-        )}
-
-        {/* Proximity Search (Earth only) */}
-        {props.planet === 'earth' && (
-          <ProximitySearch
-            proximityCenter={props.proximityCenter}
-            proximityRadius={props.proximityRadius}
-            onSetCenter={props.onSetProximityCenter}
-            onClearCenter={props.onClearProximityCenter}
-            onRadiusChange={props.onProximityRadiusChange}
           />
         )}
 
@@ -143,6 +126,17 @@ export function Sidebar(props: SidebarProps) {
               : `${props.lunarSites.length} missions`}
           </span>
         </div>
+
+        <button
+          onClick={() => {
+            const u = [97,108,118,97,114,111].map(c => String.fromCharCode(c)).join('');
+            const d = [116,104,101,115,112,114,105,110,103,105,110,115,116,105,116,117,116,101,46,99,111,109].map(c => String.fromCharCode(c)).join('');
+            window.location.href = `mailto:${u}@${d}?subject=${encodeURIComponent('LRS Database Feedback')}`;
+          }}
+          className="w-full flex items-center justify-center gap-2 py-2 bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 rounded-lg text-xs text-slate-500 hover:text-slate-300 transition-all"
+        >
+          <MessageSquare size={12} />Report Issue / Feedback
+        </button>
 
         {/* CNES Sponsor Badge */}
         <a href="https://cnes.fr" target="_blank" rel="noopener noreferrer"

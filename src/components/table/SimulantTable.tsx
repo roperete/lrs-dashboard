@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { ChevronUp, ChevronDown, Check, ArrowRightLeft } from 'lucide-react';
+import { ChevronUp, ChevronDown, Check, ArrowRightLeft, Download } from 'lucide-react';
 import { cn } from '../../utils/cn';
 import { getCountryDisplay } from '../../utils/countryUtils';
 import type { Simulant, ChemicalComposition, Composition, Reference } from '../../types';
@@ -18,6 +18,7 @@ interface SimulantTableProps {
   referencesBySimulant: Map<string, Reference[]>;
   onSelectSimulant: (id: string) => void;
   onToggleCompare: (id: string) => void;
+  onExportSelected?: (simulants: Simulant[]) => void;
 }
 
 function getFirstReference(id: string, referencesBySimulant: Map<string, Reference[]>): string {
@@ -29,10 +30,24 @@ function getFirstReference(id: string, referencesBySimulant: Map<string, Referen
 export function SimulantTable({
   simulants, selectedSimulantId, compareSimulantId,
   chemicalBySimulant, compositionBySimulant, referencesBySimulant,
-  onSelectSimulant, onToggleCompare,
+  onSelectSimulant, onToggleCompare, onExportSelected,
 }: SimulantTableProps) {
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
+  const [checkedIds, setCheckedIds] = useState<Set<string>>(new Set());
+  const [expandedRefId, setExpandedRefId] = useState<string | null>(null);
+
+  const toggleChecked = (id: string) => {
+    setCheckedIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      return next;
+    });
+  };
+  const toggleAll = () => {
+    if (checkedIds.size === simulants.length) setCheckedIds(new Set());
+    else setCheckedIds(new Set(simulants.map(s => s.simulant_id)));
+  };
 
   const toggleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -100,11 +115,26 @@ export function SimulantTable({
   );
 
   return (
-    <div className="h-full overflow-auto scrollbar-thin">
+    <div className="h-full overflow-auto scrollbar-thin relative">
+      {checkedIds.size > 0 && onExportSelected && (
+        <div className="sticky top-0 z-20 flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border-b border-emerald-500/30 backdrop-blur-sm">
+          <span className="text-xs font-medium text-emerald-400">{checkedIds.size} selected</span>
+          <button
+            onClick={() => onExportSelected(simulants.filter(s => checkedIds.has(s.simulant_id)))}
+            className="flex items-center gap-1.5 px-2.5 py-1 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 rounded-lg text-xs text-emerald-300 transition-colors"
+          >
+            <Download size={12} />Export Selected
+          </button>
+          <button onClick={() => setCheckedIds(new Set())} className="text-xs text-slate-500 hover:text-slate-300 ml-auto">Clear</button>
+        </div>
+      )}
       <table className="w-full text-sm border-collapse">
         <thead>
           <tr className="border-b border-slate-700/50">
-            <th className="py-2.5 px-2 text-xs font-bold text-slate-500 uppercase sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10 w-8" />
+            <th className="py-2.5 px-2 text-center sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10 w-8">
+              <input type="checkbox" checked={checkedIds.size === simulants.length && simulants.length > 0} onChange={toggleAll}
+                className="accent-emerald-500 cursor-pointer" />
+            </th>
             <TH col="name" label="Name" />
             <TH col="type" label="Type" />
             <TH col="country" label="Country" />
@@ -123,53 +153,66 @@ export function SimulantTable({
             const isCompare = s.simulant_id === compareSimulantId;
             const ref = getFirstReference(s.simulant_id, referencesBySimulant);
             return (
-              <tr
-                key={s.simulant_id}
-                onClick={() => onSelectSimulant(s.simulant_id)}
-                className={cn(
-                  "cursor-pointer transition-colors border-b border-slate-800/50",
-                  isSelected
-                    ? "bg-emerald-500/15 hover:bg-emerald-500/20"
-                    : isCompare
-                      ? "bg-blue-500/10 hover:bg-blue-500/15"
-                      : i % 2 === 0
-                        ? "bg-slate-900/40 hover:bg-slate-800/60"
-                        : "bg-slate-900/20 hover:bg-slate-800/60",
+              <React.Fragment key={s.simulant_id}>
+                <tr
+                  onClick={() => onSelectSimulant(s.simulant_id)}
+                  className={cn(
+                    "cursor-pointer transition-colors border-b border-slate-800/50",
+                    isSelected
+                      ? "bg-emerald-500/15 hover:bg-emerald-500/20"
+                      : isCompare
+                        ? "bg-blue-500/10 hover:bg-blue-500/15"
+                        : i % 2 === 0
+                          ? "bg-slate-900/40 hover:bg-slate-800/60"
+                          : "bg-slate-900/20 hover:bg-slate-800/60",
+                  )}
+                >
+                  <td className="py-2 px-2 text-center">
+                    <input type="checkbox" checked={checkedIds.has(s.simulant_id)}
+                      onChange={(e) => { e.stopPropagation(); toggleChecked(s.simulant_id); }}
+                      onClick={(e) => e.stopPropagation()}
+                      className="accent-emerald-500 cursor-pointer" />
+                  </td>
+                  <td className={cn("py-2 px-3 font-medium whitespace-nowrap", isSelected ? "text-emerald-400" : "text-slate-200")}>{s.name}</td>
+                  <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.type || DASH}</td>
+                  <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{getCountryDisplay(s.country_code)}</td>
+                  <td className="py-2 px-3 text-slate-400 max-w-[200px] truncate">{s.institution || DASH}</td>
+                  <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.availability || DASH}</td>
+                  <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.lunar_sample_reference || DASH}</td>
+                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{typeof s.release_date === 'number' ? s.release_date : DASH}</td>
+                  <td className="py-2 px-3 text-center">
+                    {chemicalBySimulant.has(s.simulant_id)
+                      ? <Check size={16} className="inline text-emerald-400" />
+                      : <span className="text-slate-600">{DASH}</span>
+                    }
+                  </td>
+                  <td className="py-2 px-3 text-center">
+                    {compositionBySimulant.has(s.simulant_id)
+                      ? <Check size={16} className="inline text-emerald-400" />
+                      : <span className="text-slate-600">{DASH}</span>
+                    }
+                  </td>
+                  <td className="py-2 px-3 text-slate-400 max-w-[300px] truncate cursor-pointer hover:text-slate-200 transition-colors"
+                    title={ref ? 'Click to expand' : undefined}
+                    onClick={(e) => { e.stopPropagation(); if (ref) setExpandedRefId(expandedRefId === s.simulant_id ? null : s.simulant_id); }}>
+                    {ref || DASH}
+                  </td>
+                </tr>
+                {expandedRefId === s.simulant_id && ref && (
+                  <tr className="bg-slate-800/30">
+                    <td colSpan={11} className="px-6 py-3">
+                      <p className="text-xs text-slate-300 leading-relaxed whitespace-normal">{ref}</p>
+                      {(referencesBySimulant.get(s.simulant_id)?.length || 0) > 1 && (
+                        <div className="mt-2 space-y-1">
+                          {referencesBySimulant.get(s.simulant_id)!.slice(1).map((r, idx) => (
+                            <p key={idx} className="text-xs text-slate-400 leading-relaxed whitespace-normal">{r.reference_text}</p>
+                          ))}
+                        </div>
+                      )}
+                    </td>
+                  </tr>
                 )}
-              >
-                <td className="py-2 px-2 text-center">
-                  <button
-                    onClick={(e) => { e.stopPropagation(); onToggleCompare(s.simulant_id); }}
-                    className={cn(
-                      "p-1 rounded-md transition-all",
-                      isCompare ? "bg-blue-500 text-white" : "text-slate-600 hover:text-slate-300 hover:bg-slate-700",
-                    )}
-                    title="Compare"
-                  >
-                    <ArrowRightLeft size={12} />
-                  </button>
-                </td>
-                <td className={cn("py-2 px-3 font-medium whitespace-nowrap", isSelected ? "text-emerald-400" : "text-slate-200")}>{s.name}</td>
-                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.type || DASH}</td>
-                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{getCountryDisplay(s.country_code)}</td>
-                <td className="py-2 px-3 text-slate-400 max-w-[200px] truncate">{s.institution || DASH}</td>
-                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.availability || DASH}</td>
-                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.lunar_sample_reference || DASH}</td>
-                <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{typeof s.release_date === 'number' ? s.release_date : DASH}</td>
-                <td className="py-2 px-3 text-center">
-                  {chemicalBySimulant.has(s.simulant_id)
-                    ? <Check size={16} className="inline text-emerald-400" />
-                    : <span className="text-slate-600">{DASH}</span>
-                  }
-                </td>
-                <td className="py-2 px-3 text-center">
-                  {compositionBySimulant.has(s.simulant_id)
-                    ? <Check size={16} className="inline text-emerald-400" />
-                    : <span className="text-slate-600">{DASH}</span>
-                  }
-                </td>
-                <td className="py-2 px-3 text-slate-400 max-w-[300px] truncate" title={ref || undefined}>{ref || DASH}</td>
-              </tr>
+              </React.Fragment>
             );
           })}
         </tbody>

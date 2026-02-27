@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import {
   MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents,
-  Polyline, Polygon, Circle,
 } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import L from 'leaflet';
-import type { Simulant, Site, CustomMarker, CustomPolygon, LunarSite } from '../../types';
+import type { Simulant, Site, LunarSite } from '../../types';
 
 // Fix Leaflet default icons
 // @ts-ignore
@@ -102,11 +101,6 @@ interface LeafletMapProps {
   filteredSimulants: Simulant[];
   siteBySimulant: Map<string, Site>;
   lunarSites: LunarSite[];
-  customMarkers: CustomMarker[];
-  customPolygons: CustomPolygon[];
-  tempPolygonPoints: [number, number][];
-  proximityCenter: [number, number] | null;
-  proximityRadius: number;
   onSimulantClick: (id: string, lat: number, lon: number) => void;
   onLunarSiteClick: (id: string, lat: number, lng: number) => void;
   onMapClick: (e: L.LeafletMouseEvent) => void;
@@ -115,8 +109,6 @@ interface LeafletMapProps {
 export function LeafletMap({
   planet, mapCenter, mapZoom,
   filteredSimulants, siteBySimulant, lunarSites,
-  customMarkers, customPolygons, tempPolygonPoints,
-  proximityCenter, proximityRadius,
   onSimulantClick, onLunarSiteClick, onMapClick,
 }: LeafletMapProps) {
   const tileUrl = planet === 'moon'
@@ -172,28 +164,6 @@ export function LeafletMap({
         </Marker>
       ))}
 
-      {/* Custom markers */}
-      {customMarkers.map(m => (
-        <Marker key={m.id} position={[m.lat, m.lng]}>
-          <Popup>{m.label}</Popup>
-        </Marker>
-      ))}
-
-      {/* Custom polygons */}
-      {customPolygons.map(p => (
-        <Polygon key={p.id} positions={p.positions} pathOptions={{ color: p.color, fillOpacity: 0.2 }} />
-      ))}
-
-      {/* Temp polygon drawing */}
-      {tempPolygonPoints.length > 1 && (
-        <Polyline positions={tempPolygonPoints} pathOptions={{ color: '#10b981', dashArray: '5 5' }} />
-      )}
-
-      {/* Proximity circle */}
-      {proximityCenter && (
-        <Circle center={proximityCenter} radius={proximityRadius * 1000}
-          pathOptions={{ color: '#10b981', fillColor: '#10b981', fillOpacity: 0.1 }} />
-      )}
     </MapContainer>
   );
 }
