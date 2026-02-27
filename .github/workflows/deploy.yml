@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, staging]
 
 permissions:
   contents: read
@@ -11,22 +11,37 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
       - run: npm ci
+
+      # Build production (main)
       - run: npm run build
+      - run: mkdir -p _site && cp -r dist/* _site/
+
+      # Build staging
+      - uses: actions/checkout@v4
+        with:
+          ref: staging
+          clean: false
+          path: _staging_src
+      - run: cd _staging_src && npm ci && npx vite build --base /lrs-dashboard/staging/
+      - run: mkdir -p _site/staging && cp -r _staging_src/dist/* _site/staging/
+
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: _site
 
   deploy:
     needs: build
