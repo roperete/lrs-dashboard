@@ -162,7 +162,7 @@ function ComparisonTable({ title, icon, data, name1, name2 }: {
               <th className="py-2.5 px-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Component</th>
               <th className="py-2.5 px-4 text-right text-xs font-bold text-emerald-400 uppercase tracking-wider truncate max-w-[140px]">{name1}</th>
               <th className="py-2.5 px-4 text-right text-xs font-bold text-blue-400 uppercase tracking-wider truncate max-w-[140px]">{name2}</th>
-              <th className="py-2.5 px-4 text-right text-xs font-bold text-slate-500 uppercase tracking-wider">\u0394</th>
+              <th className="py-2.5 px-4 text-right text-xs font-bold text-slate-500 uppercase tracking-wider">{'\u0394'}</th>
             </tr>
           </thead>
           <tbody>
