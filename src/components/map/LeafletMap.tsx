@@ -42,21 +42,33 @@ const highlandIcon = L.divIcon({
   popupAnchor: [0, -16],
 });
 
-// Lunar lander icon for Moon site markers
-const landerIcon = L.divIcon({
-  className: '',
-  html: `<div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:rgba(245,158,11,0.15);border:2px solid #f59e0b;border-radius:50%;box-shadow:0 0 10px rgba(245,158,11,0.4);">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 2L8 8h8l-4-6z"/>
-      <rect x="9" y="8" width="6" height="6" rx="1"/>
-      <path d="M7 14l-2 4M17 14l2 4M10 14v4M14 14v4"/>
-      <path d="M5 18h14"/>
-    </svg>
-  </div>`,
-  iconSize: [32, 32],
-  iconAnchor: [16, 16],
-  popupAnchor: [0, -18],
-});
+// Lunar lander icons by mission type color
+function makeLanderIcon(color: string) {
+  // Convert hex to rgba for background
+  const r = parseInt(color.slice(1, 3), 16);
+  const g = parseInt(color.slice(3, 5), 16);
+  const b = parseInt(color.slice(5, 7), 16);
+  return L.divIcon({
+    className: '',
+    html: `<div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:rgba(${r},${g},${b},0.15);border:2px solid ${color};border-radius:50%;box-shadow:0 0 10px rgba(${r},${g},${b},0.4);">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L8 8h8l-4-6z"/>
+        <rect x="9" y="8" width="6" height="6" rx="1"/>
+        <path d="M7 14l-2 4M17 14l2 4M10 14v4M14 14v4"/>
+        <path d="M5 18h14"/>
+      </svg>
+    </div>`,
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -18],
+  });
+}
+const landerIcons: Record<string, L.DivIcon> = {
+  Apollo: makeLanderIcon('#f59e0b'),
+  Luna: makeLanderIcon('#ef4444'),
+  'Chang-e': makeLanderIcon('#3b82f6'),
+  Other: makeLanderIcon('#8b5cf6'),
+};
 
 // Custom cluster icon creator
 function createClusterIcon(cluster: any) {
@@ -147,9 +159,9 @@ export function LeafletMap({
         </MarkerClusterGroup>
       )}
 
-      {/* Moon site markers — lunar lander icons */}
+      {/* Moon site markers — color-coded by mission type */}
       {planet === 'moon' && lunarSites.map(site => (
-        <Marker key={site.id} position={[site.lat, site.lng]} icon={landerIcon}
+        <Marker key={site.id} position={[site.lat, site.lng]} icon={landerIcons[site.type] || landerIcons.Other}
           eventHandlers={{ click: () => onLunarSiteClick(site.id, site.lat, site.lng) }}>
           <Popup className="custom-popup">
             <div className="text-center">

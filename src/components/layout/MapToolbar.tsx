@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { Locate, MousePointer2, Square, ChevronRight, Maximize, Minimize } from 'lucide-react';
+import { Layers, Locate, MousePointer2, Square, ChevronRight, Maximize, Minimize } from 'lucide-react';
 import { cn } from '../../utils/cn';
 
 interface MapToolbarProps {
@@ -7,6 +7,7 @@ interface MapToolbarProps {
   viewMode: 'globe' | 'map';
   drawingMode: 'none' | 'marker' | 'polygon';
   tempPolygonPointsCount: number;
+  onToggleEarthTexture?: () => void;
   onLocate: () => void;
   onSetDrawingMode: (mode: 'none' | 'marker' | 'polygon') => void;
   onFinishPolygon: () => void;
@@ -14,7 +15,7 @@ interface MapToolbarProps {
 
 export function MapToolbar({
   planet, viewMode, drawingMode, tempPolygonPointsCount,
-  onLocate, onSetDrawingMode, onFinishPolygon,
+  onToggleEarthTexture, onLocate, onSetDrawingMode, onFinishPolygon,
 }: MapToolbarProps) {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
@@ -39,6 +40,12 @@ export function MapToolbar({
           className="p-3 bg-slate-800 hover:bg-slate-700 rounded-xl text-slate-400 hover:text-emerald-400 transition-all shadow-lg" title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}>
           {isFullscreen ? <Minimize size={20} /> : <Maximize size={20} />}
         </button>
+        {planet === 'earth' && viewMode === 'globe' && onToggleEarthTexture && (
+          <button onClick={onToggleEarthTexture}
+            className="p-3 bg-slate-800 hover:bg-slate-700 rounded-xl text-slate-400 hover:text-emerald-400 transition-all shadow-lg" title="Toggle Day/Night">
+            <Layers size={20} />
+          </button>
+        )}
         {planet === 'earth' && (
           <button onClick={onLocate}
             className="p-3 bg-slate-800 hover:bg-slate-700 rounded-xl text-slate-400 hover:text-emerald-400 transition-all shadow-lg" title="My Location">

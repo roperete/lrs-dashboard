@@ -8,6 +8,12 @@ interface SimulantPropertiesProps {
 }
 
 export function SimulantProperties({ simulant, extra }: SimulantPropertiesProps) {
+  // Combine lunar_sample_reference and replica_of into one field
+  const lunarSampleRef = [simulant.lunar_sample_reference, extra?.replica_of]
+    .filter(Boolean)
+    .filter((v, i, a) => a.indexOf(v) === i) // dedupe
+    .join(' / ') || null;
+
   const props: [string, string | number | null | undefined][] = [
     ['Type', simulant.type],
     ['Origin', simulant.country_code],
@@ -15,14 +21,13 @@ export function SimulantProperties({ simulant, extra }: SimulantPropertiesProps)
     ['Availability', simulant.availability],
     ['Release Date', simulant.release_date],
     ['Specific Gravity', simulant.specific_gravity],
-    ['Lunar Reference', simulant.lunar_sample_reference],
+    ['Lunar Sample Reference', lunarSampleRef],
     ['Production (MT)', simulant.tons_produced_mt],
   ];
 
   if (extra) {
     if (extra.classification) props.push(['Classification', extra.classification]);
     if (extra.application) props.push(['Application', extra.application]);
-    if (extra.replica_of) props.push(['Replica Of', extra.replica_of]);
     if (extra.feedstock) props.push(['Feedstock', extra.feedstock]);
     if (extra.grain_size_mm) props.push(['Grain Size (mm)', extra.grain_size_mm]);
     if (extra.petrographic_class) props.push(['Petrographic Class', extra.petrographic_class]);

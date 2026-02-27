@@ -35,7 +35,13 @@ export function MineralChart({ compositions, mineralGroups, lunarReferences, sim
 
   const chartData = useMemo(() => {
     if (view === 'detailed') {
-      return detailedData.map(d => ({ name: d.component_name, simulant_pct: d.value_pct }));
+      return detailedData.map(d => {
+        const entry: Record<string, unknown> = { name: d.component_name, simulant_pct: d.value_pct };
+        if (lunarRef?.mineral_composition) {
+          entry.lunar_pct = lunarRef.mineral_composition[d.component_name] || 0;
+        }
+        return entry;
+      });
     }
     return groupData.map(g => {
       const entry: Record<string, unknown> = { name: g.group_name, simulant_pct: g.value_pct };
@@ -51,7 +57,7 @@ export function MineralChart({ compositions, mineralGroups, lunarReferences, sim
       return detailedData.map(d => ({
         name: d.component_name,
         value: d.value_pct,
-        refValue: undefined as number | undefined,
+        refValue: lunarRef?.mineral_composition?.[d.component_name],
       }));
     }
     return groupData.map(g => ({
@@ -82,7 +88,7 @@ export function MineralChart({ compositions, mineralGroups, lunarReferences, sim
         </div>
       </div>
 
-      {view === 'groups' && missionsWithMinerals.length > 0 && (
+      {missionsWithMinerals.length > 0 && (
         <div className="mb-3">
           <select value={lunarRefMission} onChange={(e) => setLunarRefMission(e.target.value)}
             className="w-full bg-slate-800 border border-slate-700 rounded-lg py-1.5 px-3 text-xs text-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500/50">
@@ -107,10 +113,10 @@ export function MineralChart({ compositions, mineralGroups, lunarReferences, sim
               <Bar dataKey="simulant_pct" name={simulantName} fill="#10b981" radius={[0, 4, 4, 0]}>
                 {chartData.map((_, i) => <Cell key={i} fill={i % 2 === 0 ? '#10b981' : '#059669'} />)}
               </Bar>
-              {view === 'groups' && lunarRef && (
+              {lunarRef && (
                 <Bar dataKey="lunar_pct" name={lunarRefMission} fill="#fca311" radius={[0, 4, 4, 0]} />
               )}
-              {view === 'groups' && lunarRef && <Legend />}
+              {lunarRef && <Legend />}
             </BarChart>
           </ResponsiveContainer>
         </div>

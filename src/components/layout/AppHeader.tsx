@@ -9,6 +9,7 @@ interface AppHeaderProps {
   planet: 'earth' | 'moon';
   viewMode: 'globe' | 'map';
   geocodingQuery: string;
+  sidebarOpen?: boolean;
   onPlanetChange: (p: 'earth' | 'moon') => void;
   onViewModeChange: (v: 'globe' | 'map') => void;
   onGeocodingQueryChange: (q: string) => void;
@@ -16,14 +17,14 @@ interface AppHeaderProps {
 }
 
 export function AppHeader({
-  planet, viewMode, geocodingQuery,
+  planet, viewMode, geocodingQuery, sidebarOpen,
   onPlanetChange, onViewModeChange, onGeocodingQueryChange, onGeocode,
 }: AppHeaderProps) {
   return (
     <header className="absolute top-0 left-0 w-full p-4 md:p-6 z-[40] pointer-events-none">
       <div className="flex flex-wrap justify-between items-start gap-3">
-        {/* Title — hidden on mobile to save space */}
-        <div className="pointer-events-auto hidden md:block">
+        {/* Title — hidden on mobile to save space, shifts right when sidebar open */}
+        <div className={`pointer-events-auto hidden md:block transition-[margin] duration-300 ${sidebarOpen ? 'ml-[21rem]' : ''}`}>
           <div className="flex items-center gap-3 mb-1">
             <div className="p-2 bg-emerald-500 rounded-lg shadow-[0_0_20px_rgba(16,185,129,0.4)]">
               <Database size={24} className="text-slate-950" />

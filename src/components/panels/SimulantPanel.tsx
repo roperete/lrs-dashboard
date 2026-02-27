@@ -37,6 +37,7 @@ export function SimulantPanel({
     <PanelShell
       title={simulant.name}
       subtitle={extra?.classification || extra?.replica_of || simulant.type}
+      accentColor={simulant.type?.toLowerCase().includes('highland') ? 'text-cyan-400' : 'text-emerald-400'}
       pinned={pinned}
       onClose={onClose}
       onTogglePin={onTogglePin}

@@ -2,11 +2,12 @@ import React from 'react';
 
 interface LegendWidgetProps {
   planet: 'earth' | 'moon';
+  sidebarOpen?: boolean;
 }
 
-export function LegendWidget({ planet }: LegendWidgetProps) {
+export function LegendWidget({ planet, sidebarOpen }: LegendWidgetProps) {
   return (
-    <div className="absolute bottom-6 left-6 z-[30] pointer-events-none">
+    <div className={`absolute bottom-6 z-[30] pointer-events-none transition-[left] duration-300 ${sidebarOpen ? 'left-[21rem]' : 'left-6'}`}>
       <div className="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-4 rounded-xl pointer-events-auto">
         <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">
           {planet === 'earth' ? 'Map Legend' : 'Lunar Missions'}

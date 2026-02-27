@@ -71,6 +71,10 @@ export default function App() {
   const [globeAltitude, setGlobeAltitude] = useState(2.5);
   const handleAltitudeChange = useCallback((alt: number) => setGlobeAltitude(alt), []);
 
+  // 3D Earth texture toggle (day/night)
+  const [earthTexture, setEarthTexture] = useState<'day' | 'night'>('night');
+  const toggleEarthTexture = useCallback(() => setEarthTexture(p => p === 'night' ? 'day' : 'night'), []);
+
   // Raw Earth points (stable unless data/filters change)
   const rawEarthPoints = useMemo(() => {
     if (mapState.planet !== 'earth') return [];
@@ -197,7 +201,7 @@ export default function App() {
     <div className="h-screen w-screen bg-slate-950 overflow-hidden relative font-sans text-slate-200">
       <AppHeader
         planet={mapState.planet} viewMode={mapState.viewMode}
-        geocodingQuery={mapState.geocodingQuery}
+        geocodingQuery={mapState.geocodingQuery} sidebarOpen={isSidebarOpen}
         onPlanetChange={handlePlanetChange}
         onViewModeChange={mapState.setViewMode}
         onGeocodingQueryChange={mapState.setGeocodingQuery}
@@ -209,7 +213,7 @@ export default function App() {
         {mapState.viewMode === 'globe' ? (
           <GlobeView
             ref={globeRef}
-            planet={mapState.planet}
+            planet={mapState.planet} earthTexture={earthTexture}
             singlePoints={singlePoints} clusterPoints={clusterPoints}
             onPointClick={handleGlobePointClick}
             onClusterClick={(cluster, event) => {
@@ -325,6 +329,7 @@ export default function App() {
         planet={mapState.planet} viewMode={mapState.viewMode}
         drawingMode={mapState.drawingMode}
         tempPolygonPointsCount={mapState.tempPolygonPoints.length}
+        onToggleEarthTexture={toggleEarthTexture}
         onLocate={handleLocate}
         onSetDrawingMode={handleSetDrawingMode}
         onFinishPolygon={mapState.finishPolygon}
@@ -379,7 +384,7 @@ export default function App() {
         />
       </div>
 
-      <LegendWidget planet={mapState.planet} />
+      <LegendWidget planet={mapState.planet} sidebarOpen={isSidebarOpen} />
     </div>
   );
 }

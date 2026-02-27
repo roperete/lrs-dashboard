@@ -14,6 +14,7 @@ export interface ClusterPoint {
 
 interface GlobeViewProps {
   planet: 'earth' | 'moon';
+  earthTexture: 'day' | 'night';
   singlePoints: any[];
   clusterPoints: ClusterPoint[];
   onPointClick: (point: any) => void;
@@ -21,7 +22,7 @@ interface GlobeViewProps {
   onAltitudeChange?: (altitude: number) => void;
 }
 
-function createClusterBadge(d: ClusterPoint, onClick: (d: ClusterPoint, e: MouseEvent) => void): HTMLElement {
+function createClusterBadge(d: ClusterPoint, onClick: (d: ClusterPoint, e: MouseEvent) => void, onDblClick: (d: ClusterPoint) => void): HTMLElement {
   const size = d.count < 5 ? 36 : d.count < 10 ? 42 : 48;
   const el = document.createElement('div');
   el.style.cssText = `
@@ -50,11 +51,15 @@ function createClusterBadge(d: ClusterPoint, onClick: (d: ClusterPoint, e: Mouse
     e.stopPropagation();
     onClick(d, e);
   });
+  el.addEventListener('dblclick', (e) => {
+    e.stopPropagation();
+    onDblClick(d);
+  });
   return el;
 }
 
 export const GlobeView = forwardRef<GlobeViewHandle, GlobeViewProps>(
-  ({ planet, singlePoints, clusterPoints, onPointClick, onClusterClick, onAltitudeChange }, ref) => {
+  ({ planet, earthTexture, singlePoints, clusterPoints, onPointClick, onClusterClick, onAltitudeChange }, ref) => {
     const globeRef = useRef<GlobeMethods>(null);
     const lastAltRef = useRef(0);
 
@@ -75,16 +80,24 @@ export const GlobeView = forwardRef<GlobeViewHandle, GlobeViewProps>(
       return () => clearInterval(interval);
     }, [onAltitudeChange]);
 
+    const handleClusterDblClick = useCallback((d: ClusterPoint) => {
+      const pov = globeRef.current?.pointOfView();
+      const newAlt = Math.max((pov?.altitude || 2) * 0.4, 0.15);
+      globeRef.current?.pointOfView({ lat: d.lat, lng: d.lon, altitude: newAlt }, 800);
+    }, []);
+
     const htmlElementAccessor = useCallback((d: any) =>
-      createClusterBadge(d, onClusterClick),
-    [onClusterClick]);
+      createClusterBadge(d, onClusterClick, handleClusterDblClick),
+    [onClusterClick, handleClusterDblClick]);
 
     return (
       <Globe
         ref={globeRef}
         globeImageUrl={planet === 'moon'
           ? "https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/moon-landing-sites/lunar_surface.jpg"
-          : "https://unpkg.com/three-globe/example/img/earth-night.jpg"}
+          : earthTexture === 'day'
+            ? "https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
+            : "https://unpkg.com/three-globe/example/img/earth-night.jpg"}
         bumpImageUrl={planet === 'moon'
           ? "https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/moon-landing-sites/lunar_bumpmap.jpg"
           : "https://unpkg.com/three-globe/example/img/earth-topology.png"}
@@ -96,7 +109,7 @@ export const GlobeView = forwardRef<GlobeViewHandle, GlobeViewProps>(
         pointAltitude={0.06} pointRadius={0.4}
         pointLabel={(d: any) => `
           <div class="bg-slate-900 border border-slate-700 p-3 rounded-lg shadow-xl font-sans">
-            <div class="${planet === 'moon' ? 'text-amber-400' : 'text-emerald-400'} font-bold text-lg mb-1">${d.name}</div>
+            <div style="color:${d.color}" class="font-bold text-lg mb-1">${d.name}</div>
             <div class="text-slate-400 text-xs uppercase tracking-wider mb-2">${planet === 'moon' ? d.mission : d.country_code}</div>
             <div class="text-slate-300 text-sm">${planet === 'moon' ? d.date : d.site_name}</div>
           </div>`}
