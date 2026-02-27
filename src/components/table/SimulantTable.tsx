@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { ChevronUp, ChevronDown, Check, ArrowRightLeft, Download } from 'lucide-react';
+
 import { cn } from '../../utils/cn';
 import { getCountryDisplay } from '../../utils/countryUtils';
 import type { Simulant, ChemicalComposition, Composition, Reference } from '../../types';
@@ -12,12 +13,11 @@ const DASH = '\u2014';
 interface SimulantTableProps {
   simulants: Simulant[];
   selectedSimulantId: string | null;
-  compareSimulantId: string | null;
   chemicalBySimulant: Map<string, ChemicalComposition[]>;
   compositionBySimulant: Map<string, Composition[]>;
   referencesBySimulant: Map<string, Reference[]>;
   onSelectSimulant: (id: string) => void;
-  onToggleCompare: (id: string) => void;
+  onCompareSelected?: (id1: string, id2: string) => void;
   onExportSelected?: (simulants: Simulant[]) => void;
 }
 
@@ -28,9 +28,9 @@ function getFirstReference(id: string, referencesBySimulant: Map<string, Referen
 }
 
 export function SimulantTable({
-  simulants, selectedSimulantId, compareSimulantId,
+  simulants, selectedSimulantId,
   chemicalBySimulant, compositionBySimulant, referencesBySimulant,
-  onSelectSimulant, onToggleCompare, onExportSelected,
+  onSelectSimulant, onCompareSelected, onExportSelected,
 }: SimulantTableProps) {
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
@@ -116,15 +116,28 @@ export function SimulantTable({
 
   return (
     <div className="h-full overflow-auto scrollbar-thin relative">
-      {checkedIds.size > 0 && onExportSelected && (
+      {checkedIds.size > 0 && (
         <div className="sticky top-0 z-20 flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border-b border-emerald-500/30 backdrop-blur-sm">
           <span className="text-xs font-medium text-emerald-400">{checkedIds.size} selected</span>
-          <button
-            onClick={() => onExportSelected(simulants.filter(s => checkedIds.has(s.simulant_id)))}
-            className="flex items-center gap-1.5 px-2.5 py-1 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 rounded-lg text-xs text-emerald-300 transition-colors"
-          >
-            <Download size={12} />Export Selected
-          </button>
+          {checkedIds.size === 2 && onCompareSelected && (
+            <button
+              onClick={() => {
+                const ids = Array.from(checkedIds);
+                onCompareSelected(ids[0], ids[1]);
+              }}
+              className="flex items-center gap-1.5 px-2.5 py-1 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/40 rounded-lg text-xs text-blue-300 transition-colors"
+            >
+              <ArrowRightLeft size={12} />Compare
+            </button>
+          )}
+          {onExportSelected && (
+            <button
+              onClick={() => onExportSelected(simulants.filter(s => checkedIds.has(s.simulant_id)))}
+              className="flex items-center gap-1.5 px-2.5 py-1 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 rounded-lg text-xs text-emerald-300 transition-colors"
+            >
+              <Download size={12} />Export Selected
+            </button>
+          )}
           <button onClick={() => setCheckedIds(new Set())} className="text-xs text-slate-500 hover:text-slate-300 ml-auto">Clear</button>
         </div>
       )}
@@ -150,7 +163,7 @@ export function SimulantTable({
         <tbody>
           {sorted.map((s, i) => {
             const isSelected = s.simulant_id === selectedSimulantId;
-            const isCompare = s.simulant_id === compareSimulantId;
+            const isChecked = checkedIds.has(s.simulant_id);
             const ref = getFirstReference(s.simulant_id, referencesBySimulant);
             return (
               <React.Fragment key={s.simulant_id}>
@@ -160,7 +173,7 @@ export function SimulantTable({
                     "cursor-pointer transition-colors border-b border-slate-800/50",
                     isSelected
                       ? "bg-emerald-500/15 hover:bg-emerald-500/20"
-                      : isCompare
+                      : isChecked
                         ? "bg-blue-500/10 hover:bg-blue-500/15"
                         : i % 2 === 0
                           ? "bg-slate-900/40 hover:bg-slate-800/60"

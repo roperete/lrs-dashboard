@@ -20,9 +20,10 @@ export function LegendWidget({ planet, sidebarOpen }: LegendWidgetProps) {
             </>
           ) : (
             <>
-              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#f59e0b] shadow-[0_0_8px_#f59e0b]" /><span className="text-xs text-slate-300">Apollo Missions</span></div>
-              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#ef4444] shadow-[0_0_8px_#ef4444]" /><span className="text-xs text-slate-300">Luna Missions</span></div>
-              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#3b82f6] shadow-[0_0_8px_#3b82f6]" /><span className="text-xs text-slate-300">Chang'e Missions</span></div>
+              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#f59e0b] shadow-[0_0_8px_#f59e0b]" /><span className="text-xs text-slate-300">Apollo</span></div>
+              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#ef4444] shadow-[0_0_8px_#ef4444]" /><span className="text-xs text-slate-300">Luna</span></div>
+              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#3b82f6] shadow-[0_0_8px_#3b82f6]" /><span className="text-xs text-slate-300">Chang'e</span></div>
+              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#a855f7] shadow-[0_0_8px_#a855f7]" /><span className="text-xs text-slate-300">Other</span></div>
             </>
           )}
         </div>
