@@ -1,45 +1,63 @@
 import { useState, useMemo, useCallback } from 'react';
-import type { Simulant, Composition, ChemicalComposition, MineralGroup, FilterState } from '../types';
-import { filterSimulants } from '../utils/filterSimulants';
+import type { Simulant, Composition, ChemicalComposition, MineralGroup, Reference, DynamicFilter, FilterProperty, FilterPropertyMeta } from '../types';
+import { filterSimulantsDynamic, type FilterContext } from '../utils/filterSimulants';
 
-const emptyFilters: FilterState = {
-  type: [], country: [], mineral: [], chemical: [], institution: [], availability: [],
-};
+export const FILTER_PROPERTIES: FilterPropertyMeta[] = [
+  { property: 'type', label: 'Type', type: 'categorical' },
+  { property: 'country', label: 'Country', type: 'categorical' },
+  { property: 'institution', label: 'Institution', type: 'categorical' },
+  { property: 'availability', label: 'Availability', type: 'categorical' },
+  { property: 'mineral', label: 'Mineral', type: 'categorical' },
+  { property: 'chemical', label: 'Chemical Oxide', type: 'categorical' },
+  { property: 'has_chemistry', label: 'Has Chemistry Data', type: 'boolean' },
+  { property: 'has_mineralogy', label: 'Has Mineralogy Data', type: 'boolean' },
+  { property: 'year', label: 'Year', type: 'range' },
+  { property: 'reference', label: 'Reference', type: 'text' },
+  { property: 'lunar_ref', label: 'Lunar Sample Ref', type: 'text' },
+];
+
+let nextId = 1;
 
 export function useFilters(
   simulants: Simulant[],
   compositions: Composition[],
   chemicalCompositions: ChemicalComposition[],
   mineralGroups: MineralGroup[],
+  chemicalBySimulant: Map<string, ChemicalComposition[]>,
+  compositionBySimulant: Map<string, Composition[]>,
+  referencesBySimulant: Map<string, Reference[]>,
 ) {
-  const [filters, setFilters] = useState<FilterState>(emptyFilters);
+  const [filters, setFilters] = useState<DynamicFilter[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
 
+  const filterCtx = useMemo<FilterContext>(() => ({
+    compositions, chemicalCompositions, mineralGroups,
+    chemicalBySimulant, compositionBySimulant, referencesBySimulant,
+  }), [compositions, chemicalCompositions, mineralGroups, chemicalBySimulant, compositionBySimulant, referencesBySimulant]);
+
   const filteredSimulants = useMemo(
-    () => filterSimulants(simulants, filters, searchQuery, compositions, chemicalCompositions, mineralGroups),
-    [simulants, filters, searchQuery, compositions, chemicalCompositions, mineralGroups],
+    () => filterSimulantsDynamic(simulants, filters, searchQuery, filterCtx),
+    [simulants, filters, searchQuery, filterCtx],
   );
 
-  const setFilter = useCallback((key: keyof FilterState, values: string[]) => {
-    setFilters(prev => ({ ...prev, [key]: values }));
+  const addFilter = useCallback((property: FilterProperty) => {
+    setFilters(prev => [...prev, { id: String(nextId++), property, values: [] }]);
   }, []);
 
-  const toggleFilterValue = useCallback((key: keyof FilterState, value: string) => {
-    setFilters(prev => {
-      const current = prev[key];
-      const next = current.includes(value)
-        ? current.filter(v => v !== value)
-        : [...current, value];
-      return { ...prev, [key]: next };
-    });
+  const updateFilter = useCallback((id: string, values: string[]) => {
+    setFilters(prev => prev.map(f => f.id === id ? { ...f, values } : f));
+  }, []);
+
+  const removeFilter = useCallback((id: string) => {
+    setFilters(prev => prev.filter(f => f.id !== id));
   }, []);
 
   const clearAllFilters = useCallback(() => {
-    setFilters(emptyFilters);
+    setFilters([]);
     setSearchQuery('');
   }, []);
 
-  // Derive available filter options from data
+  // Derive available options for categorical filters
   const filterOptions = useMemo(() => {
     const types = [...new Set(simulants.map(s => s.type))].sort();
     const countries = [...new Set(simulants.map(s => s.country_code))].filter(Boolean).sort();
@@ -63,7 +81,7 @@ export function useFilters(
 
   return {
     filters, filteredSimulants, searchQuery,
-    setFilter, toggleFilterValue, clearAllFilters, setSearchQuery,
+    addFilter, updateFilter, removeFilter, clearAllFilters, setSearchQuery,
     filterOptions,
   };
 }

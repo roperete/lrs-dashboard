@@ -1,16 +1,16 @@
 import React from 'react';
 import { Database, Search, ChevronLeft, ArrowRightLeft } from 'lucide-react';
 import { motion } from 'motion/react';
-import { FilterPanel } from './FilterPanel';
+import { DynamicFilterPanel } from './DynamicFilterPanel';
 import { SimulantList } from './SimulantList';
 import { ProximitySearch } from './ProximitySearch';
-import type { Simulant, LunarSite, FilterState } from '../../types';
+import type { Simulant, LunarSite, DynamicFilter, FilterProperty } from '../../types';
 
 interface SidebarProps {
   planet: 'earth' | 'moon';
   searchQuery: string;
   onSearchChange: (q: string) => void;
-  filters: FilterState;
+  filters: DynamicFilter[];
   filterOptions: {
     types: string[];
     countries: string[];
@@ -20,7 +20,9 @@ interface SidebarProps {
     chemicals: string[];
     availabilities: string[];
   };
-  setFilter: (key: keyof FilterState, values: string[]) => void;
+  onAddFilter: (property: FilterProperty) => void;
+  onUpdateFilter: (id: string, values: string[]) => void;
+  onRemoveFilter: (id: string) => void;
   clearAllFilters: () => void;
   filteredSimulants: Simulant[];
   lunarSites: LunarSite[];
@@ -70,13 +72,15 @@ export function Sidebar(props: SidebarProps) {
             className="w-full bg-slate-800 border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all" />
         </div>
 
-        {/* Filters (Earth only) */}
+        {/* Dynamic Filters (Earth only) */}
         {props.planet === 'earth' && (
-          <FilterPanel
+          <DynamicFilterPanel
             filters={props.filters}
             filterOptions={props.filterOptions}
-            setFilter={props.setFilter}
-            clearAllFilters={props.clearAllFilters}
+            onAddFilter={props.onAddFilter}
+            onUpdateFilter={props.onUpdateFilter}
+            onRemoveFilter={props.onRemoveFilter}
+            onClearAll={props.clearAllFilters}
           />
         )}
 

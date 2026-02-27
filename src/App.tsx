@@ -49,7 +49,7 @@ export default function App() {
 
   const mapState = useMapState();
   const panelState = usePanelState();
-  const filterState = useFilters(simulants, compositions, chemicalCompositions, mineralGroups);
+  const filterState = useFilters(simulants, compositions, chemicalCompositions, mineralGroups, chemicalBySimulant, compositionBySimulant, referencesBySimulant);
 
   // Proximity filtering on top of filter results
   const displayedSimulants = useMemo(() => {
@@ -289,7 +289,9 @@ export default function App() {
             onSearchChange={filterState.setSearchQuery}
             filters={filterState.filters}
             filterOptions={filterState.filterOptions}
-            setFilter={filterState.setFilter}
+            onAddFilter={filterState.addFilter}
+            onUpdateFilter={filterState.updateFilter}
+            onRemoveFilter={filterState.removeFilter}
             clearAllFilters={filterState.clearAllFilters}
             filteredSimulants={displayedSimulants}
             lunarSites={lunarSites}

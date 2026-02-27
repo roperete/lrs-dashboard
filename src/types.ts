@@ -165,6 +165,28 @@ export interface FilterState {
   availability: string[];
 }
 
+// Dynamic filter system
+export type FilterPropertyType = 'categorical' | 'boolean' | 'range' | 'text';
+
+export type FilterProperty =
+  | 'type' | 'country' | 'institution' | 'availability'
+  | 'mineral' | 'chemical'
+  | 'has_chemistry' | 'has_mineralogy'
+  | 'year'
+  | 'reference' | 'lunar_ref';
+
+export interface DynamicFilter {
+  id: string;
+  property: FilterProperty;
+  values: string[];       // categorical: selected values; boolean: ['yes']|['no']; text: [query]; range: [min, max]
+}
+
+export interface FilterPropertyMeta {
+  property: FilterProperty;
+  label: string;
+  type: FilterPropertyType;
+}
+
 export interface PanelState {
   open: boolean;
   pinned: boolean;
