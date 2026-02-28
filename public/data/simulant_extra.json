@@ -1965,15 +1965,15 @@
   {
     "simulant_id": "S153",
     "name": "LZS-1",
-    "classification": "General Purpose",
-    "application": "General",
-    "feedstock": null,
-    "petrographic_class": null,
-    "grain_size_mm": null,
-    "publicly_available_composition": false,
-    "reference": "Chen, Y., et al. (2025). An overview on lunar regolith simulants solidification methods...",
+    "classification": "Mare Basalt",
+    "application": "ISRU, Geotechnical, Astrobiological",
+    "replica_of": "Apollo 14 (14163)",
+    "feedstock": "Tao quarry basalt, Lanzarote, Canary Islands",
+    "petrographic_class": "Plagioclase, Pyroxene, Olivine, Metal oxide",
+    "grain_size_mm": "0.063-0.125",
     "specific_gravity": null,
-    "replica_of": "General"
+    "publicly_available_composition": true,
+    "reference": "Alberquilla, F., Martínez-Frías, J., García-Baonza, V., & Lunar, R. (2022). LZS-1, Lanzarote (Canary Island, Spain) lunar (Apollo 14) basaltic soil simulant. Scientific Reports, 12, 16470. https://doi.org/10.1038/s41598-022-20960-8"
   },
   {
     "simulant_id": "S154",

@@ -658,5 +658,11 @@
     "simulant_id": "S060",
     "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
     "reference_type": "geotechnical"
+  },
+  {
+    "reference_id": "R111",
+    "simulant_id": "S153",
+    "reference_text": "Alberquilla, F., Martínez-Frías, J., García-Baonza, V., & Lunar, R. (2022). LZS-1, Lanzarote (Canary Island, Spain) lunar (Apollo 14) basaltic soil simulant. Scientific Reports, 12, 16470. https://doi.org/10.1038/s41598-022-20960-8",
+    "reference_type": "composition"
   }
 ]

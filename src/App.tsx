@@ -1,7 +1,6 @@
-import React, { useState, useMemo, useRef, useCallback, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useCallback, useEffect, lazy, Suspense } from 'react';
 import { AnimatePresence } from 'motion/react';
 import { ChevronRight, Menu } from 'lucide-react';
-import L from 'leaflet';
 
 import { useDataContext } from './context/DataContext';
 import { useFilters } from './hooks/useFilters';
@@ -9,21 +8,25 @@ import { useMapState } from './hooks/useMapState';
 import { usePanelState } from './hooks/usePanelState';
 import { lunarSites } from './lunarData';
 import { clusterByDistance, altitudeToRadius } from './utils/clusterPoints';
+import type { GlobeViewHandle, ClusterPoint } from './components/map/GlobeView';
 
 import { LoadingScreen } from './components/controls/LoadingScreen';
 import { LegendWidget } from './components/controls/LegendWidget';
 import { ExportMenu } from './components/controls/ExportMenu';
 import { AppHeader } from './components/layout/AppHeader';
 import { MapToolbar } from './components/layout/MapToolbar';
-import { GlobeView, type GlobeViewHandle, type ClusterPoint } from './components/map/GlobeView';
-import { LeafletMap } from './components/map/LeafletMap';
 import { Sidebar } from './components/sidebar/Sidebar';
 import { SimulantPanel } from './components/panels/SimulantPanel';
 import { LunarSitePanel } from './components/panels/LunarSitePanel';
-import { ComparisonPanel } from './components/panels/ComparisonPanel';
 import { SimulantTable } from './components/table/SimulantTable';
 import { LunarSampleTable } from './components/table/LunarSampleTable';
 import { exportToCSV } from './utils/csv';
+
+// Lazy-loaded heavy components (three.js, leaflet, recharts)
+const GlobeView = lazy(() => import('./components/map/GlobeView').then(m => ({ default: m.GlobeView })));
+const LeafletMap = lazy(() => import('./components/map/LeafletMap').then(m => ({ default: m.LeafletMap })));
+const ComparisonPanel = lazy(() => import('./components/panels/ComparisonPanel').then(m => ({ default: m.ComparisonPanel })));
+const CrossComparisonPanel = lazy(() => import('./components/panels/CrossComparisonPanel').then(m => ({ default: m.CrossComparisonPanel })));
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint);
@@ -65,6 +68,7 @@ export default function App() {
   const selectedSimulant = useMemo(() => simulants.find(s => s.simulant_id === panelState.panel1.simulantId) || null, [simulants, panelState.panel1.simulantId]);
   const selectedSimulant2 = useMemo(() => simulants.find(s => s.simulant_id === panelState.panel2.simulantId) || null, [simulants, panelState.panel2.simulantId]);
   const selectedLunarSite = useMemo(() => lunarSites.find(s => s.id === panelState.selectedLunarSiteId) || null, [panelState.selectedLunarSiteId]);
+  const selectedLunarRef = useMemo(() => lunarReference.find(r => r.mission === panelState.selectedLunarRefMission) || null, [lunarReference, panelState.selectedLunarRefMission]);
 
   // Globe altitude state for zoom-reactive clustering
   const [globeAltitude, setGlobeAltitude] = useState(2.5);
@@ -149,7 +153,7 @@ export default function App() {
     });
   }, [mapState, flyTo]);
 
-  const handleMapClick = useCallback((_e: L.LeafletMouseEvent) => {
+  const handleMapClick = useCallback((_e: any) => {
     // No-op: drawing and proximity features removed
   }, []);
 
@@ -185,7 +189,7 @@ export default function App() {
   if (loading || !splashDone) return <LoadingScreen />;
 
   return (
-    <div className="h-screen w-screen bg-slate-950 overflow-hidden relative font-sans text-slate-200">
+    <div className="h-dvh w-screen bg-slate-950 overflow-hidden relative font-sans text-slate-200">
       <AppHeader
         planet={mapState.planet} viewMode={mapState.viewMode}
         geocodingQuery={mapState.geocodingQuery} sidebarOpen={isSidebarOpen}
@@ -228,27 +232,29 @@ export default function App() {
         </div>
       ) : (
         <div className="absolute inset-0 z-0">
-          {mapState.viewMode === 'globe' ? (
-            <GlobeView
-              ref={globeRef}
-              planet={mapState.planet} earthTexture={earthTexture}
-              singlePoints={singlePoints} clusterPoints={clusterPoints}
-              onPointClick={handleGlobePointClick}
-              onClusterClick={(cluster, event) => {
-                setClusterPopover({ x: event.clientX, y: event.clientY, simulants: cluster.simulants });
-              }}
-              onAltitudeChange={handleAltitudeChange}
-            />
-          ) : (
-            <LeafletMap
-              planet={mapState.planet}
-              mapCenter={mapState.mapCenter} mapZoom={mapState.mapZoom}
-              filteredSimulants={displayedSimulants} siteBySimulant={siteBySimulant}
-              lunarSites={lunarSites}
-              onSimulantClick={handleSimulantClick} onLunarSiteClick={handleLunarSiteClick}
-              onMapClick={handleMapClick}
-            />
-          )}
+          <Suspense fallback={<LoadingScreen />}>
+            {mapState.viewMode === 'globe' ? (
+              <GlobeView
+                ref={globeRef}
+                planet={mapState.planet} earthTexture={earthTexture}
+                singlePoints={singlePoints} clusterPoints={clusterPoints}
+                onPointClick={handleGlobePointClick}
+                onClusterClick={(cluster, event) => {
+                  setClusterPopover({ x: event.clientX, y: event.clientY, simulants: cluster.simulants });
+                }}
+                onAltitudeChange={handleAltitudeChange}
+              />
+            ) : (
+              <LeafletMap
+                planet={mapState.planet}
+                mapCenter={mapState.mapCenter} mapZoom={mapState.mapZoom}
+                filteredSimulants={displayedSimulants} siteBySimulant={siteBySimulant}
+                lunarSites={lunarSites}
+                onSimulantClick={handleSimulantClick} onLunarSiteClick={handleLunarSiteClick}
+                onMapClick={handleMapClick}
+              />
+            )}
+          </Suspense>
         </div>
       )}
 
@@ -338,7 +344,24 @@ export default function App() {
       {mapState.viewMode !== 'table' && (
         <MapToolbar
           planet={mapState.planet} viewMode={mapState.viewMode}
+          earthTexture={earthTexture}
           onToggleEarthTexture={toggleEarthTexture}
+          onZoomIn={() => {
+            if (mapState.viewMode === 'globe') {
+              setGlobeAltitude(prev => Math.max(0.1, prev * 0.6));
+              globeRef.current?.pointOfView({ altitude: globeAltitude * 0.6 }, 300);
+            } else {
+              mapState.setMapZoom(mapState.mapZoom + 1);
+            }
+          }}
+          onZoomOut={() => {
+            if (mapState.viewMode === 'globe') {
+              setGlobeAltitude(prev => Math.min(10, prev * 1.6));
+              globeRef.current?.pointOfView({ altitude: globeAltitude * 1.6 }, 300);
+            } else {
+              mapState.setMapZoom(Math.max(1, mapState.mapZoom - 1));
+            }
+          }}
           onLocate={handleLocate}
           onHome={() => {
             mapState.setMapCenter([46.6, 2.3]); // France/Europe
@@ -361,6 +384,9 @@ export default function App() {
             lunarReferences={lunarReference}
             physicalProperties={physicalPropsBySimulant.get(selectedSimulant.simulant_id)}
             purchaseInfo={purchaseBySimulant.get(selectedSimulant.simulant_id)}
+            selectedLunarRefMission={panelState.selectedLunarRefMission}
+            onSelectLunarRef={panelState.setSelectedLunarRefMission}
+            onOpenCrossComparison={() => panelState.setShowCrossComparison(true)}
             pinned={panelState.panel1.pinned}
             onClose={() => panelState.closePanel(1)}
             onTogglePin={() => panelState.togglePin(1)}
@@ -372,15 +398,29 @@ export default function App() {
           <LunarSitePanel site={selectedLunarSite} onClose={() => panelState.setSelectedLunarSiteId(null)} />
         )}
         {panelState.showComparison && selectedSimulant && selectedSimulant2 && (
-          <ComparisonPanel
-            simulant1={selectedSimulant}
-            composition1={compositionBySimulant.get(selectedSimulant.simulant_id) || []}
-            chemicalComposition1={chemicalBySimulant.get(selectedSimulant.simulant_id) || []}
-            simulant2={selectedSimulant2}
-            composition2={compositionBySimulant.get(selectedSimulant2.simulant_id) || []}
-            chemicalComposition2={chemicalBySimulant.get(selectedSimulant2.simulant_id) || []}
-            onClose={() => panelState.setShowComparison(false)}
-          />
+          <Suspense fallback={null}>
+            <ComparisonPanel
+              simulant1={selectedSimulant}
+              composition1={compositionBySimulant.get(selectedSimulant.simulant_id) || []}
+              chemicalComposition1={chemicalBySimulant.get(selectedSimulant.simulant_id) || []}
+              simulant2={selectedSimulant2}
+              composition2={compositionBySimulant.get(selectedSimulant2.simulant_id) || []}
+              chemicalComposition2={chemicalBySimulant.get(selectedSimulant2.simulant_id) || []}
+              onClose={() => panelState.setShowComparison(false)}
+            />
+          </Suspense>
+        )}
+        {panelState.showCrossComparison && selectedSimulant && selectedLunarRef && (
+          <Suspense fallback={null}>
+            <CrossComparisonPanel
+              simulant={selectedSimulant}
+              chemicalCompositions={chemicalBySimulant.get(selectedSimulant.simulant_id) || []}
+              compositions={compositionBySimulant.get(selectedSimulant.simulant_id) || []}
+              mineralGroups={mineralGroupsBySimulant.get(selectedSimulant.simulant_id) || []}
+              lunarRef={selectedLunarRef}
+              onClose={() => panelState.setShowCrossComparison(false)}
+            />
+          </Suspense>
         )}
       </AnimatePresence>
 

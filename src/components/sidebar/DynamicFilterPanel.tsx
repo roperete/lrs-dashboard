@@ -29,11 +29,15 @@ export function DynamicFilterPanel({
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handler = (e: MouseEvent) => {
+    const handler = (e: MouseEvent | TouchEvent) => {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) setMenuOpen(false);
     };
     document.addEventListener('mousedown', handler);
-    return () => document.removeEventListener('mousedown', handler);
+    document.addEventListener('touchstart', handler);
+    return () => {
+      document.removeEventListener('mousedown', handler);
+      document.removeEventListener('touchstart', handler);
+    };
   }, []);
 
   const getOptionsForFilter = (filter: DynamicFilter): { options?: { label: string; value: string }[]; groups?: { label: string; options: { label: string; value: string }[] }[] } => {
@@ -91,7 +95,7 @@ export function DynamicFilterPanel({
         </button>
 
         {menuOpen && (
-          <div className="absolute bottom-full left-0 right-0 mb-1 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-[100] max-h-60 overflow-y-auto">
+          <div className="absolute bottom-full left-0 right-0 mb-1 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-[100] max-h-[50vh] md:max-h-60 overflow-y-auto">
             {FILTER_PROPERTIES.map(p => (
               <button key={p.property}
                 onClick={() => { onAddFilter(p.property); setMenuOpen(false); }}

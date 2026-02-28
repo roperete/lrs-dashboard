@@ -8,14 +8,13 @@ import type { Composition, MineralGroup, LunarReference } from '../../types';
 interface MineralChartProps {
   compositions: Composition[];
   mineralGroups: MineralGroup[];
-  lunarReferences: LunarReference[];
+  lunarRef?: LunarReference | null;
   simulantName: string;
 }
 
-export function MineralChart({ compositions, mineralGroups, lunarReferences, simulantName }: MineralChartProps) {
+export function MineralChart({ compositions, mineralGroups, lunarRef, simulantName }: MineralChartProps) {
   const [view, setView] = useState<'detailed' | 'groups'>('groups');
   const [displayMode, setDisplayMode] = useState<'chart' | 'table'>('table');
-  const [lunarRefMission, setLunarRefMission] = useState('');
 
   const detailedData = useMemo(() =>
     compositions.filter(c => c.value_pct > 0).sort((a, b) => b.value_pct - a.value_pct),
@@ -24,14 +23,6 @@ export function MineralChart({ compositions, mineralGroups, lunarReferences, sim
   const groupData = useMemo(() =>
     mineralGroups.filter(g => g.value_pct > 0).sort((a, b) => b.value_pct - a.value_pct),
     [mineralGroups]);
-
-  const lunarRef = useMemo(() =>
-    lunarReferences.find(r => r.mission === lunarRefMission),
-    [lunarReferences, lunarRefMission]);
-
-  const missionsWithMinerals = useMemo(() =>
-    lunarReferences.filter(r => r.mineral_composition && Object.keys(r.mineral_composition).length > 0),
-    [lunarReferences]);
 
   const chartData = useMemo(() => {
     if (view === 'detailed') {
@@ -88,16 +79,6 @@ export function MineralChart({ compositions, mineralGroups, lunarReferences, sim
         </div>
       </div>
 
-      {missionsWithMinerals.length > 0 && (
-        <div className="mb-3">
-          <select value={lunarRefMission} onChange={(e) => setLunarRefMission(e.target.value)}
-            className="w-full bg-slate-800 border border-slate-700 rounded-lg py-1.5 px-3 text-xs text-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500/50">
-            <option value="">No lunar reference comparison</option>
-            {missionsWithMinerals.map(r => <option key={r.mission} value={r.mission}>{r.mission}</option>)}
-          </select>
-        </div>
-      )}
-
       {!hasData ? (
         <div className="bg-slate-800/30 rounded-xl p-8 text-center border border-slate-700/30">
           <p className="text-slate-500 italic">No mineral composition data available</p>
@@ -109,19 +90,22 @@ export function MineralChart({ compositions, mineralGroups, lunarReferences, sim
               <CartesianGrid strokeDasharray="3 3" stroke="#334155" horizontal={false} />
               <XAxis type="number" hide />
               <YAxis dataKey="name" type="category" width={110} stroke="#94a3b8" fontSize={11} tick={{ fill: '#94a3b8' }} />
-              <Tooltip contentStyle={{ backgroundColor: '#0f172a', border: '1px solid #334155', borderRadius: '8px' }} />
+              <Tooltip
+                formatter={(value: number, name: string) => [`${value.toFixed(2)}%`, name]}
+                contentStyle={{ backgroundColor: '#0f172a', border: '1px solid #334155', borderRadius: '8px' }}
+              />
               <Bar dataKey="simulant_pct" name={simulantName} fill="#10b981" radius={[0, 4, 4, 0]}>
                 {chartData.map((_, i) => <Cell key={i} fill={i % 2 === 0 ? '#10b981' : '#059669'} />)}
               </Bar>
               {lunarRef && (
-                <Bar dataKey="lunar_pct" name={lunarRefMission} fill="#fca311" radius={[0, 4, 4, 0]} />
+                <Bar dataKey="lunar_pct" name={lunarRef.mission} fill="#fca311" radius={[0, 4, 4, 0]} />
               )}
               {lunarRef && <Legend />}
             </BarChart>
           </ResponsiveContainer>
         </div>
       ) : (
-        <CompositionTable data={tableData} valueLabel="%" refLabel={lunarRefMission || undefined} />
+        <CompositionTable data={tableData} valueLabel="%" refLabel={lunarRef?.mission || undefined} />
       )}
     </div>
   );
