@@ -189,7 +189,7 @@ export default function App() {
   if (loading || !splashDone) return <LoadingScreen />;
 
   return (
-    <div className="h-screen w-screen bg-slate-950 overflow-hidden relative font-sans text-slate-200">
+    <div className="h-dvh w-screen bg-slate-950 overflow-hidden relative font-sans text-slate-200">
       <AppHeader
         planet={mapState.planet} viewMode={mapState.viewMode}
         geocodingQuery={mapState.geocodingQuery} sidebarOpen={isSidebarOpen}
@@ -344,6 +344,7 @@ export default function App() {
       {mapState.viewMode !== 'table' && (
         <MapToolbar
           planet={mapState.planet} viewMode={mapState.viewMode}
+          earthTexture={earthTexture}
           onToggleEarthTexture={toggleEarthTexture}
           onLocate={handleLocate}
           onHome={() => {
