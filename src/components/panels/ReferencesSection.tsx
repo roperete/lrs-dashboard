@@ -121,7 +121,7 @@ export function ReferencesSection({ references, simulantName }: ReferencesSectio
             </div>
           </a>
           <a
-            href={`https://www.google.com/search?q=${encodeURIComponent('What is ' + simulantName + ' lunar regolith simulant used for in research')}&udm=50`}
+            href={`https://www.google.com/search?q=${encodeURIComponent(simulantName + ' lunar regolith simulant published studies experiments applications site:scholar.google.com OR site:researchgate.net OR site:sciencedirect.com')}&udm=50`}
             target="_blank" rel="noopener noreferrer"
             className="flex items-center gap-3 p-3 bg-purple-500/5 hover:bg-purple-500/10 border border-purple-500/20 rounded-xl transition-all group"
           >
@@ -130,7 +130,7 @@ export function ReferencesSection({ references, simulantName }: ReferencesSectio
             </div>
             <div>
               <p className="text-sm font-medium text-purple-400">Ask AI about this simulant</p>
-              <p className="text-[10px] text-slate-500">Google AI overview for {simulantName} research applications</p>
+              <p className="text-[10px] text-slate-500">AI-powered search for published studies using {simulantName}</p>
             </div>
           </a>
         </div>
