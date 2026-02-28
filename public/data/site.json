@@ -1370,11 +1370,11 @@
   {
     "site_id": "X153",
     "simulant_id": "S153",
-    "site_name": "Spain",
+    "site_name": "Instituto de Geociencias (IGEO, CSIC-UCM), Madrid",
     "site_type": "Lab",
     "country_code": "Spain",
-    "lat": 40.4168,
-    "lon": -3.7038
+    "lat": 40.4468,
+    "lon": -3.6927
   },
   {
     "site_id": "X154",
@@ -1420,5 +1420,14 @@
     "country_code": "ESP",
     "lat": 28.6133,
     "lon": -17.8653
+  },
+  {
+    "site_id": "X159",
+    "simulant_id": "S153",
+    "site_name": "Tao Quarry, Lanzarote, Canary Islands",
+    "site_type": "Quarry",
+    "country_code": "Spain",
+    "lat": 29.0027,
+    "lon": -13.6310
   }
 ]
