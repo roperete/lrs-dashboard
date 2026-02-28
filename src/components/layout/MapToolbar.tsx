@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { Sun, Moon, Locate, Maximize, Minimize, Home } from 'lucide-react';
+import { Sun, Moon, Locate, Maximize, Minimize, Home, Plus, Minus } from 'lucide-react';
 import { cn } from '../../utils/cn';
 
 interface MapToolbarProps {
@@ -7,13 +7,15 @@ interface MapToolbarProps {
   viewMode: 'globe' | 'map' | 'table';
   earthTexture?: 'day' | 'night';
   onToggleEarthTexture?: () => void;
+  onZoomIn: () => void;
+  onZoomOut: () => void;
   onLocate: () => void;
   onHome: () => void;
 }
 
 export function MapToolbar({
   planet, viewMode, earthTexture,
-  onToggleEarthTexture, onLocate, onHome,
+  onToggleEarthTexture, onZoomIn, onZoomOut, onLocate, onHome,
 }: MapToolbarProps) {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
@@ -57,6 +59,14 @@ export function MapToolbar({
         <button onClick={onHome}
           className={btnClass} title="Reset View">
           <Home className="w-4 h-4 md:w-5 md:h-5" />
+        </button>
+      </div>
+      <div className="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-1.5 md:p-2 rounded-xl md:rounded-2xl flex flex-col gap-1.5 md:gap-2">
+        <button onClick={onZoomIn} className={btnClass} title="Zoom In">
+          <Plus className="w-4 h-4 md:w-5 md:h-5" />
+        </button>
+        <button onClick={onZoomOut} className={btnClass} title="Zoom Out">
+          <Minus className="w-4 h-4 md:w-5 md:h-5" />
         </button>
       </div>
     </div>

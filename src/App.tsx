@@ -346,6 +346,22 @@ export default function App() {
           planet={mapState.planet} viewMode={mapState.viewMode}
           earthTexture={earthTexture}
           onToggleEarthTexture={toggleEarthTexture}
+          onZoomIn={() => {
+            if (mapState.viewMode === 'globe') {
+              setGlobeAltitude(prev => Math.max(0.1, prev * 0.6));
+              globeRef.current?.pointOfView({ altitude: globeAltitude * 0.6 }, 300);
+            } else {
+              mapState.setMapZoom(mapState.mapZoom + 1);
+            }
+          }}
+          onZoomOut={() => {
+            if (mapState.viewMode === 'globe') {
+              setGlobeAltitude(prev => Math.min(10, prev * 1.6));
+              globeRef.current?.pointOfView({ altitude: globeAltitude * 1.6 }, 300);
+            } else {
+              mapState.setMapZoom(Math.max(1, mapState.mapZoom - 1));
+            }
+          }}
           onLocate={handleLocate}
           onHome={() => {
             mapState.setMapCenter([46.6, 2.3]); // France/Europe

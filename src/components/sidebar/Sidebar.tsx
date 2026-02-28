@@ -192,7 +192,7 @@ export function Sidebar(props: SidebarProps) {
               </div>
               <div>
                 <h4 className="text-emerald-400 font-bold mb-1">Map Controls</h4>
-                <p>Right toolbar: fullscreen, day/night toggle (3D Earth), GPS location, and home (reset view). Scroll to zoom, drag to pan.</p>
+                <p>Right toolbar: fullscreen, day/night toggle (3D Earth), GPS location, home (reset view), and <b>+/−</b> zoom buttons. You can also scroll to zoom and drag to pan.</p>
               </div>
               <div className="pt-2 border-t border-slate-800">
                 <p className="text-slate-500">An initiative by <b className="text-slate-400">The Spring Institute for Forests on the Moon</b>, sponsored by <b className="text-slate-400">CNES Spaceship</b>.</p>
