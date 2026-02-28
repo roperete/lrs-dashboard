@@ -1,104 +1,938 @@
 [
   {
+    "simulant_id": "S001",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not currently available for commercial purchase."
+  },
+  {
+    "simulant_id": "S002",
+    "vendor": "Australian Space Agency / Research Institutions",
+    "url": null,
+    "price_note": "Limited research stock; not available for public commercial purchase."
+  },
+  {
+    "simulant_id": "S003",
+    "vendor": null,
+    "url": null,
+    "price_note": "Production permanently discontinued."
+  },
+  {
+    "simulant_id": "S004",
+    "vendor": "Beihang University",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S005",
+    "vendor": "Beihang University",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
     "simulant_id": "S006",
     "vendor": "NASA Kennedy Space Center / Swamp Works",
     "url": "https://ares.jsc.nasa.gov/projects/simulants/bp-1.html",
-    "price_note": "Commercial basalt by-product; available in industrial quantities; contact NASA KSC Swamp Works"
+    "price_note": "Commercial basalt by-product; available in industrial quantities; contact NASA KSC Swamp Works."
+  },
+  {
+    "simulant_id": "S007",
+    "vendor": "Chinese Academy of Sciences",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S008",
+    "vendor": null,
+    "url": null,
+    "price_note": "Production permanently discontinued."
+  },
+  {
+    "simulant_id": "S009",
+    "vendor": "Chinese Academy of Sciences",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S010",
+    "vendor": "Chinese Academy of Sciences",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
   },
   {
     "simulant_id": "S011",
     "vendor": "Colorado School of Mines, Space Resources Program",
     "url": "https://space.mines.edu/simulants/",
-    "price_note": "Contact institution; research-grade simulant"
+    "price_note": "Research-grade; available via request to Colorado School of Mines."
+  },
+  {
+    "simulant_id": "S012",
+    "vendor": "China University of Geosciences",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S013",
+    "vendor": "China University of Mining and Technology",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S014",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial purchase."
+  },
+  {
+    "simulant_id": "S015",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial purchase."
+  },
+  {
+    "simulant_id": "S016",
+    "vendor": "Space Resource Technologies",
+    "url": "https://spaceresourcetech.com/",
+    "price_note": "Research simulant; inquiry required for pricing and availability."
+  },
+  {
+    "simulant_id": "S017",
+    "vendor": "European Astronaut Centre (ESA)",
+    "url": null,
+    "price_note": "Restricted to ESA partners; available via ESA research agreement."
+  },
+  {
+    "simulant_id": "S018",
+    "vendor": "European Astronaut Centre (ESA)",
+    "url": null,
+    "price_note": "Restricted to ESA partners; available via ESA research agreement."
+  },
+  {
+    "simulant_id": "S019",
+    "vendor": "JAXA / Shimizu Corporation",
+    "url": null,
+    "price_note": "Institutional research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S020",
+    "vendor": "JAXA / Shimizu Corporation",
+    "url": null,
+    "price_note": "Institutional research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S021",
+    "vendor": "JAXA / Shimizu Corporation",
+    "url": null,
+    "price_note": "Institutional research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S022",
+    "vendor": "JAXA / Shimizu Corporation",
+    "url": null,
+    "price_note": "Institutional research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S023",
+    "vendor": null,
+    "url": null,
+    "price_note": "Production permanently discontinued."
   },
   {
     "simulant_id": "S024",
-    "vendor": "Best Sand Corporation / Black Lab Corp, Chardon, Ohio",
+    "vendor": "Best Sand Corporation / NASA Glenn Research Center",
     "url": "https://ares.jsc.nasa.gov/projects/simulants/dust-testing-facilities/glenn-research-center.html",
-    "price_note": "~$250/metric ton; silica sand mixture; contact Best Sand Corporation or NASA Glenn"
+    "price_note": "~$250/metric ton; available for bulk industrial purchase from Best Sand Corporation."
   },
   {
-    "simulant_id": "S082",
-    "vendor": "NASA Glenn Research Center",
-    "url": "https://ares.jsc.nasa.gov/projects/simulants/dust-testing-facilities/glenn-research-center.html",
-    "price_note": "Silica sand/silt mixture; contact NASA Glenn Research Center"
+    "simulant_id": "S025",
+    "vendor": "Hudson Resources",
+    "url": null,
+    "price_note": "Available via research partnership; contact Hudson Resources."
+  },
+  {
+    "simulant_id": "S026",
+    "vendor": "Jilin University",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S027",
+    "vendor": null,
+    "url": null,
+    "price_note": "Production permanently discontinued; superseded by JSC-1A and LMS-1E."
   },
   {
     "simulant_id": "S028",
     "vendor": "NASA Johnson Space Center (limited) / Space Resource Technologies (successor LMS-1E)",
     "url": "https://spaceresourcetech.com/products/standard-basalt-simulant",
-    "price_note": "Original JSC-1A no longer available outside NASA; successor LMS-1E at $35/unit from Space Resource Technologies"
+    "price_note": "Discontinued; NASA-only stock remains. Commercial successor LMS-1E available at $35/kg from Space Resource Technologies."
   },
   {
     "simulant_id": "S029",
     "vendor": "NASA Johnson Space Center",
     "url": "https://ares.jsc.nasa.gov/projects/simulants/jsc-1-1a.html",
-    "price_note": "Coarse variant; no longer available outside NASA centers"
+    "price_note": "Coarse variant; restricted to NASA centers. Available only via request to NASA Johnson Space Center."
   },
   {
     "simulant_id": "S030",
     "vendor": "NASA Johnson Space Center",
     "url": "https://ares.jsc.nasa.gov/projects/simulants/jsc-1-1a.html",
-    "price_note": "Fine variant; no longer available outside NASA centers"
+    "price_note": "Fine variant; restricted to NASA centers. Available only via request to NASA Johnson Space Center."
+  },
+  {
+    "simulant_id": "S031",
+    "vendor": "Korea Institute of Geoscience and Mineral Resources (KIGAM)",
+    "url": null,
+    "price_note": "Produced by KIGAM (Korea); available via research inquiry."
+  },
+  {
+    "simulant_id": "S032",
+    "vendor": "Korea Institute of Civil Engineering and Building Technology (KICT)",
+    "url": null,
+    "price_note": "Produced by KICT (Korea); available via research inquiry."
+  },
+  {
+    "simulant_id": "S033",
+    "vendor": null,
+    "url": null,
+    "price_note": "Institutional research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S034",
+    "vendor": "Shimizu Corporation",
+    "url": null,
+    "price_note": "Institutional research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S035",
+    "vendor": "Astroport Space Technologies",
+    "url": "https://astroport.us/",
+    "price_note": "Available for mission-specific procurement; contact Astroport Space Technologies for quote."
   },
   {
     "simulant_id": "S036",
     "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
     "url": "https://spaceresourcetech.com/products/lhs-1-lunar-highlands-simulant",
-    "price_note": "$55/kg; high-fidelity lunar highlands simulant"
-  },
-  {
-    "simulant_id": "S091",
-    "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
-    "url": "https://spaceresourcetech.com/products/lhs-1d-lunar-highland-dust-simulant",
-    "price_note": "~$120/kg; fine dust (<25 um) variant for dust mitigation research"
+    "price_note": "$55/kg; high-fidelity lunar highlands simulant; direct online purchase available."
   },
   {
     "simulant_id": "S037",
     "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
     "url": "https://spaceresourcetech.com/products/lms-1-lunar-mare-simulant",
-    "price_note": "$45/kg; high-fidelity lunar mare simulant"
+    "price_note": "$45/kg; high-fidelity lunar mare simulant; direct online purchase available."
   },
   {
-    "simulant_id": "S094",
-    "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
-    "url": "https://spaceresourcetech.com/products/lms-1d-lunar-mare-dust-simulant",
-    "price_note": "$120/kg; fine dust variant"
+    "simulant_id": "S038",
+    "vendor": "ISRO",
+    "url": null,
+    "price_note": "Internal ISRO research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S039",
+    "vendor": "SolSys Mining (Norway)",
+    "url": null,
+    "price_note": "Entering commercial production by SolSys Mining (Norway); contact for availability."
+  },
+  {
+    "simulant_id": "S040",
+    "vendor": "TU Berlin",
+    "url": null,
+    "price_note": "Produced by TU Berlin; available via research partnership."
+  },
+  {
+    "simulant_id": "S041",
+    "vendor": "TU Berlin",
+    "url": null,
+    "price_note": "Produced by TU Berlin; available via research partnership."
+  },
+  {
+    "simulant_id": "S042",
+    "vendor": "Shimizu Corporation",
+    "url": null,
+    "price_note": "Institutional research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S043",
+    "vendor": null,
+    "url": null,
+    "price_note": "Production permanently discontinued."
+  },
+  {
+    "simulant_id": "S044",
+    "vendor": null,
+    "url": null,
+    "price_note": "Production permanently discontinued."
+  },
+  {
+    "simulant_id": "S045",
+    "vendor": "National Astronomical Observatories, Chinese Academy of Sciences",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S046",
+    "vendor": "Northeastern University (China)",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
   },
   {
     "simulant_id": "S047",
     "vendor": "USGS / NASA (historic); Washington Mills (current production)",
     "url": "https://ares.jsc.nasa.gov/projects/simulants/nu-lht.html",
-    "price_note": "Contact NASA MSFC or JSC; NUW-LHT-5M produced by Washington Mills"
+    "price_note": "Historic NASA simulant; contact NASA MSFC or JSC. Current production variant NUW-LHT-5M available from Washington Mills."
+  },
+  {
+    "simulant_id": "S048",
+    "vendor": "USGS / NASA",
+    "url": "https://ares.jsc.nasa.gov/projects/simulants/nu-lht.html",
+    "price_note": "Limited NASA research stock; not available for public commercial sale."
   },
   {
     "simulant_id": "S049",
     "vendor": "USGS / Zybek Advanced Products",
     "url": "https://ares.jsc.nasa.gov/projects/simulants/nu-lht.html",
-    "price_note": "Contact NASA; historic USGS design"
+    "price_note": "Historic Zybek design; contact NASA for availability."
+  },
+  {
+    "simulant_id": "S050",
+    "vendor": "USGS / NASA",
+    "url": "https://ares.jsc.nasa.gov/projects/simulants/nu-lht.html",
+    "price_note": "Limited NASA research stock; not available for public commercial sale."
   },
   {
     "simulant_id": "S051",
     "vendor": "USGS / Zybek Advanced Products",
     "url": "https://ares.jsc.nasa.gov/projects/simulants/nu-lht.html",
-    "price_note": "Second production by Zybek Advanced Products (2014); contact NASA"
+    "price_note": "Second production by Zybek Advanced Products (2014); contact NASA for availability."
   },
   {
-    "simulant_id": "S088",
-    "vendor": "USGS / NASA",
-    "url": "https://ares.jsc.nasa.gov/projects/simulants/nu-lht.html",
-    "price_note": "Contact NASA; part of complete NU-LHT series"
+    "simulant_id": "S052",
+    "vendor": "Washington Mills",
+    "url": null,
+    "price_note": "Commercially produced by Washington Mills; contact for industrial quantities."
   },
   {
     "simulant_id": "S053",
     "vendor": "Deltion Innovations / NORCAT",
     "url": "https://ares.jsc.nasa.gov/projects/simulants/ob-1.html",
-    "price_note": "Shawmere anorthosite + olivine slag; contact NORCAT or Deltion Innovations"
+    "price_note": "Shawmere anorthosite + olivine slag; available via request to Deltion Innovations / NORCAT (Canada)."
+  },
+  {
+    "simulant_id": "S054",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial purchase."
+  },
+  {
+    "simulant_id": "S055",
+    "vendor": "Off Planet Research",
+    "url": null,
+    "price_note": "Internal development simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S056",
+    "vendor": "Off Planet Research",
+    "url": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+    "price_note": "Research simulant from Off Planet Research; inquiry required for availability."
+  },
+  {
+    "simulant_id": "S057",
+    "vendor": "Off Planet Research",
+    "url": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+    "price_note": "Available for commercial purchase via direct quote; contact offplanetresearch.com."
+  },
+  {
+    "simulant_id": "S058",
+    "vendor": "Off Planet Research",
+    "url": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+    "price_note": "Available for commercial purchase via direct quote; contact offplanetresearch.com."
+  },
+  {
+    "simulant_id": "S059",
+    "vendor": "Off Planet Research",
+    "url": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+    "price_note": "Research simulant from Off Planet Research; inquiry required for availability."
   },
   {
     "simulant_id": "S060",
     "vendor": "Off Planet Research",
     "url": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
-    "price_note": "Contact for quote via offplanetresearch.com/contact-us; lunar mare simulant"
+    "price_note": "High-fidelity lunar mare simulant; available via direct quote from Off Planet Research."
+  },
+  {
+    "simulant_id": "S061",
+    "vendor": "Off Planet Research",
+    "url": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+    "price_note": "Research simulant from Off Planet Research; inquiry required for availability."
+  },
+  {
+    "simulant_id": "S062",
+    "vendor": "Shimizu Corporation",
+    "url": null,
+    "price_note": "Institutional research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S063",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal development simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S064",
+    "vendor": "Tongji University",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S065",
+    "vendor": "Hispansion.io",
+    "url": "https://hispansion.io/",
+    "price_note": "EUR 25/kg; direct online purchase available at Hispansion.io."
+  },
+  {
+    "simulant_id": "S066",
+    "vendor": "Hispansion.io",
+    "url": "https://hispansion.io/",
+    "price_note": "EUR 25/kg; direct online purchase available at Hispansion.io."
+  },
+  {
+    "simulant_id": "S067",
+    "vendor": "Space Zab Company (Thailand)",
+    "url": null,
+    "price_note": "Produced by Space Zab (Thailand); available via research inquiry."
+  },
+  {
+    "simulant_id": "S068",
+    "vendor": "ESA / TU Braunschweig",
+    "url": null,
+    "price_note": "Produced by ESA; available via ESA research partnership."
+  },
+  {
+    "simulant_id": "S069",
+    "vendor": "TU Braunschweig",
+    "url": null,
+    "price_note": "Produced by TU Braunschweig; available via research inquiry."
+  },
+  {
+    "simulant_id": "S070",
+    "vendor": "TU Braunschweig",
+    "url": null,
+    "price_note": "Produced by TU Braunschweig; available via research inquiry."
+  },
+  {
+    "simulant_id": "S071",
+    "vendor": "Specialist Aggregates (UK)",
+    "url": "https://www.specialistaggregates.com/",
+    "price_note": "Available for direct online purchase as Lunar Dust at Specialist Aggregates (UK)."
+  },
+  {
+    "simulant_id": "S072",
+    "vendor": "Specialist Aggregates (UK)",
+    "url": "https://www.specialistaggregates.com/",
+    "price_note": "Available for direct online purchase as Lunar Dust at Specialist Aggregates (UK)."
+  },
+  {
+    "simulant_id": "S073",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal development simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S074",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal development simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S075",
+    "vendor": "Wuhan University",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S076",
+    "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
+    "url": "https://spaceresourcetech.com/products/lms-2-lunar-mare-simulant",
+    "price_note": "Direct online purchase available at Space Resource Technologies; extended particle size distribution mare simulant."
+  },
+  {
+    "simulant_id": "S077",
+    "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
+    "url": "https://spaceresourcetech.com/products/lhs-2-lunar-highlands-simulant",
+    "price_note": "Direct online purchase available at Space Resource Technologies; extended particle size distribution highlands simulant."
+  },
+  {
+    "simulant_id": "S078",
+    "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
+    "url": "https://spaceresourcetech.com/products/lhs-2e-lunar-highlands-simulant",
+    "price_note": "Direct online purchase available at Space Resource Technologies; engineering-grade bulk highlands simulant."
+  },
+  {
+    "simulant_id": "S079",
+    "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
+    "url": "https://spaceresourcetech.com/products/lsp-2-lunar-south-pole-simulant",
+    "price_note": "Direct online purchase available at Space Resource Technologies; lunar south pole simulant."
+  },
+  {
+    "simulant_id": "S080",
+    "vendor": "Chinese Academy of Sciences, Institute of Geology and Geophysics",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S081",
+    "vendor": null,
+    "url": null,
+    "price_note": "Production permanently discontinued."
+  },
+  {
+    "simulant_id": "S082",
+    "vendor": "NASA Glenn Research Center",
+    "url": "https://ares.jsc.nasa.gov/projects/simulants/dust-testing-facilities/glenn-research-center.html",
+    "price_note": "Silica sand/silt mixture; research-grade. Contact NASA Glenn Research Center for access."
+  },
+  {
+    "simulant_id": "S083",
+    "vendor": "Chinese Academy of Sciences",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S084",
+    "vendor": "Chinese Academy of Sciences",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S085",
+    "vendor": null,
+    "url": null,
+    "price_note": "Production permanently discontinued."
+  },
+  {
+    "simulant_id": "S086",
+    "vendor": "USGS / NASA",
+    "url": "https://ares.jsc.nasa.gov/projects/simulants/nu-lht.html",
+    "price_note": "Limited NASA research stock; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S087",
+    "vendor": "USGS / NASA",
+    "url": "https://ares.jsc.nasa.gov/projects/simulants/nu-lht.html",
+    "price_note": "Limited NASA research stock; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S088",
+    "vendor": "USGS / NASA",
+    "url": "https://ares.jsc.nasa.gov/projects/simulants/nu-lht.html",
+    "price_note": "Research-grade; available via request to USGS/NASA. Part of complete NU-LHT series."
+  },
+  {
+    "simulant_id": "S089",
+    "vendor": "USGS / NASA",
+    "url": "https://ares.jsc.nasa.gov/projects/simulants/nu-lht.html",
+    "price_note": "Limited NASA research stock; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S090",
+    "vendor": "NASA / USGS",
+    "url": "https://ares.jsc.nasa.gov/projects/simulants/nu-lht.html",
+    "price_note": "Produced by NASA/USGS; available via official research inquiry."
+  },
+  {
+    "simulant_id": "S091",
+    "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
+    "url": "https://spaceresourcetech.com/products/lhs-1d-lunar-highland-dust-simulant",
+    "price_note": "~$120/kg; fine dust (<25 um) highlands variant for dust mitigation research; direct online purchase available."
+  },
+  {
+    "simulant_id": "S092",
+    "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
+    "url": "https://spaceresourcetech.com/products/lhs-1e-lunar-highlands-simulant",
+    "price_note": "$35/kg; engineering-grade highlands simulant; direct online purchase available."
+  },
+  {
+    "simulant_id": "S093",
+    "vendor": "Space Resource Technologies",
+    "url": "https://spaceresourcetech.com/",
+    "price_note": "High-fidelity agglutinated highlands variant; contact Space Resource Technologies for research pricing."
+  },
+  {
+    "simulant_id": "S094",
+    "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
+    "url": "https://spaceresourcetech.com/products/lms-1d-lunar-mare-dust-simulant",
+    "price_note": "$120/kg; fine dust mare variant; direct online purchase available."
+  },
+  {
+    "simulant_id": "S095",
+    "vendor": "Space Resource Technologies (formerly CLASS Exolith Lab)",
+    "url": "https://spaceresourcetech.com/products/lms-1e-lunar-mare-simulant",
+    "price_note": "$35/kg; engineering-grade mare simulant; direct online purchase available."
+  },
+  {
+    "simulant_id": "S096",
+    "vendor": "Space Resource Technologies",
+    "url": "https://spaceresourcetech.com/",
+    "price_note": "Research dust simulant; inquiry required for pricing and availability."
+  },
+  {
+    "simulant_id": "S097",
+    "vendor": "Space Resource Technologies",
+    "url": "https://spaceresourcetech.com/",
+    "price_note": "Research icy simulant; inquiry required for pricing and availability."
+  },
+  {
+    "simulant_id": "S098",
+    "vendor": "Off Planet Research",
+    "url": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+    "price_note": "Research simulant from Off Planet Research; inquiry required for availability."
+  },
+  {
+    "simulant_id": "S099",
+    "vendor": "Off Planet Research",
+    "url": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+    "price_note": "Available for commercial purchase via direct quote; contact offplanetresearch.com."
+  },
+  {
+    "simulant_id": "S100",
+    "vendor": "Off Planet Research",
+    "url": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+    "price_note": "Research simulant from Off Planet Research; inquiry required for availability."
+  },
+  {
+    "simulant_id": "S101",
+    "vendor": "Off Planet Research",
+    "url": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+    "price_note": "Available for commercial purchase via direct quote; contact offplanetresearch.com."
+  },
+  {
+    "simulant_id": "S102",
+    "vendor": "Off Planet Research",
+    "url": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+    "price_note": "Research simulant from Off Planet Research; inquiry required for availability."
+  },
+  {
+    "simulant_id": "S103",
+    "vendor": "Colorado School of Mines",
+    "url": "https://space.mines.edu/simulants/",
+    "price_note": "Produced by Colorado School of Mines; research inquiry required."
+  },
+  {
+    "simulant_id": "S104",
+    "vendor": "Colorado School of Mines",
+    "url": "https://space.mines.edu/simulants/",
+    "price_note": "Produced by Colorado School of Mines; research inquiry required."
+  },
+  {
+    "simulant_id": "S105",
+    "vendor": "Colorado School of Mines",
+    "url": "https://space.mines.edu/simulants/",
+    "price_note": "Produced by Colorado School of Mines; research inquiry required."
+  },
+  {
+    "simulant_id": "S106",
+    "vendor": "Colorado School of Mines",
+    "url": "https://space.mines.edu/simulants/",
+    "price_note": "Produced by Colorado School of Mines; research inquiry required."
+  },
+  {
+    "simulant_id": "S107",
+    "vendor": "Colorado School of Mines",
+    "url": "https://space.mines.edu/simulants/",
+    "price_note": "Produced by Colorado School of Mines; research inquiry required."
+  },
+  {
+    "simulant_id": "S108",
+    "vendor": "Outward Technologies",
+    "url": null,
+    "price_note": "Produced by Outward Technologies; research inquiry required."
+  },
+  {
+    "simulant_id": "S109",
+    "vendor": "Outward Technologies",
+    "url": null,
+    "price_note": "Produced by Outward Technologies; research inquiry required."
+  },
+  {
+    "simulant_id": "S110",
+    "vendor": null,
+    "url": null,
+    "price_note": "Historic legacy simulant; production permanently discontinued."
+  },
+  {
+    "simulant_id": "S111",
+    "vendor": null,
+    "url": null,
+    "price_note": "Historic legacy simulant; production permanently discontinued."
+  },
+  {
+    "simulant_id": "S112",
+    "vendor": null,
+    "url": null,
+    "price_note": "Historic legacy simulant; production permanently discontinued."
+  },
+  {
+    "simulant_id": "S113",
+    "vendor": null,
+    "url": null,
+    "price_note": "Historic legacy simulant; production permanently discontinued."
+  },
+  {
+    "simulant_id": "S114",
+    "vendor": null,
+    "url": null,
+    "price_note": "Historic legacy simulant; production permanently discontinued."
+  },
+  {
+    "simulant_id": "S115",
+    "vendor": null,
+    "url": null,
+    "price_note": "Historic legacy simulant; production permanently discontinued."
+  },
+  {
+    "simulant_id": "S116",
+    "vendor": null,
+    "url": null,
+    "price_note": "Historic legacy simulant; production permanently discontinued."
+  },
+  {
+    "simulant_id": "S117",
+    "vendor": null,
+    "url": null,
+    "price_note": "Historic legacy simulant; production permanently discontinued."
+  },
+  {
+    "simulant_id": "S118",
+    "vendor": null,
+    "url": null,
+    "price_note": "Historic legacy simulant; production permanently discontinued."
+  },
+  {
+    "simulant_id": "S119",
+    "vendor": null,
+    "url": null,
+    "price_note": "Historic legacy simulant; production permanently discontinued."
+  },
+  {
+    "simulant_id": "S120",
+    "vendor": "Hong Kong Polytechnic University",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S121",
+    "vendor": "Beihang University",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S122",
+    "vendor": "Tongji University",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S123",
+    "vendor": "Northeastern University (China)",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S124",
+    "vendor": "Northeastern University (China)",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S125",
+    "vendor": "China University of Geosciences",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S126",
+    "vendor": "Huazhong University of Science and Technology (HUST)",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S127",
+    "vendor": "Harbin Institute of Technology",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S128",
+    "vendor": "Chongqing University",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S129",
+    "vendor": "Nanjing University",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S130",
+    "vendor": "Institute of Rock and Soil Mechanics (IRSM), Chinese Academy of Sciences",
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S131",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S132",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S133",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S134",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S135",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S136",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal China research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S137",
+    "vendor": "TU Braunschweig",
+    "url": null,
+    "price_note": "Produced by TU Braunschweig; research inquiry required."
+  },
+  {
+    "simulant_id": "S138",
+    "vendor": "TU Berlin",
+    "url": null,
+    "price_note": "Produced by TU Berlin; research inquiry required."
+  },
+  {
+    "simulant_id": "S139",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S140",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S141",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S142",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S143",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S144",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S145",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S146",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S149",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S150",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S151",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S152",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S153",
+    "vendor": "Instituto de Geociencias (IGEO, CSIC-UCM)",
+    "url": null,
+    "price_note": "Produced by IGEO (Spain); available via research partnership."
+  },
+  {
+    "simulant_id": "S154",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal development simulant; not available for commercial sale."
+  },
+  {
+    "simulant_id": "S155",
+    "vendor": "ISRO",
+    "url": null,
+    "price_note": "Internal ISRO research simulant; not available for public commercial sale."
+  },
+  {
+    "simulant_id": "S156",
+    "vendor": "Space Zab Company (Thailand)",
+    "url": null,
+    "price_note": "Produced in Thailand; available via research inquiry."
+  },
+  {
+    "simulant_id": "S157",
+    "vendor": "Far Eastern Federal University (FEFU)",
+    "url": null,
+    "price_note": "Internal Russian research simulant; not available for commercial purchase."
+  },
+  {
+    "simulant_id": "S158",
+    "vendor": null,
+    "url": null,
+    "price_note": "Designated for research only; no direct commercial purchase path."
   }
 ]

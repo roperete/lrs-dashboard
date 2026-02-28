@@ -144,15 +144,6 @@ export default function App() {
     } catch (err) { console.error('Geocoding error:', err); }
   }, [mapState, flyTo]);
 
-  const handleLocate = useCallback(() => {
-    navigator.geolocation?.getCurrentPosition((pos) => {
-      const center: [number, number] = [pos.coords.latitude, pos.coords.longitude];
-      mapState.setMapCenter(center);
-      mapState.setMapZoom(14);
-      if (mapState.viewMode === 'globe') flyTo(center[0], center[1], 0.4);
-    });
-  }, [mapState, flyTo]);
-
   const handleMapClick = useCallback((_e: any) => {
     // No-op: drawing and proximity features removed
   }, []);
@@ -362,7 +353,7 @@ export default function App() {
               mapState.setMapZoom(Math.max(1, mapState.mapZoom - 1));
             }
           }}
-          onLocate={handleLocate}
+
           onHome={() => {
             mapState.setMapCenter([46.6, 2.3]); // France/Europe
             mapState.setMapZoom(4);

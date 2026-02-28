@@ -95,7 +95,7 @@ export function DynamicFilterPanel({
         </button>
 
         {menuOpen && (
-          <div className="absolute bottom-full left-0 right-0 mb-1 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-[100] max-h-[50vh] md:max-h-60 overflow-y-auto">
+          <div className="absolute top-full left-0 right-0 mt-1 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-[100] max-h-[50vh] md:max-h-60 overflow-y-auto">
             {FILTER_PROPERTIES.map(p => (
               <button key={p.property}
                 onClick={() => { onAddFilter(p.property); setMenuOpen(false); }}

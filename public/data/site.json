@@ -353,7 +353,7 @@
   {
     "site_id": "X040",
     "simulant_id": "S040",
-    "site_name": "Technische Universit\u00e4t Berlin",
+    "site_name": "Technische Universität Berlin",
     "site_type": "Lab",
     "country_code": "Germany",
     "lat": 52.5125,
@@ -362,7 +362,7 @@
   {
     "site_id": "X041",
     "simulant_id": "S041",
-    "site_name": "Technische Universit\u00e4t Berlin",
+    "site_name": "Technische Universität Berlin",
     "site_type": "Lab",
     "country_code": "Germany",
     "lat": 52.5125,
@@ -1235,7 +1235,7 @@
   {
     "site_id": "X138",
     "simulant_id": "S138",
-    "site_name": "Technische Universit\u00e4t Berlin",
+    "site_name": "Technische Universität Berlin",
     "site_type": "Lab",
     "country_code": "Germany",
     "lat": 52.5125,
@@ -1307,24 +1307,6 @@
   {
     "site_id": "X146",
     "simulant_id": "S146",
-    "site_name": "The Open University, Milton Keynes",
-    "site_type": "Lab",
-    "country_code": "UK",
-    "lat": 52.0249,
-    "lon": -0.7097
-  },
-  {
-    "site_id": "X147",
-    "simulant_id": "S147",
-    "site_name": "The Open University, Milton Keynes",
-    "site_type": "Lab",
-    "country_code": "UK",
-    "lat": 52.0249,
-    "lon": -0.7097
-  },
-  {
-    "site_id": "X148",
-    "simulant_id": "S148",
     "site_name": "The Open University, Milton Keynes",
     "site_type": "Lab",
     "country_code": "UK",
@@ -1428,6 +1410,6 @@
     "site_type": "Quarry",
     "country_code": "Spain",
     "lat": 29.0027,
-    "lon": -13.6310
+    "lon": -13.631
   }
 ]
