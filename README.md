@@ -1,6 +1,6 @@
 # Lunar Regolith Simulant Database
 
-An interactive web dashboard for exploring and comparing lunar regolith simulants used in space research and ISRU (In-Situ Resource Utilization) development.
+An interactive web dashboard for exploring and comparing lunar regolith simulants used in space research and ISRU (In-Situ Resource Utilization) development. 
 
 Developed by **Spring Institute for Forest on the Moon** | Sponsored by **CNES**
 
