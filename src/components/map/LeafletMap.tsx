@@ -15,31 +15,21 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 });
 
-// Moon icon for Earth simulant markers
-const moonIcon = L.divIcon({
-  className: '',
-  html: `<div style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;background:rgba(16,185,129,0.15);border:2px solid #10b981;border-radius:50%;box-shadow:0 0 8px rgba(16,185,129,0.4);">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-    </svg>
-  </div>`,
-  iconSize: [28, 28],
-  iconAnchor: [14, 14],
-  popupAnchor: [0, -16],
-});
-
-// Highlands variant (cyan)
-const highlandIcon = L.divIcon({
-  className: '',
-  html: `<div style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;background:rgba(6,182,212,0.15);border:2px solid #06b6d4;border-radius:50%;box-shadow:0 0 8px rgba(6,182,212,0.4);">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-    </svg>
-  </div>`,
-  iconSize: [28, 28],
-  iconAnchor: [14, 14],
-  popupAnchor: [0, -16],
-});
+// Moon image markers for Earth simulants with type-colored ring
+const basePath = import.meta.env.BASE_URL + 'assets/moon-marker.svg';
+function makeMoonMarker(borderColor: string, glowColor: string) {
+  return L.divIcon({
+    className: '',
+    html: `<div style="width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:2px solid ${borderColor};border-radius:50%;box-shadow:0 0 8px ${glowColor};overflow:hidden;background:rgba(0,0,0,0.3);">
+      <img src="${basePath}" width="26" height="26" style="border-radius:50%;" />
+    </div>`,
+    iconSize: [30, 30],
+    iconAnchor: [15, 15],
+    popupAnchor: [0, -17],
+  });
+}
+const moonIcon = makeMoonMarker('#10b981', 'rgba(16,185,129,0.4)');
+const highlandIcon = makeMoonMarker('#06b6d4', 'rgba(6,182,212,0.4)');
 
 // Lunar lander icons by mission type color
 function makeLanderIcon(color: string) {
