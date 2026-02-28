@@ -176,7 +176,7 @@ function ComparisonTable({ title, icon, data, name1, name2 }: {
                   <td className={cn("py-2 px-4 text-right font-mono text-xs",
                     diff > 0 ? "text-emerald-400" : diff < 0 ? "text-blue-400" : "text-slate-500"
                   )}>
-                    {diff > 0 ? '+' : ''}{diff.toFixed(2)}
+                    {diff !== 0 ? '+' : ''}{Math.abs(diff).toFixed(2)}
                   </td>
                 </tr>
               );

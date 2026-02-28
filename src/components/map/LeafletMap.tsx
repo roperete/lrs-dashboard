@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {
-  MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents,
+  MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents,
 } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import L from 'leaflet';
@@ -129,6 +129,9 @@ export function LeafletMap({
             return (
               <Marker key={sim.simulant_id} position={[site.lat!, site.lon!]} icon={icon}
                 eventHandlers={{ click: () => onSimulantClick(sim.simulant_id, site.lat!, site.lon!) }}>
+                <Tooltip direction="top" offset={[0, -16]} className="simulant-tooltip">
+                  {sim.name}
+                </Tooltip>
                 <Popup className="custom-popup">
                   <div className="text-center">
                     <p className="font-bold text-emerald-400">{sim.name}</p>

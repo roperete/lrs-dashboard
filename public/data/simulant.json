@@ -2006,32 +2006,6 @@
     "lunar_sample_reference": "Haematite rich"
   },
   {
-    "simulant_id": "S147",
-    "name": "OUCM-1",
-    "type": "General",
-    "country_code": "UK",
-    "institution": "Open University",
-    "availability": "Unknown",
-    "release_date": null,
-    "tons_produced_mt": null,
-    "specific_gravity": null,
-    "notes": "Included in lists but targeted for Mars/General",
-    "lunar_sample_reference": "Contemporary Martian"
-  },
-  {
-    "simulant_id": "S148",
-    "name": "CM-2",
-    "type": "General",
-    "country_code": "UK",
-    "institution": "Open University",
-    "availability": "Unknown",
-    "release_date": null,
-    "tons_produced_mt": null,
-    "specific_gravity": null,
-    "notes": "Included in lists but targeted for Mars/General",
-    "lunar_sample_reference": "Contemporary Martian"
-  },
-  {
     "simulant_id": "S149",
     "name": "ES-1",
     "type": "Engineering",

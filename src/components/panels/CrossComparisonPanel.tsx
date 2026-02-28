@@ -214,7 +214,7 @@ function DeltaTable({ title, icon, data, simulantName, refName }: {
                   <td className={cn("py-2 px-4 text-right font-mono text-xs",
                     diff > 0 ? "text-blue-400" : diff < 0 ? "text-amber-400" : "text-slate-500"
                   )}>
-                    {row.simulant > 0 && row.reference > 0 ? `${diff > 0 ? '+' : ''}${diff.toFixed(2)}` : '\u2014'}
+                    {row.simulant > 0 && row.reference > 0 ? `+${Math.abs(diff).toFixed(2)}` : '\u2014'}
                   </td>
                 </tr>
               );
