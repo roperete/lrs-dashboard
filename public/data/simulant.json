@@ -10,7 +10,10 @@
     "tons_produced_mt": null,
     "notes": "Geotechnical analog",
     "specific_gravity": null,
-    "lunar_sample_reference": "General"
+    "lunar_sample_reference": "General",
+    "bulk_density": 1.295,
+    "cohesion": 3.85,
+    "friction_angle": 37.67
   },
   {
     "simulant_id": "S002",
@@ -35,7 +38,7 @@
     "release_date": 1993,
     "tons_produced_mt": null,
     "notes": "Arizona Lunar Simulant",
-    "friction_angle": "12.0°",
+    "friction_angle": "12.0\u00b0",
     "specific_gravity": null,
     "lunar_sample_reference": "Low-Ti Mare"
   },
@@ -177,7 +180,11 @@
     "notes": "Specialized for low-G magnetic testing",
     "particle_morphology": "irregular",
     "specific_gravity": 3.45,
-    "lunar_sample_reference": "Apollo 14/15"
+    "lunar_sample_reference": "Apollo 14/15",
+    "bulk_density": 1.47,
+    "density_g_cm3": 3.45,
+    "cohesion": 15.79,
+    "friction_angle": 51.26
   },
   {
     "simulant_id": "S014",
@@ -251,7 +258,7 @@
     "bulk_density": 1.95,
     "cohesion": 0.38,
     "density_g_cm3": 2.9,
-    "particle_size_d50": "11 µm",
+    "particle_size_d50": "11 \u00b5m",
     "glass_content_percent": 0
   },
   {
@@ -266,7 +273,7 @@
     "notes": "Manufactured from Mt. Fuji basaltic lava",
     "glass_content_percent": 7.15,
     "lunar_sample_reference": "Apollo 14",
-    "bulk_density": "1.065 g/cm³",
+    "bulk_density": "1.065 g/cm\u00b3",
     "specific_gravity": null,
     "friction_angle": 39.4,
     "cohesion": 8.13
@@ -375,7 +382,7 @@
     "notes": "Glass-rich basaltic ash",
     "particle_size_distribution": "<1mm",
     "glass_content_percent": 50,
-    "bulk_density": "1.065 g/cm³",
+    "bulk_density": "1.065 g/cm\u00b3",
     "specific_gravity": 2.92,
     "lunar_sample_reference": "Apollo 14",
     "friction_angle": 45.0,
@@ -421,7 +428,7 @@
     "release_date": 2005,
     "tons_produced_mt": null,
     "notes": "Very fine particle size distribution variant",
-    "particle_size_distribution": "average 27 μm",
+    "particle_size_distribution": "average 27 \u03bcm",
     "specific_gravity": null,
     "lunar_sample_reference": "Apollo 14"
   },
@@ -452,7 +459,7 @@
     "lunar_sample_reference": "Apollo 14",
     "friction_angle": 44.91,
     "cohesion": 1.85,
-    "particle_size_d50": "44.1 µm",
+    "particle_size_d50": "44.1 \u00b5m",
     "density_g_cm3": 3.07
   },
   {
@@ -504,10 +511,10 @@
     "release_date": 2020,
     "tons_produced_mt": null,
     "notes": "High fidelity, anorthosite-based",
-    "bulk_density": "0.81 g/cm³",
-    "particle_size_d50": "10.22 µm",
+    "bulk_density": "0.81 g/cm\u00b3",
+    "particle_size_d50": "10.22 \u00b5m",
     "cohesion": "0.205 kPa",
-    "friction_angle": "28.62°",
+    "friction_angle": "28.62\u00b0",
     "specific_gravity": 1.38,
     "lunar_sample_reference": "Apollo 16"
   },
@@ -522,10 +529,10 @@
     "tons_produced_mt": null,
     "notes": "High fidelity, pyroxene-rich",
     "nasa_fom_score": 1.5,
-    "bulk_density": "1.65 g/cm³",
-    "particle_size_d50": "138.86 µm",
+    "bulk_density": "1.65 g/cm\u00b3",
+    "particle_size_d50": "138.86 \u00b5m",
     "cohesion": "0.393 kPa",
-    "friction_angle": "34.84°",
+    "friction_angle": "34.84\u00b0",
     "specific_gravity": 1.58,
     "lunar_sample_reference": "Average lunar maria"
   },
@@ -540,7 +547,7 @@
     "tons_produced_mt": null,
     "notes": "Derived from Sittampundi anorthosite",
     "lunar_sample_reference": "Highlands",
-    "bulk_density": "1.065 g/cm³",
+    "bulk_density": "1.065 g/cm\u00b3",
     "specific_gravity": null,
     "friction_angle": 36.34,
     "cohesion": 0.343
@@ -567,7 +574,11 @@
     "tons_produced_mt": null,
     "notes": "Lithic base simulant",
     "specific_gravity": null,
-    "lunar_sample_reference": "Mare"
+    "lunar_sample_reference": "Mare",
+    "density_g_cm3": 2.86,
+    "bulk_density": 1.33,
+    "particle_size_d50": 63.7,
+    "particle_size_distribution": "<45-2000 \u00b5m"
   },
   {
     "simulant_id": "S041",
@@ -580,7 +591,11 @@
     "tons_produced_mt": null,
     "notes": "Lithic base simulant",
     "specific_gravity": null,
-    "lunar_sample_reference": "Highlands"
+    "lunar_sample_reference": "Highlands",
+    "density_g_cm3": 2.73,
+    "bulk_density": 1.35,
+    "particle_size_d50": 73.5,
+    "particle_size_distribution": "<45-2000 \u00b5m"
   },
   {
     "simulant_id": "S042",
@@ -694,7 +709,7 @@
     "glass_content_percent": 40,
     "lunar_sample_reference": "Apollo 16",
     "specific_gravity": null,
-    "particle_size_distribution": "<1000 µm"
+    "particle_size_distribution": "<1000 \u00b5m"
   },
   {
     "simulant_id": "S050",
@@ -708,7 +723,7 @@
     "notes": "Synthetic breccia and coarse fraction",
     "lunar_sample_reference": "Apollo 16",
     "specific_gravity": null,
-    "particle_size_distribution": "up to 100000 µm"
+    "particle_size_distribution": "up to 100000 \u00b5m"
   },
   {
     "simulant_id": "S051",
@@ -917,8 +932,8 @@
     "glass_content_percent": 19.2,
     "ti_content_percent": 0.82,
     "nasa_fom_score": 91.7,
-    "bulk_density": "1.67 g/cm³",
-    "particle_size_d50": "137.6 µm",
+    "bulk_density": "1.67 g/cm\u00b3",
+    "particle_size_d50": "137.6 \u00b5m",
     "specific_gravity": 1.67,
     "lunar_sample_reference": "Apollo 16",
     "cohesion": 2.369,
@@ -938,8 +953,8 @@
     "glass_content_percent": 31.4,
     "ti_content_percent": 0.82,
     "nasa_fom_score": 81.8,
-    "bulk_density": "1.52 g/cm³",
-    "particle_size_d50": "48.4 µm",
+    "bulk_density": "1.52 g/cm\u00b3",
+    "particle_size_d50": "48.4 \u00b5m",
     "specific_gravity": 1.52,
     "lunar_sample_reference": "Apollo 12/15",
     "cohesion": 13.299,
@@ -983,7 +998,7 @@
     "release_date": 2020,
     "tons_produced_mt": null,
     "notes": "Modular system base",
-    "particle_size_distribution": "x_50 = 76.7 to 96.0 µm",
+    "particle_size_distribution": "x_50 = 76.7 to 96.0 \u00b5m",
     "specific_gravity": null,
     "lunar_sample_reference": "Mare"
   },
@@ -1078,8 +1093,8 @@
     "release_date": 2025,
     "tons_produced_mt": null,
     "notes": "Updated particle size up to 2 mm",
-    "bulk_density": "1.67 g/cm³",
-    "particle_size_d50": "160.0 µm",
+    "bulk_density": "1.67 g/cm\u00b3",
+    "particle_size_d50": "160.0 \u00b5m",
     "specific_gravity": 1.67,
     "lunar_sample_reference": "Average lunar maria"
   },
@@ -1093,10 +1108,10 @@
     "release_date": 2025,
     "tons_produced_mt": null,
     "notes": "Updated particle size up to 2 mm",
-    "bulk_density": "1.43 g/cm³",
-    "particle_size_d50": "100.0 µm",
+    "bulk_density": "1.43 g/cm\u00b3",
+    "particle_size_d50": "100.0 \u00b5m",
     "cohesion": "0.365 kPa",
-    "friction_angle": "30.5°",
+    "friction_angle": "30.5\u00b0",
     "specific_gravity": 1.43,
     "lunar_sample_reference": "Average lunar highlands"
   },
@@ -1123,10 +1138,10 @@
     "release_date": 2025,
     "tons_produced_mt": null,
     "notes": "Simulates lunar south pole",
-    "bulk_density": "1.47 g/cm³",
-    "particle_size_d50": "79.8 µm",
+    "bulk_density": "1.47 g/cm\u00b3",
+    "particle_size_d50": "79.8 \u00b5m",
     "cohesion": "0.324 kPa",
-    "friction_angle": "31.7°",
+    "friction_angle": "31.7\u00b0",
     "specific_gravity": 1.47,
     "lunar_sample_reference": "Lunar South Pole",
     "glass_content_percent": 10.0
@@ -1158,7 +1173,9 @@
     "tons_produced_mt": null,
     "notes": "Sintering and melting studies",
     "specific_gravity": null,
-    "lunar_sample_reference": "Apollo 14"
+    "lunar_sample_reference": "Apollo 14",
+    "particle_size_d50": 45,
+    "particle_size_distribution": "2.3-102 \u00b5m"
   },
   {
     "simulant_id": "S082",
@@ -1292,10 +1309,10 @@
     "specific_gravity": null,
     "notes": "Dust variant, max 35 um",
     "lunar_sample_reference": "Apollo 16",
-    "bulk_density": "0.81 g/cm³",
-    "particle_size_d50": "10.22 µm",
+    "bulk_density": "0.81 g/cm\u00b3",
+    "particle_size_d50": "10.22 \u00b5m",
     "cohesion": "0.205 kPa",
-    "friction_angle": "28.62°"
+    "friction_angle": "28.62\u00b0"
   },
   {
     "simulant_id": "S092",
@@ -1310,10 +1327,10 @@
     "notes": "Geotechnical substitute",
     "lunar_sample_reference": "Average lunar highlands",
     "bulk_density": 1.37,
-    "particle_size_d50": "80.86 µm",
+    "particle_size_d50": "80.86 \u00b5m",
     "cohesion": 0.311,
     "friction_angle": 31.49,
-    "particle_size_distribution": "0.04 - 1000 µm"
+    "particle_size_distribution": "0.04 - 1000 \u00b5m"
   },
   {
     "simulant_id": "S093",
@@ -1327,8 +1344,8 @@
     "specific_gravity": null,
     "notes": "Contains 25% agglutinates",
     "lunar_sample_reference": "Apollo 16",
-    "bulk_density": "1.3 g/cm³",
-    "particle_size_d50": "42 µm",
+    "bulk_density": "1.3 g/cm\u00b3",
+    "particle_size_d50": "42 \u00b5m",
     "glass_content_percent": 25.0
   },
   {
@@ -1343,10 +1360,10 @@
     "specific_gravity": null,
     "notes": "Dust variant, max 30 um",
     "lunar_sample_reference": "Average lunar maria",
-    "bulk_density": "0.89 g/cm³",
-    "particle_size_d50": "6.0 µm",
+    "bulk_density": "0.89 g/cm\u00b3",
+    "particle_size_d50": "6.0 \u00b5m",
     "cohesion": "0.172 kPa",
-    "friction_angle": "21.8°"
+    "friction_angle": "21.8\u00b0"
   },
   {
     "simulant_id": "S095",
@@ -1361,11 +1378,11 @@
     "notes": "Geotechnical substitute",
     "lunar_sample_reference": "Average lunar maria",
     "bulk_density": 1.42,
-    "particle_size_d50": "220 µm",
+    "particle_size_d50": "220 \u00b5m",
     "cohesion": 0.324,
     "friction_angle": 31.7,
     "density_g_cm3": 2.7,
-    "particle_size_distribution": "0.04 - 1000 µm"
+    "particle_size_distribution": "0.04 - 1000 \u00b5m"
   },
   {
     "simulant_id": "S096",
@@ -1391,7 +1408,9 @@
     "tons_produced_mt": null,
     "specific_gravity": null,
     "notes": "Includes volatile ice properties",
-    "lunar_sample_reference": "Lunar South Pole"
+    "lunar_sample_reference": "Lunar South Pole",
+    "bulk_density": 0.89,
+    "particle_size_distribution": "<1000 \u00b5m"
   },
   {
     "simulant_id": "S098",
@@ -1694,12 +1713,15 @@
     "availability": "Unavailable",
     "release_date": 2024,
     "tons_produced_mt": null,
-    "specific_gravity": null,
+    "specific_gravity": 3.17,
     "notes": "High-fidelity matching Chang'e-5 samples",
     "lunar_sample_reference": "Chang'e-5",
-    "bulk_density": 1.58,
-    "friction_angle": 40.3,
-    "cohesion": 13.5
+    "bulk_density": 1.22,
+    "friction_angle": 38.0,
+    "cohesion": 6.75,
+    "density_g_cm3": 3.17,
+    "particle_size_d50": 40.4,
+    "particle_size_distribution": "4.84-432.27 \u00b5m"
   },
   {
     "simulant_id": "S121",
@@ -1933,7 +1955,11 @@
     "tons_produced_mt": null,
     "specific_gravity": null,
     "notes": "50:50 mixture",
-    "lunar_sample_reference": "Mixed"
+    "lunar_sample_reference": "Mixed",
+    "density_g_cm3": 2.81,
+    "bulk_density": 1.34,
+    "particle_size_d50": 70,
+    "particle_size_distribution": "<45-2000 \u00b5m"
   },
   {
     "simulant_id": "S139",
@@ -2101,7 +2127,7 @@
     "release_date": "2022",
     "tons_produced_mt": null,
     "specific_gravity": null,
-    "notes": "Low-Ti mare basalt simulant from Peñas de Tao geosite, Lanzarote. Apollo 14 analogue.",
+    "notes": "Low-Ti mare basalt simulant from Pe\u00f1as de Tao geosite, Lanzarote. Apollo 14 analogue.",
     "lunar_sample_reference": "Apollo 14 (14163)"
   },
   {

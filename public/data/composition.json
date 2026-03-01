@@ -1627,5 +1627,19 @@
     "component_name": "Agglutinate",
     "value_pct": 29.0,
     "group": "Agglutinate"
+  },
+  {
+    "composition_id": "C232",
+    "simulant_id": "S081",
+    "component_type": "mineral",
+    "component_name": "Anorthite",
+    "value_pct": 91.65
+  },
+  {
+    "composition_id": "C233",
+    "simulant_id": "S081",
+    "component_type": "mineral",
+    "component_name": "Forsterite",
+    "value_pct": 8.35
   }
 ]
