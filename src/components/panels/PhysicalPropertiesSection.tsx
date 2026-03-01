@@ -8,7 +8,7 @@ const PROP_CONFIG: { key: keyof PhysicalProperties; label: string; unit: string 
   { key: 'cohesion', label: 'Cohesion', unit: 'kPa' },
   { key: 'friction_angle', label: 'Friction Angle', unit: '°' },
   { key: 'particle_size_d50', label: 'Particle Size D50', unit: 'μm' },
-  { key: 'particle_size_distribution', label: 'Size Distribution', unit: '' },
+  { key: 'particle_size_distribution', label: 'Particle Size Distribution', unit: 'μm' },
   { key: 'particle_morphology', label: 'Morphology', unit: '' },
   { key: 'particle_ruggedness', label: 'Ruggedness', unit: '' },
   { key: 'glass_content_percent', label: 'Glass Content', unit: '%' },
