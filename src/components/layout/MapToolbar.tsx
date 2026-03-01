@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { Sun, Moon, Locate, Maximize, Minimize, Home, Plus, Minus } from 'lucide-react';
+import { Sun, Moon, Maximize, Minimize, Home, Plus, Minus } from 'lucide-react';
 import { cn } from '../../utils/cn';
 
 interface MapToolbarProps {
@@ -9,13 +9,12 @@ interface MapToolbarProps {
   onToggleEarthTexture?: () => void;
   onZoomIn: () => void;
   onZoomOut: () => void;
-  onLocate: () => void;
   onHome: () => void;
 }
 
 export function MapToolbar({
   planet, viewMode, earthTexture,
-  onToggleEarthTexture, onZoomIn, onZoomOut, onLocate, onHome,
+  onToggleEarthTexture, onZoomIn, onZoomOut, onHome,
 }: MapToolbarProps) {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
@@ -48,12 +47,6 @@ export function MapToolbar({
           <button onClick={onToggleEarthTexture}
             className={btnClass} title={earthTexture === 'night' ? 'Switch to Day' : 'Switch to Night'}>
             {earthTexture === 'night' ? <Sun className="w-4 h-4 md:w-5 md:h-5" /> : <Moon className="w-4 h-4 md:w-5 md:h-5" />}
-          </button>
-        )}
-        {planet === 'earth' && (
-          <button onClick={onLocate}
-            className={btnClass} title="My Location">
-            <Locate className="w-4 h-4 md:w-5 md:h-5" />
           </button>
         )}
         <button onClick={onHome}

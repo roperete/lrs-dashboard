@@ -29,18 +29,22 @@ export function PurchaseSection({ availability, purchaseInfo }: PurchaseSectionP
 
         {purchaseInfo && (
           <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-[10px] text-slate-500 uppercase font-bold">Vendor</p>
-                <p className="text-sm text-slate-200">{purchaseInfo.vendor}</p>
+            {purchaseInfo.vendor && (
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-[10px] text-slate-500 uppercase font-bold">Vendor</p>
+                  <p className="text-sm text-slate-200">{purchaseInfo.vendor}</p>
+                </div>
+                {purchaseInfo.url && (
+                  <a href={purchaseInfo.url} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 rounded-lg text-xs font-bold transition-colors">
+                    <ShoppingCart size={12} />
+                    Visit
+                    <ExternalLink size={10} />
+                  </a>
+                )}
               </div>
-              <a href={purchaseInfo.url} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 rounded-lg text-xs font-bold transition-colors">
-                <ShoppingCart size={12} />
-                Visit
-                <ExternalLink size={10} />
-              </a>
-            </div>
+            )}
             {purchaseInfo.price_note && (
               <p className="text-xs text-slate-400 italic">{purchaseInfo.price_note}</p>
             )}
