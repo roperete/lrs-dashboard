@@ -33,8 +33,11 @@ function extractTitle(text: string): string {
 }
 
 function ReferenceCard({ reference, index }: { reference: Reference; index: number }) {
-  const { url, cleanText } = extractUrl(reference.reference_text);
-  const doi = extractDoi(reference.reference_text);
+  // Normalize: new-schema refs have title/authors/year instead of reference_text
+  const refText = reference.reference_text
+    || [reference.authors, `(${reference.year})`, `"${reference.title}"`, reference.doi ? `https://doi.org/${reference.doi}` : ''].filter(Boolean).join(', ');
+  const { url, cleanText } = extractUrl(refText);
+  const doi = extractDoi(refText);
   const linkUrl = url || doi;
 
   return (
@@ -52,13 +55,13 @@ function ReferenceCard({ reference, index }: { reference: Reference; index: numb
               {doi && !url ? 'DOI' : 'Source'}
             </a>
           )}
-          <a href={`https://scholar.google.com/scholar?q=${encodeURIComponent(reference.reference_text.slice(0, 120))}`}
+          <a href={`https://scholar.google.com/scholar?q=${encodeURIComponent(refText.slice(0, 120))}`}
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-400 transition-colors">
             <BookOpen size={11} />
             Scholar
           </a>
-          <a href={`https://scholar.google.com/scholar?q=${encodeURIComponent('"' + extractTitle(reference.reference_text) + '"')}`}
+          <a href={`https://scholar.google.com/scholar?q=${encodeURIComponent('"' + extractTitle(refText) + '"')}`}
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-400 transition-colors">
             <Quote size={11} />
