@@ -14,6 +14,7 @@ const PROP_CONFIG: { key: keyof PhysicalProperties; label: string; unit: string 
   { key: 'glass_content_percent', label: 'Glass Content', unit: '%' },
   { key: 'nasa_fom_score', label: 'NASA FoM Score', unit: '' },
   { key: 'ti_content_percent', label: 'Ti Content', unit: '%' },
+  { key: 'grain_size_mm', label: 'Grain Size', unit: 'mm' },
 ];
 
 interface PhysicalPropertiesSectionProps {
