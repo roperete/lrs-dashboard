@@ -1126,7 +1126,8 @@
     "cohesion": "0.324 kPa",
     "friction_angle": "31.7°",
     "specific_gravity": 1.47,
-    "lunar_sample_reference": "Lunar South Pole"
+    "lunar_sample_reference": "Lunar South Pole",
+    "glass_content_percent": 10.0
   },
   {
     "simulant_id": "S080",
@@ -1288,7 +1289,11 @@
     "tons_produced_mt": null,
     "specific_gravity": null,
     "notes": "Dust variant, max 35 um",
-    "lunar_sample_reference": "Apollo 16"
+    "lunar_sample_reference": "Apollo 16",
+    "bulk_density": "0.81 g/cm³",
+    "particle_size_d50": "10.22 µm",
+    "cohesion": "0.205 kPa",
+    "friction_angle": "28.62°"
   },
   {
     "simulant_id": "S092",
@@ -1314,7 +1319,10 @@
     "tons_produced_mt": null,
     "specific_gravity": null,
     "notes": "Contains 25% agglutinates",
-    "lunar_sample_reference": "Apollo 16"
+    "lunar_sample_reference": "Apollo 16",
+    "bulk_density": "1.3 g/cm³",
+    "particle_size_d50": "42 µm",
+    "glass_content_percent": 25.0
   },
   {
     "simulant_id": "S094",
@@ -1327,7 +1335,11 @@
     "tons_produced_mt": null,
     "specific_gravity": null,
     "notes": "Dust variant, max 30 um",
-    "lunar_sample_reference": "Average lunar maria"
+    "lunar_sample_reference": "Average lunar maria",
+    "bulk_density": "0.89 g/cm³",
+    "particle_size_d50": "6.0 µm",
+    "cohesion": "0.172 kPa",
+    "friction_angle": "21.8°"
   },
   {
     "simulant_id": "S095",
