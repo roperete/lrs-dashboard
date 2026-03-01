@@ -1475,5 +1475,117 @@
     "value_pct": 17.0,
     "component_type": "mineral",
     "composition_id": "C210"
+  },
+  {
+    "composition_id": "C211",
+    "simulant_id": "S091",
+    "component_type": "mineral",
+    "component_name": "Anorthosite",
+    "value_pct": 74.4
+  },
+  {
+    "composition_id": "C212",
+    "simulant_id": "S091",
+    "component_type": "mineral",
+    "component_name": "Glass-rich Basalt",
+    "value_pct": 24.7
+  },
+  {
+    "composition_id": "C213",
+    "simulant_id": "S091",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 0.4
+  },
+  {
+    "composition_id": "C214",
+    "simulant_id": "S091",
+    "component_type": "mineral",
+    "component_name": "Bronzite",
+    "value_pct": 0.3
+  },
+  {
+    "composition_id": "C215",
+    "simulant_id": "S091",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 0.2
+  },
+  {
+    "composition_id": "C216",
+    "simulant_id": "S094",
+    "component_type": "mineral",
+    "component_name": "Bronzite",
+    "value_pct": 32.8
+  },
+  {
+    "composition_id": "C217",
+    "simulant_id": "S094",
+    "component_type": "mineral",
+    "component_name": "Glass-rich Basalt",
+    "value_pct": 32.0
+  },
+  {
+    "composition_id": "C218",
+    "simulant_id": "S094",
+    "component_type": "mineral",
+    "component_name": "Anorthosite",
+    "value_pct": 19.8
+  },
+  {
+    "composition_id": "C219",
+    "simulant_id": "S094",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 11.1
+  },
+  {
+    "composition_id": "C220",
+    "simulant_id": "S094",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 4.3
+  },
+  {
+    "composition_id": "C221",
+    "simulant_id": "S093",
+    "component_type": "mineral",
+    "component_name": "Anorthosite",
+    "value_pct": 55.8
+  },
+  {
+    "composition_id": "C222",
+    "simulant_id": "S093",
+    "component_type": "mineral",
+    "component_name": "Agglutinates",
+    "value_pct": 25.0
+  },
+  {
+    "composition_id": "C223",
+    "simulant_id": "S093",
+    "component_type": "mineral",
+    "component_name": "Glass-rich Basalt",
+    "value_pct": 18.5
+  },
+  {
+    "composition_id": "C224",
+    "simulant_id": "S093",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 0.3
+  },
+  {
+    "composition_id": "C225",
+    "simulant_id": "S093",
+    "component_type": "mineral",
+    "component_name": "Pyroxene",
+    "value_pct": 0.23
+  },
+  {
+    "composition_id": "C226",
+    "simulant_id": "S093",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 0.15
   }
 ]
