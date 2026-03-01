@@ -249,7 +249,10 @@
     "specific_gravity": 1.45,
     "lunar_sample_reference": "Low-Ti Mare",
     "bulk_density": 1.95,
-    "cohesion": 0.38
+    "cohesion": 0.38,
+    "density_g_cm3": 2.9,
+    "particle_size_d50": "11 µm",
+    "glass_content_percent": 0
   },
   {
     "simulant_id": "S019",
@@ -448,7 +451,9 @@
     "specific_gravity": 1.99,
     "lunar_sample_reference": "Apollo 14",
     "friction_angle": 44.91,
-    "cohesion": 1.85
+    "cohesion": 1.85,
+    "particle_size_d50": "44.1 µm",
+    "density_g_cm3": 3.07
   },
   {
     "simulant_id": "S033",
@@ -632,7 +637,7 @@
     "tons_produced_mt": null,
     "notes": "Derived from Tibet gabbro",
     "lunar_sample_reference": "Highlands",
-    "specific_gravity": null,
+    "specific_gravity": 2.92,
     "bulk_density": 1.93,
     "friction_angle": 46.57,
     "cohesion": 95.3
@@ -913,7 +918,9 @@
     "bulk_density": "1.67 g/cm³",
     "particle_size_d50": "137.6 µm",
     "specific_gravity": 1.67,
-    "lunar_sample_reference": "Apollo 16"
+    "lunar_sample_reference": "Apollo 16",
+    "cohesion": 2.369,
+    "friction_angle": 45.342
   },
   {
     "simulant_id": "S066",
@@ -932,7 +939,9 @@
     "bulk_density": "1.52 g/cm³",
     "particle_size_d50": "48.4 µm",
     "specific_gravity": 1.52,
-    "lunar_sample_reference": "Apollo 12/15"
+    "lunar_sample_reference": "Apollo 12/15",
+    "cohesion": 13.299,
+    "friction_angle": 34.617
   },
   {
     "simulant_id": "S067",
