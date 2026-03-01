@@ -85,9 +85,9 @@
   },
   {
     "simulant_id": "S015",
-    "vendor": null,
-    "url": null,
-    "price_note": "Internal research simulant; not available for commercial purchase."
+    "vendor": "Monolite UK Ltd.",
+    "url": "https://d-shape.com/aerospace/",
+    "price_note": "Developed by Monolite UK Ltd. for ESA D-Shape construction research. Contact via d-shape.com/aerospace/ for availability."
   },
   {
     "simulant_id": "S016",
