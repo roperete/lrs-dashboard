@@ -29,9 +29,9 @@ function makeMoonMarker(borderColor: string, glowColor: string) {
   });
 }
 // Mare: warm amber/ochre (dark basaltic)  Highland: cool silver/white (bright anorthosite)
-const mareIcon = makeMoonMarker('#c2956a', 'rgba(194,149,106,0.4)');
-const highlandIcon = makeMoonMarker('#b8c4d0', 'rgba(184,196,208,0.4)');
-const generalIcon = makeMoonMarker('#8b8fa3', 'rgba(139,143,163,0.35)');
+const mareIcon = makeMoonMarker('#d4915c', 'rgba(212,145,92,0.4)');
+const highlandIcon = makeMoonMarker('#94a8be', 'rgba(148,168,190,0.4)');
+const generalIcon = makeMoonMarker('#9b8e82', 'rgba(155,142,130,0.35)');
 
 // Lunar lander icons by mission type color
 function makeLanderIcon(color: string) {

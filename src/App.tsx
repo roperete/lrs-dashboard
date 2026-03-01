@@ -86,7 +86,7 @@ export default function App() {
       return site && site.lat != null && site.lon != null ? {
         simulant_id: s.simulant_id, name: s.name, country_code: s.country_code,
         site_name: site.site_name, lat: site.lat!, lon: site.lon!,
-        color: s.type?.toLowerCase().includes('highland') ? '#b8c4d0' : s.type?.toLowerCase().includes('mare') ? '#c2956a' : '#8b8fa3',
+        color: s.type?.toLowerCase().includes('highland') ? '#94a8be' : s.type?.toLowerCase().includes('mare') ? '#d4915c' : '#9b8e82',
         type: s.type,
       } : null;
     }).filter(Boolean) as any[];
