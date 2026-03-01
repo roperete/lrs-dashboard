@@ -46,7 +46,7 @@ public/data/           — JSON datasets (see documentation/data-schema.md)
 ## Version Bumping (MANDATORY)
 - Semver: PATCH (2.x.Y) for data additions/fixes, MINOR (2.Y.0) for features, MAJOR for breaking changes
 - **Every commit MUST bump the version** in `src/components/sidebar/Sidebar.tsx` (line ~55) AND update `NEXT.md` header
-- Current version: v2.8.4 — update this line when bumped
+- Current version: v2.8.5 — update this line when bumped
 - Add a changelog row in `NEXT.md` for every version bump
 
 ## Agentic Work Loss Prevention
