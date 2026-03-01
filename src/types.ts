@@ -53,8 +53,13 @@ export interface ChemicalComposition {
 export interface Reference {
   reference_id: string;
   simulant_id: string;
-  reference_text: string;
-  reference_type: string;
+  reference_text?: string;
+  reference_type?: string;
+  title?: string;
+  authors?: string;
+  year?: number;
+  doi?: string;
+  url?: string;
 }
 
 export interface MineralGroup {
