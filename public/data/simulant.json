@@ -204,10 +204,10 @@
     "availability": "Unavailable",
     "release_date": 2019,
     "tons_produced_mt": null,
-    "notes": "Micromechanical testing",
+    "notes": "Mare simulant from Bolsena volcanic ash; developed for ESA D-Shape 3D-printing construction research by Monolite UK Ltd.",
     "particle_ruggedness": "higher surface roughness",
     "lunar_sample_reference": "Low-Ti Mare",
-    "specific_gravity": 1.27
+    "specific_gravity": 2.7
   },
   {
     "simulant_id": "S016",
@@ -693,7 +693,8 @@
     "notes": "Contains 4% good glass",
     "glass_content_percent": 40,
     "lunar_sample_reference": "Apollo 16",
-    "specific_gravity": null
+    "specific_gravity": null,
+    "particle_size_distribution": "<1000 µm"
   },
   {
     "simulant_id": "S050",
@@ -706,7 +707,8 @@
     "tons_produced_mt": null,
     "notes": "Synthetic breccia and coarse fraction",
     "lunar_sample_reference": "Apollo 16",
-    "specific_gravity": null
+    "specific_gravity": null,
+    "particle_size_distribution": "up to 100000 µm"
   },
   {
     "simulant_id": "S051",
@@ -1306,7 +1308,12 @@
     "tons_produced_mt": null,
     "specific_gravity": 1.37,
     "notes": "Geotechnical substitute",
-    "lunar_sample_reference": "Average lunar highlands"
+    "lunar_sample_reference": "Average lunar highlands",
+    "bulk_density": 1.37,
+    "particle_size_d50": "80.86 µm",
+    "cohesion": 0.311,
+    "friction_angle": 31.49,
+    "particle_size_distribution": "0.04 - 1000 µm"
   },
   {
     "simulant_id": "S093",
@@ -1352,7 +1359,13 @@
     "tons_produced_mt": null,
     "specific_gravity": 1.42,
     "notes": "Geotechnical substitute",
-    "lunar_sample_reference": "Average lunar maria"
+    "lunar_sample_reference": "Average lunar maria",
+    "bulk_density": 1.42,
+    "particle_size_d50": "220 µm",
+    "cohesion": 0.324,
+    "friction_angle": 31.7,
+    "density_g_cm3": 2.7,
+    "particle_size_distribution": "0.04 - 1000 µm"
   },
   {
     "simulant_id": "S096",

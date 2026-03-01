@@ -190,8 +190,8 @@
     "feedstock": "Basalt from Lake Bolsena",
     "petrographic_class": null,
     "grain_size_mm": 1.4,
-    "specific_gravity": 1.27,
-    "publicly_available_composition": false,
+    "specific_gravity": 2.7,
+    "publicly_available_composition": true,
     "reference": "Sandeep, C.S., et al. (2019). Micromechanical behavior of DNA-1A lunar regolith simulant... J. Geophys. Res. Solid Earth 124, 8077-8100. https://doi.org/10.1029/2019JB017589"
   },
   {

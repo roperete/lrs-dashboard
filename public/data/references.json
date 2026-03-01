@@ -1138,5 +1138,17 @@
     "simulant_id": "S157",
     "reference_text": "FEFU, \"FEFU-1 Russian Lunar Simulant Technical Report\" (2022)",
     "reference_type": "composition"
+  },
+  {
+    "reference_id": "R191",
+    "simulant_id": "S015",
+    "reference_text": "Cesaretti, G., Dini, E., De Kestelier, X., Colla, V., & Pambaguian, L. (2014). Building components for an outpost on the Lunar soil by means of a novel 3D printing technology. Acta Astronautica, 93, 430-450. https://doi.org/10.1016/j.actaastro.2013.07.034",
+    "reference_type": "development"
+  },
+  {
+    "reference_id": "R192",
+    "simulant_id": "S015",
+    "reference_text": "Marzulli, V., & Cafaro, F. (2019). Geotechnical properties of uncompacted DNA-1A lunar simulant. Journal of Aerospace Engineering, 32(2). https://doi.org/10.1061/(ASCE)AS.1943-5525.0000983",
+    "reference_type": "composition"
   }
 ]
