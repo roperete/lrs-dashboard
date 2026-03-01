@@ -662,7 +662,7 @@
   {
     "reference_id": "R111",
     "simulant_id": "S153",
-    "reference_text": "Alberquilla, F., Martínez-Frías, J., García-Baonza, V., & Lunar, R. (2022). LZS-1, Lanzarote (Canary Island, Spain) lunar (Apollo 14) basaltic soil simulant. Scientific Reports, 12, 16470. https://doi.org/10.1038/s41598-022-20960-8",
+    "reference_text": "Alberquilla, F., Mart\u00ednez-Fr\u00edas, J., Garc\u00eda-Baonza, V., & Lunar, R. (2022). LZS-1, Lanzarote (Canary Island, Spain) lunar (Apollo 14) basaltic soil simulant. Scientific Reports, 12, 16470. https://doi.org/10.1038/s41598-022-20960-8",
     "reference_type": "composition"
   },
   {
@@ -686,7 +686,7 @@
   {
     "reference_id": "R115",
     "simulant_id": "S048",
-    "reference_text": "NASA/TM—2010–216438, \"NU-LHT-1D Dust Variant Technical Supplement\"",
+    "reference_text": "NASA/TM\u20142010\u2013216438, \"NU-LHT-1D Dust Variant Technical Supplement\"",
     "reference_type": "composition"
   },
   {
@@ -752,13 +752,13 @@
   {
     "reference_id": "R126",
     "simulant_id": "S086",
-    "reference_text": "NASA/TM—2010–216438, \"Engineering Grade Highland Simulant NU-LHT-2E\"",
+    "reference_text": "NASA/TM\u20142010\u2013216438, \"Engineering Grade Highland Simulant NU-LHT-2E\"",
     "reference_type": "composition"
   },
   {
     "reference_id": "R127",
     "simulant_id": "S087",
-    "reference_text": "NASA/TM—2010–216438, \"NU-LHT-2EG Geotechnical Grade Highland Variant\"",
+    "reference_text": "NASA/TM\u20142010\u2013216438, \"NU-LHT-2EG Geotechnical Grade Highland Variant\"",
     "reference_type": "composition"
   },
   {
@@ -1150,5 +1150,77 @@
     "simulant_id": "S015",
     "reference_text": "Marzulli, V., & Cafaro, F. (2019). Geotechnical properties of uncompacted DNA-1A lunar simulant. Journal of Aerospace Engineering, 32(2). https://doi.org/10.1061/(ASCE)AS.1943-5525.0000983",
     "reference_type": "composition"
+  },
+  {
+    "reference_id": "R193",
+    "simulant_id": "S081",
+    "title": "Investigation of the sintering and melting of JSC-2A lunar regolith simulant",
+    "authors": "Zocca, A., Fateri, M., Al-Sabbagh, D., G\u00fcnster, J.",
+    "year": 2020,
+    "doi": "10.1016/j.ceramint.2020.02.212",
+    "url": null
+  },
+  {
+    "reference_id": "R194",
+    "simulant_id": "S120",
+    "title": "Development and characterization of the PolyU-1 lunar regolith simulant based on Chang'e-5 returned samples",
+    "authors": "Zou, Y., Wu, H., Chai, S., Yang, W., Ruan, R., Zhao, Q.",
+    "year": 2024,
+    "doi": "10.1016/j.ijmst.2024.08.006",
+    "url": null
+  },
+  {
+    "reference_id": "R195",
+    "simulant_id": "S040",
+    "title": "Properties of novel LX lunar regolith simulant system \u2014 Part 1",
+    "authors": "Patzwald, J., Kleba-Ehrhardt, R., et al.",
+    "year": 2025,
+    "doi": "10.1016/j.actaastro.2025.02.030",
+    "url": null
+  },
+  {
+    "reference_id": "R196",
+    "simulant_id": "S041",
+    "title": "Properties of novel LX lunar regolith simulant system \u2014 Part 1",
+    "authors": "Patzwald, J., Kleba-Ehrhardt, R., et al.",
+    "year": 2025,
+    "doi": "10.1016/j.actaastro.2025.02.030",
+    "url": null
+  },
+  {
+    "reference_id": "R197",
+    "simulant_id": "S138",
+    "title": "Properties of novel LX lunar regolith simulant system \u2014 Part 1",
+    "authors": "Patzwald, J., Kleba-Ehrhardt, R., et al.",
+    "year": 2025,
+    "doi": "10.1016/j.actaastro.2025.02.030",
+    "url": null
+  },
+  {
+    "reference_id": "R198",
+    "simulant_id": "S001",
+    "title": "Research of formed lunar regolith analog AGK-2010",
+    "authors": "Bednarz, S., et al.",
+    "year": 2013,
+    "doi": "10.2478/amsc-2013-0037",
+    "url": null
+  },
+  {
+    "reference_id": "R199",
+    "simulant_id": "S013",
+    "title": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+    "authors": "Li, R., Zhou, G., et al.",
+    "year": 2022,
+    "doi": "10.1016/j.ijmst.2021.09.003",
+    "url": null
+  },
+  {
+    "reference_id": "R200",
+    "simulant_id": "S097",
+    "title": "Development of icy regolith simulant for lunar permanently shadowed regions",
+    "authors": "Slumba, K., Sargeant, H.M., Britt, D.T.",
+    "year": 2024,
+    "doi": "10.1016/j.asr.2024.01.014",
+    "url": null
   }
 ]
