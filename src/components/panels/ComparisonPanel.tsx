@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { ArrowRightLeft, X, Activity, FlaskConical, BarChart3, TableProperties } from 'lucide-react';
+import { ArrowRightLeft, X, Activity, FlaskConical, BarChart3, TableProperties, Ruler } from 'lucide-react';
 import { motion } from 'motion/react';
 import { cn } from '../../utils/cn';
 import type { Simulant, Composition, ChemicalComposition } from '../../types';
@@ -36,6 +36,26 @@ export function ComparisonPanel({
       val2: chemicalComposition2.find(c => c.component_name === name)?.value_wt_pct || 0,
     })).filter(d => d.val1 > 0 || d.val2 > 0).sort((a, b) => (b.val1 + b.val2) - (a.val1 + a.val2));
   }, [chemicalComposition1, chemicalComposition2]);
+
+  const physicalComparison = useMemo(() => {
+    const props: { label: string; key: keyof Simulant }[] = [
+      { label: 'Specific Gravity', key: 'specific_gravity' },
+      { label: 'Bulk Density (g/cm³)', key: 'bulk_density' },
+      { label: 'Density (g/cm³)', key: 'density_g_cm3' },
+      { label: 'Cohesion (kPa)', key: 'cohesion' },
+      { label: 'Friction Angle (°)', key: 'friction_angle' },
+      { label: 'Particle Size D50 (µm)', key: 'particle_size_d50' },
+      { label: 'Glass Content (%)', key: 'glass_content_percent' },
+      { label: 'NASA FOM Score', key: 'nasa_fom_score' },
+    ];
+    return props
+      .map(p => ({
+        name: p.label,
+        val1: Number(simulant1[p.key]) || 0,
+        val2: Number(simulant2[p.key]) || 0,
+      }))
+      .filter(d => d.val1 > 0 || d.val2 > 0);
+  }, [simulant1, simulant2]);
 
   return (
     <motion.div
@@ -135,6 +155,15 @@ export function ComparisonPanel({
               name1={simulant1.name}
               name2={simulant2.name}
             />
+            {physicalComparison.length > 0 && (
+              <ComparisonTable
+                title="Physical Properties"
+                icon={<Ruler className="text-amber-400" size={20} />}
+                data={physicalComparison}
+                name1={simulant1.name}
+                name2={simulant2.name}
+              />
+            )}
           </div>
         )}
       </div>

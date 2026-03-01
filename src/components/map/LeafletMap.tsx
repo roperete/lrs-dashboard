@@ -28,8 +28,10 @@ function makeMoonMarker(borderColor: string, glowColor: string) {
     popupAnchor: [0, -17],
   });
 }
-const moonIcon = makeMoonMarker('#10b981', 'rgba(16,185,129,0.4)');
-const highlandIcon = makeMoonMarker('#06b6d4', 'rgba(6,182,212,0.4)');
+// Mare: warm amber/ochre (dark basaltic)  Highland: cool silver/white (bright anorthosite)
+const mareIcon = makeMoonMarker('#c2956a', 'rgba(194,149,106,0.4)');
+const highlandIcon = makeMoonMarker('#b8c4d0', 'rgba(184,196,208,0.4)');
+const generalIcon = makeMoonMarker('#8b8fa3', 'rgba(139,143,163,0.35)');
 
 // Lunar lander icons by mission type color
 function makeLanderIcon(color: string) {
@@ -125,7 +127,8 @@ export function LeafletMap({
           {filteredSimulants.map(sim => {
             const site = siteBySimulant.get(sim.simulant_id);
             if (!site || site.lat === null || site.lon === null) return null;
-            const icon = sim.type?.toLowerCase().includes('highland') ? highlandIcon : moonIcon;
+            const t = sim.type?.toLowerCase() || '';
+            const icon = t.includes('highland') ? highlandIcon : t.includes('mare') ? mareIcon : generalIcon;
             return (
               <Marker key={sim.simulant_id} position={[site.lat!, site.lon!]} icon={icon}
                 eventHandlers={{ click: () => onSimulantClick(sim.simulant_id, site.lat!, site.lon!) }}>
