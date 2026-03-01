@@ -86,7 +86,7 @@ export default function App() {
       return site && site.lat != null && site.lon != null ? {
         simulant_id: s.simulant_id, name: s.name, country_code: s.country_code,
         site_name: site.site_name, lat: site.lat!, lon: site.lon!,
-        color: s.type?.toLowerCase().includes('highland') ? '#06b6d4' : '#10b981',
+        color: s.type?.toLowerCase().includes('highland') ? '#b8c4d0' : s.type?.toLowerCase().includes('mare') ? '#c2956a' : '#8b8fa3',
         type: s.type,
       } : null;
     }).filter(Boolean) as any[];
@@ -328,6 +328,11 @@ export default function App() {
         <button onClick={() => setIsSidebarOpen(true)}
           className="absolute left-4 top-24 z-[50] p-3 bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-xl text-slate-400 hover:text-emerald-400 transition-all">
           {isMobile ? <Menu size={20} /> : <ChevronRight size={20} />}
+          {(filterState.filters.length > 0 || filterState.searchQuery) && (
+            <span className="absolute -top-1 -right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[10px] font-bold bg-emerald-500 text-white rounded-full">
+              {filterState.filters.length + (filterState.searchQuery ? 1 : 0)}
+            </span>
+          )}
         </button>
       )}
 

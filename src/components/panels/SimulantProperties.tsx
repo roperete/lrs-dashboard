@@ -20,7 +20,6 @@ export function SimulantProperties({ simulant, extra }: SimulantPropertiesProps)
     ['Institution', simulant.institution],
     ['Availability', simulant.availability],
     ['Release Date', simulant.release_date],
-    ['Specific Gravity', simulant.specific_gravity],
     ['Lunar Sample Reference', lunarSampleRef],
     ['Production (MT)', simulant.tons_produced_mt],
   ];
@@ -29,7 +28,6 @@ export function SimulantProperties({ simulant, extra }: SimulantPropertiesProps)
     if (extra.classification) props.push(['Classification', extra.classification]);
     if (extra.application) props.push(['Application', extra.application]);
     if (extra.feedstock) props.push(['Feedstock', extra.feedstock]);
-    if (extra.grain_size_mm) props.push(['Grain Size (mm)', extra.grain_size_mm]);
     if (extra.petrographic_class) {
       let petroDisplay = extra.petrographic_class;
       try {

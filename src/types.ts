@@ -129,6 +129,7 @@ export interface PhysicalProperties {
   glass_content_percent?: number;
   nasa_fom_score?: number;
   ti_content_percent?: number;
+  grain_size_mm?: number | string;
 }
 
 export interface LunarSite {
