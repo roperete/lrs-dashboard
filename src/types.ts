@@ -53,8 +53,13 @@ export interface ChemicalComposition {
 export interface Reference {
   reference_id: string;
   simulant_id: string;
-  reference_text: string;
-  reference_type: string;
+  reference_text?: string;
+  reference_type?: string;
+  title?: string;
+  authors?: string;
+  year?: number;
+  doi?: string;
+  url?: string;
 }
 
 export interface MineralGroup {
@@ -129,6 +134,7 @@ export interface PhysicalProperties {
   glass_content_percent?: number;
   nasa_fom_score?: number;
   ti_content_percent?: number;
+  grain_size_mm?: number | string;
 }
 
 export interface LunarSite {

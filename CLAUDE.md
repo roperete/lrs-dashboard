@@ -40,10 +40,21 @@ public/data/           — JSON datasets (see documentation/data-schema.md)
 - Lucide React icons
 - Framer Motion (motion/react) for panel animations
 - No tests, no API — static JSON loaded at startup via fetch
-- Semver: PATCH for fixes, MINOR for features. Current: v2.8.3
-- Version displayed in Sidebar.tsx — bump on every release
 - Branching: dev -> staging -> main. GitHub Pages deploys staging and main automatically.
 - Omit "Co-authored by Claude" in commits
+
+## Version Bumping (MANDATORY)
+- Semver: PATCH (2.x.Y) for data additions/fixes, MINOR (2.Y.0) for features, MAJOR for breaking changes
+- **Every commit MUST bump the version** in `src/components/sidebar/Sidebar.tsx` (line ~55) AND update `NEXT.md` header
+- Current version: v2.8.5 — update this line when bumped
+- Add a changelog row in `NEXT.md` for every version bump
+
+## Agentic Work Loss Prevention
+- **Always write extracted data to /tmp/ files** before returning — agent context can be lost at any time
+- When launching PDF extractor or data pipeline agents, instruct them to write output to `/tmp/extract_<name>.json`
+- Never rely on agent return text alone for large structured data — disk is durable, context is not
+- If an agent hits rate limits or permission blocks, its progress is **irrecoverable** — design tasks to checkpoint early
+- For multi-agent batches: launch agents that write to disk, then ingest from disk in main context
 
 ## Data Integrity Rules
 - `simulant_id` is the universal FK (S001-S158, no S147/S148 — those were martian, deleted)

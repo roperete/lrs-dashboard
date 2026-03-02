@@ -9,13 +9,14 @@ interface PurchaseSectionProps {
 
 const STATUS_STYLES: Record<string, string> = {
   'Available': 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
+  'Available (Research)': 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30',
   'Limited Stock': 'bg-amber-500/20 text-amber-400 border-amber-500/30',
   'Production stopped': 'bg-red-500/20 text-red-400 border-red-500/30',
-  'Unknown': 'bg-slate-500/20 text-slate-400 border-slate-500/30',
+  'Unavailable': 'bg-slate-500/20 text-slate-400 border-slate-500/30',
 };
 
 export function PurchaseSection({ availability, purchaseInfo }: PurchaseSectionProps) {
-  const statusStyle = STATUS_STYLES[availability] || STATUS_STYLES['Unknown'];
+  const statusStyle = STATUS_STYLES[availability] || STATUS_STYLES['Unavailable'];
 
   return (
     <div className="space-y-3">
@@ -51,8 +52,8 @@ export function PurchaseSection({ availability, purchaseInfo }: PurchaseSectionP
           </div>
         )}
 
-        {!purchaseInfo && availability === 'Available' && (
-          <p className="text-xs text-slate-500 italic">Purchase link not yet cataloged.</p>
+        {!purchaseInfo && (availability === 'Available' || availability === 'Available (Research)') && (
+          <p className="text-xs text-slate-500 italic">Purchase details not yet cataloged.</p>
         )}
       </div>
     </div>

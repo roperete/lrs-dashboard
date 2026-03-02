@@ -1587,5 +1587,59 @@
     "component_type": "mineral",
     "component_name": "Olivine",
     "value_pct": 0.15
+  },
+  {
+    "composition_id": "C227",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Plagioclase",
+    "value_pct": 54.0,
+    "group": "Plagioclase"
+  },
+  {
+    "composition_id": "C228",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Pyroxene",
+    "value_pct": 13.0,
+    "group": "Pyroxene"
+  },
+  {
+    "composition_id": "C229",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 5.0,
+    "group": "Olivine"
+  },
+  {
+    "composition_id": "C230",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Glass",
+    "value_pct": 10.0,
+    "group": "Glass"
+  },
+  {
+    "composition_id": "C231",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Agglutinate",
+    "value_pct": 29.0,
+    "group": "Agglutinate"
+  },
+  {
+    "composition_id": "C232",
+    "simulant_id": "S081",
+    "component_type": "mineral",
+    "component_name": "Anorthite",
+    "value_pct": 91.65
+  },
+  {
+    "composition_id": "C233",
+    "simulant_id": "S081",
+    "component_type": "mineral",
+    "component_name": "Forsterite",
+    "value_pct": 8.35
   }
 ]

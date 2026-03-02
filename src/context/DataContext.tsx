@@ -74,10 +74,13 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
       if (sim.glass_content_percent != null) props.glass_content_percent = Number(sim.glass_content_percent) || undefined;
       if (sim.nasa_fom_score != null) props.nasa_fom_score = Number(sim.nasa_fom_score) || undefined;
       if (sim.ti_content_percent != null) props.ti_content_percent = Number(sim.ti_content_percent) || undefined;
+      // Merge grain_size_mm from extra data
+      const extra = data.simulantExtra.find(e => e.simulant_id === sim.simulant_id);
+      if (extra?.grain_size_mm != null) props.grain_size_mm = extra.grain_size_mm;
       if (Object.keys(props).length > 0) m.set(sim.simulant_id, props);
     }
     return m;
-  }, [data.simulants]);
+  }, [data.simulants, data.simulantExtra]);
 
   const value = useMemo<DataContextValue>(() => ({
     ...data,

@@ -15,8 +15,9 @@ export function LegendWidget({ planet, sidebarOpen }: LegendWidgetProps) {
         <div className="space-y-2">
           {planet === 'earth' ? (
             <>
-              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#10b981] shadow-[0_0_8px_#10b981]" /><span className="text-xs text-slate-300">Mare Simulant</span></div>
-              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#06b6d4] shadow-[0_0_8px_#06b6d4]" /><span className="text-xs text-slate-300">Highlands Simulant</span></div>
+              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#d4915c] shadow-[0_0_8px_rgba(212,145,92,0.5)]" /><span className="text-xs text-slate-300">Mare Simulant</span></div>
+              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#94a8be] shadow-[0_0_8px_rgba(148,168,190,0.5)]" /><span className="text-xs text-slate-300">Highlands Simulant</span></div>
+              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#9b8e82] shadow-[0_0_8px_rgba(155,142,130,0.4)]" /><span className="text-xs text-slate-300">General Simulant</span></div>
             </>
           ) : (
             <>
