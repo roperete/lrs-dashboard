@@ -1788,5 +1788,26 @@
     "component_type": "mineral",
     "component_name": "Amorphous/Glass",
     "value_pct": 31.4
+  },
+  {
+    "composition_id": "C257",
+    "simulant_id": "S051",
+    "component_type": "mineral",
+    "component_name": "Pyroxene",
+    "value_pct": 4.2
+  },
+  {
+    "composition_id": "C259",
+    "simulant_id": "S051",
+    "component_type": "mineral",
+    "component_name": "Olivine",
+    "value_pct": 9.5
+  },
+  {
+    "composition_id": "C260",
+    "simulant_id": "S051",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_pct": 0.2
   }
 ]
