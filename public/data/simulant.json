@@ -1873,7 +1873,12 @@
     "tons_produced_mt": null,
     "specific_gravity": null,
     "notes": null,
-    "lunar_sample_reference": "General"
+    "lunar_sample_reference": "General",
+    "bulk_density": 1.67,
+    "friction_angle": 45.342,
+    "cohesion": 2.369,
+    "particle_size_d50": 137.6,
+    "particle_morphology": "subangular"
   },
   {
     "simulant_id": "S132",
@@ -1886,7 +1891,12 @@
     "tons_produced_mt": null,
     "specific_gravity": null,
     "notes": null,
-    "lunar_sample_reference": "General"
+    "lunar_sample_reference": "General",
+    "bulk_density": 1.52,
+    "friction_angle": 34.617,
+    "cohesion": 13.299,
+    "particle_size_d50": 48.4,
+    "particle_morphology": "subangular"
   },
   {
     "simulant_id": "S133",

@@ -1641,5 +1641,152 @@
     "component_type": "mineral",
     "component_name": "Forsterite",
     "value_pct": 8.35
+  },
+  {
+    "composition_id": "C234",
+    "simulant_id": "S131",
+    "component_type": "mineral",
+    "component_name": "Anorthite",
+    "value_pct": 57.0
+  },
+  {
+    "composition_id": "C235",
+    "simulant_id": "S131",
+    "component_type": "mineral",
+    "component_name": "Augite",
+    "value_pct": 5.7
+  },
+  {
+    "composition_id": "C236",
+    "simulant_id": "S131",
+    "component_type": "mineral",
+    "component_name": "Forsterite",
+    "value_pct": 1.8
+  },
+  {
+    "composition_id": "C237",
+    "simulant_id": "S131",
+    "component_type": "mineral",
+    "component_name": "Lizardite",
+    "value_pct": 6.5
+  },
+  {
+    "composition_id": "C238",
+    "simulant_id": "S131",
+    "component_type": "mineral",
+    "component_name": "Analcime",
+    "value_pct": 2.6
+  },
+  {
+    "composition_id": "C239",
+    "simulant_id": "S131",
+    "component_type": "mineral",
+    "component_name": "Smectite",
+    "value_pct": 0.5
+  },
+  {
+    "composition_id": "C240",
+    "simulant_id": "S131",
+    "component_type": "mineral",
+    "component_name": "Illite",
+    "value_pct": 1.0
+  },
+  {
+    "composition_id": "C241",
+    "simulant_id": "S131",
+    "component_type": "mineral",
+    "component_name": "Quartz",
+    "value_pct": 1.2
+  },
+  {
+    "composition_id": "C242",
+    "simulant_id": "S131",
+    "component_type": "mineral",
+    "component_name": "Hornblende",
+    "value_pct": 2.1
+  },
+  {
+    "composition_id": "C243",
+    "simulant_id": "S131",
+    "component_type": "mineral",
+    "component_name": "Amorphous/Glass",
+    "value_pct": 19.2
+  },
+  {
+    "composition_id": "C244",
+    "simulant_id": "S132",
+    "component_type": "mineral",
+    "component_name": "Anorthite",
+    "value_pct": 35.2
+  },
+  {
+    "composition_id": "C245",
+    "simulant_id": "S132",
+    "component_type": "mineral",
+    "component_name": "Augite",
+    "value_pct": 17.2
+  },
+  {
+    "composition_id": "C246",
+    "simulant_id": "S132",
+    "component_type": "mineral",
+    "component_name": "Enstatite",
+    "value_pct": 1.9
+  },
+  {
+    "composition_id": "C247",
+    "simulant_id": "S132",
+    "component_type": "mineral",
+    "component_name": "Forsterite",
+    "value_pct": 2.1
+  },
+  {
+    "composition_id": "C248",
+    "simulant_id": "S132",
+    "component_type": "mineral",
+    "component_name": "Lizardite",
+    "value_pct": 5.7
+  },
+  {
+    "composition_id": "C249",
+    "simulant_id": "S132",
+    "component_type": "mineral",
+    "component_name": "Analcime",
+    "value_pct": 3.8
+  },
+  {
+    "composition_id": "C250",
+    "simulant_id": "S132",
+    "component_type": "mineral",
+    "component_name": "Smectite",
+    "value_pct": 1.2
+  },
+  {
+    "composition_id": "C251",
+    "simulant_id": "S132",
+    "component_type": "mineral",
+    "component_name": "Illite",
+    "value_pct": 0.6
+  },
+  {
+    "composition_id": "C252",
+    "simulant_id": "S132",
+    "component_type": "mineral",
+    "component_name": "Quartz",
+    "value_pct": 0.6
+  },
+  {
+    "composition_id": "C253",
+    "simulant_id": "S132",
+    "component_type": "mineral",
+    "component_name": "Hornblende",
+    "value_pct": 0.3
+  },
+  {
+    "composition_id": "C254",
+    "simulant_id": "S132",
+    "component_type": "mineral",
+    "component_name": "Amorphous/Glass",
+    "value_pct": 31.4
   }
 ]

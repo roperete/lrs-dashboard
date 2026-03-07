@@ -3715,5 +3715,185 @@
     "component_type": "oxide",
     "component_name": "Na2O+K2O",
     "value_wt_pct": 6.43
+  },
+  {
+    "composition_id": "CH533",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "SiO2",
+    "value_wt_pct": 46.43
+  },
+  {
+    "composition_id": "CH534",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "TiO2",
+    "value_wt_pct": 0.82
+  },
+  {
+    "composition_id": "CH535",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "Al2O3",
+    "value_wt_pct": 25.06
+  },
+  {
+    "composition_id": "CH536",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "Fe2O3",
+    "value_wt_pct": 6.78
+  },
+  {
+    "composition_id": "CH537",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "MgO",
+    "value_wt_pct": 5.09
+  },
+  {
+    "composition_id": "CH538",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "CaO",
+    "value_wt_pct": 14.13
+  },
+  {
+    "composition_id": "CH539",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "Na2O"
+  },
+  {
+    "composition_id": "CH540",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "K2O",
+    "value_wt_pct": 0.67
+  },
+  {
+    "composition_id": "CH541",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "SrO",
+    "value_wt_pct": 0.25
+  },
+  {
+    "composition_id": "CH542",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "MnO",
+    "value_wt_pct": 0.14
+  },
+  {
+    "composition_id": "CH543",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "Cr2O3",
+    "value_wt_pct": 0.11
+  },
+  {
+    "composition_id": "CH544",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "NiO",
+    "value_wt_pct": 0.01
+  },
+  {
+    "composition_id": "CH545",
+    "simulant_id": "S131",
+    "component_type": "oxide",
+    "component_name": "ZnO",
+    "value_wt_pct": 0.19
+  },
+  {
+    "composition_id": "CH546",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "SiO2",
+    "value_wt_pct": 47.33
+  },
+  {
+    "composition_id": "CH547",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "TiO2",
+    "value_wt_pct": 1.72
+  },
+  {
+    "composition_id": "CH548",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "Al2O3",
+    "value_wt_pct": 14.38
+  },
+  {
+    "composition_id": "CH549",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "Fe2O3",
+    "value_wt_pct": 12.44
+  },
+  {
+    "composition_id": "CH550",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "MgO",
+    "value_wt_pct": 12.38
+  },
+  {
+    "composition_id": "CH551",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "CaO",
+    "value_wt_pct": 8.38
+  },
+  {
+    "composition_id": "CH552",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "Na2O"
+  },
+  {
+    "composition_id": "CH553",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "K2O",
+    "value_wt_pct": 1.28
+  },
+  {
+    "composition_id": "CH554",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "SrO",
+    "value_wt_pct": 0.25
+  },
+  {
+    "composition_id": "CH555",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "MnO",
+    "value_wt_pct": 0.14
+  },
+  {
+    "composition_id": "CH556",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "Cr2O3",
+    "value_wt_pct": 0.11
+  },
+  {
+    "composition_id": "CH557",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "NiO",
+    "value_wt_pct": 0.01
+  },
+  {
+    "composition_id": "CH558",
+    "simulant_id": "S132",
+    "component_type": "oxide",
+    "component_name": "ZnO",
+    "value_wt_pct": 0.19
   }
 ]
