@@ -3694,5 +3694,26 @@
     "component_type": "oxide",
     "component_name": "FeOTotal",
     "value_wt_pct": 7.92
+  },
+  {
+    "composition_id": "CH530",
+    "simulant_id": "S122",
+    "component_type": "oxide",
+    "component_name": "Fe2O3",
+    "value_wt_pct": 8.3
+  },
+  {
+    "composition_id": "CH531",
+    "simulant_id": "S121",
+    "component_type": "oxide",
+    "component_name": "FeOT",
+    "value_wt_pct": 7.92
+  },
+  {
+    "composition_id": "CH532",
+    "simulant_id": "S121",
+    "component_type": "oxide",
+    "component_name": "Na2O+K2O",
+    "value_wt_pct": 6.43
   }
 ]

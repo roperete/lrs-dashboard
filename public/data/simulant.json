@@ -1738,7 +1738,11 @@
     "tons_produced_mt": null,
     "specific_gravity": null,
     "notes": "Gradation matching Apollo 17",
-    "lunar_sample_reference": "Apollo 17"
+    "lunar_sample_reference": "Apollo 17",
+    "bulk_density": 1.72,
+    "friction_angle": 33.92,
+    "cohesion": 6.477,
+    "particle_morphology": "polygonal and bar-shaped"
   },
   {
     "simulant_id": "S122",
@@ -1749,9 +1753,10 @@
     "availability": "Unavailable",
     "release_date": 2010,
     "tons_produced_mt": null,
-    "specific_gravity": null,
+    "specific_gravity": 2.7,
     "notes": "Silicon carbide added for density",
-    "lunar_sample_reference": "Mare"
+    "lunar_sample_reference": "Mare",
+    "particle_morphology": "subprismoidal with subangular to angular shape"
   },
   {
     "simulant_id": "S123",
