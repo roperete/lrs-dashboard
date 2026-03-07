@@ -240,7 +240,9 @@
     "tons_produced_mt": null,
     "notes": "Large volume simulant",
     "specific_gravity": null,
-    "lunar_sample_reference": "Low-Ti Mare"
+    "lunar_sample_reference": "Low-Ti Mare",
+    "bulk_density": "1.45 g/cm\u00b3",
+    "cohesion": "0.38 kPa"
   },
   {
     "simulant_id": "S018",
@@ -515,7 +517,7 @@
     "particle_size_d50": "10.22 \u00b5m",
     "cohesion": "0.205 kPa",
     "friction_angle": "28.62\u00b0",
-    "specific_gravity": 1.38,
+    "specific_gravity": 2.77,
     "lunar_sample_reference": "Apollo 16"
   },
   {
@@ -533,7 +535,7 @@
     "particle_size_d50": "138.86 \u00b5m",
     "cohesion": "0.393 kPa",
     "friction_angle": "34.84\u00b0",
-    "specific_gravity": 1.58,
+    "specific_gravity": 3.0,
     "lunar_sample_reference": "Average lunar maria"
   },
   {
@@ -819,7 +821,9 @@
     "tons_produced_mt": null,
     "notes": "General use",
     "lunar_sample_reference": "Nearside lunar highlands",
-    "specific_gravity": null
+    "specific_gravity": 2.79,
+    "friction_angle": "36\u00b0",
+    "cohesion": "12 kPa"
   },
   {
     "simulant_id": "S058",
