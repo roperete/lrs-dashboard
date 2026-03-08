@@ -1139,7 +1139,11 @@
     "tons_produced_mt": null,
     "notes": "Engineering variant",
     "specific_gravity": 1.43,
-    "lunar_sample_reference": "Average lunar highlands"
+    "lunar_sample_reference": "Average lunar highlands",
+    "bulk_density": 1.43,
+    "particle_size_d50": 68.0,
+    "friction_angle": 30.5,
+    "cohesion": 0.356
   },
   {
     "simulant_id": "S079",

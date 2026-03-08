@@ -1809,5 +1809,40 @@
     "component_type": "mineral",
     "component_name": "Ilmenite",
     "value_pct": 0.2
+  },
+  {
+    "composition_id": "C262",
+    "simulant_id": "S037",
+    "component_type": "mineral",
+    "component_name": "Bronzite",
+    "value_pct": 32.8
+  },
+  {
+    "composition_id": "C263",
+    "simulant_id": "S037",
+    "component_type": "mineral",
+    "component_name": "Glass-rich Basalt",
+    "value_pct": 32.0
+  },
+  {
+    "composition_id": "C264",
+    "simulant_id": "S037",
+    "component_type": "mineral",
+    "component_name": "Anorthosite",
+    "value_pct": 19.8
+  },
+  {
+    "composition_id": "C265",
+    "simulant_id": "S092",
+    "component_type": "mineral",
+    "component_name": "Anorthosite",
+    "value_pct": 75.0
+  },
+  {
+    "composition_id": "C266",
+    "simulant_id": "S092",
+    "component_type": "mineral",
+    "component_name": "Glass-rich Basalt",
+    "value_pct": 25.0
   }
 ]
