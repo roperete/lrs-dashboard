@@ -3902,5 +3902,12 @@
     "component_name": "LOI",
     "value_wt_pct": 0.41,
     "composition_id": "CH592"
+  },
+  {
+    "simulant_id": "S051",
+    "component_type": "oxide",
+    "component_name": "MnO",
+    "value_wt_pct": 0.09,
+    "composition_id": "CH593"
   }
 ]
