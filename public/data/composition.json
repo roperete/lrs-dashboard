@@ -1921,5 +1921,96 @@
     "component_type": "mineral",
     "component_name": "Anorthite",
     "value_wt_pct": 32.4
+  },
+  {
+    "composition_id": "C278",
+    "simulant_id": "S018",
+    "component_type": "mineral",
+    "component_name": "Diopside",
+    "value_wt_pct": 28.4
+  },
+  {
+    "composition_id": "C279",
+    "simulant_id": "S018",
+    "component_type": "mineral",
+    "component_name": "Forsterite",
+    "value_wt_pct": 29.3
+  },
+  {
+    "composition_id": "C280",
+    "simulant_id": "S018",
+    "component_type": "mineral",
+    "component_name": "Biotite",
+    "value_wt_pct": 11.3
+  },
+  {
+    "composition_id": "C281",
+    "simulant_id": "S018",
+    "component_type": "mineral",
+    "component_name": "Analcime",
+    "value_wt_pct": 2.9
+  },
+  {
+    "composition_id": "C282",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Orthopyroxene",
+    "value_wt_pct": 4.39
+  },
+  {
+    "composition_id": "C283",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Clinopyroxene",
+    "value_wt_pct": 7.71
+  },
+  {
+    "composition_id": "C284",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Ilmenite",
+    "value_wt_pct": 0.93
+  },
+  {
+    "composition_id": "C285",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Chromite",
+    "value_wt_pct": 0.04
+  },
+  {
+    "composition_id": "C286",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Albite",
+    "value_wt_pct": 2.97
+  },
+  {
+    "composition_id": "C287",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Quartz",
+    "value_wt_pct": 0.18
+  },
+  {
+    "composition_id": "C288",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Amphibole",
+    "value_wt_pct": 0.2
+  },
+  {
+    "composition_id": "C289",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Talc",
+    "value_wt_pct": 0.34
+  },
+  {
+    "composition_id": "C290",
+    "simulant_id": "S049",
+    "component_type": "mineral",
+    "component_name": "Carbonate",
+    "value_wt_pct": 0.22
   }
 ]
