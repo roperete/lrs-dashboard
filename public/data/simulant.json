@@ -185,7 +185,8 @@
     "bulk_density": 1.47,
     "density_g_cm3": 3.45,
     "cohesion": 15.79,
-    "friction_angle": 51.26
+    "friction_angle": 51.26,
+    "particle_size_d50": 77.0
   },
   {
     "simulant_id": "S014",
@@ -583,7 +584,8 @@
     "density_g_cm3": 2.86,
     "bulk_density": 1.33,
     "particle_size_d50": 63.7,
-    "particle_size_distribution": "<45-2000 \u00b5m"
+    "particle_size_distribution": "<45-2000 \u00b5m",
+    "friction_angle": 46.2
   },
   {
     "simulant_id": "S041",
@@ -600,7 +602,8 @@
     "density_g_cm3": 2.73,
     "bulk_density": 1.35,
     "particle_size_d50": 73.5,
-    "particle_size_distribution": "<45-2000 \u00b5m"
+    "particle_size_distribution": "<45-2000 \u00b5m",
+    "friction_angle": 46.2
   },
   {
     "simulant_id": "S042",
@@ -743,9 +746,10 @@
     "notes": "High fidelity, contains 29% agglutinates",
     "glass_content_percent": 40,
     "lunar_sample_reference": "Apollo 16",
-    "specific_gravity": 1.37,
+    "specific_gravity": 2.9319,
     "particle_size_d50": 125.7,
-    "bulk_density": 1.715
+    "bulk_density": 1.715,
+    "friction_angle": 39.54
   },
   {
     "simulant_id": "S052",
@@ -928,8 +932,11 @@
     "release_date": 2012,
     "tons_produced_mt": null,
     "notes": "Derived from red volcanic ash",
-    "specific_gravity": null,
-    "lunar_sample_reference": "Apollo 14"
+    "specific_gravity": 2.9,
+    "lunar_sample_reference": "Apollo 14",
+    "bulk_density": 1.55,
+    "friction_angle": 45.0,
+    "cohesion": 1.0
   },
   {
     "simulant_id": "S065",
@@ -1012,8 +1019,11 @@
     "tons_produced_mt": null,
     "notes": "Modular system base",
     "particle_size_distribution": "x_50 = 76.7 to 96.0 \u00b5m",
-    "specific_gravity": null,
-    "lunar_sample_reference": "Mare"
+    "specific_gravity": 2.96,
+    "lunar_sample_reference": "Mare",
+    "bulk_density": 1.41,
+    "particle_size_d50": 76.7,
+    "cohesion": 0.35
   },
   {
     "simulant_id": "S070",
@@ -1025,8 +1035,11 @@
     "release_date": 2020,
     "tons_produced_mt": null,
     "notes": "Modular system base",
-    "specific_gravity": null,
-    "lunar_sample_reference": "Highlands"
+    "specific_gravity": 2.71,
+    "lunar_sample_reference": "Highlands",
+    "bulk_density": 1.33,
+    "particle_size_d50": 96.0,
+    "cohesion": 0.643
   },
   {
     "simulant_id": "S071",
@@ -1204,7 +1217,7 @@
     "release_date": 2013,
     "tons_produced_mt": null,
     "notes": "Standard vehicle mobility simulant",
-    "specific_gravity": null,
+    "specific_gravity": 2.633,
     "lunar_sample_reference": "General",
     "bulk_density": 1.73,
     "friction_angle": 42.8
@@ -1978,7 +1991,10 @@
     "tons_produced_mt": null,
     "specific_gravity": null,
     "notes": "Modular addition",
-    "lunar_sample_reference": "Ilmenite-rich"
+    "lunar_sample_reference": "Ilmenite-rich",
+    "bulk_density": 1.43,
+    "particle_size_d50": 88.6,
+    "cohesion": 0.584
   },
   {
     "simulant_id": "S138",
@@ -1995,7 +2011,8 @@
     "density_g_cm3": 2.81,
     "bulk_density": 1.34,
     "particle_size_d50": 70,
-    "particle_size_distribution": "<45-2000 \u00b5m"
+    "particle_size_distribution": "<45-2000 \u00b5m",
+    "friction_angle": 46.2
   },
   {
     "simulant_id": "S139",
