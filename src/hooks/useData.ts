@@ -40,37 +40,29 @@ export function useData(): DataState {
   });
 
   useEffect(() => {
-    const files = [
-      'simulant.json', 'site.json', 'composition.json',
-      'chemical_composition.json', 'references.json',
-      'mineral_groups.json', 'simulant_extra.json',
-      'lunar_reference.json', 'mineral_sourcing.json',
-      'purchase_info.json', 'countries.geojson',
-    ];
-
-    Promise.all(files.map(f => fetch(DATA_BASE + f).then(r => r.ok ? r.json() : [])))
-      .then(([simulants, sites, compositions, chemicalCompositions, references,
-              mineralGroups, simulantExtra, lunarReference, mineralSourcing, purchaseInfo, countriesGeoJson]) => {
-        setState({
-          loading: false,
-          error: null,
-          simulants,
-          sites: sites.filter((s: Site) => s.lat !== null && s.lon !== null),
-          compositions,
-          chemicalCompositions,
-          references,
-          mineralGroups,
-          simulantExtra,
-          lunarReference,
-          mineralSourcing,
-          purchaseInfo: Array.isArray(purchaseInfo) ? purchaseInfo : [],
-          countriesGeoJson: countriesGeoJson?.type ? countriesGeoJson : null,
-        });
-      })
-      .catch(err => {
-        console.error('Data load error:', err);
-        setState(prev => ({ ...prev, loading: false, error: err.message }));
+    Promise.all([
+      fetch(DATA_BASE + 'data.json').then(r => r.ok ? r.json() : {}),
+      fetch(DATA_BASE + 'countries.geojson').then(r => r.ok ? r.json() : null),
+    ]).then(([data, countriesGeoJson]) => {
+      setState({
+        loading: false,
+        error: null,
+        simulants: data.simulants ?? [],
+        sites: data.sites ?? [],
+        compositions: data.compositions ?? [],
+        chemicalCompositions: data.chemical_compositions ?? [],
+        references: data.references ?? [],
+        mineralGroups: data.mineral_groups ?? [],
+        simulantExtra: data.simulant_extra ?? [],
+        lunarReference: data.lunar_reference ?? [],
+        mineralSourcing: data.mineral_sourcing ?? [],
+        purchaseInfo: data.purchase_info ?? [],
+        countriesGeoJson: countriesGeoJson?.type ? countriesGeoJson : null,
       });
+    }).catch(err => {
+      console.error('Data load error:', err);
+      setState(prev => ({ ...prev, loading: false, error: err.message }));
+    });
   }, []);
 
   return state;
