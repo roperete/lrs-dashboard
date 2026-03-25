@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, forwardRef, useImperativeHandle, useCallback } from 'react';
+import React, { useRef, useEffect, useState, forwardRef, useImperativeHandle, useCallback } from 'react';
 import Globe, { GlobeMethods } from 'react-globe.gl';
 
 export interface GlobeViewHandle {
@@ -68,6 +68,17 @@ export const GlobeView = forwardRef<GlobeViewHandle, GlobeViewProps>(
   ({ planet, earthTexture, singlePoints, clusterPoints, onPointClick, onClusterClick, onAltitudeChange }, ref) => {
     const globeRef = useRef<GlobeMethods>(null);
     const lastAltRef = useRef(0);
+    const [dims, setDims] = useState({ width: window.innerWidth, height: window.innerHeight });
+
+    useEffect(() => {
+      const update = () => setDims({ width: window.innerWidth, height: window.innerHeight });
+      window.addEventListener('resize', update);
+      document.addEventListener('fullscreenchange', update);
+      return () => {
+        window.removeEventListener('resize', update);
+        document.removeEventListener('fullscreenchange', update);
+      };
+    }, []);
 
     useImperativeHandle(ref, () => ({
       pointOfView: (coords, ms) => globeRef.current?.pointOfView(coords, ms),
@@ -99,6 +110,8 @@ export const GlobeView = forwardRef<GlobeViewHandle, GlobeViewProps>(
     return (
       <Globe
         ref={globeRef}
+        width={dims.width}
+        height={dims.height}
         globeImageUrl={planet === 'moon'
           ? "https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/moon-landing-sites/lunar_surface.jpg"
           : earthTexture === 'day'

@@ -7,8 +7,12 @@ coverage/
 .env*
 !.env.example
 *:Zone.Identifier
+*Zone.Identifier
 tmp/
 app/
 fetch.js
 metadata.json
 *.bak
+CLAUDE.md
+.claude/
+BRANCHING.md
