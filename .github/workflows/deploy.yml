@@ -27,6 +27,7 @@ jobs:
       - run: npm ci
 
       # Build production (main)
+      # data.json is committed alongside lrs.sqlite — no export step needed in CI
       - run: npm run build
       - run: mkdir -p _site && cp -r dist/* _site/
 
