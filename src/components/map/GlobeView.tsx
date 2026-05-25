@@ -20,6 +20,7 @@ interface GlobeViewProps {
   onPointClick: (point: any) => void;
   onClusterClick: (cluster: ClusterPoint, event: MouseEvent) => void;
   onAltitudeChange?: (altitude: number) => void;
+  autoRotate?: boolean;
 }
 
 function createClusterBadge(d: ClusterPoint, onClick: (d: ClusterPoint, e: MouseEvent) => void, onDblClick: (d: ClusterPoint) => void): HTMLElement {
@@ -65,7 +66,7 @@ function createClusterBadge(d: ClusterPoint, onClick: (d: ClusterPoint, e: Mouse
 }
 
 export const GlobeView = forwardRef<GlobeViewHandle, GlobeViewProps>(
-  ({ planet, earthTexture, singlePoints, clusterPoints, onPointClick, onClusterClick, onAltitudeChange }, ref) => {
+  ({ planet, earthTexture, singlePoints, clusterPoints, onPointClick, onClusterClick, onAltitudeChange, autoRotate = true }, ref) => {
     const globeRef = useRef<GlobeMethods>(null);
     const lastAltRef = useRef(0);
     const [dims, setDims] = useState({ width: window.innerWidth, height: window.innerHeight });
@@ -96,6 +97,19 @@ export const GlobeView = forwardRef<GlobeViewHandle, GlobeViewProps>(
       }, 200);
       return () => clearInterval(interval);
     }, [onAltitudeChange]);
+
+    // Apply autoRotate to OrbitControls; retry once after 500ms in case controls aren't ready yet
+    useEffect(() => {
+      const apply = () => {
+        const controls = (globeRef.current as any)?.controls();
+        if (!controls) return;
+        controls.autoRotate = autoRotate;
+        controls.autoRotateSpeed = 0.6;
+      };
+      apply();
+      const t = setTimeout(apply, 500);
+      return () => clearTimeout(t);
+    }, [autoRotate]);
 
     const handleClusterDblClick = useCallback((d: ClusterPoint) => {
       const pov = globeRef.current?.pointOfView();

@@ -49,6 +49,7 @@ export default function App() {
 
   const globeRef = useRef<GlobeViewHandle>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isRotating, setIsRotating] = useState(true);
   const isMobile = useIsMobile();
 
   // Ensure splash screen shows for at least 2 seconds
@@ -234,6 +235,7 @@ export default function App() {
                   setClusterPopover({ x: event.clientX, y: event.clientY, simulants: cluster.simulants });
                 }}
                 onAltitudeChange={handleAltitudeChange}
+                autoRotate={isRotating}
               />
             ) : (
               <LeafletMap
@@ -364,6 +366,8 @@ export default function App() {
             mapState.setMapZoom(4);
             flyTo(46.6, 2.3, 2.5);
           }}
+          isRotating={isRotating}
+          onToggleRotate={() => setIsRotating(r => !r)}
         />
       )}
 
