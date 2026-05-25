@@ -37,7 +37,7 @@ interface SidebarProps {
 }
 
 export function Sidebar(props: SidebarProps) {
-  const [listOpen, setListOpen] = useState(false);
+  const [listOpen, setListOpen] = useState(true);
   const [helpOpen, setHelpOpen] = useState(false);
 
   return (
@@ -52,7 +52,7 @@ export function Sidebar(props: SidebarProps) {
           <div>
             <h2 className="text-lg font-bold text-white tracking-tight">Lunar Regolith Simulants</h2>
             <p className="text-[10px] text-slate-500 uppercase tracking-widest">
-              Interactive Database <span className="text-emerald-400 font-semibold">v2.9.0</span>
+              Interactive Database <span className="text-emerald-400 font-semibold">v2.9.1</span>
             </p>
           </div>
           <button onClick={props.onClose} className="p-1.5 hover:bg-slate-800 rounded-lg text-slate-500">
