@@ -48,7 +48,7 @@ export default function App() {
   } = data;
 
   const globeRef = useRef<GlobeViewHandle>(null);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const isMobile = useIsMobile();
 
   // Ensure splash screen shows for at least 2 seconds
