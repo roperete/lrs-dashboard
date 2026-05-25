@@ -37,7 +37,7 @@ interface SidebarProps {
 }
 
 export function Sidebar(props: SidebarProps) {
-  const [listOpen, setListOpen] = useState(false);
+  const [listOpen, setListOpen] = useState(true);
   const [helpOpen, setHelpOpen] = useState(false);
 
   return (
