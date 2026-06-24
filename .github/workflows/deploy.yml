@@ -31,6 +31,12 @@ jobs:
       - run: npm run build
       - run: mkdir -p _site && cp -r dist/* _site/
 
+      # MAINTENANCE MODE — public root serves a static maintenance page.
+      # Staging (built below, deployed to /staging/) is unaffected so the team
+      # can keep previewing fixes. To bring the live site back, revert the
+      # commit that introduced this block (and remove maintenance.html).
+      - run: cp maintenance.html _site/index.html && cp maintenance.html _site/404.html
+
       # Build staging
       - uses: actions/checkout@v4
         with:
