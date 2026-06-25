@@ -22,6 +22,7 @@ export interface Simulant {
   glass_content_percent?: number | null;
   nasa_fom_score?: number | null;
   ti_content_percent?: number | null;
+  datasheet_url?: string | null;  // manufacturer/spec datasheet, distinct from academic references
 }
 
 export interface Site {

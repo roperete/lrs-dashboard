@@ -6,9 +6,19 @@ import { getCountryDisplay } from '../../utils/countryUtils';
 import type { Simulant, ChemicalComposition, Composition, Reference } from '../../types';
 
 type SortDir = 'asc' | 'desc';
-type SortKey = 'name' | 'type' | 'country' | 'institution' | 'availability' | 'lunar_sample_reference' | 'year' | 'has_chemistry' | 'has_mineralogy' | 'reference';
+type SortKey = 'name' | 'type' | 'country' | 'institution' | 'availability' | 'lunar_sample_reference' | 'year' | 'specific_gravity' | 'bulk_density' | 'd50' | 'friction_angle' | 'cohesion' | 'has_chemistry' | 'has_mineralogy' | 'datasheet' | 'reference';
 
 const DASH = '\u2014';
+
+/** Coerce a sparse numeric-ish field to a number for sorting, or null if absent/non-numeric. */
+const num = (v: unknown): number | null => {
+  if (v == null || v === '') return null;
+  const n = Number(v);
+  return Number.isNaN(n) ? null : n;
+};
+
+/** Display a sparse field, falling back to an em-dash when empty. */
+const show = (v: unknown): string => (v == null || v === '' ? DASH : String(v));
 
 interface SimulantTableProps {
   simulants: Simulant[];
@@ -35,7 +45,8 @@ export function SimulantTable({
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
   const [checkedIds, setCheckedIds] = useState<Set<string>>(new Set());
-  const [expandedRefId, setExpandedRefId] = useState<string | null>(null);
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+  const toggleExpand = (id: string) => setExpandedId(prev => (prev === id ? null : id));
 
   const toggleChecked = (id: string) => {
     setCheckedIds(prev => {
@@ -74,8 +85,14 @@ export function SimulantTable({
         case 'availability': va = (a.availability || '').toLowerCase(); vb = (b.availability || '').toLowerCase(); break;
         case 'lunar_sample_reference': va = (a.lunar_sample_reference || '').toLowerCase(); vb = (b.lunar_sample_reference || '').toLowerCase(); break;
         case 'year': va = typeof a.release_date === 'number' ? a.release_date : null; vb = typeof b.release_date === 'number' ? b.release_date : null; break;
+        case 'specific_gravity': va = num(a.specific_gravity); vb = num(b.specific_gravity); break;
+        case 'bulk_density': va = num(a.bulk_density); vb = num(b.bulk_density); break;
+        case 'd50': va = num(a.particle_size_d50); vb = num(b.particle_size_d50); break;
+        case 'friction_angle': va = num(a.friction_angle); vb = num(b.friction_angle); break;
+        case 'cohesion': va = num(a.cohesion); vb = num(b.cohesion); break;
         case 'has_chemistry': va = chemicalBySimulant.has(a.simulant_id) ? 1 : 0; vb = chemicalBySimulant.has(b.simulant_id) ? 1 : 0; break;
         case 'has_mineralogy': va = compositionBySimulant.has(a.simulant_id) ? 1 : 0; vb = compositionBySimulant.has(b.simulant_id) ? 1 : 0; break;
+        case 'datasheet': va = a.datasheet_url ? a.datasheet_url.toLowerCase() : null; vb = b.datasheet_url ? b.datasheet_url.toLowerCase() : null; break;
         case 'reference': va = getFirstReference(a.simulant_id, referencesBySimulant).toLowerCase() || null; vb = getFirstReference(b.simulant_id, referencesBySimulant).toLowerCase() || null; break;
         default: return 0;
       }
@@ -155,8 +172,14 @@ export function SimulantTable({
             <TH col="availability" label="Availability" />
             <TH col="lunar_sample_reference" label="Lunar Ref" />
             <TH col="year" label="Year" align="right" />
+            <TH col="specific_gravity" label="Spec. Grav." align="right" />
+            <TH col="bulk_density" label="Bulk Dens. (g/cm³)" align="right" />
+            <TH col="d50" label="D50 (µm)" align="right" />
+            <TH col="friction_angle" label="Friction (°)" align="right" />
+            <TH col="cohesion" label="Cohesion (kPa)" align="right" />
             <TH col="has_chemistry" label="Chem" align="center" />
             <TH col="has_mineralogy" label="Miner" align="center" />
+            <TH col="datasheet" label="Datasheet" />
             <TH col="reference" label="Reference" />
           </tr>
         </thead>
@@ -165,6 +188,15 @@ export function SimulantTable({
             const isSelected = s.simulant_id === selectedSimulantId;
             const isChecked = checkedIds.has(s.simulant_id);
             const ref = getFirstReference(s.simulant_id, referencesBySimulant);
+            const minerals = (compositionBySimulant.get(s.simulant_id) || [])
+              .filter(c => c.component_name && c.component_name !== 'sum')
+              .slice().sort((a, b) => (b.value_pct || 0) - (a.value_pct || 0));
+            const chemicals = (chemicalBySimulant.get(s.simulant_id) || [])
+              .filter(c => c.component_name && c.component_name !== 'sum')
+              .slice().sort((a, b) => (b.value_wt_pct || 0) - (a.value_wt_pct || 0));
+            const refs = referencesBySimulant.get(s.simulant_id) || [];
+            const hasDetail = minerals.length > 0 || chemicals.length > 0 || refs.length > 0;
+            const isExpanded = expandedId === s.simulant_id;
             return (
               <React.Fragment key={s.simulant_id}>
                 <tr
@@ -193,35 +225,84 @@ export function SimulantTable({
                   <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.availability || DASH}</td>
                   <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.lunar_sample_reference || DASH}</td>
                   <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{typeof s.release_date === 'number' ? s.release_date : DASH}</td>
+                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{show(s.specific_gravity)}</td>
+                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{show(s.bulk_density)}</td>
+                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{show(s.particle_size_d50)}</td>
+                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{show(s.friction_angle)}</td>
+                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{show(s.cohesion)}</td>
                   <td className="py-2 px-3 text-center">
                     {chemicalBySimulant.has(s.simulant_id)
-                      ? <Check size={16} className="inline text-emerald-400" />
+                      ? <button onClick={(e) => { e.stopPropagation(); toggleExpand(s.simulant_id); }}
+                          className="text-emerald-400 hover:text-emerald-300 transition-colors" title="Click to view chemical composition">
+                          <Check size={16} className="inline" />
+                        </button>
                       : <span className="text-slate-600">{DASH}</span>
                     }
                   </td>
                   <td className="py-2 px-3 text-center">
                     {compositionBySimulant.has(s.simulant_id)
-                      ? <Check size={16} className="inline text-emerald-400" />
+                      ? <button onClick={(e) => { e.stopPropagation(); toggleExpand(s.simulant_id); }}
+                          className="text-emerald-400 hover:text-emerald-300 transition-colors" title="Click to view mineral composition">
+                          <Check size={16} className="inline" />
+                        </button>
+                      : <span className="text-slate-600">{DASH}</span>
+                    }
+                  </td>
+                  <td className="py-2 px-3 whitespace-nowrap">
+                    {s.datasheet_url
+                      ? <a href={s.datasheet_url} target="_blank" rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-blue-400 hover:text-blue-300 underline">Datasheet</a>
                       : <span className="text-slate-600">{DASH}</span>
                     }
                   </td>
                   <td className="py-2 px-3 text-slate-400 max-w-[300px] truncate cursor-pointer hover:text-slate-200 transition-colors"
-                    title={ref ? 'Click to expand' : undefined}
-                    onClick={(e) => { e.stopPropagation(); if (ref) setExpandedRefId(expandedRefId === s.simulant_id ? null : s.simulant_id); }}>
+                    title={hasDetail ? 'Click to expand' : undefined}
+                    onClick={(e) => { e.stopPropagation(); if (hasDetail) toggleExpand(s.simulant_id); }}>
                     {ref || DASH}
                   </td>
                 </tr>
-                {expandedRefId === s.simulant_id && ref && (
+                {isExpanded && hasDetail && (
                   <tr className="bg-slate-800/30">
-                    <td colSpan={11} className="px-6 py-3">
-                      <p className="text-xs text-slate-300 leading-relaxed whitespace-normal">{ref}</p>
-                      {(referencesBySimulant.get(s.simulant_id)?.length || 0) > 1 && (
-                        <div className="mt-2 space-y-1">
-                          {referencesBySimulant.get(s.simulant_id)!.slice(1).map((r, idx) => (
-                            <p key={idx} className="text-xs text-slate-400 leading-relaxed whitespace-normal">{r.reference_text}</p>
-                          ))}
-                        </div>
-                      )}
+                    <td colSpan={17} className="px-6 py-3">
+                      <div className="grid gap-6 md:grid-cols-3">
+                        {minerals.length > 0 && (
+                          <div>
+                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">Mineral Composition</h4>
+                            <ul className="space-y-0.5">
+                              {minerals.map(m => (
+                                <li key={m.composition_id} className="flex justify-between gap-3 text-xs text-slate-300">
+                                  <span>{m.component_name}</span>
+                                  <span className="font-mono text-slate-400">{m.value_pct}%</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        {chemicals.length > 0 && (
+                          <div>
+                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">Chemical Composition</h4>
+                            <ul className="space-y-0.5">
+                              {chemicals.map(c => (
+                                <li key={c.composition_id} className="flex justify-between gap-3 text-xs text-slate-300">
+                                  <span>{c.component_name}</span>
+                                  <span className="font-mono text-slate-400">{c.value_wt_pct} wt%</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        {refs.length > 0 && (
+                          <div>
+                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">References</h4>
+                            <div className="space-y-1">
+                              {refs.map((r, idx) => (
+                                <p key={r.reference_id || idx} className="text-xs text-slate-400 leading-relaxed whitespace-normal">{r.reference_text}</p>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     </td>
                   </tr>
                 )}

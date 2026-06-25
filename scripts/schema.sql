@@ -25,7 +25,8 @@ CREATE TABLE IF NOT EXISTS simulants (
   particle_ruggedness       TEXT,
   glass_content_percent     REAL,
   nasa_fom_score            REAL,
-  ti_content_percent        REAL
+  ti_content_percent        REAL,
+  datasheet_url             TEXT  -- manufacturer/spec datasheet, distinct from academic references
 );
 
 CREATE TABLE IF NOT EXISTS simulant_extra (
