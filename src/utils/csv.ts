@@ -26,6 +26,18 @@ export function exportToCSV(
     { key: 'release_date', label: 'Release Date' },
     { key: 'tons_produced_mt', label: 'Tons Produced (MT)' },
     { key: 'specific_gravity', label: 'Specific Gravity' },
+    // Physical properties (sparse — blank where not characterised)
+    { key: 'bulk_density', label: 'Bulk Density (g/cm³)' },
+    { key: 'density_g_cm3', label: 'Density (g/cm³)' },
+    { key: 'cohesion', label: 'Cohesion (kPa)' },
+    { key: 'friction_angle', label: 'Friction Angle (°)' },
+    { key: 'particle_size_d50', label: 'Particle Size D50 (µm)' },
+    { key: 'particle_size_distribution', label: 'Particle Size Distribution' },
+    { key: 'particle_morphology', label: 'Particle Morphology' },
+    { key: 'particle_ruggedness', label: 'Particle Ruggedness' },
+    { key: 'glass_content_percent', label: 'Glass Content (%)' },
+    { key: 'ti_content_percent', label: 'Ti Content (%)' },
+    { key: 'nasa_fom_score', label: 'NASA FoM Score' },
     { key: 'notes', label: 'Notes' },
     { key: 'lunar_sample_reference', label: 'Lunar Sample Reference' },
   ];
