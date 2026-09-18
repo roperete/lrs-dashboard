@@ -1,0 +1,157 @@
+simulant_id,name,institution,availability,n_oxides,chem_sum,chem_sum_ok,n_minerals,min_sum,min_sum_ok,n_null_values,n_refs,n_comp_refs,source_tier,has_datasheet_url,priority,issues
+S001,AGK-2010,AGH University of Technology,Unavailable,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S002,ALRS-1,Australian Space Agency,Limited Stock,0,0.0,True,0,0,True,0,1,1,D,False,P4,
+S003,ALS,Univ. of Arizona,Production stopped,0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S004,BH-1,Beihang University,Unavailable,10,99.3,True,0,0,True,0,2,1,B,False,P3,
+S005,BHLD20,,Unavailable,0,0.0,True,2,45.0,False,0,1,0,D,False,P1,mineral sum 45.0% outside 90-101%; composition numbers without a primary source
+S006,BP-1,NASA KSC,Available,10,93.13,False,7,100.0,True,0,2,2,B,False,P2,oxide sum 93.13% outside 95-102%
+S007,CAS-1,Chinese Academy of Sciences,Unavailable,10,98.81,True,6,100.0,True,0,3,1,B,False,P3,
+S008,CHENOBI,Deltion / NORCAT,Production stopped,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S009,CLDS-i,Chinese Academy of Sciences,Unavailable,0,0.0,True,3,100.0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S010,CLRS-1,Chinese Academy of Sciences,Unavailable,0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S011,CSM-CL,Colorado School of Mines,Available,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S012,CUG-1A,China University of Geosciences,Unavailable,0,0.0,True,4,100.0,True,0,2,1,B,False,P3,
+S013,CUMT-1,China Univ. of Mining and Tech,Unavailable,10,98.76,True,8,100.0,True,0,2,1,B,False,P3,
+S014,DNA-1,Monolite / ESA,Unavailable,10,98.81,True,1,100.0,True,0,1,0,C,False,P3,
+S015,DNA-1A,Monolite / ESA,Unavailable,10,100.02,True,1,100.0,True,0,3,1,B,False,P3,
+S016,DUST-Y,Space Resource Technologies,Available,0,0.0,True,4,9.7,False,0,1,0,D,False,P1,mineral sum 9.7% outside 90-101%; composition numbers without a primary source
+S017,EAC-1,European Astronaut Centre,Available (Research),11,108.56,False,3,100.0,True,0,1,0,C,False,P2,oxide sum 108.56% outside 95-102%
+S018,EAC-1A,European Astronaut Centre,Available (Research),8,95.76,True,7,100.0,True,4,2,1,B,False,P2,4 composition rows with null value
+S019,FJS-1,JAXA / Shimizu Corporation,Unavailable,10,97.95,True,7,100.0,True,0,2,1,B,False,P3,
+S020,FJS-1g,JAXA / Shimizu Corporation,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S021,FJS-2,JAXA / Shimizu Corporation,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S022,FJS-3,JAXA / Shimizu Corporation,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S023,GCA-1,Goddard Space Center,Production stopped,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S024,GRC-1,NASA Glenn Research Center,Available,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S025,GreenSpar,Hudson Resources,Available (Research),8,99.6,True,0,0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S026,JLU-H,Jilin University,Unavailable,0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S027,JSC-1,NASA / Orbitec,Production stopped,3,70.1,False,13,100.2,True,0,2,1,B,False,P2,oxide sum 70.1% outside 95-102%
+S028,JSC-1A,NASA / Orbitec,Production stopped,11,98.9,True,13,100.2,True,0,2,1,B,False,P3,
+S029,JSC-1AC,NASA / Orbitec,Production stopped,0,0.0,True,13,100.2,True,0,1,0,D,False,P1,composition numbers without a primary source
+S030,JSC-1AF,NASA / Orbitec,Production stopped,6,98.07,True,13,100.2,True,0,1,0,D,False,P1,composition numbers without a primary source
+S031,KIGAM-L1,Korea Institute of Geoscience and Mineral Resources,Available (Research),0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S032,KLS-1,Korea Institute of Civil Engineering and Building Technology,Available (Research),11,99.84,True,10,93.33,True,0,2,2,B,False,P3,
+S033,KOHLS-1,,Unavailable,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S034,Kohyama Simulant,Shimizu Corporation,Limited Stock,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S035,LCATS-1,Astroport Space Technologies,Available,0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S036,LHS-1,Space Resource Technologies,Available,10,98.74,True,5,100.0,True,0,2,1,B,False,P3,
+S037,LMS-1,Space Resource Technologies,Available,11,100.34,True,9,184.6,False,0,2,1,B,False,P2,mineral sum 184.6% outside 90-101%
+S038,LSS-ISAC-1,ISRO,Unavailable,0,0.0,True,0,0,True,0,2,2,B,False,P4,
+S039,LuNOR,SolSys Mining,Available (Research),0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S040,LX-M100,TU Berlin,Available (Research),11,98.62,True,7,96.0,True,0,2,0,C,False,P3,
+S041,LX-T100,TU Berlin,Available (Research),11,99.76,True,5,100.0,True,0,2,0,C,False,P3,
+S042,MKS-1,Shimizu Corporation,Unavailable,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S043,MLS-1,Univ. of Minnesota,Production stopped,8,99.9,True,3,93.0,True,0,2,1,C,False,P3,
+S044,MLS-2,Univ. of Minnesota,Production stopped,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S045,NAO-1,National Astronomical Observatories,Unavailable,11,98.63,True,3,100.0,True,0,2,1,B,False,P3,
+S046,NEU-1,Northeastern University,Unavailable,0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S047,NU-LHT,"NASA-MSFC and USGS",Limited Stock,0,0.0,True,2,20.4,False,0,1,0,D,False,P1,mineral sum 20.4% outside 90-101%; composition numbers without a primary source
+S048,NU-LHT-1D,NASA / USGS,Limited Stock,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S049,NU-LHT-1M,NASA / USGS,Limited Stock,9,98.76,True,14,111.0,False,9,1,0,C,False,P2,mineral sum 111.0% outside 90-101%; 9 composition rows with null value
+S050,NU-LHT-2C,NASA / USGS,Limited Stock,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S051,NU-LHT-2M,NASA / USGS,Limited Stock,9,97.39,True,16,105.0,False,10,1,0,C,False,P2,mineral sum 105.0% outside 90-101%; 10 composition rows with null value
+S052,NUW-LHT-5M,NASA / Washington Mills,Available (Research),0,0.0,True,2,100.0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S053,OB-1,Deltion / EVC / NORCAT,Limited Stock,8,98.5,True,10,102.04,False,0,2,1,B,False,P2,mineral sum 102.04% outside 90-101%
+S054,OB-1A,Deltion,Unavailable,8,97.9,True,3,97.3,True,0,2,1,B,False,P3,
+S055,OPR Agglutinate,Off Planet Research,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S056,OPRFLCROSS2,Off Planet Research,Available,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S057,OPRH2N,Off Planet Research,Available,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S058,OPRH3N,Off Planet Research,Available,8,100.0,True,0,0,True,0,2,1,D,False,P1,composition numbers without a primary source
+S059,OPRH4N,Off Planet Research,Available,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S060,OPRL2N,Off Planet Research,Available,8,100.0,True,0,0,True,0,2,1,D,False,P1,composition numbers without a primary source
+S061,OPRL2NT,Off Planet Research,Available,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S062,Oshima Simulant,Shimizu Corporation,Limited Stock,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S063,TBG-1,Turkish Space Agency,Unavailable,12,99.71,True,0,0,True,0,1,0,C,False,P3,
+S064,TJ-1,Tongji University,Unavailable,10,97.84,True,0,0,True,0,1,1,B,False,P3,
+S065,TLH-0,Hispansion,Available,13,99.68,True,10,97.6,True,0,1,0,A,False,P3,
+S066,TLM-0,Hispansion,Available,13,98.61,True,11,100.0,True,0,1,0,A,False,P3,
+S067,TLS-01,Space Zab Company,Available (Research),7,106.28,False,4,93.4,True,0,2,2,B,False,P2,oxide sum 106.28% outside 95-102%
+S068,TUBS-H,ESA,Available (Research),0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S069,TUBS-M,TU Braunschweig,Available (Research),10,96.96,True,0,0,True,0,1,1,B,False,P3,
+S070,TUBS-T,TU Braunschweig,Available (Research),9,98.63,True,0,0,True,0,1,1,B,False,P3,
+S071,UoM-B,Univ. of Manchester,Available,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S072,UoM-W,Univ. of Manchester,Available,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S073,UW-1H,University of Winnipeg,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S074,UW-1M,University of Winnipeg,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S075,WHU-1,Wuhan University,Unavailable,0,0.0,True,0,0,True,0,2,0,C,False,P4,
+S076,LMS-2,Space Resource Technologies,Available,10,98.17,True,5,100.0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S077,LHS-2,Space Resource Technologies,Available,10,98.74,True,5,100.0,True,0,1,0,C,False,P3,
+S078,LHS-2E,Space Resource Technologies,Available,10,99.98,True,2,100.0,True,0,1,0,A,False,P3,
+S079,LSP-2,Space Resource Technologies,Available,10,99.99,True,2,100.0,True,0,1,0,C,False,P3,
+S080,IGG-01,Chinese Academy of Sciences,Unavailable,0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S081,JSC-2A,NASA / Zybek,Production stopped,10,99.34,True,2,100.0,True,0,1,0,C,False,P3,
+S082,GRC-3,NASA Glenn Research Center,Available,0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S083,NAO-2,Chinese Academy of Sciences,Unavailable,0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S084,CLRS-2,Chinese Academy of Sciences,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S085,JSC-2,NASA / Zybek,Production stopped,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S086,NU-LHT-2E,NASA / USGS,Limited Stock,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S087,NU-LHT-2EG,NASA / USGS,Limited Stock,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S088,NU-LHT-3M,NASA / USGS,Limited Stock,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S089,NU-LHT-4M,NASA / USGS,Limited Stock,8,98.6,True,0,0,True,0,1,1,D,False,P1,composition numbers without a primary source
+S090,NU-LHT-5M,NASA / USGS,Available,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S091,LHS-1D,Space Resource Technologies,Available,10,98.74,True,5,100.0,True,0,1,0,C,False,P3,
+S092,LHS-1E,Space Resource Technologies,Available,10,99.98,True,2,100.0,True,0,1,0,A,False,P3,
+S093,LHS-1-25A,Space Resource Technologies,Available,10,99.54,True,6,99.98,True,0,1,0,C,False,P3,
+S094,LMS-1D,Space Resource Technologies,Available,10,98.52,True,5,100.0,True,0,1,0,C,False,P3,
+S095,LMS-1E,Space Resource Technologies,Available,10,98.77,True,0,0,True,0,1,0,A,False,P3,
+S096,LHD-1D,Space Resource Technologies,Available,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S097,FROST-Y,Space Resource Technologies,Available,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S098,OPRH2W,Off Planet Research,Available,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S099,OPRH3W,Off Planet Research,Available,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S100,OPRH4W30,Off Planet Research,Available,8,99.0,True,0,0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S101,OPRL2W,Off Planet Research,Available,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S102,OPRFLCROSS1,Off Planet Research,Available,0,0.0,True,0,0,True,0,1,0,A,False,P4,
+S103,CSM-LHT-1,Colorado School of Mines,Available,8,99.9,True,1,100.0,True,0,1,1,D,False,P1,composition numbers without a primary source
+S104,CSM-LHT-1G,Colorado School of Mines,Available,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S105,CSM-LMT-1,Colorado School of Mines,Available,8,100.1,True,0,0,True,0,1,1,D,False,P1,composition numbers without a primary source
+S106,CSM-CL-S,Colorado School of Mines,Available,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S107,Mooncastle,Colorado School of Mines,Available,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S108,LMA-1,Outward Technologies,Available (Research),0,0.0,True,2,100.0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S109,LHA-1,Outward Technologies,Available (Research),0,0.0,True,1,100.0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S110,MLS-1P,Univ. of Minnesota,Production stopped,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S111,MLS-1A,Univ. of Minnesota,Production stopped,0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S112,LSS-1,NASA,Production stopped,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S113,LSS-2,NASA,Production stopped,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S114,LSS-3,NASA,Production stopped,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S115,LSS-4,NASA,Production stopped,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S116,LSS-5,NASA,Production stopped,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S117,GSC-1,Goddard Space Center,Production stopped,10,99.8,True,0,0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S118,Maryland-Sanders,,Production stopped,0,0.0,True,0,0,True,0,1,0,A,False,P4,
+S119,CMU-1,Carnegie Mellon University,Production stopped,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S120,PolyU-1,Hong Kong Polytechnic University,Unavailable,10,99.22,True,8,99.9,True,1,2,1,B,False,P2,1 composition rows with null value
+S121,BH-2,Beihang University,Unavailable,7,97.89,True,0,0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S122,TJ-2,Tongji University,Unavailable,11,106.14,False,0,0,True,0,1,1,B,False,P2,oxide sum 106.14% outside 95-102%
+S123,NEU-1A,Northeastern University,Unavailable,0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S124,NEU-1B,Northeastern University,Unavailable,0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S125,CUG-1,China University of Geosciences,Unavailable,0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S126,HUST-1,HUST,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S127,HIT-LRS-1,,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S128,CQU-1,,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S129,NJU-1,,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S130,IRSM-1,,Unavailable,0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S131,LBD,,Unavailable,13,99.68,True,10,97.6,True,1,1,0,D,False,P1,1 composition rows with null value; composition numbers without a primary source
+S132,TYII-0,,Unavailable,13,98.61,True,11,100.0,True,1,1,0,D,False,P1,1 composition rows with null value; composition numbers without a primary source
+S133,TYII-1,,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S134,TYII-2,,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S135,ZJM-01,,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S136,QH-E,,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S137,TUBS-I,TU Braunschweig,Available (Research),0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S138,LX-I50,TU Berlin,Available (Research),0,0.0,True,0,0,True,0,1,0,C,False,P4,
+S139,SCC-1,Open University,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S140,SCC-2,Open University,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S141,OUSR-1,Open University,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S142,SR-2,Open University,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S143,OUEB-1,Open University,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S144,EB-2,Open University,Unavailable,10,98.74,True,0,0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S145,OUHR-1,Open University,Unavailable,10,99.98,True,0,0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S146,HR-2,Open University,Unavailable,10,98.74,True,0,0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S149,ES-1,Open University,Unavailable,10,98.77,True,0,0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S150,ES-2,Open University,Unavailable,10,98.17,True,0,0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S151,ES-3,Open University,Unavailable,10,99.99,True,0,0,True,0,1,0,D,False,P1,composition numbers without a primary source
+S152,ES-4,Open University,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S153,LZS-1,"Instituto de Geociencias (IGEO, CSIC-UCM)",Available (Research),10,99.8,True,0,0,True,0,1,1,B,False,P3,
+S154,KAUMLS,Korea Aerospace University,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S155,TRI-1,,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S156,TLS-01A,,Available (Research),0,0.0,True,0,0,True,0,1,1,B,False,P4,
+S157,FEFU-1,,Unavailable,0,0.0,True,0,0,True,0,1,0,D,False,P4,
+S158,LuSIC-1,"IBeA Research Group, UPV/EHU",Unavailable,0,0.0,True,0,0,True,0,2,1,B,False,P4,

@@ -3,16 +3,18 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { Activity } from 'lucide-react';
 import { ToggleButtonGroup } from '../ui/ToggleButtonGroup';
 import { CompositionTable } from './CompositionTable';
-import type { Composition, MineralGroup, LunarReference } from '../../types';
+import { CompositionStatusNotice, statusOf } from './CompositionStatus';
+import type { Composition, MineralGroup, LunarReference, Simulant } from '../../types';
 
 interface MineralChartProps {
   compositions: Composition[];
   mineralGroups: MineralGroup[];
   lunarRef?: LunarReference | null;
   simulantName: string;
+  simulant: Simulant;
 }
 
-export function MineralChart({ compositions, mineralGroups, lunarRef, simulantName }: MineralChartProps) {
+export function MineralChart({ compositions, mineralGroups, lunarRef, simulantName, simulant }: MineralChartProps) {
   const [view, setView] = useState<'detailed' | 'groups'>('groups');
   const [displayMode, setDisplayMode] = useState<'chart' | 'table'>('table');
 
@@ -80,9 +82,7 @@ export function MineralChart({ compositions, mineralGroups, lunarRef, simulantNa
       </div>
 
       {!hasData ? (
-        <div className="bg-slate-800/30 rounded-xl p-8 text-center border border-slate-700/30">
-          <p className="text-slate-500 italic">No mineral composition data available</p>
-        </div>
+        <CompositionStatusNotice status={statusOf(simulant)} kind="mineral" />
       ) : displayMode === 'chart' ? (
         <div className="h-[300px] w-full bg-slate-800/30 rounded-xl p-4 border border-slate-700/30">
           <ResponsiveContainer width="100%" height="100%">

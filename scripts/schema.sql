@@ -26,7 +26,14 @@ CREATE TABLE IF NOT EXISTS simulants (
   glass_content_percent     REAL,
   nasa_fom_score            REAL,
   ti_content_percent        REAL,
-  datasheet_url             TEXT  -- manufacturer/spec datasheet, distinct from academic references
+  datasheet_url             TEXT, -- manufacturer/spec datasheet, distinct from academic references
+  -- Provenance of the composition data (see scripts/reconcile.py):
+  --   verified | withheld_unverified | not_published | not_extracted
+  composition_status        TEXT,
+  composition_source_title  TEXT,
+  composition_source_url    TEXT,
+  composition_source_kind   TEXT,  -- manufacturer_datasheet | primary_paper | agency_report
+  composition_needs_review  INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS simulant_extra (

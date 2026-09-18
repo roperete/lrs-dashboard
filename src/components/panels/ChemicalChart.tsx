@@ -3,15 +3,17 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { FlaskConical } from 'lucide-react';
 import { ToggleButtonGroup } from '../ui/ToggleButtonGroup';
 import { CompositionTable } from './CompositionTable';
-import type { ChemicalComposition, LunarReference } from '../../types';
+import { CompositionStatusNotice, statusOf } from './CompositionStatus';
+import type { ChemicalComposition, LunarReference, Simulant } from '../../types';
 
 interface ChemicalChartProps {
   chemicalCompositions: ChemicalComposition[];
   lunarRef?: LunarReference | null;
   simulantName: string;
+  simulant: Simulant;
 }
 
-export function ChemicalChart({ chemicalCompositions, lunarRef, simulantName }: ChemicalChartProps) {
+export function ChemicalChart({ chemicalCompositions, lunarRef, simulantName, simulant }: ChemicalChartProps) {
   const [displayMode, setDisplayMode] = useState<'chart' | 'table'>('table');
 
   const chemData = useMemo(() =>
@@ -52,9 +54,7 @@ export function ChemicalChart({ chemicalCompositions, lunarRef, simulantName }: 
       </div>
 
       {chemData.length === 0 ? (
-        <div className="bg-slate-800/30 rounded-xl p-8 text-center border border-slate-700/30">
-          <p className="text-slate-500 italic">No chemical composition data available</p>
-        </div>
+        <CompositionStatusNotice status={statusOf(simulant)} kind="chemical" />
       ) : displayMode === 'chart' ? (
         <div className="h-[300px] w-full bg-slate-800/30 rounded-xl p-4 border border-slate-700/30">
           <ResponsiveContainer width="100%" height="100%">

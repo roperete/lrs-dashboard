@@ -23,6 +23,12 @@ export interface Simulant {
   nasa_fom_score?: number | null;
   ti_content_percent?: number | null;
   datasheet_url?: string | null;  // manufacturer/spec datasheet, distinct from academic references
+  // Provenance of the composition data (set by scripts/reconcile.py)
+  composition_status?: string | null;        // verified | withheld_unverified | not_published | not_extracted
+  composition_source_title?: string | null;
+  composition_source_url?: string | null;
+  composition_source_kind?: string | null;   // manufacturer_datasheet | primary_paper | agency_report
+  composition_needs_review?: number | null;
 }
 
 export interface Site {

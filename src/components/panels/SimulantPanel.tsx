@@ -7,6 +7,7 @@ import { PurchaseSection } from './PurchaseSection';
 import { MineralChart } from './MineralChart';
 import { ChemicalChart } from './ChemicalChart';
 import { ReferencesSection } from './ReferencesSection';
+import { DataSourceLine } from './CompositionStatus';
 import { downloadSimulantCSV } from '../../utils/csv';
 import type { Simulant, Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, LunarReference, PhysicalProperties, PurchaseInfo } from '../../types';
 
@@ -108,17 +109,21 @@ export function SimulantPanel({
           </div>
         )}
 
+        <DataSourceLine simulant={simulant} />
+
         <MineralChart
           compositions={compositions}
           mineralGroups={mineralGroups}
           lunarRef={lunarRef}
           simulantName={simulant.name}
+          simulant={simulant}
         />
 
         <ChemicalChart
           chemicalCompositions={chemicalCompositions}
           lunarRef={lunarRef}
           simulantName={simulant.name}
+          simulant={simulant}
         />
 
         <ReferencesSection references={references} simulantName={simulant.name} />
