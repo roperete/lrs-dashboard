@@ -248,6 +248,117 @@ def apply_decisions(db_path: Path | str, decisions: dict[str, dict]) -> list[dic
     return log
 
 
+
+# ---------------------------------------------------------------------------
+# Physical properties
+# ---------------------------------------------------------------------------
+
+# Agent field name -> database column
+PHYSICAL_FIELD_MAP = {
+    "bulk_density": "bulk_density",
+    "specific_gravity": "specific_gravity",
+    "particle_size_d50": "particle_size_d50",
+    "particle_size_range": "particle_size_distribution",
+    "cohesion": "cohesion",
+    "friction_angle": "friction_angle",
+    "glass_content_percent": "glass_content_percent",
+    "nasa_fom_score": "nasa_fom_score",
+    # "ph" has no column in this schema and is dropped on purpose
+}
+
+NUMERIC_COLUMNS = {
+    "specific_gravity", "particle_size_d50", "density_g_cm3",
+    "glass_content_percent", "nasa_fom_score", "ti_content_percent",
+}
+
+# No silicate mineral is this light, so a smaller value is not a specific gravity.
+MIN_PLAUSIBLE_SPECIFIC_GRAVITY = 2.0
+
+
+def _num(v):
+    """Best-effort float, or None when the value is not a plain number."""
+    if isinstance(v, (int, float)):
+        return float(v)
+    if v is None:
+        return None
+    try:
+        return float(str(v).strip().replace("%", ""))
+    except (TypeError, ValueError):
+        return None
+
+
+def suspect_specific_gravity(specific_gravity, bulk_density):
+    """Is this specific_gravity provably not a specific gravity? -> (bool, why)."""
+    sg = _num(specific_gravity)
+    if sg is None:
+        return False, ""
+    bd = _num(bulk_density)
+    if bd is not None and abs(sg - bd) < 0.005:
+        return True, "value equals the bulk density, so the bulk density was copied into this column"
+    if sg < MIN_PLAUSIBLE_SPECIFIC_GRAVITY:
+        return True, f"value is below {MIN_PLAUSIBLE_SPECIFIC_GRAVITY}, lighter than any silicate mineral"
+    return False, ""
+
+
+def physical_corrections(source_physical: dict, db_row: dict) -> dict:
+    """Columns where an audited source disagrees with, or fills in, the database."""
+    out = {}
+    for field, value in (source_physical or {}).items():
+        col = PHYSICAL_FIELD_MAP.get(field)
+        if not col or value in (None, ""):
+            continue
+        current = db_row.get(col)
+        sv, cv = _num(value), _num(current)
+        if sv is not None and cv is not None:
+            if abs(sv - cv) < 1e-6:
+                continue
+        elif str(current or "").strip() == str(value).strip():
+            continue
+        out[col] = sv if (col in NUMERIC_COLUMNS and sv is not None) else value
+    return out
+
+
+def apply_physical(db_path, corrections_by_simulant: dict) -> list:
+    """Clear provably-copied specific gravities and apply audited corrections.
+
+    corrections_by_simulant maps simulant_id -> {column: value}. Run the agent
+    field names through physical_corrections() first to get column names.
+    """
+    con = sqlite3.connect(str(db_path))
+    con.row_factory = sqlite3.Row
+    ensure_schema(con)
+    log = []
+
+    for row in con.execute("SELECT * FROM simulants").fetchall():
+        row = dict(row)
+        sid = row["simulant_id"]
+        bad, why = suspect_specific_gravity(row.get("specific_gravity"), row.get("bulk_density"))
+        if bad:
+            con.execute("UPDATE simulants SET specific_gravity=NULL WHERE simulant_id=?", (sid,))
+            log.append({"simulant_id": sid, "name": row.get("name"), "field": "specific_gravity",
+                        "old": row.get("specific_gravity"), "new": None, "reason": why})
+
+    for sid, corrections in sorted((corrections_by_simulant or {}).items()):
+        row = con.execute("SELECT * FROM simulants WHERE simulant_id=?", (sid,)).fetchone()
+        if row is None:
+            continue
+        row = dict(row)
+        for col, value in corrections.items():
+            current = row.get(col)
+            sv, cv = _num(value), _num(current)
+            if sv is not None and cv is not None and abs(sv - cv) < 1e-6:
+                continue
+            if sv is None and str(current or "").strip() == str(value).strip():
+                continue
+            con.execute(f"UPDATE simulants SET {col}=? WHERE simulant_id=?", (value, sid))
+            log.append({"simulant_id": sid, "name": row.get("name"), "field": col,
+                        "old": current, "new": value,
+                        "reason": "database disagreed with the audited source"})
+
+    con.commit()
+    con.close()
+    return log
+
 def decisions_from_findings(findings: dict) -> dict[str, dict]:
     """Turn the audit workflow's output into per-simulant decisions."""
     out: dict[str, dict] = {}
