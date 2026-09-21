@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, Cell } from 'recharts';
 import { Activity } from 'lucide-react';
 import { ToggleButtonGroup } from '../ui/ToggleButtonGroup';
@@ -15,7 +15,11 @@ interface MineralChartProps {
 }
 
 export function MineralChart({ compositions, mineralGroups, lunarRef, simulantName, simulant }: MineralChartProps) {
-  const [view, setView] = useState<'detailed' | 'groups'>('groups');
+  // Grouped (NASA mineral family) rows are derived data and exist only where a source
+  // states them; since the 2026-09 audit most simulants have none. Open on whichever
+  // view actually has data, and fall back to the detailed list when groups are absent.
+  const [view, setView] = useState<'detailed' | 'groups'>(() =>
+    mineralGroups.some(g => g.value_pct > 0) ? 'groups' : 'detailed');
   const [displayMode, setDisplayMode] = useState<'chart' | 'table'>('table');
 
   const detailedData = useMemo(() =>
@@ -25,6 +29,10 @@ export function MineralChart({ compositions, mineralGroups, lunarRef, simulantNa
   const groupData = useMemo(() =>
     mineralGroups.filter(g => g.value_pct > 0).sort((a, b) => b.value_pct - a.value_pct),
     [mineralGroups]);
+
+  useEffect(() => {
+    if (view === 'groups' && groupData.length === 0 && detailedData.length > 0) setView('detailed');
+  }, [view, groupData.length, detailedData.length]);
 
   const chartData = useMemo(() => {
     if (view === 'detailed') {
