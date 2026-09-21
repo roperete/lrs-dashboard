@@ -1,0 +1,486 @@
+[
+ {
+  "simulant_id": "S006",
+  "name": "BP-1",
+  "field": "specific_gravity",
+  "old": 1.43,
+  "new": null,
+  "reason": "value is below 2.0, lighter than any silicate mineral"
+ },
+ {
+  "simulant_id": "S018",
+  "name": "EAC-1A",
+  "field": "specific_gravity",
+  "old": 1.45,
+  "new": null,
+  "reason": "value is below 2.0, lighter than any silicate mineral"
+ },
+ {
+  "simulant_id": "S025",
+  "name": "GreenSpar",
+  "field": "specific_gravity",
+  "old": 0.95,
+  "new": null,
+  "reason": "value is below 2.0, lighter than any silicate mineral"
+ },
+ {
+  "simulant_id": "S032",
+  "name": "KLS-1",
+  "field": "specific_gravity",
+  "old": 1.99,
+  "new": null,
+  "reason": "value is below 2.0, lighter than any silicate mineral"
+ },
+ {
+  "simulant_id": "S043",
+  "name": "MLS-1",
+  "field": "specific_gravity",
+  "old": 1.59,
+  "new": null,
+  "reason": "value is below 2.0, lighter than any silicate mineral"
+ },
+ {
+  "simulant_id": "S054",
+  "name": "OB-1A",
+  "field": "specific_gravity",
+  "old": 1.51,
+  "new": null,
+  "reason": "value is below 2.0, lighter than any silicate mineral"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "field": "specific_gravity",
+  "old": 1.31,
+  "new": null,
+  "reason": "value is below 2.0, lighter than any silicate mineral"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "field": "specific_gravity",
+  "old": 1.67,
+  "new": null,
+  "reason": "value equals the bulk density, so the bulk density was copied into this column"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "field": "specific_gravity",
+  "old": 1.52,
+  "new": null,
+  "reason": "value equals the bulk density, so the bulk density was copied into this column"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "field": "specific_gravity",
+  "old": 1.67,
+  "new": null,
+  "reason": "value equals the bulk density, so the bulk density was copied into this column"
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "field": "specific_gravity",
+  "old": 1.43,
+  "new": null,
+  "reason": "value equals the bulk density, so the bulk density was copied into this column"
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "field": "specific_gravity",
+  "old": 1.43,
+  "new": null,
+  "reason": "value equals the bulk density, so the bulk density was copied into this column"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "field": "specific_gravity",
+  "old": 1.47,
+  "new": null,
+  "reason": "value equals the bulk density, so the bulk density was copied into this column"
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "field": "specific_gravity",
+  "old": 1.37,
+  "new": null,
+  "reason": "value equals the bulk density, so the bulk density was copied into this column"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "field": "specific_gravity",
+  "old": 1.42,
+  "new": null,
+  "reason": "value equals the bulk density, so the bulk density was copied into this column"
+ },
+ {
+  "simulant_id": "S103",
+  "name": "CSM-LHT-1",
+  "field": "specific_gravity",
+  "old": 1.5,
+  "new": null,
+  "reason": "value is below 2.0, lighter than any silicate mineral"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "field": "bulk_density",
+  "old": "0.81",
+  "new": "1.40",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "field": "particle_size_d50",
+  "old": 10.22,
+  "new": 81.62,
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "<0.04 \u2013 1000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "field": "cohesion",
+  "old": "0.205",
+  "new": "0.311",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "field": "friction_angle",
+  "old": "28.62",
+  "new": "31.49",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "<0.04 \u2013 1000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S057",
+  "name": "OPRH2N",
+  "field": "bulk_density",
+  "old": null,
+  "new": "1.2",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S057",
+  "name": "OPRH2N",
+  "field": "glass_content_percent",
+  "old": null,
+  "new": 14.0,
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "field": "bulk_density",
+  "old": "1.41",
+  "new": "1.2",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "field": "glass_content_percent",
+  "old": null,
+  "new": 10.0,
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "field": "bulk_density",
+  "old": null,
+  "new": "1.2",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "field": "glass_content_percent",
+  "old": null,
+  "new": 5.0,
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "field": "bulk_density",
+  "old": "1.43",
+  "new": "1.2",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "field": "glass_content_percent",
+  "old": null,
+  "new": 42.0,
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "0.03 \u2013 3000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "0.03 \u2013 3000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "<0.04 \u2013 2000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "<0.04 \u2013 2000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "<0.04 \u2013 2000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "<0.04 \u2013 1000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "<0.04 \u2013 1000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "field": "particle_size_distribution",
+  "old": "0.04 - 1000 \u00b5m",
+  "new": "<0.04 \u2013 1000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "0.04 \u2013 1000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "<0.04 \u2013 1000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "field": "specific_gravity",
+  "old": null,
+  "new": 2.7,
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "field": "particle_size_distribution",
+  "old": "0.04 - 1000 \u00b5m",
+  "new": "0.04 \u2013 1000 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S100",
+  "name": "OPRH4W30",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "Q25 21.5 \u00b5m, Q50 46.9 \u00b5m, Q75 128.4 \u00b5m",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S100",
+  "name": "OPRH4W30",
+  "field": "nasa_fom_score",
+  "old": null,
+  "new": "88 chemistry FoM (Table 8); Table 24 summary: chemistry 88, mineralogy n/a, particle size distribution 97, particle shape 84, bulk density n/a, magnetic susceptibility n/a, shear strength n/a",
+  "reason": "database disagreed with the audited source"
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "field": "nasa_fom_score",
+  "old": 1.5,
+  "new": null,
+  "reason": "not on any SRT fact sheet; 1.5 is also on a different scale from the Hispansion FoM percentages"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "field": "ti_content_percent",
+  "old": 0.82,
+  "new": null,
+  "reason": "0.82 is the TiO2 wt%, already in the oxide table; the TDS states no Ti content"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "field": "ti_content_percent",
+  "old": 0.82,
+  "new": null,
+  "reason": "0.82 is TLH-0's TiO2 copied across; TLM-0's TiO2 is 1.72 and the TDS states no Ti content"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "field": "density_g_cm3",
+  "old": 1.67,
+  "new": null,
+  "reason": "equals the mean bulk density; the TDS states no grain density"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "field": "density_g_cm3",
+  "old": 1.52,
+  "new": null,
+  "reason": "equals the mean bulk density; the TDS states no grain density"
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "field": "glass_content_percent",
+  "old": 25.0,
+  "new": null,
+  "reason": "25.0 is the agglutinate fraction, not a glass content; the sheet states no glass content"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "field": "glass_content_percent",
+  "old": 10.0,
+  "new": null,
+  "reason": "10.0 is the glass-rich basalt fraction, not a glass content; the sheet states no glass content"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "field": "lunar_sample_reference",
+  "old": "Apollo 16",
+  "new": "Average lunar highlands",
+  "reason": "the source's own 'Reference Material' / 'Type' statement; the previous value named a mission the source never names"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "field": "lunar_sample_reference",
+  "old": "Apollo 16",
+  "new": "Average lunar highlands",
+  "reason": "the source's own 'Reference Material' / 'Type' statement; the previous value named a mission the source never names"
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "field": "lunar_sample_reference",
+  "old": "Apollo 16",
+  "new": "Lunar Highlands",
+  "reason": "the source's own 'Reference Material' / 'Type' statement; the previous value named a mission the source never names"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "field": "lunar_sample_reference",
+  "old": "Apollo 16",
+  "new": "Highlands",
+  "reason": "the source's own 'Reference Material' / 'Type' statement; the previous value named a mission the source never names"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "field": "lunar_sample_reference",
+  "old": "Apollo 12/15",
+  "new": "Low-Ti Mare",
+  "reason": "the source's own 'Reference Material' / 'Type' statement; the previous value named a mission the source never names"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "field": "lunar_sample_reference",
+  "old": "High-Ti Mare",
+  "new": "Mare regolith (Apollo)",
+  "reason": "offplanetresearch.com/simulants: 'Replicates: Mare regolith from Apollo missions'; 'High-Ti Mare' describes the OPRL2NT variant"
+ },
+ {
+  "simulant_id": "S036",
+  "field": "references_.R084.reference_type",
+  "old": "composition",
+  "new": "geotechnical",
+  "reason": "not the composition source recorded on the simulant; the data sheet is"
+ },
+ {
+  "simulant_id": "S037",
+  "field": "references_.R085.reference_type",
+  "old": "composition",
+  "new": "geotechnical",
+  "reason": "not the composition source recorded on the simulant; the data sheet is"
+ },
+ {
+  "simulant_id": "S058",
+  "field": "references_.R093.reference_type",
+  "old": "composition,geotechnical",
+  "new": "usage",
+  "reason": "not the composition source recorded on the simulant; the data sheet is"
+ },
+ {
+  "simulant_id": "S060",
+  "field": "references_.R094.reference_type",
+  "old": "composition,geotechnical",
+  "new": "usage",
+  "reason": "not the composition source recorded on the simulant; the data sheet is"
+ }
+]

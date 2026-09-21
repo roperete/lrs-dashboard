@@ -11,10 +11,24 @@ from collections import Counter
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "public" / "data"
 
+# The app loads one bundle, data.json (exported from lrs.sqlite by export_json.py).
+# The per-table files this script used to read were stale copies and were removed
+# on 2026-09-21, so verification now reads the same bundle the frontend does.
+_BUNDLE = None
+_KEYS = {
+    "simulant.json": "simulants", "simulant_extra.json": "simulant_extra", "site.json": "sites",
+    "composition.json": "compositions", "chemical_composition.json": "chemical_compositions",
+    "references.json": "references", "mineral_groups.json": "mineral_groups",
+    "mineral_sourcing.json": "mineral_sourcing", "lunar_reference.json": "lunar_reference",
+}
+
 
 def load(name):
-    with open(DATA_DIR / name) as f:
-        return json.load(f)
+    global _BUNDLE
+    if _BUNDLE is None:
+        with open(DATA_DIR / "data.json") as f:
+            _BUNDLE = json.load(f)
+    return _BUNDLE[_KEYS[name]]
 
 
 def main():

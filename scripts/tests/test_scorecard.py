@@ -27,10 +27,16 @@ def make_db(path: Path) -> None:
         ("S004", "EMPTY-1", None, "Unknown", None),
         ("S005", "NULLS-1", None, "Unknown", None),
         ("S006", "URL-1", "Hispansion", "Available", "https://hispansion.io/tds.pdf"),
+        ("S007", "AUDITED-1", "Off Planet Research", "Available", None),
     ]
     con.executemany(
         "INSERT INTO simulants (simulant_id, name, institution, availability, datasheet_url) VALUES (?,?,?,?,?)",
         sims,
+    )
+    # S007: only a review-type reference, but the audit recorded an agency source on the row itself
+    con.execute(
+        "UPDATE simulants SET composition_status='verified', composition_source_kind='agency_report', "
+        "composition_source_title='NASA/TM-20240011783 Rev A' WHERE simulant_id='S007'"
     )
 
     refs = [
@@ -40,6 +46,7 @@ def make_db(path: Path) -> None:
         ("R003", "S003", None, "review", "An overview on lunar regolith simulants solidification methods", "https://doi.org/10.1/x"),
         ("R004", "S003", None, "report", "Lunar Regolith Simulant User's Guide Revision A", None),
         ("R005", "S005", None, "usage", "Sintering behaviour of NULLS-1 bricks", None),
+        ("R006", "S007", None, "review", "An overview on lunar regolith simulants", None),
     ]
     con.executemany(
         "INSERT INTO references_ (reference_id, simulant_id, reference_text, reference_type, title, url) VALUES (?,?,?,?,?,?)",
@@ -57,6 +64,12 @@ def make_db(path: Path) -> None:
         ("CH008", "S003", "oxide", "SiO2", 45.0),
         ("CH009", "S003", "oxide", "Al2O3", 25.0),
         ("CH010", "S005", "oxide", "SiO2", None),
+        ("CH011", "S007", "oxide", "SiO2", 48.1),
+        ("CH012", "S007", "oxide", "Al2O3", 30.3),
+        ("CH013", "S007", "oxide", "CaO", 15.2),
+        ("CH014", "S007", "oxide", "Na2O", 2.3),
+        ("CH015", "S007", "oxide", "FeO", 1.7),
+        ("CH016", "S007", "oxide", "MgO", 1.1),
     ]
     con.executemany(
         "INSERT INTO chemical_compositions (composition_id, simulant_id, component_type, component_name, value_wt_pct) VALUES (?,?,?,?,?)",
@@ -92,7 +105,7 @@ class ScorecardTest(unittest.TestCase):
         cls.tmp.cleanup()
 
     def test_one_row_per_simulant(self):
-        self.assertEqual(sorted(self.rows), ["S001", "S002", "S003", "S004", "S005", "S006"])
+        self.assertEqual(sorted(self.rows), ["S001", "S002", "S003", "S004", "S005", "S006", "S007"])
 
     def test_spec_sheet_reference_gives_tier_a(self):
         self.assertEqual(self.rows["S001"]["source_tier"], "A")
@@ -137,6 +150,12 @@ class ScorecardTest(unittest.TestCase):
     def test_no_composition_is_priority_4(self):
         self.assertEqual(self.rows["S004"]["priority"], "P4")
         self.assertEqual(self.rows["S006"]["priority"], "P4")
+
+    def test_recorded_composition_source_outranks_reference_list(self):
+        # S007 has only a review-type reference but a verified agency source recorded
+        # on the simulant itself after the audit; the recorded source wins.
+        self.assertEqual(self.rows["S007"]["source_tier"], "B")
+        self.assertEqual(self.rows["S007"]["priority"], "P3")
 
     def test_counts(self):
         self.assertEqual(self.rows["S001"]["n_oxides"], 6)   # Sum row excluded

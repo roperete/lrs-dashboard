@@ -17,8 +17,8 @@ const NOTICES: Record<CompositionStatus, { title: string; body: string; tone: st
   withheld_unverified: {
     title: 'Composition withheld',
     body:
-      'Values were previously listed here, but they could not be traced to a manufacturer data sheet or to the ' +
-      'publication that characterised this simulant. They have been removed rather than shown unsourced.',
+      'Values were previously listed here, but they could not be confirmed against a manufacturer data sheet or ' +
+      'the publication that characterised this simulant. They have been removed rather than shown unconfirmed.',
     tone: 'text-amber-400',
     Icon: ShieldAlert,
   },

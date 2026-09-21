@@ -49,6 +49,14 @@ All FK references verified consistent as of v2.8.3.
 | glass_content_percent | number | Sparse |
 | nasa_fom_score | number | Sparse — NASA Figure of Merit |
 | ti_content_percent | number | Sparse |
+| datasheet_url | string\|null | Manufacturer data sheet, when the composition source is one |
+| composition_status | string | `verified` \| `withheld_unverified` \| `not_published` \| `not_extracted` — see [data-policy.md](data-policy.md) |
+| composition_source_title | string\|null | The one document the composition was read from (set when verified) |
+| composition_source_url | string\|null | Link or local path to that document |
+| composition_source_kind | string\|null | `manufacturer_datasheet` \| `primary_paper` \| `agency_report` |
+| composition_needs_review | 0\|1 | Set when the audit accepted a value with a caveat worth a human look |
+
+**Provenance rule (2026-09-21):** composition rows exist only for simulants whose `composition_status` is `verified`. The UI reads the status to choose its empty-state message; do not infer "not published" from an empty list. Since 2026-09-21 the app loads only `public/data/data.json`; the per-table JSON files this document was first written against were stale copies and have been removed.
 
 **Business rules:**
 - `type` determines marker icon on map: "Highland" -> silver, "Mare" -> amber, else grey

@@ -116,6 +116,14 @@ def build_scorecard(db_path: Path | str) -> list[dict]:
 
         has_datasheet_url = bool(s.get("datasheet_url"))
         tier = _source_tier(refs, has_datasheet_url)
+        # After an audit the simulant row itself records where its numbers came from;
+        # that beats whatever the reference list happens to contain.
+        if s.get("composition_status") == "verified":
+            kind = s.get("composition_source_kind")
+            if kind == "manufacturer_datasheet":
+                tier = "A"
+            elif kind in ("primary_paper", "agency_report"):
+                tier = "B"
 
         chem_sum, n_oxides = _chem_sum(chem)
         chem_sum_ok = n_oxides == 0 or CHEM_RANGE[0] <= chem_sum <= CHEM_RANGE[1]
