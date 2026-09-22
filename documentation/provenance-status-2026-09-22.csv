@@ -1,0 +1,157 @@
+simulant_id,name,status,references,naming,not_naming,unchecked,scalars_present,scalars_sourced,scalars_unsourced,composition_rows,composition_rows_cited,test1_named,test3_all_values_sourced
+S001,AGK-2010,not_extracted,1,0,0,1,3,0,"bulk_density, cohesion, friction_angle",0,0,unknown,FAIL
+S002,ALRS-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S003,ALS,not_extracted,1,0,0,1,1,0,friction_angle,0,0,unknown,FAIL
+S004,BH-1,withheld_unverified,2,0,0,2,0,0,,0,0,unknown,n/a
+S005,BHLD20,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S006,BP-1,withheld_unverified,2,0,0,2,4,0,"bulk_density, cohesion, friction_angle, particle_size_d50",0,0,unknown,FAIL
+S007,CAS-1,withheld_unverified,3,0,0,3,2,0,"cohesion, friction_angle",0,0,unknown,FAIL
+S008,CHENOBI,not_extracted,1,0,0,1,1,0,particle_morphology,0,0,unknown,FAIL
+S009,CLDS-i,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S010,CLRS-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S011,CSM-CL,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S012,CUG-1A,withheld_unverified,2,0,0,2,3,0,"bulk_density, cohesion, friction_angle",0,0,unknown,FAIL
+S013,CUMT-1,withheld_unverified,2,0,0,2,7,0,"bulk_density, cohesion, friction_angle, specific_gravity, density_g_cm3, particle_size_d50, particle_morphology",0,0,unknown,FAIL
+S014,DNA-1,withheld_unverified,1,0,0,1,3,0,"particle_size_distribution, particle_morphology, particle_ruggedness",0,0,unknown,FAIL
+S015,DNA-1A,withheld_unverified,3,0,0,3,2,0,"specific_gravity, particle_ruggedness",0,0,unknown,FAIL
+S016,DUST-Y,not_published,1,0,0,1,0,0,,0,0,unknown,n/a
+S017,EAC-1,withheld_unverified,1,0,0,1,2,0,"bulk_density, cohesion",0,0,unknown,FAIL
+S018,EAC-1A,withheld_unverified,2,0,0,2,6,0,"bulk_density, cohesion, density_g_cm3, particle_size_d50, particle_size_distribution, glass_content_percent",0,0,unknown,FAIL
+S019,FJS-1,withheld_unverified,2,0,0,2,4,0,"bulk_density, cohesion, friction_angle, glass_content_percent",0,0,unknown,FAIL
+S020,FJS-1g,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S021,FJS-2,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S022,FJS-3,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S023,GCA-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S024,GRC-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S025,GreenSpar,withheld_unverified,1,0,0,1,1,0,particle_size_d50,0,0,unknown,FAIL
+S026,JLU-H,not_extracted,1,0,0,1,1,0,particle_size_distribution,0,0,unknown,FAIL
+S027,JSC-1,withheld_unverified,2,0,0,2,6,0,"bulk_density, cohesion, friction_angle, specific_gravity, particle_size_distribution, glass_content_percent",0,0,unknown,FAIL
+S028,JSC-1A,withheld_unverified,2,0,0,2,6,0,"bulk_density, cohesion, friction_angle, specific_gravity, particle_size_d50, particle_size_distribution",0,0,unknown,FAIL
+S029,JSC-1AC,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S030,JSC-1AF,withheld_unverified,1,0,0,1,1,0,particle_size_distribution,0,0,unknown,FAIL
+S031,KIGAM-L1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S032,KLS-1,withheld_unverified,2,0,0,2,4,0,"cohesion, friction_angle, density_g_cm3, particle_size_d50",0,0,unknown,FAIL
+S033,KOHLS-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S034,Kohyama Simulant,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S035,LCATS-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S036,LHS-1,verified,3,1,0,2,8,7,specific_gravity,16,16,pass,partial
+S037,LMS-1,verified,3,1,0,2,8,7,specific_gravity,16,16,pass,partial
+S038,LSS-ISAC-1,not_extracted,2,0,0,2,3,0,"bulk_density, cohesion, friction_angle",0,0,unknown,FAIL
+S039,LuNOR,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S040,LX-M100,withheld_unverified,2,0,0,2,5,0,"bulk_density, friction_angle, density_g_cm3, particle_size_d50, particle_size_distribution",0,0,unknown,FAIL
+S041,LX-T100,withheld_unverified,2,0,0,2,5,0,"bulk_density, friction_angle, density_g_cm3, particle_size_d50, particle_size_distribution",0,0,unknown,FAIL
+S042,MKS-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S043,MLS-1,withheld_unverified,2,0,0,2,6,0,"bulk_density, cohesion, friction_angle, particle_size_d50, particle_size_distribution, ti_content_percent",0,0,unknown,FAIL
+S044,MLS-2,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S045,NAO-1,withheld_unverified,2,0,0,2,4,0,"bulk_density, cohesion, friction_angle, specific_gravity",0,0,unknown,FAIL
+S046,NEU-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S047,NU-LHT,withheld_unverified,1,0,0,1,1,0,glass_content_percent,0,0,unknown,FAIL
+S048,NU-LHT-1D,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S049,NU-LHT-1M,withheld_unverified,1,0,0,1,2,0,"particle_size_distribution, glass_content_percent",0,0,unknown,FAIL
+S050,NU-LHT-2C,not_extracted,1,0,0,1,1,0,particle_size_distribution,0,0,unknown,FAIL
+S051,NU-LHT-2M,withheld_unverified,1,0,0,1,5,0,"bulk_density, friction_angle, specific_gravity, particle_size_d50, glass_content_percent",0,0,unknown,FAIL
+S052,NUW-LHT-5M,withheld_unverified,1,0,0,1,1,0,glass_content_percent,0,0,unknown,FAIL
+S053,OB-1,withheld_unverified,2,0,0,2,1,0,glass_content_percent,0,0,unknown,FAIL
+S054,OB-1A,withheld_unverified,2,0,0,2,5,0,"bulk_density, cohesion, friction_angle, particle_size_d50, glass_content_percent",0,0,unknown,FAIL
+S055,OPR Agglutinate,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S056,OPRFLCROSS2,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S057,OPRH2N,verified,2,1,0,1,7,4,"cohesion, friction_angle, specific_gravity",15,15,pass,partial
+S058,OPRH3N,verified,3,1,0,2,7,4,"cohesion, friction_angle, particle_size_d50",15,15,pass,partial
+S059,OPRH4N,verified,2,1,0,1,4,4,,15,15,pass,pass
+S060,OPRL2N,verified,3,1,0,2,7,4,"cohesion, friction_angle, particle_size_d50",15,15,pass,partial
+S061,OPRL2NT,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S062,Oshima Simulant,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S063,TBG-1,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S064,TJ-1,withheld_unverified,1,0,0,1,4,0,"bulk_density, cohesion, friction_angle, specific_gravity",0,0,unknown,FAIL
+S065,TLH-0,verified,2,1,0,1,11,11,,23,23,pass,pass
+S066,TLM-0,verified,2,1,0,1,11,11,,24,24,pass,pass
+S067,TLS-01,withheld_unverified,2,0,0,2,4,0,"cohesion, friction_angle, particle_morphology, particle_ruggedness",0,0,unknown,FAIL
+S068,TUBS-H,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S069,TUBS-M,withheld_unverified,1,0,0,1,5,0,"bulk_density, cohesion, specific_gravity, particle_size_d50, particle_size_distribution",0,0,unknown,FAIL
+S070,TUBS-T,withheld_unverified,1,0,0,1,4,0,"bulk_density, cohesion, specific_gravity, particle_size_d50",0,0,unknown,FAIL
+S071,UoM-B,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S072,UoM-W,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S073,UW-1H,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S074,UW-1M,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S075,WHU-1,not_extracted,2,0,0,2,4,0,"bulk_density, cohesion, friction_angle, particle_morphology",0,0,unknown,FAIL
+S076,LMS-2,verified,2,1,0,1,5,5,,16,16,pass,pass
+S077,LHS-2,verified,2,1,0,1,7,7,,16,16,pass,pass
+S078,LHS-2E,verified,2,1,0,1,7,7,,12,12,pass,pass
+S079,LSP-2,verified,2,1,0,1,7,7,,12,12,pass,pass
+S080,IGG-01,not_extracted,1,0,0,1,3,0,"bulk_density, cohesion, friction_angle",0,0,unknown,FAIL
+S081,JSC-2A,withheld_unverified,1,0,0,1,2,0,"particle_size_d50, particle_size_distribution",0,0,unknown,FAIL
+S082,GRC-3,not_extracted,1,0,0,1,3,0,"bulk_density, friction_angle, specific_gravity",0,0,unknown,FAIL
+S083,NAO-2,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S084,CLRS-2,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S085,JSC-2,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S086,NU-LHT-2E,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S087,NU-LHT-2EG,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S088,NU-LHT-3M,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S089,NU-LHT-4M,withheld_unverified,1,0,0,1,4,0,"bulk_density, cohesion, friction_angle, particle_size_d50",0,0,unknown,FAIL
+S090,NU-LHT-5M,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S091,LHS-1D,verified,2,1,0,1,8,8,,16,16,pass,pass
+S092,LHS-1E,verified,2,1,0,1,7,7,,12,12,pass,pass
+S093,LHS-1-25A,verified,2,1,0,1,5,5,,16,16,pass,pass
+S094,LMS-1D,verified,2,1,0,1,8,8,,16,16,pass,pass
+S095,LMS-1E,verified,2,1,0,1,9,9,,10,10,pass,pass
+S096,LHD-1D,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S097,FROST-Y,not_extracted,1,0,0,1,2,0,"bulk_density, particle_size_distribution",0,0,unknown,FAIL
+S098,OPRH2W,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S099,OPRH3W,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S100,OPRH4W30,verified,2,1,0,1,3,3,,8,8,pass,pass
+S101,OPRL2W,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S102,OPRFLCROSS1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S103,CSM-LHT-1,withheld_unverified,1,0,0,1,4,0,"bulk_density, cohesion, friction_angle, particle_size_d50",0,0,unknown,FAIL
+S104,CSM-LHT-1G,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S105,CSM-LMT-1,withheld_unverified,1,0,0,1,4,0,"bulk_density, cohesion, friction_angle, particle_size_d50",0,0,unknown,FAIL
+S106,CSM-CL-S,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S107,Mooncastle,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S108,LMA-1,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S109,LHA-1,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S110,MLS-1P,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S111,MLS-1A,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S112,LSS-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S113,LSS-2,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S114,LSS-3,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S115,LSS-4,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S116,LSS-5,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S117,GSC-1,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S118,Maryland-Sanders,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S119,CMU-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S120,PolyU-1,withheld_unverified,2,0,0,2,7,0,"bulk_density, cohesion, friction_angle, specific_gravity, density_g_cm3, particle_size_d50, particle_size_distribution",0,0,unknown,FAIL
+S121,BH-2,withheld_unverified,1,0,0,1,4,0,"bulk_density, cohesion, friction_angle, particle_morphology",0,0,unknown,FAIL
+S122,TJ-2,withheld_unverified,1,0,0,1,2,0,"specific_gravity, particle_morphology",0,0,unknown,FAIL
+S123,NEU-1A,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S124,NEU-1B,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S125,CUG-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S126,HUST-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S127,HIT-LRS-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S128,CQU-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S129,NJU-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S130,IRSM-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S131,LBD,withheld_unverified,1,0,0,1,5,0,"bulk_density, cohesion, friction_angle, particle_size_d50, particle_morphology",0,0,unknown,FAIL
+S132,TYII-0,withheld_unverified,1,0,0,1,5,0,"bulk_density, cohesion, friction_angle, particle_size_d50, particle_morphology",0,0,unknown,FAIL
+S133,TYII-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S134,TYII-2,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S135,ZJM-01,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S136,QH-E,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S137,TUBS-I,not_extracted,1,0,0,1,3,0,"bulk_density, cohesion, particle_size_d50",0,0,unknown,FAIL
+S138,LX-I50,not_extracted,1,0,0,1,5,0,"bulk_density, friction_angle, density_g_cm3, particle_size_d50, particle_size_distribution",0,0,unknown,FAIL
+S139,SCC-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S140,SCC-2,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S141,OUSR-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S142,SR-2,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S143,OUEB-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S144,EB-2,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S145,OUHR-1,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S146,HR-2,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S149,ES-1,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S150,ES-2,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S151,ES-3,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S152,ES-4,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S153,LZS-1,withheld_unverified,1,0,0,1,0,0,,0,0,unknown,n/a
+S154,KAUMLS,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S155,TRI-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S156,TLS-01A,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S157,FEFU-1,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
+S158,LuSIC-1,not_extracted,2,0,0,2,0,0,,0,0,unknown,n/a
