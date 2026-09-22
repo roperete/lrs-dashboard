@@ -16,7 +16,7 @@ S014,DNA-1,withheld_unverified,1,0,0,1,3,0,"particle_size_distribution, particle
 S015,DNA-1A,withheld_unverified,3,0,0,3,2,0,"specific_gravity, particle_ruggedness",0,0,unknown,FAIL
 S016,DUST-Y,not_published,1,0,0,1,0,0,,0,0,unknown,n/a
 S017,EAC-1,withheld_unverified,1,0,0,1,2,0,"bulk_density, cohesion",0,0,unknown,FAIL
-S018,EAC-1A,withheld_unverified,2,0,0,2,6,0,"bulk_density, cohesion, density_g_cm3, particle_size_d50, particle_size_distribution, glass_content_percent",0,0,unknown,FAIL
+S018,EAC-1A,verified,6,6,0,0,6,4,"bulk_density, particle_size_distribution",14,14,pass,partial
 S019,FJS-1,withheld_unverified,2,0,0,2,4,0,"bulk_density, cohesion, friction_angle, glass_content_percent",0,0,unknown,FAIL
 S020,FJS-1g,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a
 S021,FJS-2,not_extracted,1,0,0,1,0,0,,0,0,unknown,n/a

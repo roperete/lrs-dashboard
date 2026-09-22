@@ -22,7 +22,7 @@ field). Nothing below changes the database until you say so.
 | S075 | WHU-1 | R072 and R097 are the same paper (duplicate DOI), a loading-condition study readable only to the first page; the three geotechnical numbers (1.65, 9.9, 40.57) trace to nothing. Candidate development paper: Teng et al., Icarus 2025 (PII S0019103525003124). | Acquire; merge R072/R097. |
 | S009 | CLDS-i | Only reference is a plant-growth review that lists it; composition read from simulantdb, which transcribes Tang et al. 2017. | Acquire Tang 2017. |
 | S028 | JSC-1A | R026 (Taylor et al. 2005, MetSoc abstract 5180) is about JSC-1 and never uses the name JSC-1A; now marked as not naming S028. The same abstract is on JSC-1 as RN-S027-5. | Delete R026 from S028 (the design keeps it marked 0 until you say so). |
-| — | duplicates | Same document under two ids for one simulant: R008 = R096 (S007), R013 = R108 (S013), R072 = R097 (S075), R078 = R103 (S120); R067 (S050) and R122 (S086) are the same NASA guide on different simulants (fine). | Merge each pair; keep the lower id. |
+| — | duplicates | Same document under two ids for one simulant: R008 = R096 (S007), R013 = R108 (S013), R072 = R097 (S075), R078 = R103 (S120), R018 = R098 (S018); R067 (S050) and R122 (S086) are the same NASA guide on different simulants (fine). | Merge each pair; keep the lower id. |
 | — | R080 | MDPI DOI still does not resolve (from the 2026-09-22 reference check). | Find the article's current DOI. |
 
 ## Stored values that are not what the paper says
@@ -41,6 +41,9 @@ The export already hides these (no source row). They stay in the database for yo
 | S027 | JSC-1 | institution "NASA / Orbitec" | LEAG 2010 Appendix 4: JSC-1 = Johnson Space Center; JSC-1A/1AF = MSFC / Orbitec. | Set institution to NASA Johnson Space Center. |
 | S026 | JLU-H | availability "Unavailable" | Patzwald 2025: "currently available". | Set available. |
 | S084 | CLRS-2 | type "Highlands" (from R120) | Contradicted by every other source and by the basalt feedstock. | Clear the type until Song et al. 2020 (Icarus 347, 113810) is acquired. |
+| S018 | EAC-1A | bulk density 1.95 | 1.95 g/cm³ is the specimen density of the cohesion test. The paper's bulk density (optimal packing) for EAC-1A is 1.45 g/cm³ (p.3); Ramos Somolinos 2024 measured 1.72 at atmospheric pressure. | Store 1.45 and cite p.3 "Density". |
+| S018 | EAC-1A | PSD "d50=181" | Stated nowhere. Engelschiøn 2020: median 6.47 ϕ (~11 µm, laser diffraction); Ginés-Palomares 2023 as received: D(v,0.5) = 210 µm. Batch or method difference. | Clear; keep D50 = 11 µm as sourced, note the 210 µm as-received figure. |
+| S018 | EAC-1A | composition (now shown, flagged) | The oxides are labelled "EAC-1" in the source, which the paper defines as the host material regardless of grain size. Kjøniksen et al. 2021 (ESA ACT report, in the library) gives a different 8-oxide EAC-1A composition, method unstated. | Accept the Engelschiøn chemistry as EAC-1A's, or hold until a batch analysis of the product itself is found. |
 
 ## Still open from earlier
 

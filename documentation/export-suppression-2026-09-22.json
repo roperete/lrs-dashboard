@@ -1,22 +1,21 @@
 {
   "generated": "2026-09-22",
   "rule": "A scalar on simulants is exported only when property_sources has a row for (simulant_id, field). These values remain in lrs.sqlite and are written as null in public/data/data.json.",
-  "count": 150,
+  "count": 146,
   "by_field": {
     "friction_angle": 29,
     "bulk_density": 28,
-    "cohesion": 28,
-    "particle_size_d50": 20,
+    "cohesion": 27,
+    "particle_size_d50": 19,
     "specific_gravity": 11,
     "particle_size_distribution": 10,
-    "glass_content_percent": 8,
     "particle_morphology": 7,
-    "density_g_cm3": 5,
+    "glass_content_percent": 7,
+    "density_g_cm3": 4,
     "particle_ruggedness": 3,
     "ti_content_percent": 1
   },
   "by_simulant": {
-    "S018": 6,
     "S043": 6,
     "S040": 5,
     "S041": 5,
@@ -51,6 +50,7 @@
     "S013": 2,
     "S015": 2,
     "S017": 2,
+    "S018": 2,
     "S027": 2,
     "S081": 2,
     "S097": 2,
@@ -201,32 +201,8 @@
     {
       "simulant_id": "S018",
       "name": "EAC-1A",
-      "field": "cohesion",
-      "value": "0.38"
-    },
-    {
-      "simulant_id": "S018",
-      "name": "EAC-1A",
-      "field": "density_g_cm3",
-      "value": 2.9
-    },
-    {
-      "simulant_id": "S018",
-      "name": "EAC-1A",
-      "field": "particle_size_d50",
-      "value": 11.0
-    },
-    {
-      "simulant_id": "S018",
-      "name": "EAC-1A",
       "field": "particle_size_distribution",
       "value": "d50=181"
-    },
-    {
-      "simulant_id": "S018",
-      "name": "EAC-1A",
-      "field": "glass_content_percent",
-      "value": 0.0
     },
     {
       "simulant_id": "S019",

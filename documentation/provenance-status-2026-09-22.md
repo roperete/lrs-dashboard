@@ -4,9 +4,9 @@ Three tests per simulant. Detail per simulant in the CSV beside this file.
 
 | Test | Result |
 |---|---|
-| 1. Named in at least one reference | pass 42, unknown (references unchecked) 113, FAIL 0 |
-| 2. References checked against the document | 218 confirmed to name their simulant, 1 confirmed not to, 156 unchecked, of 375 |
-| 3. Every value traced to a document | scalars 165 of 315 sourced; composition rows 448 of 448 cited; simulants fully sourced 24, partial 13, none 35, nothing to source 83 |
+| 1. Named in at least one reference | pass 43, unknown (references unchecked) 112, FAIL 0 |
+| 2. References checked against the document | 224 confirmed to name their simulant, 1 confirmed not to, 154 unchecked, of 379 |
+| 3. Every value traced to a document | scalars 169 of 315 sourced; composition rows 462 of 462 cited; simulants fully sourced 24, partial 14, none 34, nothing to source 83 |
 
 ## Simulants failing test 1 (no reference confirmed to name them)
 
@@ -23,7 +23,7 @@ Three tests per simulant. Detail per simulant in the CSV beside this file.
 - DNA-1 (S014): particle_size_distribution, particle_morphology, particle_ruggedness
 - DNA-1A (S015): specific_gravity, particle_ruggedness
 - EAC-1 (S017): bulk_density, cohesion
-- EAC-1A (S018): bulk_density, cohesion, density_g_cm3, particle_size_d50, particle_size_distribution, glass_content_percent
+- EAC-1A (S018): bulk_density, particle_size_distribution
 - FJS-1 (S019): bulk_density, cohesion, friction_angle, glass_content_percent
 - GreenSpar (S025): particle_size_d50
 - JSC-1 (S027): bulk_density, specific_gravity

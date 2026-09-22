@@ -1,0 +1,250 @@
+[
+ {
+  "simulant_id": "S018",
+  "reference_id": "RN-S018-1",
+  "outcome": "new reference row created",
+  "title": "Material aspects of sintering of EAC-1A lunar regolith simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S018",
+  "reference_id": "RN-S018-2",
+  "outcome": "new reference row created",
+  "title": "Laser melting manufacturing of large elements of lunar regolith simulant for paving on the Moon",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S018",
+  "reference_id": "RN-S018-3",
+  "outcome": "new reference row created",
+  "title": "Electromagnetic Characterization of EAC-1A and JSC-2A Lunar Regolith Simulants",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S018",
+  "reference_id": "RN-S018-4",
+  "outcome": "new reference row created",
+  "title": "Fungal Biomining of Lunar Regolith simulant EAC-1A",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S018",
+  "reference_id": "R018",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S018",
+  "reference_id": "R098",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S018",
+  "field": "bulk_density",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "cohesion",
+  "reference_id": "R018",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "density_g_cm3",
+  "reference_id": "R018",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "particle_size_d50",
+  "reference_id": "R018",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "particle_size_distribution",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "glass_content_percent",
+  "reference_id": "RN-S018-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "release_date",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The quote exists verbatim (p.7: 'Received: 30 January 2019; Accepted: 19 February 2020;') and the header reads '(2020) 10:5473', but this is the paper's publication, not a simulant release date; calling the value 'supported' overstates it. The paper itself shows earlier availability: p.6 'Currently, EAC-1A is already taken in use for small-scale, low-TRL experiments undertaken by ESA', ref 36 is Nieke et al. 2019 'Manufacturing Dense Thick Films of Lunar Regolith Simulant EAC-1', and Manick et al. 2018 (papers/Manick_etal_2018_LPSC49_abstract_1411\u2026) lists 'EAC-1 Basanite ESA04-A 17DE01, 17DE02, 17DE03' batches (verified) \u2014 for EAC-1, not EAC-1A. No document states when EAC-1A was first released."
+  ]
+ },
+ {
+  "simulant_id": "S018",
+  "field": "availability",
+  "reference_id": "RN-S018-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: refuted by verification",
+  "problems": [
+   "The extractor's 'stated by no opened document' is true only of the 8 group documents; the library does contain support. NEW6 Zou et al. 2024, p.1318: 'The European Astronaut Centre used basanite to produce a low-Ti mare simulant EAC-1A [21].' NEW7 Patzwald et al. 2025, p.203: '\u2026EAC-1 or EAC-1 A \u2026 is also used as a general-use low-Ti mare simulant [81].' Both are secondary statements citing Engelschi\u00f8n 2020, which itself says only 'mare'-type comparisons ('EAC-1A is most similar to the intermediate compositions of the Apollo 17 samples', p.4) and gives TiO2 2.4 wt% (p.4), which is low-Ti under Patzwald's definition (p.201: 'low-Ti (1.5\u20139 wt% TiO2)'). The extractor's point that Apollo 17 mare soils are high-Ti remains valid, so the curator must choose; but 'Low-Ti Mare' can be sourced to NEW6 (exact product name) with NEW7 as second support."
+  ],
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "institution",
+  "reference_id": "R018",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "oxide:SiO2",
+  "reference_id": "R018",
+  "outcome": "new value inserted with source",
+  "value": "43.7",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "oxide:MgO",
+  "reference_id": "R018",
+  "outcome": "new value inserted with source",
+  "value": "11.9",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "oxide:TiO2",
+  "reference_id": "R018",
+  "outcome": "new value inserted with source",
+  "value": "2.4",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "oxide:SiO2",
+  "outcome": "conflict: composition row already present, kept",
+  "needs_review": true
+ },
+ {
+  "simulant_id": "S018",
+  "field": "oxide:TiO2",
+  "outcome": "conflict: composition row already present, kept",
+  "needs_review": true
+ },
+ {
+  "simulant_id": "S018",
+  "field": "oxide:Na2O",
+  "reference_id": "RN-S018-1",
+  "outcome": "new value inserted with source",
+  "value": "2.8",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "oxide:K2O",
+  "reference_id": "RN-S018-1",
+  "outcome": "new value inserted with source",
+  "value": "1.0",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "oxide:MgO",
+  "outcome": "conflict: composition row already present, kept",
+  "needs_review": true
+ },
+ {
+  "simulant_id": "S018",
+  "field": "oxide:Al2O3",
+  "reference_id": "RN-S018-2",
+  "outcome": "new value inserted with source",
+  "value": "12.6",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "oxide:Fe2O3",
+  "reference_id": "RN-S018-2",
+  "outcome": "new value inserted with source",
+  "value": "12",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "oxide:CaO",
+  "reference_id": "RN-S018-2",
+  "outcome": "new value inserted with source",
+  "value": "10.8",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "mineral:Plagioclase",
+  "reference_id": "RN-S018-1",
+  "outcome": "new value inserted with source",
+  "value": "28.3",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "mineral:Diopside/augite",
+  "reference_id": "RN-S018-1",
+  "outcome": "new value inserted with source",
+  "value": "28.4",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "mineral:Forsterite",
+  "reference_id": "RN-S018-1",
+  "outcome": "new value inserted with source",
+  "value": "29.3",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "mineral:Biotite",
+  "reference_id": "RN-S018-1",
+  "outcome": "new value inserted with source",
+  "value": "11.3",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "mineral:Analcime",
+  "reference_id": "RN-S018-1",
+  "outcome": "new value inserted with source",
+  "value": "2.9",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "field": "mineral:Ilmenite",
+  "reference_id": "RN-S018-1",
+  "outcome": "new value inserted with source",
+  "value": "Minor/trace",
+  "needs_review": false
+ }
+]
