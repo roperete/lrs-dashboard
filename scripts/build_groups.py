@@ -28,6 +28,10 @@ DB = ROOT / "lrs.sqlite"
 SOURCES = Path("/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources")
 MAX_SIMULANTS = 6
 MAX_DOCS_PER_SIMULANT = 8
+# The first two runs died on the session limit: an agent opening 30 documents costs far
+# more than one opening 10. Cited references with a local copy come first, then the
+# library documents that name the group's simulants most often, up to this many.
+MAX_DOCS_PER_GROUP = 12
 
 SCALAR_FIELDS = [
     "bulk_density", "cohesion", "friction_angle", "specific_gravity", "density_g_cm3",
@@ -115,11 +119,23 @@ def main() -> None:
         for i in range(0, len(members), MAX_SIMULANTS):
             chunk = members[i:i + MAX_SIMULANTS]
             ids = [s["simulant_id"] for s in chunk]
-            documents = []
+            cited_first = []
+            others = []
             for s in chunk:
+                cited = {r.get("local_path") for r in refs.get(s["simulant_id"], []) if r.get("local_path")}
                 for d in ranked_docs(s):
-                    if d not in documents:
-                        documents.append(d)
+                    target = cited_first if d in cited else others
+                    if d not in cited_first and d not in others:
+                        target.append(d)
+            documents = (cited_first + others)[:MAX_DOCS_PER_GROUP]
+            # what the group carries: the more stored data and references, the sooner it runs
+            priority = sum(
+                len(s.get("scalars") or {}) if isinstance(s.get("scalars"), dict) else 0
+                for s in chunk
+            )
+            priority += sum(len(chem.get(s["simulant_id"], [])) + len(mins.get(s["simulant_id"], [])) for s in chunk)
+            priority += sum(len(refs.get(s["simulant_id"], [])) for s in chunk)
+            priority += sum(1 for s in chunk if s.get("composition_status") == "withheld_unverified") * 10
             group = {
                 "key": f"{key}" + (f"-{i // MAX_SIMULANTS + 1}" if len(members) > MAX_SIMULANTS else ""),
                 "simulant_ids": ids,
@@ -143,8 +159,14 @@ def main() -> None:
                     for s in chunk
                 ],
                 "documents": documents,
+                "documents_available": len(cited_first) + len(others),
+                "priority": priority,
             }
             groups.append(group)
+
+    # highest-value groups first, so a run cut short by the session limit still did the
+    # simulants that carry the most unverified data
+    groups.sort(key=lambda g: -g["priority"])
 
     out = ROOT / "documentation" / f"agent-groups-{date.today().isoformat()}.json"
     out.write_text(json.dumps(groups, indent=1))
