@@ -6,8 +6,12 @@ Usage:
 """
 
 import json
+import sys
 from pathlib import Path
 from collections import Counter
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from export_json import SUPPRESSED_SCALAR_FIELDS  # noqa: E402
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "public" / "data"
 
@@ -20,6 +24,7 @@ _KEYS = {
     "composition.json": "compositions", "chemical_composition.json": "chemical_compositions",
     "references.json": "references", "mineral_groups.json": "mineral_groups",
     "mineral_sourcing.json": "mineral_sourcing", "lunar_reference.json": "lunar_reference",
+    "property_sources.json": "property_sources",
 }
 
 
@@ -28,7 +33,20 @@ def load(name):
     if _BUNDLE is None:
         with open(DATA_DIR / "data.json") as f:
             _BUNDLE = json.load(f)
-    return _BUNDLE[_KEYS[name]]
+    return _BUNDLE.get(_KEYS[name], [])
+
+
+def check_scalar_provenance(simulants, property_sources):
+    """The per-value rule as it reaches the reader: no gated scalar may be non-null in the
+    exported bundle without a property_sources row for (simulant_id, field). Returns one
+    error string per violation."""
+    sourced = {(p["simulant_id"], p["field"]) for p in property_sources}
+    errors = []
+    for s in simulants:
+        for field in SUPPRESSED_SCALAR_FIELDS:
+            if s.get(field) is not None and (s["simulant_id"], field) not in sourced:
+                errors.append(f"Unsourced scalar exported: {s['simulant_id']} {field} = {s[field]!r} (no property_sources row)")
+    return errors
 
 
 def main():
@@ -43,8 +61,10 @@ def main():
     mineral_groups = load("mineral_groups.json")
     mineral_sourcing = load("mineral_sourcing.json")
     lunar_ref = load("lunar_reference.json")
+    property_sources = load("property_sources.json")
 
     sim_ids = {s["simulant_id"] for s in simulants}
+    ref_ids = {r["reference_id"] for r in references}
     errors = []
     warnings = []
 
@@ -118,6 +138,21 @@ def main():
         if val and val not in ("Available", "Unknown", "Production stopped", "Limited Stock"):
             warnings.append(f"Non-standard availability: '{val}' ({count} records)")
 
+    # 11. Per-value provenance: every exported scalar has a source row, and every
+    #     source row and composition citation points at a real simulant and reference
+    errors.extend(check_scalar_provenance(simulants, property_sources))
+    for p in property_sources:
+        if p["simulant_id"] not in sim_ids:
+            errors.append(f"property_sources orphan: {p['simulant_id']} {p['field']}")
+        if p["reference_id"] not in ref_ids:
+            errors.append(f"property_sources cites unknown reference: {p['simulant_id']} {p['field']} -> {p['reference_id']}")
+    for label, rows in (("composition", compositions), ("chemical", chemicals)):
+        for c in rows:
+            rid = c.get("reference_id")
+            if rid is not None and rid not in ref_ids:
+                errors.append(f"{label} row cites unknown reference: {c['composition_id']} -> {rid}")
+    sids_with_sources = {p["simulant_id"] for p in property_sources}
+
     # Report
     print(f"Files loaded:")
     print(f"  simulants: {len(simulants)}")
@@ -129,6 +164,7 @@ def main():
     print(f"  mineral_groups: {len(mineral_groups)}")
     print(f"  mineral_sourcing: {len(mineral_sourcing)}")
     print(f"  lunar_reference: {len(lunar_ref)}")
+    print(f"  property_sources: {len(property_sources)}")
     print()
 
     print(f"Coverage:")
@@ -137,6 +173,7 @@ def main():
     print(f"  With references: {len(sids_with_ref)}/{len(sim_ids)}")
     print(f"  With site/location: {len(sids_with_site)}/{len(sim_ids)}")
     print(f"  With extra data: {len(sids_with_extra)}/{len(sim_ids)}")
+    print(f"  With sourced scalar values: {len(sids_with_sources)}/{len(sim_ids)}")
     print()
 
     print(f"Availability distribution:")

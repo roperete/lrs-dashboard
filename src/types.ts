@@ -57,6 +57,7 @@ export interface Composition {
   component_type: string;
   component_name: string;
   value_pct: number;
+  reference_id?: string | null;  // the document this row was read from (references_.reference_id)
 }
 
 export interface ChemicalComposition {
@@ -65,6 +66,7 @@ export interface ChemicalComposition {
   component_type: string;
   component_name: string;
   value_wt_pct: number;
+  reference_id?: string | null;  // the document this row was read from (references_.reference_id)
 }
 
 export interface Reference {
@@ -77,6 +79,20 @@ export interface Reference {
   year?: number;
   doi?: string;
   url?: string;
+  // Per-value provenance (2026-09-22). The export drops local_path, the verification
+  // copy's location on the maintainer's disk, so it is deliberately absent here.
+  names_simulant?: number | null;  // 1 confirmed to name this exact simulant, 0 checked and absent, null unchecked
+  mention_quote?: string | null;   // the sentence naming the simulant
+  checked_on?: string | null;      // ISO date of the last verification
+}
+
+/** Where a scalar on `simulants` was read from: one row per (simulant, field). */
+export interface PropertySource {
+  simulant_id: string;
+  field: string;            // column name on simulants, e.g. cohesion, ph, bulk_density
+  reference_id: string;
+  location: string | null;  // page, table or figure as the reader found it
+  quote: string | null;     // the line stating the value
 }
 
 export interface MineralGroup {

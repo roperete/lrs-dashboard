@@ -4,16 +4,19 @@ import { FlaskConical } from 'lucide-react';
 import { ToggleButtonGroup } from '../ui/ToggleButtonGroup';
 import { CompositionTable } from './CompositionTable';
 import { CompositionStatusNotice, statusOf } from './CompositionStatus';
-import type { ChemicalComposition, LunarReference, Simulant } from '../../types';
+import { referenceNumbers, referenceShortLabel } from '../../utils/references';
+import type { ChemicalComposition, LunarReference, Simulant, Reference } from '../../types';
 
 interface ChemicalChartProps {
   chemicalCompositions: ChemicalComposition[];
   lunarRef?: LunarReference | null;
   simulantName: string;
   simulant: Simulant;
+  /** This simulant's references, for numbering the documents the rows cite. */
+  references?: Reference[];
 }
 
-export function ChemicalChart({ chemicalCompositions, lunarRef, simulantName, simulant }: ChemicalChartProps) {
+export function ChemicalChart({ chemicalCompositions, lunarRef, simulantName, simulant, references = [] }: ChemicalChartProps) {
   const [displayMode, setDisplayMode] = useState<'chart' | 'table'>('table');
 
   const chemData = useMemo(() =>
@@ -32,13 +35,18 @@ export function ChemicalChart({ chemicalCompositions, lunarRef, simulantName, si
     }),
     [chemData, lunarRef]);
 
+  const refNumbers = useMemo(() => referenceNumbers(references), [references]);
+  const refById = useMemo(() => new Map(references.map(r => [r.reference_id, r] as const)), [references]);
+
   const tableData = useMemo(() =>
     chemData.map(c => ({
       name: c.component_name,
       value: c.value_wt_pct,
       refValue: lunarRef?.chemical_composition?.[c.component_name],
+      refNumber: c.reference_id ? refNumbers.get(c.reference_id) : undefined,
+      refTooltip: c.reference_id ? referenceShortLabel(refById.get(c.reference_id)) : undefined,
     })),
-    [chemData, lunarRef]);
+    [chemData, lunarRef, refNumbers, refById]);
 
   return (
     <div>

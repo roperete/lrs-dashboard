@@ -4,7 +4,8 @@ import { Activity } from 'lucide-react';
 import { ToggleButtonGroup } from '../ui/ToggleButtonGroup';
 import { CompositionTable } from './CompositionTable';
 import { CompositionStatusNotice, statusOf } from './CompositionStatus';
-import type { Composition, MineralGroup, LunarReference, Simulant } from '../../types';
+import { referenceNumbers, referenceShortLabel } from '../../utils/references';
+import type { Composition, MineralGroup, LunarReference, Simulant, Reference } from '../../types';
 
 interface MineralChartProps {
   compositions: Composition[];
@@ -12,9 +13,11 @@ interface MineralChartProps {
   lunarRef?: LunarReference | null;
   simulantName: string;
   simulant: Simulant;
+  /** This simulant's references, for numbering the documents the rows cite. */
+  references?: Reference[];
 }
 
-export function MineralChart({ compositions, mineralGroups, lunarRef, simulantName, simulant }: MineralChartProps) {
+export function MineralChart({ compositions, mineralGroups, lunarRef, simulantName, simulant, references = [] }: MineralChartProps) {
   // Grouped (NASA mineral family) rows are derived data and exist only where a source
   // states them; since the 2026-09 audit most simulants have none. Open on whichever
   // view actually has data, and fall back to the detailed list when groups are absent.
@@ -53,20 +56,26 @@ export function MineralChart({ compositions, mineralGroups, lunarRef, simulantNa
     });
   }, [view, detailedData, groupData, lunarRef]);
 
+  const refNumbers = useMemo(() => referenceNumbers(references), [references]);
+  const refById = useMemo(() => new Map(references.map(r => [r.reference_id, r] as const)), [references]);
+
   const tableData = useMemo(() => {
     if (view === 'detailed') {
       return detailedData.map(d => ({
         name: d.component_name,
         value: d.value_pct,
         refValue: lunarRef?.mineral_composition?.[d.component_name],
+        refNumber: d.reference_id ? refNumbers.get(d.reference_id) : undefined,
+        refTooltip: d.reference_id ? referenceShortLabel(refById.get(d.reference_id)) : undefined,
       }));
     }
+    // Grouped rows are derived from the detailed list and carry no citation of their own.
     return groupData.map(g => ({
       name: g.group_name,
       value: g.value_pct,
       refValue: lunarRef?.mineral_composition?.[g.group_name],
     }));
-  }, [view, detailedData, groupData, lunarRef]);
+  }, [view, detailedData, groupData, lunarRef, refNumbers, refById]);
 
   const hasData = view === 'detailed' ? detailedData.length > 0 : groupData.length > 0;
 

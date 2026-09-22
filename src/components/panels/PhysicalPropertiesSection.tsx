@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tooltip } from '../ui/Tooltip';
-import type { PhysicalProperties } from '../../types';
+import { RefSup } from '../ui/RefSup';
+import type { PhysicalProperties, PropertySource } from '../../types';
 
 const PROP_CONFIG: { key: keyof PhysicalProperties; label: string; unit: string; desc: string }[] = [
   { key: 'bulk_density', label: 'Bulk Density', unit: 'g/cm³', desc: 'Mass per unit volume including pore spaces between grains' },
@@ -25,9 +26,15 @@ const PROP_CONFIG: { key: keyof PhysicalProperties; label: string; unit: string;
 
 interface PhysicalPropertiesSectionProps {
   properties: PhysicalProperties;
+  /** property_sources rows of this simulant keyed by field. The export nulls any scalar
+   *  without a row, so normally every value shown has one; grain_size_mm, which comes
+   *  from the Gasteiner database rather than the simulants table, never does. */
+  sources?: Map<string, PropertySource>;
+  /** Number of a reference within this simulant's list; see utils/references.ts. */
+  refNumber?: (referenceId: string) => number | undefined;
 }
 
-export function PhysicalPropertiesSection({ properties }: PhysicalPropertiesSectionProps) {
+export function PhysicalPropertiesSection({ properties, sources, refNumber }: PhysicalPropertiesSectionProps) {
   const entries = PROP_CONFIG.filter(({ key }) => properties[key] != null);
 
   if (entries.length === 0) return null;
@@ -36,16 +43,21 @@ export function PhysicalPropertiesSection({ properties }: PhysicalPropertiesSect
     <div className="space-y-3">
       <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Physical Properties</h3>
       <div className="grid grid-cols-2 gap-2">
-        {entries.map(({ key, label, unit, desc }) => (
-          <div key={key} className="bg-slate-800/50 p-2.5 rounded-lg border border-slate-700/50">
-            <Tooltip text={desc} align="left">
-              <p className="text-[10px] text-slate-500 uppercase font-bold mb-0.5 border-b border-dotted border-slate-600">{label}</p>
-            </Tooltip>
-            <p className="text-sm font-medium text-cyan-400">
-              {String(properties[key])}{unit && <span className="text-slate-500 ml-1">{unit}</span>}
-            </p>
-          </div>
-        ))}
+        {entries.map(({ key, label, unit, desc }) => {
+          const source = sources?.get(key);
+          const n = source ? refNumber?.(source.reference_id) : undefined;
+          return (
+            <div key={key} className="bg-slate-800/50 p-2.5 rounded-lg border border-slate-700/50">
+              <Tooltip text={desc} align="left">
+                <p className="text-[10px] text-slate-500 uppercase font-bold mb-0.5 border-b border-dotted border-slate-600">{label}</p>
+              </Tooltip>
+              <p className="text-sm font-medium text-cyan-400">
+                {String(properties[key])}{unit && <span className="text-slate-500 ml-1">{unit}</span>}
+                {source && n != null && <RefSup n={n} location={source.location} quote={source.quote} align="left" />}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

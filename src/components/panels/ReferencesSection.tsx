@@ -1,5 +1,7 @@
 import React from 'react';
-import { BookOpen, ExternalLink, Search, Quote, Sparkles } from 'lucide-react';
+import { BookOpen, ExternalLink, Search, Quote, Sparkles, CircleCheck, TriangleAlert } from 'lucide-react';
+import { Tooltip } from '../ui/Tooltip';
+import { orderReferences } from '../../utils/references';
 import type { Reference } from '../../types';
 
 interface ReferencesSectionProps {
@@ -22,7 +24,7 @@ function extractDoi(text: string): string | null {
   return doiMatch ? `https://doi.org/${doiMatch[0]}` : null;
 }
 
-/** Extract likely article title — text before the year or first ~100 chars */
+/** Extract likely article title: text before the year or first ~100 chars */
 function extractTitle(text: string): string {
   // Try to grab text before a (YYYY) or , YYYY pattern
   const beforeYear = text.match(/^(.+?)(?:\(?\d{4}\)?)/);
@@ -32,7 +34,63 @@ function extractTitle(text: string): string {
   return text.slice(0, 100).replace(/[,.\s]+$/, '').trim();
 }
 
-function ReferenceCard({ reference, index }: { reference: Reference; index: number }) {
+/** One badge per reference type (schema.sql lists the known ones). A reference may
+ *  carry several, comma-separated, such as "composition,geotechnical". */
+const TYPE_BADGES: Record<string, { label: string; className: string }> = {
+  datasheet: { label: 'data sheet', className: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' },
+  composition: { label: 'composition source', className: 'bg-amber-500/15 text-amber-300 border-amber-500/30' },
+  geotechnical: { label: 'geotechnical', className: 'bg-cyan-500/15 text-cyan-300 border-cyan-500/30' },
+  usage: { label: 'usage study', className: 'bg-blue-500/15 text-blue-300 border-blue-500/30' },
+  review: { label: 'review', className: 'bg-purple-500/15 text-purple-300 border-purple-500/30' },
+  report: { label: 'report', className: 'bg-slate-500/20 text-slate-300 border-slate-500/30' },
+  general: { label: 'general', className: 'bg-slate-700/50 text-slate-400 border-slate-600/40' },
+};
+
+function typesOf(reference: Reference): string[] {
+  const types = (reference.reference_type || 'general')
+    .split(',')
+    .map(t => t.trim().toLowerCase())
+    .filter(Boolean);
+  return types.length > 0 ? types : ['general'];
+}
+
+function badgeFor(type: string): { label: string; className: string } {
+  return TYPE_BADGES[type] ?? { label: type, className: TYPE_BADGES.general.className };
+}
+
+/** Whether a reader confirmed the document names this exact simulant. An unchecked
+ *  reference (names_simulant null) shows no mark either way. */
+function NamesMark({ reference }: { reference: Reference }) {
+  if (reference.names_simulant === 1) {
+    return (
+      <Tooltip
+        text={reference.mention_quote ? `"${reference.mention_quote}"` : 'A reader confirmed this document names the simulant'}
+        align="left"
+      >
+        <span className="inline-flex items-center gap-1 text-[10px] text-emerald-400">
+          <CircleCheck size={11} aria-hidden />
+          names this simulant
+        </span>
+      </Tooltip>
+    );
+  }
+  if (reference.names_simulant === 0) {
+    return (
+      <Tooltip
+        text="A reader checked this document and did not find this simulant named in it. It stays listed for the owner's decision."
+        align="left"
+      >
+        <span className="inline-flex items-center gap-1 text-[10px] text-amber-400">
+          <TriangleAlert size={11} aria-hidden />
+          does not name this simulant
+        </span>
+      </Tooltip>
+    );
+  }
+  return null;
+}
+
+function ReferenceCard({ reference, n }: { reference: Reference; n: number }) {
   // Normalize: new-schema refs have title/authors/year instead of reference_text
   const refText = reference.reference_text
     || [reference.authors, `(${reference.year})`, `"${reference.title}"`, reference.doi ? `https://doi.org/${reference.doi}` : ''].filter(Boolean).join(', ');
@@ -42,12 +100,15 @@ function ReferenceCard({ reference, index }: { reference: Reference; index: numb
 
   return (
     <div className="group flex gap-3 p-3 bg-slate-800/20 hover:bg-slate-800/40 rounded-lg border border-slate-700/20 hover:border-slate-700/40 transition-all">
-      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-slate-700/50 flex items-center justify-center text-[10px] font-bold text-slate-500 mt-0.5">
-        {index + 1}
+      <span
+        className="flex-shrink-0 w-6 h-6 rounded-full bg-slate-700/50 flex items-center justify-center text-[10px] font-bold text-amber-400/90 mt-0.5"
+        title={`Reference ${n}: cited as [${n}] on values above`}
+      >
+        {n}
       </span>
       <div className="flex-1 min-w-0">
         <p className="text-sm text-slate-300 leading-relaxed">{cleanText}</p>
-        <div className="flex items-center gap-3 mt-2">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2">
           {linkUrl && (
             <a href={linkUrl} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-xs text-emerald-400 hover:text-emerald-300 transition-colors">
@@ -67,9 +128,18 @@ function ReferenceCard({ reference, index }: { reference: Reference; index: numb
             <Quote size={11} />
             Cited by
           </a>
-          <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-700/50 text-slate-500 uppercase">
-            {reference.reference_type || 'general'}
-          </span>
+          {typesOf(reference).map(type => {
+            const badge = badgeFor(type);
+            return (
+              <span key={type} className={`text-[10px] px-1.5 py-0.5 rounded border uppercase tracking-wide ${badge.className}`}>
+                {badge.label}
+              </span>
+            );
+          })}
+          <NamesMark reference={reference} />
+          {reference.checked_on && (
+            <span className="text-[10px] text-slate-600">checked {reference.checked_on}</span>
+          )}
         </div>
       </div>
     </div>
@@ -79,8 +149,10 @@ function ReferenceCard({ reference, index }: { reference: Reference; index: numb
 export function ReferencesSection({ references, simulantName }: ReferencesSectionProps) {
   if (references.length === 0 && !simulantName) return null;
 
-  const compSources = references.filter(r => r.reference_type === 'composition');
-  const usageStudies = references.filter(r => r.reference_type === 'usage' || (!r.reference_type && r.reference_type !== 'composition'));
+  // Every reference is listed, whatever its type, numbered in reference_id order: the
+  // same order utils/references.ts uses for the superscripts on values above.
+  const ordered = orderReferences(references);
+  const named = references.filter(r => r.names_simulant === 1).length;
 
   return (
     <div>
@@ -90,21 +162,18 @@ export function ReferencesSection({ references, simulantName }: ReferencesSectio
         <span className="text-xs text-slate-500 ml-auto">{references.length} source{references.length !== 1 ? 's' : ''}</span>
       </div>
 
-      {compSources.length > 0 && (
-        <div className="mb-4">
-          <p className="text-[10px] text-amber-400/60 uppercase font-bold tracking-wider mb-2">Composition Sources</p>
-          <div className="space-y-2">
-            {compSources.map((r, i) => <ReferenceCard key={r.reference_id} reference={r} index={i} />)}
-          </div>
-        </div>
-      )}
-
-      {usageStudies.length > 0 && (
+      {ordered.length > 0 && (
         <div>
-          <p className="text-[10px] text-blue-400/60 uppercase font-bold tracking-wider mb-2">Usage Studies</p>
-          <div className="space-y-2">
-            {usageStudies.map((r, i) => <ReferenceCard key={r.reference_id} reference={r} index={i} />)}
-          </div>
+          <p className="text-[10px] text-slate-500 mb-2">
+            Numbers match the superscripts on values above. {named} of {ordered.length} confirmed to name {simulantName || 'this simulant'}.
+          </p>
+          <ol className="space-y-2 list-none p-0 m-0">
+            {ordered.map((r, i) => (
+              <li key={r.reference_id}>
+                <ReferenceCard reference={r} n={i + 1} />
+              </li>
+            ))}
+          </ol>
         </div>
       )}
 
