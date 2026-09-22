@@ -54,6 +54,16 @@ def family_key(name: str) -> str:
 
 
 def main() -> None:
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--per-simulant", action="store_true",
+                    help="one unit per simulant (owner preference 2026-09-22) instead of family/institution groups")
+    ap.add_argument("--out", type=Path, default=None)
+    cli = ap.parse_args()
+    global MAX_SIMULANTS
+    if cli.per_simulant:
+        MAX_SIMULANTS = 1
+
     index = latest_index()
     docs_for = {name: docs for name, docs in index["simulants"].items()}
 
@@ -97,8 +107,8 @@ def main() -> None:
     #    remaining singletons by country so that agents are not spawned one per simulant
     buckets: dict[str, list[dict]] = defaultdict(list)
     for s in sims:
-        buckets[family_key(s["name"])].append(s)
-    small = {k: v for k, v in buckets.items() if len(v) <= 2}
+        buckets[(s["name"] if cli.per_simulant else family_key(s["name"]))].append(s)
+    small = {} if cli.per_simulant else {k: v for k, v in buckets.items() if len(v) <= 2}
     for k in small:
         del buckets[k]
     by_inst: dict[str, list[dict]] = defaultdict(list)
@@ -168,7 +178,8 @@ def main() -> None:
     # simulants that carry the most unverified data
     groups.sort(key=lambda g: -g["priority"])
 
-    out = ROOT / "documentation" / f"agent-groups-{date.today().isoformat()}.json"
+    default_name = f"agent-{'units' if cli.per_simulant else 'groups'}-{date.today().isoformat()}.json"
+    out = cli.out or (ROOT / "documentation" / default_name)
     out.write_text(json.dumps(groups, indent=1))
     n_docs = sum(len(g["documents"]) for g in groups)
     print(f"{len(groups)} groups covering {sum(len(g['simulant_ids']) for g in groups)} simulants; {n_docs} document slots")
