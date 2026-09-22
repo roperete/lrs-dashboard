@@ -31,6 +31,15 @@ jobs:
       - run: npm run build
       - run: mkdir -p _site && cp -r dist/* _site/
 
+      # MAINTENANCE MODE — the public root serves main's static maintenance page.
+      # This step exists on BOTH main and staging on purpose: Actions runs the workflow
+      # file of the branch that was pushed, and from 2026-06-25 to 2026-09-22 pushes to
+      # staging rebuilt the root WITHOUT this step, putting the unaudited app back online
+      # while everyone believed the site was down. maintenance.html comes from the
+      # `ref: main` checkout above. To bring the live site back, remove this step from
+      # both branches in the same change.
+      - run: test -f maintenance.html && cp maintenance.html _site/index.html && cp maintenance.html _site/404.html
+
       # Build staging
       - uses: actions/checkout@v4
         with:
