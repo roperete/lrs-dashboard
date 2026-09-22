@@ -4,13 +4,20 @@
   "simulant_id": "S002",
   "simulant": "ALRS-1",
   "type": "composition",
-  "doi": "10.1061/(ASCE",
-  "url": "https://doi.org/10.1061/(ASCE",
+  "doi": "10.1061/(ASCE)AS.1943-5525.0000428",
+  "url": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0000428",
   "stored": "Bonanno, A., & Bernold, L. (2015). Exploratory review of sintered lunar soil based on the results of the thermal analysis of a lunar soil simulant. Journal of A",
   "crossref": {
-   "error": "HTTP 404"
+   "title": "Exploratory Review of Sintered Lunar Soil Based on the Results of the Thermal Analysis of a Lunar Soil Simulant",
+   "year": 2015,
+   "container": "Journal of Aerospace Engineering",
+   "authors": [
+    "Bonanno",
+    "Bernold"
+   ]
   },
-  "doi_status": "unresolved: HTTP 404"
+  "title_similarity": 1.0,
+  "doi_status": "matches"
  },
  {
   "reference_id": "R002",
@@ -1250,13 +1257,21 @@
   "simulant_id": "S032",
   "simulant": "KLS-1",
   "type": "composition",
-  "doi": "10.1061/(ASCE",
-  "url": "https://doi.org/10.1061/(ASCE",
-  "stored": "Ryu Byung-Hyun, Wang Cheng-Can, Development of a Korean Lunar Simulant(KLS-1) and its Possible Further Recommendations, 2018 https://doi.org/10.1061/(ASCE)AS.19",
+  "doi": "10.1061/(ASCE)AS.1943-5525.0000798",
+  "url": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0000798",
+  "stored": "Development and Geotechnical Engineering Properties of KLS-1 Lunar Simulant",
   "crossref": {
-   "error": "HTTP 404"
+   "title": "Development and Geotechnical Engineering Properties of KLS-1 Lunar Simulant",
+   "year": 2018,
+   "container": "Journal of Aerospace Engineering",
+   "authors": [
+    "Ryu",
+    "Wang",
+    "Chang"
+   ]
   },
-  "doi_status": "unresolved: HTTP 404"
+  "title_similarity": 1.0,
+  "doi_status": "matches"
  },
  {
   "reference_id": "R082",
@@ -1273,13 +1288,21 @@
   "simulant_id": "S082",
   "simulant": "GRC-3",
   "type": "composition,geotechnical",
-  "doi": "10.1061/(ASCE",
-  "url": "https://doi.org/10.1061/(ASCE",
+  "doi": "10.1061/(ASCE)AS.1943-5525.0000162",
+  "url": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0000162",
   "stored": "He Chunmei, Zeng Xiangwu, Geotechnical Properties of GRC-3 Lunar Simulant, 2013 https://doi.org/10.1061/(ASCE)AS.1943-5525.0000162",
   "crossref": {
-   "error": "HTTP 404"
+   "title": "Geotechnical Properties of GRC-3 Lunar Simulant",
+   "year": 2013,
+   "container": "Journal of Aerospace Engineering",
+   "authors": [
+    "He",
+    "Zeng",
+    "Wilkinson"
+   ]
   },
-  "doi_status": "unresolved: HTTP 404"
+  "title_similarity": 1.0,
+  "doi_status": "matches"
  },
  {
   "reference_id": "R084",
@@ -1340,13 +1363,20 @@
   "simulant_id": "S028",
   "simulant": "JSC-1A",
   "type": "composition",
-  "doi": "10.1061/(ASCE",
-  "url": "https://doi.org/10.1061/(ASCE",
+  "doi": "10.1061/(ASCE)GT.1943-5606.0000068",
+  "url": "https://doi.org/10.1061/(ASCE)GT.1943-5606.0000068",
   "stored": "K.A. Alshibli, A. Hasan, Strength Properties of JSC-1A Lunar Regolith Simulant, 2009 https://doi.org/10.1061/(ASCE)GT.1943-5606.0000068",
   "crossref": {
-   "error": "HTTP 404"
+   "title": "Strength Properties of JSC-1A Lunar Regolith Simulant",
+   "year": 2009,
+   "container": "Journal of Geotechnical and Geoenvironmental Engineering",
+   "authors": [
+    "Alshibli",
+    "Hasan"
+   ]
   },
-  "doi_status": "unresolved: HTTP 404"
+  "title_similarity": 1.0,
+  "doi_status": "matches"
  },
  {
   "reference_id": "R088",
@@ -1423,13 +1453,21 @@
   "simulant_id": "S045",
   "simulant": "NAO-1",
   "type": "composition",
-  "doi": "10.1061/(ASCE",
-  "url": "https://doi.org/10.1061/(ASCE",
+  "doi": "10.1061/(ASCE)0893-1321(2009)22:1(53)",
+  "url": "https://doi.org/10.1061/(ASCE)0893-1321(2009)22:1(53)",
   "stored": "Yongquan Li, Jianzhong Liu, NAO-1: Lunar Highland Soil Simulant Developed in China, 2009 https://doi.org/10.1061/(ASCE)0893-1321(2009)22:1(53)",
   "crossref": {
-   "error": "HTTP 404"
+   "title": "NAO-1: Lunar Highland Soil Simulant Developed in China",
+   "year": 2009,
+   "container": "Journal of Aerospace Engineering",
+   "authors": [
+    "Li",
+    "Liu",
+    "Yue"
+   ]
   },
-  "doi_status": "unresolved: HTTP 404"
+  "title_similarity": 1.0,
+  "doi_status": "matches"
  },
  {
   "reference_id": "R096",
@@ -1546,13 +1584,20 @@
   "simulant_id": "S015",
   "simulant": "DNA-1A",
   "type": "composition",
-  "doi": "10.1061/(ASCE",
-  "url": "https://doi.org/10.1061/(ASCE",
+  "doi": "10.1061/(ASCE)AS.1943-5525.0000983",
+  "url": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0000983",
   "stored": "Marzulli, V., & Cafaro, F. (2019). Geotechnical properties of uncompacted DNA-1A lunar simulant. Journal of Aerospace Engineering, 32(2). https://doi.org/10.106",
   "crossref": {
-   "error": "HTTP 404"
+   "title": "Geotechnical Properties of Uncompacted DNA-1A Lunar Simulant",
+   "year": 2019,
+   "container": "Journal of Aerospace Engineering",
+   "authors": [
+    "Marzulli",
+    "Cafaro"
+   ]
   },
-  "doi_status": "unresolved: HTTP 404"
+  "title_similarity": 1.0,
+  "doi_status": "matches"
  },
  {
   "reference_id": "R102",
@@ -1735,9 +1780,9 @@
   "simulant": "FJS-1g",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R111",
@@ -1745,9 +1790,9 @@
   "simulant": "KIGAM-L1",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R112",
@@ -1755,9 +1800,9 @@
   "simulant": "NU-LHT-1D",
   "type": "general",
   "doi": "",
-  "url": "https://www.lpi.usra.edu/meetings/leagilewg2010/presentations/stoeser.pdf",
-  "stored": "Status of Lunar Regolith Simulants",
-  "url_status": "HTTP 404"
+  "url": "https://www.lpi.usra.edu/leag/reports/SIM_SATReport2010.pdf",
+  "stored": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (Report of the LEAG Simulant Working Group, 2010)",
+  "url_status": "200"
  },
  {
   "reference_id": "R113",
@@ -1765,9 +1810,9 @@
   "simulant": "UW-1H",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R114",
@@ -1775,9 +1820,9 @@
   "simulant": "UW-1M",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R115",
@@ -2539,9 +2584,9 @@
   "simulant": "OUSR-1",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R164",
@@ -2549,9 +2594,9 @@
   "simulant": "SR-2",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R165",
@@ -2559,9 +2604,9 @@
   "simulant": "OUEB-1",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R166",
@@ -2569,9 +2614,9 @@
   "simulant": "EB-2",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R167",
@@ -2579,9 +2624,9 @@
   "simulant": "OUHR-1",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R168",
@@ -2589,9 +2634,9 @@
   "simulant": "HR-2",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R169",
@@ -2599,9 +2644,9 @@
   "simulant": "ES-1",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R170",
@@ -2609,9 +2654,9 @@
   "simulant": "ES-2",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R171",
@@ -2619,9 +2664,9 @@
   "simulant": "ES-3",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R172",
@@ -2629,9 +2674,9 @@
   "simulant": "ES-4",
   "type": "report",
   "doi": "",
-  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
   "stored": "In-Situ Resource Utilization Gap Assessment Report",
-  "url_status": "HTTP 404"
+  "url_status": "200"
  },
  {
   "reference_id": "R173",

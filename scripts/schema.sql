@@ -75,7 +75,8 @@ CREATE TABLE IF NOT EXISTS chemical_compositions (
   simulant_id    TEXT REFERENCES simulants(simulant_id),
   component_type TEXT,
   component_name TEXT,
-  value_wt_pct   REAL
+  value_wt_pct   REAL,
+  reference_id   TEXT REFERENCES references_(reference_id)  -- the document this row was read from
 );
 
 CREATE TABLE IF NOT EXISTS mineral_compositions (
@@ -83,7 +84,19 @@ CREATE TABLE IF NOT EXISTS mineral_compositions (
   simulant_id    TEXT REFERENCES simulants(simulant_id),
   component_type TEXT,
   component_name TEXT,
-  value_pct      REAL
+  value_pct      REAL,
+  reference_id   TEXT REFERENCES references_(reference_id)  -- the document this row was read from
+);
+
+-- Provenance of scalar values on simulants: one row per (simulant, field).
+-- A scalar with no row here is unsourced and is not exported for display.
+CREATE TABLE IF NOT EXISTS property_sources (
+  simulant_id   TEXT NOT NULL REFERENCES simulants(simulant_id),
+  field         TEXT NOT NULL,   -- column name on simulants, e.g. cohesion, ph, bulk_density
+  reference_id  TEXT NOT NULL REFERENCES references_(reference_id),
+  location      TEXT,            -- page, table or figure as the reader found it
+  quote         TEXT,            -- the line stating the value
+  PRIMARY KEY (simulant_id, field)
 );
 
 CREATE TABLE IF NOT EXISTS mineral_groups (
@@ -97,12 +110,17 @@ CREATE TABLE IF NOT EXISTS references_ (
   reference_id   TEXT PRIMARY KEY,
   simulant_id    TEXT REFERENCES simulants(simulant_id),
   reference_text TEXT,
-  reference_type TEXT,
+  reference_type TEXT,           -- datasheet | composition | geotechnical | usage | review | report | general
   title          TEXT,
   authors        TEXT,
   year           INTEGER,
   doi            TEXT,
-  url            TEXT
+  url            TEXT,
+  -- Per-value provenance (2026-09-22): the reference list is the registry of documents
+  names_simulant INTEGER,        -- 1 confirmed to name this exact simulant, 0 checked and absent, NULL unchecked
+  mention_quote  TEXT,           -- the sentence naming the simulant
+  local_path     TEXT,           -- copy under DIRT/Sources used for verification; never displayed
+  checked_on     TEXT            -- ISO date of last verification
 );
 
 CREATE TABLE IF NOT EXISTS purchase_info (

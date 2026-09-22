@@ -1,0 +1,44 @@
+[
+ {
+  "reference_id": "R001",
+  "field": "url",
+  "old": "https://doi.org/10.1061/(ASCE",
+  "new": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0000428",
+  "outcome": "doi.org link re-derived from the repaired DOI"
+ },
+ {
+  "reference_id": "R081",
+  "field": "url",
+  "old": "https://doi.org/10.1061/(ASCE",
+  "new": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0000798",
+  "outcome": "doi.org link re-derived from the repaired DOI"
+ },
+ {
+  "reference_id": "R083",
+  "field": "url",
+  "old": "https://doi.org/10.1061/(ASCE",
+  "new": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0000162",
+  "outcome": "doi.org link re-derived from the repaired DOI"
+ },
+ {
+  "reference_id": "R087",
+  "field": "url",
+  "old": "https://doi.org/10.1061/(ASCE",
+  "new": "https://doi.org/10.1061/(ASCE)GT.1943-5606.0000068",
+  "outcome": "doi.org link re-derived from the repaired DOI"
+ },
+ {
+  "reference_id": "R095",
+  "field": "url",
+  "old": "https://doi.org/10.1061/(ASCE",
+  "new": "https://doi.org/10.1061/(ASCE)0893-1321(2009)22:1(53)",
+  "outcome": "doi.org link re-derived from the repaired DOI"
+ },
+ {
+  "reference_id": "R101",
+  "field": "url",
+  "old": "https://doi.org/10.1061/(ASCE",
+  "new": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0000983",
+  "outcome": "doi.org link re-derived from the repaired DOI"
+ }
+]
