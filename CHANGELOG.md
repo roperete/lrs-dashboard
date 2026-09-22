@@ -3,6 +3,40 @@
 The version shown in the sidebar is set by hand in `src/components/sidebar/Sidebar.tsx`.
 Data changes are logged per field under `documentation/`.
 
+## v2.9.5 — 2026-09-22 (staging)
+
+Per-value provenance. Every value on the page now cites the document it was read from,
+and a value with no such document is not shown. See
+[documentation/data-policy.md](documentation/data-policy.md) and the status report
+`documentation/provenance-status-<date>.md`.
+
+**Data**
+- New `property_sources` table: one row per (simulant, field) giving the reference,
+  the page or table, and the line that states the value. `reference_id` on every
+  composition row. References carry `names_simulant`, `mention_quote`, `checked_on`.
+- The export nulls any physical property without a source row: 181 values across 54
+  simulants are hidden (kept in the database) until a reader locates them in a document.
+  The 118 values on the 18 sheet-verified simulants are cited to their data sheets.
+- Manufacturer sheets are reference rows (`DS-<id>`), so a sheet-stated value is numbered
+  like any other citation.
+- Reference repairs: 88 of 89 DOIs resolve (R001, R081 corrected; R112 retitled).
+- TUBS-H (S068) retired: not a distinct product; the cited paper describes TUBS-M and
+  TUBS-T. Rows archived under `documentation/retired/`; see `documentation/retired-simulants.md`.
+
+**Interface**
+- References are numbered per simulant; a `[n]` superscript after every physical value,
+  every composition row, and every scalar in the main table, with the location and the
+  quoted line on hover. References confirmed to name the simulant are marked; the panel
+  header says in how many documents on file the simulant is named.
+- `scripts/render_smoke.tsx` (`npm run check:render`) renders the real components with the
+  real bundle and fails if any displayed value lacks its mark.
+
+**Verification**
+- Agent pipeline: one reader per simulant opens every cited document and quotes what
+  supports each value; an independent checker tries to refute each claim; only agreed
+  claims are written (`scripts/apply_provenance.py`). Runs are one simulant at a time so a
+  session limit loses at most the unit in progress.
+
 ## v2.9.4 — 2026-09-22 (staging)
 
 The composition audit. See [documentation/data-policy.md](documentation/data-policy.md)

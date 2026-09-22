@@ -113,6 +113,15 @@ Every change reconcile makes is written to `documentation/composition-audit-log.
 with the reason, so any removal can be explained to a user who asks where a number
 went.
 
+## Retired records
+
+A simulant that turns out not to exist as a product under its recorded name is retired,
+not corrected: `scripts/retire_simulant.py <id> --reason ... [--alias-of ...] --write`
+deletes it from every table so it leaves the export, keeps the deleted rows in full under
+`documentation/retired/`, and appends the decision to `documentation/retired-simulants.md`.
+The id is never reused. Retirement is the owner's decision; the pipeline only surfaces the
+evidence (no document naming the product, or a citation that describes other products).
+
 ## If you are adding data
 
 Attach the source before the number. A row whose provenance you cannot state in one

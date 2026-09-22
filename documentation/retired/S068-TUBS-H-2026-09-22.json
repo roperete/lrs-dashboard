@@ -1,0 +1,104 @@
+{
+ "simulant_id": "S068",
+ "name": "TUBS-H",
+ "retired_on": "2026-09-22",
+ "reason": "Not a distinct product. The only document cited for it (Linke et al. 2020, doi 10.1016/j.pss.2019.104747) describes TUBS-M and TUBS-T and names no TUBS-H, and the institution recorded (ESA) is not the producer of the TUBS family (TU Braunschweig). Retired at the owner's decision.",
+ "alias_of": [
+  "S069",
+  "S070"
+ ],
+ "rows": {
+  "purchase_info": [
+   {
+    "simulant_id": "S068",
+    "vendor": "ESA / TU Braunschweig",
+    "url": null,
+    "price_note": "Produced by ESA; available via ESA research partnership."
+   }
+  ],
+  "references_": [
+   {
+    "reference_id": "R053",
+    "simulant_id": "S068",
+    "reference_text": "Linke, S., Windisch, L., Kueter, N., Wanvik, J. E., Voss, A., Stoll, E., Schilde, C., & Kwade, A. (2020). TUBS-M and TUBS-T based modular regolith simulant system for the support of lunar ISRU activities. Planetary and Space Science, 180, 104747. https://doi.org/10.1016/j.pss.2019.104747",
+    "reference_type": "usage",
+    "title": null,
+    "authors": null,
+    "year": null,
+    "doi": "10.1016/j.pss.2019.104747",
+    "url": "https://doi.org/10.1016/j.pss.2019.104747",
+    "names_simulant": null,
+    "mention_quote": null,
+    "local_path": null,
+    "checked_on": null
+   }
+  ],
+  "simulant_extra": [
+   {
+    "simulant_id": "S068",
+    "name": "TUBS-H",
+    "classification": null,
+    "application": "General",
+    "replica_of": null,
+    "feedstock": null,
+    "petrographic_class": null,
+    "grain_size_mm": null,
+    "specific_gravity": null,
+    "publicly_available_composition": 0,
+    "reference": "Stefan Linke, Lisa Windisch, Nico Kueter, Jan Egil Wanvik, Anna Voss, Enrico Stoll, Carsten Schilde, Arno Kwade,\nTUBS-M and TUBS-T based modular Regolith Simulant System for the support of lunar ISRU activities,\nPlanetary and Space Science,\nVolume 180,\n2020,\n104747,\nISSN 0032-0633,\nhttps://doi.org/10.1016/j.pss.2019.104747."
+   }
+  ],
+  "sites": [
+   {
+    "site_id": "X068",
+    "simulant_id": "S068",
+    "site_name": "European Astronaut Centre, Cologne",
+    "site_type": "Lab",
+    "country_code": "Germany",
+    "lat": 50.8555,
+    "lon": 7.1215
+   }
+  ],
+  "simulants": [
+   {
+    "simulant_id": "S068",
+    "name": "TUBS-H",
+    "type": "High & Low Ti-mare",
+    "country_code": "Germany",
+    "institution": "ESA",
+    "availability": "Available (Research)",
+    "release_date": null,
+    "tons_produced_mt": null,
+    "notes": "Produced using a flexible preparation method where basalt is supplemented with minerals or sintered glass to achieve specific objectives",
+    "specific_gravity": null,
+    "lunar_sample_reference": null,
+    "bulk_density": null,
+    "cohesion": null,
+    "friction_angle": null,
+    "density_g_cm3": null,
+    "particle_size_d50": null,
+    "particle_size_distribution": null,
+    "particle_morphology": null,
+    "particle_ruggedness": null,
+    "glass_content_percent": null,
+    "nasa_fom_score": null,
+    "ti_content_percent": null,
+    "datasheet_url": null,
+    "composition_status": "not_extracted",
+    "composition_source_title": null,
+    "composition_source_url": null,
+    "composition_source_kind": null,
+    "composition_needs_review": 0,
+    "ph": null,
+    "angle_of_repose": null,
+    "particle_size_mean_um": null,
+    "bulk_density_range": null,
+    "magnetic_susceptibility": null,
+    "product_grade": null,
+    "datasheet_document_id": null,
+    "datasheet_date": null,
+    "datasheet_notes": null
+   }
+  ]
+ }
+}
