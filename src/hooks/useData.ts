@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import type {
   Simulant, Site, Composition, ChemicalComposition, Reference,
-  MineralGroup, SimulantExtra, LunarReference, MineralSourcing, PurchaseInfo
+  MineralGroup, SimulantExtra, LunarReference, MineralSourcing, PurchaseInfo, PropertySource
 } from '../types';
 
 export interface DataState {
@@ -17,7 +17,24 @@ export interface DataState {
   lunarReference: LunarReference[];
   mineralSourcing: MineralSourcing[];
   purchaseInfo: PurchaseInfo[];
+  propertySources: PropertySource[];
   countriesGeoJson: GeoJSON.FeatureCollection | null;
+}
+
+/** public/data/data.json as scripts/export_json.py writes it. Every key is optional so
+ *  an older bundle, or a failed fetch, still loads as empty tables. */
+interface RawBundle {
+  simulants?: Simulant[];
+  sites?: Site[];
+  compositions?: Composition[];
+  chemical_compositions?: ChemicalComposition[];
+  references?: Reference[];
+  mineral_groups?: MineralGroup[];
+  simulant_extra?: SimulantExtra[];
+  lunar_reference?: LunarReference[];
+  mineral_sourcing?: MineralSourcing[];
+  purchase_info?: PurchaseInfo[];
+  property_sources?: PropertySource[];
 }
 
 const DATA_BASE = import.meta.env.BASE_URL + 'data/';
@@ -36,12 +53,13 @@ export function useData(): DataState {
     lunarReference: [],
     mineralSourcing: [],
     purchaseInfo: [],
+    propertySources: [],
     countriesGeoJson: null,
   });
 
   useEffect(() => {
     Promise.all([
-      fetch(DATA_BASE + 'data.json').then(r => r.ok ? r.json() : {}),
+      fetch(DATA_BASE + 'data.json').then((r): Promise<RawBundle> => r.ok ? r.json() : Promise.resolve({})),
       fetch(DATA_BASE + 'countries.geojson').then(r => r.ok ? r.json() : null),
     ]).then(([data, countriesGeoJson]) => {
       setState({
@@ -57,6 +75,7 @@ export function useData(): DataState {
         lunarReference: data.lunar_reference ?? [],
         mineralSourcing: data.mineral_sourcing ?? [],
         purchaseInfo: data.purchase_info ?? [],
+        propertySources: data.property_sources ?? [],
         countriesGeoJson: countriesGeoJson?.type ? countriesGeoJson : null,
       });
     }).catch(err => {

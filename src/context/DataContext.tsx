@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useMemo } from 'react';
+import React, { createContext, useContext, useMemo, useCallback } from 'react';
 import { useData, type DataState } from '../hooks/useData';
-import type { Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, Site, MineralSourcing, PurchaseInfo, PhysicalProperties } from '../types';
+import { referenceNumber } from '../utils/references';
+import type { Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, Site, MineralSourcing, PurchaseInfo, PhysicalProperties, PropertySource } from '../types';
 
 interface DataContextValue extends DataState {
   compositionBySimulant: Map<string, Composition[]>;
@@ -12,6 +13,11 @@ interface DataContextValue extends DataState {
   mineralSourcingByMineral: Map<string, MineralSourcing>;
   purchaseBySimulant: Map<string, PurchaseInfo>;
   physicalPropsBySimulant: Map<string, PhysicalProperties>;
+  /** simulant_id -> field -> where that scalar was read from. */
+  propertySourcesBySimulant: Map<string, Map<string, PropertySource>>;
+  /** 1-based number of a reference within its simulant's list, in reference_id order.
+   *  Derived from the reference list on each call, never stored. */
+  refNumber: (simulantId: string, referenceId: string | null | undefined) => number | undefined;
 }
 
 const DataCtx = createContext<DataContextValue | null>(null);
@@ -58,6 +64,24 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     return m;
   }, [data.purchaseInfo]);
 
+  const propertySourcesBySimulant = useMemo(() => {
+    const m = new Map<string, Map<string, PropertySource>>();
+    for (const p of data.propertySources) {
+      let fields = m.get(p.simulant_id);
+      if (!fields) {
+        fields = new Map<string, PropertySource>();
+        m.set(p.simulant_id, fields);
+      }
+      fields.set(p.field, p);
+    }
+    return m;
+  }, [data.propertySources]);
+
+  const refNumber = useCallback(
+    (simulantId: string, referenceId: string | null | undefined) =>
+      referenceNumber(referencesBySimulant.get(simulantId) ?? [], referenceId),
+    [referencesBySimulant]);
+
   const physicalPropsBySimulant = useMemo(() => {
     const m = new Map<string, PhysicalProperties>();
     for (const sim of data.simulants) {
@@ -99,7 +123,9 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     mineralSourcingByMineral,
     purchaseBySimulant,
     physicalPropsBySimulant,
-  }), [data, compositionBySimulant, chemicalBySimulant, referencesBySimulant, mineralGroupsBySimulant, extraBySimulant, siteBySimulant, mineralSourcingByMineral, purchaseBySimulant, physicalPropsBySimulant]);
+    propertySourcesBySimulant,
+    refNumber,
+  }), [data, compositionBySimulant, chemicalBySimulant, referencesBySimulant, mineralGroupsBySimulant, extraBySimulant, siteBySimulant, mineralSourcingByMineral, purchaseBySimulant, physicalPropsBySimulant, propertySourcesBySimulant, refNumber]);
 
   return <DataCtx.Provider value={value}>{children}</DataCtx.Provider>;
 }

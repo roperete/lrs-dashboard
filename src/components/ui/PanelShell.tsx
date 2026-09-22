@@ -17,12 +17,14 @@ interface PanelShellProps {
   onCompare?: () => void;
   compareActive?: boolean;
   accentColor?: string;
+  /** One line under the subtitle, e.g. how many documents name this simulant. */
+  headerNote?: React.ReactNode;
   children: React.ReactNode;
 }
 
 export function PanelShell({
   title, subtitle, pinned, onClose, onTogglePin, onSearchSources, onDownload,
-  onCompare, compareActive, accentColor = 'text-emerald-400', children,
+  onCompare, compareActive, accentColor = 'text-emerald-400', headerNote, children,
 }: PanelShellProps) {
   return (
     <motion.div
@@ -35,6 +37,7 @@ export function PanelShell({
           <div className="flex-1 min-w-0">
             <h2 className={cn("text-2xl font-bold tracking-tight truncate", accentColor)}>{title}</h2>
             {subtitle && <p className="text-slate-400 font-mono text-sm uppercase tracking-widest">{subtitle}</p>}
+            {headerNote}
           </div>
           <div className="flex items-center gap-1 ml-2">
             {onSearchSources && (

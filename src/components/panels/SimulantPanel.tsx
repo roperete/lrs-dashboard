@@ -1,6 +1,7 @@
-import React from 'react';
-import { ArrowRightLeft, Moon } from 'lucide-react';
+import React, { useMemo } from 'react';
+import { ArrowRightLeft, Moon, FileCheck } from 'lucide-react';
 import { PanelShell } from '../ui/PanelShell';
+import { Tooltip } from '../ui/Tooltip';
 import { SimulantProperties } from './SimulantProperties';
 import { PhysicalPropertiesSection } from './PhysicalPropertiesSection';
 import { PurchaseSection } from './PurchaseSection';
@@ -9,7 +10,8 @@ import { ChemicalChart } from './ChemicalChart';
 import { ReferencesSection } from './ReferencesSection';
 import { DataSourceLine } from './CompositionStatus';
 import { downloadSimulantCSV } from '../../utils/csv';
-import type { Simulant, Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, LunarReference, PhysicalProperties, PurchaseInfo } from '../../types';
+import { referenceNumbers } from '../../utils/references';
+import type { Simulant, Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, LunarReference, PhysicalProperties, PurchaseInfo, PropertySource } from '../../types';
 
 function inferLunarRef(ref: string | null | undefined, lunarRefs: LunarReference[]): string | null {
   if (!ref) return null;
@@ -33,6 +35,8 @@ interface SimulantPanelProps {
   extra?: SimulantExtra;
   lunarReferences: LunarReference[];
   physicalProperties?: PhysicalProperties;
+  /** property_sources rows of this simulant keyed by field, for the citation superscripts. */
+  propertySources?: Map<string, PropertySource>;
   purchaseInfo?: PurchaseInfo;
   selectedLunarRefMission: string | null;
   onSelectLunarRef: (mission: string | null) => void;
@@ -46,12 +50,30 @@ interface SimulantPanelProps {
 
 export function SimulantPanel({
   simulant, compositions, chemicalCompositions, references, mineralGroups, extra,
-  lunarReferences, physicalProperties, purchaseInfo,
+  lunarReferences, physicalProperties, propertySources, purchaseInfo,
   selectedLunarRefMission, onSelectLunarRef, onOpenCrossComparison,
   pinned, onClose, onTogglePin, onCompare, compareActive,
 }: SimulantPanelProps) {
   const lunarRef = lunarReferences.find(r => r.mission === selectedLunarRefMission) || null;
   const missionsWithChem = lunarReferences.filter(r => r.chemical_composition && Object.keys(r.chemical_composition).length > 0);
+
+  // Reference numbers are derived here from the reference list, never stored.
+  const refNumbers = useMemo(() => referenceNumbers(references), [references]);
+  // Existence line: how many documents on file a reader confirmed to name this simulant.
+  const namedIn = references.filter(r => r.names_simulant === 1).length;
+  const existenceNote = (
+    <Tooltip
+      text={namedIn === 0
+        ? 'No document on file has been confirmed by a reader to name this exact simulant. Its references may still be awaiting verification.'
+        : `${namedIn} of ${references.length} reference${references.length === 1 ? '' : 's'} on file ${namedIn === 1 ? 'was' : 'were'} confirmed by a reader to name this exact simulant.`}
+      align="left"
+    >
+      <span className={`inline-flex items-center gap-1.5 text-xs mt-1 border-b border-dotted ${namedIn === 0 ? 'text-amber-400 border-amber-400/40' : 'text-slate-400 border-slate-600'}`}>
+        <FileCheck size={12} aria-hidden />
+        named in {namedIn} document{namedIn === 1 ? '' : 's'}
+      </span>
+    </Tooltip>
+  );
 
   // Auto-infer on first render if no selection yet
   const inferred = inferLunarRef(simulant.lunar_sample_reference, lunarReferences);
@@ -64,6 +86,7 @@ export function SimulantPanel({
     <PanelShell
       title={simulant.name}
       subtitle={extra?.classification || extra?.replica_of || simulant.type}
+      headerNote={existenceNote}
       accentColor={simulant.type?.toLowerCase().includes('highland') ? 'text-cyan-400' : 'text-emerald-400'}
       pinned={pinned}
       onClose={onClose}
@@ -75,7 +98,13 @@ export function SimulantPanel({
       <div className="space-y-8">
         <SimulantProperties simulant={simulant} extra={extra} />
 
-        {physicalProperties && <PhysicalPropertiesSection properties={physicalProperties} />}
+        {physicalProperties && (
+          <PhysicalPropertiesSection
+            properties={physicalProperties}
+            sources={propertySources}
+            refNumber={(referenceId) => refNumbers.get(referenceId)}
+          />
+        )}
 
         <PurchaseSection availability={simulant.availability} purchaseInfo={purchaseInfo} />
 
@@ -117,6 +146,7 @@ export function SimulantPanel({
           lunarRef={lunarRef}
           simulantName={simulant.name}
           simulant={simulant}
+          references={references}
         />
 
         <ChemicalChart
@@ -124,6 +154,7 @@ export function SimulantPanel({
           lunarRef={lunarRef}
           simulantName={simulant.name}
           simulant={simulant}
+          references={references}
         />
 
         <ReferencesSection references={references} simulantName={simulant.name} />
