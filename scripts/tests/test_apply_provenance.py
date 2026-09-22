@@ -154,6 +154,48 @@ class ApplyGroupTest(unittest.TestCase):
         self.assertEqual(self.q("SELECT count(*) FROM property_sources"), [(0,)])
         self.assertTrue(all(e["needs_review"] for e in log if "field" in e))
 
+    def test_confirmed_new_reference_becomes_a_row_and_values_can_cite_it(self):
+        e = extraction(
+            new_references=[{"temp_id": "NEW1", "local_path": "papers/LRS/Zheng_2009_CAS-1.pdf", "url": "", "doi": "10.1016/j.asr.2008.07.006",
+                             "title": "CAS-1 lunar soil simulant", "authors": "Zheng, Wang, Ouyang", "year": 2009, "kind": "composition",
+                             "mention_quote": "CAS-1 lunar soil simulant", "location": "title"}],
+            values=[{"field": "friction_angle", "stored": "35.0", "status": "supported", "reference_id": "NEW1", "location": "Table 5", "quote": "friction angle 35.0"}],
+            new_values=[],
+        )
+        v = verification(reference_checks=[{"reference_id": "R010", "verdict": "CONFIRMED"}, {"reference_id": "R011", "verdict": "CONFIRMED"},
+                                           {"reference_id": "R012", "verdict": "CONFIRMED"}, {"reference_id": "NEW1", "verdict": "CONFIRMED"}],
+                         value_checks=[{"field": "friction_angle", "verdict": "CONFIRMED"}], new_value_checks=[])
+        apply_group(self.db, [e], [v], checked_on="2026-09-22")
+        rows = self.q("SELECT reference_id, reference_type, title, doi, local_path, names_simulant, mention_quote FROM references_ WHERE simulant_id='S010' AND reference_id NOT IN ('R010','R011','R012')")
+        self.assertEqual(len(rows), 1)
+        rid, rtype, title, doi, local_path, names, quote = rows[0]
+        self.assertEqual((rtype, title, doi, local_path, names, quote),
+                         ("composition", "CAS-1 lunar soil simulant", "10.1016/j.asr.2008.07.006", "papers/LRS/Zheng_2009_CAS-1.pdf", 1, "CAS-1 lunar soil simulant"))
+        self.assertEqual(self.q("SELECT reference_id FROM property_sources WHERE field='friction_angle'"), [(rid,)])
+
+    def test_unconfirmed_new_reference_creates_nothing_and_flags_its_values(self):
+        e = extraction(
+            new_references=[{"temp_id": "NEW1", "title": "Some paper", "kind": "usage", "mention_quote": "CAS-1", "location": "p.1"}],
+            values=[{"field": "friction_angle", "stored": "35.0", "status": "supported", "reference_id": "NEW1", "location": "p.2", "quote": "35.0"}],
+            new_values=[],
+        )
+        v = verification(reference_checks=[{"reference_id": "NEW1", "verdict": "REFUTED", "problems": ["document does not name CAS-1"]}],
+                         value_checks=[{"field": "friction_angle", "verdict": "CONFIRMED"}], new_value_checks=[])
+        log = apply_group(self.db, [e], [v], checked_on="2026-09-22")
+        self.assertEqual(self.q("SELECT count(*) FROM references_ WHERE simulant_id='S010'"), [(3,)])
+        self.assertEqual(self.q("SELECT count(*) FROM property_sources WHERE field='friction_angle'"), [(0,)])
+        self.assertTrue(any(x["field"] == "friction_angle" and x["needs_review"] for x in log))
+
+    def test_new_reference_is_not_duplicated_on_rerun(self):
+        e = extraction(
+            new_references=[{"temp_id": "NEW1", "title": "CAS-1 lunar soil simulant", "kind": "composition", "doi": "10.1016/j.asr.2008.07.006",
+                             "mention_quote": "CAS-1", "location": "title"}],
+            values=[], new_values=[])
+        v = verification(reference_checks=[{"reference_id": "NEW1", "verdict": "CONFIRMED"}], value_checks=[], new_value_checks=[])
+        apply_group(self.db, [e], [v], checked_on="2026-09-22")
+        apply_group(self.db, [e], [v], checked_on="2026-09-22")
+        self.assertEqual(self.q("SELECT count(*) FROM references_ WHERE simulant_id='S010' AND doi='10.1016/j.asr.2008.07.006'"), [(1,)])
+
     def test_apply_is_idempotent(self):
         apply_group(self.db, [extraction()], [verification()], checked_on="2026-09-22")
         again = apply_group(self.db, [extraction()], [verification()], checked_on="2026-09-22")

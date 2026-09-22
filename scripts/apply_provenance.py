@@ -101,9 +101,54 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
         val_checks = {c.get("field"): c for c in v.get("value_checks", [])}
         new_checks = {c.get("field"): c for c in v.get("new_value_checks", [])}
 
+        # documents the extractor opened that were not yet references: create rows for the
+        # confirmed ones and map the temp ids the value claims use
+        temp_ids: dict[str, str | None] = {}
+        for nr in ext.get("new_references", []):
+            tid = nr.get("temp_id")
+            chk = ref_checks.get(tid)
+            if not tid:
+                continue
+            if not chk or chk.get("verdict") != "CONFIRMED":
+                temp_ids[tid] = None
+                note(simulant_id=sid, reference_id=tid, outcome="flagged: proposed new reference not confirmed", needs_review=True,
+                     problems=(chk or {}).get("problems", []), title=nr.get("title"))
+                continue
+            doi = (nr.get("doi") or "").strip() or None
+            local_path = (nr.get("local_path") or "").strip() or None
+            title = (nr.get("title") or "").strip() or None
+            existing = None
+            if doi:
+                existing = con.execute("SELECT reference_id FROM references_ WHERE simulant_id=? AND doi=?", (sid, doi)).fetchone()
+            if not existing and local_path:
+                existing = con.execute("SELECT reference_id FROM references_ WHERE simulant_id=? AND local_path=?", (sid, local_path)).fetchone()
+            if not existing and title:
+                existing = con.execute("SELECT reference_id FROM references_ WHERE simulant_id=? AND title=?", (sid, title)).fetchone()
+            if existing:
+                temp_ids[tid] = existing[0]
+                continue
+            n = con.execute("SELECT count(*) FROM references_ WHERE reference_id LIKE ?", (f"RN-{sid}-%",)).fetchone()[0]
+            rid = f"RN-{sid}-{n + 1}"
+            con.execute(
+                """INSERT INTO references_ (reference_id, simulant_id, reference_text, reference_type, title, authors, year, doi, url,
+                                            names_simulant, mention_quote, local_path, checked_on)
+                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                (rid, sid, title, nr.get("kind") or "general", title, nr.get("authors"), nr.get("year"), doi,
+                 (nr.get("url") or "").strip() or None, 1, nr.get("mention_quote") or None, local_path, checked_on),
+            )
+            temp_ids[tid] = rid
+            note(simulant_id=sid, reference_id=rid, outcome="new reference row created", title=title)
+
+        def resolve(reference_id: str | None) -> str | None:
+            if reference_id and reference_id.upper().startswith("NEW"):
+                return temp_ids.get(reference_id)
+            return reference_id or None
+
         # references: does the document name this simulant?
         for c in ext.get("references", []):
             rid = c.get("reference_id")
+            if rid and rid.upper().startswith("NEW"):
+                continue  # handled above
             chk = ref_checks.get(rid)
             if not chk or chk.get("verdict") != "CONFIRMED":
                 note(simulant_id=sid, reference_id=rid, outcome="flagged: reference claim not confirmed", needs_review=True,
@@ -136,9 +181,14 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
             if c.get("status") != "supported" or not c.get("reference_id"):
                 note(simulant_id=sid, field=field, outcome="withheld: unsupported by any cited document")
                 continue
-            changed = _write_source(con, sid, field, c["reference_id"], c.get("location") or "", c.get("quote") or "")
+            rid = resolve(c.get("reference_id"))
+            if not rid:
+                note(simulant_id=sid, field=field, outcome="flagged: cites an unconfirmed new reference", needs_review=True,
+                     reference_id=c.get("reference_id"))
+                continue
+            changed = _write_source(con, sid, field, rid, c.get("location") or "", c.get("quote") or "")
             if changed:
-                note(simulant_id=sid, field=field, reference_id=c["reference_id"], outcome="source row written")
+                note(simulant_id=sid, field=field, reference_id=rid, outcome="source row written")
 
         # values the documents state that we lack
         for c in ext.get("new_values", []):
@@ -148,6 +198,11 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
                 note(simulant_id=sid, field=field, outcome="flagged: new value not confirmed", needs_review=True,
                      problems=(chk or {}).get("problems", []))
                 continue
+            rid_new = resolve(c.get("reference_id"))
+            if not rid_new:
+                note(simulant_id=sid, field=field, outcome="flagged: new value cites an unconfirmed new reference", needs_review=True)
+                continue
+            c = {**c, "reference_id": rid_new}
             kind, component = _split_field(field)
             if kind == "scalar":
                 if field not in SCALAR_FIELDS:
