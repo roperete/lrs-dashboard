@@ -91,7 +91,9 @@ export function DataSourceLine({ simulant }: { simulant: Simulant }) {
         ? 'Primary characterisation paper'
         : simulant.composition_source_kind === 'agency_report'
           ? 'Agency report'
-          : 'Source';
+          : simulant.composition_source_kind === 'secondary_reproduction'
+            ? 'Reproduced in a later publication; the original paper could not be opened'
+            : 'Source';
 
   return (
     <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl px-4 py-3">

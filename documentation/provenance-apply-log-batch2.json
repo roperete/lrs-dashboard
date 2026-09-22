@@ -1,0 +1,4145 @@
+[
+ {
+  "simulant_id": "S047",
+  "reference_id": "RN-S047-1",
+  "outcome": "new reference row created",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (Report of the LEAG Simulant Working Group)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S047",
+  "reference_id": "RN-S047-2",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide Revision A (NASA/TM-20240011783)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S047",
+  "reference_id": "RN-S047-3",
+  "outcome": "new reference row created",
+  "title": "Characterization of NUW-LHT-5M, A Lunar Highlands Simulant (NASA/TM-20240007991)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S047",
+  "reference_id": "RN-S047-4",
+  "outcome": "new reference row created",
+  "title": "Manufacture of Lunar Regolith Simulants (NASA/TM-2013-217491)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S047",
+  "reference_id": "RN-S047-5",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S047",
+  "reference_id": "RN-S047-6",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide (NASA/TM-2010-216446)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S047",
+  "reference_id": "RN-S047-7",
+  "outcome": "new reference row created",
+  "title": "JHU-APL LSII Report: 2022 Lunar Simulant Assessment",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S047",
+  "reference_id": "RN-S047-8",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1 (Acta Astronautica 231, 200\u2013222)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S047",
+  "reference_id": "RN-S047-9",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices (keynote, International Workshop on Granular Materials & Regolith, Metz)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S047",
+  "reference_id": "R041",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S047",
+  "field": "glass_content_percent",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S047",
+  "field": "release_date",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S047",
+  "field": "availability",
+  "reference_id": "RN-S047-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S047",
+  "field": "lunar_sample_reference",
+  "reference_id": "RN-S047-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S047",
+  "field": "institution",
+  "reference_id": "RN-S047-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S048",
+  "reference_id": "RN-S048-1",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide (NASA/TM-2010-216446)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S048",
+  "reference_id": "RN-S048-2",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S048",
+  "reference_id": "RN-S048-3",
+  "outcome": "new reference row created",
+  "title": "JHU-APL LSII Report: 2022 Lunar Simulant Assessment",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S048",
+  "reference_id": "RN-S048-4",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1 (Acta Astronautica 231, 200\u2013222)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S048",
+  "reference_id": "RN-S048-5",
+  "outcome": "new reference row created",
+  "title": "The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S048",
+  "reference_id": "R112",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S048",
+  "field": "release_date",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S048",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S048",
+  "field": "lunar_sample_reference",
+  "reference_id": "RN-S048-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S048",
+  "field": "institution",
+  "reference_id": "R112",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S048",
+  "field": "particle_size_distribution",
+  "reference_id": "RN-S048-2",
+  "outcome": "new value inserted with source",
+  "value": "<36 \u00b5m",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-1",
+  "outcome": "new reference row created",
+  "title": "Manufacture of Lunar Regolith Simulants (NASA/TM-2013-217491)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-2",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide (NASA/TM-2010-216446)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-3",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide Revision A (NASA/TM-20240011783)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-4",
+  "outcome": "new reference row created",
+  "title": "Characterization of NUW-LHT-5M, A Lunar Highlands Simulant (NASA/TM-20240007991)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-5",
+  "outcome": "new reference row created",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (Report of the LEAG Simulant Working Group)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-6",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-7",
+  "outcome": "new reference row created",
+  "title": "JHU-APL LSII Report: 2022 Lunar Simulant Assessment",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-8",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1 (Acta Astronautica 231, 200\u2013222)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-9",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices (keynote, Metz)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-10",
+  "outcome": "new reference row created",
+  "title": "The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S049",
+  "reference_id": "R042",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S049",
+  "field": "particle_size_distribution",
+  "reference_id": "R042",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "glass_content_percent",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "release_date",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "availability",
+  "reference_id": "RN-S049-3",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "lunar_sample_reference",
+  "reference_id": "R042",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "institution",
+  "reference_id": "RN-S049-5",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "oxide:SiO2",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "47.62",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "oxide:Al2O3",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "24.4",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "oxide:CaO",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "13.1",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "oxide:FeO",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "3.3",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "oxide:Fe2O3T",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "4.79",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "oxide:MgO",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "8.5",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "oxide:Na2O",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "1.43",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "oxide:K2O",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "0.08",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "oxide:TiO2",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "0.33",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "oxide:P2O5",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "<0.02",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "oxide:Cr2O3",
+  "reference_id": "RN-S049-4",
+  "outcome": "new value inserted with source",
+  "value": "0.12",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "oxide:MnO",
+  "reference_id": "RN-S049-4",
+  "outcome": "new value inserted with source",
+  "value": "0.08",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Glass",
+  "reference_id": "RN-S049-2",
+  "outcome": "new value inserted with source",
+  "value": "22.4 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Agglutinates",
+  "reference_id": "RN-S049-2",
+  "outcome": "new value inserted with source",
+  "value": "29.0 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Plagioclase",
+  "reference_id": "RN-S049-2",
+  "outcome": "new value inserted with source",
+  "value": "38.8 (vol%; An 80)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Olivine",
+  "reference_id": "RN-S049-2",
+  "outcome": "new value inserted with source",
+  "value": "2.9 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Clinopyroxene",
+  "reference_id": "RN-S049-2",
+  "outcome": "new value inserted with source",
+  "value": "2.0 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Orthopyroxene",
+  "reference_id": "RN-S049-2",
+  "outcome": "new value inserted with source",
+  "value": "4.4 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Ilmenite",
+  "reference_id": "RN-S049-2",
+  "outcome": "new value inserted with source",
+  "value": "0.3 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Spinel minerals",
+  "reference_id": "RN-S049-2",
+  "outcome": "new value inserted with source",
+  "value": "0.05 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Glass",
+  "outcome": "conflict: composition row already present, kept",
+  "needs_review": true
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Plagioclase",
+  "outcome": "conflict: composition row already present, kept",
+  "needs_review": true
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Olivine",
+  "outcome": "conflict: composition row already present, kept",
+  "needs_review": true
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Orthopyroxene",
+  "outcome": "conflict: composition row already present, kept",
+  "needs_review": true
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Clinopyroxene",
+  "outcome": "conflict: composition row already present, kept",
+  "needs_review": true
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Ilmenite",
+  "outcome": "conflict: composition row already present, kept",
+  "needs_review": true
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Chromite",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "0.04 (vol%, SEM modal)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Sulfide",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "0.03 (vol%, SEM modal)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Albite",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "2.97 (vol%, nonlunar phase, SEM modal)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S049",
+  "field": "mineral:Quartz",
+  "reference_id": "RN-S049-1",
+  "outcome": "new value inserted with source",
+  "value": "0.18 (vol%, nonlunar phase, SEM modal)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S050",
+  "reference_id": "RN-S050-1",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide (NASA/TM-2010-216446)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S050",
+  "reference_id": "RN-S050-2",
+  "outcome": "new reference row created",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (Report of the LEAG Simulant Working Group)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S050",
+  "reference_id": "RN-S050-3",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S050",
+  "reference_id": "RN-S050-4",
+  "outcome": "new reference row created",
+  "title": "JHU-APL LSII Report: 2022 Lunar Simulant Assessment",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S050",
+  "reference_id": "RN-S050-5",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1 (Acta Astronautica 231, 200\u2013222)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S050",
+  "reference_id": "RN-S050-6",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices (keynote, Metz)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S050",
+  "reference_id": "RN-S050-7",
+  "outcome": "new reference row created",
+  "title": "The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S050",
+  "reference_id": "R067",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S050",
+  "field": "particle_size_distribution",
+  "reference_id": "RN-S050-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S050",
+  "field": "release_date",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S050",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S050",
+  "field": "lunar_sample_reference",
+  "reference_id": "RN-S050-3",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S050",
+  "field": "institution",
+  "reference_id": "R067",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-1",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University, May 2010)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-2",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide Revision A (NASA/TM-20240011783)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-3",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide (NASA/TM-2010-216446)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-4",
+  "outcome": "new reference row created",
+  "title": "Manufacture of Lunar Regolith Simulants (NASA/TM-2013-217491)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-5",
+  "outcome": "new reference row created",
+  "title": "Characterization of NUW-LHT-5M, A Lunar Highlands Simulant (NASA/TM-20240007991)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-6",
+  "outcome": "new reference row created",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (Report of the LEAG Simulant Working Group)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-7",
+  "outcome": "new reference row created",
+  "title": "JHU-APL LSII Report: 2022 Lunar Simulant Assessment",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-8",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1 (Acta Astronautica 231, 200\u2013222)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-9",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices (keynote, Metz)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-10",
+  "outcome": "new reference row created",
+  "title": "The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S051",
+  "reference_id": "R043",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S051",
+  "field": "bulk_density",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "friction_angle",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "specific_gravity",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "particle_size_d50",
+  "reference_id": "RN-S051-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "glass_content_percent",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "release_date",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "availability",
+  "reference_id": "RN-S051-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "lunar_sample_reference",
+  "reference_id": "R043",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "institution",
+  "reference_id": "RN-S051-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "cohesion",
+  "reference_id": "RN-S051-1",
+  "outcome": "new value inserted with source",
+  "value": "~0 kPa (too low to measure; triaxial, dry)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "particle_size_distribution",
+  "reference_id": "R043",
+  "outcome": "new value inserted with source",
+  "value": "<1 mm",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "particle_size_distribution",
+  "outcome": "conflict: existing value kept, document states a different one",
+  "existing": "<1 mm",
+  "proposed": "D10 = 13 \u00b5m, D30 = 47 \u00b5m, D60 = 110 \u00b5m; 58 % sand, 42 % silt; silty sand (SM)",
+  "reference_id": "RN-S051-1",
+  "needs_review": true
+ },
+ {
+  "simulant_id": "S051",
+  "field": "oxide:SiO2",
+  "reference_id": "RN-S051-2",
+  "outcome": "new value inserted with source",
+  "value": "47.0",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "oxide:TiO2",
+  "reference_id": "RN-S051-2",
+  "outcome": "new value inserted with source",
+  "value": "0.4",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "oxide:Al2O3",
+  "reference_id": "RN-S051-2",
+  "outcome": "new value inserted with source",
+  "value": "24.5",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "oxide:FeO",
+  "reference_id": "RN-S051-2",
+  "outcome": "new value inserted with source",
+  "value": "3.7",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "oxide:MgO",
+  "reference_id": "RN-S051-2",
+  "outcome": "new value inserted with source",
+  "value": "8.4",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "oxide:CaO",
+  "reference_id": "RN-S051-2",
+  "outcome": "new value inserted with source",
+  "value": "13.6",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "oxide:Na2O",
+  "reference_id": "RN-S051-2",
+  "outcome": "new value inserted with source",
+  "value": "1.5",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "oxide:K2O",
+  "reference_id": "RN-S051-2",
+  "outcome": "new value inserted with source",
+  "value": "0.1",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "oxide:Cr2O3",
+  "reference_id": "RN-S051-5",
+  "outcome": "new value inserted with source",
+  "value": "0.10",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "oxide:MnO",
+  "reference_id": "RN-S051-5",
+  "outcome": "new value inserted with source",
+  "value": "0.07",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "oxide:P2O5",
+  "reference_id": "RN-S051-5",
+  "outcome": "new value inserted with source",
+  "value": "0.06",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "oxide:Fe2O3",
+  "reference_id": "RN-S051-5",
+  "outcome": "new value inserted with source",
+  "value": "4.15 (total Fe expressed as Fe2O3)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "mineral:Glass",
+  "reference_id": "RN-S051-3",
+  "outcome": "new value inserted with source",
+  "value": "7.2 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "mineral:Agglutinates",
+  "reference_id": "RN-S051-3",
+  "outcome": "new value inserted with source",
+  "value": "23.5 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "mineral:Plagioclase",
+  "reference_id": "RN-S051-3",
+  "outcome": "new value inserted with source",
+  "value": "54.9 (vol%; An 80)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "mineral:Olivine",
+  "reference_id": "RN-S051-3",
+  "outcome": "new value inserted with source",
+  "value": "9.5 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "mineral:Clinopyroxene",
+  "reference_id": "RN-S051-3",
+  "outcome": "new value inserted with source",
+  "value": "4.0 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "mineral:Orthopyroxene",
+  "reference_id": "RN-S051-3",
+  "outcome": "new value inserted with source",
+  "value": "0.2 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "mineral:Ilmenite",
+  "reference_id": "RN-S051-3",
+  "outcome": "new value inserted with source",
+  "value": "0.2 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "mineral:Ca-phosphates",
+  "reference_id": "RN-S051-3",
+  "outcome": "new value inserted with source",
+  "value": "0.43 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "mineral:Fe-sulfide",
+  "reference_id": "RN-S051-3",
+  "outcome": "new value inserted with source",
+  "value": "0.04 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S051",
+  "field": "mineral:Spinel minerals",
+  "reference_id": "RN-S051-3",
+  "outcome": "new value inserted with source",
+  "value": "0.01 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S086",
+  "reference_id": "RN-S086-1",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices (keynote, International Workshop on Granular Materials & Regolith, Metz, 15 April 2025)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S086",
+  "reference_id": "R122",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S086",
+  "field": "availability",
+  "reference_id": "R122",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S086",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S086",
+  "field": "institution",
+  "reference_id": "R122",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S086",
+  "field": "particle_size_distribution",
+  "reference_id": "R122",
+  "outcome": "new value inserted with source",
+  "value": "< 600 \u00b5m (mill sand used without milling/grinding)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-1",
+  "outcome": "new reference row created",
+  "title": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-2",
+  "outcome": "new reference row created",
+  "title": "Planetary Simulant Database: CAS-1 Chinese Academy of Sciences",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-3",
+  "outcome": "new reference row created",
+  "title": "LZS-1, Lanzarote (Canary Island, Spain) lunar (Apollo 14) basaltic soil simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-4",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-5",
+  "outcome": "new reference row created",
+  "title": "Evaluations of Lunar Regolith Simulants (author's accepted manuscript)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-6",
+  "outcome": "new reference row created",
+  "title": "TUBS-M and TUBS-T based modular Regolith Simulant System for the support of lunar ISRU activities",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-7",
+  "outcome": "new reference row created",
+  "title": "EAC-1A: A novel large-volume lunar regolith simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-8",
+  "outcome": "new reference row created",
+  "title": "A Comprehensive Review of Lunar-based Manufacturing and Construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-9",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-10",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-11",
+  "outcome": "new reference row created",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-12",
+  "outcome": "new reference row created",
+  "title": "Global Registry of Lunar Regolith Simulants (CSV compilation of unknown authorship saved as HTML)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-13",
+  "outcome": "new reference row created",
+  "title": "Planetary Simulant Database: CLRS-1/2 Chinese Lunar Regolith Simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "RN-S007-14",
+  "outcome": "new reference row created",
+  "title": "Planetary Simulant Database: CLDS-i Lunar Dust Simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "R007",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "R008",
+  "outcome": "document unavailable; reference left unchecked",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "reference_id": "R096",
+  "outcome": "document unavailable; reference left unchecked",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S007",
+  "field": "cohesion",
+  "reference_id": "RN-S007-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "friction_angle",
+  "reference_id": "RN-S007-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "release_date",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "lunar_sample_reference",
+  "reference_id": "RN-S007-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "institution",
+  "reference_id": "RN-S007-4",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "oxide:SiO2",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "49.24",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "oxide:TiO2",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "1.91",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "oxide:Al2O3",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "15.80",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "oxide:FeO",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "11.47",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "oxide:MgO",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "8.72",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "oxide:MnO",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "0.14",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "oxide:CaO",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "7.25",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "oxide:Na2O",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "3.08",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "oxide:K2O",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "1.03",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "oxide:P2O5",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "0.30",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "mineral:Pyroxene",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "22.34",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "mineral:Plagioclase",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "63.52",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "mineral:Ilmenite",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "2.33",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "mineral:Olivine",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "8.13",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "mineral:Apatite",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "0.65",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "mineral:Magnetite",
+  "reference_id": "RN-S007-1",
+  "outcome": "new value inserted with source",
+  "value": "3.03",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S007",
+  "field": "particle_size_d50",
+  "reference_id": "RN-S007-3",
+  "outcome": "new value inserted with source",
+  "value": "85.9",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "reference_id": "RN-S009-1",
+  "outcome": "new reference row created",
+  "title": "\u4e00\u79cd\u6a21\u62df\u6708\u5c18\u7684\u5236\u5907\u65b9\u6cd5 (Method for preparing simulated lunar dust), Chinese patent application CN 107876754 A",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S009",
+  "reference_id": "RN-S009-2",
+  "outcome": "new reference row created",
+  "title": "Planetary Simulant Database: CLDS-i Lunar Dust Simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S009",
+  "reference_id": "RN-S009-3",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S009",
+  "reference_id": "RN-S009-4",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S009",
+  "reference_id": "RN-S009-5",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S009",
+  "reference_id": "RN-S009-6",
+  "outcome": "new reference row created",
+  "title": "Global Registry of Lunar Regolith Simulants (CSV compilation of unknown authorship saved as HTML)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S009",
+  "reference_id": "RN-S009-7",
+  "outcome": "new reference row created",
+  "title": "A lunar dust simulant: CLDS-i",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S009",
+  "reference_id": "R009",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S009",
+  "field": "release_date",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "lunar_sample_reference",
+  "reference_id": "R009",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "institution",
+  "reference_id": "RN-S009-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "oxide:SiO2",
+  "reference_id": "RN-S009-2",
+  "outcome": "new value inserted with source",
+  "value": "49.99",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "oxide:TiO2",
+  "reference_id": "RN-S009-2",
+  "outcome": "new value inserted with source",
+  "value": "1.22",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "oxide:Al2O3",
+  "reference_id": "RN-S009-2",
+  "outcome": "new value inserted with source",
+  "value": "14.09",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "oxide:FeO",
+  "reference_id": "RN-S009-2",
+  "outcome": "new value inserted with source",
+  "value": "11.53",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "oxide:MnO",
+  "reference_id": "RN-S009-2",
+  "outcome": "new value inserted with source",
+  "value": "0.11",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "oxide:MgO",
+  "reference_id": "RN-S009-2",
+  "outcome": "new value inserted with source",
+  "value": "8.16",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "oxide:CaO",
+  "reference_id": "RN-S009-2",
+  "outcome": "new value inserted with source",
+  "value": "7.17",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "oxide:Na2O",
+  "reference_id": "RN-S009-2",
+  "outcome": "new value inserted with source",
+  "value": "2.78",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "oxide:K2O",
+  "reference_id": "RN-S009-2",
+  "outcome": "new value inserted with source",
+  "value": "1.23",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "mineral:Glass",
+  "reference_id": "RN-S009-2",
+  "outcome": "new value inserted with source",
+  "value": "75",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "mineral:Plagioclase",
+  "reference_id": "RN-S009-2",
+  "outcome": "new value inserted with source",
+  "value": "15",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S009",
+  "field": "mineral:Olivine, pyroxene and ilmenite (combined)",
+  "reference_id": "RN-S009-2",
+  "outcome": "new value inserted with source",
+  "value": "10",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-1",
+  "outcome": "new reference row created",
+  "title": "A Comprehensive Review of Lunar-based Manufacturing and Construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-2",
+  "outcome": "new reference row created",
+  "title": "Evaluations of Lunar Regolith Simulants (author's accepted manuscript)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-3",
+  "outcome": "new reference row created",
+  "title": "TUBS-M and TUBS-T based modular Regolith Simulant System for the support of lunar ISRU activities",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-4",
+  "outcome": "new reference row created",
+  "title": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-5",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-6",
+  "outcome": "new reference row created",
+  "title": "Planetary Simulant Database: CLRS-1/2 Chinese Lunar Regolith Simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-7",
+  "outcome": "new reference row created",
+  "title": "Planetary Simulant Database: CLDS-i Lunar Dust Simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-8",
+  "outcome": "new reference row created",
+  "title": "\u4e00\u79cd\u6a21\u62df\u6708\u5c18\u7684\u5236\u5907\u65b9\u6cd5 (Method for preparing simulated lunar dust), Chinese patent application CN 107876754 A",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-9",
+  "outcome": "new reference row created",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-10",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-11",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-12",
+  "outcome": "new reference row created",
+  "title": "Material aspects of sintering of EAC-1A lunar regolith simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "RN-S010-13",
+  "outcome": "new reference row created",
+  "title": "Global Registry of Lunar Regolith Simulants (CSV compilation of unknown authorship saved as HTML)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "reference_id": "R010",
+  "outcome": "flagged: reference claim not confirmed",
+  "needs_review": true,
+  "problems": [
+   "I could not open Zheng 2009 either (ScienceDirect 403, ADS 405, abstract elided). Its Crossref title names only CAS-1; whether the body names CLRS-1 is unverifiable. Ruan 2024 cites this paper [12] for the 'CLRS-1/2' row and Patzwald/simulantdb treat CLRS-1 as another name for CAS-1, but no opened document shows the paper itself using the name."
+  ],
+  "field": null
+ },
+ {
+  "simulant_id": "S010",
+  "field": "release_date",
+  "reference_id": "RN-S010-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S010",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S010",
+  "field": "lunar_sample_reference",
+  "reference_id": "RN-S010-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S010",
+  "field": "institution",
+  "reference_id": "RN-S010-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S084",
+  "reference_id": "RN-S084-1",
+  "outcome": "new reference row created",
+  "title": "Evaluations of Lunar Regolith Simulants (author's accepted manuscript)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S084",
+  "reference_id": "RN-S084-2",
+  "outcome": "new reference row created",
+  "title": "TUBS-M and TUBS-T based modular Regolith Simulant System for the support of lunar ISRU activities",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S084",
+  "reference_id": "RN-S084-3",
+  "outcome": "new reference row created",
+  "title": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S084",
+  "reference_id": "RN-S084-4",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S084",
+  "reference_id": "RN-S084-5",
+  "outcome": "new reference row created",
+  "title": "Planetary Simulant Database: CLRS-1/2 Chinese Lunar Regolith Simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S084",
+  "reference_id": "RN-S084-6",
+  "outcome": "new reference row created",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S084",
+  "reference_id": "RN-S084-7",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S084",
+  "reference_id": "RN-S084-8",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S084",
+  "reference_id": "RN-S084-9",
+  "outcome": "new reference row created",
+  "title": "Material aspects of sintering of EAC-1A lunar regolith simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S084",
+  "reference_id": "RN-S084-10",
+  "outcome": "new reference row created",
+  "title": "Global Registry of Lunar Regolith Simulants (CSV compilation of unknown authorship saved as HTML)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S084",
+  "reference_id": "R120",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S084",
+  "field": "release_date",
+  "reference_id": "R120",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S084",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S084",
+  "field": "lunar_sample_reference",
+  "reference_id": "RN-S084-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S084",
+  "field": "institution",
+  "reference_id": "RN-S084-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S083",
+  "reference_id": "RN-S083-1",
+  "outcome": "new reference row created",
+  "title": "Two Lunar Mare Soil Simulants",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S083",
+  "reference_id": "R119",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S083",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S083",
+  "field": "institution",
+  "reference_id": "RN-S083-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S083",
+  "field": "lunar_sample_reference",
+  "outcome": "flagged: new value not confirmed",
+  "needs_review": true,
+  "problems": [
+   "The quote is verbatim, but the abstract says 'some characteristics of NAO-2 and NAO-3 are similar to those of Apollo 14 and Apollo 11 landing site soils' - it never states NAO-2 = Apollo 14 by itself; the 'respectively' belongs to the preceding low-Ti/high-Ti sentence. The pairing is an inference (plausible: low-Ti mare vs Apollo 14) that must be checked in the full text before entry."
+  ]
+ },
+ {
+  "simulant_id": "S080",
+  "reference_id": "RN-S080-1",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S080",
+  "reference_id": "RN-S080-2",
+  "outcome": "new reference row created",
+  "title": "Global Registry of Lunar Regolith Simulants (CSV compilation of unknown authorship saved as HTML)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S080",
+  "reference_id": "R077",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S080",
+  "field": "bulk_density",
+  "reference_id": "R077",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "cohesion",
+  "reference_id": "R077",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "friction_angle",
+  "reference_id": "R077",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "institution",
+  "reference_id": "R077",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "particle_size_d50",
+  "reference_id": "R077",
+  "outcome": "new value inserted with source",
+  "value": "68.69",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "oxide:FeO",
+  "reference_id": "R077",
+  "outcome": "new value inserted with source",
+  "value": "17.6",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "oxide:TiO2",
+  "reference_id": "R077",
+  "outcome": "new value inserted with source",
+  "value": "4.8",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "mineral:Pyroxene",
+  "reference_id": "R077",
+  "outcome": "new value inserted with source",
+  "value": "49.3",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "mineral:Plagioclase",
+  "reference_id": "R077",
+  "outcome": "new value inserted with source",
+  "value": "40.9",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "mineral:Ilmenite",
+  "reference_id": "R077",
+  "outcome": "new value inserted with source",
+  "value": "6.1",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "mineral:Olivine",
+  "reference_id": "R077",
+  "outcome": "new value inserted with source",
+  "value": "3.7",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S080",
+  "field": "specific_gravity",
+  "reference_id": "R077",
+  "outcome": "new value inserted with source",
+  "value": "3.33",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-1",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-2",
+  "outcome": "new reference row created",
+  "title": "ARES | Exploration Science Projects | Lunar Regolith Simulants | JSC-1/1A (NASA JSC web page, last modified 2.1.2021)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-3",
+  "outcome": "new reference row created",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (LEAG-CAPTEM Simulant Working Group report)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-4",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide, Revision A (NASA/TM-20240011783)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-5",
+  "outcome": "new reference row created",
+  "title": "JSC-1 as the Lunar Soil Simulant of Choice (68th Annual Meteoritical Society Meeting, abstract 5180)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-6",
+  "outcome": "new reference row created",
+  "title": "LZS-1, Lanzarote (Canary Island, Spain) lunar (Apollo 14) basaltic soil simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-7",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1 (Acta Astronautica 231, 200\u2013222)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-8",
+  "outcome": "new reference row created",
+  "title": "Characterization of NUW-LHT-5M (NASA/TM-20240007991)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-9",
+  "outcome": "new reference row created",
+  "title": "Evaluations of lunar regolith simulants",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-10",
+  "outcome": "new reference row created",
+  "title": "Characterization Summary of JSC-1A Bulk Lunar Mare Regolith Simulant, Version B.1 (Draft, 6/28/2007)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-11",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide (NASA/TM-2010-216446)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-12",
+  "outcome": "new reference row created",
+  "title": "Material aspects of sintering of EAC-1A lunar regolith simulant (Scientific Reports 13:23053)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "R025",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "R086",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "field": "bulk_density",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "cohesion",
+  "reference_id": "R086",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "friction_angle",
+  "reference_id": "R086",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "specific_gravity",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "particle_size_distribution",
+  "reference_id": "RN-S027-4",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "glass_content_percent",
+  "reference_id": "R086",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "release_date",
+  "reference_id": "R086",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "availability",
+  "reference_id": "RN-S027-3",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "lunar_sample_reference",
+  "reference_id": "R086",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "institution",
+  "reference_id": "RN-S027-12",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:SiO2",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "47.71",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:TiO2",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "1.59",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:Al2O3",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "15.02",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:Fe2O3",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "3.44",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:FeO",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "7.35",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:MgO",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "9.01",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:CaO",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "10.42",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:Na2O",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "2.70",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:K2O",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "0.82",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:MnO",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "0.18",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:Cr2O3",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "0.04",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:P2O5",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "0.66",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "oxide:LOI",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "0.71",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S027",
+  "field": "particle_size_d50",
+  "reference_id": "R086",
+  "outcome": "new value inserted with source",
+  "value": "98 (UTD) / 117 (NASA) \u00b5m",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-1",
+  "outcome": "new reference row created",
+  "title": "EAC-1A: A novel large-volume lunar regolith simulant (Scientific Reports 10:5473)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-2",
+  "outcome": "new reference row created",
+  "title": "Material Safety Data Sheet: JSC-1AF, JSC-1A, JSC-1AC Lunar Mare Regolith Simulant (Rev. 4, November 7, 2007; Issue Date September 23, 2005)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-3",
+  "outcome": "new reference row created",
+  "title": "Characterization Summary of JSC-1A Bulk Lunar Mare Regolith Simulant, Version B.1 (Draft, 6/28/2007)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-4",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-5",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide, Revision A (NASA/TM-20240011783)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-6",
+  "outcome": "new reference row created",
+  "title": "ARES | Exploration Science Projects | Lunar Regolith Simulants | JSC-1/1A (NASA JSC web page, last modified 2.1.2021)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-7",
+  "outcome": "new reference row created",
+  "title": "Characterization of NUW-LHT-5M (NASA/TM-20240007991)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-8",
+  "outcome": "new reference row created",
+  "title": "Plants grown in Apollo lunar regolith present stress-associated transcriptomes that inform prospects for lunar exploration",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-9",
+  "outcome": "new reference row created",
+  "title": "Lunar and Martian Regolith Simulants Desorb and Weather after Exposure to Bioregenerative Life Support System Effluent (ACS Earth and Space Chemistry)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-10",
+  "outcome": "new reference row created",
+  "title": "Investigation of the sintering and melting of JSC-2A lunar regolith simulant (Ceramics International 46 (2020) 14097\u201314104)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-11",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1 (Acta Astronautica 231, 200\u2013222)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-12",
+  "outcome": "new reference row created",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (LEAG-CAPTEM Simulant Working Group report)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-13",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide (NASA/TM-2010-216446)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-14",
+  "outcome": "new reference row created",
+  "title": "Evaluations of lunar regolith simulants",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-15",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction (Biogeotechnics, 100212)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "R026",
+  "outcome": "reference does NOT name the simulant; kept, marked 0",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "R087",
+  "outcome": "flagged: reference claim not confirmed",
+  "needs_review": true,
+  "problems": [
+   "Could not open: https://doi.org/10.1061/(ASCE)GT.1943-5606.0000068 resolves to ascelibrary.org and returns HTTP 403 here too; no local copy. Title as given is consistent with the bgtech reference list entry 'K.A. Alshibli, A. Hasan Strength Properties of JSC-1A Lunar Regolith Simulant Journal of Geotechnical and Geoenvironmental Engineering, 135 (2009), pp. 673-679' and ARES ref [14]. He 2010 Table 3.7 (PDF p.151) column 'Alshibli et al.' verified: D10 0.016*, D30 0.043*, D50 0.090*, D60 0.120* mm, rho_max 2.016, rho_min 1.566 g/cm3, Gs 2.92, e_max 0.877, e_min 0.448, cohesion 2-5 kPa, friction 40-59\u00b0."
+  ],
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "field": "bulk_density",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "cohesion",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "friction_angle",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "specific_gravity",
+  "reference_id": "RN-S028-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "particle_size_d50",
+  "reference_id": "RN-S028-5",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "particle_size_distribution",
+  "reference_id": "RN-S028-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "release_date",
+  "reference_id": "RN-S028-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "availability",
+  "reference_id": "RN-S028-4",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "lunar_sample_reference",
+  "reference_id": "RN-S028-6",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "institution",
+  "reference_id": "RN-S028-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "oxide:SiO2",
+  "reference_id": "RN-S028-3",
+  "outcome": "new value inserted with source",
+  "value": "46.67",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "oxide:TiO2",
+  "reference_id": "RN-S028-3",
+  "outcome": "new value inserted with source",
+  "value": "1.71",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "oxide:Al2O3",
+  "reference_id": "RN-S028-3",
+  "outcome": "new value inserted with source",
+  "value": "15.79",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "oxide:Fe2O3",
+  "reference_id": "RN-S028-3",
+  "outcome": "new value inserted with source",
+  "value": "12.5",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "oxide:FeO",
+  "reference_id": "RN-S028-3",
+  "outcome": "new value inserted with source",
+  "value": "8.17",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "oxide:MnO",
+  "reference_id": "RN-S028-3",
+  "outcome": "new value inserted with source",
+  "value": "0.19",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "oxide:MgO",
+  "reference_id": "RN-S028-3",
+  "outcome": "new value inserted with source",
+  "value": "9.39",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "oxide:CaO",
+  "reference_id": "RN-S028-3",
+  "outcome": "new value inserted with source",
+  "value": "9.90",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "oxide:Na2O",
+  "reference_id": "RN-S028-3",
+  "outcome": "new value inserted with source",
+  "value": "2.83",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "oxide:K2O",
+  "reference_id": "RN-S028-3",
+  "outcome": "new value inserted with source",
+  "value": "0.78",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "oxide:P2O5",
+  "reference_id": "RN-S028-3",
+  "outcome": "new value inserted with source",
+  "value": "0.71",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "mineral:Glass",
+  "reference_id": "RN-S028-9",
+  "outcome": "new value inserted with source",
+  "value": "49.3",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "mineral:Plagioclase",
+  "reference_id": "RN-S028-9",
+  "outcome": "new value inserted with source",
+  "value": "37.1",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "mineral:Olivine",
+  "reference_id": "RN-S028-9",
+  "outcome": "new value inserted with source",
+  "value": "9.0",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "mineral:Cr-spinel",
+  "reference_id": "RN-S028-9",
+  "outcome": "new value inserted with source",
+  "value": "1.1",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "field": "mineral:Ti-magnetite",
+  "reference_id": "RN-S028-9",
+  "outcome": "new value inserted with source",
+  "value": "0.4",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S029",
+  "reference_id": "RN-S029-1",
+  "outcome": "new reference row created",
+  "title": "Material Safety Data Sheet: JSC-1AF, JSC-1A, JSC-1AC Lunar Mare Regolith Simulant (Rev. 4, November 7, 2007; Issue Date September 23, 2005)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S029",
+  "reference_id": "RN-S029-2",
+  "outcome": "new reference row created",
+  "title": "Characterization Summary of JSC-1A Bulk Lunar Mare Regolith Simulant, Version B.1 (Draft, 6/28/2007)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S029",
+  "reference_id": "RN-S029-3",
+  "outcome": "new reference row created",
+  "title": "Characterization Summary of JSC-1AF Lunar Mare Regolith Simulant, Version 1.6.2 (December 12, 2006)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S029",
+  "reference_id": "RN-S029-4",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S029",
+  "reference_id": "RN-S029-5",
+  "outcome": "new reference row created",
+  "title": "Characterization of NUW-LHT-5M (NASA/TM-20240007991)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S029",
+  "reference_id": "RN-S029-6",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1 (Acta Astronautica 231, 200\u2013222)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S029",
+  "reference_id": "RN-S029-7",
+  "outcome": "new reference row created",
+  "title": "The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview (Frontiers in Astronomy and Space Sciences 8, 747821)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S029",
+  "reference_id": "RN-S029-8",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction (Biogeotechnics, 100212)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S029",
+  "reference_id": "RN-S029-9",
+  "outcome": "new reference row created",
+  "title": "Microstructural, mechanical, and thermal properties of microwave-sintered KLS-1 lunar regolith simulant (Ceramics International)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S029",
+  "reference_id": "R027",
+  "outcome": "flagged: reference claim not confirmed",
+  "needs_review": true,
+  "problems": [
+   "No local_path, DOI or URL; I could not locate or open it either. The only 'Wang et al., 2022' among the group's documents (bgtech review reference list) is Yushen Wang et al., Appl Clay Sci 229 (2022) 106673 (DOI 10.1016/j.clay.2022.106673) \u2014 different authors, title and journal from the R027 citation. Nothing found supports the citation as written; remove or replace."
+  ],
+  "field": null
+ },
+ {
+  "simulant_id": "S029",
+  "field": "release_date",
+  "reference_id": "RN-S029-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S029",
+  "field": "availability",
+  "reference_id": "RN-S029-4",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S029",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S029",
+  "field": "institution",
+  "reference_id": "RN-S029-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S029",
+  "field": "particle_size_distribution",
+  "reference_id": "RN-S029-2",
+  "outcome": "new value inserted with source",
+  "value": "1 mm \u2013 5 mm",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-1",
+  "outcome": "new reference row created",
+  "title": "Characterization Summary of JSC-1AF Lunar Mare Regolith Simulant, Version 1.6.2 (December 12, 2006)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-2",
+  "outcome": "new reference row created",
+  "title": "Material Safety Data Sheet: JSC-1AF, JSC-1A, JSC-1AC Lunar Mare Regolith Simulant (Rev. 4, November 7, 2007; Issue Date September 23, 2005)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-3",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide, Revision A (NASA/TM-20240011783)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-4",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-5",
+  "outcome": "new reference row created",
+  "title": "Characterization Summary of JSC-1A Bulk Lunar Mare Regolith Simulant, Version B.1 (Draft, 6/28/2007)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-6",
+  "outcome": "new reference row created",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (LEAG-CAPTEM Simulant Working Group report)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-7",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide (NASA/TM-2010-216446)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-8",
+  "outcome": "new reference row created",
+  "title": "Evaluations of lunar regolith simulants",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-9",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1 (Acta Astronautica 231, 200\u2013222)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S030",
+  "reference_id": "R028",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S030",
+  "field": "particle_size_distribution",
+  "reference_id": "RN-S030-3",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "release_date",
+  "reference_id": "RN-S030-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "availability",
+  "reference_id": "RN-S030-4",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "institution",
+  "reference_id": "RN-S030-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "oxide:SiO2",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "47.1",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "oxide:TiO2",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "1.87",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "oxide:Al2O3",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "17.1",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "oxide:Fe2O3",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "3.41",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "oxide:FeO",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "7.57",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "oxide:MnO",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "0.18",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "oxide:MgO",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "6.9",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "oxide:CaO",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "10.3",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "oxide:Na2O",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "3.3",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "oxide:K2O",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "0.86",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "oxide:P2O5",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "0.76",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "oxide:LOI",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "0.01",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "particle_size_d50",
+  "reference_id": "RN-S030-1",
+  "outcome": "new value inserted with source",
+  "value": "23.72",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S030",
+  "field": "specific_gravity",
+  "reference_id": "RN-S030-4",
+  "outcome": "new value inserted with source",
+  "value": "2.818",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "reference_id": "RN-S081-1",
+  "outcome": "new reference row created",
+  "title": "Electromagnetic Characterization of EAC-1A and JSC-2A Lunar Regolith Simulants (Materials 17, 3633)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S081",
+  "reference_id": "RN-S081-2",
+  "outcome": "new reference row created",
+  "title": "EAC-1A: A novel large-volume lunar regolith simulant (Scientific Reports 10:5473)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S081",
+  "reference_id": "RN-S081-3",
+  "outcome": "new reference row created",
+  "title": "Properties and Characteristics of Regolith-Based Materials for Extraterrestrial Construction (Engineering)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S081",
+  "reference_id": "RN-S081-4",
+  "outcome": "new reference row created",
+  "title": "Additive manufacturing of lunar regolith structures (Open Ceramics)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S081",
+  "reference_id": "RN-S081-5",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction (Biogeotechnics, 100212)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S081",
+  "reference_id": "RN-S081-6",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1 (Acta Astronautica 231, 200\u2013222)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S081",
+  "reference_id": "RN-S081-7",
+  "outcome": "new reference row created",
+  "title": "Material aspects of sintering of EAC-1A lunar regolith simulant (Scientific Reports 13:23053)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S081",
+  "reference_id": "RN-S081-8",
+  "outcome": "new reference row created",
+  "title": "The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview (Frontiers in Astronomy and Space Sciences 8, 747821)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S081",
+  "reference_id": "R102",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S081",
+  "field": "particle_size_d50",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "particle_size_distribution",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "institution",
+  "reference_id": "R102",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "oxide:SiO2",
+  "reference_id": "R102",
+  "outcome": "new value inserted with source",
+  "value": "43.38",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "oxide:Al2O3",
+  "reference_id": "R102",
+  "outcome": "new value inserted with source",
+  "value": "18.30",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "oxide:TiO2",
+  "reference_id": "R102",
+  "outcome": "new value inserted with source",
+  "value": "2.32",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "oxide:Fe2O3",
+  "reference_id": "R102",
+  "outcome": "new value inserted with source",
+  "value": "15.02 (reported as 'Fe2O3; FeO', i.e. total iron)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "oxide:MnO",
+  "reference_id": "R102",
+  "outcome": "new value inserted with source",
+  "value": "0.22",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "oxide:CaO",
+  "reference_id": "R102",
+  "outcome": "new value inserted with source",
+  "value": "11.47",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "oxide:MgO",
+  "reference_id": "R102",
+  "outcome": "new value inserted with source",
+  "value": "3.82",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "oxide:K2O",
+  "reference_id": "R102",
+  "outcome": "new value inserted with source",
+  "value": "0.98",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "oxide:Na2O",
+  "reference_id": "R102",
+  "outcome": "new value inserted with source",
+  "value": "3.14",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "oxide:P2O5",
+  "reference_id": "R102",
+  "outcome": "new value inserted with source",
+  "value": "0.69",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "mineral:Anorthite",
+  "reference_id": "R102",
+  "outcome": "new value inserted with source",
+  "value": "ca. 92 (of crystalline fraction, Rietveld XRD; amorphous phase present but not quantified)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "mineral:Forsterite",
+  "reference_id": "R102",
+  "outcome": "new value inserted with source",
+  "value": "ca. 8 (of crystalline fraction, Rietveld XRD)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "bulk_density",
+  "reference_id": "RN-S081-2",
+  "outcome": "new value inserted with source",
+  "value": "1.44",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S081",
+  "field": "specific_gravity",
+  "reference_id": "RN-S081-2",
+  "outcome": "new value inserted with source",
+  "value": "2.89",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S085",
+  "reference_id": "RN-S085-1",
+  "outcome": "new reference row created",
+  "title": "Material aspects of sintering of EAC-1A lunar regolith simulant (Scientific Reports 13:23053)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S085",
+  "reference_id": "R121",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S085",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S085",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S085",
+  "field": "institution",
+  "reference_id": "RN-S085-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "reference_id": "RN-S013-1",
+  "outcome": "new reference row created",
+  "title": "Development and characterization of the PolyU-1 lunar regolith simulant based on Chang'e-5 returned samples",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S013",
+  "reference_id": "RN-S013-2",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S013",
+  "reference_id": "RN-S013-3",
+  "outcome": "new reference row created",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01 (Acta Astronautica 224 (2024) 148\u2013160) - text embedded in saved ResearchGate page",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S013",
+  "reference_id": "RN-S013-4",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S013",
+  "reference_id": "RN-S013-5",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S013",
+  "reference_id": "RN-S013-6",
+  "outcome": "new reference row created",
+  "title": "Properties of TJ-1 Lunar Soil Simulant - saved ResearchGate page (aggregates snippets of citing articles)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S013",
+  "reference_id": "R013",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S013",
+  "reference_id": "R108",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S013",
+  "field": "bulk_density",
+  "reference_id": "R013",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "cohesion",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "friction_angle",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "specific_gravity",
+  "reference_id": "R013",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "density_g_cm3",
+  "reference_id": "R013",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "particle_size_d50",
+  "reference_id": "R013",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "particle_morphology",
+  "reference_id": "R013",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "release_date",
+  "reference_id": "R013",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "lunar_sample_reference",
+  "reference_id": "R013",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "institution",
+  "reference_id": "R013",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "oxide:SiO2",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "42.68",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "oxide:TiO2",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "1.31",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "oxide:Al2O3",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "15.20",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "oxide:FeO",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "26.76",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "oxide:MgO",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "3.44",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "oxide:MnO",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "0.11",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "oxide:CaO",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "5.62",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "oxide:Na2O",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "3.23",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "oxide:P2O5",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "0.13",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "oxide:SO2",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "0.03",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "mineral:Pyroxene",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "19.48",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "mineral:Plagioclase",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "41.02",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "mineral:Ilmenite",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "1.65",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "mineral:Olivine",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "1.66",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "mineral:Glass",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "1.32",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "mineral:Magnetite",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "30.53",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "mineral:Hematite",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "1.03",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S013",
+  "field": "mineral:Others",
+  "reference_id": "R013",
+  "outcome": "new value inserted with source",
+  "value": "3.31",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S026",
+  "reference_id": "RN-S026-1",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S026",
+  "reference_id": "RN-S026-2",
+  "outcome": "new reference row created",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01 (Acta Astronautica 224 (2024) 148\u2013160) - text embedded in saved ResearchGate page",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S026",
+  "reference_id": "RN-S026-3",
+  "outcome": "new reference row created",
+  "title": "Development and characterization of the PolyU-1 lunar regolith simulant based on Chang'e-5 returned samples",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S026",
+  "reference_id": "RN-S026-4",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S026",
+  "reference_id": "RN-S026-5",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S026",
+  "reference_id": "R024",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S026",
+  "field": "particle_size_distribution",
+  "reference_id": "RN-S026-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S026",
+  "field": "release_date",
+  "reference_id": "R024",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S026",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S026",
+  "field": "lunar_sample_reference",
+  "reference_id": "R024",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S026",
+  "field": "institution",
+  "reference_id": "RN-S026-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S026",
+  "field": "particle_size_d50",
+  "reference_id": "R024",
+  "outcome": "new value inserted with source",
+  "value": "85.7 \u00b5m",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "reference_id": "RN-S045-1",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S045",
+  "reference_id": "RN-S045-2",
+  "outcome": "new reference row created",
+  "title": "TUBS-M and TUBS-T based modular Regolith Simulant System for the support of lunar ISRU activities",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S045",
+  "reference_id": "RN-S045-3",
+  "outcome": "new reference row created",
+  "title": "Properties and Characteristics of Regolith-Based Materials for Extraterrestrial Construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S045",
+  "reference_id": "RN-S045-4",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S045",
+  "reference_id": "RN-S045-5",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S045",
+  "reference_id": "RN-S045-6",
+  "outcome": "new reference row created",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01 (Acta Astronautica 224 (2024) 148\u2013160) - text embedded in saved ResearchGate page",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S045",
+  "reference_id": "RN-S045-7",
+  "outcome": "new reference row created",
+  "title": "JLU-H: A novel lunar highland regolith simulant for use in large-scale engineering experiments (ScienceDirect abstract/snippet page)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S045",
+  "reference_id": "RN-S045-8",
+  "outcome": "new reference row created",
+  "title": "Properties of TJ-1 Lunar Soil Simulant - saved ResearchGate page (aggregates snippets of citing articles)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S045",
+  "reference_id": "RN-S045-9",
+  "outcome": "new reference row created",
+  "title": "Development of a novel lunar highland soil simulant (LSS-ISAC-1) and its geotechnical properties for Chandrayaan missions - saved ResearchGate page",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S045",
+  "reference_id": "RN-S045-10",
+  "outcome": "new reference row created",
+  "title": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S045",
+  "reference_id": "R039",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S045",
+  "reference_id": "R095",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S045",
+  "field": "bulk_density",
+  "reference_id": "R095",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "cohesion",
+  "reference_id": "R095",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "friction_angle",
+  "reference_id": "R095",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "specific_gravity",
+  "reference_id": "R095",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "release_date",
+  "outcome": "withheld: refuted by verification",
+  "problems": [
+   "A group document does state 2008 for NAO-1: the saved TJ-1 ResearchGate page (NEW8) carries the table row 'NAO-1 [40] Highlands General 2008' from the Azami et al. Aug 2024 preprint snippet \u2013 so the value is not strictly 'unsupported'; it can be traced to NEW8, as the extractor's own note acknowledges. The support is weak and conflicting: the primary paper (R095, p. 53) is dated 'Journal of Aerospace Engineering, Vol. 22, No. 1, January 1, 2009' with the manuscript 'submitted ... April 23, 2007; approved on December 10, 2007', and NEW6 (Ruan et al. 2024) lists 'NAO-1 China 2009'. Curator should either cite NEW8 for 2008 or change to 2009 (R095) / 2007 (development); '2008' never appears in R095."
+  ],
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "lunar_sample_reference",
+  "reference_id": "R095",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "institution",
+  "reference_id": "R095",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "oxide:SiO2",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "43.83",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "oxide:TiO2",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "0.77",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "oxide:Al2O3",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "25.79",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "oxide:Fe2O3",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "2.62",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "oxide:FeO",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "3.52",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "oxide:MnO",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "0.09",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "oxide:MgO",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "4.93",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "oxide:CaO",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "15.12",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "oxide:Na2O",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "1.41",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "oxide:K2O",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "0.47",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "oxide:P2O5",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "0.08",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "oxide:LOI",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "1.10",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "mineral:Feldspar",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "60.0 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "mineral:Pyroxene+hornblende",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "19.2 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "mineral:Opaque+glass",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "20.8 (vol%)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "particle_size_d50",
+  "reference_id": "R095",
+  "outcome": "new value inserted with source",
+  "value": "41\u201361 \u00b5m (median; mean 53\u201381 \u00b5m)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S075",
+  "reference_id": "RN-S075-1",
+  "outcome": "new reference row created",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01 - saved ResearchGate page (aggregates snippets of citing articles, incl. Teng et al. 2025)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S075",
+  "reference_id": "RN-S075-2",
+  "outcome": "new reference row created",
+  "title": "Properties of TJ-1 Lunar Soil Simulant - saved ResearchGate page (aggregates snippets of citing articles, incl. Teng et al. 2025)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S075",
+  "reference_id": "R072",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S075",
+  "reference_id": "R097",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S075",
+  "field": "bulk_density",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S075",
+  "field": "cohesion",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S075",
+  "field": "friction_angle",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S075",
+  "field": "particle_morphology",
+  "reference_id": "R072",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S075",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S075",
+  "field": "lunar_sample_reference",
+  "reference_id": "R072",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S075",
+  "field": "institution",
+  "reference_id": "R072",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "reference_id": "RN-S120-1",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S120",
+  "reference_id": "RN-S120-2",
+  "outcome": "new reference row created",
+  "title": "JLU-H: A novel lunar highland regolith simulant for use in large-scale engineering experiments (ScienceDirect landing page)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S120",
+  "reference_id": "R078",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S120",
+  "reference_id": "R103",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S120",
+  "field": "bulk_density",
+  "reference_id": "R078",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "cohesion",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "friction_angle",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "specific_gravity",
+  "reference_id": "R078",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "density_g_cm3",
+  "reference_id": "R078",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "particle_size_d50",
+  "reference_id": "R078",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "particle_size_distribution",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "release_date",
+  "reference_id": "R078",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "lunar_sample_reference",
+  "reference_id": "R078",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "institution",
+  "reference_id": "R078",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "mineral:Pyroxene",
+  "reference_id": "R078",
+  "outcome": "new value inserted with source",
+  "value": "41.7",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "mineral:Hedenbergite",
+  "reference_id": "R078",
+  "outcome": "new value inserted with source",
+  "value": "27.6",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "mineral:Augite",
+  "reference_id": "R078",
+  "outcome": "new value inserted with source",
+  "value": "14.1",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "mineral:Plagioclase",
+  "reference_id": "R078",
+  "outcome": "new value inserted with source",
+  "value": "32.4 (anorthite)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "mineral:Olivine",
+  "reference_id": "R078",
+  "outcome": "new value inserted with source",
+  "value": "9.1 (forsterite)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "mineral:Ilmenite",
+  "reference_id": "R078",
+  "outcome": "new value inserted with source",
+  "value": "6.2",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "mineral:Glass",
+  "reference_id": "R078",
+  "outcome": "new value inserted with source",
+  "value": "5.0",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "mineral:Quartz",
+  "reference_id": "R078",
+  "outcome": "new value inserted with source",
+  "value": "2.1",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "mineral:Hematite",
+  "reference_id": "R078",
+  "outcome": "new value inserted with source",
+  "value": "3.4",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S126",
+  "reference_id": "RN-S126-1",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S126",
+  "reference_id": "RN-S126-2",
+  "outcome": "new reference row created",
+  "title": "Sintering of HUST-1 lunar regolith simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S126",
+  "reference_id": "RN-S126-3",
+  "outcome": "new reference row created",
+  "title": "Physical, mechanical and thermal properties of vacuum sintered HUST-1 lunar regolith simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S126",
+  "reference_id": "RN-S126-4",
+  "outcome": "new reference row created",
+  "title": "Properties and Characteristics of Regolith-Based Materials for Extraterrestrial Construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S126",
+  "reference_id": "RN-S126-5",
+  "outcome": "new reference row created",
+  "title": "JLU-H: A novel lunar highland regolith simulant for use in large-scale engineering experiments (ScienceDirect landing page, 'Cited by' excerpt from a 2024 Construction and Building Materials article)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S126",
+  "reference_id": "RN-S126-6",
+  "outcome": "new reference row created",
+  "title": "Microstructural, mechanical, and thermal properties of microwave-sintered KLS-1 lunar regolith simulant (ScienceDirect landing page, 'Cited by' list)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S126",
+  "reference_id": "R152",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S126",
+  "field": "release_date",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S126",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S126",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S126",
+  "field": "institution",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S126",
+  "field": "particle_size_distribution",
+  "reference_id": "RN-S126-1",
+  "outcome": "new value inserted with source",
+  "value": "d < 230 \u00b5m",
+  "needs_review": false
+ }
+]
