@@ -213,16 +213,20 @@ def apply_decisions(db_path: Path | str, decisions: dict[str, dict]) -> list[dic
                     (f"C-{sid}-{i:02d}", sid, "mineral", m["name"], m["pct"]),
                 )
 
+        # Only a web address is stored as a source URL. Extractors often open a local
+        # working copy and report its path; that path is kept in the findings file, not
+        # here, because on the site it would render as a link into github.io and 404.
+        public_url = d["source_url"] if str(d["source_url"] or "").lower().startswith(("http://", "https://")) else None
         con.execute(
             """UPDATE simulants SET composition_status=?, composition_source_title=?, composition_source_url=?,
                                     composition_source_kind=?, composition_needs_review=?
                WHERE simulant_id=?""",
-            (d["status"], d["source_title"] or None, d["source_url"] or None,
+            (d["status"], d["source_title"] or None, public_url,
              d["source_kind"] if d["source_kind"] != "none" else None,
              1 if d["needs_review"] else 0, sid),
         )
-        if d["source_kind"] == "manufacturer_datasheet" and d["source_url"]:
-            con.execute("UPDATE simulants SET datasheet_url=? WHERE simulant_id=?", (d["source_url"], sid))
+        if d["source_kind"] == "manufacturer_datasheet" and public_url:
+            con.execute("UPDATE simulants SET datasheet_url=? WHERE simulant_id=?", (public_url, sid))
 
         name = con.execute("SELECT name FROM simulants WHERE simulant_id=?", (sid,)).fetchone()
         log.append({

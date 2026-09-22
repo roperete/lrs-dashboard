@@ -80,7 +80,10 @@ export function DataSourceLine({ simulant }: { simulant: Simulant }) {
   if (status !== 'verified') return null;
 
   const title = simulant.composition_source_title || 'Source on file';
-  const url = simulant.composition_source_url || simulant.datasheet_url || '';
+  // Only a web address may become a link. The audit's working copies live on local
+  // disk; a local path rendered as an href resolves against this site and 404s.
+  const candidate = simulant.composition_source_url || simulant.datasheet_url || '';
+  const url = /^https?:\/\//i.test(candidate) ? candidate : '';
   const kindLabel =
     simulant.composition_source_kind === 'manufacturer_datasheet'
       ? 'Manufacturer data sheet'

@@ -1,0 +1,274 @@
+[
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LHS-1_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-1-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LHS-1_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-1-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LHS-1D_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-1D-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081546",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LHS-1D_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-1D-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081546",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LHS-1E_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-1E-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081546",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LHS-1E_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-1E-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081546",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LHS-2_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-2-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LHS-2_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-2-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LHS-2E_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-2E-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LHS-2E_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-2E-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LHS-1-25A_spec.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-1-25A_Spec_Sheet.pptx.pdf?v=1761053856",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LHS-1-25A_spec.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-1-25A_Spec_Sheet.pptx.pdf?v=1761053856",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LMS-1_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LMS-1-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081546",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LMS-1_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LMS-1-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081546",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LMS-1D_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LMS-1D-SPEC-SHEET-DEC2025.pptx_a39cf2a4-4f51-4714-b6ad-421e25e0f295.pdf?v=1765990108",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LMS-1D_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LMS-1D-SPEC-SHEET-DEC2025.pptx_a39cf2a4-4f51-4714-b6ad-421e25e0f295.pdf?v=1765990108",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LMS-1E_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LMS-1E-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081546",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LMS-1E_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LMS-1E-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081546",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LMS-2_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LMS-2-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LMS-2_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LMS-2-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LSP-2_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LSP-2-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/SRT/LSP-2_spec_Dec2025.pdf",
+  "new": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LSP-2-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S057",
+  "name": "OPRH2N",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf",
+  "new": "https://www.offplanetresearch.com/s/OPR-General-Lunar-Regolith-Simulants-Data-Sheet-yek3.pdf",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S057",
+  "name": "OPRH2N",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf",
+  "new": "https://www.offplanetresearch.com/s/OPR-General-Lunar-Regolith-Simulants-Data-Sheet-yek3.pdf",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf",
+  "new": "https://www.offplanetresearch.com/s/OPR-General-Lunar-Regolith-Simulants-Data-Sheet-yek3.pdf",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf",
+  "new": "https://www.offplanetresearch.com/s/OPR-General-Lunar-Regolith-Simulants-Data-Sheet-yek3.pdf",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf",
+  "new": "https://www.offplanetresearch.com/s/OPR-General-Lunar-Regolith-Simulants-Data-Sheet-yek3.pdf",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf",
+  "new": "https://www.offplanetresearch.com/s/OPR-General-Lunar-Regolith-Simulants-Data-Sheet-yek3.pdf",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf",
+  "new": "https://www.offplanetresearch.com/s/OPR-General-Lunar-Regolith-Simulants-Data-Sheet-yek3.pdf",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf",
+  "new": "https://www.offplanetresearch.com/s/OPR-General-Lunar-Regolith-Simulants-Data-Sheet-yek3.pdf",
+  "reason": "manufacturer data sheet public URL"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/Hispansion/TLH-0_TDS.pdf",
+  "new": "https://www.hispansion.io/product-services/regolith-simulants/core-simulant",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "field": "composition_source_title",
+  "old": "Hispansion \u2014 Technical Data Sheet: TLH-0 (TDS-TLH-0-v1.1)",
+  "new": "Hispansion Technical Data Sheet TDS-TLH-0-v1.1 (11 Nov 2025), supplied by the manufacturer; TerraLun Core product page linked",
+  "reason": "manufacturer does not publish the TDS; title names the document, link goes to the product page"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "field": "composition_source_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/Hispansion/TLM-0_TDS.pdf",
+  "new": "https://www.hispansion.io/product-services/regolith-simulants/core-simulant",
+  "reason": "local working-copy path replaced by the document's public URL (HEAD-checked 2026-09-22)"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "field": "composition_source_title",
+  "old": "Hispansion \u2014 Technical Data Sheet: TLM-0 (TDS-TLM-0-v1.1)",
+  "new": "Hispansion Technical Data Sheet TDS-TLM-0-v1.1 (11 Nov 2025), supplied by the manufacturer; TerraLun Core product page linked",
+  "reason": "manufacturer does not publish the TDS; title names the document, link goes to the product page"
+ }
+]

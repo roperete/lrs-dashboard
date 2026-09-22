@@ -280,6 +280,21 @@ class ApplyTest(unittest.TestCase):
         self.assertEqual(withheld["oxides_removed"], 1)
         self.assertEqual(withheld["minerals_removed"], 1)
 
+    def test_local_file_path_is_never_stored_as_a_source_url(self):
+        # S005 has never been given any URL, so both columns must stay empty
+        decisions = {
+            "S005": {"action": "replace", "status": STATUS_VERIFIED, "oxides": [{"name": "SiO2", "wt_pct": 49.12}],
+                     "minerals": [], "source_url": "/Volumes/SSD/DIRT/Sources/datasheets/SRT/LHS-1.pdf",
+                     "source_title": "LHS-1 Fact Sheet", "source_kind": "manufacturer_datasheet",
+                     "reason": "confirmed", "needs_review": False},
+        }
+        apply_decisions(self.db, decisions)
+        con = sqlite3.connect(self.db)
+        src, ds = con.execute("SELECT composition_source_url, datasheet_url FROM simulants WHERE simulant_id='S005'").fetchone()
+        con.close()
+        self.assertIsNone(src)
+        self.assertIsNone(ds)
+
     def test_apply_is_idempotent(self):
         apply_decisions(self.db, self.decisions)
         self.assertEqual(self.rows("chemical_compositions", "S002"), 1)

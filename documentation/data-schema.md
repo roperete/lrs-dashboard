@@ -52,7 +52,7 @@ All FK references verified consistent as of v2.8.3.
 | datasheet_url | string\|null | Manufacturer data sheet, when the composition source is one |
 | composition_status | string | `verified` \| `withheld_unverified` \| `not_published` \| `not_extracted` — see [data-policy.md](data-policy.md) |
 | composition_source_title | string\|null | The one document the composition was read from (set when verified) |
-| composition_source_url | string\|null | Link or local path to that document |
+| composition_source_url | string\|null | Public URL of that document. Never a local path: the site renders it as a link. Working copies live under DIRT/Sources/ and in the findings file |
 | composition_source_kind | string\|null | `manufacturer_datasheet` \| `primary_paper` \| `agency_report` |
 | composition_needs_review | 0\|1 | Set when the audit accepted a value with a caveat worth a human look |
 
