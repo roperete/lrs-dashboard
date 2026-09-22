@@ -1,0 +1,1154 @@
+[
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "General purpose",
+  "source": "SRT/LHS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "table": "simulants",
+  "field": "ph",
+  "old": null,
+  "new": 9.75,
+  "source": "SRT/LHS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "table": "simulants",
+  "field": "angle_of_repose",
+  "old": null,
+  "new": "22.62\u00b0 (10 g), 36.58\u00b0 (250 g)",
+  "source": "SRT/LHS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "003-01-001-1225",
+  "source": "SRT/LHS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2025-12",
+  "source": "SRT/LHS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Bulk chemistry by XRF, relative abundances. Mineralogy 'as mixed', by feedstock component. Glass-rich basalt sourced from Merriam Crater, the same source as JSC-1. pH measured with a calibrated digital probe at ambient temperature in a humidity-neutral environment. Primary hazard is dust inhalation; wear a respirator in dusty conditions.",
+  "source": "SRT/LHS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "Anorthosite, Glass-rich basalt",
+  "new": "Anorthosite; Glass-rich basalt (Merriam Crater); Ilmenite; Bronzite; Olivine",
+  "source": "SRT/LHS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "Extra-fine lunar highlands simulant for dust studies",
+  "source": "SRT/LHS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "table": "simulants",
+  "field": "ph",
+  "old": null,
+  "new": 9.87,
+  "source": "SRT/LHS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "table": "simulants",
+  "field": "particle_size_mean_um",
+  "old": null,
+  "new": 7,
+  "source": "SRT/LHS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "table": "simulants",
+  "field": "angle_of_repose",
+  "old": null,
+  "new": "48.6\u00b0 (10 g), 45.2\u00b0 (250 g)",
+  "source": "SRT/LHS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "003-03-001-1225",
+  "source": "SRT/LHS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2025-12",
+  "source": "SRT/LHS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Bulk chemistry by XRF, relative abundances. Mineralogy 'as mixed', by feedstock component. Glass-rich basalt sourced from Merriam Crater, the same source as JSC-1. pH measured with a calibrated digital probe at ambient temperature in a humidity-neutral environment. Primary hazard is dust inhalation; wear a respirator in dusty conditions.",
+  "source": "SRT/LHS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "Anorthosite, Glass-rich basalt",
+  "new": "Anorthosite; Glass-rich basalt (Merriam Crater); Ilmenite; Bronzite; Olivine",
+  "source": "SRT/LHS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "Engineering Grade",
+  "source": "SRT/LHS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "table": "simulants",
+  "field": "ph",
+  "old": null,
+  "new": 10.3,
+  "source": "SRT/LHS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "table": "simulants",
+  "field": "angle_of_repose",
+  "old": null,
+  "new": "21.97\u00b0 (10 g), 41.92\u00b0 (250 g)",
+  "source": "SRT/LHS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "003-09-001-1225",
+  "source": "SRT/LHS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2025-12",
+  "source": "SRT/LHS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Bulk chemistry by XRF, relative abundances. Mineralogy 'as mixed', by feedstock component. Glass-rich basalt sourced from Merriam Crater, the same source as JSC-1. pH measured with a calibrated digital probe at ambient temperature in a humidity-neutral environment. Primary hazard is dust inhalation; wear a respirator in dusty conditions.",
+  "source": "SRT/LHS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "{\"Anorthosite\": 75.0, \"Glass-rich basalt\": 25.0}",
+  "new": "Anorthosite; Glass-rich basalt (Merriam Crater)",
+  "source": "SRT/LHS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "General purpose",
+  "source": "SRT/LHS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "table": "simulants",
+  "field": "ph",
+  "old": null,
+  "new": 10.16,
+  "source": "SRT/LHS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "table": "simulants",
+  "field": "angle_of_repose",
+  "old": null,
+  "new": "30.61\u00b0 (10 g), 42.71\u00b0 (250 g)",
+  "source": "SRT/LHS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "001-11-001-1225",
+  "source": "SRT/LHS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2025-12",
+  "source": "SRT/LHS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Bulk chemistry by XRF, relative abundances. Mineralogy 'as mixed', by feedstock component. Glass-rich basalt sourced from Merriam Crater, the same source as JSC-1. pH measured with a calibrated digital probe at ambient temperature in a humidity-neutral environment. Primary hazard is dust inhalation; wear a respirator in dusty conditions.",
+  "source": "SRT/LHS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": null,
+  "new": "Anorthosite; Glass-rich basalt (Merriam Crater); Ilmenite; Bronzite; Olivine",
+  "source": "SRT/LHS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "Engineering Grade 2mm",
+  "source": "SRT/LHS-2E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "table": "simulants",
+  "field": "ph",
+  "old": null,
+  "new": 10.17,
+  "source": "SRT/LHS-2E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "table": "simulants",
+  "field": "angle_of_repose",
+  "old": null,
+  "new": "23.13\u00b0 (10 g), 39.55\u00b0 (250 g)",
+  "source": "SRT/LHS-2E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "001-13-001-1225",
+  "source": "SRT/LHS-2E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2025-12",
+  "source": "SRT/LHS-2E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Bulk chemistry by XRF, relative abundances. Mineralogy 'as mixed', by feedstock component. Glass-rich basalt sourced from Merriam Crater, the same source as JSC-1. pH measured with a calibrated digital probe at ambient temperature in a humidity-neutral environment. Primary hazard is dust inhalation; wear a respirator in dusty conditions.",
+  "source": "SRT/LHS-2E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": null,
+  "new": "Anorthosite; Glass-rich basalt (Merriam Crater)",
+  "source": "SRT/LHS-2E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "Higher Fidelity",
+  "source": "SRT/LHS-1-25A_spec.pdf"
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "table": "simulants",
+  "field": "particle_size_mean_um",
+  "old": null,
+  "new": 93,
+  "source": "SRT/LHS-1-25A_spec.pdf"
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "table": "simulants",
+  "field": "angle_of_repose",
+  "old": null,
+  "new": "44.4\u00b0 (10 g), 42.78\u00b0 (250 g)",
+  "source": "SRT/LHS-1-25A_spec.pdf"
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "LHS-1-25A fact sheet, April 2023",
+  "source": "SRT/LHS-1-25A_spec.pdf"
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2023-04",
+  "source": "SRT/LHS-1-25A_spec.pdf"
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Bulk chemistry by XRF, relative abundances. Mineralogy 'as mixed'. Agglutinate mineralogy: Anorthosite 99.0, Iron Powder 1.0. Primary hazard is dust inhalation.",
+  "source": "SRT/LHS-1-25A_spec.pdf"
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "Anorthosite, Glass-rich basalt, Agglutinates",
+  "new": "Anorthosite; Agglutinates (99.0 anorthosite, 1.0 iron powder); Glass-rich basalt; Ilmenite; Pyroxene; Olivine",
+  "source": "SRT/LHS-1-25A_spec.pdf"
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "General purpose",
+  "source": "SRT/LMS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "table": "simulants",
+  "field": "ph",
+  "old": null,
+  "new": 9.65,
+  "source": "SRT/LMS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "table": "simulants",
+  "field": "angle_of_repose",
+  "old": null,
+  "new": "11.79\u00b0 (10 g), 34.02\u00b0 (250 g)",
+  "source": "SRT/LMS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "003-02-001-1225",
+  "source": "SRT/LMS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2025-12",
+  "source": "SRT/LMS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Bulk chemistry by XRF, relative abundances. Mineralogy 'as mixed', by feedstock component. Glass-rich basalt sourced from Merriam Crater, the same source as JSC-1. pH measured with a calibrated digital probe at ambient temperature in a humidity-neutral environment. Primary hazard is dust inhalation; wear a respirator in dusty conditions.",
+  "source": "SRT/LMS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "Pyroxene, Glass-rich basalt, Anorthosite, Olivine",
+  "new": "Bronzite; Glass-rich basalt (Merriam Crater); Anorthosite; Olivine; Ilmenite",
+  "source": "SRT/LMS-1_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "Extra-fine Lunar mare simulant for dust studies",
+  "source": "SRT/LMS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "table": "simulants",
+  "field": "ph",
+  "old": null,
+  "new": 10.49,
+  "source": "SRT/LMS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "table": "simulants",
+  "field": "particle_size_mean_um",
+  "old": null,
+  "new": 9.34,
+  "source": "SRT/LMS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "table": "simulants",
+  "field": "angle_of_repose",
+  "old": null,
+  "new": "46.5\u00b0",
+  "source": "SRT/LMS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "003-04-001-1225",
+  "source": "SRT/LMS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2025-12",
+  "source": "SRT/LMS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Bulk chemistry by XRF, relative abundances. Mineralogy 'as mixed', by feedstock component. Glass-rich basalt sourced from Merriam Crater, the same source as JSC-1. pH measured with a calibrated digital probe at ambient temperature in a humidity-neutral environment. Primary hazard is dust inhalation; wear a respirator in dusty conditions.",
+  "source": "SRT/LMS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "Pyroxene, Glass-rich basalt, Anorthosite, Olivine",
+  "new": "Bronzite; Glass-rich basalt (Merriam Crater); Anorthosite; Olivine; Ilmenite",
+  "source": "SRT/LMS-1D_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "Engineering Grade",
+  "source": "SRT/LMS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "table": "simulants",
+  "field": "ph",
+  "old": null,
+  "new": 10.17,
+  "source": "SRT/LMS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "table": "simulants",
+  "field": "angle_of_repose",
+  "old": null,
+  "new": "18.99\u00b0 (10 g), 30.89\u00b0 (250 g)",
+  "source": "SRT/LMS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "001-23-001-1225",
+  "source": "SRT/LMS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2025-12",
+  "source": "SRT/LMS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Bulk chemistry by XRF, relative abundances. Estimated grain density 2.70 g/cm3. No mineralogy is published for this grade. pH by calibrated digital probe. Primary hazard is dust inhalation.",
+  "source": "SRT/LMS-1E_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "General purpose",
+  "source": "SRT/LMS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "table": "simulants",
+  "field": "ph",
+  "old": null,
+  "new": 10.02,
+  "source": "SRT/LMS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "table": "simulants",
+  "field": "angle_of_repose",
+  "old": null,
+  "new": "19.36\u00b0 (10 g), 34.85\u00b0 (250 g)",
+  "source": "SRT/LMS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "001-14-001-1225",
+  "source": "SRT/LMS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2025-12",
+  "source": "SRT/LMS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Bulk chemistry by XRF, relative abundances. Mineralogy 'as mixed', by feedstock component. Glass-rich basalt sourced from Merriam Crater, the same source as JSC-1. pH measured with a calibrated digital probe at ambient temperature in a humidity-neutral environment. Primary hazard is dust inhalation; wear a respirator in dusty conditions.",
+  "source": "SRT/LMS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "{\"Bronzite\": 32.8, \"Glass-rich Basalt\": 32.0, \"Anorthosite\": 19.8, \"Olivine\": 11.1, \"Ilmenite\": 4.3}",
+  "new": "Bronzite; Glass-rich basalt (Merriam Crater); Anorthosite; Olivine; Ilmenite",
+  "source": "SRT/LMS-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "General purpose",
+  "source": "SRT/LSP-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "table": "simulants",
+  "field": "ph",
+  "old": null,
+  "new": 10.14,
+  "source": "SRT/LSP-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "table": "simulants",
+  "field": "angle_of_repose",
+  "old": null,
+  "new": "14.96\u00b0 (10 g), 37.39\u00b0 (250 g)",
+  "source": "SRT/LSP-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "001-12-001-1225",
+  "source": "SRT/LSP-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2025-12",
+  "source": "SRT/LSP-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Bulk chemistry by XRF, relative abundances. Mineralogy 'as mixed', by feedstock component. Glass-rich basalt sourced from Merriam Crater, the same source as JSC-1. pH measured with a calibrated digital probe at ambient temperature in a humidity-neutral environment. Primary hazard is dust inhalation; wear a respirator in dusty conditions.",
+  "source": "SRT/LSP-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "{\"Anorthosite\": 90.0, \"Glass-rich Basalt\": 10.0}",
+  "new": "Anorthosite; Glass-rich basalt (Merriam Crater)",
+  "source": "SRT/LSP-2_spec_Dec2025.pdf"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "table": "simulants",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/Hispansion/TLH-0_TDS.pdf",
+  "new": null,
+  "source": "Hispansion/TLH-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "TerraLun Core",
+  "source": "Hispansion/TLH-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "table": "simulants",
+  "field": "particle_size_mean_um",
+  "old": null,
+  "new": 390.5,
+  "source": "Hispansion/TLH-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "table": "simulants",
+  "field": "bulk_density_range",
+  "old": null,
+  "new": "1.40 \u2013 1.94 g/cm3 (min \u2013 max; mean 1.67)",
+  "source": "Hispansion/TLH-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "table": "simulants",
+  "field": "particle_morphology",
+  "old": null,
+  "new": "Aspect ratio 0.70287; root form factor / circularity 0.88048 (dynamic image analysis, CAMSIZER X2)",
+  "source": "Hispansion/TLH-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "table": "simulants",
+  "field": "magnetic_susceptibility",
+  "old": null,
+  "new": "4495.7 x10-9 m3/kg (mass susceptibility)",
+  "source": "Hispansion/TLH-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "TDS-TLH-0-v1.1",
+  "source": "Hispansion/TLH-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2025-11-11",
+  "source": "Hispansion/TLH-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Chemistry by XRF, Bruker M4 TORNADO (UPV/EHU). Mineralogy by XRD, PANalytical Xpert PRO (UCLM), supplemented by Raman spectroscopy (UPV/EHU). PSD and particle geometry by dynamic image analysis, CAMSIZER X2. Cohesion and friction angle by direct shear at ~25 kPa and ~50 kPa (UPM-ETSIME). Magnetic susceptibility by PPMS DynaCool magnetometer (UGR-CIC). 100 % European sourced and manufactured. Na2O below the instrument's quantification limit. Safety data sheet available on request.",
+  "source": "Hispansion/TLH-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "Anorthosite, Basalt, Altered Peridotite",
+  "new": "Anorthosite; Basalt; Altered Peridotite",
+  "source": "Hispansion/TLH-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "table": "simulant_extra",
+  "field": "application",
+  "old": "General",
+  "new": "Geotechnical and mobility testing; excavation and construction trials; large-scale testbeds; ISRU process development; dust and environmental studies; filtration and sealing validation; scientific research; technology demonstration",
+  "source": "Hispansion/TLH-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "table": "simulants",
+  "field": "datasheet_url",
+  "old": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/Hispansion/TLM-0_TDS.pdf",
+  "new": null,
+  "source": "Hispansion/TLM-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "TerraLun Core",
+  "source": "Hispansion/TLM-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "table": "simulants",
+  "field": "particle_size_mean_um",
+  "old": null,
+  "new": 291.67,
+  "source": "Hispansion/TLM-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "table": "simulants",
+  "field": "bulk_density_range",
+  "old": null,
+  "new": "1.27 \u2013 1.76 g/cm3 (min \u2013 max; mean 1.52)",
+  "source": "Hispansion/TLM-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "table": "simulants",
+  "field": "particle_morphology",
+  "old": null,
+  "new": "Aspect ratio 0.71469; root form factor / circularity 0.87628 (dynamic image analysis, CAMSIZER X2)",
+  "source": "Hispansion/TLM-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "table": "simulants",
+  "field": "magnetic_susceptibility",
+  "old": null,
+  "new": "7536.7 x10-9 m3/kg (mass susceptibility)",
+  "source": "Hispansion/TLM-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "TDS-TLM-0-v1.1",
+  "source": "Hispansion/TLM-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2025-11-11",
+  "source": "Hispansion/TLM-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "Chemistry by XRF, Bruker M4 TORNADO (UPV/EHU). Mineralogy by XRD, PANalytical Xpert PRO (UCLM), supplemented by Raman spectroscopy (UPV/EHU). PSD and particle geometry by dynamic image analysis, CAMSIZER X2. Cohesion and friction angle by direct shear at ~25 kPa and ~50 kPa (UPM-ETSIME). Magnetic susceptibility by PPMS DynaCool magnetometer (UGR-CIC). 100 % European sourced and manufactured. Na2O below the instrument's quantification limit. Safety data sheet available on request.",
+  "source": "Hispansion/TLM-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "Basalt, Anorthosite, Altered Peridotite",
+  "new": "Basalt; Anorthosite; Altered Peridotite",
+  "source": "Hispansion/TLM-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "table": "simulant_extra",
+  "field": "application",
+  "old": "General",
+  "new": "Geotechnical and mobility testing; excavation and construction trials; large-scale testbeds; ISRU process development; dust and environmental studies; filtration and sealing validation; scientific research; technology demonstration",
+  "source": "Hispansion/TLM-0_TDS.pdf"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "General simulant",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "table": "simulants",
+  "field": "bulk_density_range",
+  "old": null,
+  "new": "1.2 (loose) \u2013 1.5 (settled) g/cc",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "table": "simulants",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "Cumulative, % by mass coarser than: 4750.0 \u00b5m 0.65; 2000.0 \u00b5m 4.19; 850.0 \u00b5m 9.09; 425.0 \u00b5m 15.43; 250.0 \u00b5m 20.32; 150.0 \u00b5m 26.81; 75.0 \u00b5m 37.99; 32.0 \u00b5m 61.31; 22.0 \u00b5m 71.04; 13.0 \u00b5m 80.38; 9.0 \u00b5m 85.42; 7.0 \u00b5m 91.36; 3.2 \u00b5m 96.51; 1.3 \u00b5m 98.25; 1.0 \u00b5m 100.00",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "Off Planet Research General Lunar Regolith Simulants data sheet",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2024",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "XRF by Washington State University's Peter Hooper Geoanalytical Laboratory. XRD by Washington State University's Institute of Materials Research, cobalt anode. Particle size distribution by Materials Testing & Consulting. Density measured in-house. Standard particle size distribution has a majority of grains 4 mm and finer with some particles up to 10-15 mm. The anorthosite component contains 1 % \u00b1 1 % crystalline silica (quartz). Ilmenite present as trace. Titanium can be increased with an ilmenite additive on request. One data sheet covers the four general simulants; values are not normalised to 100.",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "Basaltic cinder, Anorthosite",
+  "new": "Anorthosite 10; Basalt 90",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S057",
+  "name": "OPRH2N",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "General simulant",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S057",
+  "name": "OPRH2N",
+  "table": "simulants",
+  "field": "bulk_density_range",
+  "old": null,
+  "new": "1.2 (loose) \u2013 1.5 (settled) g/cc",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S057",
+  "name": "OPRH2N",
+  "table": "simulants",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "Cumulative, % by mass coarser than: 4750.0 \u00b5m 0.65; 2000.0 \u00b5m 4.19; 850.0 \u00b5m 9.09; 425.0 \u00b5m 15.43; 250.0 \u00b5m 20.32; 150.0 \u00b5m 26.81; 75.0 \u00b5m 37.99; 32.0 \u00b5m 61.31; 22.0 \u00b5m 71.04; 13.0 \u00b5m 80.38; 9.0 \u00b5m 85.42; 7.0 \u00b5m 91.36; 3.2 \u00b5m 96.51; 1.3 \u00b5m 98.25; 1.0 \u00b5m 100.00",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S057",
+  "name": "OPRH2N",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "Off Planet Research General Lunar Regolith Simulants data sheet",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S057",
+  "name": "OPRH2N",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2024",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S057",
+  "name": "OPRH2N",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "XRF by Washington State University's Peter Hooper Geoanalytical Laboratory. XRD by Washington State University's Institute of Materials Research, cobalt anode. Particle size distribution by Materials Testing & Consulting. Density measured in-house. Standard particle size distribution has a majority of grains 4 mm and finer with some particles up to 10-15 mm. The anorthosite component contains 1 % \u00b1 1 % crystalline silica (quartz). Ilmenite present as trace. Titanium can be increased with an ilmenite additive on request. One data sheet covers the four general simulants; values are not normalised to 100.",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S057",
+  "name": "OPRH2N",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "Anorthosite, Basaltic cinder",
+  "new": "Anorthosite 70; Basalt 30",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "General simulant",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "table": "simulants",
+  "field": "bulk_density_range",
+  "old": null,
+  "new": "1.2 (loose) \u2013 1.4 (settled) g/cc",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "table": "simulants",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "Cumulative, % by mass coarser than: 4750.0 \u00b5m 0.65; 2000.0 \u00b5m 4.19; 850.0 \u00b5m 9.09; 425.0 \u00b5m 15.43; 250.0 \u00b5m 20.32; 150.0 \u00b5m 26.81; 75.0 \u00b5m 37.99; 32.0 \u00b5m 61.31; 22.0 \u00b5m 71.04; 13.0 \u00b5m 80.38; 9.0 \u00b5m 85.42; 7.0 \u00b5m 91.36; 3.2 \u00b5m 96.51; 1.3 \u00b5m 98.25; 1.0 \u00b5m 100.00",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "Off Planet Research General Lunar Regolith Simulants data sheet",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2024",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "XRF by Washington State University's Peter Hooper Geoanalytical Laboratory. XRD by Washington State University's Institute of Materials Research, cobalt anode. Particle size distribution by Materials Testing & Consulting. Density measured in-house. Standard particle size distribution has a majority of grains 4 mm and finer with some particles up to 10-15 mm. The anorthosite component contains 1 % \u00b1 1 % crystalline silica (quartz). Ilmenite present as trace. Titanium can be increased with an ilmenite additive on request. One data sheet covers the four general simulants; values are not normalised to 100.",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "Anorthosite, Basaltic cinder",
+  "new": "Anorthosite 80; Basalt 20",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "table": "simulants",
+  "field": "product_grade",
+  "old": null,
+  "new": "General simulant",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "table": "simulants",
+  "field": "bulk_density_range",
+  "old": null,
+  "new": "1.2 (loose) \u2013 1.4 (settled) g/cc",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "table": "simulants",
+  "field": "particle_size_distribution",
+  "old": null,
+  "new": "Cumulative, % by mass coarser than: 4750.0 \u00b5m 0.65; 2000.0 \u00b5m 4.19; 850.0 \u00b5m 9.09; 425.0 \u00b5m 15.43; 250.0 \u00b5m 20.32; 150.0 \u00b5m 26.81; 75.0 \u00b5m 37.99; 32.0 \u00b5m 61.31; 22.0 \u00b5m 71.04; 13.0 \u00b5m 80.38; 9.0 \u00b5m 85.42; 7.0 \u00b5m 91.36; 3.2 \u00b5m 96.51; 1.3 \u00b5m 98.25; 1.0 \u00b5m 100.00",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "table": "simulants",
+  "field": "datasheet_document_id",
+  "old": null,
+  "new": "Off Planet Research General Lunar Regolith Simulants data sheet",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "table": "simulants",
+  "field": "datasheet_date",
+  "old": null,
+  "new": "2024",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "table": "simulants",
+  "field": "datasheet_notes",
+  "old": null,
+  "new": "XRF by Washington State University's Peter Hooper Geoanalytical Laboratory. XRD by Washington State University's Institute of Materials Research, cobalt anode. Particle size distribution by Materials Testing & Consulting. Density measured in-house. Standard particle size distribution has a majority of grains 4 mm and finer with some particles up to 10-15 mm. The anorthosite component contains 1 % \u00b1 1 % crystalline silica (quartz). Ilmenite present as trace. Titanium can be increased with an ilmenite additive on request. One data sheet covers the four general simulants; values are not normalised to 100.",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "table": "simulant_extra",
+  "field": "feedstock",
+  "old": "90% anorthosite, 10% basalt",
+  "new": "Anorthosite 90; Basalt 10",
+  "source": "OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf"
+ }
+]

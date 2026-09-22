@@ -33,7 +33,17 @@ CREATE TABLE IF NOT EXISTS simulants (
   composition_source_title  TEXT,
   composition_source_url    TEXT,
   composition_source_kind   TEXT,  -- manufacturer_datasheet | primary_paper | agency_report
-  composition_needs_review  INTEGER
+  composition_needs_review  INTEGER,
+  -- Stated on the manufacturer data sheet (scripts/datasheet_fill.py, 2026-09-22)
+  ph                        REAL,
+  angle_of_repose           TEXT,  -- as stated, with the sample mass used
+  particle_size_mean_um     REAL,
+  bulk_density_range        TEXT,  -- min-max or loose-settled, as stated
+  magnetic_susceptibility   TEXT,  -- mass susceptibility, as stated
+  product_grade             TEXT,  -- the sheet's own "Simulant Type" / series wording
+  datasheet_document_id     TEXT,  -- document / batch code printed on the sheet
+  datasheet_date            TEXT,  -- revision date of the sheet used
+  datasheet_notes           TEXT   -- methods, labs and caveats printed on the sheet
 );
 
 CREATE TABLE IF NOT EXISTS simulant_extra (

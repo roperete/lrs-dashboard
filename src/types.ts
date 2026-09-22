@@ -29,6 +29,16 @@ export interface Simulant {
   composition_source_url?: string | null;
   composition_source_kind?: string | null;   // manufacturer_datasheet | primary_paper | agency_report
   composition_needs_review?: number | null;
+  // Stated on the manufacturer data sheet (filled by scripts/datasheet_fill.py, 2026-09-22)
+  ph?: number | null;
+  angle_of_repose?: string | null;
+  particle_size_mean_um?: number | null;
+  bulk_density_range?: string | null;
+  magnetic_susceptibility?: string | null;
+  product_grade?: string | null;           // the sheet's own "Simulant Type" / series wording
+  datasheet_document_id?: string | null;   // document or batch code printed on the sheet
+  datasheet_date?: string | null;          // revision date of the sheet used
+  datasheet_notes?: string | null;         // methods, labs and caveats printed on the sheet
 }
 
 export interface Site {
@@ -142,6 +152,11 @@ export interface PhysicalProperties {
   nasa_fom_score?: number;
   ti_content_percent?: number;
   grain_size_mm?: number | string;
+  ph?: number;
+  angle_of_repose?: string;
+  particle_size_mean_um?: number;
+  bulk_density_range?: string;
+  magnetic_susceptibility?: string;
 }
 
 export interface LunarSite {

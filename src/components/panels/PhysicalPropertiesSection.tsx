@@ -3,12 +3,17 @@ import type { PhysicalProperties } from '../../types';
 
 const PROP_CONFIG: { key: keyof PhysicalProperties; label: string; unit: string; desc: string }[] = [
   { key: 'bulk_density', label: 'Bulk Density', unit: 'g/cm³', desc: 'Mass per unit volume including pore spaces between grains' },
+  { key: 'bulk_density_range', label: 'Bulk Density Range', unit: '', desc: 'Minimum to maximum, or loose to settled, as stated on the data sheet' },
   { key: 'density_g_cm3', label: 'Density', unit: 'g/cm³', desc: 'Solid grain density excluding inter-particle voids' },
   { key: 'specific_gravity', label: 'Specific Gravity', unit: '', desc: 'Ratio of grain density to water density (dimensionless)' },
   { key: 'cohesion', label: 'Cohesion', unit: 'kPa', desc: 'Shear strength at zero confining pressure — measures how well grains stick together' },
   { key: 'friction_angle', label: 'Friction Angle', unit: '°', desc: 'Internal angle of friction — controls slope stability and bearing capacity' },
+  { key: 'angle_of_repose', label: 'Angle of Repose', unit: '', desc: 'Steepest stable slope of a poured pile, with the sample mass used, as stated on the data sheet' },
+  { key: 'ph', label: 'pH', unit: '', desc: 'pH of the simulant as stated on the data sheet; the property that matters most for plant growth and bioremediation' },
   { key: 'particle_size_d50', label: 'Particle Size D50', unit: 'μm', desc: 'Median particle diameter — 50% of grains are smaller than this value' },
+  { key: 'particle_size_mean_um', label: 'Mean Particle Size', unit: 'μm', desc: 'Arithmetic mean particle diameter as stated on the data sheet' },
   { key: 'particle_size_distribution', label: 'Particle Size Distribution', unit: 'μm', desc: 'Range of particle sizes present in the simulant' },
+  { key: 'magnetic_susceptibility', label: 'Magnetic Susceptibility', unit: '', desc: 'Mass magnetic susceptibility as stated on the data sheet' },
   { key: 'particle_morphology', label: 'Morphology', unit: '', desc: 'Shape characteristics of individual grains (angular, rounded, etc.)' },
   { key: 'particle_ruggedness', label: 'Ruggedness', unit: '', desc: 'Surface roughness and irregularity of grain surfaces' },
   { key: 'glass_content_percent', label: 'Glass Content', unit: '%', desc: 'Proportion of amorphous glassy material — key for simulating agglutinates' },

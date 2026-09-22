@@ -16,6 +16,7 @@ export function SimulantProperties({ simulant, extra }: SimulantPropertiesProps)
 
   const props: [string, string | number | null | undefined][] = [
     ['Type', simulant.type],
+    ...(simulant.product_grade ? [['Product Grade', simulant.product_grade] as [string, string]] : []),
     ['Origin', simulant.country_code],
     ['Institution', simulant.institution],
     ['Availability', simulant.availability],

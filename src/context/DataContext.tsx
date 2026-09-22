@@ -74,6 +74,12 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
       if (sim.glass_content_percent != null) props.glass_content_percent = Number(sim.glass_content_percent) || undefined;
       if (sim.nasa_fom_score != null) props.nasa_fom_score = Number(sim.nasa_fom_score) || undefined;
       if (sim.ti_content_percent != null) props.ti_content_percent = Number(sim.ti_content_percent) || undefined;
+      // Stated on the manufacturer data sheet (2026-09-22 fill)
+      if (sim.ph != null) props.ph = Number(sim.ph) || undefined;
+      if (sim.angle_of_repose != null) props.angle_of_repose = String(sim.angle_of_repose);
+      if (sim.particle_size_mean_um != null) props.particle_size_mean_um = Number(sim.particle_size_mean_um) || undefined;
+      if (sim.bulk_density_range != null) props.bulk_density_range = String(sim.bulk_density_range);
+      if (sim.magnetic_susceptibility != null) props.magnetic_susceptibility = String(sim.magnetic_susceptibility);
       // Merge grain_size_mm from extra data
       const extra = data.simulantExtra.find(e => e.simulant_id === sim.simulant_id);
       if (extra?.grain_size_mm != null) props.grain_size_mm = extra.grain_size_mm;
