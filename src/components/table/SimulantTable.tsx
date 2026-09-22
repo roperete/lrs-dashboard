@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { ChevronUp, ChevronDown, Check, ArrowRightLeft, Download } from 'lucide-react';
 
 import { cn } from '../../utils/cn';
+import { Tooltip } from '../ui/Tooltip';
 import { getCountryDisplay } from '../../utils/countryUtils';
 import type { Simulant, ChemicalComposition, Composition, Reference } from '../../types';
 
@@ -9,6 +10,26 @@ type SortDir = 'asc' | 'desc';
 type SortKey = 'name' | 'type' | 'country' | 'institution' | 'availability' | 'lunar_sample_reference' | 'year' | 'specific_gravity' | 'bulk_density' | 'd50' | 'friction_angle' | 'cohesion' | 'has_chemistry' | 'has_mineralogy' | 'datasheet' | 'reference';
 
 const DASH = '\u2014';
+
+/** One-line explanation of each column, shown on hover over the header. */
+const COLUMN_HELP: Record<SortKey, string> = {
+  name: 'Product name as the producer writes it.',
+  type: 'Lunar terrain the simulant is meant to stand in for: highlands, mare, or a general or engineering material.',
+  country: 'Country of the producing institution.',
+  institution: 'Organisation that produces, or produced, the simulant.',
+  availability: 'Whether the product can currently be obtained, as last recorded. Not yet audited.',
+  lunar_sample_reference: 'The lunar material the producer says the simulant replicates, in the producer\'s own words.',
+  year: 'Year first produced or released, as recorded. Not yet audited; the sheets do not state it.',
+  specific_gravity: 'Grain density relative to water. Cleared wherever the value only repeated the bulk density.',
+  bulk_density: 'Mass per unit volume of the loose material, pore space included, in g/cm\u00b3.',
+  d50: 'Median particle size in micrometres: half the grains, by mass, are finer than this.',
+  friction_angle: 'Internal angle of friction from shear testing, in degrees. Governs slope stability and bearing capacity.',
+  cohesion: 'Shear strength at zero normal stress, in kPa. How much the grains hold together.',
+  has_chemistry: 'Oxide chemistry on record and verified against its source.',
+  has_mineralogy: 'Mineral or component composition on record and verified against its source.',
+  datasheet: 'The manufacturer\'s data sheet. Shown only where the composition was verified against it.',
+  reference: 'Publication cited for this simulant.',
+};
 
 /** Coerce a sparse numeric-ish field to a number for sorting, or null if absent/non-numeric. */
 const num = (v: unknown): number | null => {
@@ -125,9 +146,11 @@ export function SimulantTable({
         sortKey === col && 'text-emerald-400',
       )}
     >
-      <span className={cn("inline-flex items-center gap-1", align === 'right' && 'justify-end', align === 'center' && 'justify-center')}>
-        {label}<SortIcon col={col} />
-      </span>
+      <Tooltip text={COLUMN_HELP[col]} align={align === 'right' ? 'right' : align === 'center' ? 'center' : 'left'}>
+        <span className={cn("inline-flex items-center gap-1", align === 'right' && 'justify-end', align === 'center' && 'justify-center')}>
+          {label}<SortIcon col={col} />
+        </span>
+      </Tooltip>
     </th>
   );
 

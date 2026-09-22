@@ -1,4 +1,5 @@
 import React from 'react';
+import { Tooltip } from '../ui/Tooltip';
 import type { PhysicalProperties } from '../../types';
 
 const PROP_CONFIG: { key: keyof PhysicalProperties; label: string; unit: string; desc: string }[] = [
@@ -37,7 +38,9 @@ export function PhysicalPropertiesSection({ properties }: PhysicalPropertiesSect
       <div className="grid grid-cols-2 gap-2">
         {entries.map(({ key, label, unit, desc }) => (
           <div key={key} className="bg-slate-800/50 p-2.5 rounded-lg border border-slate-700/50">
-            <p className="text-[10px] text-slate-500 uppercase font-bold mb-0.5 cursor-help" title={desc}>{label}</p>
+            <Tooltip text={desc} align="left">
+              <p className="text-[10px] text-slate-500 uppercase font-bold mb-0.5 border-b border-dotted border-slate-600">{label}</p>
+            </Tooltip>
             <p className="text-sm font-medium text-cyan-400">
               {String(properties[key])}{unit && <span className="text-slate-500 ml-1">{unit}</span>}
             </p>
