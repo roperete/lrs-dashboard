@@ -270,5 +270,13 @@
   "old": "Hispansion \u2014 Technical Data Sheet: TLM-0 (TDS-TLM-0-v1.1)",
   "new": "Hispansion Technical Data Sheet TDS-TLM-0-v1.1 (11 Nov 2025), supplied by the manufacturer; TerraLun Core product page linked",
   "reason": "manufacturer does not publish the TDS; title names the document, link goes to the product page"
+ },
+ {
+  "simulant_id": "S029",
+  "name": "JSC-1AC",
+  "field": "datasheet_url",
+  "old": "https://ares.jsc.nasa.gov/projects/simulants/attachments/JSC-1A_MATERIAL_SAFETY_DATA_SHEET.pdf",
+  "new": null,
+  "reason": "the linked sheet belongs to JSC-1A, a sibling product; JSC-1AC is withheld and has no verified sheet of its own (reported by Alvaro 2026-09-22)"
  }
 ]

@@ -225,8 +225,13 @@ def apply_decisions(db_path: Path | str, decisions: dict[str, dict]) -> list[dic
              d["source_kind"] if d["source_kind"] != "none" else None,
              1 if d["needs_review"] else 0, sid),
         )
-        if d["source_kind"] == "manufacturer_datasheet" and public_url:
+        # A datasheet link is a public claim that this exact product has a sheet we checked.
+        # Only a verified simulant earns one; a withheld one loses any it had, so a sheet
+        # belonging to a sibling product (JSC-1A's sheet on JSC-1AC) cannot survive here.
+        if d["status"] == STATUS_VERIFIED and d["source_kind"] == "manufacturer_datasheet" and public_url:
             con.execute("UPDATE simulants SET datasheet_url=? WHERE simulant_id=?", (public_url, sid))
+        elif d["action"] == "withhold":
+            con.execute("UPDATE simulants SET datasheet_url=NULL WHERE simulant_id=?", (sid,))
 
         name = con.execute("SELECT name FROM simulants WHERE simulant_id=?", (sid,)).fetchone()
         log.append({

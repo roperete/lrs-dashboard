@@ -295,6 +295,21 @@ class ApplyTest(unittest.TestCase):
         self.assertIsNone(src)
         self.assertIsNone(ds)
 
+    def test_withheld_simulant_never_gets_a_datasheet_link(self):
+        # JSC-1AC case: the extractor named the JSC-1A sheet as the family's document and the
+        # decision was withhold. A datasheet link must only ever appear on a verified simulant.
+        decisions = {
+            "S005": {"action": "withhold", "status": STATUS_WITHHELD, "oxides": [], "minerals": [],
+                     "source_url": "https://ares.jsc.nasa.gov/projects/simulants/attachments/JSC-1A_MSDS.pdf",
+                     "source_title": "JSC-1A MSDS", "source_kind": "manufacturer_datasheet",
+                     "reason": "no independent verification", "needs_review": True},
+        }
+        apply_decisions(self.db, decisions)
+        con = sqlite3.connect(self.db)
+        ds = con.execute("SELECT datasheet_url FROM simulants WHERE simulant_id='S005'").fetchone()[0]
+        con.close()
+        self.assertIsNone(ds)
+
     def test_apply_is_idempotent(self):
         apply_decisions(self.db, self.decisions)
         self.assertEqual(self.rows("chemical_compositions", "S002"), 1)

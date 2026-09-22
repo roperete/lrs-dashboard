@@ -79,7 +79,16 @@ export function MineralChart({ compositions, mineralGroups, lunarRef, simulantNa
         </div>
         <div className="flex items-center gap-2">
           <ToggleButtonGroup
-            options={[{ label: 'Detailed', value: 'detailed' }, { label: 'Groups', value: 'groups' }]}
+            options={[
+              { label: 'Detailed', value: 'detailed' },
+              {
+                label: 'Groups', value: 'groups',
+                disabled: groupData.length === 0,
+                title: groupData.length === 0
+                  ? 'No grouped (NASA mineral family) breakdown is published for this simulant. Groups are shown only where a source states them.'
+                  : 'NASA mineral family grouping, as published by the source',
+              },
+            ]}
             value={view} onChange={(v) => setView(v as 'detailed' | 'groups')}
           />
           <ToggleButtonGroup
