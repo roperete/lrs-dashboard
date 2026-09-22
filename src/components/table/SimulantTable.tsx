@@ -3,8 +3,9 @@ import { ChevronUp, ChevronDown, Check, ArrowRightLeft, Download } from 'lucide-
 
 import { cn } from '../../utils/cn';
 import { Tooltip } from '../ui/Tooltip';
+import { RefSup } from '../ui/RefSup';
 import { getCountryDisplay } from '../../utils/countryUtils';
-import type { Simulant, ChemicalComposition, Composition, Reference } from '../../types';
+import type { Simulant, ChemicalComposition, Composition, Reference, PropertySource } from '../../types';
 
 type SortDir = 'asc' | 'desc';
 type SortKey = 'name' | 'type' | 'country' | 'institution' | 'availability' | 'lunar_sample_reference' | 'year' | 'specific_gravity' | 'bulk_density' | 'd50' | 'friction_angle' | 'cohesion' | 'has_chemistry' | 'has_mineralogy' | 'datasheet' | 'reference';
@@ -47,6 +48,10 @@ interface SimulantTableProps {
   chemicalBySimulant: Map<string, ChemicalComposition[]>;
   compositionBySimulant: Map<string, Composition[]>;
   referencesBySimulant: Map<string, Reference[]>;
+  /** property_sources rows keyed by simulant then field, for the citation superscripts. */
+  propertySourcesBySimulant?: Map<string, Map<string, PropertySource>>;
+  /** Number of a reference within its simulant's list; see utils/references.ts. */
+  refNumber?: (simulantId: string, referenceId: string) => number | undefined;
   onSelectSimulant: (id: string) => void;
   onCompareSelected?: (id1: string, id2: string) => void;
   onExportSelected?: (simulants: Simulant[]) => void;
@@ -61,8 +66,23 @@ function getFirstReference(id: string, referencesBySimulant: Map<string, Referen
 export function SimulantTable({
   simulants, selectedSimulantId,
   chemicalBySimulant, compositionBySimulant, referencesBySimulant,
+  propertySourcesBySimulant, refNumber,
   onSelectSimulant, onCompareSelected, onExportSelected,
 }: SimulantTableProps) {
+  /** A scalar cell with its citation, the same mark the right pane shows for the value. */
+  const scalarCell = (s: Simulant, field: keyof Simulant) => {
+    const v = s[field];
+    const source = propertySourcesBySimulant?.get(s.simulant_id)?.get(field);
+    const n = source ? refNumber?.(s.simulant_id, source.reference_id) : undefined;
+    return (
+      <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">
+        {show(v)}
+        {v != null && v !== '' && source && n != null && (
+          <RefSup n={n} location={source.location} quote={source.quote} align="right" />
+        )}
+      </td>
+    );
+  };
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
   const [checkedIds, setCheckedIds] = useState<Set<string>>(new Set());
@@ -248,11 +268,11 @@ export function SimulantTable({
                   <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.availability || DASH}</td>
                   <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.lunar_sample_reference || DASH}</td>
                   <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{typeof s.release_date === 'number' ? s.release_date : DASH}</td>
-                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{show(s.specific_gravity)}</td>
-                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{show(s.bulk_density)}</td>
-                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{show(s.particle_size_d50)}</td>
-                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{show(s.friction_angle)}</td>
-                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{show(s.cohesion)}</td>
+                  {scalarCell(s, 'specific_gravity')}
+                  {scalarCell(s, 'bulk_density')}
+                  {scalarCell(s, 'particle_size_d50')}
+                  {scalarCell(s, 'friction_angle')}
+                  {scalarCell(s, 'cohesion')}
                   <td className="py-2 px-3 text-center">
                     {chemicalBySimulant.has(s.simulant_id)
                       ? <button onClick={(e) => { e.stopPropagation(); toggleExpand(s.simulant_id); }}

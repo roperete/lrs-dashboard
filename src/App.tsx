@@ -45,6 +45,7 @@ export default function App() {
     lunarReference, compositionBySimulant, chemicalBySimulant, referencesBySimulant,
     mineralGroupsBySimulant, extraBySimulant, siteBySimulant,
     mineralSourcingByMineral, purchaseBySimulant, physicalPropsBySimulant, propertySourcesBySimulant,
+    refNumber,
   } = data;
 
   const globeRef = useRef<GlobeViewHandle>(null);
@@ -208,6 +209,8 @@ export default function App() {
                 chemicalBySimulant={chemicalBySimulant}
                 compositionBySimulant={compositionBySimulant}
                 referencesBySimulant={referencesBySimulant}
+                propertySourcesBySimulant={propertySourcesBySimulant}
+                refNumber={refNumber}
                 onSelectSimulant={(id) => panelState.selectSimulant(id)}
                 onCompareSelected={(id1, id2) => {
                   panelState.openPanel(1, id1);
