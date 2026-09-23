@@ -72,7 +72,7 @@ Evidence in `documentation/provenance-findings-lean-wave1.json` (notes fields) a
 | S137 | TUBS-I | lunar_sample_reference "Ilmenite-rich" | Its defining reference (R161) describes a straight 50:50 mix of TUBS-M and TUBS-T, with no ilmenite enrichment. |
 | S064 | TJ-1 | bulk density 1.55, cohesion 1.0, SG 2.9 | Literature: 1.08–1.78 g/cm³, 0.86 kPa, Gs 2.72. Right ballpark, wrong number — a pattern worth a wider check of pre-audit values. |
 | S054 | OB-1A | specific gravity | Two sourced values disagree: 3.03 (APL 2022) and 3.22 (SDL/JSC-ARES 2023). Pick one and record the method. |
-| S004, S025*, S020 | BH-1, FJS-1g | availability | Contradicted by the primary paper (BH-1) and by the one document that addresses it (FJS-1g). |
+| S004, S020 | BH-1, FJS-1g | availability | Contradicted by the primary paper (BH-1) and by the one document that addresses it (FJS-1g). |
 | S107 | Mooncastle | lunar_sample_reference "Mare", availability "Available" | Neither traceable; CSM's own site says it is still being worked on. |
 | S149 | ES-1 | institution, lunar vs Mars category | Both look misattributed. |
 

@@ -13,7 +13,7 @@ Wave 1 of the provenance run (45 simulants), and a repair of values that never r
 - 45 simulants read by a reader and an independent checker. Written only where both agreed:
   162 source rows for stored values, 242 values the documents state that the database lacked,
   144 documents confirmed to name their product. Verified compositions 31 → 49; sourced
-  physical values 227 → 390; simulants named in a confirmed reference 43 → 84.
+  physical values 227 → 392; simulants named in a confirmed reference 43 → 84.
 - **Values stored as text are repaired.** Readers quote values as printed, and a string such
   as "22.4 (vol%)" in a numeric column stayed text — the page dropped the row without a word,
   so LX-M100, DNA-1A and others showed as verified above empty tables, some since v2.9.5. 107
