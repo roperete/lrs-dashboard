@@ -116,9 +116,12 @@ class AlreadyReadTests(unittest.TestCase):
         self.tmp.cleanup()
 
     def write(self, name, ids):
+        """A findings file for a group both stages finished — the only kind that counts."""
         import json
-        (self.dir / name).write_text(json.dumps(
-            {"groups": [{"extraction": {"results": [{"simulant_id": i, "name": i} for i in ids]}}]}))
+        (self.dir / name).write_text(json.dumps({"groups": [{
+            "extraction": {"results": [{"simulant_id": i, "name": i} for i in ids]},
+            "verification": {"checks": [{"simulant_id": i} for i in ids]},
+        }]}))
 
     def test_collects_ids_across_every_findings_file(self):
         from build_groups import already_read
@@ -141,4 +144,19 @@ class AlreadyReadTests(unittest.TestCase):
         from build_groups import already_read
         self.write("provenance-findings-good.json", ["S027"])
         (self.dir / "provenance-findings-broken.json").write_text("{not json")
+        self.assertEqual(already_read(self.dir), {"S027"})
+
+    def write_pair(self, name, ids, verified):
+        import json
+        (self.dir / name).write_text(json.dumps({"groups": [{
+            "extraction": {"results": [{"simulant_id": i, "name": i} for i in ids]},
+            "verification": {"checks": [{"simulant_id": i} for i in ids]} if verified else None,
+        }]}))
+
+    def test_an_extraction_nobody_verified_does_not_count_as_read(self):
+        """A run killed before its checker wrote nothing to the database, so those
+        simulants still need reading. Counting them as done would silently drop them."""
+        from build_groups import already_read
+        self.write_pair("provenance-findings-partial.json", ["S149", "S150"], verified=False)
+        self.write_pair("provenance-findings-batch2.json", ["S027"], verified=True)
         self.assertEqual(already_read(self.dir), {"S027"})

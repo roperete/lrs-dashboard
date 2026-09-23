@@ -1,0 +1,273 @@
+{
+ "groups": [
+  {
+   "group_key": "ES",
+   "extraction": {
+    "group_key": "ES",
+    "results": [
+     {
+      "simulant_id": "S149",
+      "name": "ES-1",
+      "references": [
+       {
+        "reference_id": "R169",
+        "opened": true,
+        "names_simulant": true,
+        "mention_quote": "ES-1 Engineering Soil 1 - ESA TN-MMA-MVW-20140606 Fine dust (Nepheline Syenite) from Sibelco, Norway. Large volume, mechanical. Unknown availability. May be obtained from RUAG.",
+        "location": "PDF p. 63, Table 9. Simulants, ESA agency block, 'Mars' sub-section, first ES row"
+       }
+      ],
+      "new_references": [
+       {
+        "temp_id": "NEW1",
+        "title": "ESRIC KSP - Simulants (Regolith Simulants Directory), Mars Regolith Simulants list",
+        "kind": "general",
+        "authors": "ESRIC - European Space Resources Innovation Centre",
+        "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+        "mention_quote": "Description Name ES-1 Description Fine dust (Nepheline Syenite) from Sibelco, Norway. Large volume, mechanical Availability Previously produced, some stockpiles exist, may be difficult to reproduce if needed Supplier/Contact RUAG Space United Kingdom",
+        "location": "Section 'Mars Regolith Simulants' (<div id=marsregolith><h2>Mars Regolith Simulants</h2>), first card; page <title> is 'ESRIC KSP - Simulants'"
+       }
+      ],
+      "values": [
+       {
+        "field": "release_date",
+        "stored": "2014",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Neither opened document states a release or production date for ES-1. The only '2014' tied to the product anywhere in the library sits inside the ESA technical-note identifier in the ISECG Info column, 'Engineering Soil 1 - ESA TN-MMA-MVW-20140606' (R169, p. 63, Table 9) - that is a document number whose date part reads 2014-06-06, not a stated release date. The ESRIC page (NEW1) contains no occurrence of '2014' at all."
+       },
+       {
+        "field": "availability",
+        "stored": "Unavailable",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Contradicted rather than supported. R169 (p. 63, Table 9) states for ES-1: 'Unknown availability. May be obtained from RUAG.' NEW1 states 'Availability Previously produced, some stockpiles exist, may be difficult to reproduce if needed'. Neither says the product is unavailable; ISECG explicitly calls the availability unknown, and the supply-confidence cell on p. 63 is amber, which the key on that same page defines as 'Previously produced, some stockpiles exist, may be difficult to reproduce if needed'."
+       },
+       {
+        "field": "lunar_sample_reference",
+        "stored": "Engineering Soil",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "The string traces to the ISECG 'Info' column, 'Engineering Soil 1 - ESA TN-MMA-MVW-20140606' (R169, p. 63), which is the product's full name, not a lunar sample reference. No opened document relates ES-1 to any lunar sample, terrain or Apollo soil; both documents list it under Mars."
+       },
+       {
+        "field": "institution",
+        "stored": "Open University",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Contradicted. R169 (p. 63) places the ES rows inside the ESA agency block, with the contact cell reading 'Unknown availability. May be obtained from RUAG.'; NEW1 gives 'Supplier/Contact RUAG Space United Kingdom'. 'Open University' is the supplier of the rows that immediately follow ES-4 in both sources (OUCM-1 and CM-2, OUEB-1 and EB-2, OUHR-1 and HR-2, OUSR-1 and SR-2), so this looks like an off-by-one row attribution during ingestion."
+       }
+      ],
+      "new_values": [],
+      "unavailable_documents": [],
+      "notes": "PRODUCT IS NOT A LUNAR SIMULANT. Both opened documents place ES-1 under Mars, not the Moon. In ISECG Table 9 (p. 63) an orange 'Mars' sub-header row sits inside the ESA block immediately above ES-1 - I confirmed this by rendering page 63 as an image (pdftoppm), because the column layout is ambiguous in the text dump. In the ESRIC page the ES-1 card is inside <div id=marsregolith><h2>Mars Regolith Simulants</h2>, i.e. the page's separate Mars list, not its Lunar list. ES-1 is one of four ESA 'Engineering Soils' defined in ESA technical note TN-MMA-MVW-20140606 (terramechanics/locomotion test soils). A curator should decide whether it belongs in a lunar regolith simulant database at all.\nWHAT THE DOCUMENTS DO STATE for ES-1 and the DB does not hold: feedstock/description 'Fine dust (Nepheline Syenite) from Sibelco, Norway. Large volume, mechanical' (R169 p. 63 and NEW1) and supplier 'RUAG Space, United Kingdom' (NEW1). These map to no existing scalar column other than institution, which already holds a (wrong) value, so I have left them out of new_values per the instructions.\nNO PROPERTY DATA EXISTS: neither document gives any composition, oxide, mineral or geotechnical number for ES-1, which is consistent with composition_status 'withheld_unverified'.\nLIBRARY SWEEP: grep -rliw 'ES-1' over Sources_text returns exactly the two documents already listed (papers/LRS/DIRT project/files/1735/simulants.html.txt and papers/agent-fetched/ISECG_2021_ISRU_Technology_Gap_Assessment_Report_Apr2021.pdf.txt). Unhyphenated 'ES1' returns nothing. 'Engineering Soil' and 'MMA-MVW' occur only in the ISECG report. There is no characterisation paper or datasheet for this product in the library.\nR169 was read from the local copy at papers/agent-fetched/ISECG_2021_ISRU_Technology_Gap_Assessment_Report_Apr2021.pdf; its title page reads 'IN-SITU RESOURCE UTILIZATION GAP ASSESSMENT REPORT / 4/21/2021 / International Space Exploration Coordination Group', matching the cited report and the April 2021 URL, so I did not refetch the URL."
+     },
+     {
+      "simulant_id": "S150",
+      "name": "ES-2",
+      "references": [
+       {
+        "reference_id": "R170",
+        "opened": true,
+        "names_simulant": true,
+        "mention_quote": "ES-2 Engineering Soil 2 - ESA TN-MMA-MVW-20140606 Silverbond D6 DD fine quartz sand (from Sibelco, Belgium). No longer available from manufacturer. May be obtained from RUAG.",
+        "location": "PDF p. 63, Table 9. Simulants, ESA agency block, 'Mars' sub-section, second ES row"
+       }
+      ],
+      "new_references": [
+       {
+        "temp_id": "NEW1",
+        "title": "ESRIC KSP - Simulants (Regolith Simulants Directory), Mars Regolith Simulants list",
+        "kind": "general",
+        "authors": "ESRIC - European Space Resources Innovation Centre",
+        "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+        "mention_quote": "Description Name ES-2 Description Silverbond D6 DD fine quartz sand (from Sibelco, Belgium) Availability Previously produced, some stockpiles exist, may be difficult to reproduce if needed Supplier/Contact RUAG Space United Kingdom",
+        "location": "Section 'Mars Regolith Simulants' (<div id=marsregolith>), second card; page <title> is 'ESRIC KSP - Simulants'"
+       }
+      ],
+      "values": [
+       {
+        "field": "release_date",
+        "stored": "2014",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "No opened document states a release or production date for ES-2. The only '2014' associated with the product is inside the ESA technical-note identifier in the ISECG Info column, 'Engineering Soil 2 - ESA TN-MMA-MVW-20140606' (R170, p. 63, Table 9), which is a document number, not a release date. The ESRIC page (NEW1) has no dates."
+       },
+       {
+        "field": "availability",
+        "stored": "Unavailable",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Partly contradicted. R170 (p. 63) says 'No longer available from manufacturer. May be obtained from RUAG.' - the second half means the product is not flatly unavailable. NEW1 states 'Previously produced, some stockpiles exist, may be difficult to reproduce if needed'. Neither document states the value 'Unavailable'. If the curator wants a sourced availability string, the ESRIC wording or the ISECG wording should be used verbatim."
+       },
+       {
+        "field": "lunar_sample_reference",
+        "stored": "Engineering Soil",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "The string traces to the ISECG 'Info' column, 'Engineering Soil 2 - ESA TN-MMA-MVW-20140606' (R170, p. 63), the product's full name, not a lunar sample reference. Neither document ties ES-2 to any lunar sample or terrain; both list it under Mars. ES-2 is in fact a commercial quartz sand (Silverbond D6 DD), which has no lunar analogue mineralogy."
+       },
+       {
+        "field": "institution",
+        "stored": "Open University",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Contradicted. R170 (p. 63) places ES-2 in the ESA agency block with the contact cell 'No longer available from manufacturer. May be obtained from RUAG.'; NEW1 gives 'Supplier/Contact RUAG Space United Kingdom'. Open University is the supplier of the rows that follow ES-4 in both sources, so this is most likely an off-by-one row attribution."
+       }
+      ],
+      "new_values": [],
+      "unavailable_documents": [],
+      "notes": "WEAK-CANDIDATE FLAG IS A FALSE ALARM. The group file lists both documents only under library_documents_possibly_naming_it (library_documents_naming_it_total = 0) because 'ES-2' is four characters and occurs once per document. I read both occurrences: each is a full, dedicated record for this product (an ISECG Table 9 row and an ESRIC directory card), not an incidental abbreviation. Both genuinely name ES-2 and I have treated them as real references.\nPRODUCT IS NOT A LUNAR SIMULANT. ES-2 sits under the orange 'Mars' sub-header inside the ESA block of ISECG Table 9 (confirmed by rendering p. 63 as an image) and inside <div id=marsregolith><h2>Mars Regolith Simulants</h2> on the ESRIC page. It is one of four ESA 'Engineering Soils' from ESA TN-MMA-MVW-20140606; the feedstock is a commercial Belgian quartz sand.\nWHAT THE DOCUMENTS STATE that the DB lacks: description/feedstock 'Silverbond D6 DD fine quartz sand (from Sibelco, Belgium)' (R170 p. 63 and NEW1) and supplier 'RUAG Space, United Kingdom' (NEW1). Neither maps to an empty scalar column, so they are not reported in new_values.\nNo composition, oxide, mineral or geotechnical value for ES-2 exists in either document.\nLIBRARY SWEEP: grep -rliw 'ES-2' over Sources_text returns only these two documents; 'ES2' returns nothing. No characterisation paper or datasheet for this product exists in the library."
+     },
+     {
+      "simulant_id": "S151",
+      "name": "ES-3",
+      "references": [
+       {
+        "reference_id": "R171",
+        "opened": true,
+        "names_simulant": true,
+        "mention_quote": "ES-3 Engineering Soil 3 - ESA TN-MMA-MVW-20140606 OMR Dry (from Sibelco Ltd. UK). Mixture of coarse and medium components. No longer available from manufacturer. May be obtained from RUAG.",
+        "location": "PDF p. 63, Table 9. Simulants, ESA agency block, 'Mars' sub-section, third ES row"
+       }
+      ],
+      "new_references": [
+       {
+        "temp_id": "NEW1",
+        "title": "ESRIC KSP - Simulants (Regolith Simulants Directory), Mars Regolith Simulants list",
+        "kind": "general",
+        "authors": "ESRIC - European Space Resources Innovation Centre",
+        "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+        "mention_quote": "Description Name ES-3 Description OMR Dry (from Sibelco Ltd. UK). Mixture of coarse and medium components Availability Previously produced, some stockpiles exist, may be difficult to reproduce if needed Supplier/Contact RUAG Space United Kingdom",
+        "location": "Section 'Mars Regolith Simulants' (<div id=marsregolith>), third card; page <title> is 'ESRIC KSP - Simulants'"
+       }
+      ],
+      "values": [
+       {
+        "field": "release_date",
+        "stored": "2014",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "No opened document states a release or production date for ES-3. The only '2014' tied to the product is inside the ESA technical-note identifier in the ISECG Info column, 'Engineering Soil 3 - ESA TN-MMA-MVW-20140606' (R171, p. 63, Table 9) - a document number, not a release date. NEW1 carries no dates."
+       },
+       {
+        "field": "availability",
+        "stored": "Unavailable",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Partly contradicted. R171 (p. 63) says 'No longer available from manufacturer. May be obtained from RUAG.'; NEW1 says 'Previously produced, some stockpiles exist, may be difficult to reproduce if needed'. Neither states 'Unavailable' outright - both point at RUAG stock still existing."
+       },
+       {
+        "field": "lunar_sample_reference",
+        "stored": "Engineering Soil",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "The string traces to the ISECG 'Info' column, 'Engineering Soil 3 - ESA TN-MMA-MVW-20140606' (R171, p. 63), the product's full name, not a lunar sample reference. No opened document relates ES-3 to a lunar sample or terrain; both list it under Mars. The ISECG 'Type' cell for ES-3 reads 'OMR Dry (from Sibelco Ltd. UK). Mixture of coarse and medium components.'"
+       },
+       {
+        "field": "institution",
+        "stored": "Open University",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Contradicted. R171 (p. 63) puts ES-3 in the ESA agency block with contact 'No longer available from manufacturer. May be obtained from RUAG.'; NEW1 gives 'Supplier/Contact RUAG Space United Kingdom'. Open University supplies the rows that follow ES-4 in both sources - probable off-by-one row attribution."
+       }
+      ],
+      "new_values": [],
+      "unavailable_documents": [],
+      "notes": "PRODUCT IS NOT A LUNAR SIMULANT. ES-3 appears under the orange 'Mars' sub-header inside the ESA block of ISECG Table 9, p. 63 (verified from a rendered image of the page, since the text dump does not show the sub-header's span), and inside the 'Mars Regolith Simulants' section of the ESRIC page. It is one of four ESA 'Engineering Soils' from ESA TN-MMA-MVW-20140606, made from the commercial UK sand product 'OMR Dry'.\nWHAT THE DOCUMENTS STATE that the DB lacks: description/feedstock 'OMR Dry (from Sibelco Ltd. UK). Mixture of coarse and medium components' (R171 p. 63 and NEW1) and supplier 'RUAG Space, United Kingdom' (NEW1). Neither maps to an empty scalar column, so they are not listed in new_values.\nNo composition, oxide, mineral or geotechnical value for ES-3 is stated in either document, consistent with composition_status 'withheld_unverified'.\nLIBRARY SWEEP: grep -rliw 'ES-3' over Sources_text returns only these two documents; 'ES3' returns nothing. 'Engineering Soil' and 'MMA-MVW' occur only in the ISECG report. No characterisation paper or datasheet exists for this product in the library."
+     },
+     {
+      "simulant_id": "S152",
+      "name": "ES-4",
+      "references": [
+       {
+        "reference_id": "R172",
+        "opened": true,
+        "names_simulant": true,
+        "mention_quote": "ES-4 Engineering Soil 4 - ESA TN-MMA-MVW-20140606 Mixture of ES-1 and ES-3. May be available from RUAG.",
+        "location": "PDF p. 63, Table 9. Simulants, ESA agency block, 'Mars' sub-section, fourth ES row"
+       }
+      ],
+      "new_references": [
+       {
+        "temp_id": "NEW1",
+        "title": "ESRIC KSP - Simulants (Regolith Simulants Directory), Mars Regolith Simulants list",
+        "kind": "general",
+        "authors": "ESRIC - European Space Resources Innovation Centre",
+        "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+        "mention_quote": "Description Name ES-4 Description Mixture of ES-1 and ES-3 Availability Previously produced, some stockpiles exist, may be difficult to reproduce if needed Supplier/Contact RUAG Space United Kingdom",
+        "location": "Section 'Mars Regolith Simulants' (<div id=marsregolith>), fourth card; page <title> is 'ESRIC KSP - Simulants'"
+       }
+      ],
+      "values": [
+       {
+        "field": "release_date",
+        "stored": "2014",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "No opened document states a release or production date for ES-4. The only '2014' tied to the product is inside the ESA technical-note identifier in the ISECG Info column, 'Engineering Soil 4 - ESA TN-MMA-MVW-20140606' (R172, p. 63, Table 9) - a document number, not a release date. NEW1 has no dates."
+       },
+       {
+        "field": "availability",
+        "stored": "Unavailable",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Directly contradicted. R172 (p. 63) says for ES-4 'May be available from RUAG.' and NEW1 says 'Previously produced, some stockpiles exist, may be difficult to reproduce if needed'. Of the four ES entries, ES-4 is the one ISECG describes most positively, so 'Unavailable' is the least defensible here."
+       },
+       {
+        "field": "lunar_sample_reference",
+        "stored": "Engineering Soil",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "The string traces to the ISECG 'Info' column, 'Engineering Soil 4 - ESA TN-MMA-MVW-20140606' (R172, p. 63), the product's full name, not a lunar sample reference. No opened document relates ES-4 to any lunar sample; both list it under Mars. The ISECG 'Type' cell for ES-4 reads only 'Mixture of ES-1 and ES-3.'"
+       },
+       {
+        "field": "institution",
+        "stored": "Open University",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Contradicted. R172 (p. 63) places ES-4 in the ESA agency block with the contact cell 'May be available from RUAG.'; NEW1 gives 'Supplier/Contact RUAG Space United Kingdom'. The very next row in both sources, 'OUCM-1 and CM-2', is the first with Open University as supplier, which is the likely source of this off-by-one attribution."
+       }
+      ],
+      "new_values": [],
+      "unavailable_documents": [],
+      "notes": "WEAK-CANDIDATE FLAG IS A FALSE ALARM. The group file lists both documents only under library_documents_possibly_naming_it (library_documents_naming_it_total = 0). I read every occurrence: the ISECG hit is a dedicated Table 9 row for ES-4 and the ESRIC hit is a dedicated directory card for ES-4 (plus a second, incidental occurrence of 'ES-1 and ES-3' in its description). Both documents genuinely name ES-4.\nPRODUCT IS NOT A LUNAR SIMULANT, AND IS A BLEND. ES-4 sits under the orange 'Mars' sub-header inside the ESA block of ISECG Table 9, p. 63 (verified from a rendered image of the page) and inside <div id=marsregolith><h2>Mars Regolith Simulants</h2> on the ESRIC page. Both sources define it only as 'Mixture of ES-1 and ES-3' - it is a blend of the other two ESA Engineering Soils from ESA TN-MMA-MVW-20140606, with no properties of its own reported anywhere.\nNote also that composition_status is 'not_extracted' for ES-4 while its three siblings are 'withheld_unverified'; there is nothing to extract - neither document gives any composition, oxide, mineral or geotechnical number for any of the four.\nWHAT THE DOCUMENTS STATE that the DB lacks: description 'Mixture of ES-1 and ES-3' (R172 p. 63 and NEW1) and supplier 'RUAG Space, United Kingdom' (NEW1). Neither maps to an empty scalar column, so they are not reported in new_values.\nLIBRARY SWEEP: grep -rliw 'ES-4' over Sources_text returns only these two documents; 'ES4' returns nothing. No characterisation paper or datasheet for this product exists in the library.\nGROUP-WIDE RECOMMENDATION: all four S149-S152 rows appear to be a Mars section of the ISECG/ESRIC listings ingested into a lunar database, with the institution column shifted from the Open University rows that follow. The same Mars block is the likely origin of other Open-University-attributed rows in the database (OUSR-1/SR-2, OUEB-1/EB-2, OUHR-1/HR-2 carry the Mars 'Type' strings 'Sulfur rich', 'Early basaltic', 'Haematite rich'), which a curator should check as a set."
+     }
+    ]
+   },
+   "verification": null
+  }
+ ]
+}

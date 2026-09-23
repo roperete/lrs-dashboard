@@ -48,6 +48,10 @@ def already_read(docs_dir: Path) -> set[str]:
     A value no document states never gains a source row, so "not fully sourced" is not a
     reason to read a simulant again — what is left there is an owner decision. Having been
     read is what marks the reading done.
+
+    Both stages must have finished. Only claims two readers agreed on are written, so an
+    extraction whose checker died wrote nothing; treating it as read would drop those
+    simulants from every later run without anything to show for them.
     """
     ids: set[str] = set()
     for f in sorted(docs_dir.glob("provenance-findings-*.json")):
@@ -57,6 +61,8 @@ def already_read(docs_dir: Path) -> set[str]:
             print(f"warning: {f.name} is not readable JSON; ignored")
             continue
         for g in data.get("groups", []):
+            if not g.get("verification"):
+                continue
             for r in (g.get("extraction") or {}).get("results", []):
                 if r.get("simulant_id"):
                     ids.add(r["simulant_id"])
@@ -109,12 +115,18 @@ def main() -> None:
     ap.add_argument("--skip-read", action="store_true",
                     help="leave out simulants a reader-checker pair has already been through")
     ap.add_argument("--max-simulants", type=int, default=None, help="override the group size")
+    ap.add_argument("--max-docs", type=int, default=None,
+                    help="documents offered per group; reading is the dominant cost of a run")
     cli = ap.parse_args()
     global MAX_SIMULANTS
     if cli.per_simulant:
         MAX_SIMULANTS = 1
     if cli.max_simulants:
         MAX_SIMULANTS = cli.max_simulants
+    global MAX_DOCS_PER_GROUP, MAX_DOCS_PER_SIMULANT
+    if cli.max_docs:
+        MAX_DOCS_PER_GROUP = cli.max_docs
+        MAX_DOCS_PER_SIMULANT = min(MAX_DOCS_PER_SIMULANT, cli.max_docs)
 
     index = latest_index()
     docs_for = {name: docs for name, docs in index["simulants"].items()}
