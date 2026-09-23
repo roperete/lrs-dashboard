@@ -30,7 +30,7 @@ fi
 
 echo "$remote_v -> $local_v"
 gh auth switch --user roperete >/dev/null
-git -C "$R" push origin staging
-status=$?
+git -C "$R" push origin staging || rc=$?
+rc=${rc:-0}
 gh auth switch --user alvaroENPICOM >/dev/null
-exit $status
+exit $rc
