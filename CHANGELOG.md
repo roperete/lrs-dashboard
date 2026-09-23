@@ -5,6 +5,26 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.8 — 2026-09-23 (staging)
+
+Runs sized to fit the weekly budget, and a guard that stops at 80%.
+
+**Process**
+- A full pass at 12 documents per group on Opus would need roughly 62 weekly points against
+  the 22 left before the 80% stop. Reading is what costs — 120M cache-read tokens in one
+  afternoon — so `build_groups.py --max-docs 6` halves the documents offered (225 slots,
+  down from 360) and the extraction pass runs on Sonnet. The adversarial check stays on
+  Opus: deciding whether a quote really supports a value for this exact product is what the
+  audit rests on.
+- `scripts/usage_guard.py` reads the weekly figure the `/usage` panel shows and answers in
+  two modes — a pre-flight gate that refuses what it cannot confirm, and a monitor that
+  reports "cannot tell" rather than killing a run in flight over a stale cache.
+- `already_read()` now requires both stages of a run. Only claims two readers agreed on are
+  written, so an extraction whose checker died wrote nothing; counting it as read had
+  silently dropped AGK-2010 and the four ES products from the queue.
+
+Queue: 44 groups, 130 simulants. No change to what the page displays.
+
 ## v2.9.7 — 2026-09-23 (staging)
 
 The library index was hiding documents from the readers.
