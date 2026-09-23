@@ -5,6 +5,37 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.9 — 2026-09-23 (staging)
+
+Wave 1 of the provenance run (45 simulants), and a repair of values that never reached the page.
+
+**Data**
+- 45 simulants read by a reader and an independent checker. Written only where both agreed:
+  162 source rows for stored values, 242 values the documents state that the database lacked,
+  144 documents confirmed to name their product. Verified compositions 31 → 49; sourced
+  physical values 227 → 390; simulants named in a confirmed reference 43 → 84.
+- **Values stored as text are repaired.** Readers quote values as printed, and a string such
+  as "22.4 (vol%)" in a numeric column stayed text — the page dropped the row without a word,
+  so LX-M100, DNA-1A and others showed as verified above empty tables, some since v2.9.5. 107
+  such values are now numbers, the statement kept verbatim; 22 that are not single numbers
+  (ranges, detection limits, "present") are removed and logged.
+- Eight mineral rows that were feedstock mixing ratios, and five citations of the project's
+  own registry spreadsheet, are removed. DNA-1, Mooncastle and CMU-1 revert from verified:
+  their sources give only qualitative mineralogy or a recipe.
+
+**Interface**
+- Hovering a composition row's citation shows the value as the document states it — its
+  basis (vol% or wt%), uncertainty or "ca." — ahead of the source.
+
+**Process**
+- Values are parsed at write time; a non-number is kept out of the table and shown to a human.
+- `verify_data.py` now fails if any number reaches the bundle as text, or if a reference
+  cites the project's own registry. It found 134 such errors in the previous bundle.
+- Reader rules: never cite the registry; cite NotebookLM captures by their original; feedstock
+  ratios are not mineral composition.
+
+Decisions for the owner: `documentation/owner-decisions-2026-09-22.md`, wave 1 section.
+
 ## v2.9.8 — 2026-09-23 (staging)
 
 Runs sized to fit the weekly budget, and a guard that stops at 80%.

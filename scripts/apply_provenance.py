@@ -34,6 +34,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sqlite3
 from datetime import date
 from pathlib import Path
@@ -48,6 +49,29 @@ SCALAR_FIELDS = {
     "ph", "angle_of_repose", "particle_size_mean_um", "bulk_density_range", "magnetic_susceptibility",
     "release_date", "availability", "lunar_sample_reference", "institution",
 }
+
+
+from parse_value import parse_number  # noqa: E402
+from provenance import ensure_provenance_schema  # noqa: E402
+
+_PLAIN_NUMBER = re.compile(r"[-+]?\d+(?:\.\d+)?")
+
+
+def _statement(raw) -> str | None:
+    """The value as stated, when it says more than the bare number; else None."""
+    text = str(raw).strip() if raw is not None else ""
+    return None if not text or _PLAIN_NUMBER.fullmatch(text) else text
+
+
+def is_self_registry(title: str | None, local_path: str | None) -> bool:
+    """The Global Registry of Lunar Regolith Simulants is this project's own spreadsheet —
+    the unverified data the audit checks — so a copy of it is never evidence."""
+    hay = f"{title or ''} {local_path or ''}".lower()
+    return "global registry of lunar regolith simulants" in hay
+
+
+def _numeric_columns(con) -> set[str]:
+    return {r[1] for r in con.execute("PRAGMA table_info(simulants)") if (r[2] or "").upper() == "REAL"}
 
 
 def _split_field(field: str) -> tuple[str, str | None]:
@@ -77,6 +101,8 @@ def _write_source(con, sid, field, reference_id, location, quote) -> bool:
 def apply_group(db_path: Path | str, extractions: list[dict], verifications: list[dict], checked_on: str | None = None) -> list[dict]:
     checked_on = checked_on or date.today().isoformat()
     con = sqlite3.connect(str(db_path))
+    ensure_provenance_schema(con)
+    numeric_cols = _numeric_columns(con)
     ver_by = {v.get("simulant_id"): v for v in verifications or []}
     log: list[dict] = []
 
@@ -117,6 +143,10 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
             doi = (nr.get("doi") or "").strip() or None
             local_path = (nr.get("local_path") or "").strip() or None
             title = (nr.get("title") or "").strip() or None
+            if is_self_registry(title, local_path):
+                note(simulant_id=sid, reference_id=tid, outcome="refused: the project's own registry is not evidence",
+                     title=title, needs_review=True)
+                continue
             existing = None
             if doi:
                 existing = con.execute("SELECT reference_id FROM references_ WHERE simulant_id=? AND doi=?", (sid, doi)).fetchone()
@@ -215,7 +245,15 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
                         note(simulant_id=sid, field=field, outcome="conflict: existing value kept, document states a different one",
                              existing=existing, proposed=c.get("value"), reference_id=c["reference_id"], needs_review=True)
                     continue
-                con.execute(f"UPDATE simulants SET {field}=? WHERE simulant_id=?", (c.get("value"), sid))
+                value = c.get("value")
+                if field in numeric_cols:
+                    parsed = parse_number(value)
+                    if parsed is None:
+                        note(simulant_id=sid, field=field, reference_id=c["reference_id"], value=value, needs_review=True,
+                             outcome="flagged: not a single number, kept out of the table")
+                        continue
+                    value = parsed.value
+                con.execute(f"UPDATE simulants SET {field}=? WHERE simulant_id=?", (value, sid))
                 _write_source(con, sid, field, c["reference_id"], c.get("location") or "", c.get("quote") or "")
                 note(simulant_id=sid, field=field, reference_id=c["reference_id"], outcome="new value inserted with source", value=c.get("value"))
             else:
@@ -224,11 +262,16 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
                 if exists:
                     note(simulant_id=sid, field=field, outcome="conflict: composition row already present, kept", needs_review=True)
                     continue
+                parsed = parse_number(c.get("value"))
+                if parsed is None:
+                    note(simulant_id=sid, field=field, reference_id=c["reference_id"], value=c.get("value"), needs_review=True,
+                         outcome="flagged: not a single number, kept out of the table")
+                    continue
                 prefix = "CH" if kind == "oxide" else "C"
                 n = con.execute(f"SELECT count(*) FROM {table} WHERE simulant_id=?", (sid,)).fetchone()[0]
                 comp_type = "oxide" if kind == "oxide" else "mineral"
-                con.execute(f"INSERT INTO {table} (composition_id, simulant_id, component_type, component_name, {col}, reference_id) VALUES (?,?,?,?,?,?)",
-                            (f"{prefix}-{sid}-{n + 1:02d}", sid, comp_type, component, c.get("value"), c["reference_id"]))
+                con.execute(f"INSERT INTO {table} (composition_id, simulant_id, component_type, component_name, {col}, reference_id, value_text) VALUES (?,?,?,?,?,?,?)",
+                            (f"{prefix}-{sid}-{n + 1:02d}", sid, comp_type, component, parsed.value, c["reference_id"], _statement(c.get("value"))))
                 note(simulant_id=sid, field=field, reference_id=c["reference_id"], outcome="new value inserted with source", value=c.get("value"))
 
     con.commit()

@@ -49,3 +49,56 @@ The export already hides these (no source row). They stay in the database for yo
 
 - 19 simulants are named in no document in the library (`documentation/library-simulant-index-2026-09-22.json`): they need a document before their existence can be shown.
 - TUBS-H (S068): retired 2026-09-22 at your decision; see `retired-simulants.md`.
+
+## Wave 1, 2026-09-23 (45 simulants)
+
+Evidence in `documentation/provenance-findings-lean-wave1.json` (notes fields) and
+`documentation/value-repair-log-2026-09-23.json`.
+
+### References attached to the wrong product
+
+| Id | Name | Finding | Action |
+|---|---|---|---|
+| S004 | BH-1 | R004's title and abstract are about BH-2, not BH-1. | Move R004 to S121 (BH-2), where it is the primary source. |
+| S015 | DNA-1A | R100 is about DNA-1 and is already listed there as R014. | Remove R100 from DNA-1A. |
+| S111 | MLS-1A | Its only reference, R140, is the CUMT-1 paper and never discusses MLS-1A. | Replace with Hill et al. 2007. |
+| S054 | OB-1A | One reference is about OB-1 and supports several OB-1 fields. | Move it to S053 (OB-1). |
+| S059, S099 | OPRH4N, OPRH3W | One reference each is misattributed. | See the findings notes; remove. |
+
+### Stored values the documents contradict
+
+| Id | Name | Stored | What the documents state |
+|---|---|---|---|
+| S137 | TUBS-I | lunar_sample_reference "Ilmenite-rich" | Its defining reference (R161) describes a straight 50:50 mix of TUBS-M and TUBS-T, with no ilmenite enrichment. |
+| S064 | TJ-1 | bulk density 1.55, cohesion 1.0, SG 2.9 | Literature: 1.08–1.78 g/cm³, 0.86 kPa, Gs 2.72. Right ballpark, wrong number — a pattern worth a wider check of pre-audit values. |
+| S054 | OB-1A | specific gravity | Two sourced values disagree: 3.03 (APL 2022) and 3.22 (SDL/JSC-ARES 2023). Pick one and record the method. |
+| S004, S025*, S020 | BH-1, FJS-1g | availability | Contradicted by the primary paper (BH-1) and by the one document that addresses it (FJS-1g). |
+| S107 | Mooncastle | lunar_sample_reference "Mare", availability "Available" | Neither traceable; CSM's own site says it is still being worked on. |
+| S149 | ES-1 | institution, lunar vs Mars category | Both look misattributed. |
+
+### Contradictory sources
+
+- **DNA-1 (S014)**: two full oxide tables disagree — Kjøniksen et al. 2021 and Zhou et al. 2021
+  (SiO2 47.79, Al2O3 19.16) against Sandeep et al. 2019 quoting Cesaretti et al. 2014 (SiO2
+  41.90, Al2O3 16.02). Its mineralogy is published only as presence ticks, so the composition
+  reverted from verified.
+- **BH-2 (S121)**: R147 gives BH-2 the same SiO2/Al2O3/CaO as BH-1's own paper (43.3/16.5/8.8).
+  Plausible — same scoria source — but confirm against R004 once it is opened.
+- **MLS-1 (S043)**: Schrader et al. 2010's modal mineralogy (36.6% glass) is for the
+  glass-processed derivative, contradicting the well-corroborated "no glass" base product.
+  The reader rightly did not attach it to MLS-1.
+
+### Removed by the value repair (kept in the log)
+
+- **Not a single number**: JSC-1 D50 "98 (UTD) / 117 (NASA) µm" — two measurements, pick one;
+  NAO-1 D50 "41–61 µm" — a range; OPRH4W30 FoM, stated with a table of sub-scores; detection
+  limits (NU-LHT-1M P2O5 <0.02, LX-T100 biotite <1 wt%); minerals marked only present or trace
+  for DNA-1, BH-1, BH-2, CSM-CL, Mooncastle and EAC-1A.
+- **Feedstock ratios recorded as minerals**: OPRH4W30 (anorthosite 90 / basalt 10 /
+  agglutinates 30), CSM-LHT-1 (70% GreenSpar anorthosite, 30% Merriam Crater basalt),
+  CSM-LMT-1 (100% basalt), CMU-1 (coal 63 / limestone 37). **CMU-1's recipe raises whether it
+  is a lunar regolith simulant at all.**
+- **Five citations of the Global Registry of Lunar Regolith Simulants** — this project's own
+  spreadsheet — for CAS-1, CLDS-i, CLRS-1, CLRS-2 and IGG-01. They supported no values, but
+  counted towards "named in a reference". Each of those simulants still has other confirmed
+  references.

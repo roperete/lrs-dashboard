@@ -19,7 +19,7 @@ import { ChemicalChart } from '../src/components/panels/ChemicalChart';
 import { MineralChart } from '../src/components/panels/MineralChart';
 import { SimulantTable } from '../src/components/table/SimulantTable';
 import { referenceNumbers } from '../src/utils/references';
-import type { PhysicalProperties, PropertySource, Reference, Simulant } from '../src/types';
+import type { ChemicalComposition, Composition, PhysicalProperties, PropertySource, Reference, Simulant } from '../src/types';
 
 const bundlePath = process.argv[2] || fileURLToPath(new URL('../public/data/data.json', import.meta.url));
 const d = JSON.parse(readFileSync(bundlePath, 'utf8'));
@@ -47,8 +47,8 @@ const bySim = <T extends { simulant_id: string }>(rows: T[]) => {
   return m;
 };
 const refsBy = bySim<Reference>(d.references);
-const chemBy = bySim(d.chemical_compositions);
-const minBy = bySim(d.compositions);
+const chemBy = bySim<ChemicalComposition>(d.chemical_compositions);
+const minBy = bySim<Composition>(d.compositions);
 const sourcesBy = new Map<string, Map<string, PropertySource>>();
 for (const p of d.property_sources as PropertySource[]) {
   if (!sourcesBy.has(p.simulant_id)) sourcesBy.set(p.simulant_id, new Map());

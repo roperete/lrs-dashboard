@@ -134,3 +134,45 @@ class RefreshTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class EmptiedCompositionTests(unittest.TestCase):
+    """A composition marked verified must have rows to show.
+
+    The value repair of 2026-09-23 removed rows that were never numbers — DNA-1's minerals
+    were only ticks in a table, CMU-1's were the coal and limestone it is mixed from. Left
+    alone, the page would say "Composition data source: primary paper" above an empty table.
+    """
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.db = Path(self.tmp.name) / "lrs.sqlite"
+        con = sqlite3.connect(self.db)
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text())
+        ensure_provenance_schema(con)
+        con.execute("INSERT INTO simulants (simulant_id, name, composition_status, composition_source_title, composition_source_kind, composition_needs_review) "
+                    "VALUES ('S1','DNA-1','verified','Some review','secondary_reproduction',1)")
+        con.execute("INSERT INTO simulants (simulant_id, name, composition_status, composition_source_title, composition_source_kind) "
+                    "VALUES ('S2','LHS-1','verified','LHS-1 Fact Sheet','manufacturer_datasheet')")
+        con.execute("INSERT INTO references_ (reference_id, simulant_id, reference_type, title) VALUES ('DS-S2','S2','datasheet','LHS-1 Fact Sheet')")
+        con.execute("INSERT INTO chemical_compositions (composition_id, simulant_id, component_type, component_name, value_wt_pct, reference_id) "
+                    "VALUES ('CH1','S2','oxide','SiO2',51.2,'DS-S2')")
+        con.commit(); con.close()
+        self.log = refresh(self.db)
+        self.con = sqlite3.connect(self.db); self.con.row_factory = sqlite3.Row
+
+    def tearDown(self):
+        self.con.close(); self.tmp.cleanup()
+
+    def test_verified_with_no_rows_reverts_and_clears_its_source_line(self):
+        s = self.con.execute("SELECT * FROM simulants WHERE simulant_id='S1'").fetchone()
+        self.assertEqual(s["composition_status"], "not_extracted")
+        self.assertIsNone(s["composition_source_title"])
+        self.assertIsNone(s["composition_source_kind"])
+        self.assertEqual(s["composition_needs_review"], 1)
+        self.assertTrue(any(e["simulant_id"] == "S1" and e["outcome"] == "reverted: verified but no composition rows" for e in self.log))
+
+    def test_a_verified_composition_with_rows_is_left_alone(self):
+        s = self.con.execute("SELECT * FROM simulants WHERE simulant_id='S2'").fetchone()
+        self.assertEqual(s["composition_status"], "verified")
+        self.assertEqual(s["composition_source_title"], "LHS-1 Fact Sheet")

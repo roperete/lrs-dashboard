@@ -1,0 +1,1382 @@
+[
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S049-10",
+  "simulant_id": "S049",
+  "component": "P2O5",
+  "stated": "<0.02",
+  "reference_id": "RN-S049-1",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S051-12",
+  "simulant_id": "S051",
+  "component": "Fe2O3",
+  "stated": "4.15 (total Fe expressed as Fe2O3)",
+  "reference_id": "RN-S051-5",
+  "action": "converted",
+  "value": 4.15
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S081-04",
+  "simulant_id": "S081",
+  "component": "Fe2O3",
+  "stated": "15.02 (reported as 'Fe2O3; FeO', i.e. total iron)",
+  "reference_id": "R102",
+  "action": "converted",
+  "value": 15.02
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S040-01",
+  "simulant_id": "S040",
+  "component": "SiO2",
+  "stated": "49.96 ± 0.60 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 49.96
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S040-02",
+  "simulant_id": "S040",
+  "component": "TiO2",
+  "stated": "2.33 ± 0.03 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 2.33
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S040-03",
+  "simulant_id": "S040",
+  "component": "Al2O3",
+  "stated": "13.98 ± 0.19 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 13.98
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S040-04",
+  "simulant_id": "S040",
+  "component": "FeO",
+  "stated": "10.23 ± 0.04 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 10.23
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S040-05",
+  "simulant_id": "S040",
+  "component": "MgO",
+  "stated": "8.18 ± 0.04 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 8.18
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S040-06",
+  "simulant_id": "S040",
+  "component": "CaO",
+  "stated": "7.88 ± 0.08 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 7.88
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S040-07",
+  "simulant_id": "S040",
+  "component": "Na2O",
+  "stated": "3.41 ± 0.02 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 3.41
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S040-08",
+  "simulant_id": "S040",
+  "component": "K2O",
+  "stated": "1.85 ± 0.02 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 1.85
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S040-09",
+  "simulant_id": "S040",
+  "component": "MnO",
+  "stated": "0.20 ± 0.00 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 0.2
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S040-10",
+  "simulant_id": "S040",
+  "component": "Cr2O3",
+  "stated": "0.04 ± 0.00 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 0.04
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S040-11",
+  "simulant_id": "S040",
+  "component": "P2O5",
+  "stated": "0.56 ± 0.00 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 0.56
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S041-01",
+  "simulant_id": "S041",
+  "component": "SiO2",
+  "stated": "49.76 ± 0.20 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 49.76
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S041-02",
+  "simulant_id": "S041",
+  "component": "TiO2",
+  "stated": "0.09 ± 0.00 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 0.09
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S041-03",
+  "simulant_id": "S041",
+  "component": "Al2O3",
+  "stated": "31.39 ± 0.12 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 31.39
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S041-04",
+  "simulant_id": "S041",
+  "component": "FeO",
+  "stated": "0.57 ± 0.01 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 0.57
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S041-05",
+  "simulant_id": "S041",
+  "component": "MgO",
+  "stated": "0.22 ± 0.01 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 0.22
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S041-06",
+  "simulant_id": "S041",
+  "component": "CaO",
+  "stated": "15.21 ± 0.11 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 15.21
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S041-07",
+  "simulant_id": "S041",
+  "component": "Na2O",
+  "stated": "2.34 ± 0.03 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 2.34
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S041-08",
+  "simulant_id": "S041",
+  "component": "K2O",
+  "stated": "0.15 ± 0.00 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 0.15
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S041-09",
+  "simulant_id": "S041",
+  "component": "MnO",
+  "stated": "0.01 ± 0.00 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 0.01
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S041-10",
+  "simulant_id": "S041",
+  "component": "Cr2O3",
+  "stated": "0.01 ± 0.01 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 0.01
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S041-11",
+  "simulant_id": "S041",
+  "component": "P2O5",
+  "stated": "0.01 ± 0.00 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 0.01
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S015-01",
+  "simulant_id": "S015",
+  "component": "SiO2",
+  "stated": "51.87 wt%",
+  "reference_id": "R015",
+  "action": "converted",
+  "value": 51.87
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S015-02",
+  "simulant_id": "S015",
+  "component": "TiO2",
+  "stated": "0.80 wt%",
+  "reference_id": "R015",
+  "action": "converted",
+  "value": 0.8
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S015-03",
+  "simulant_id": "S015",
+  "component": "Al2O3",
+  "stated": "19.21 wt%",
+  "reference_id": "R015",
+  "action": "converted",
+  "value": 19.21
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S015-04",
+  "simulant_id": "S015",
+  "component": "Fe2O3",
+  "stated": "8.30 wt%",
+  "reference_id": "R015",
+  "action": "converted",
+  "value": 8.3
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S015-05",
+  "simulant_id": "S015",
+  "component": "MgO",
+  "stated": "2.84 wt%",
+  "reference_id": "R015",
+  "action": "converted",
+  "value": 2.84
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S015-06",
+  "simulant_id": "S015",
+  "component": "CaO",
+  "stated": "5.41 wt%",
+  "reference_id": "R015",
+  "action": "converted",
+  "value": 5.41
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S015-07",
+  "simulant_id": "S015",
+  "component": "Na2O",
+  "stated": "5.76 wt%",
+  "reference_id": "R015",
+  "action": "converted",
+  "value": 5.76
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S015-08",
+  "simulant_id": "S015",
+  "component": "K2O",
+  "stated": "4.22 wt%",
+  "reference_id": "R015",
+  "action": "converted",
+  "value": 4.22
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S015-09",
+  "simulant_id": "S015",
+  "component": "MnO",
+  "stated": "0.22 wt%",
+  "reference_id": "R015",
+  "action": "converted",
+  "value": 0.22
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S015-10",
+  "simulant_id": "S015",
+  "component": "P2O5",
+  "stated": "1.39 wt%",
+  "reference_id": "R015",
+  "action": "converted",
+  "value": 1.39
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S103-01",
+  "simulant_id": "S103",
+  "component": "SiO2",
+  "stated": "48.0 wt%",
+  "reference_id": "R088",
+  "action": "converted",
+  "value": 48.0
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S103-02",
+  "simulant_id": "S103",
+  "component": "TiO2",
+  "stated": "2.9 wt%",
+  "reference_id": "R088",
+  "action": "converted",
+  "value": 2.9
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S103-03",
+  "simulant_id": "S103",
+  "component": "Al2O3",
+  "stated": "22.9 wt%",
+  "reference_id": "R088",
+  "action": "converted",
+  "value": 22.9
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S103-04",
+  "simulant_id": "S103",
+  "component": "FeO",
+  "stated": "5.7 wt%",
+  "reference_id": "R088",
+  "action": "converted",
+  "value": 5.7
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S103-05",
+  "simulant_id": "S103",
+  "component": "MgO",
+  "stated": "1.9 wt%",
+  "reference_id": "R088",
+  "action": "converted",
+  "value": 1.9
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S103-06",
+  "simulant_id": "S103",
+  "component": "CaO",
+  "stated": "15.9 wt%",
+  "reference_id": "R088",
+  "action": "converted",
+  "value": 15.9
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S103-07",
+  "simulant_id": "S103",
+  "component": "Na2O",
+  "stated": "2.6 wt%",
+  "reference_id": "R088",
+  "action": "converted",
+  "value": 2.6
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S105-01",
+  "simulant_id": "S105",
+  "component": "SiO2",
+  "stated": "46.9 wt%",
+  "reference_id": "R089",
+  "action": "converted",
+  "value": 46.9
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S105-02",
+  "simulant_id": "S105",
+  "component": "TiO2",
+  "stated": "5.1 wt%",
+  "reference_id": "R089",
+  "action": "converted",
+  "value": 5.1
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S105-03",
+  "simulant_id": "S105",
+  "component": "Al2O3",
+  "stated": "15.1 wt%",
+  "reference_id": "R089",
+  "action": "converted",
+  "value": 15.1
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S105-04",
+  "simulant_id": "S105",
+  "component": "FeO",
+  "stated": "14.0 wt%",
+  "reference_id": "R089",
+  "action": "converted",
+  "value": 14.0
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S105-05",
+  "simulant_id": "S105",
+  "component": "MgO",
+  "stated": "4.1 wt%",
+  "reference_id": "R089",
+  "action": "converted",
+  "value": 4.1
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S105-06",
+  "simulant_id": "S105",
+  "component": "CaO",
+  "stated": "12.2 wt%",
+  "reference_id": "R089",
+  "action": "converted",
+  "value": 12.2
+ },
+ {
+  "table": "chemical_compositions",
+  "composition_id": "CH-S105-07",
+  "simulant_id": "S105",
+  "component": "Na2O",
+  "stated": "2.7 wt%",
+  "reference_id": "R089",
+  "action": "converted",
+  "value": 2.7
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S049-01",
+  "simulant_id": "S049",
+  "component": "Glass",
+  "stated": "22.4 (vol%)",
+  "reference_id": "RN-S049-2",
+  "action": "converted",
+  "value": 22.4
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S049-02",
+  "simulant_id": "S049",
+  "component": "Agglutinates",
+  "stated": "29.0 (vol%)",
+  "reference_id": "RN-S049-2",
+  "action": "converted",
+  "value": 29.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S049-03",
+  "simulant_id": "S049",
+  "component": "Plagioclase",
+  "stated": "38.8 (vol%; An 80)",
+  "reference_id": "RN-S049-2",
+  "action": "converted",
+  "value": 38.8
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S049-04",
+  "simulant_id": "S049",
+  "component": "Olivine",
+  "stated": "2.9 (vol%)",
+  "reference_id": "RN-S049-2",
+  "action": "converted",
+  "value": 2.9
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S049-05",
+  "simulant_id": "S049",
+  "component": "Clinopyroxene",
+  "stated": "2.0 (vol%)",
+  "reference_id": "RN-S049-2",
+  "action": "converted",
+  "value": 2.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S049-06",
+  "simulant_id": "S049",
+  "component": "Orthopyroxene",
+  "stated": "4.4 (vol%)",
+  "reference_id": "RN-S049-2",
+  "action": "converted",
+  "value": 4.4
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S049-07",
+  "simulant_id": "S049",
+  "component": "Ilmenite",
+  "stated": "0.3 (vol%)",
+  "reference_id": "RN-S049-2",
+  "action": "converted",
+  "value": 0.3
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S049-08",
+  "simulant_id": "S049",
+  "component": "Spinel minerals",
+  "stated": "0.05 (vol%)",
+  "reference_id": "RN-S049-2",
+  "action": "converted",
+  "value": 0.05
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S049-09",
+  "simulant_id": "S049",
+  "component": "Chromite",
+  "stated": "0.04 (vol%, SEM modal)",
+  "reference_id": "RN-S049-1",
+  "action": "converted",
+  "value": 0.04
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S049-10",
+  "simulant_id": "S049",
+  "component": "Sulfide",
+  "stated": "0.03 (vol%, SEM modal)",
+  "reference_id": "RN-S049-1",
+  "action": "converted",
+  "value": 0.03
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S049-11",
+  "simulant_id": "S049",
+  "component": "Albite",
+  "stated": "2.97 (vol%, nonlunar phase, SEM modal)",
+  "reference_id": "RN-S049-1",
+  "action": "converted",
+  "value": 2.97
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S049-12",
+  "simulant_id": "S049",
+  "component": "Quartz",
+  "stated": "0.18 (vol%, nonlunar phase, SEM modal)",
+  "reference_id": "RN-S049-1",
+  "action": "converted",
+  "value": 0.18
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S051-01",
+  "simulant_id": "S051",
+  "component": "Glass",
+  "stated": "7.2 (vol%)",
+  "reference_id": "RN-S051-3",
+  "action": "converted",
+  "value": 7.2
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S051-02",
+  "simulant_id": "S051",
+  "component": "Agglutinates",
+  "stated": "23.5 (vol%)",
+  "reference_id": "RN-S051-3",
+  "action": "converted",
+  "value": 23.5
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S051-03",
+  "simulant_id": "S051",
+  "component": "Plagioclase",
+  "stated": "54.9 (vol%; An 80)",
+  "reference_id": "RN-S051-3",
+  "action": "converted",
+  "value": 54.9
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S051-04",
+  "simulant_id": "S051",
+  "component": "Olivine",
+  "stated": "9.5 (vol%)",
+  "reference_id": "RN-S051-3",
+  "action": "converted",
+  "value": 9.5
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S051-05",
+  "simulant_id": "S051",
+  "component": "Clinopyroxene",
+  "stated": "4.0 (vol%)",
+  "reference_id": "RN-S051-3",
+  "action": "converted",
+  "value": 4.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S051-06",
+  "simulant_id": "S051",
+  "component": "Orthopyroxene",
+  "stated": "0.2 (vol%)",
+  "reference_id": "RN-S051-3",
+  "action": "converted",
+  "value": 0.2
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S051-07",
+  "simulant_id": "S051",
+  "component": "Ilmenite",
+  "stated": "0.2 (vol%)",
+  "reference_id": "RN-S051-3",
+  "action": "converted",
+  "value": 0.2
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S051-08",
+  "simulant_id": "S051",
+  "component": "Ca-phosphates",
+  "stated": "0.43 (vol%)",
+  "reference_id": "RN-S051-3",
+  "action": "converted",
+  "value": 0.43
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S051-09",
+  "simulant_id": "S051",
+  "component": "Fe-sulfide",
+  "stated": "0.04 (vol%)",
+  "reference_id": "RN-S051-3",
+  "action": "converted",
+  "value": 0.04
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S051-10",
+  "simulant_id": "S051",
+  "component": "Spinel minerals",
+  "stated": "0.01 (vol%)",
+  "reference_id": "RN-S051-3",
+  "action": "converted",
+  "value": 0.01
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S081-01",
+  "simulant_id": "S081",
+  "component": "Anorthite",
+  "stated": "ca. 92 (of crystalline fraction, Rietveld XRD; amorphous phase present but not quantified)",
+  "reference_id": "R102",
+  "action": "converted",
+  "value": 92.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S081-02",
+  "simulant_id": "S081",
+  "component": "Forsterite",
+  "stated": "ca. 8 (of crystalline fraction, Rietveld XRD)",
+  "reference_id": "R102",
+  "action": "converted",
+  "value": 8.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S045-01",
+  "simulant_id": "S045",
+  "component": "Feldspar",
+  "stated": "60.0 (vol%)",
+  "reference_id": "R095",
+  "action": "converted",
+  "value": 60.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S045-02",
+  "simulant_id": "S045",
+  "component": "Pyroxene+hornblende",
+  "stated": "19.2 (vol%)",
+  "reference_id": "R095",
+  "action": "converted",
+  "value": 19.2
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S045-03",
+  "simulant_id": "S045",
+  "component": "Opaque+glass",
+  "stated": "20.8 (vol%)",
+  "reference_id": "R095",
+  "action": "converted",
+  "value": 20.8
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S120-04",
+  "simulant_id": "S120",
+  "component": "Plagioclase",
+  "stated": "32.4 (anorthite)",
+  "reference_id": "R078",
+  "action": "converted",
+  "value": 32.4
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S120-05",
+  "simulant_id": "S120",
+  "component": "Olivine",
+  "stated": "9.1 (forsterite)",
+  "reference_id": "R078",
+  "action": "converted",
+  "value": 9.1
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S018-06",
+  "simulant_id": "S018",
+  "component": "Ilmenite",
+  "stated": "Minor/trace",
+  "reference_id": "RN-S018-1",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S040-01",
+  "simulant_id": "S040",
+  "component": "Plagioclase",
+  "stated": "31 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 31.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S040-02",
+  "simulant_id": "S040",
+  "component": "Augite",
+  "stated": "24 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 24.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S040-03",
+  "simulant_id": "S040",
+  "component": "Olivine",
+  "stated": "15 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 15.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S040-04",
+  "simulant_id": "S040",
+  "component": "Anorthoclase",
+  "stated": "17 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 17.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S040-05",
+  "simulant_id": "S040",
+  "component": "Magnetite",
+  "stated": "5 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 5.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S040-06",
+  "simulant_id": "S040",
+  "component": "Biotite",
+  "stated": "1 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 1.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S040-07",
+  "simulant_id": "S040",
+  "component": "Chlorite",
+  "stated": "2 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 2.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S040-08",
+  "simulant_id": "S040",
+  "component": "Analcime",
+  "stated": "3 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 3.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S040-09",
+  "simulant_id": "S040",
+  "component": "Zeolite",
+  "stated": "1 wt.-%",
+  "reference_id": "R104",
+  "action": "converted",
+  "value": 1.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S041-01",
+  "simulant_id": "S041",
+  "component": "Bytownite",
+  "stated": "40 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 40.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S041-02",
+  "simulant_id": "S041",
+  "component": "Labradorite",
+  "stated": "53 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 53.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S041-03",
+  "simulant_id": "S041",
+  "component": "Quartz",
+  "stated": "3 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 3.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S041-04",
+  "simulant_id": "S041",
+  "component": "Biotite",
+  "stated": "<1 wt.-%",
+  "reference_id": "R105",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S041-05",
+  "simulant_id": "S041",
+  "component": "Clinochlore",
+  "stated": "2 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 2.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S041-06",
+  "simulant_id": "S041",
+  "component": "Illite",
+  "stated": "2 wt.-%",
+  "reference_id": "R105",
+  "action": "converted",
+  "value": 2.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S014-01",
+  "simulant_id": "S014",
+  "component": "Plagioclase",
+  "stated": "present (checkmark, no wt% reported)",
+  "reference_id": "RN-S014-3",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S014-02",
+  "simulant_id": "S014",
+  "component": "Pyroxene",
+  "stated": "present (checkmark, no wt% reported)",
+  "reference_id": "RN-S014-3",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S014-03",
+  "simulant_id": "S014",
+  "component": "Analcime",
+  "stated": "present (listed under 'Other minerals', no wt%)",
+  "reference_id": "RN-S014-3",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S014-04",
+  "simulant_id": "S014",
+  "component": "Mica",
+  "stated": "present (listed under 'Other minerals', no wt%)",
+  "reference_id": "RN-S014-3",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S014-05",
+  "simulant_id": "S014",
+  "component": "Calcite",
+  "stated": "present (listed under 'Other minerals', no wt%)",
+  "reference_id": "RN-S014-3",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S014-06",
+  "simulant_id": "S014",
+  "component": "Quartz",
+  "stated": "present (listed under 'Other minerals', no wt%)",
+  "reference_id": "RN-S014-3",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S014-07",
+  "simulant_id": "S014",
+  "component": "Sodium feldspar",
+  "stated": "present (lower melting point than calcium-rich plagioclase in JSC-1A)",
+  "reference_id": "RN-S014-4",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S011-01",
+  "simulant_id": "S011",
+  "component": "Glass",
+  "stated": "44 wt%",
+  "reference_id": "RN-S011-1",
+  "action": "converted",
+  "value": 44.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S011-02",
+  "simulant_id": "S011",
+  "component": "Plagioclase",
+  "stated": "40 wt%",
+  "reference_id": "RN-S011-1",
+  "action": "converted",
+  "value": 40.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S011-03",
+  "simulant_id": "S011",
+  "component": "Ilmenite",
+  "stated": "1 wt%",
+  "reference_id": "RN-S011-1",
+  "action": "converted",
+  "value": 1.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S011-04",
+  "simulant_id": "S011",
+  "component": "Olivine",
+  "stated": "8 wt%",
+  "reference_id": "RN-S011-1",
+  "action": "converted",
+  "value": 8.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S011-05",
+  "simulant_id": "S011",
+  "component": "Clinopyroxene",
+  "stated": "4 wt%",
+  "reference_id": "RN-S011-1",
+  "action": "converted",
+  "value": 4.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S011-06",
+  "simulant_id": "S011",
+  "component": "Other minerals",
+  "stated": "K-feldspar + Chromite + Calcite + Quartz (unquantified)",
+  "reference_id": "RN-S011-1",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S103-01",
+  "simulant_id": "S103",
+  "component": "Anorthosite (GreenSpar feedstock)",
+  "stated": "70%",
+  "reference_id": "RN-S103-1",
+  "action": "converted",
+  "value": 70.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S103-02",
+  "simulant_id": "S103",
+  "component": "Basalt (Merriam Crater cinder feedstock)",
+  "stated": "30%",
+  "reference_id": "RN-S103-1",
+  "action": "converted",
+  "value": 30.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S105-01",
+  "simulant_id": "S105",
+  "component": "Basalt (Merriam Crater cinder feedstock)",
+  "stated": "100%",
+  "reference_id": "RN-S105-3",
+  "action": "converted",
+  "value": 100.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S107-01",
+  "simulant_id": "S107",
+  "component": "Other minerals",
+  "stated": "Quartz (unquantified)",
+  "reference_id": "RN-S107-2",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S100-01",
+  "simulant_id": "S100",
+  "component": "Agglutinates",
+  "stated": "30 wt%",
+  "reference_id": "DS-S100",
+  "action": "converted",
+  "value": 30.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S100-02",
+  "simulant_id": "S100",
+  "component": "Anorthosite",
+  "stated": "90 wt%",
+  "reference_id": "DS-S100",
+  "action": "converted",
+  "value": 90.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S100-03",
+  "simulant_id": "S100",
+  "component": "Basalt",
+  "stated": "10 wt%",
+  "reference_id": "DS-S100",
+  "action": "converted",
+  "value": 10.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S025-02",
+  "simulant_id": "S025",
+  "component": "Pyroxene",
+  "stated": "~5",
+  "reference_id": "RN-S025-1",
+  "action": "converted",
+  "value": 5.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S025-03",
+  "simulant_id": "S025",
+  "component": "Quartz",
+  "stated": "~7",
+  "reference_id": "RN-S025-1",
+  "action": "converted",
+  "value": 7.0
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S004-01",
+  "simulant_id": "S004",
+  "component": "Albite-high",
+  "stated": "present (main mineral; wt% not quantified)",
+  "reference_id": "R003",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S004-02",
+  "simulant_id": "S004",
+  "component": "Andesine",
+  "stated": "present (main mineral; wt% not quantified)",
+  "reference_id": "R003",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S004-03",
+  "simulant_id": "S004",
+  "component": "Anorthite",
+  "stated": "present (main mineral, matches Apollo 16; wt% not quantified)",
+  "reference_id": "R003",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S004-04",
+  "simulant_id": "S004",
+  "component": "Labradorite",
+  "stated": "present (main mineral; wt% not quantified)",
+  "reference_id": "R003",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S121-01",
+  "simulant_id": "S121",
+  "component": "Albite-high",
+  "stated": "present (√, wt% not quantified)",
+  "reference_id": "RN-S121-2",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S121-02",
+  "simulant_id": "S121",
+  "component": "Andesine",
+  "stated": "present (√, wt% not quantified)",
+  "reference_id": "RN-S121-2",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S121-03",
+  "simulant_id": "S121",
+  "component": "Labradorite",
+  "stated": "present (√, wt% not quantified)",
+  "reference_id": "RN-S121-2",
+  "action": "removed: not a single number"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S100-01",
+  "simulant_id": "S100",
+  "component": "Agglutinates",
+  "stated": 30.0,
+  "reference_id": "DS-S100",
+  "action": "removed: feedstock ratio, not a mineral"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S100-02",
+  "simulant_id": "S100",
+  "component": "Anorthosite",
+  "stated": 90.0,
+  "reference_id": "DS-S100",
+  "action": "removed: feedstock ratio, not a mineral"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S100-03",
+  "simulant_id": "S100",
+  "component": "Basalt",
+  "stated": 10.0,
+  "reference_id": "DS-S100",
+  "action": "removed: feedstock ratio, not a mineral"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S103-01",
+  "simulant_id": "S103",
+  "component": "Anorthosite (GreenSpar feedstock)",
+  "stated": 70.0,
+  "reference_id": "RN-S103-1",
+  "action": "removed: feedstock ratio, not a mineral"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S103-02",
+  "simulant_id": "S103",
+  "component": "Basalt (Merriam Crater cinder feedstock)",
+  "stated": 30.0,
+  "reference_id": "RN-S103-1",
+  "action": "removed: feedstock ratio, not a mineral"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S105-01",
+  "simulant_id": "S105",
+  "component": "Basalt (Merriam Crater cinder feedstock)",
+  "stated": 100.0,
+  "reference_id": "RN-S105-3",
+  "action": "removed: feedstock ratio, not a mineral"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S119-01",
+  "simulant_id": "S119",
+  "component": "Coal",
+  "stated": 63.0,
+  "reference_id": "RN-S119-1",
+  "action": "removed: feedstock ratio, not a mineral"
+ },
+ {
+  "table": "mineral_compositions",
+  "composition_id": "C-S119-02",
+  "simulant_id": "S119",
+  "component": "Limestone",
+  "stated": 37.0,
+  "reference_id": "RN-S119-1",
+  "action": "removed: feedstock ratio, not a mineral"
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S004",
+  "field": "particle_size_d50",
+  "stated": "38.22 μm",
+  "reference_id": "R003",
+  "quote": "the medium particle size (d50) of BH-1 is 38.22 lm [μm]",
+  "action": "converted",
+  "value": 38.22
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S026",
+  "field": "particle_size_d50",
+  "stated": "85.7 µm",
+  "reference_id": "R024",
+  "quote": "The D50 ( μ m), Cc and Cu values of JLU-H were 85.7, 1.1 and 14.3,",
+  "action": "converted",
+  "value": 85.7
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S027",
+  "field": "particle_size_d50",
+  "stated": "98 (UTD) / 117 (NASA) µm",
+  "reference_id": "R086",
+  "quote": "The median particle sizes for these samples, defined such that 50% of the soil is larger and 50% is smaller, equal 98 µm (UTD) and 117 µm (NASA).",
+  "action": "cleared: not a single number"
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S045",
+  "field": "particle_size_d50",
+  "stated": "41–61 µm (median; mean 53–81 µm)",
+  "reference_id": "R095",
+  "quote": "The mean and median particle sizes of NAO-1 are 53–81 and 41– 61 ␮m, respectively.",
+  "action": "cleared: not a single number"
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S064",
+  "field": "particle_size_d50",
+  "stated": "260.0 μm",
+  "reference_id": "RN-S064-7",
+  "quote": "TJ-1 20.0 260.0 431.0 21.5 0.94",
+  "action": "converted",
+  "value": 260.0
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S100",
+  "field": "nasa_fom_score",
+  "stated": "88 chemistry FoM (Table 8); Table 24 summary: chemistry 88, mineralogy n/a, particle size distribution 97, particle shape 84, bulk density n/a, magnetic susceptibility n/a, shear strength n/a",
+  "reference_id": "DS-S100",
+  "quote": "Table 8: OPRH4W30   88 (Chemistry Figures of Merit). Table 24: OPRH4W30   Highlands   88   n/a   97   84   n/a   n/a   n/a",
+  "action": "cleared: not a single number"
+ },
+ {
+  "table": "references_",
+  "reference_id": "RN-S007-12",
+  "simulant_id": "S007",
+  "title": "Global Registry of Lunar Regolith Simulants (CSV compilation of unknown authorship saved as HTML)",
+  "local_path": "papers/LRS/Sources/Global Registry of Lunar Regolith Simulants.html",
+  "action": "deleted: the project's own registry is not evidence"
+ },
+ {
+  "table": "references_",
+  "reference_id": "RN-S009-6",
+  "simulant_id": "S009",
+  "title": "Global Registry of Lunar Regolith Simulants (CSV compilation of unknown authorship saved as HTML)",
+  "local_path": "papers/LRS/Sources/Global Registry of Lunar Regolith Simulants.html",
+  "action": "deleted: the project's own registry is not evidence"
+ },
+ {
+  "table": "references_",
+  "reference_id": "RN-S010-13",
+  "simulant_id": "S010",
+  "title": "Global Registry of Lunar Regolith Simulants (CSV compilation of unknown authorship saved as HTML)",
+  "local_path": "papers/LRS/Sources/Global Registry of Lunar Regolith Simulants.html",
+  "action": "deleted: the project's own registry is not evidence"
+ },
+ {
+  "table": "references_",
+  "reference_id": "RN-S084-10",
+  "simulant_id": "S084",
+  "title": "Global Registry of Lunar Regolith Simulants (CSV compilation of unknown authorship saved as HTML)",
+  "local_path": "papers/LRS/Sources/Global Registry of Lunar Regolith Simulants.html",
+  "action": "deleted: the project's own registry is not evidence"
+ },
+ {
+  "table": "references_",
+  "reference_id": "RN-S080-2",
+  "simulant_id": "S080",
+  "title": "Global Registry of Lunar Regolith Simulants (CSV compilation of unknown authorship saved as HTML)",
+  "local_path": "papers/LRS/Sources/Global Registry of Lunar Regolith Simulants.html",
+  "action": "deleted: the project's own registry is not evidence"
+ }
+]

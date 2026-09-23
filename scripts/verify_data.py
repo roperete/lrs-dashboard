@@ -36,6 +36,38 @@ def load(name):
     return _BUNDLE.get(_KEYS[name], [])
 
 
+# REAL columns on simulants. A value in one of these must reach the page as a number: the
+# page coerces with Number() and hides anything that fails, silently.
+NUMERIC_SCALAR_FIELDS = (
+    "tons_produced_mt", "specific_gravity", "density_g_cm3", "particle_size_d50",
+    "glass_content_percent", "nasa_fom_score", "ti_content_percent", "ph", "particle_size_mean_um",
+)
+
+
+def _is_number(v) -> bool:
+    return isinstance(v, (int, float)) and not isinstance(v, bool)
+
+
+def check_numeric_values(simulants, compositions, chemicals):
+    """Every composition value and every numeric property in the bundle is a number.
+
+    A value stored as text ("22.4 (vol%)", "38.22 μm") is dropped by the page without a
+    word, so it must fail here rather than disappear there."""
+    errors = []
+    for c in compositions:
+        if not _is_number(c.get("value_pct")):
+            errors.append(f"Mineral value is not a number: {c.get('simulant_id')} {c.get('composition_id')} = {c.get('value_pct')!r}")
+    for c in chemicals:
+        if not _is_number(c.get("value_wt_pct")):
+            errors.append(f"Oxide value is not a number: {c.get('simulant_id')} {c.get('composition_id')} = {c.get('value_wt_pct')!r}")
+    for s in simulants:
+        for f in NUMERIC_SCALAR_FIELDS:
+            v = s.get(f)
+            if v is not None and not _is_number(v):
+                errors.append(f"Numeric property is not a number: {s.get('simulant_id')} {f} = {v!r}")
+    return errors
+
+
 def check_scalar_provenance(simulants, property_sources):
     """The per-value rule as it reaches the reader: no gated scalar may be non-null in the
     exported bundle without a property_sources row for (simulant_id, field). Returns one
@@ -141,6 +173,13 @@ def main():
     # 11. Per-value provenance: every exported scalar has a source row, and every
     #     source row and composition citation points at a real simulant and reference
     errors.extend(check_scalar_provenance(simulants, property_sources))
+    # 12. Numbers reach the page as numbers
+    errors.extend(check_numeric_values(simulants, compositions, chemicals))
+    # 13. No citation of the project's own registry — it is the data being checked
+    for r in references:
+        hay = f"{r.get('title') or ''} {r.get('reference_text') or ''}".lower()
+        if "global registry of lunar regolith simulants" in hay:
+            errors.append(f"Reference cites the project's own registry: {r.get('simulant_id')} {r.get('reference_id')}")
     for p in property_sources:
         if p["simulant_id"] not in sim_ids:
             errors.append(f"property_sources orphan: {p['simulant_id']} {p['field']}")

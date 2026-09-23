@@ -76,7 +76,8 @@ CREATE TABLE IF NOT EXISTS chemical_compositions (
   component_type TEXT,
   component_name TEXT,
   value_wt_pct   REAL,
-  reference_id   TEXT REFERENCES references_(reference_id)  -- the document this row was read from
+  reference_id   TEXT REFERENCES references_(reference_id), -- the document this row was read from
+  value_text     TEXT            -- the value as stated, when it says more than the number
 );
 
 CREATE TABLE IF NOT EXISTS mineral_compositions (
@@ -85,7 +86,8 @@ CREATE TABLE IF NOT EXISTS mineral_compositions (
   component_type TEXT,
   component_name TEXT,
   value_pct      REAL,
-  reference_id   TEXT REFERENCES references_(reference_id)  -- the document this row was read from
+  reference_id   TEXT REFERENCES references_(reference_id), -- the document this row was read from
+  value_text     TEXT            -- the value as stated, when it says more than the number
 );
 
 -- Provenance of scalar values on simulants: one row per (simulant, field).

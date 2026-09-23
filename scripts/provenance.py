@@ -29,7 +29,9 @@ REFERENCE_COLUMNS = [
     ("local_path", "TEXT"),          # copy under DIRT/Sources used for verification; never displayed
     ("checked_on", "TEXT"),          # ISO date of last verification
 ]
-COMPOSITION_COLUMNS = [("reference_id", "TEXT")]
+# value_text: the value as the document states it ("22.4 (vol%)", "2.33 ± 0.03 wt.-%"), kept
+# when it says more than the bare number — the basis, the uncertainty, "ca." — so the page can show it.
+COMPOSITION_COLUMNS = [("reference_id", "TEXT"), ("value_text", "TEXT")]
 
 PROPERTY_SOURCES_DDL = """
 CREATE TABLE IF NOT EXISTS property_sources (

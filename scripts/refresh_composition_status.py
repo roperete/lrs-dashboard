@@ -54,6 +54,15 @@ def refresh(db_path: Path | str) -> list[dict]:
     con = sqlite3.connect(str(db_path))
     con.row_factory = sqlite3.Row
     log: list[dict] = []
+    # A composition marked verified must have rows to show; one emptied by a repair reverts,
+    # or the page would name a source above an empty table.
+    for (sid,) in con.execute(
+            "SELECT simulant_id FROM simulants s WHERE composition_status='verified' "
+            "AND NOT EXISTS (SELECT 1 FROM chemical_compositions c WHERE c.simulant_id=s.simulant_id) "
+            "AND NOT EXISTS (SELECT 1 FROM mineral_compositions m WHERE m.simulant_id=s.simulant_id)").fetchall():
+        con.execute("UPDATE simulants SET composition_status='not_extracted', composition_source_title=NULL, "
+                    "composition_source_url=NULL, composition_source_kind=NULL, composition_needs_review=1 WHERE simulant_id=?", (sid,))
+        log.append({"simulant_id": sid, "outcome": "reverted: verified but no composition rows"})
     sids = [r[0] for r in con.execute(
         "SELECT simulant_id FROM chemical_compositions UNION SELECT simulant_id FROM mineral_compositions ORDER BY 1")]
     for sid in sids:

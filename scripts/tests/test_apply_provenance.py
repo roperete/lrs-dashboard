@@ -205,3 +205,102 @@ class ApplyGroupTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class StatedValueTests(unittest.TestCase):
+    """What reaches a numeric column must be a number.
+
+    Readers quote values as printed. Written verbatim into a REAL column, a string such as
+    "22.4 (vol%)" stays text and the page drops the row without a word — 123 composition
+    values and six physical values went missing that way on 2026-09-23. The number is now
+    parsed at write time, the statement kept verbatim beside it, and anything that is not a
+    single number goes to a human.
+    """
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.db = Path(self.tmp.name) / "a.sqlite"
+        make_db(self.db)
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def q(self, sql, *args):
+        con = sqlite3.connect(self.db)
+        r = con.execute(sql, args).fetchall()
+        con.close()
+        return r
+
+    def run_new(self, field, value):
+        e = extraction(values=[], new_values=[{"field": field, "value": value, "reference_id": "R010", "location": "Table 2", "quote": f"{field} {value}"}])
+        v = verification(value_checks=[], new_value_checks=[{"field": field, "verdict": "CONFIRMED"}])
+        return apply_group(self.db, [e], [v], checked_on="2026-09-23")
+
+    def test_an_oxide_with_its_uncertainty_is_stored_as_a_number_and_the_statement_kept(self):
+        self.run_new("oxide:TiO2", "2.33 ± 0.03 wt.-%")
+        rows = self.q("SELECT value_wt_pct, typeof(value_wt_pct), value_text, reference_id FROM chemical_compositions WHERE component_name='TiO2'")
+        self.assertEqual(rows, [(2.33, "real", "2.33 ± 0.03 wt.-%", "R010")])
+
+    def test_a_mineral_in_volume_percent_keeps_its_basis(self):
+        self.run_new("mineral:Plagioclase", "38.8 (vol%; An 80)")
+        self.assertEqual(self.q("SELECT value_pct, value_text FROM mineral_compositions WHERE component_name='Plagioclase'"),
+                         [(38.8, "38.8 (vol%; An 80)")])
+
+    def test_a_plain_number_needs_no_statement(self):
+        self.run_new("oxide:MgO", "8.18")
+        self.assertEqual(self.q("SELECT value_wt_pct, value_text FROM chemical_compositions WHERE component_name='MgO'"), [(8.18, None)])
+
+    def test_presence_without_a_quantity_is_not_a_composition_row(self):
+        log = self.run_new("mineral:Plagioclase", "present (checkmark, no wt% reported)")
+        self.assertEqual(self.q("SELECT count(*) FROM mineral_compositions WHERE component_name='Plagioclase'"), [(0,)])
+        hit = [e for e in log if e.get("field") == "mineral:Plagioclase"]
+        self.assertEqual(hit[0]["outcome"], "flagged: not a single number, kept out of the table")
+        self.assertTrue(hit[0]["needs_review"])
+        self.assertEqual(hit[0]["value"], "present (checkmark, no wt% reported)")
+
+    def test_a_detection_limit_is_not_a_composition_row(self):
+        self.run_new("oxide:P2O5", "<0.02")
+        self.assertEqual(self.q("SELECT count(*) FROM chemical_compositions WHERE component_name='P2O5'"), [(0,)])
+
+    def test_a_numeric_physical_property_is_parsed(self):
+        self.run_new("particle_size_d50", "38.22 μm")
+        self.assertEqual(self.q("SELECT particle_size_d50, typeof(particle_size_d50) FROM simulants WHERE simulant_id='S010'"), [(38.22, "real")])
+
+    def test_a_range_for_a_numeric_property_is_refused(self):
+        log = self.run_new("particle_size_d50", "41–61 µm (median; mean 53–81 µm)")
+        self.assertEqual(self.q("SELECT particle_size_d50 FROM simulants WHERE simulant_id='S010'"), [(None,)])
+        self.assertEqual(self.q("SELECT count(*) FROM property_sources WHERE field='particle_size_d50'"), [(0,)])
+        self.assertTrue(any(e.get("field") == "particle_size_d50" and e["outcome"].startswith("flagged: not a single number") for e in log))
+
+    def test_a_text_property_keeps_the_statement_as_it_is(self):
+        self.run_new("particle_size_distribution", "41–61 µm (median; mean 53–81 µm)")
+        self.assertEqual(self.q("SELECT particle_size_distribution FROM simulants WHERE simulant_id='S010'"),
+                         [("41–61 µm (median; mean 53–81 µm)",)])
+
+
+class RegistryIsNotEvidenceTests(unittest.TestCase):
+    """The Global Registry of Lunar Regolith Simulants is this project's own spreadsheet —
+    the unverified data the audit exists to check. A reader found a copy in the NotebookLM
+    export folder and cited it for five simulants on 2026-09-23. Citing it proves nothing."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.db = Path(self.tmp.name) / "a.sqlite"
+        make_db(self.db)
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_a_new_reference_to_the_registry_is_refused(self):
+        e = extraction(values=[], new_values=[{"field": "bulk_density", "value": "1.45", "reference_id": "NEW1", "location": "row 12", "quote": "CAS-1,1.45"}],
+                       new_references=[{"temp_id": "NEW1", "title": "Global Registry of Lunar Regolith Simulants (CSV compilation)",
+                                        "kind": "general", "local_path": "papers/LRS/Sources/Global Registry of Lunar Regolith Simulants.html",
+                                        "mention_quote": "CAS-1", "location": "row 12"}])
+        v = verification(reference_checks=[{"reference_id": "NEW1", "verdict": "CONFIRMED"}], value_checks=[],
+                         new_value_checks=[{"field": "bulk_density", "verdict": "CONFIRMED"}])
+        log = apply_group(self.db, [e], [v], checked_on="2026-09-23")
+        con = sqlite3.connect(self.db)
+        self.assertEqual(con.execute("SELECT count(*) FROM references_ WHERE title LIKE 'Global Registry%'").fetchone(), (0,))
+        self.assertEqual(con.execute("SELECT bulk_density FROM simulants WHERE simulant_id='S010'").fetchone(), (None,))
+        con.close()
+        self.assertTrue(any(e["outcome"] == "refused: the project's own registry is not evidence" for e in log))

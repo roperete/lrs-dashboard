@@ -58,6 +58,7 @@ export interface Composition {
   component_name: string;
   value_pct: number;
   reference_id?: string | null;  // the document this row was read from (references_.reference_id)
+  value_text?: string | null;    // the value as the document states it, when it says more than the number ("22.4 (vol%)")
 }
 
 export interface ChemicalComposition {
@@ -67,6 +68,7 @@ export interface ChemicalComposition {
   component_name: string;
   value_wt_pct: number;
   reference_id?: string | null;  // the document this row was read from (references_.reference_id)
+  value_text?: string | null;    // the value as the document states it, when it says more than the number ("2.33 ± 0.03 wt.-%")
 }
 
 export interface Reference {

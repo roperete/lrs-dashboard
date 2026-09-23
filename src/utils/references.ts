@@ -29,6 +29,13 @@ export function referenceNumber(references: Reference[], referenceId: string | n
   return referenceId ? referenceNumbers(references).get(referenceId) : undefined;
 }
 
+/** Hover text for a composition row: the value as the document states it, when that says
+ *  more than the number the table shows (the basis, the uncertainty, "ca."), then the source. */
+export function rowCitationTooltip(stated: string | null | undefined, sourceLabel: string | undefined): string | undefined {
+  const parts = [stated?.trim() ? `Stated as: ${stated.trim()}` : undefined, sourceLabel].filter((p): p is string => !!p);
+  return parts.length ? parts.join(' — ') : undefined;
+}
+
 /** Short hover label for a citation: the title, else authors and year, else the citation text. */
 export function referenceShortLabel(reference: Reference | undefined): string | undefined {
   if (!reference) return undefined;
