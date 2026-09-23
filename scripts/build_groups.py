@@ -42,6 +42,50 @@ SCALAR_FIELDS = [
 ]
 
 
+def already_read(docs_dir: Path) -> set[str]:
+    """Simulant ids a reader-checker pair has already been through, from the findings files.
+
+    A value no document states never gains a source row, so "not fully sourced" is not a
+    reason to read a simulant again — what is left there is an owner decision. Having been
+    read is what marks the reading done.
+    """
+    ids: set[str] = set()
+    for f in sorted(docs_dir.glob("provenance-findings-*.json")):
+        try:
+            data = json.loads(f.read_text())
+        except json.JSONDecodeError:
+            print(f"warning: {f.name} is not readable JSON; ignored")
+            continue
+        for g in data.get("groups", []):
+            for r in (g.get("extraction") or {}).get("results", []):
+                if r.get("simulant_id"):
+                    ids.add(r["simulant_id"])
+    return ids
+
+
+def unfinished_reason(sim: dict, refs: list[dict], chem: list[dict], mins: list[dict],
+                      sourced: set[str]) -> str | None:
+    """Why this simulant still needs a reader, or None when all three tests pass for it.
+
+    Test 1 and 2: every reference on file has been checked against its document
+    (names_simulant set either way); a simulant with no reference at all fails test 1 and
+    needs a reader to establish the product exists. Test 3: every composition row cites a
+    document and every stored value has a property_sources row.
+    """
+    if not refs:
+        return "no reference on file"
+    unchecked = sum(1 for r in refs if r.get("names_simulant") is None)
+    if unchecked:
+        return f"{unchecked} reference{'s' if unchecked > 1 else ''} unchecked"
+    uncited = sum(1 for c in chem + mins if not c.get("reference_id"))
+    if uncited:
+        return f"{uncited} composition row{'s' if uncited > 1 else ''} without a citation"
+    missing = sum(1 for f in SCALAR_FIELDS if sim.get(f) not in (None, "") and f not in sourced)
+    if missing:
+        return f"{missing} value{'s' if missing > 1 else ''} without a source"
+    return None
+
+
 def latest_index() -> dict:
     files = sorted((ROOT / "documentation").glob("library-simulant-index-*.json"))
     return json.loads(files[-1].read_text())
@@ -59,10 +103,18 @@ def main() -> None:
     ap.add_argument("--per-simulant", action="store_true",
                     help="one unit per simulant (owner preference 2026-09-22) instead of family/institution groups")
     ap.add_argument("--out", type=Path, default=None)
+    ap.add_argument("--skip-finished", action="store_true",
+                    help="leave out simulants whose references are all checked and whose every value is sourced")
+    ap.add_argument("--exclude", default="", help="comma-separated simulant ids to leave out (e.g. one already running)")
+    ap.add_argument("--skip-read", action="store_true",
+                    help="leave out simulants a reader-checker pair has already been through")
+    ap.add_argument("--max-simulants", type=int, default=None, help="override the group size")
     cli = ap.parse_args()
     global MAX_SIMULANTS
     if cli.per_simulant:
         MAX_SIMULANTS = 1
+    if cli.max_simulants:
+        MAX_SIMULANTS = cli.max_simulants
 
     index = latest_index()
     docs_for = {name: docs for name, docs in index["simulants"].items()}
@@ -83,6 +135,24 @@ def main() -> None:
     for r in con.execute("SELECT simulant_id, field FROM property_sources"):
         sourced[r["simulant_id"]].add(r["field"])
     con.close()
+
+    excluded = {x.strip() for x in cli.exclude.split(",") if x.strip()}
+    if excluded:
+        sims = [s for s in sims if s["simulant_id"] not in excluded]
+        print(f"excluded by request: {', '.join(sorted(excluded))}")
+    if cli.skip_read:
+        read = already_read(ROOT / "documentation")
+        before = len(sims)
+        sims = [s for s in sims if s["simulant_id"] not in read]
+        print(f"skipping {before - len(sims)} simulant(s) already read by an agent pair")
+    if cli.skip_finished:
+        keep, done = [], []
+        for s in sims:
+            sid = s["simulant_id"]
+            why = unfinished_reason(s, refs.get(sid, []), chem.get(sid, []), mins.get(sid, []), sourced.get(sid, set()))
+            (keep if why else done).append(s)
+        print(f"skipping {len(done)} simulant(s) with nothing left to verify")
+        sims = keep
 
     # mention counts per (document, simulant) so documents can be ranked
     mentions: dict[str, dict[str, int]] = defaultdict(dict)
@@ -138,14 +208,20 @@ def main() -> None:
                     if d not in cited_first and d not in others:
                         target.append(d)
             documents = (cited_first + others)[:MAX_DOCS_PER_GROUP]
-            # what the group carries: the more stored data and references, the sooner it runs
-            priority = sum(
-                len(s.get("scalars") or {}) if isinstance(s.get("scalars"), dict) else 0
-                for s in chunk
-            )
-            priority += sum(len(chem.get(s["simulant_id"], [])) + len(mins.get(s["simulant_id"], [])) for s in chunk)
-            priority += sum(len(refs.get(s["simulant_id"], [])) for s in chunk)
-            priority += sum(1 for s in chunk if s.get("composition_status") == "withheld_unverified") * 10
+            # What the group still has to establish, not what it already holds: a simulant
+            # whose values are all sourced and whose references are all checked adds
+            # nothing, so the run reaches the least-verified material first.
+            priority = 0
+            for s in chunk:
+                sid = s["simulant_id"]
+                done = sourced.get(sid, set())
+                priority += sum(1 for f in SCALAR_FIELDS if s.get(f) not in (None, "") and f not in done)
+                priority += sum(1 for c in chem.get(sid, []) + mins.get(sid, []) if not c.get("reference_id"))
+                priority += sum(1 for r in refs.get(sid, []) if r.get("names_simulant") is None)
+                if not refs.get(sid):
+                    priority += 5          # existence itself is unestablished
+                if s.get("composition_status") == "withheld_unverified":
+                    priority += 10         # data on record that the page is hiding
             group = {
                 "key": f"{key}" + (f"-{i // MAX_SIMULANTS + 1}" if len(members) > MAX_SIMULANTS else ""),
                 "simulant_ids": ids,
