@@ -49,6 +49,11 @@ class SingleNumberTests(unittest.TestCase):
         "12": (12.0, False),
         "  3.5  ": (3.5, False),
         "1,5": None,          # a decimal comma is ambiguous with a thousands separator
+        # CUG-1A's paper prints the unit with a space inside it (wave 2, 2026-09-24)
+        "9% wt": (9.0, False),
+        "23% wt%": (23.0, False),
+        "20 wt %": (20.0, False),
+        "12 vol %": (12.0, False),
     }
 
     def test_every_case(self):

@@ -5,6 +5,30 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.10 — 2026-09-24 (staging)
+
+Wave 2 of the provenance run (65 simulants).
+
+**Data**
+- 65 simulants read by a reader and an independent checker; written only where both agreed.
+  Verified compositions 49 → 60; physical values with a source 392 → 515; simulants named in a
+  confirmed reference 84 → 137 of 155, none failing; references checked against their
+  document 402 → 614 of 661.
+- The integrity check caught eleven values citing references that did not exist: two readers
+  named their new documents "S117-N1" rather than "NEW1", and only the latter form was
+  translated. The rows were re-linked to the right references.
+- CUG-1A's mineralogy, printed as "9% wt", now parses; ranges such as TLS-01A's "60–75" are
+  kept out of the table and listed for a human.
+
+**Process**
+- A reader's temporary id is translated in whatever form it takes; a value citing an id that
+  names no reference is refused.
+- Re-applying a run restores a missing source row for a value already stored, so a run can be
+  repaired by deleting its bad rows and applying it again.
+
+Decisions for the owner — three records that may not be lunar simulants, four probable
+duplicates, and a rule for rock components in the mineral table: `documentation/owner-decisions-2026-09-22.md`, wave 2.
+
 ## v2.9.9 — 2026-09-23 (staging)
 
 Wave 1 of the provenance run (45 simulants), and a repair of values that never reached the page.

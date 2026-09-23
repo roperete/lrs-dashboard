@@ -304,3 +304,60 @@ class RegistryIsNotEvidenceTests(unittest.TestCase):
         self.assertEqual(con.execute("SELECT bulk_density FROM simulants WHERE simulant_id='S010'").fetchone(), (None,))
         con.close()
         self.assertTrue(any(e["outcome"] == "refused: the project's own registry is not evidence" for e in log))
+
+
+class TemporaryIdTests(unittest.TestCase):
+    """A reader may name its new documents in any form, not only NEW1, NEW2.
+
+    On 2026-09-24 two readers named theirs "S117-N1" and "S023-N4". The references were
+    created, but values citing them were translated only when the id began with "NEW", so
+    eleven values were written citing ids that exist nowhere. The integrity check caught it.
+    """
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.db = Path(self.tmp.name) / "a.sqlite"
+        make_db(self.db)
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def q(self, sql, *args):
+        con = sqlite3.connect(self.db)
+        r = con.execute(sql, args).fetchall()
+        con.close()
+        return r
+
+    def new_ref_extraction(self, temp_id, cite):
+        return extraction(
+            values=[],
+            new_references=[{"temp_id": temp_id, "title": "Characterisation of CAS-1", "kind": "composition",
+                             "local_path": "papers/LRS/cas1.pdf", "mention_quote": "CAS-1", "location": "p.1"}],
+            new_values=[{"field": "mineral:Olivine", "value": "12.5", "reference_id": cite, "location": "Table 3", "quote": "olivine 12.5"},
+                        {"field": "bulk_density", "value": "1.45", "reference_id": cite, "location": "Table 4", "quote": "1.45"}])
+
+    def checks(self, temp_id):
+        return verification(reference_checks=[{"reference_id": temp_id, "verdict": "CONFIRMED"}], value_checks=[],
+                            new_value_checks=[{"field": "mineral:Olivine", "verdict": "CONFIRMED"}, {"field": "bulk_density", "verdict": "CONFIRMED"}])
+
+    def test_a_temporary_id_in_any_form_is_translated(self):
+        apply_group(self.db, [self.new_ref_extraction("S010-N1", "S010-N1")], [self.checks("S010-N1")], checked_on="2026-09-24")
+        rid = self.q("SELECT reference_id FROM references_ WHERE title='Characterisation of CAS-1'")[0][0]
+        self.assertTrue(rid.startswith("RN-S010-"))
+        self.assertEqual(self.q("SELECT reference_id FROM mineral_compositions WHERE component_name='Olivine'"), [(rid,)])
+        self.assertEqual(self.q("SELECT reference_id FROM property_sources WHERE field='bulk_density'"), [(rid,)])
+
+    def test_a_value_citing_an_id_that_exists_nowhere_writes_nothing(self):
+        e = extraction(values=[], new_values=[{"field": "mineral:Olivine", "value": "12.5", "reference_id": "R999", "location": "T3", "quote": "12.5"}])
+        v = verification(value_checks=[], new_value_checks=[{"field": "mineral:Olivine", "verdict": "CONFIRMED"}])
+        log = apply_group(self.db, [e], [v], checked_on="2026-09-24")
+        self.assertEqual(self.q("SELECT count(*) FROM mineral_compositions WHERE component_name='Olivine'"), [(0,)])
+        self.assertTrue(any(x["outcome"] == "flagged: cites a reference that does not exist" for x in log))
+
+    def test_reapplying_a_value_already_stored_restores_a_missing_source_row(self):
+        """Repairing a run means deleting its bad rows and applying it again; a value
+        already in the column must regain its source row rather than be skipped."""
+        apply_group(self.db, [self.new_ref_extraction("NEW1", "NEW1")], [self.checks("NEW1")], checked_on="2026-09-24")
+        con = sqlite3.connect(self.db); con.execute("DELETE FROM property_sources WHERE field='bulk_density'"); con.commit(); con.close()
+        apply_group(self.db, [self.new_ref_extraction("NEW1", "NEW1")], [self.checks("NEW1")], checked_on="2026-09-24")
+        self.assertEqual(len(self.q("SELECT reference_id FROM property_sources WHERE field='bulk_density'")), 1)

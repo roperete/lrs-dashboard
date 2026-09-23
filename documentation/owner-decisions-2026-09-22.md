@@ -102,3 +102,54 @@ Evidence in `documentation/provenance-findings-lean-wave1.json` (notes fields) a
   spreadsheet — for CAS-1, CLDS-i, CLRS-1, CLRS-2 and IGG-01. They supported no values, but
   counted towards "named in a reference". Each of those simulants still has other confirmed
   references.
+
+## Wave 2, 2026-09-24 (65 simulants)
+
+Evidence in `documentation/provenance-findings-lean-wave2.json` (notes fields).
+
+### Possibly not lunar simulants
+
+| Id | Name | Finding | Options |
+|---|---|---|---|
+| S145 | OUHR-1 | Both documents naming it list it under **Mars**. None calls it lunar. | Retire, as TUBS-H was, or keep flagged as a Mars simulant. |
+| S146 | HR-2 | No document in the library calls it a lunar simulant. | Same. |
+| S119 | CMU-1 | Its "mineralogy" is coal 63% and limestone 37% (wave 1). | Same. |
+
+### Probable duplicates
+
+| Ids | Names | Finding |
+|---|---|---|
+| S023, S117 | GCA-1, GSC-1 | Both rest on Taylor et al. 2008, "Jurassic Diabase from Leesburg, VA" (NLSC abstract 2054), which never uses the name GCA-1. Likely one product entered twice. |
+| S012, S125 | CUG-1A, CUG-1 | "CUG-1" appears only in secondary citations of the CUG-1A paper with the trailing "A" dropped. |
+| S018, S017 | EAC-1A, EAC-1 | Engelschiøn 2020 labels host-rock chemistry "EAC-1" and processed-product physical properties "EAC-1A" by its own convention; values sit on the wrong record. |
+| S096 | LHD-1D | Only the JHU-APL 2024 assessment uses the name; Space Resource Technologies' own catalogue does not. Possibly a misreading of LHS-1D. |
+
+### References that do not name their product
+
+- **IRSM-1** (S130): R156 is the CUMT-1 paper.
+- **Maryland-Sanders** (S118): R145, Off Planet Research's product listing, does not mention it; it is a 1995 academic simulant.
+- **OPRL2NT** (S061): R071, Slabic et al. 2024, does not contain the name anywhere.
+- **SCC-1, SCC-2** (S139, S140): the only trace in the library is one table cell ("SCC-1/2", UK) in a
+  solidification review; the institution "Open University" is stated nowhere.
+
+### Stored values the documents contradict
+
+| Id | Name | Stored | What the documents state |
+|---|---|---|---|
+| S141, S142 | OUSR-1, SR-2 | lunar_sample_reference "General"; availability "Unavailable" | Both sources: "Sulfur rich"; ESRIC: "Currently available". |
+| S005 | BHLD20 | availability "Unavailable" | Its own reference R005: "May Be Available". |
+| S132 | TYII-0 | D50 48.4 µm | Its paper's Table 4: 116 µm. |
+| S060 | OPRL2N | release_date 2010 | Unsupported; the producer was founded in 2015. |
+| S153 | LZS-1 | density and porosity | Measured on intact basalt cores, not the loose simulant. |
+| S036 | LHS-1 | feedstock | The 2022 assessment tested batches of Stillwater anorthite + SF volcanic-field basalt; the current fact sheet says GreenSpar anorthosite + Merriam Crater basalt. A batch change worth noting on the page. |
+
+### One rule needed: rock components in the mineral table
+
+Exolith's fact sheets publish LHS, LMS and LSP "mineralogy" as rock components — LHS-1:
+anorthosite 74.4, glass-rich basalt 24.7 — and those rows were verified against the sheets on
+2026-09-21 and are shown. The wave-1 repair removed CSM-LHT-1's equivalent (70% anorthosite,
+30% basalt) and CSM-LMT-1's (100% basalt) as feedstock ratios. The two treatments are
+inconsistent. Either rock-component breakdowns belong in the mineral table — then CSM-LHT-1 and
+CSM-LMT-1 can be restored from `documentation/value-repair-log-2026-09-23.json` — or they do
+not, and the Exolith rows move out too. OPRH4W30's 90/10/+30 and CMU-1's coal/limestone are
+recipes under either rule.

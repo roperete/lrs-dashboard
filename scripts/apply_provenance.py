@@ -74,6 +74,9 @@ def _numeric_columns(con) -> set[str]:
     return {r[1] for r in con.execute("PRAGMA table_info(simulants)") if (r[2] or "").upper() == "REAL"}
 
 
+MISSING = "\x00missing"       # resolve(): an id that names no reference at all
+
+
 def _split_field(field: str) -> tuple[str, str | None]:
     if field.startswith("oxide:"):
         return "oxide", field[len("oxide:"):]
@@ -170,9 +173,18 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
             note(simulant_id=sid, reference_id=rid, outcome="new reference row created", title=title)
 
         def resolve(reference_id: str | None) -> str | None:
-            if reference_id and reference_id.upper().startswith("NEW"):
-                return temp_ids.get(reference_id)
-            return reference_id or None
+            """A temporary id in whatever form the reader chose ("NEW1", "S117-N1") becomes
+            the reference row created for it; anything else must already exist."""
+            if not reference_id:
+                return None
+            if reference_id in temp_ids:
+                return temp_ids[reference_id]
+            if reference_id.upper().startswith("NEW"):
+                return None        # a temporary id whose document was not confirmed
+            return reference_id if reference_exists(reference_id) else MISSING
+
+        def reference_exists(rid: str) -> bool:
+            return con.execute("SELECT 1 FROM references_ WHERE reference_id=?", (rid,)).fetchone() is not None
 
         # references: does the document name this simulant?
         for c in ext.get("references", []):
@@ -212,6 +224,10 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
                 note(simulant_id=sid, field=field, outcome="withheld: unsupported by any cited document")
                 continue
             rid = resolve(c.get("reference_id"))
+            if rid == MISSING:
+                note(simulant_id=sid, field=field, outcome="flagged: cites a reference that does not exist", needs_review=True,
+                     reference_id=c.get("reference_id"))
+                continue
             if not rid:
                 note(simulant_id=sid, field=field, outcome="flagged: cites an unconfirmed new reference", needs_review=True,
                      reference_id=c.get("reference_id"))
@@ -229,6 +245,10 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
                      problems=(chk or {}).get("problems", []))
                 continue
             rid_new = resolve(c.get("reference_id"))
+            if rid_new == MISSING:
+                note(simulant_id=sid, field=field, outcome="flagged: cites a reference that does not exist", needs_review=True,
+                     reference_id=c.get("reference_id"))
+                continue
             if not rid_new:
                 note(simulant_id=sid, field=field, outcome="flagged: new value cites an unconfirmed new reference", needs_review=True)
                 continue
@@ -241,9 +261,20 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
                 cur = con.execute(f"SELECT {field} FROM simulants WHERE simulant_id=?", (sid,)).fetchone()
                 existing = cur[0] if cur else None
                 if existing not in (None, ""):
-                    if str(existing) != str(c.get("value")):
+                    proposed = c.get("value")
+                    if field in numeric_cols:
+                        pp = parse_number(proposed)
+                        same = pp is not None and isinstance(existing, (int, float)) and abs(pp.value - float(existing)) < 1e-9
+                    else:
+                        same = str(existing).strip() == str(proposed).strip()
+                    if same:
+                        # Already stored by an earlier pass of this run: make sure it keeps its
+                        # source row, so a run can be repaired by deleting bad rows and re-applying.
+                        if _write_source(con, sid, field, c["reference_id"], c.get("location") or "", c.get("quote") or ""):
+                            note(simulant_id=sid, field=field, reference_id=c["reference_id"], outcome="source row written")
+                    else:
                         note(simulant_id=sid, field=field, outcome="conflict: existing value kept, document states a different one",
-                             existing=existing, proposed=c.get("value"), reference_id=c["reference_id"], needs_review=True)
+                             existing=existing, proposed=proposed, reference_id=c["reference_id"], needs_review=True)
                     continue
                 value = c.get("value")
                 if field in numeric_cols:

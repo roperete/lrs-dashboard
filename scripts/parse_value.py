@@ -51,6 +51,8 @@ def parse_number(raw) -> Parsed | None:
     body = _strip_parens(text).strip()
     approximate = bool(_APPROX.match(body))
     body = _APPROX.sub("", body).strip()
+    # A unit printed with a space inside it — "9% wt", "20 wt %", "12 vol %" — is one unit.
+    body = re.sub(r"\s*%\s*", "%", body)
     if "," in body:                      # decimal comma or a list: ambiguous either way
         return None
     m = _FULL.match(body)
