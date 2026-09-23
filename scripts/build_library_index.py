@@ -71,6 +71,30 @@ def name_pattern(name: str) -> re.Pattern:
     return re.compile(r"(?<![A-Za-z0-9])" + core + r"(?![A-Za-z0-9])", flags)
 
 
+SHORT_NAME = 4          # "ALS", "OB-1", "TJ-2" — short enough to occur by accident
+WEAK_BELOW = 2          # ...so one mention of such a name is a candidate, not evidence
+
+
+def scan_text(txt: str, patterns: dict) -> tuple[dict, dict]:
+    """Names found in this text, split into confident and weak matches.
+
+    A short name mentioned once is usually a false positive — "ALS" and "OB-1" occur as
+    ordinary abbreviations — but it is sometimes the only sentence in the library that
+    names a product. Keeping those separately lets a reader judge them, which is their
+    job, instead of a threshold discarding them unseen.
+    """
+    strong, weak = {}, {}
+    for name, pat in patterns.items():
+        n = len(pat.findall(txt))
+        if n == 0:
+            continue
+        if len(name) <= SHORT_NAME and n < WEAK_BELOW:
+            weak[name] = n
+        else:
+            strong[name] = n
+    return strong, weak
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--library", type=Path, default=DEFAULT_LIBRARY)
@@ -89,28 +113,31 @@ def main() -> None:
     print(f"{len(pdfs)} documents under {library}: {n_pdf} PDFs, {len(pdfs) - n_pdf} saved web pages (NotebookLM summaries excluded)")
     documents = {}
     simulants: dict[str, list[str]] = {name: [] for _, name in sims}
+    simulants_weak: dict[str, list[str]] = {name: [] for _, name in sims}
     for i, pdf in enumerate(pdfs, 1):
         txt = extract_text(pdf, TEXT_CACHE, library)
         rel = str(pdf.relative_to(library))
         first = next((ln.strip() for ln in txt.splitlines() if len(ln.strip()) > 12), "")[:140]
-        found = {}
-        for name, pat in patterns.items():
-            n = len(pat.findall(txt))
-            if n == 0:
-                continue
-            if len(name) <= 4 and n < 2:
-                continue
-            found[name] = n
+        found, weak = scan_text(txt, patterns)
+        for name in found:
             simulants[name].append(rel)
-        documents[rel] = {"title_line": first, "chars": len(txt), "simulants": found}
+        for name in weak:
+            simulants_weak[name].append(rel)
+        documents[rel] = {"title_line": first, "chars": len(txt), "simulants": found, "simulants_weak": weak}
         if i % 25 == 0:
             print(f"  {i}/{len(pdfs)}")
 
     out = ROOT / "documentation" / f"library-simulant-index-{date.today().isoformat()}.json"
-    out.write_text(json.dumps({"library": str(library), "documents": documents, "simulants": simulants}, indent=1))
+    out.write_text(json.dumps({"library": str(library), "documents": documents,
+                               "simulants": simulants, "simulants_weak": simulants_weak}, indent=1))
 
     named = {n for n, docs in simulants.items() if docs}
-    unnamed = [(sid, n) for sid, n in sims if n not in named]
+    weak_only = sorted(n for n, docs in simulants_weak.items() if docs and n not in named)
+    unnamed = [(sid, n) for sid, n in sims if n not in named and not simulants_weak.get(n)]
+    n_weak = sum(len(v) for v in simulants_weak.values())
+    print(f"weak matches kept for a reader to judge (one mention of a short name): {n_weak} pair(s)")
+    if weak_only:
+        print("named ONLY by a weak match: " + ", ".join(weak_only))
     empty = [d for d, v in documents.items() if v["chars"] < 200]
     print(f"\nsimulants named in at least one library document: {len(named)}/{len(sims)}")
     print(f"simulants named in NO library document ({len(unnamed)}): " + ", ".join(f"{n} ({sid})" for sid, n in unnamed))

@@ -118,6 +118,8 @@ def main() -> None:
 
     index = latest_index()
     docs_for = {name: docs for name, docs in index["simulants"].items()}
+    # One mention of a short name: a candidate the reader judges, never evidence on its own.
+    weak_for = {name: docs for name, docs in index.get("simulants_weak", {}).items()}
 
     con = sqlite3.connect(DB)
     con.row_factory = sqlite3.Row
@@ -162,11 +164,14 @@ def main() -> None:
 
     def ranked_docs(s: dict) -> list[str]:
         """Documents worth opening for this simulant: every cited reference with a local copy,
-        then library documents that name it, most mentions first, capped."""
+        then library documents that name it, most mentions first, then the weak candidates —
+        a single mention of a short name, which for six products is the only document there
+        is. Capped, so an agent is not handed thirty documents to open."""
         cited = [r.get("local_path") for r in refs.get(s["simulant_id"], []) if r.get("local_path")]
         by_mentions = sorted(mentions.get(s["name"], {}).items(), key=lambda kv: -kv[1])
+        weak = weak_for.get(s["name"], [])
         out: list[str] = []
-        for d in cited + [d for d, _ in by_mentions]:
+        for d in cited + [d for d, _ in by_mentions] + weak:
             if d and d not in out:
                 out.append(d)
             if len(out) >= MAX_DOCS_PER_SIMULANT:
@@ -241,6 +246,9 @@ def main() -> None:
                         ],
                         "library_documents_naming_it": ranked_docs(s),
                         "library_documents_naming_it_total": len(docs_for.get(s["name"], [])),
+                        # A single mention of a short name: open it, but decide for yourself
+                        # whether the sentence is about this product.
+                        "library_documents_possibly_naming_it": weak_for.get(s["name"], []),
                     }
                     for s in chunk
                 ],

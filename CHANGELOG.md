@@ -5,6 +5,31 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.7 — 2026-09-23 (staging)
+
+The library index was hiding documents from the readers.
+
+**Data**
+- A product name of four characters or fewer mentioned once in a document was discarded,
+  to suppress false positives such as "ALS" or "OB-1" occurring as ordinary abbreviations.
+  That silently threw away 75 document-simulant pairs, among them the only sentence in the
+  library naming TJ-2 ("In addition, a variant TJ-2 exists in which silicon..."), and left
+  six products recorded as named in no document at all.
+- Single mentions of short names are now kept separately as weak matches and offered to a
+  reader after the confident ones, with the instruction to read the sentence and decide
+  whether it is really about that product. Judging a mention is a reader's job, not a
+  threshold's.
+- Rebuilt with the 28 documents agents fetched since: simulants named in no library
+  document fall from 19 to 9 (OPRH2W, OPRH3W, OPRL2W, OPRFLCROSS1, LSS-2, LSS-3, TYII-1,
+  TYII-2, SCC-2). Every group now has at least one document to open.
+
+**Process**
+- `build_groups.py --skip-read` leaves out simulants a reader-checker pair has already been
+  through, and groups are ranked by what they still have to establish rather than how much
+  data they already hold.
+
+No change to what the page displays.
+
 ## v2.9.6 — 2026-09-23 (staging)
 
 Housekeeping: the version now changes on every push.
