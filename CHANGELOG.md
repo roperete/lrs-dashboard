@@ -1,7 +1,21 @@
 # Changelog
 
-The version shown in the sidebar is set by hand in `src/components/sidebar/Sidebar.tsx`.
-Data changes are logged per field under `documentation/`.
+Every push carries a new version. `python3 scripts/bump_version.py --body "..."` writes both
+the sidebar label and the section below it; `scripts/push_staging.sh` refuses to push while the
+sidebar still shows the version already deployed. Data changes are logged per field under
+`documentation/`.
+
+## v2.9.6 — 2026-09-23 (staging)
+
+Housekeeping: the version now changes on every push.
+
+**Process**
+- `scripts/bump_version.py` writes the sidebar label and opens this section in one step;
+  `scripts/push_staging.sh` refuses to push while the sidebar still shows the version that
+  is already on origin/staging, or while a version has no section here.
+- v2.9.5 covered four separate pushes (the citation superscripts and the render check,
+  TUBS-H's retirement, the batch-2 provenance run, and EAC-1A), which is what this is
+  meant to prevent; they are described in that section and in the commit history.
 
 ## v2.9.5 — 2026-09-22 (staging)
 
