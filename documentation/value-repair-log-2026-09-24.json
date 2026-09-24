@@ -1,20 +1,19 @@
 [
  {
-  "table": "chemical_compositions",
-  "simulant_id": "S049",
-  "component": "Fe2O3T",
-  "stated": "4.79 (total iron as Fe2O3; the source also gives FeO 3.3, so the rows sum above 100%)",
-  "action": "annotated: the source's own total"
+  "table": "property_sources",
+  "simulant_id": "S043",
+  "field": "lunar_sample_reference",
+  "reference_id": "R066",
+  "now": "RN-S043-6",
+  "action": "re-cited: to the simulant's own row for the same document"
  },
  {
   "table": "simulants",
-  "simulant_id": "S067",
-  "field": "density_g_cm3",
-  "stated": 1.065,
-  "why": "1.065 g/cm3 cannot be a particle density; the paper says only 'density'",
-  "reference_id": "RN-S067-2",
-  "quote": "The physical properties are presented as density 1.065 g/cm3 and angle of repose 29 degrees.",
-  "action": "cleared: a value in a column it cannot belong to"
+  "simulant_id": "S047",
+  "field": "institution",
+  "stated": "NASA-MSFC and USGS\r",
+  "value": "NASA-MSFC and USGS",
+  "action": "stripped: stray whitespace"
  },
  {
   "table": "chemical_compositions",

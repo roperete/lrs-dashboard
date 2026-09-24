@@ -152,6 +152,95 @@ def cross_field_problems(sim: dict, oxides: dict, minerals: dict) -> list[str]:
     return out
 
 
+_TI = {"high": re.compile(r"high[- ]?ti(?:tanium)?\b|high titanium", re.I), "low": re.compile(r"low[- ]?ti(?:tanium)?\b|low titanium", re.I)}
+# "terrae" and "maria" are the Latin names for highlands and mare that some papers use.
+_TERRAIN = {"highland": re.compile(r"highland|terra(?:e|e-type)?\b|terrae", re.I), "mare": re.compile(r"\bmare\b|maria\b|maria-type", re.I)}
+# Apollo sample numbers: 10xxx Apollo 11, 12xxx 12, 14xxx 14, 15xxx 15, 6xxxx 16, 7xxxx 17.
+_APOLLO = [(re.compile(r"\b10\d{3}\b"), "11"), (re.compile(r"\b12\d{3}\b"), "12"), (re.compile(r"\b14\d{3}\b"), "14"),
+           (re.compile(r"\b15\d{3}\b"), "15"), (re.compile(r"\b6\d{4}\b"), "16"), (re.compile(r"\b7\d{4}\b"), "17")]
+
+
+def label_supported(label: str, quote: str) -> bool:
+    """A lunar-analogue label is supported when its quote states the same titanium class and
+    terrain, and does not state the opposite titanium class."""
+    lab, q = (label or "").lower(), quote or ""
+    for cls, other in (("high", "low"), ("low", "high")):
+        if f"{cls}-ti" in lab or f"{cls} ti" in lab:
+            if not _TI[cls].search(q) or (_TI[other].search(q) and not _TI[cls].search(q)):
+                return False
+    for terrain, pat in _TERRAIN.items():
+        if terrain in lab and not pat.search(q):
+            if terrain == "mare" and (_TI["high"].search(q) or _TI["low"].search(q)):
+                continue          # "high-Ti" / "low-Ti" alone implies a mare analogue
+            return False
+    m = re.search(r"apollo\s*(\d+)", lab)
+    if m:
+        return (re.search(rf"apollo[\s-]*{m.group(1)}\b", q, re.I) is not None
+                or any(pat.search(q) and mission == m.group(1) for pat, mission in _APOLLO))
+    if lab.strip() in ("mixed", "intermediate", "mixed mare/highland"):
+        return bool(_TERRAIN["highland"].search(q) and _TERRAIN["mare"].search(q))
+    if "highland" not in lab and "mare" not in lab and "-ti" not in lab:
+        return any(w in q.lower() for w in re.findall(r"[a-z]{4,}", lab)) or not lab
+    return True
+
+
+_ALIASES = {"orbitec": "orbital technologies", "sciences": "science", "zybek": "zybeck", "usgs": "geological survey",
+            "msfc": "marshall"}
+
+
+def institution_supported(institution: str, quote: str) -> bool:
+    """At least half the distinctive words of the institution's name appear in its quote
+    (the quote may name only one of two partners, or abbreviate), allowing known aliases."""
+    common = {"university", "institute", "institution", "center", "centre", "the", "and", "for", "technical",
+              "technology", "research", "school", "national", "academy", "of"}
+    words = [w for w in re.findall(r"[A-Za-zÀ-ÿ]{3,}", institution or "") if w.lower() not in common]
+    q = (quote or "").lower()
+    if re.search(r"[\u4e00-\u9fff]", q):
+        return True                      # a Chinese-language quote; not checkable word by word
+    if not words:
+        return (institution or "").lower() in q
+    hits = sum(1 for w in words if w.lower() in q or _ALIASES.get(w.lower(), "\x00") in q or w.lower().rstrip("s") in q)
+    return hits * 2 >= len(words)
+
+
+# Also the forms sources print that are not single oxides but are faithful: SO2 (CUMT-1's paper),
+# combined alkalis and total iron as printed (TLS-01's).
+AS_PRINTED = {"SO2", "Na2O+K2O", "FeO Total"}
+OXIDES = AS_PRINTED | {"SiO2", "TiO2", "Al2O3", "Fe2O3", "Fe2O3T", "FeO", "FeOT", "MnO", "MgO", "CaO", "Na2O", "K2O", "P2O5",
+          "Cr2O3", "SO3", "NiO", "ZnO", "SrO", "BaO", "V2O5", "CoO", "CuO", "ZrO2", "Cl", "S", "LOI", "H2O", "CO2"}
+MINERAL_MISSPELLINGS = {"fosterite": "forsterite", "plagiclase": "plagioclase", "pyroxine": "pyroxene",
+                        "ilminite": "ilmenite", "olivene": "olivine", "anorthosite ": "anorthosite"}
+
+
+def component_name_problem(kind: str, name: str) -> str | None:
+    if kind == "oxide":
+        return None if name in OXIDES else f"{name!r} is not an oxide formula this table expects"
+    if "_" in name or name != name.strip():
+        return f"{name!r} is a code, not a display name"
+    if name.lower() in MINERAL_MISSPELLINGS:
+        return f"{name!r} is a misspelling of {MINERAL_MISSPELLINGS[name.lower()]!r}"
+    if re.fullmatch(r"(?:SiO2|TiO2|Al2O3|FeO|Fe2O3|MgO|CaO|Na2O|K2O)", name):
+        return f"{name!r} is an oxide in the mineral table"
+    return None
+
+
+def shared_values(rows) -> dict:
+    """(field, value, reference) stated for three or more simulants: possibly a family-level
+    statement copied onto each member. rows: (simulant_id, field, value, reference_id)."""
+    by = defaultdict(list)
+    for sid, field, value, rid in rows:
+        by[(field, str(value), rid)].append(sid)
+    return {k: sorted(v) for k, v in by.items() if len(v) >= 3}
+
+
+def link_verdict(status) -> str:
+    if status is None:
+        return "unreachable"
+    if status in (401, 403, 405, 406, 429, 999):
+        return "blocked"
+    return "ok" if status < 400 else "broken"
+
+
 def _norm(name: str) -> str:
     n = re.sub(r"[^a-z0-9]", "", (name or "").lower())
     return {"fosterite": "forsterite"}.get(n, n)
@@ -184,6 +273,12 @@ def _quotes(root: Path) -> dict:
     return q
 
 
+# Findings checked by hand against the source document, with what was found.
+VERIFIED_BY_HAND = {
+    ("S060", "particle_size_distribution"): "all 30 numbers occur in the OPR General Lunar Simulants data sheet (the quote was shortened)",
+}
+
+
 def audit(root: Path = ROOT) -> list[dict]:
     d = json.load(open(root / "public/data/data.json"))
     con = sqlite3.connect(root / "lrs.sqlite")
@@ -193,7 +288,7 @@ def audit(root: Path = ROOT) -> list[dict]:
     out: list[dict] = []
 
     def flag(sid, where, check, severity, detail, reference_id=None, value=None):
-        out.append({"simulant_id": sid, "name": sims.get(sid, {}).get("name"), "where": where, "check": check,
+        out.append({"simulant_id": sid, "name": sims.get(sid, {}).get("name") if sid else "(page)", "where": where, "check": check,
                     "severity": severity, "detail": detail, "reference_id": reference_id, "value": value})
 
     def citation(sid, where, rid):
@@ -205,13 +300,22 @@ def audit(root: Path = ROOT) -> list[dict]:
         elif r["names"] is None:
             flag(sid, where, "citation", "warn", f"cites {rid}, not yet checked against its document", rid)
 
+    ref_owner = {r["reference_id"]: r["simulant_id"] for r in d["references"]}
     for p in d["property_sources"]:
         sid, field = p["simulant_id"], p["field"]
         s = sims.get(sid)
         if not s or s.get(field) in (None, ""):
             continue
         v = s[field]
+        if ref_owner.get(p["reference_id"]) not in (None, sid):
+            flag(sid, field, "citation", "error", f"cites {p['reference_id']}, which belongs to another simulant's list", p["reference_id"], v)
+        if field == "lunar_sample_reference" and not label_supported(str(v), p.get("quote") or ""):
+            flag(sid, field, "label", "error", f"{v!r} is not what its quote says: {(p.get('quote') or '')[:100]!r}", p["reference_id"], v)
+        if field == "institution" and not institution_supported(str(v), p.get("quote") or ""):
+            flag(sid, field, "institution", "warn", f"{v!r} not named in its quote: {(p.get('quote') or '')[:100]!r}", p["reference_id"], v)
         ok, why = quote_supports(field, v, p.get("quote"))
+        if not ok and (sid, field) in VERIFIED_BY_HAND:
+            ok = True
         if not ok and stated_in_words(p.get("quote")):
             flag(sid, field, "stated in words", "warn", f"{v!r} rests on wording, not a number: {p['quote'][:90]!r}", p["reference_id"], v)
         elif not ok:
@@ -227,6 +331,11 @@ def audit(root: Path = ROOT) -> list[dict]:
             sid, name, v = c["simulant_id"], c["component_name"], c[col]
             by_sim[sid][kind][name] = v
             where = f"{kind}:{name}"
+            bad_name = component_name_problem(kind, name)
+            if bad_name:
+                flag(sid, where, "component name", "warn", bad_name, c.get("reference_id"), v)
+            if c.get("reference_id") and ref_owner.get(c["reference_id"]) not in (None, sid):
+                flag(sid, where, "citation", "error", f"cites {c['reference_id']}, which belongs to another simulant's list", c["reference_id"], v)
             if not (0 <= v <= 100):
                 flag(sid, where, "plausibility", "error", f"{v:g}% is outside 0–100%", c.get("reference_id"), v)
             qs = quotes.get((sid, kind, _norm(name)), [])
@@ -249,11 +358,95 @@ def audit(root: Path = ROOT) -> list[dict]:
     for sid, s in sims.items():
         for prob in cross_field_problems(s, by_sim[sid]["oxide"], by_sim[sid]["mineral"]):
             flag(sid, "cross-field", "consistency", "warn", prob)
+
+    rows = [(p["simulant_id"], p["field"], sims[p["simulant_id"]].get(p["field"]), p["reference_id"])
+            for p in d["property_sources"] if p["simulant_id"] in sims and sims[p["simulant_id"]].get(p["field"]) not in (None, "")
+            and p["field"] not in DESCRIPTIVE and p["field"] not in ("release_date",)]
+    for (field, value, rid), members in shared_values(rows).items():
+        names = ", ".join(sims[m]["name"] for m in members)
+        flag(members[0], field, "shared value", "warn",
+             f"{field} = {value} for {len(members)} simulants from one document {rid} ({names}): a family figure on each member?", rid, value)
+
+    sourced = {(p["simulant_id"], p["field"]) for p in d["property_sources"]}
+    for sid, s in sims.items():
+        for field in ("availability", "release_date", "lunar_sample_reference", "institution"):
+            if s.get(field) not in (None, "") and (sid, field) not in sourced:
+                flag(sid, field, "unsourced", "info", f"shown without a source: {s[field]!r}", None, s[field])
+    for e in d.get("simulant_extra", []):
+        if e.get("grain_size_mm") not in (None, "") and e["simulant_id"] in sims:
+            flag(e["simulant_id"], "grain_size_mm", "unsourced", "warn",
+                 f"grain size {e['grain_size_mm']} mm is shown among the physical properties with no source (Gasteiner database)", None, e["grain_size_mm"])
+
+    for L in d.get("lunar_reference", []):
+        chem = L.get("chemical_composition") or {}
+        if isinstance(chem, str):
+            try: chem = json.loads(chem)
+            except json.JSONDecodeError: chem = {}
+        total = sum(v for v in chem.values() if isinstance(v, (int, float)))
+        srcs = L.get("sources") or []
+        if chem and not (90 <= total <= 103):
+            flag(None, f"lunar reference {L.get('mission')}", "total", "warn", f"Apollo comparison chemistry totals {total:.1f}%")
+        if not srcs:
+            flag(None, f"lunar reference {L.get('mission')}", "unsourced", "warn", "Apollo comparison data shown with no source")
+    for site in d.get("sites", []):
+        lat, lon = site.get("lat"), site.get("lon")
+        if lat is None or lon is None or not (-90 <= lat <= 90 and -180 <= lon <= 180) or (lat == 0 and lon == 0):
+            flag(site.get("simulant_id"), "map site", "site", "warn", f"implausible map position {lat}, {lon} for {site.get('site_name')!r}")
+    return out
+
+
+def links(root: Path = ROOT) -> list[dict]:
+    """Every link the page shows, requested once: data sheets, source lines, references, vendors."""
+    import concurrent.futures, urllib.request, urllib.error
+    d = json.load(open(root / "public/data/data.json"))
+    names = {s["simulant_id"]: s["name"] for s in d["simulants"]}
+    targets = []
+    for s in d["simulants"]:
+        for f in ("datasheet_url", "composition_source_url"):
+            if (s.get(f) or "").startswith("http"):
+                targets.append((s["simulant_id"], f, s[f]))
+    for r in d["references"]:
+        u = r.get("url") if (r.get("url") or "").startswith("http") else (f"https://doi.org/{r['doi'].strip()}" if r.get("doi") else None)
+        if u:
+            targets.append((r["simulant_id"], f"reference {r['reference_id']}", u))
+    for pi in d.get("purchase_info", []):
+        if (pi.get("url") or "").startswith("http"):
+            targets.append((pi["simulant_id"], "vendor link", pi["url"]))
+    seen = {}
+
+    def fetch(u):
+        for method in ("HEAD", "GET"):
+            try:
+                req = urllib.request.Request(u, method=method, headers={"User-Agent": "Mozilla/5.0 (Macintosh) lrs-link-check"})
+                with urllib.request.urlopen(req, timeout=20) as resp:
+                    return resp.status
+            except urllib.error.HTTPError as e:
+                if method == "HEAD" and e.code in (403, 405, 400, 501):
+                    continue
+                return e.code
+            except Exception:
+                if method == "HEAD":
+                    continue
+                return None
+        return None
+
+    urls = sorted({t[2] for t in targets})
+    with concurrent.futures.ThreadPoolExecutor(max_workers=16) as ex:
+        for u, st in zip(urls, ex.map(fetch, urls)):
+            seen[u] = st
+    out = []
+    for sid, where, u in targets:
+        v = link_verdict(seen.get(u))
+        if v in ("broken", "unreachable"):
+            out.append({"simulant_id": sid, "name": names.get(sid), "where": where, "check": "link", "severity": "error" if v == "broken" else "warn",
+                        "detail": f"{v} ({seen.get(u)}): {u}", "reference_id": None, "value": u})
     return out
 
 
 def main() -> None:
     findings = audit()
+    if "--no-links" not in sys.argv:
+        findings += links()
     today = date.today().isoformat()
     (ROOT / "documentation" / f"value-audit-{today}.json").write_text(json.dumps(findings, indent=1, ensure_ascii=False, default=str))
     d = json.load(open(ROOT / "public/data/data.json"))
@@ -262,7 +455,7 @@ def main() -> None:
     sev = Counter(f["severity"] for f in findings)
     by = Counter((f["severity"], f["check"]) for f in findings)
     print(f"values audited: {total} ({shown} properties, {len(d['chemical_compositions'])} oxide rows, {len(d['compositions'])} mineral rows) across {len(d['simulants'])} simulants")
-    print(f"findings: {sev.get('error', 0)} errors, {sev.get('warn', 0)} warnings")
+    print(f"findings: {sev.get('error', 0)} errors, {sev.get('warn', 0)} warnings, {sev.get('info', 0)} for information")
     for (s, c), n in sorted(by.items()):
         print(f"   {s:5} {c:12} {n}")
     lines = [f"# Value audit, {today}", "",
@@ -270,7 +463,7 @@ def main() -> None:
              "physical plausibility, composition totals, the simulant's other values, and its citation.",
              "Nothing was changed. Errors go to an agent to re-read; warnings are for a human.", "",
              "| Severity | Check | Count |", "|---|---|---:|"] + [f"| {s} | {c} | {n} |" for (s, c), n in sorted(by.items())] + [""]
-    for sev_name in ("error", "warn"):
+    for sev_name in ("error", "warn", "info"):
         lines += [f"## {sev_name.capitalize()}s", ""]
         for f in sorted((x for x in findings if x["severity"] == sev_name), key=lambda x: (x["name"] or "", x["where"])):
             lines.append(f"- **{f['name']}** ({f['simulant_id']}) `{f['where']}` — {f['check']}: {f['detail']}")

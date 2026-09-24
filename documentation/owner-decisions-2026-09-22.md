@@ -225,3 +225,32 @@ and a particle density of 1.065 g/cm³ (TLS-01). What is left is judgement:
 | S018, S027, S051 | EAC-1A, JSC-1, NU-LHT-2M | glass 0%, glass 50%, cohesion 0 | Stated in words — "fully crystallized", "approximately half", "considered to be zero". Acceptable as numbers? |
 | S067 | TLS-01 | (cleared) density 1.065 g/cm³ | The paper says only "density". Is it a bulk density? If so it can go in that column. |
 | S053 | OB-1 | oxides | Cited to the KLS-1 paper's comparison table, which reproduces NORCAT's data: a secondary source labelled as a primary paper. |
+
+## Decided 2026-09-24, and the second check
+
+**Applied at the owner's decision** ("I'd rather have an empty value than a wrong value"):
+NAO-1 cohesion omitted; FEFU-1 mean particle size omitted; NEU-1B's lunar analogue set to
+"High-Ti Mare", cited to its own primary paper (Li et al. 2019: "NEU-1b with high titanium
+content", TiO2 6.5%). Log: `curation-log-2026-09-24-owner.json`.
+
+**The second check** widened the audit to what the first could not see, and found:
+- **30 dead links.** Space Resource Technologies renamed its product pages (each simulant now
+  points at the page carrying its exact product code); Off Planet Research moved its catalogue
+  (the W variants and OPRFLCROSS2 are not on the new page, so they lose their buy link); the
+  ESRIC knowledge base is gone (its catalogue is linked at the Wayback Machine's copy of 25 Sep
+  2025); astroport.us is gone; TLS-01's R080 cited a DOI never registered. Log:
+  `link-repair-log-2026-09-24.json`.
+- **27 grain sizes shown with no source**, from the Gasteiner compilation, bypassing the rule
+  that hides an unsourced value. Now hidden like the rest.
+- **MLS-1's lunar analogue cited MLS-2's reference row** for the paper both share, so it could
+  not be numbered. Re-cited to MLS-1's own row; the apply step now refuses such a citation.
+- A stray carriage return in NU-LHT's institution.
+
+Final pass: **0 errors** over 1309 values. Ten warnings, each explained in the audit report.
+
+**Still open — descriptive values shown without a source.** Availability 98, release year 69,
+lunar analogue 62, institution 23, type 145; and from the Gasteiner compilation, shown in the
+properties list: classification, application, feedstock, rock classes. None is known to be
+wrong, but none is traced to a document. Under "empty rather than wrong" they need not be
+removed; under "every value traced" they would be. This decides whether the third test covers
+the whole page or its numbers only.

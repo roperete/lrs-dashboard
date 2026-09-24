@@ -1,0 +1,227 @@
+[
+ {
+  "simulant_id": "S035",
+  "name": "LCATS-1",
+  "table": "purchase_info",
+  "was": "https://astroport.us/",
+  "now": null,
+  "action": "vendor link removed: the page no longer exists or does not list it"
+ },
+ {
+  "simulant_id": "S056",
+  "name": "OPRFLCROSS2",
+  "table": "purchase_info",
+  "was": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+  "now": null,
+  "action": "vendor link removed: the page no longer exists or does not list it"
+ },
+ {
+  "simulant_id": "S057",
+  "name": "OPRH2N",
+  "table": "purchase_info",
+  "was": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+  "now": "https://www.offplanetresearch.com/simulants",
+  "action": "vendor link updated"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "table": "purchase_info",
+  "was": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+  "now": "https://www.offplanetresearch.com/simulants",
+  "action": "vendor link updated"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "table": "purchase_info",
+  "was": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+  "now": "https://www.offplanetresearch.com/simulants",
+  "action": "vendor link updated"
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "table": "purchase_info",
+  "was": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+  "now": "https://www.offplanetresearch.com/simulants",
+  "action": "vendor link updated"
+ },
+ {
+  "simulant_id": "S061",
+  "name": "OPRL2NT",
+  "table": "purchase_info",
+  "was": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+  "now": "https://www.offplanetresearch.com/simulants",
+  "action": "vendor link updated"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "table": "purchase_info",
+  "was": "https://spaceresourcetech.com/products/lms-2-lunar-mare-simulant",
+  "now": "https://spaceresourcetech.com/products/lunar-mare-lms-2-high-fidelity-simulant",
+  "action": "vendor link updated"
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "table": "purchase_info",
+  "was": "https://spaceresourcetech.com/products/lhs-2-lunar-highlands-simulant",
+  "now": "https://spaceresourcetech.com/products/lunar-highlands-simulant-lhs-2",
+  "action": "vendor link updated"
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "table": "purchase_info",
+  "was": "https://spaceresourcetech.com/products/lhs-2e-lunar-highlands-simulant",
+  "now": "https://spaceresourcetech.com/products/lunar-highland-lhs-2e-simulant",
+  "action": "vendor link updated"
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "table": "purchase_info",
+  "was": "https://spaceresourcetech.com/products/lsp-2-lunar-south-pole-simulant",
+  "now": "https://spaceresourcetech.com/products/lunar-south-pole-simulant-lsp-2",
+  "action": "vendor link updated"
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "table": "purchase_info",
+  "was": "https://spaceresourcetech.com/products/lhs-1e-lunar-highlands-simulant",
+  "now": "https://spaceresourcetech.com/products/lhs-1e-simplified-lunar-highlands-simulant",
+  "action": "vendor link updated"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "table": "purchase_info",
+  "was": "https://spaceresourcetech.com/products/lms-1d-lunar-mare-dust-simulant",
+  "now": "https://spaceresourcetech.com/products/lms-1d",
+  "action": "vendor link updated"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "table": "purchase_info",
+  "was": "https://spaceresourcetech.com/products/lms-1e-lunar-mare-simulant",
+  "now": "https://spaceresourcetech.com/products/standard-basalt-simulant",
+  "action": "vendor link updated"
+ },
+ {
+  "simulant_id": "S098",
+  "name": "OPRH2W",
+  "table": "purchase_info",
+  "was": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+  "now": null,
+  "action": "vendor link removed: the page no longer exists or does not list it"
+ },
+ {
+  "simulant_id": "S099",
+  "name": "OPRH3W",
+  "table": "purchase_info",
+  "was": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+  "now": null,
+  "action": "vendor link removed: the page no longer exists or does not list it"
+ },
+ {
+  "simulant_id": "S100",
+  "name": "OPRH4W30",
+  "table": "purchase_info",
+  "was": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+  "now": null,
+  "action": "vendor link removed: the page no longer exists or does not list it"
+ },
+ {
+  "simulant_id": "S101",
+  "name": "OPRL2W",
+  "table": "purchase_info",
+  "was": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+  "now": null,
+  "action": "vendor link removed: the page no longer exists or does not list it"
+ },
+ {
+  "simulant_id": "S102",
+  "name": "OPRFLCROSS1",
+  "table": "purchase_info",
+  "was": "https://www.offplanetresearch.com/simulants-feedstocks-and-additives",
+  "now": "https://www.offplanetresearch.com/simulants",
+  "action": "vendor link updated"
+ },
+ {
+  "reference_id": "RN-S008-8",
+  "was": "http://knowledge.esric.lu/simulants/",
+  "now": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "action": "linked to the archived copy (site gone)"
+ },
+ {
+  "reference_id": "RN-S053-6",
+  "was": "http://knowledge.esric.lu/simulants/",
+  "now": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "action": "linked to the archived copy (site gone)"
+ },
+ {
+  "reference_id": "RN-S054-2",
+  "was": "http://knowledge.esric.lu/simulants/",
+  "now": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "action": "linked to the archived copy (site gone)"
+ },
+ {
+  "reference_id": "RN-S031-1",
+  "was": "http://knowledge.esric.lu/simulants/",
+  "now": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "action": "linked to the archived copy (site gone)"
+ },
+ {
+  "reference_id": "RN-S032-1",
+  "was": "http://knowledge.esric.lu/simulants/",
+  "now": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "action": "linked to the archived copy (site gone)"
+ },
+ {
+  "reference_id": "RN-S060-5",
+  "was": "http://knowledge.esric.lu/simulants/",
+  "now": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "action": "linked to the archived copy (site gone)"
+ },
+ {
+  "reference_id": "RN-S061-4",
+  "was": "http://knowledge.esric.lu/simulants/",
+  "now": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "action": "linked to the archived copy (site gone)"
+ },
+ {
+  "reference_id": "RN-S074-1",
+  "was": "http://knowledge.esric.lu/simulants/",
+  "now": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "action": "linked to the archived copy (site gone)"
+ },
+ {
+  "reference_id": "RN-S001-1",
+  "was": "http://knowledge.esric.lu/simulants/",
+  "now": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "action": "linked to the archived copy (site gone)"
+ },
+ {
+  "reference_id": "RN-S055-1",
+  "was": "http://knowledge.esric.lu/simulants/",
+  "now": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "action": "linked to the archived copy (site gone)"
+ },
+ {
+  "reference_id": "R080",
+  "was": {
+   "doi": "10.3390/IAAI-2021-10583",
+   "url": "https://doi.org/10.3390/IAAI-2021-10583"
+  },
+  "now": {
+   "doi": null,
+   "url": "https://iaai-2021.sciforum.net",
+   "local_path": "papers/LRS/manuscript.pdf"
+  },
+  "action": "unregistered DOI removed; the paper's own address used"
+ }
+]

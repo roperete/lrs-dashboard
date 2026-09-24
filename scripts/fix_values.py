@@ -130,6 +130,58 @@ def _repair(con: sqlite3.Connection, feedstock) -> list[dict]:
                         "reference_id": src["reference_id"] if src else None, "quote": src["quote"] if src else None,
                         "action": "cleared: a value in a column it cannot belong to"})
 
+    # A value cites a reference in its own simulant's list: the page numbers references per
+    # simulant, so another simulant's row gets no superscript. Move it to the simulant's own
+    # row for the same document (same DOI, or same title); with none, drop the source.
+    def _n(t):
+        return re.sub(r"[^a-z0-9]", "", re.sub(r"\[.*?\]", "", (t or "").lower()))
+
+    def own_copy(sid, rid):
+        """The simulant's own row for the document another simulant's row `rid` names: same DOI,
+        or one entry's title contained in the other's full citation (notes in [] ignored)."""
+        r = con.execute("SELECT doi, title, reference_text FROM references_ WHERE reference_id=?", (rid,)).fetchone()
+        if not r:
+            return None
+        doi, title, text = r
+        if doi:
+            m = con.execute("SELECT reference_id FROM references_ WHERE simulant_id=? AND doi=?", (sid, doi)).fetchone()
+            if m:
+                return m[0]
+        t_n, x_n = _n(title), _n(f"{title or ''} {text or ''}")
+        for rid2, t2, x2 in con.execute("SELECT reference_id, title, reference_text FROM references_ WHERE simulant_id=?", (sid,)):
+            c_t, c_x = _n(t2), _n(f"{t2 or ''} {x2 or ''}")
+            if (len(c_t) >= 20 and c_t in x_n) or (len(t_n) >= 20 and t_n in c_x):
+                return rid2
+        return None
+
+    for r in con.execute("SELECT p.simulant_id, p.field, p.reference_id FROM property_sources p JOIN references_ x "
+                         "ON x.reference_id=p.reference_id WHERE x.simulant_id != p.simulant_id").fetchall():
+        own = own_copy(r["simulant_id"], r["reference_id"])
+        if own:
+            con.execute("UPDATE property_sources SET reference_id=? WHERE simulant_id=? AND field=?", (own, r["simulant_id"], r["field"]))
+            log.append({"table": "property_sources", "simulant_id": r["simulant_id"], "field": r["field"], "reference_id": r["reference_id"],
+                        "now": own, "action": "re-cited: to the simulant's own row for the same document"})
+        else:
+            con.execute("DELETE FROM property_sources WHERE simulant_id=? AND field=?", (r["simulant_id"], r["field"]))
+            log.append({"table": "property_sources", "simulant_id": r["simulant_id"], "field": r["field"], "reference_id": r["reference_id"],
+                        "action": "source dropped: it cited another simulant's reference"})
+    for table, _ in COMPOSITION_TABLES:
+        for r in con.execute(f"SELECT c.composition_id, c.simulant_id, c.reference_id FROM {table} c JOIN references_ x "
+                             f"ON x.reference_id=c.reference_id WHERE x.simulant_id != c.simulant_id").fetchall():
+            own = own_copy(r["simulant_id"], r["reference_id"])
+            con.execute(f"UPDATE {table} SET reference_id=? WHERE composition_id=?", (own, r["composition_id"]))
+            log.append({"table": table, "composition_id": r["composition_id"], "simulant_id": r["simulant_id"], "reference_id": r["reference_id"],
+                        "now": own, "action": "re-cited: to the simulant's own row for the same document" if own else "citation dropped: another simulant's reference"})
+
+    # Single-line text fields carry no stray whitespace ("NASA-MSFC and USGS\r").
+    for col in ("name", "institution", "availability", "type", "lunar_sample_reference", "country_code", "product_grade"):
+        for r in con.execute(f"SELECT simulant_id, {col} AS v FROM simulants WHERE {col} IS NOT NULL").fetchall():
+            clean = re.sub(r"\s+", " ", str(r["v"])).strip()
+            if clean != r["v"]:
+                con.execute(f"UPDATE simulants SET {col}=? WHERE simulant_id=?", (clean, r["simulant_id"]))
+                log.append({"table": "simulants", "simulant_id": r["simulant_id"], "field": col, "stated": r["v"], "value": clean,
+                            "action": "stripped: stray whitespace"})
+
     # One table, one analysis. When one document's rows are already a complete analysis, rows
     # from other documents are grafts from another sample and move to the log. When no single
     # document is complete, the rows are one analysis cited piecemeal — a table reproduced in

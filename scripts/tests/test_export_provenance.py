@@ -135,3 +135,16 @@ class VerifyScalarProvenanceTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class GrainSizeGateTests(unittest.TestCase):
+    """grain_size_mm, from the Gasteiner compilation, is shown among the physical properties;
+    like every value there it needs a source row to be exported."""
+
+    def test_grain_size_without_a_source_is_not_exported(self):
+        import export_json
+        self.assertIn("grain_size_mm", export_json.SUPPRESSED_EXTRA_FIELDS)
+        extra = [{"simulant_id": "S1", "grain_size_mm": 0.088}, {"simulant_id": "S2", "grain_size_mm": 0.1}]
+        out, n = export_json.suppress_unsourced_extra(extra, [{"simulant_id": "S2", "field": "grain_size_mm"}])
+        self.assertEqual([e["grain_size_mm"] for e in out], [None, 0.1])
+        self.assertEqual(n, 1)

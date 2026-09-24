@@ -75,6 +75,7 @@ def _numeric_columns(con) -> set[str]:
 
 
 MISSING = "\x00missing"       # resolve(): an id that names no reference at all
+FOREIGN = "\x00foreign"       # resolve(): a reference in another simulant's list
 
 
 def _split_field(field: str) -> tuple[str, str | None]:
@@ -181,10 +182,14 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
                 return temp_ids[reference_id]
             if reference_id.upper().startswith("NEW"):
                 return None        # a temporary id whose document was not confirmed
-            return reference_id if reference_exists(reference_id) else MISSING
+            owner = reference_owner(reference_id)
+            if owner is None:
+                return MISSING
+            return reference_id if owner == sid else FOREIGN
 
-        def reference_exists(rid: str) -> bool:
-            return con.execute("SELECT 1 FROM references_ WHERE reference_id=?", (rid,)).fetchone() is not None
+        def reference_owner(rid: str):
+            r = con.execute("SELECT simulant_id FROM references_ WHERE reference_id=?", (rid,)).fetchone()
+            return r[0] if r else None
 
         # references: does the document name this simulant?
         for c in ext.get("references", []):
@@ -224,6 +229,10 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
                 note(simulant_id=sid, field=field, outcome="withheld: unsupported by any cited document")
                 continue
             rid = resolve(c.get("reference_id"))
+            if rid == FOREIGN:
+                note(simulant_id=sid, field=field, outcome="flagged: cites a reference from another simulant's list", needs_review=True,
+                     reference_id=c.get("reference_id"))
+                continue
             if rid == MISSING:
                 note(simulant_id=sid, field=field, outcome="flagged: cites a reference that does not exist", needs_review=True,
                      reference_id=c.get("reference_id"))
@@ -245,6 +254,10 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
                      problems=(chk or {}).get("problems", []))
                 continue
             rid_new = resolve(c.get("reference_id"))
+            if rid_new == FOREIGN:
+                note(simulant_id=sid, field=field, outcome="flagged: cites a reference from another simulant's list", needs_review=True,
+                     reference_id=c.get("reference_id"))
+                continue
             if rid_new == MISSING:
                 note(simulant_id=sid, field=field, outcome="flagged: cites a reference that does not exist", needs_review=True,
                      reference_id=c.get("reference_id"))

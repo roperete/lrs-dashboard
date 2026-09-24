@@ -5,6 +5,30 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.15 — 2026-09-24 (staging)
+
+Owner's decisions on the audit applied; a second, wider check fixed dead links and unsourced grain sizes.
+
+**Data**
+- At the owner's decision — "an empty value rather than a wrong one" — NAO-1's cohesion (which
+  its own paper calls an artefact) and FEFU-1's 0.8 µm particle size (a sintering study's
+  powder) are omitted, and NEU-1B is labelled High-Ti Mare, as its primary paper states.
+- **30 dead links fixed.** Space Resource Technologies and Off Planet Research moved their
+  product pages; the ESRIC knowledge base no longer exists and its catalogue is linked at an
+  archived copy; a vendor site that no longer resolves is unlinked; TLS-01's reference cited
+  a DOI that was never registered.
+- **27 grain sizes no longer shown.** They came from the Gasteiner compilation without a
+  source and bypassed the rule that hides an unsourced value.
+- MLS-1's lunar analogue cited another simulant's reference row and showed no superscript;
+  it now cites its own.
+
+**Process**
+- The audit now also checks lunar-analogue labels and institutions against their quotes,
+  component names, citations belonging to another simulant, one figure copied onto many
+  products, values shown with no source, the Apollo comparison data, map positions, and every
+  link on the page. Final pass: 0 errors over 1309 values.
+- The apply step refuses a citation of another simulant's reference.
+
 ## v2.9.14 — 2026-09-24 (staging)
 
 Every value on the page audited against its own quote; composition tables that mixed analyses repaired.

@@ -1,0 +1,32 @@
+[
+ {
+  "simulant_id": "S045",
+  "field": "cohesion",
+  "was": "95.3",
+  "source": [
+   "R095",
+   "The angle of internal friction for NAO-1 is approximately 46.57° and the cohesion of the material is approximately 95.3 kPa 共Table 6兲."
+  ],
+  "why": "the paper calls 95.3 kPa an artefact of the dense specimen and assumes ~0",
+  "action": "omitted at the owner's decision"
+ },
+ {
+  "simulant_id": "S157",
+  "field": "particle_size_mean_um",
+  "was": 0.8,
+  "source": [
+   "RN-S157-1",
+   "FEFU-1 d m =0.8 100 SPS Vac 30 800–1000 0.083 f c =7.07–566.17 [65]"
+  ],
+  "why": "powder size in one sintering study, not the simulant as supplied",
+  "action": "omitted at the owner's decision"
+ },
+ {
+  "simulant_id": "S124",
+  "field": "lunar_sample_reference",
+  "was": "Low-Ti Mare",
+  "now": "High-Ti Mare",
+  "reference_id": "RN-S124-1",
+  "action": "set to what its source states, at the owner's decision"
+ }
+]

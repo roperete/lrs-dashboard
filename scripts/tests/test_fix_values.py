@@ -211,3 +211,36 @@ class PiecemealAnalysisTests(unittest.TestCase):
         con, _ = self.build([("SiO2", 47.0, "RA"), ("Al2O3", 24.5, "RA"), ("CaO", 25.0, "RA"),
                              ("SiO2", 46.0, "RB"), ("Al2O3", 30.0, "RB"), ("CaO", 30.0, "RB")])
         self.assertEqual({r[0] for r in con.execute("SELECT reference_id FROM chemical_compositions")}, {"RA"})
+
+
+class ForeignCitationRepairTests(unittest.TestCase):
+    """A value citing another simulant's reference row is moved to its own row for the same
+    document; with no such row its source is dropped, so the page hides the value."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        con = sqlite3.connect(Path(self.tmp.name) / "lrs.sqlite")
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text()); ensure_provenance_schema(con)
+        con.executemany("INSERT INTO simulants (simulant_id, name, lunar_sample_reference, institution) VALUES (?,?,?,?)",
+                        [("S1", "MLS-1", "High-Ti Mare", "Univ. of Minnesota"), ("S2", "MLS-2", None, "NASA-MSFC and USGS\r")])
+        con.executemany("INSERT INTO references_ (reference_id, simulant_id, title, doi) VALUES (?,?,?,?)", [
+            ("R66", "S2", "Evaluations of lunar regolith simulants", "10.1/x"),
+            ("RN-S1-6", "S1", "Evaluations of lunar regolith simulants [= existing ref]", None),
+            ("R70", "S2", "A paper only MLS-2 lists", None)])
+        con.executemany("INSERT INTO property_sources (simulant_id, field, reference_id, quote) VALUES (?,?,?,?)",
+                        [("S1", "lunar_sample_reference", "R66", "high-Ti basaltic soils"), ("S1", "institution", "R70", "Minnesota")])
+        con.commit()
+        self.con = con
+        self.log = repair(con, feedstock=set())
+
+    def tearDown(self):
+        self.con.close(); self.tmp.cleanup()
+
+    def test_moved_to_its_own_row_for_the_same_document(self):
+        self.assertEqual(self.con.execute("SELECT reference_id FROM property_sources WHERE simulant_id='S1' AND field='lunar_sample_reference'").fetchone(), ("RN-S1-6",))
+
+    def test_dropped_when_it_has_no_row_for_that_document(self):
+        self.assertEqual(self.con.execute("SELECT count(*) FROM property_sources WHERE simulant_id='S1' AND field='institution'").fetchone(), (0,))
+
+    def test_stray_whitespace_is_stripped_from_single_line_fields(self):
+        self.assertEqual(self.con.execute("SELECT institution FROM simulants WHERE simulant_id='S2'").fetchone(), ("NASA-MSFC and USGS",))

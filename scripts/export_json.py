@@ -53,6 +53,24 @@ SUPPRESSED_SCALAR_FIELDS = (
     "magnetic_susceptibility",
 )
 
+# Physical values from simulant_extra (the Gasteiner compilation) shown in the Physical
+# Properties grid: exported only with a source row, like everything else there.
+SUPPRESSED_EXTRA_FIELDS = ("grain_size_mm",)
+
+
+def suppress_unsourced_extra(extra: list[dict], property_sources: list[dict]) -> tuple[list[dict], int]:
+    sourced = {(p["simulant_id"], p["field"]) for p in property_sources}
+    n, out = 0, []
+    for e in extra:
+        e = dict(e)
+        for f in SUPPRESSED_EXTRA_FIELDS:
+            if e.get(f) not in (None, "") and (e["simulant_id"], f) not in sourced:
+                e[f] = None
+                n += 1
+        out.append(e)
+    return out, n
+
+
 # Reference columns that exist for verification only and never leave the machine.
 # local_path is where the checked copy sits on the maintainer's disk; publishing it
 # would put a private filesystem path into a public bundle.
@@ -136,6 +154,9 @@ def run(db_path: Path, output: Path = OUTPUT, report_dir: Path = DOC_DIR, today:
     simulant_extra = fetch("SELECT * FROM simulant_extra ORDER BY simulant_id")
     for e in simulant_extra:
         e["publicly_available_composition"] = bool(e["publicly_available_composition"])
+    simulant_extra, hidden_extra = suppress_unsourced_extra(simulant_extra, property_sources)
+    if hidden_extra:
+        print(f"Suppressed {hidden_extra} unsourced grain size value(s) from the Gasteiner compilation")
 
     # --- sites: filter nulls (matches original useData.ts behavior) ---
     sites = fetch("SELECT * FROM sites WHERE lat IS NOT NULL AND lon IS NOT NULL ORDER BY site_id")

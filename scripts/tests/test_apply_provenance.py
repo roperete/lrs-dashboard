@@ -433,3 +433,34 @@ class OneAnalysisPerTableTests(unittest.TestCase):
         con = sqlite3.connect(self.db)
         self.assertEqual(con.execute("SELECT reference_id FROM chemical_compositions WHERE component_name='TiO2'").fetchone(), ("R010",))
         con.close()
+
+
+class ReferenceOwnershipTests(unittest.TestCase):
+    """A value cites a reference in its own simulant's list.
+
+    The page numbers references within each simulant's list, so a value citing another
+    simulant's reference row gets no superscript. On 2026-09-24 the audit found MLS-1's
+    lunar analogue citing R066, MLS-2's row for the paper both share.
+    """
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.db = Path(self.tmp.name) / "a.sqlite"
+        make_db(self.db)
+        con = sqlite3.connect(self.db)
+        con.execute("INSERT INTO simulants (simulant_id, name) VALUES ('S099','Other')")
+        con.execute("INSERT INTO references_ (reference_id, simulant_id, reference_text, title, doi, names_simulant) "
+                    "VALUES ('R099','S099','Taylor 2016','Evaluations of lunar regolith simulants','10.1016/j.pss.2016.04.005',1)")
+        con.commit(); con.close()
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_a_value_citing_another_simulants_reference_writes_nothing(self):
+        e = extraction(values=[{"field": "cohesion", "stored": "1.2", "status": "supported", "reference_id": "R099", "location": "T2", "quote": "cohesion 1.2"}], new_values=[])
+        v = verification(value_checks=[{"field": "cohesion", "verdict": "CONFIRMED"}], new_value_checks=[])
+        log = apply_group(self.db, [e], [v], checked_on="2026-09-24")
+        con = sqlite3.connect(self.db)
+        self.assertEqual(con.execute("SELECT count(*) FROM property_sources WHERE simulant_id='S010' AND field='cohesion'").fetchone(), (0,))
+        con.close()
+        self.assertTrue(any(x["outcome"] == "flagged: cites a reference from another simulant's list" for x in log))

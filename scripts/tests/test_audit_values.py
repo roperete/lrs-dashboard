@@ -144,3 +144,61 @@ class SecondPassTests(unittest.TestCase):
         self.assertTrue(is_back_reference("(same row as above)"))
         self.assertTrue(is_back_reference("same table row as SiO2"))
         self.assertFalse(is_back_reference("OB-1 Canada NORCAT Anorthosite 46.60 0.12 21.55"))
+
+
+class WiderChecksTests(unittest.TestCase):
+    """Checks added on 2026-09-24 after the owner asked for another pass."""
+
+    def test_a_label_must_be_what_its_quote_says(self):
+        from audit_values import label_supported
+        self.assertTrue(label_supported("High-Ti Mare", "NEU-1b with high titanium content"))
+        self.assertTrue(label_supported("Highlands", "Type: Highlands"))
+        self.assertTrue(label_supported("Low-Ti Mare", "a low-Ti mare simulant developed for general use"))
+        self.assertFalse(label_supported("Low-Ti Mare", "NEU-1b is the high-Ti variant with added ilmenite"))
+        self.assertFalse(label_supported("Highlands", "a mare basalt simulant"))
+
+    def test_an_institution_must_appear_in_its_quote(self):
+        from audit_values import institution_supported
+        self.assertTrue(institution_supported("TU Braunschweig", "developed at Technische Universität Braunschweig (TU Braunschweig)"))
+        self.assertTrue(institution_supported("Northeastern University", "the Northeastern University (NEU)-1 lunar soil simulant"))
+        self.assertFalse(institution_supported("Open University", "UK UoM-B/W, SCC-1/2"))
+
+    def test_component_names(self):
+        from audit_values import component_name_problem
+        for ok in ("SiO2", "Al2O3", "Fe2O3T", "LOI", "Cr2O3", "Plagioclase", "Amorphous/Glass", "Crystalline silica", "Ti magnetite"):
+            self.assertIsNone(component_name_problem("oxide" if ok[0].isupper() and any(c.isdigit() for c in ok) or ok == "LOI" else "mineral", ok), ok)
+        self.assertIsNotNone(component_name_problem("oxide", "Sio2"))
+        self.assertIsNotNone(component_name_problem("oxide", "Plagioclase"))        # a mineral in the oxide table
+        self.assertIsNotNone(component_name_problem("mineral", "crystalline_silica"))
+        self.assertIsNotNone(component_name_problem("mineral", "Fosterite"))
+
+    def test_one_value_copied_across_siblings_from_one_document(self):
+        from audit_values import shared_values
+        rows = [("S1", "cohesion", "1.0", "R9"), ("S2", "cohesion", "1.0", "R9"), ("S3", "cohesion", "1.0", "R9"),
+                ("S4", "cohesion", "1.0", "R7"), ("S5", "friction_angle", "45", "R9")]
+        got = shared_values(rows)
+        self.assertEqual(got, {("cohesion", "1.0", "R9"): ["S1", "S2", "S3"]})
+
+    def test_http_statuses(self):
+        from audit_values import link_verdict
+        self.assertEqual(link_verdict(200), "ok")
+        self.assertEqual(link_verdict(301), "ok")
+        self.assertEqual(link_verdict(404), "broken")
+        self.assertEqual(link_verdict(410), "broken")
+        self.assertEqual(link_verdict(403), "blocked")     # publishers refuse scripted requests; the page may still open
+        self.assertEqual(link_verdict(None), "unreachable")
+
+
+class ThirdPassTests(unittest.TestCase):
+    def test_apollo_written_without_a_space(self):
+        from audit_values import label_supported
+        self.assertTrue(label_supported("Apollo 14", "MKS-1 and FJS-1 ... represent Apollo14 mare soils"))
+
+    def test_a_mixed_label_when_the_quote_names_both_terrains(self):
+        from audit_values import label_supported
+        self.assertTrue(label_supported("Mixed", "I stands for intermediate ... 50 per cent mare and 50 per cent highland type simulant"))
+        self.assertFalse(label_supported("Mixed", "a mare basalt simulant"))
+
+    def test_usgs_spelled_out(self):
+        from audit_values import institution_supported
+        self.assertTrue(institution_supported("NASA-MSFC and USGS", "another NASA-produced simulant series [NASA/U. S. Geological Survey]"))

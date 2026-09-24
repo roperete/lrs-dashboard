@@ -1,22 +1,18 @@
 # Value audit, 2026-09-24
 
-Every value the page shows — 1310 across 145 simulants — tested against its own quote,
+Every value the page shows — 1309 across 145 simulants — tested against its own quote,
 physical plausibility, composition totals, the simulant's other values, and its citation.
 Nothing was changed. Errors go to an agent to re-read; warnings are for a human.
 
 | Severity | Check | Count |
 |---|---|---:|
-| error | plausibility | 2 |
-| error | quote | 1 |
-| warn | consistency | 2 |
+| info | unsourced | 251 |
+| warn | consistency | 1 |
 | warn | stated in words | 3 |
 | warn | total | 6 |
 
 ## Errors
 
-- **FEFU-1** (S157) `particle_size_mean_um` — plausibility: 0.8 µm is outside the plausible range 1–5000 µm
-- **NAO-1** (S045) `cohesion` — plausibility: 95.3 kPa is outside the plausible range 0–30 kPa
-- **OPRL2N** (S060) `particle_size_distribution` — quote: 2000, 4.19, 850, 9.09, 425, 15.43, 250, 20.32, 150, 26.81, 75, 37.99, 32, 61.31, 22, 71.04, 13, 80.38, 9, 85.42, 7, 91.36, 3.2, 96.51, 1.3, 98.25 not in its quote
 
 ## Warns
 
@@ -26,21 +22,261 @@ Nothing was changed. Errors go to an agent to re-read; warnings are for a human.
 - **IGG-01** (S080) `oxide table` — total: oxide total 22.4% (expected 90–103%)
 - **JSC-1** (S027) `glass_content_percent` — stated in words: 50.0 rests on wording, not a number: 'Approximately half of the volume of a typical particle is glass of basaltic composition.'
 - **JSC-1A** (S028) `oxide table` — total: oxide total 108.6% (expected 90–103%)
-- **NEU-1B** (S124) `cross-field` — consistency: labelled 'Low-Ti Mare' but TiO2 is 6.5%
 - **NEU-1B** (S124) `oxide table` — total: oxide total 6.5% (expected 90–103%)
 - **NU-LHT-1M** (S049) `oxide table` — total: oxide total 103.5% (expected 90–103%)
 - **NU-LHT-2M** (S051) `cohesion` — stated in words: 0.0 rests on wording, not a number: 'The measured cohesion was too low to make any meaningful conclusion and is considered to b'
 - **OB-1** (S053) `cross-field` — consistency: glass content 42% but the glass row is 52.6%
 
-## Resolved by checking the source
+## Infos
 
-- **OPRL2N** particle_size_distribution: the reader shortened the quote with "…"; all 30 numbers
-  of the stored distribution occur in the OPR General Lunar Simulants data sheet. Correct.
-- **OB-1** oxides: the rows quoted "(same row as above)" point to the first quote, which carries
-  the whole row; all 12 values occur in the cited document. Correct. (The audit now reads
-  back-references against the table's other quotes.)
-- **JSC-1A** oxide total 108.6%: the NASA characterisation summary prints its own total of
-  108.64%, giving iron both as Fe2O3 (total) and FeO. Faithful; the row is annotated.
-- **NU-LHT-1M** oxide total 103.5%: the source gives FeO and total iron (Fe2O3T); annotated.
-- **GreenSpar** mineral total 106%: the source's own approximate figures (~5, ~7).
-- **IGG-01, BH-2, NEU-1B**: partial analyses; the page now says "Partial analysis" instead of a total.
+- **AGK-2010** (S001) `availability` — unsourced: shown without a source: 'Unavailable'
+- **AGK-2010** (S001) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **AGK-2010** (S001) `release_date` — unsourced: shown without a source: 2013
+- **ALRS-1** (S002) `availability` — unsourced: shown without a source: 'Limited Stock'
+- **ALRS-1** (S002) `institution` — unsourced: shown without a source: 'Australian Space Agency'
+- **ALS** (S003) `availability` — unsourced: shown without a source: 'Production stopped'
+- **ALS** (S003) `institution` — unsourced: shown without a source: 'Univ. of Arizona'
+- **ALS** (S003) `release_date` — unsourced: shown without a source: 1993
+- **BH-1** (S004) `availability` — unsourced: shown without a source: 'Unavailable'
+- **BH-2** (S121) `availability` — unsourced: shown without a source: 'Unavailable'
+- **BHLD20** (S005) `availability` — unsourced: shown without a source: 'Unavailable'
+- **BP-1** (S006) `availability` — unsourced: shown without a source: 'Available'
+- **BP-1** (S006) `release_date` — unsourced: shown without a source: 2010
+- **CAS-1** (S007) `availability` — unsourced: shown without a source: 'Unavailable'
+- **CAS-1** (S007) `release_date` — unsourced: shown without a source: 2009
+- **CHENOBI** (S008) `availability` — unsourced: shown without a source: 'Production stopped'
+- **CHENOBI** (S008) `institution` — unsourced: shown without a source: 'Deltion / NORCAT'
+- **CHENOBI** (S008) `release_date` — unsourced: shown without a source: 2009
+- **CLDS-i** (S009) `availability` — unsourced: shown without a source: 'Unavailable'
+- **CLDS-i** (S009) `release_date` — unsourced: shown without a source: 2017
+- **CLRS-1** (S010) `availability` — unsourced: shown without a source: 'Unavailable'
+- **CLRS-2** (S084) `availability` — unsourced: shown without a source: 'Unavailable'
+- **CMU-1** (S119) `availability` — unsourced: shown without a source: 'Production stopped'
+- **CMU-1** (S119) `institution` — unsourced: shown without a source: 'Carnegie Mellon University'
+- **CMU-1** (S119) `lunar_sample_reference` — unsourced: shown without a source: 'Mare'
+- **CQU-1** (S128) `availability` — unsourced: shown without a source: 'Unavailable'
+- **CQU-1** (S128) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **CSM-CL** (S011) `availability` — unsourced: shown without a source: 'Available'
+- **CSM-CL-S** (S106) `availability` — unsourced: shown without a source: 'Available'
+- **CSM-CL-S** (S106) `institution` — unsourced: shown without a source: 'Colorado School of Mines'
+- **CSM-LHT-1G** (S104) `institution` — unsourced: shown without a source: 'Colorado School of Mines'
+- **CUG-1** (S125) `availability` — unsourced: shown without a source: 'Unavailable'
+- **CUG-1** (S125) `institution` — unsourced: shown without a source: 'China University of Geosciences'
+- **CUG-1** (S125) `release_date` — unsourced: shown without a source: 2010
+- **CUG-1A** (S012) `availability` — unsourced: shown without a source: 'Unavailable'
+- **CUMT-1** (S013) `availability` — unsourced: shown without a source: 'Unavailable'
+- **DNA-1** (S014) `availability` — unsourced: shown without a source: 'Unavailable'
+- **DNA-1** (S014) `release_date` — unsourced: shown without a source: 2014
+- **DNA-1A** (S015) `availability` — unsourced: shown without a source: 'Unavailable'
+- **DNA-1A** (S015) `institution` — unsourced: shown without a source: 'Monolite / ESA'
+- **DNA-1A** (S015) `lunar_sample_reference` — unsourced: shown without a source: 'Low-Ti Mare'
+- **DNA-1A** (S015) `release_date` — unsourced: shown without a source: 2019
+- **DUST-Y** (S016) `availability` — unsourced: shown without a source: 'Available'
+- **DUST-Y** (S016) `institution` — unsourced: shown without a source: 'Space Resource Technologies'
+- **DUST-Y** (S016) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo'
+- **DUST-Y** (S016) `release_date` — unsourced: shown without a source: 2019
+- **EAC-1** (S017) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **EAC-1** (S017) `lunar_sample_reference` — unsourced: shown without a source: 'Low-Ti Mare'
+- **EAC-1A** (S018) `lunar_sample_reference` — unsourced: shown without a source: 'Low-Ti Mare'
+- **EAC-1A** (S018) `release_date` — unsourced: shown without a source: 2020
+- **FEFU-1** (S157) `availability` — unsourced: shown without a source: 'Unavailable'
+- **FEFU-1** (S157) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **FJS-1** (S019) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 14'
+- **FJS-1** (S019) `release_date` — unsourced: shown without a source: 1998
+- **FJS-1g** (S020) `availability` — unsourced: shown without a source: 'Unavailable'
+- **FJS-1g** (S020) `institution` — unsourced: shown without a source: 'JAXA / Shimizu Corporation'
+- **FJS-2** (S021) `lunar_sample_reference` — unsourced: shown without a source: 'Mare'
+- **FJS-2** (S021) `release_date` — unsourced: shown without a source: 1998
+- **FJS-3** (S022) `release_date` — unsourced: shown without a source: 1998
+- **FROST-Y** (S097) `availability` — unsourced: shown without a source: 'Available'
+- **FROST-Y** (S097) `institution` — unsourced: shown without a source: 'Space Resource Technologies'
+- **FROST-Y** (S097) `lunar_sample_reference` — unsourced: shown without a source: 'Lunar South Pole'
+- **GCA-1** (S023) `availability` — unsourced: shown without a source: 'Production stopped'
+- **GRC-1** (S024) `availability` — unsourced: shown without a source: 'Available'
+- **GRC-1** (S024) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **GRC-3** (S082) `availability` — unsourced: shown without a source: 'Available'
+- **GRC-3** (S082) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **GRC-3** (S082) `release_date` — unsourced: shown without a source: 2013
+- **GSC-1** (S117) `availability` — unsourced: shown without a source: 'Production stopped'
+- **GSC-1** (S117) `lunar_sample_reference` — unsourced: shown without a source: 'Low-Ti Mare'
+- **GreenSpar** (S025) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **HIT-LRS-1** (S127) `availability` — unsourced: shown without a source: 'Unavailable'
+- **HIT-LRS-1** (S127) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **HUST-1** (S126) `availability` — unsourced: shown without a source: 'Unavailable'
+- **HUST-1** (S126) `institution` — unsourced: shown without a source: 'HUST'
+- **HUST-1** (S126) `lunar_sample_reference` — unsourced: shown without a source: 'Mare'
+- **HUST-1** (S126) `release_date` — unsourced: shown without a source: 2022
+- **IGG-01** (S080) `availability` — unsourced: shown without a source: 'Unavailable'
+- **IGG-01** (S080) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **IRSM-1** (S130) `availability` — unsourced: shown without a source: 'Unavailable'
+- **IRSM-1** (S130) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **JLU-H** (S026) `availability` — unsourced: shown without a source: 'Unavailable'
+- **JSC-1AC** (S029) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 14'
+- **JSC-1AF** (S030) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 14'
+- **JSC-2** (S085) `availability` — unsourced: shown without a source: 'Production stopped'
+- **JSC-2** (S085) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 14'
+- **JSC-2A** (S081) `availability` — unsourced: shown without a source: 'Production stopped'
+- **JSC-2A** (S081) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 14'
+- **KAUMLS** (S154) `availability` — unsourced: shown without a source: 'Unavailable'
+- **KAUMLS** (S154) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **KIGAM-L1** (S031) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **KLS-1** (S032) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **KLS-1** (S032) `release_date` — unsourced: shown without a source: 2018
+- **KOHLS-1** (S033) `availability` — unsourced: shown without a source: 'Unavailable'
+- **KOHLS-1** (S033) `lunar_sample_reference` — unsourced: shown without a source: 'High & Low Ti-mare'
+- **KOHLS-1** (S033) `release_date` — unsourced: shown without a source: 2014
+- **Kohyama Simulant** (S034) `availability` — unsourced: shown without a source: 'Limited Stock'
+- **Kohyama Simulant** (S034) `lunar_sample_reference` — unsourced: shown without a source: 'Highlands'
+- **LBD** (S131) `availability` — unsourced: shown without a source: 'Unavailable'
+- **LBD** (S131) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **LHA-1** (S109) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **LHA-1** (S109) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo highland'
+- **LHA-1** (S109) `release_date` — unsourced: shown without a source: 2020
+- **LHD-1D** (S096) `availability` — unsourced: shown without a source: 'Available'
+- **LHD-1D** (S096) `lunar_sample_reference` — unsourced: shown without a source: 'Average lunar highlands'
+- **LHD-1D** (S096) `release_date` — unsourced: shown without a source: 2024
+- **LHS-1** (S036) `release_date` — unsourced: shown without a source: 2020
+- **LHS-1-25A** (S093) `institution` — unsourced: shown without a source: 'Space Resource Technologies'
+- **LHS-1D** (S091) `release_date` — unsourced: shown without a source: 2021
+- **LHS-1E** (S092) `release_date` — unsourced: shown without a source: 2025
+- **LHS-2** (S077) `release_date` — unsourced: shown without a source: 2025
+- **LHS-2E** (S078) `release_date` — unsourced: shown without a source: 2025
+- **LMA-1** (S108) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **LMA-1** (S108) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo mare'
+- **LMA-1** (S108) `release_date` — unsourced: shown without a source: 2020
+- **LMS-1** (S037) `availability` — unsourced: shown without a source: 'Available'
+- **LMS-1** (S037) `institution` — unsourced: shown without a source: 'Space Resource Technologies'
+- **LMS-1** (S037) `release_date` — unsourced: shown without a source: 2020
+- **LMS-1D** (S094) `availability` — unsourced: shown without a source: 'Available'
+- **LMS-1D** (S094) `release_date` — unsourced: shown without a source: 2021
+- **LMS-1E** (S095) `availability` — unsourced: shown without a source: 'Available'
+- **LMS-1E** (S095) `institution` — unsourced: shown without a source: 'Space Resource Technologies'
+- **LMS-1E** (S095) `lunar_sample_reference` — unsourced: shown without a source: 'Average lunar maria'
+- **LMS-1E** (S095) `release_date` — unsourced: shown without a source: 2025
+- **LMS-2** (S076) `availability` — unsourced: shown without a source: 'Available'
+- **LMS-2** (S076) `release_date` — unsourced: shown without a source: 2025
+- **LSP-2** (S079) `release_date` — unsourced: shown without a source: 2025
+- **LSS-1** (S112) `release_date` — unsourced: shown without a source: 1968
+- **LSS-2** (S113) `release_date` — unsourced: shown without a source: 1968
+- **LSS-3** (S114) `release_date` — unsourced: shown without a source: 1968
+- **LSS-4** (S115) `release_date` — unsourced: shown without a source: 1968
+- **LSS-5** (S116) `release_date` — unsourced: shown without a source: 1968
+- **LSS-ISAC-1** (S038) `availability` — unsourced: shown without a source: 'Unavailable'
+- **LSS-ISAC-1** (S038) `release_date` — unsourced: shown without a source: 2020
+- **LX-I50** (S138) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **LX-I50** (S138) `release_date` — unsourced: shown without a source: 2025
+- **LX-M100** (S040) `release_date` — unsourced: shown without a source: 2025
+- **LX-T100** (S041) `release_date` — unsourced: shown without a source: 2025
+- **LZS-1** (S153) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **LuNOR** (S039) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **LuSIC-1** (S158) `availability` — unsourced: shown without a source: 'Unavailable'
+- **LuSIC-1** (S158) `institution` — unsourced: shown without a source: 'IBeA Research Group, UPV/EHU'
+- **LuSIC-1** (S158) `release_date` — unsourced: shown without a source: 2025
+- **MKS-1** (S042) `availability` — unsourced: shown without a source: 'Unavailable'
+- **MKS-1** (S042) `release_date` — unsourced: shown without a source: 1994
+- **MLS-1** (S043) `release_date` — unsourced: shown without a source: 1990
+- **MLS-1A** (S111) `availability` — unsourced: shown without a source: 'Production stopped'
+- **MLS-1A** (S111) `institution` — unsourced: shown without a source: 'Univ. of Minnesota'
+- **MLS-1A** (S111) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 11'
+- **MLS-1P** (S110) `availability` — unsourced: shown without a source: 'Production stopped'
+- **MLS-1P** (S110) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 11'
+- **MLS-1P** (S110) `release_date` — unsourced: shown without a source: 1990
+- **MLS-2** (S044) `release_date` — unsourced: shown without a source: 1992
+- **Maryland-Sanders** (S118) `availability` — unsourced: shown without a source: 'Production stopped'
+- **Maryland-Sanders** (S118) `lunar_sample_reference` — unsourced: shown without a source: 'Mare'
+- **Mooncastle** (S107) `availability` — unsourced: shown without a source: 'Available'
+- **Mooncastle** (S107) `lunar_sample_reference` — unsourced: shown without a source: 'Mare'
+- **NAO-1** (S045) `availability` — unsourced: shown without a source: 'Unavailable'
+- **NAO-1** (S045) `release_date` — unsourced: shown without a source: 2008
+- **NAO-2** (S083) `availability` — unsourced: shown without a source: 'Unavailable'
+- **NEU-1** (S046) `availability` — unsourced: shown without a source: 'Unavailable'
+- **NEU-1** (S046) `lunar_sample_reference` — unsourced: shown without a source: 'Low-Ti Mare'
+- **NEU-1** (S046) `release_date` — unsourced: shown without a source: 2019
+- **NEU-1A** (S123) `availability` — unsourced: shown without a source: 'Unavailable'
+- **NEU-1A** (S123) `release_date` — unsourced: shown without a source: 2019
+- **NEU-1B** (S124) `availability` — unsourced: shown without a source: 'Unavailable'
+- **NEU-1B** (S124) `release_date` — unsourced: shown without a source: 2019
+- **NJU-1** (S129) `availability` — unsourced: shown without a source: 'Unavailable'
+- **NJU-1** (S129) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **NU-LHT** (S047) `release_date` — unsourced: shown without a source: 2007
+- **NU-LHT-1D** (S048) `availability` — unsourced: shown without a source: 'Limited Stock'
+- **NU-LHT-1D** (S048) `release_date` — unsourced: shown without a source: 2007
+- **NU-LHT-1M** (S049) `release_date` — unsourced: shown without a source: 2007
+- **NU-LHT-2C** (S050) `availability` — unsourced: shown without a source: 'Limited Stock'
+- **NU-LHT-2C** (S050) `release_date` — unsourced: shown without a source: 2008
+- **NU-LHT-2E** (S086) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 16'
+- **NU-LHT-2EG** (S087) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 16'
+- **NU-LHT-2M** (S051) `release_date` — unsourced: shown without a source: 2008
+- **NU-LHT-3M** (S088) `institution` — unsourced: shown without a source: 'NASA / USGS'
+- **NU-LHT-3M** (S088) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 16'
+- **NU-LHT-4M** (S089) `availability` — unsourced: shown without a source: 'Limited Stock'
+- **NU-LHT-5M** (S090) `availability` — unsourced: shown without a source: 'Available'
+- **NU-LHT-5M** (S090) `institution` — unsourced: shown without a source: 'NASA / USGS'
+- **NU-LHT-5M** (S090) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 16'
+- **NU-LHT-5M** (S090) `release_date` — unsourced: shown without a source: 2022
+- **NUW-LHT-5M** (S052) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **OB-1** (S053) `availability` — unsourced: shown without a source: 'Limited Stock'
+- **OB-1** (S053) `release_date` — unsourced: shown without a source: 2007
+- **OB-1A** (S054) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 16'
+- **OB-1A** (S054) `release_date` — unsourced: shown without a source: 2008
+- **OPR Agglutinate** (S055) `availability` — unsourced: shown without a source: 'Unavailable'
+- **OPRFLCROSS1** (S102) `availability` — unsourced: shown without a source: 'Available'
+- **OPRFLCROSS1** (S102) `lunar_sample_reference` — unsourced: shown without a source: 'Lunar South Pole'
+- **OPRFLCROSS1** (S102) `release_date` — unsourced: shown without a source: 2019
+- **OPRFLCROSS2** (S056) `availability` — unsourced: shown without a source: 'Available'
+- **OPRFLCROSS2** (S056) `lunar_sample_reference` — unsourced: shown without a source: 'Lunar South Pole'
+- **OPRFLCROSS2** (S056) `release_date` — unsourced: shown without a source: 2019
+- **OPRH2W** (S098) `lunar_sample_reference` — unsourced: shown without a source: 'Nearside lunar highlands'
+- **OPRH3N** (S058) `availability` — unsourced: shown without a source: 'Available'
+- **OPRH3W** (S099) `lunar_sample_reference` — unsourced: shown without a source: 'Farside lunar highlands'
+- **OPRH3W** (S099) `release_date` — unsourced: shown without a source: 2010
+- **OPRH4N** (S059) `release_date` — unsourced: shown without a source: 2010
+- **OPRH4W30** (S100) `availability` — unsourced: shown without a source: 'Available'
+- **OPRH4W30** (S100) `release_date` — unsourced: shown without a source: 2010
+- **OPRL2N** (S060) `release_date` — unsourced: shown without a source: 2010
+- **OPRL2NT** (S061) `release_date` — unsourced: shown without a source: 2010
+- **OPRL2W** (S101) `availability` — unsourced: shown without a source: 'Available'
+- **OPRL2W** (S101) `lunar_sample_reference` — unsourced: shown without a source: 'High-Ti Mare'
+- **OPRL2W** (S101) `release_date` — unsourced: shown without a source: 2010
+- **Oshima Simulant** (S062) `availability` — unsourced: shown without a source: 'Limited Stock'
+- **Oshima Simulant** (S062) `lunar_sample_reference` — unsourced: shown without a source: 'High & Low Ti-mare'
+- **PolyU-1** (S120) `availability` — unsourced: shown without a source: 'Unavailable'
+- **QH-E** (S136) `availability` — unsourced: shown without a source: 'Unavailable'
+- **QH-E** (S136) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **SCC-1** (S139) `availability` — unsourced: shown without a source: 'Unavailable'
+- **SCC-1** (S139) `institution` — unsourced: shown without a source: 'Open University'
+- **SCC-1** (S139) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **SCC-2** (S140) `availability` — unsourced: shown without a source: 'Unavailable'
+- **SCC-2** (S140) `institution` — unsourced: shown without a source: 'Open University'
+- **SCC-2** (S140) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **TBG-1** (S063) `availability` — unsourced: shown without a source: 'Unavailable'
+- **TBG-1** (S063) `institution` — unsourced: shown without a source: 'Turkish Space Agency'
+- **TBG-1** (S063) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **TJ-1** (S064) `availability` — unsourced: shown without a source: 'Unavailable'
+- **TJ-1** (S064) `lunar_sample_reference` — unsourced: shown without a source: 'Apollo 14'
+- **TJ-1** (S064) `release_date` — unsourced: shown without a source: 2012
+- **TJ-2** (S122) `availability` — unsourced: shown without a source: 'Unavailable'
+- **TLS-01** (S067) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **TLS-01A** (S156) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **TLS-01A** (S156) `lunar_sample_reference` — unsourced: shown without a source: 'Mare'
+- **TRI-1** (S155) `availability` — unsourced: shown without a source: 'Unavailable'
+- **TRI-1** (S155) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **TUBS-I** (S137) `availability` — unsourced: shown without a source: 'Available (Research)'
+- **TUBS-I** (S137) `lunar_sample_reference` — unsourced: shown without a source: 'Ilmenite-rich'
+- **TUBS-I** (S137) `release_date` — unsourced: shown without a source: 2022
+- **TUBS-M** (S069) `release_date` — unsourced: shown without a source: 2020
+- **TUBS-T** (S070) `release_date` — unsourced: shown without a source: 2020
+- **TYII-0** (S132) `availability` — unsourced: shown without a source: 'Unavailable'
+- **TYII-0** (S132) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **TYII-1** (S133) `availability` — unsourced: shown without a source: 'Unavailable'
+- **TYII-1** (S133) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **TYII-2** (S134) `availability` — unsourced: shown without a source: 'Unavailable'
+- **TYII-2** (S134) `lunar_sample_reference` — unsourced: shown without a source: 'General'
+- **UW-1H** (S073) `availability` — unsourced: shown without a source: 'Unavailable'
+- **UW-1H** (S073) `institution` — unsourced: shown without a source: 'University of Winnipeg'
+- **UW-1M** (S074) `availability` — unsourced: shown without a source: 'Unavailable'
+- **UoM-B** (S071) `lunar_sample_reference` — unsourced: shown without a source: 'Low-fidelity Mare'
+- **UoM-W** (S072) `lunar_sample_reference` — unsourced: shown without a source: 'Low-fidelity Highlands'
+- **WHU-1** (S075) `availability` — unsourced: shown without a source: 'Unavailable'
+- **ZJM-01** (S135) `availability` — unsourced: shown without a source: 'Unavailable'
+- **ZJM-01** (S135) `lunar_sample_reference` — unsourced: shown without a source: 'General'
