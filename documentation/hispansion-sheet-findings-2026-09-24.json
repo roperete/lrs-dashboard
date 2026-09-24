@@ -1,0 +1,918 @@
+{
+ "sheets": [
+  {
+   "simulant_id": "S065",
+   "name": "TLH-0",
+   "path": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/Hispansion/TLH-0_TDS_v1.4.pdf",
+   "url": "https://www.hispansion.io/_files/ugd/7ec058_f262ea9a2f464969ac624014685410a8.pdf",
+   "reading": {
+    "simulant_id": "TLH-0",
+    "document_id": "TDS-TLH-0-v1.4",
+    "values": [
+     {
+      "field": "oxide:SiO2",
+      "value": "46.08",
+      "table": "Table 1: Bulk Chemistry of TLH-0 (%)",
+      "page": "2",
+      "quote": "SiO2 TiO2 Al2O3 FeO MgO CaO Na2O K2O | 46.08 0.81 24.87 6.73 5.05 14.02 1.51 0.66"
+     },
+     {
+      "field": "oxide:TiO2",
+      "value": "0.81",
+      "table": "Table 1: Bulk Chemistry of TLH-0 (%)",
+      "page": "2",
+      "quote": "SiO2 TiO2 Al2O3 FeO MgO CaO Na2O K2O | 46.08 0.81 24.87 6.73 5.05 14.02 1.51 0.66"
+     },
+     {
+      "field": "oxide:Al2O3",
+      "value": "24.87",
+      "table": "Table 1: Bulk Chemistry of TLH-0 (%)",
+      "page": "2",
+      "quote": "SiO2 TiO2 Al2O3 FeO MgO CaO Na2O K2O | 46.08 0.81 24.87 6.73 5.05 14.02 1.51 0.66"
+     },
+     {
+      "field": "oxide:FeO",
+      "value": "6.73",
+      "table": "Table 1: Bulk Chemistry of TLH-0 (%)",
+      "page": "2",
+      "quote": "SiO2 TiO2 Al2O3 FeO MgO CaO Na2O K2O | 46.08 0.81 24.87 6.73 5.05 14.02 1.51 0.66"
+     },
+     {
+      "field": "oxide:MgO",
+      "value": "5.05",
+      "table": "Table 1: Bulk Chemistry of TLH-0 (%)",
+      "page": "2",
+      "quote": "SiO2 TiO2 Al2O3 FeO MgO CaO Na2O K2O | 46.08 0.81 24.87 6.73 5.05 14.02 1.51 0.66"
+     },
+     {
+      "field": "oxide:CaO",
+      "value": "14.02",
+      "table": "Table 1: Bulk Chemistry of TLH-0 (%)",
+      "page": "2",
+      "quote": "SiO2 TiO2 Al2O3 FeO MgO CaO Na2O K2O | 46.08 0.81 24.87 6.73 5.05 14.02 1.51 0.66"
+     },
+     {
+      "field": "oxide:Na2O",
+      "value": "1.51",
+      "table": "Table 1: Bulk Chemistry of TLH-0 (%)",
+      "page": "2",
+      "quote": "SiO2 TiO2 Al2O3 FeO MgO CaO Na2O K2O | 46.08 0.81 24.87 6.73 5.05 14.02 1.51 0.66"
+     },
+     {
+      "field": "oxide:K2O",
+      "value": "0.66",
+      "table": "Table 1: Bulk Chemistry of TLH-0 (%)",
+      "page": "2",
+      "quote": "SiO2 TiO2 Al2O3 FeO MgO CaO Na2O K2O | 46.08 0.81 24.87 6.73 5.05 14.02 1.51 0.66"
+     },
+     {
+      "field": "mineral:Anorthite",
+      "value": "57",
+      "table": "Table 4: Modal Mineralogy of TLH-0 (%)",
+      "page": "2",
+      "quote": "Anorthite Augite Fosterite Lizardite Analcime Smectite Illite Quartz Chlorite Hornblende Amorphous/Glass | 57 5.7 1.8 6.5 2.6 0.5 1 1.2 2.4 2.1 19.2"
+     },
+     {
+      "field": "mineral:Augite",
+      "value": "5.7",
+      "table": "Table 4: Modal Mineralogy of TLH-0 (%)",
+      "page": "2",
+      "quote": "Anorthite Augite Fosterite Lizardite Analcime Smectite Illite Quartz Chlorite Hornblende Amorphous/Glass | 57 5.7 1.8 6.5 2.6 0.5 1 1.2 2.4 2.1 19.2"
+     },
+     {
+      "field": "mineral:Fosterite",
+      "value": "1.8",
+      "table": "Table 4: Modal Mineralogy of TLH-0 (%)",
+      "page": "2",
+      "quote": "Anorthite Augite Fosterite Lizardite Analcime Smectite Illite Quartz Chlorite Hornblende Amorphous/Glass | 57 5.7 1.8 6.5 2.6 0.5 1 1.2 2.4 2.1 19.2"
+     },
+     {
+      "field": "mineral:Lizardite",
+      "value": "6.5",
+      "table": "Table 4: Modal Mineralogy of TLH-0 (%)",
+      "page": "2",
+      "quote": "Anorthite Augite Fosterite Lizardite Analcime Smectite Illite Quartz Chlorite Hornblende Amorphous/Glass | 57 5.7 1.8 6.5 2.6 0.5 1 1.2 2.4 2.1 19.2"
+     },
+     {
+      "field": "mineral:Analcime",
+      "value": "2.6",
+      "table": "Table 4: Modal Mineralogy of TLH-0 (%)",
+      "page": "2",
+      "quote": "Anorthite Augite Fosterite Lizardite Analcime Smectite Illite Quartz Chlorite Hornblende Amorphous/Glass | 57 5.7 1.8 6.5 2.6 0.5 1 1.2 2.4 2.1 19.2"
+     },
+     {
+      "field": "mineral:Smectite",
+      "value": "0.5",
+      "table": "Table 4: Modal Mineralogy of TLH-0 (%)",
+      "page": "2",
+      "quote": "Anorthite Augite Fosterite Lizardite Analcime Smectite Illite Quartz Chlorite Hornblende Amorphous/Glass | 57 5.7 1.8 6.5 2.6 0.5 1 1.2 2.4 2.1 19.2"
+     },
+     {
+      "field": "mineral:Illite",
+      "value": "1",
+      "table": "Table 4: Modal Mineralogy of TLH-0 (%)",
+      "page": "2",
+      "quote": "Anorthite Augite Fosterite Lizardite Analcime Smectite Illite Quartz Chlorite Hornblende Amorphous/Glass | 57 5.7 1.8 6.5 2.6 0.5 1 1.2 2.4 2.1 19.2"
+     },
+     {
+      "field": "mineral:Quartz",
+      "value": "1.2",
+      "table": "Table 4: Modal Mineralogy of TLH-0 (%)",
+      "page": "2",
+      "quote": "Anorthite Augite Fosterite Lizardite Analcime Smectite Illite Quartz Chlorite Hornblende Amorphous/Glass | 57 5.7 1.8 6.5 2.6 0.5 1 1.2 2.4 2.1 19.2"
+     },
+     {
+      "field": "mineral:Chlorite",
+      "value": "2.4",
+      "table": "Table 4: Modal Mineralogy of TLH-0 (%)",
+      "page": "2",
+      "quote": "Anorthite Augite Fosterite Lizardite Analcime Smectite Illite Quartz Chlorite Hornblende Amorphous/Glass | 57 5.7 1.8 6.5 2.6 0.5 1 1.2 2.4 2.1 19.2"
+     },
+     {
+      "field": "mineral:Hornblende",
+      "value": "2.1",
+      "table": "Table 4: Modal Mineralogy of TLH-0 (%)",
+      "page": "2",
+      "quote": "Anorthite Augite Fosterite Lizardite Analcime Smectite Illite Quartz Chlorite Hornblende Amorphous/Glass | 57 5.7 1.8 6.5 2.6 0.5 1 1.2 2.4 2.1 19.2"
+     },
+     {
+      "field": "mineral:Amorphous / Glass",
+      "value": "19.2",
+      "table": "Table 4: Modal Mineralogy of TLH-0 (%)",
+      "page": "2",
+      "quote": "Anorthite Augite Fosterite Lizardite Analcime Smectite Illite Quartz Chlorite Hornblende Amorphous/Glass | 57 5.7 1.8 6.5 2.6 0.5 1 1.2 2.4 2.1 19.2"
+     },
+     {
+      "field": "density_g_cm3",
+      "value": "2.78 g/cm3",
+      "table": "2.3 Density",
+      "page": "3",
+      "quote": "Particle Density: 2.78 g/cm3"
+     },
+     {
+      "field": "bulk_density",
+      "value": "1.80 g/cm3",
+      "table": "2.3 Density",
+      "page": "3",
+      "quote": "Mean Density: 1.80 g/cm3"
+     },
+     {
+      "field": "bulk_density_range",
+      "value": "1.45 - 2.14 g/cm3",
+      "table": "2.3 Density",
+      "page": "3",
+      "quote": "Minimum Density: 1.45 g/cm3 / Maximum Density: 2.14 g/cm3"
+     },
+     {
+      "field": "particle_size_d50",
+      "value": "137.56 µm",
+      "table": "2.4 Particle Size Distribution",
+      "page": "3",
+      "quote": "Median(D50): 137.56 µm"
+     },
+     {
+      "field": "particle_size_mean_um",
+      "value": "389.81 µm",
+      "table": "2.4 Particle Size Distribution",
+      "page": "3",
+      "quote": "Mean: 389.81 µm"
+     },
+     {
+      "field": "particle_size_distribution",
+      "value": "0.01-3000 µm",
+      "table": "2.4 Particle Size Distribution",
+      "page": "3",
+      "quote": "Range: 0.01-3000 µm"
+     },
+     {
+      "field": "cohesion",
+      "value": "2.896 kPa",
+      "table": "2.6 Shear Stress - Cohesion (c) and Angle of Internal Friction (φ⁰)",
+      "page": "5",
+      "quote": "Cohesion (c): 2.896 kPa"
+     },
+     {
+      "field": "friction_angle",
+      "value": "46.12 º",
+      "table": "2.6 Shear Stress - Cohesion (c) and Angle of Internal Friction (φ⁰)",
+      "page": "5",
+      "quote": "Internal Angle of Friction (φ⁰): 46.12 º"
+     },
+     {
+      "field": "magnetic_susceptibility",
+      "value": "4495.7 x10-9 m3/kg",
+      "table": "2.7 Magnetic Susceptibility",
+      "page": "5",
+      "quote": "Ϭᵐ = 4495.7 x10-9 m3/kg"
+     },
+     {
+      "field": "nasa_fom_score",
+      "value": "88.7%",
+      "table": "1. Overview",
+      "page": "1",
+      "quote": "Mean NASA FoM Score: 88.7%"
+     },
+     {
+      "field": "glass_content_percent",
+      "value": "19.2",
+      "table": "Table 4: Modal Mineralogy of TLH-0 (%)",
+      "page": "2",
+      "quote": "Anorthite Augite Fosterite Lizardite Analcime Smectite Illite Quartz Chlorite Hornblende Amorphous/Glass | 57 5.7 1.8 6.5 2.6 0.5 1 1.2 2.4 2.1 19.2"
+     },
+     {
+      "field": "particle_morphology",
+      "value": "Aspect ratio: 0.70287; Root Form Factor/Circularity: 0.88048",
+      "table": "2.5 Particle Geometry",
+      "page": "4",
+      "quote": "Aspect ratio: 0.70287 / Root Form Factor/Circularity: 0.88048"
+     },
+     {
+      "field": "availability",
+      "value": "Available for purchase at https://www.hispansion.io/shop for low-volume orders. For high-volume orders, reach out at info@hispansion.io to check availability and get a personalized quote.",
+      "table": "3. Other Information",
+      "page": "7",
+      "quote": "Available for purchase at https://www.hispansion.io/shop for low-volume orders. / For high-volume orders, reach out at info@hispansion.io to check availability and get a personalized quote."
+     },
+     {
+      "field": "lunar_sample_reference",
+      "value": "Highlands",
+      "table": "1. Overview",
+      "page": "1",
+      "quote": "Type: Highlands"
+     },
+     {
+      "field": "product_grade",
+      "value": "TerraLun®- Core",
+      "table": "1. Overview",
+      "page": "1",
+      "quote": "Series: TerraLun®- Core"
+     },
+     {
+      "field": "datasheet_document_id",
+      "value": "TDS-TLH-0-v1.4",
+      "table": "Title block",
+      "page": "1",
+      "quote": "Technical Data Sheet: TLH-0 / TDS-TLH-0-v1.4"
+     },
+     {
+      "field": "datasheet_date",
+      "value": "2026-06-11",
+      "table": "3. Other Information",
+      "page": "7",
+      "quote": "Revision date: June 11th, 2026."
+     }
+    ],
+    "not_stated": [
+     "specific_gravity",
+     "angle_of_repose",
+     "ph"
+    ],
+    "notes": "Source file: /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/Hispansion/TLH-0_TDS_v1.4.pdf, read with pdftotext -layout (text extracted cleanly, no garbled tables, so no page rendering was needed).\n\nMapping notes:\n- The sheet's Section 2.3 \"Density\" gives four distinct values (Minimum, Maximum, Mean, Particle Density). Mapped Mean Density -> bulk_density, Minimum+Maximum -> bulk_density_range (combined from two separate printed lines, both endpoints explicitly stated, not inferred), and Particle Density -> density_g_cm3 (no separate \"specific gravity\" term appears anywhere on the sheet, so that field is not_stated).\n- oxide:* values taken only from \"Table 1: Bulk Chemistry of TLH-0 (%)\" (the product's own XRF/ICP-MS results). \"Table 2: Apollo Bulk Chemistry – Highlands Reference (%)\" (sourced from Slabic et al. 2024) was excluded per instructions as reference data, not the product's own values.\n- mineral:* values taken only from \"Table 4: Modal Mineralogy of TLH-0 (%)\" (the XRD/Raman phase table). \"Table 5: Mineral Group Classification of TLH-0 (%)\" is a re-grouped roll-up of the same data into 5 mineral-group buckets (Pyroxene, Plagioclase Feldspar, Olivine, Ilmenite, Glass), not itself a modal mineralogy table, so it was not used for mineral: entries; \"Table 6\" is the Apollo reference version of that grouping and was excluded as reference data.\n- Trace elements (Table 3, ppm, XRF/ICP-MS) were excluded per instructions (not oxides).\n- The Overview section's \"Composition\" list (Anorthosite, Basalt, Altered Peridotite) is the feedstock blend the product is made from, not a modal mineralogy table, so it was excluded per instructions.\n- Reflectance spectra (Tables 7–8, Section 2.8) and Apollo spectral-comparison metrics were not requested fields and were skipped.\n- particle_morphology combines both shape descriptors printed in Section 2.5 (aspect ratio and root form factor/circularity), as the sheet reports morphology only as these two separate metrics, not a single descriptor.\n- datasheet_document_id \"TDS-TLH-0-v1.4\" appears on the title page beneath the sheet's title, matching the filename's version tag (v1.4).\n- PRODUCT designation \"(S065)\" from the task prompt does not appear anywhere on the datasheet itself; it was not used as part of any reported value."
+   },
+   "check": {
+    "simulant_id": "TLH-0",
+    "checks": [
+     {
+      "field": "oxide:SiO2",
+      "verdict": "CONFIRMED",
+      "note": "Table 1 (TLH-0, p2) prints SiO2 46.08. Table 2, the Apollo reference, prints 45.62, and the reader did not use it."
+     },
+     {
+      "field": "oxide:TiO2",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p2: 0.81 (Apollo reference is 0.84)."
+     },
+     {
+      "field": "oxide:Al2O3",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p2: 24.87 (Apollo reference is 24.47)."
+     },
+     {
+      "field": "oxide:FeO",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p2: 6.73 (Apollo reference is 6.6)."
+     },
+     {
+      "field": "oxide:MgO",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p2: 5.05 (Apollo reference is 6.98)."
+     },
+     {
+      "field": "oxide:CaO",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p2: 14.02 (Apollo reference is 14.65)."
+     },
+     {
+      "field": "oxide:Na2O",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p2: 1.51 (Apollo reference is 0.48)."
+     },
+     {
+      "field": "oxide:K2O",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p2: 0.66 (Apollo reference is 0.2). I checked the column alignment on a render of the page."
+     },
+     {
+      "field": "mineral:Anorthite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p2: 57. The render shows 11 headers over 11 values."
+     },
+     {
+      "field": "mineral:Augite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p2: 5.7."
+     },
+     {
+      "field": "mineral:Fosterite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p2: 1.8. The sheet spells it 'Fosterite'."
+     },
+     {
+      "field": "mineral:Lizardite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p2: 6.5."
+     },
+     {
+      "field": "mineral:Analcime",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p2: 2.6."
+     },
+     {
+      "field": "mineral:Smectite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p2: 0.5."
+     },
+     {
+      "field": "mineral:Illite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p2: 1."
+     },
+     {
+      "field": "mineral:Quartz",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p2: 1.2."
+     },
+     {
+      "field": "mineral:Chlorite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p2: 2.4."
+     },
+     {
+      "field": "mineral:Hornblende",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p2: 2.1."
+     },
+     {
+      "field": "mineral:Amorphous / Glass",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p2: 'Amorphous / Glass' 19.2. The header is split over two lines."
+     },
+     {
+      "field": "density_g_cm3",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.3, p3: 'Particle Density: 2.78 g/cm3'."
+     },
+     {
+      "field": "bulk_density",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.3, p3: 'Mean Density: 1.80 g/cm3'."
+     },
+     {
+      "field": "bulk_density_range",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.3, p3: 'Minimum Density: 1.45 g/cm3' and 'Maximum Density: 2.14 g/cm3'. The sheet notes that the maximum may read higher than reality."
+     },
+     {
+      "field": "particle_size_d50",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.4, p3: 'Median(D50): 137.56 µm'."
+     },
+     {
+      "field": "particle_size_mean_um",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.4, p3: 'Mean: 389.81 µm'."
+     },
+     {
+      "field": "particle_size_distribution",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.4, p3: 'Range: 0.01-3000 µm'. D10 9.6 µm and D90 1398.9 µm are also printed but are not in the field list."
+     },
+     {
+      "field": "cohesion",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.6, p5: 'Cohesion (c): 2.896 kPa'."
+     },
+     {
+      "field": "friction_angle",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.6, p5: 'Internal Angle of Friction (φ⁰): 46.12 º'."
+     },
+     {
+      "field": "magnetic_susceptibility",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.7, p5 prints 'ꭓm = 4495.7 x10-9 m3/kg'. Value and unit match. The reader's quote has the wrong symbol ('Ϭᵐ' instead of 'ꭓm'), so only the quote needs fixing."
+     },
+     {
+      "field": "nasa_fom_score",
+      "verdict": "CONFIRMED",
+      "note": "Overview, p1: 'Mean NASA FoM Score: 88.7%'. Confirmed on the rendered page."
+     },
+     {
+      "field": "glass_content_percent",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p2: Amorphous / Glass 19.2. Table 5 also gives Glass 19.2. The Apollo reference (Table 6) is 27.77 and was not used."
+     },
+     {
+      "field": "particle_morphology",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.5, p4: 'Aspect ratio: 0.70287' and 'Root Form Factor/Circularity: 0.88048'."
+     },
+     {
+      "field": "availability",
+      "verdict": "CONFIRMED",
+      "note": "Section 3, p7: shop URL for low-volume orders and info@hispansion.io for high-volume quotes, same wording as the claim."
+     },
+     {
+      "field": "lunar_sample_reference",
+      "verdict": "CONFIRMED",
+      "note": "Overview, p1: 'Type: Highlands'."
+     },
+     {
+      "field": "product_grade",
+      "verdict": "CONFIRMED",
+      "note": "Overview, p1: 'Series: TerraLun®- Core'."
+     },
+     {
+      "field": "datasheet_document_id",
+      "verdict": "CONFIRMED",
+      "note": "Title block, p1: 'TDS-TLH-0-v1.4' under the title. Seen on the render."
+     },
+     {
+      "field": "datasheet_date",
+      "verdict": "CONFIRMED",
+      "note": "Section 3, p7: 'Revision date: June 11th, 2026.', which is 2026-06-11."
+     }
+    ],
+    "missed": [],
+    "notes": "I read the file with pdftotext -layout and -raw, and rendered pages 1 and 2 with pdftoppm to check the columns in Tables 1 and 4 and the title block. All 36 claimed values are right for TLH-0 and come from the product's own tables, not the Apollo reference tables (Table 2, Table 6). One quote is wrong: the magnetic susceptibility symbol is printed as 'ꭓm', but the reader's quote has 'Ϭᵐ'. The number and unit match.\n\nThe not_stated list holds up. The sheet has no specific gravity (particle density is correctly mapped to density_g_cm3), no angle of repose and no pH. Nothing else from the field list is missing.\n\nThe sheet also prints some values outside the field list: D10 9.6 µm and D90 1398.9 µm, trace elements in ppm (Table 3), the per-category NASA FoM scores in Figure 2 (Chemical 97.3, PSD 91.7, Bulk Density 81.4, Shear Strength 84.1, Mineral 83.7, Magnetic Susceptibility 89.3, Particle Geometry 93.3 %), and reflectance values (Tables 7 and 8). The label S065 does not appear anywhere on the sheet.\n\nSheet: /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/Hispansion/TLH-0_TDS_v1.4.pdf"
+   }
+  },
+  {
+   "simulant_id": "S066",
+   "name": "TLM-0",
+   "path": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/Hispansion/TLM-0_TDS_v2.2.pdf",
+   "url": "https://www.hispansion.io/_files/ugd/7ec058_2325e24163f047bb9020ad858b3b6123.pdf",
+   "reading": {
+    "document_id": "TDS-TLM-0-v2.2",
+    "simulant_id": "S066",
+    "values": [
+     {
+      "field": "oxide:SiO2",
+      "value": "47.01",
+      "table": "Table 1: Bulk Chemistry of TLM-0 (%)",
+      "page": "2",
+      "quote": "SiO2     TiO2       Al2O3       FeO        MgO       CaO          Na2O         K2O\n47.01      1.71     14.28        12.35      12.30     8.32          2.07     1.27"
+     },
+     {
+      "field": "oxide:TiO2",
+      "value": "1.71",
+      "table": "Table 1: Bulk Chemistry of TLM-0 (%)",
+      "page": "2",
+      "quote": "SiO2     TiO2       Al2O3       FeO        MgO       CaO          Na2O         K2O\n47.01      1.71     14.28        12.35      12.30     8.32          2.07     1.27"
+     },
+     {
+      "field": "oxide:Al2O3",
+      "value": "14.28",
+      "table": "Table 1: Bulk Chemistry of TLM-0 (%)",
+      "page": "2",
+      "quote": "SiO2     TiO2       Al2O3       FeO        MgO       CaO          Na2O         K2O\n47.01      1.71     14.28        12.35      12.30     8.32          2.07     1.27"
+     },
+     {
+      "field": "oxide:FeO",
+      "value": "12.35",
+      "table": "Table 1: Bulk Chemistry of TLM-0 (%)",
+      "page": "2",
+      "quote": "SiO2     TiO2       Al2O3       FeO        MgO       CaO          Na2O         K2O\n47.01      1.71     14.28        12.35      12.30     8.32          2.07     1.27"
+     },
+     {
+      "field": "oxide:MgO",
+      "value": "12.30",
+      "table": "Table 1: Bulk Chemistry of TLM-0 (%)",
+      "page": "2",
+      "quote": "SiO2     TiO2       Al2O3       FeO        MgO       CaO          Na2O         K2O\n47.01      1.71     14.28        12.35      12.30     8.32          2.07     1.27"
+     },
+     {
+      "field": "oxide:CaO",
+      "value": "8.32",
+      "table": "Table 1: Bulk Chemistry of TLM-0 (%)",
+      "page": "2",
+      "quote": "SiO2     TiO2       Al2O3       FeO        MgO       CaO          Na2O         K2O\n47.01      1.71     14.28        12.35      12.30     8.32          2.07     1.27"
+     },
+     {
+      "field": "oxide:Na2O",
+      "value": "2.07",
+      "table": "Table 1: Bulk Chemistry of TLM-0 (%)",
+      "page": "2",
+      "quote": "SiO2     TiO2       Al2O3       FeO        MgO       CaO          Na2O         K2O\n47.01      1.71     14.28        12.35      12.30     8.32          2.07     1.27"
+     },
+     {
+      "field": "oxide:K2O",
+      "value": "1.27",
+      "table": "Table 1: Bulk Chemistry of TLM-0 (%)",
+      "page": "2",
+      "quote": "SiO2     TiO2       Al2O3       FeO        MgO       CaO          Na2O         K2O\n47.01      1.71     14.28        12.35      12.30     8.32          2.07     1.27"
+     },
+     {
+      "field": "mineral:Anorthite",
+      "value": "35.2",
+      "table": "Table 4: Modal Mineralogy of TLM-0 (%)",
+      "page": "2",
+      "quote": "Anorthite   Augite   Enstatite   Fosterite    Lizardite    Analcime       Smectite       Illite   Quartz   Hornblende   Amorphous/Glass\n35.2      17.2       1.9         2.1          5.7            3.8           1.2         0.6       0.6          0.3        31.4"
+     },
+     {
+      "field": "mineral:Augite",
+      "value": "17.2",
+      "table": "Table 4: Modal Mineralogy of TLM-0 (%)",
+      "page": "2",
+      "quote": "Anorthite   Augite   Enstatite   Fosterite    Lizardite    Analcime       Smectite       Illite   Quartz   Hornblende   Amorphous/Glass\n35.2      17.2       1.9         2.1          5.7            3.8           1.2         0.6       0.6          0.3        31.4"
+     },
+     {
+      "field": "mineral:Enstatite",
+      "value": "1.9",
+      "table": "Table 4: Modal Mineralogy of TLM-0 (%)",
+      "page": "2",
+      "quote": "Anorthite   Augite   Enstatite   Fosterite    Lizardite    Analcime       Smectite       Illite   Quartz   Hornblende   Amorphous/Glass\n35.2      17.2       1.9         2.1          5.7            3.8           1.2         0.6       0.6          0.3        31.4"
+     },
+     {
+      "field": "mineral:Fosterite",
+      "value": "2.1",
+      "table": "Table 4: Modal Mineralogy of TLM-0 (%)",
+      "page": "2",
+      "quote": "Anorthite   Augite   Enstatite   Fosterite    Lizardite    Analcime       Smectite       Illite   Quartz   Hornblende   Amorphous/Glass\n35.2      17.2       1.9         2.1          5.7            3.8           1.2         0.6       0.6          0.3        31.4"
+     },
+     {
+      "field": "mineral:Lizardite",
+      "value": "5.7",
+      "table": "Table 4: Modal Mineralogy of TLM-0 (%)",
+      "page": "2",
+      "quote": "Anorthite   Augite   Enstatite   Fosterite    Lizardite    Analcime       Smectite       Illite   Quartz   Hornblende   Amorphous/Glass\n35.2      17.2       1.9         2.1          5.7            3.8           1.2         0.6       0.6          0.3        31.4"
+     },
+     {
+      "field": "mineral:Analcime",
+      "value": "3.8",
+      "table": "Table 4: Modal Mineralogy of TLM-0 (%)",
+      "page": "2",
+      "quote": "Anorthite   Augite   Enstatite   Fosterite    Lizardite    Analcime       Smectite       Illite   Quartz   Hornblende   Amorphous/Glass\n35.2      17.2       1.9         2.1          5.7            3.8           1.2         0.6       0.6          0.3        31.4"
+     },
+     {
+      "field": "mineral:Smectite",
+      "value": "1.2",
+      "table": "Table 4: Modal Mineralogy of TLM-0 (%)",
+      "page": "2",
+      "quote": "Anorthite   Augite   Enstatite   Fosterite    Lizardite    Analcime       Smectite       Illite   Quartz   Hornblende   Amorphous/Glass\n35.2      17.2       1.9         2.1          5.7            3.8           1.2         0.6       0.6          0.3        31.4"
+     },
+     {
+      "field": "mineral:Illite",
+      "value": "0.6",
+      "table": "Table 4: Modal Mineralogy of TLM-0 (%)",
+      "page": "2",
+      "quote": "Anorthite   Augite   Enstatite   Fosterite    Lizardite    Analcime       Smectite       Illite   Quartz   Hornblende   Amorphous/Glass\n35.2      17.2       1.9         2.1          5.7            3.8           1.2         0.6       0.6          0.3        31.4"
+     },
+     {
+      "field": "mineral:Quartz",
+      "value": "0.6",
+      "table": "Table 4: Modal Mineralogy of TLM-0 (%)",
+      "page": "2",
+      "quote": "Anorthite   Augite   Enstatite   Fosterite    Lizardite    Analcime       Smectite       Illite   Quartz   Hornblende   Amorphous/Glass\n35.2      17.2       1.9         2.1          5.7            3.8           1.2         0.6       0.6          0.3        31.4"
+     },
+     {
+      "field": "mineral:Hornblende",
+      "value": "0.3",
+      "table": "Table 4: Modal Mineralogy of TLM-0 (%)",
+      "page": "2",
+      "quote": "Anorthite   Augite   Enstatite   Fosterite    Lizardite    Analcime       Smectite       Illite   Quartz   Hornblende   Amorphous/Glass\n35.2      17.2       1.9         2.1          5.7            3.8           1.2         0.6       0.6          0.3        31.4"
+     },
+     {
+      "field": "mineral:Amorphous/Glass",
+      "value": "31.4",
+      "table": "Table 4: Modal Mineralogy of TLM-0 (%)",
+      "page": "2",
+      "quote": "Anorthite   Augite   Enstatite   Fosterite    Lizardite    Analcime       Smectite       Illite   Quartz   Hornblende   Amorphous/Glass\n35.2      17.2       1.9         2.1          5.7            3.8           1.2         0.6       0.6          0.3        31.4"
+     },
+     {
+      "field": "density_g_cm3",
+      "value": "2.79 g/cm3",
+      "table": "2.3 Bulk Density",
+      "page": "3",
+      "quote": "Particle Density: 2.79 g/cm3"
+     },
+     {
+      "field": "bulk_density",
+      "value": "1.67 g/cm3",
+      "table": "2.3 Bulk Density",
+      "page": "3",
+      "quote": "Mean Density: 1.67 g/cm3"
+     },
+     {
+      "field": "bulk_density_range",
+      "value": "1.33 g/cm3 - 2.01 g/cm3",
+      "table": "2.3 Bulk Density",
+      "page": "3",
+      "quote": "Minimum Density: 1.33 g/cm3 / Maximum Density: 2.01 g/cm3"
+     },
+     {
+      "field": "particle_size_d50",
+      "value": "74.7 µm",
+      "table": "2.4 Particle Size Distribution",
+      "page": "3",
+      "quote": "Median(D50): 74.7 µm"
+     },
+     {
+      "field": "particle_size_mean_um",
+      "value": "294.77 µm",
+      "table": "2.4 Particle Size Distribution",
+      "page": "3",
+      "quote": "Mean: 294.77 µm"
+     },
+     {
+      "field": "particle_size_distribution",
+      "value": "0.01-3000 µm",
+      "table": "2.4 Particle Size Distribution",
+      "page": "3",
+      "quote": "Range: 0.01-3000 µm"
+     },
+     {
+      "field": "cohesion",
+      "value": "2.503 kPa",
+      "table": "2.6 Shear Stress - Cohesion (c) and Angle of Internal Friction (φ⁰)",
+      "page": "5",
+      "quote": "Cohesion (c): 2.503 kPa"
+     },
+     {
+      "field": "friction_angle",
+      "value": "44.58 º",
+      "table": "2.6 Shear Stress - Cohesion (c) and Angle of Internal Friction (φ⁰)",
+      "page": "5",
+      "quote": "Internal Angle of Friction (φ⁰): 44.58 º"
+     },
+     {
+      "field": "magnetic_susceptibility",
+      "value": "7279.5 x10-9 m3/kg",
+      "table": "2.7 Magnetic Susceptibility",
+      "page": "5",
+      "quote": "ꭓm = 7279.5 x10-9 m3/kg"
+     },
+     {
+      "field": "nasa_fom_score",
+      "value": "90.9 %",
+      "table": "1. Overview",
+      "page": "1",
+      "quote": "Mean NASA FoM Score: 90.9 %"
+     },
+     {
+      "field": "glass_content_percent",
+      "value": "31.4",
+      "table": "Table 4: Modal Mineralogy of TLM-0 (%)",
+      "page": "2",
+      "quote": "Anorthite   Augite   Enstatite   Fosterite    Lizardite    Analcime       Smectite       Illite   Quartz   Hornblende   Amorphous/Glass\n35.2      17.2       1.9         2.1          5.7            3.8           1.2         0.6       0.6          0.3        31.4"
+     },
+     {
+      "field": "particle_morphology",
+      "value": "Aspect ratio: 0.69451; Root Form Factor/Circularity: 0.86994",
+      "table": "2.5 Particle Geometry",
+      "page": "4",
+      "quote": "Aspect ratio: 0.69451\nRoot Form Factor/Circularity: 0.86994"
+     },
+     {
+      "field": "availability",
+      "value": "Available for purchase at https://www.hispansion.io/shop for low-volume orders. For high-volume orders, reach out at info@hispansion.io to check availability and get a personalized quote.",
+      "table": "3. Other Information",
+      "page": "7",
+      "quote": "Available for purchase at https://www.hispansion.io/shop for low-volume orders. / For high-volume orders, reach out at info@hispansion.io to check availability and get a personalized quote."
+     },
+     {
+      "field": "lunar_sample_reference",
+      "value": "Low-Ti Mare",
+      "table": "1. Overview",
+      "page": "1",
+      "quote": "Type: Low-Ti Mare"
+     },
+     {
+      "field": "product_grade",
+      "value": "TerraLun®- Core",
+      "table": "1. Overview",
+      "page": "1",
+      "quote": "Series: TerraLun®- Core"
+     },
+     {
+      "field": "datasheet_document_id",
+      "value": "TDS-TLM-0-v2.2",
+      "table": "Header",
+      "page": "1",
+      "quote": "Technical Data Sheet: TLM-0 / TDS-TLM-0-v2.2"
+     },
+     {
+      "field": "datasheet_date",
+      "value": "2026-06-11",
+      "table": "3. Other Information",
+      "page": "7",
+      "quote": "Revision date: June 11th, 2026."
+     }
+    ],
+    "not_stated": [
+     "specific_gravity",
+     "angle_of_repose",
+     "ph"
+    ],
+    "notes": "Read via pdftotext -layout (text layer was clean; no page needed image rendering). Excluded per rules: Table 2 \"Apollo Bulk Chemistry – Low-Ti Mare Reference\" (p.2), Table 6 \"Apollo Mineral Group Classification – Low-Ti Mare Reference\" (p.3), Table 3 trace elements in ppm (p.2, Nb/V/Co/...), and Table 7/8 Apollo reflectance-spectra comparison (p.6-7) — none are TLM-0's own bulk-chemistry/mineralogy values. Table 5 \"Mineral Group Classification of TLM-0\" (p.3: Pyroxene 19.1, Plagioclase Feldspar 35.2, Olivine 2.1, Ilmenite 0, Glass 31.4) is a derived regrouping of Table 4's phases, not \"the modal mineralogy table\" itself, so its rows were not reported as separate mineral: fields (Table 4 was used instead).\n\nMapping judgment calls (not inferred/computed values, just which printed label answers which requested field):\n- density_g_cm3 -> the sheet's \"Particle Density: 2.79 g/cm3\" (2.3 Bulk Density, p.3), the only plain grain/solid density in g/cm3, distinct from Minimum/Maximum/Mean (bulk) Density.\n- bulk_density_range -> built by pairing the sheet's separately printed \"Minimum Density: 1.33 g/cm3\" and \"Maximum Density: 2.01 g/cm3\" lines (2.3 Bulk Density, p.3); both are explicitly stated, nothing was computed.\n- glass_content_percent -> Table 4's \"Amorphous/Glass\" column (31.4), matching the XRD glass/amorphous-fraction quantification described in section 2.2's intro text.\n\nProduct info for context (not requested fields but useful): Type = Low-Ti Mare; Series = TerraLun®-Core; Composition (feedstock blend, not mineralogy) = Basalt, Anorthosite, Altered Peridotite."
+   },
+   "check": {
+    "simulant_id": "S066",
+    "checks": [
+     {
+      "field": "oxide:SiO2",
+      "verdict": "CONFIRMED",
+      "note": "Table 1 Bulk Chemistry of TLM-0 (%), p.2: SiO2 47.01. Checked against the rendered page too. The Apollo reference in Table 2 is 45.62, so the reader used the product row."
+     },
+     {
+      "field": "oxide:TiO2",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p.2: TiO2 1.71 (Apollo Table 2 gives 2.09)."
+     },
+     {
+      "field": "oxide:Al2O3",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p.2: Al2O3 14.28 (Apollo 13.20)."
+     },
+     {
+      "field": "oxide:FeO",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p.2: FeO 12.35 (Apollo 16.45)."
+     },
+     {
+      "field": "oxide:MgO",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p.2: MgO 12.30 (Apollo 10.19)."
+     },
+     {
+      "field": "oxide:CaO",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p.2: CaO 8.32 (Apollo 10.65)."
+     },
+     {
+      "field": "oxide:Na2O",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p.2: Na2O 2.07 (Apollo 0.42)."
+     },
+     {
+      "field": "oxide:K2O",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p.2: K2O 1.27 (Apollo 0.19)."
+     },
+     {
+      "field": "mineral:Anorthite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4 Modal Mineralogy of TLM-0 (%), p.2: Anorthite 35.2. Column alignment checked on the rendered page."
+     },
+     {
+      "field": "mineral:Augite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p.2: Augite 17.2."
+     },
+     {
+      "field": "mineral:Enstatite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p.2: Enstatite 1.9."
+     },
+     {
+      "field": "mineral:Fosterite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p.2: 'Fosterite' (the sheet's spelling) 2.1."
+     },
+     {
+      "field": "mineral:Lizardite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p.2: Lizardite 5.7."
+     },
+     {
+      "field": "mineral:Analcime",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p.2: Analcime 3.8."
+     },
+     {
+      "field": "mineral:Smectite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p.2: Smectite 1.2."
+     },
+     {
+      "field": "mineral:Illite",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p.2: Illite 0.6."
+     },
+     {
+      "field": "mineral:Quartz",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p.2: Quartz 0.6."
+     },
+     {
+      "field": "mineral:Hornblende",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p.2: Hornblende 0.3."
+     },
+     {
+      "field": "mineral:Amorphous/Glass",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p.2: Amorphous/Glass 31.4."
+     },
+     {
+      "field": "density_g_cm3",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.3 Bulk Density, p.3: 'Particle Density: 2.79 g/cm3' (measured to UNE-EN ISO 17892-3:2018). Using the particle density for this field is a reasonable mapping."
+     },
+     {
+      "field": "bulk_density",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.3, p.3: 'Mean Density: 1.67 g/cm3'."
+     },
+     {
+      "field": "bulk_density_range",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.3, p.3: 'Minimum Density: 1.33 g/cm3' and 'Maximum Density: 2.01 g/cm3' are both printed."
+     },
+     {
+      "field": "particle_size_d50",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.4, p.3: 'Median(D50): 74.7 µm'."
+     },
+     {
+      "field": "particle_size_mean_um",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.4, p.3: 'Mean: 294.77 µm'."
+     },
+     {
+      "field": "particle_size_distribution",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.4, p.3: 'Range: 0.01-3000 µm'. D10 9.59 µm and D90 873.9 µm are also printed but are not requested fields."
+     },
+     {
+      "field": "cohesion",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.6, p.5: 'Cohesion (c): 2.503 kPa'."
+     },
+     {
+      "field": "friction_angle",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.6, p.5: 'Internal Angle of Friction (φ⁰): 44.58 º'."
+     },
+     {
+      "field": "magnetic_susceptibility",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.7, p.5: 'ꭓm = 7279.5 x10-9 m3/kg'."
+     },
+     {
+      "field": "nasa_fom_score",
+      "verdict": "CONFIRMED",
+      "note": "Section 1 Overview, p.1: 'Mean NASA FoM Score: 90.9 %'."
+     },
+     {
+      "field": "glass_content_percent",
+      "verdict": "CONFIRMED",
+      "note": "Table 4, p.2: Amorphous/Glass 31.4. Table 5 on p.3 also gives Glass 31.4."
+     },
+     {
+      "field": "particle_morphology",
+      "verdict": "CONFIRMED",
+      "note": "Section 2.5 Particle Geometry, p.4: 'Aspect ratio: 0.69451' and 'Root Form Factor/Circularity: 0.86994'."
+     },
+     {
+      "field": "availability",
+      "verdict": "CONFIRMED",
+      "note": "Section 3 Other Information, p.7: the sheet has the shop URL for low-volume orders and info@hispansion.io for high-volume quotes, as quoted."
+     },
+     {
+      "field": "lunar_sample_reference",
+      "verdict": "CONFIRMED",
+      "note": "Section 1 Overview, p.1: 'Type: Low-Ti Mare'."
+     },
+     {
+      "field": "product_grade",
+      "verdict": "CONFIRMED",
+      "note": "Section 1 Overview, p.1: 'Series: TerraLun®- Core'."
+     },
+     {
+      "field": "datasheet_document_id",
+      "verdict": "CONFIRMED",
+      "note": "Header, p.1: 'TDS-TLM-0-v2.2'."
+     },
+     {
+      "field": "datasheet_date",
+      "verdict": "CONFIRMED",
+      "note": "Section 3, p.7: 'Revision date: June 11th, 2026.' In ISO form that is 2026-06-11."
+     }
+    ],
+    "missed": [],
+    "notes": "I checked every claim against /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/datasheets/Hispansion/TLM-0_TDS_v2.2.pdf. I read it with pdftotext -layout and also rendered page 2 to check the columns of Tables 1 and 4. All 37 claimed values match the product's own tables and sections, with the same numbers and on the right pages. None comes from the Apollo reference tables (Table 2 on p.2, Table 6 on p.3, Tables 7 and 8 on pp.6-7). The reader's three not-stated fields are correct: the sheet gives no specific gravity (only Particle Density 2.79 g/cm3), no angle of repose and no pH. I found no requested field that the sheet states and the reader left out. The sheet also prints D10 (9.59 µm), D90 (873.9 µm), Table 3 trace elements (ppm), Table 5 mineral-group totals and Table 7 reflectance values, but none of these is in the field list."
+   }
+  }
+ ]
+}

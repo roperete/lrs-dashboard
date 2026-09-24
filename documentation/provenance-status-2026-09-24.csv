@@ -63,9 +63,9 @@ S061,OPRL2NT,not_extracted,7,6,1,0,0,0,,0,0,pass,n/a
 S062,Oshima Simulant,not_extracted,5,4,0,1,0,0,,0,0,pass,n/a
 S063,TBG-1,verified,6,5,0,1,0,0,,13,13,pass,pass
 S064,TJ-1,verified,9,9,0,0,5,2,"bulk_density, cohesion, specific_gravity",10,10,pass,partial
-S065,TLH-0,verified,4,3,1,0,11,11,,23,23,pass,pass
-S066,TLM-0,verified,4,3,1,0,11,11,,24,24,pass,pass
-S067,TLS-01,verified,4,4,0,0,8,5,"cohesion, friction_angle, particle_ruggedness",11,11,pass,partial
+S065,TLH-0,verified,5,4,1,0,12,12,,19,19,pass,pass
+S066,TLM-0,verified,5,4,1,0,12,12,,19,19,pass,pass
+S067,TLS-01,verified,4,4,0,0,7,4,"cohesion, friction_angle, particle_ruggedness",11,11,pass,partial
 S069,TUBS-M,verified,2,2,0,0,5,4,particle_size_distribution,11,11,pass,partial
 S070,TUBS-T,verified,2,2,0,0,4,4,,11,11,pass,pass
 S071,UoM-B,not_extracted,6,6,0,0,4,4,,0,0,pass,pass
@@ -133,14 +133,14 @@ S132,TYII-0,withheld_unverified,2,2,0,0,5,0,"bulk_density, cohesion, friction_an
 S133,TYII-1,not_extracted,2,2,0,0,0,0,,0,0,pass,n/a
 S134,TYII-2,not_extracted,2,2,0,0,0,0,,0,0,pass,n/a
 S135,ZJM-01,not_extracted,2,2,0,0,1,1,,0,0,pass,pass
-S136,QH-E,not_extracted,3,3,0,0,2,2,,0,0,pass,pass
+S136,QH-E,not_extracted,3,3,0,0,0,0,,0,0,pass,n/a
 S137,TUBS-I,not_extracted,1,1,0,0,3,3,,0,0,pass,pass
 S138,LX-I50,not_extracted,2,2,0,0,7,4,"friction_angle, particle_size_d50, particle_size_distribution",0,0,pass,partial
 S139,SCC-1,not_extracted,1,1,0,0,0,0,,0,0,pass,n/a
 S140,SCC-2,not_extracted,1,1,0,0,0,0,,0,0,pass,n/a
 S153,LZS-1,verified,3,3,0,0,1,1,,10,10,pass,pass
 S154,KAUMLS,not_extracted,3,3,0,0,0,0,,0,0,pass,n/a
-S155,TRI-1,not_extracted,3,3,0,0,1,1,,0,0,pass,pass
+S155,TRI-1,not_extracted,3,3,0,0,0,0,,0,0,pass,n/a
 S156,TLS-01A,not_extracted,3,2,0,1,0,0,,0,0,pass,n/a
 S157,FEFU-1,not_extracted,2,2,0,0,1,1,,0,0,pass,pass
 S158,LuSIC-1,not_extracted,3,3,0,0,0,0,,0,0,pass,n/a

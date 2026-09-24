@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import shutil
 import sqlite3
 import sys
@@ -31,7 +32,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from apply_provenance import _statement, is_self_registry  # noqa: E402
-from parse_value import parse_number  # noqa: E402
+from parse_value import COLUMN_UNITS, parse_number, to_column_unit  # noqa: E402
 from provenance import ensure_provenance_schema  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -102,6 +103,24 @@ def _repair(con: sqlite3.Connection, feedstock) -> list[dict]:
             else:
                 con.execute(f"UPDATE simulants SET {col}=? WHERE simulant_id=?", (p.value, r["simulant_id"]))
                 log.append({**base, "action": "converted", "value": p.value})
+
+    # Text-typed physical columns the page reads as bare numbers in a fixed unit.
+    for col in COLUMN_UNITS:
+        for r in con.execute(f"SELECT simulant_id, {col} AS v FROM simulants WHERE {col} IS NOT NULL AND {col} != ''").fetchall():
+            if isinstance(r["v"], (int, float)) or re.fullmatch(r"\s*[-+]?\d+(?:\.\d+)?\s*", str(r["v"])):
+                continue
+            converted = to_column_unit(col, r["v"])
+            src = con.execute("SELECT reference_id, quote FROM property_sources WHERE simulant_id=? AND field=?",
+                              (r["simulant_id"], col)).fetchone()
+            base = {"table": "simulants", "simulant_id": r["simulant_id"], "field": col, "stated": r["v"],
+                    "reference_id": src["reference_id"] if src else None, "quote": src["quote"] if src else None}
+            if converted is None:
+                con.execute(f"UPDATE simulants SET {col}=NULL WHERE simulant_id=?", (r["simulant_id"],))
+                con.execute("DELETE FROM property_sources WHERE simulant_id=? AND field=?", (r["simulant_id"], col))
+                log.append({**base, "action": "cleared: not a single number"})
+            else:
+                con.execute(f"UPDATE simulants SET {col}=? WHERE simulant_id=?", (converted, r["simulant_id"]))
+                log.append({**base, "action": "converted to the column unit", "value": converted})
 
     for r in con.execute("SELECT reference_id, simulant_id, title, local_path FROM references_").fetchall():
         if not is_self_registry(r["title"], r["local_path"]):

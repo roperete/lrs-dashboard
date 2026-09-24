@@ -188,3 +188,22 @@ brief at all. Options: hide the unsourced ones as physical properties are hidden
 would disappear for two thirds of the simulants, and `type` drives the map colours and filters);
 mark them visibly as unverified; or accept them as editorial fields. Your call — this decides
 whether the third test covers the whole page or only its numbers.
+
+## Hispansion sheets and physical units, 2026-09-24
+
+- **TLH-0 and TLM-0 now follow the manufacturer's current public sheets**, TDS-TLH-0-v1.4 and
+  TDS-TLM-0-v2.2 (both revised 11 June 2026), read and checked value by value — 72 values, all
+  confirmed. The new sheets add an ICP-MS analysis: iron is reported as FeO, and sodium, which
+  v1.1 gave as below detection, is measured (1.51% and 2.07%). TLM-0's cohesion changed from
+  13.30 to 2.50 kPa and its friction angle from 34.6° to 44.6°. Hispansion prints "Fosterite";
+  it is stored as forsterite. The v1.1 sheets stay on file as references marked superseded.
+  Log: `documentation/sheet-supersede-log-2026-09-24.json`.
+- **Physical values stored with their unit were shown wrongly.** The LX simulants' cohesion is
+  stated in pascals ("185.2 Pa") and was shown as 185.2 kPa, a thousand times too large; it is
+  now 0.1852 kPa. Note the method: it is a powder-rheometer cohesive strength at ambient
+  pressure, not a shear-box or triaxial Mohr–Coulomb cohesion like the others in that column.
+  Decide whether it belongs there at all.
+- **Cleared as not a single number**, the statements kept in `value-repair-log-2026-09-24.json`:
+  QH-E cohesion and friction (a value for each of two stress levels — pick one or show both);
+  TLS-01 bulk density (1.72 before, 2.30 after crushing); TRI-1 bulk density (a minimum and a
+  maximum — this one belongs in bulk_density_range).

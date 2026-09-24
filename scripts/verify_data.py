@@ -44,6 +44,10 @@ NUMERIC_SCALAR_FIELDS = (
 )
 
 
+# Text columns shown as numbers in a fixed unit: bulk density g/cm³, cohesion kPa, friction °.
+TEXT_NUMBER_FIELDS = ("bulk_density", "cohesion", "friction_angle")
+
+
 def _is_number(v) -> bool:
     return isinstance(v, (int, float)) and not isinstance(v, bool)
 
@@ -65,6 +69,16 @@ def check_numeric_values(simulants, compositions, chemicals):
             v = s.get(f)
             if v is not None and not _is_number(v):
                 errors.append(f"Numeric property is not a number: {s.get('simulant_id')} {f} = {v!r}")
+        # Text columns the page reads with Number() and labels g/cm³, kPa, °: a unit inside the
+        # value hides it or, worse, is read in the wrong unit ("185.2 Pa" shown as 185.2 kPa).
+        for f in TEXT_NUMBER_FIELDS:
+            v = s.get(f)
+            if v in (None, "") or _is_number(v):
+                continue
+            try:
+                float(str(v))
+            except ValueError:
+                errors.append(f"Physical value is not a bare number: {s.get('simulant_id')} {f} = {v!r}")
     return errors
 
 

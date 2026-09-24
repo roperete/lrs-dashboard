@@ -20,7 +20,8 @@ _APPROX = re.compile(r"^(?:~|≈|ca\.?|approx\.?|approximately|about)\s*", re.I)
 # What may follow the number: an uncertainty, and a unit made of letters, %, µ/μ, dots,
 # hyphens, degrees and slashes between letters (g/cm3) — but no further digits except
 # the exponent in a unit such as cm3 or m2.
-_UNIT = r"(?:[A-Za-zµμ°%][A-Za-z0-9µμ°%.\-/]*)?"
+# "º" (U+00BA, the ordinal indicator) and "˚" stand in for the degree sign on some sheets.
+_UNIT = r"(?:[A-Za-zµμ°º˚%][A-Za-z0-9µμ°º˚%.\-/³]*)?"
 _FULL = re.compile(rf"^({_NUM})(?:\s*±\s*{_NUM})?\s*{_UNIT}\s*$")
 
 
@@ -64,3 +65,47 @@ def parse_number(raw) -> Parsed | None:
     if re.search(r"(?<![A-Za-z])\d", tail_without_uncertainty):
         return None
     return Parsed(float(m.group(1)), approximate, text)
+
+
+# The unit each text-typed physical column is shown in on the page, and how a stated unit
+# converts into it. These columns are text because some hold ranges, but the page reads them
+# as numbers and prints this unit after them — so what is stored must be a bare number in it.
+COLUMN_UNITS = {
+    "bulk_density": {"": 1.0, "g/cm3": 1.0, "g/cc": 1.0, "g/ml": 1.0, "kg/l": 1.0, "t/m3": 1.0,
+                     "kg/m3": 0.001},
+    "cohesion": {"": 1.0, "kpa": 1.0, "pa": 0.001, "mpa": 1000.0},
+    "friction_angle": {"": 1.0, "°": 1.0, "º": 1.0, "˚": 1.0, "deg": 1.0, "degree": 1.0, "degrees": 1.0},
+}
+_UNIT_TOKEN = r"([A-Za-zµμ°º˚%][A-Za-z0-9µμ°º˚%/³.]*)"
+_LEAD = re.compile(rf"^\s*(?:~|≈|ca\.?|approx\.?)?\s*{_NUM}(?:\s*±\s*{_NUM})?\s*")
+
+
+def _unit_key(token: str) -> str:
+    return token.lower().rstrip(".").replace("³", "3")
+
+
+def to_column_unit(field: str, raw) -> float | None:
+    """The stated value converted into the unit its column is shown in, or None.
+
+    None when the text is not a single number, or states a unit the column does not convert
+    ("12 psi"). A unit is read directly after the number ("185.2 Pa") or as the first word in
+    parentheses ("3.78 (kPa)"); a parenthesised word that is not a unit ("(Table 4)") leaves
+    the number bare, taken to be in the column's unit already."""
+    table = COLUMN_UNITS[field]
+    p = parse_number(raw)
+    if p is None:
+        return None
+    if isinstance(raw, (int, float)):
+        return float(raw)
+    text = str(raw).strip()
+    m = _LEAD.match(text)
+    tail = text[m.end():] if m else ""
+    direct = re.match(_UNIT_TOKEN, tail)
+    if direct:
+        factor = table.get(_unit_key(direct.group(1)))
+        if factor is None:
+            return None
+    else:
+        inner = re.match(r"\(\s*" + _UNIT_TOKEN, tail)
+        factor = table.get(_unit_key(inner.group(1)), 1.0) if inner else 1.0
+    return round(p.value * factor, 10)

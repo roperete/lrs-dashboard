@@ -1,0 +1,605 @@
+[
+ {
+  "simulant_id": "S065",
+  "reference_id": "DS-S065-v1.4",
+  "outcome": "reference created for the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "reference_id": "DS-S065",
+  "outcome": "previous version marked superseded by v1.4"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:SiO2",
+  "value": 46.43,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:TiO2",
+  "value": 0.82,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:Al2O3",
+  "value": 25.06,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:Fe2O3",
+  "value": 6.78,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:MgO",
+  "value": 5.09,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:CaO",
+  "value": 14.13,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:Na2O",
+  "value": 0.0,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:K2O",
+  "value": 0.67,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:SrO",
+  "value": 0.25,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:MnO",
+  "value": 0.14,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:Cr2O3",
+  "value": 0.11,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:NiO",
+  "value": 0.01,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "oxide:ZnO",
+  "value": 0.19,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "outcome": "oxide table replaced from the new sheet",
+  "rows": 8
+ },
+ {
+  "simulant_id": "S065",
+  "field": "mineral:Fosterite",
+  "outcome": "renamed: Fosterite -> Forsterite"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "mineral:Anorthite",
+  "value": 57.0,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "mineral:Augite",
+  "value": 5.7,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "mineral:Forsterite",
+  "value": 1.8,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "mineral:Lizardite",
+  "value": 6.5,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "mineral:Analcime",
+  "value": 2.6,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "mineral:Smectite",
+  "value": 0.5,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "mineral:Illite",
+  "value": 1.0,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "mineral:Quartz",
+  "value": 1.2,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "mineral:Hornblende",
+  "value": 2.1,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "mineral:Amorphous/Glass",
+  "value": 19.2,
+  "reference_id": "DS-S065",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S065",
+  "outcome": "mineral table replaced from the new sheet",
+  "rows": 11
+ },
+ {
+  "simulant_id": "S065",
+  "field": "density_g_cm3",
+  "value": 2.78,
+  "previous": null,
+  "previous_source": null,
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "bulk_density",
+  "value": "1.80 g/cm3",
+  "previous": "1.67",
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "bulk_density_range",
+  "value": "1.45 - 2.14 g/cm3",
+  "previous": "1.40 – 1.94 g/cm3 (min – max; mean 1.67)",
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "particle_size_d50",
+  "value": 137.56,
+  "previous": 137.6,
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "particle_size_mean_um",
+  "value": 389.81,
+  "previous": 390.5,
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "particle_size_distribution",
+  "value": "0.01-3000 µm",
+  "previous": "0.03 – 3000 µm",
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "cohesion",
+  "value": "2.896 kPa",
+  "previous": "2.369",
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "friction_angle",
+  "value": "46.12 º",
+  "previous": "45.342",
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "magnetic_susceptibility",
+  "value": "4495.7 x10-9 m3/kg",
+  "previous": "4495.7 x10-9 m3/kg (mass susceptibility)",
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "nasa_fom_score",
+  "value": 88.7,
+  "previous": 91.7,
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "glass_content_percent",
+  "value": 19.2,
+  "previous": 19.2,
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "particle_morphology",
+  "value": "Aspect ratio: 0.70287; Root Form Factor/Circularity: 0.88048",
+  "previous": "Aspect ratio 0.70287; root form factor / circularity 0.88048 (dynamic image analysis, CAMSIZER X2)",
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "availability",
+  "value": "Available",
+  "previous": "Available",
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S065",
+  "field": "lunar_sample_reference",
+  "value": "Highlands",
+  "previous": "Highlands",
+  "previous_source": "DS-S065",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "reference_id": "DS-S066-v2.2",
+  "outcome": "reference created for the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "reference_id": "DS-S066",
+  "outcome": "previous version marked superseded by v2.2"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:SiO2",
+  "value": 47.33,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:TiO2",
+  "value": 1.72,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:Al2O3",
+  "value": 14.38,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:Fe2O3",
+  "value": 12.44,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:MgO",
+  "value": 12.38,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:CaO",
+  "value": 8.38,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:Na2O",
+  "value": 0.0,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:K2O",
+  "value": 1.28,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:SrO",
+  "value": 0.25,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:MnO",
+  "value": 0.14,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:Cr2O3",
+  "value": 0.11,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:NiO",
+  "value": 0.01,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "oxide:ZnO",
+  "value": 0.19,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "outcome": "oxide table replaced from the new sheet",
+  "rows": 8
+ },
+ {
+  "simulant_id": "S066",
+  "field": "mineral:Fosterite",
+  "outcome": "renamed: Fosterite -> Forsterite"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "mineral:Anorthite",
+  "value": 35.2,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "mineral:Augite",
+  "value": 17.2,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "mineral:Enstatite",
+  "value": 1.9,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "mineral:Forsterite",
+  "value": 2.1,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "mineral:Lizardite",
+  "value": 5.7,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "mineral:Analcime",
+  "value": 3.8,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "mineral:Smectite",
+  "value": 1.2,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "mineral:Illite",
+  "value": 0.6,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "mineral:Quartz",
+  "value": 0.6,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "mineral:Hornblende",
+  "value": 0.3,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "mineral:Amorphous/Glass",
+  "value": 31.4,
+  "reference_id": "DS-S066",
+  "outcome": "replaced: previous version's row"
+ },
+ {
+  "simulant_id": "S066",
+  "outcome": "mineral table replaced from the new sheet",
+  "rows": 11
+ },
+ {
+  "simulant_id": "S066",
+  "field": "density_g_cm3",
+  "value": 2.79,
+  "previous": null,
+  "previous_source": null,
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "bulk_density",
+  "value": "1.67 g/cm3",
+  "previous": "1.52",
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "bulk_density_range",
+  "value": "1.33 g/cm3 - 2.01 g/cm3",
+  "previous": "1.27 – 1.76 g/cm3 (min – max; mean 1.52)",
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "particle_size_d50",
+  "value": 74.7,
+  "previous": 48.4,
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "particle_size_mean_um",
+  "value": 294.77,
+  "previous": 291.67,
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "particle_size_distribution",
+  "value": "0.01-3000 µm",
+  "previous": "0.03 – 3000 µm",
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "cohesion",
+  "value": "2.503 kPa",
+  "previous": "13.299",
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "friction_angle",
+  "value": "44.58 º",
+  "previous": "34.617",
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "magnetic_susceptibility",
+  "value": "7279.5 x10-9 m3/kg",
+  "previous": "7536.7 x10-9 m3/kg (mass susceptibility)",
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "nasa_fom_score",
+  "value": 90.9,
+  "previous": 81.8,
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "glass_content_percent",
+  "value": 31.4,
+  "previous": 31.4,
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "particle_morphology",
+  "value": "Aspect ratio: 0.69451; Root Form Factor/Circularity: 0.86994",
+  "previous": "Aspect ratio 0.71469; root form factor / circularity 0.87628 (dynamic image analysis, CAMSIZER X2)",
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "availability",
+  "value": "Available",
+  "previous": "Available",
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ },
+ {
+  "simulant_id": "S066",
+  "field": "lunar_sample_reference",
+  "value": "Low-Ti Mare",
+  "previous": "Low-Ti Mare",
+  "previous_source": "DS-S066",
+  "outcome": "value taken from the new sheet"
+ }
+]

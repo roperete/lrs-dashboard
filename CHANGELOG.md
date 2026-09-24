@@ -5,6 +5,32 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.13 — 2026-09-24 (staging)
+
+Hispansion data sheets restored, on their current versions; physical values stored with their unit repaired.
+
+**Data**
+- TLH-0 and TLM-0 link to Hispansion's public data sheets again. The link had been empty since
+  v2.9.4: the sheets used then were supplied privately, so only a local copy existed and no
+  public address. The manufacturer has since published newer sheets, TDS-TLH-0-v1.4 and
+  TDS-TLM-0-v2.2, with different chemistry — iron as FeO, and sodium measured where v1.1 gave it
+  as below detection. A reader and an independent checker confirmed all 72 values; the page now
+  shows those and cites the new sheets. The v1.1 sheets remain as superseded references.
+- **Units inside stored values.** Bulk density, cohesion and friction angle are text columns
+  that the page reads as numbers in g/cm³, kPa and °. Sixteen values carried their unit,
+  so they were hidden — TLH-0 and TLM-0's new bulk density among them — or read in the wrong
+  unit: the LX simulants' cohesion, stated in pascals, was shown in kilopascals, a thousand
+  times too large. 18 values are converted; 4 that state two values at once are cleared and
+  listed for a human.
+
+**Process**
+- Values in these three columns are converted into the column's unit wherever they are written,
+  and `verify_data.py` fails if one reaches the page as anything but a bare number.
+- The page reads cohesion and friction angle with `Number()`, as it already read bulk density,
+  so a unit slip hides a value instead of showing it in the wrong unit.
+- `scripts/supersede_sheet.py` moves a simulant to a newer version of its data sheet: whole
+  composition tables are replaced, never merged, and only values two readers agreed on are taken.
+
 ## v2.9.12 — 2026-09-24 (staging)
 
 Wave 3, the last of the provenance run: every simulant has now been read.

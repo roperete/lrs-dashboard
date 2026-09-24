@@ -1,0 +1,218 @@
+[
+ {
+  "table": "simulants",
+  "simulant_id": "S008",
+  "field": "bulk_density",
+  "stated": "1.314 (kg/l, i.e. g/cm3)",
+  "reference_id": "RN-S008-1",
+  "quote": "ρo = 1.314 kg/l – for lunar regolith analog CHENOBI, (standard deviation s = 0.0067 kg/l).",
+  "action": "converted to the column unit",
+  "value": 1.314
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S065",
+  "field": "bulk_density",
+  "stated": "1.80 g/cm3",
+  "reference_id": "DS-S065-v1.4",
+  "quote": "Mean Density: 1.80 g/cm3",
+  "action": "converted to the column unit",
+  "value": 1.8
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S066",
+  "field": "bulk_density",
+  "stated": "1.67 g/cm3",
+  "reference_id": "DS-S066-v2.2",
+  "quote": "Mean Density: 1.67 g/cm3",
+  "action": "converted to the column unit",
+  "value": 1.67
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S067",
+  "field": "bulk_density",
+  "stated": "1.72 and 2.30 g/cm3 (pre- and post-crushed, respectively)",
+  "reference_id": "RN-S067-1",
+  "quote": "The TLS-01 simulated lunar soil had pre- and post-crushed soil densities of 1.72 and 2. 30 g/ cm3, respectively and poor or zero water holding capacity.",
+  "action": "cleared: not a single number"
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S155",
+  "field": "bulk_density",
+  "stated": "minimum (1.15 g/cc) and maximum (1.88 g/cc)",
+  "reference_id": "RN-S155-2",
+  "quote": "with respect to density (minimum (1.15 g/cc) and maximum (1.88 g/cc) – TRI-1 soil simulant)",
+  "action": "cleared: not a single number"
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S008",
+  "field": "cohesion",
+  "stated": "3.78 (kPa)",
+  "reference_id": "RN-S008-1",
+  "quote": "Fig. 2. Shear strength of lunar regolith analog CHENOBI (Bednarz, 2009, 2011): cohesion cs = 3.78 kPa; inner friction angle Φs = 37.27°",
+  "action": "converted to the column unit",
+  "value": 3.78
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S040",
+  "field": "cohesion",
+  "stated": "185.2 Pa (AP-cohesive strength, ambient pressure, rheometer)",
+  "reference_id": "RN-S040-1",
+  "quote": "The highest AP-cohesive strength was found for LX-T100 with 257.2 Pa, followed by LX-I50 with 214.3 Pa and LX-M100 with 185.2 Pa.",
+  "action": "converted to the column unit",
+  "value": 0.1852
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S041",
+  "field": "cohesion",
+  "stated": "257.2 Pa (AP-cohesive strength, ambient pressure, rheometer)",
+  "reference_id": "RN-S041-1",
+  "quote": "The highest AP-cohesive strength was found for LX-T100 with 257.2 Pa, followed by LX-I50 with 214.3 Pa and LX-M100 with 185.2 Pa.",
+  "action": "converted to the column unit",
+  "value": 0.2572
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S051",
+  "field": "cohesion",
+  "stated": "~0 kPa (too low to measure; triaxial, dry)",
+  "reference_id": "RN-S051-1",
+  "quote": "The measured cohesion was too low to make any meaningful conclusion and is considered to be zero here, as is consistent for typical silty sands.",
+  "action": "converted to the column unit",
+  "value": 0.0
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S059",
+  "field": "cohesion",
+  "stated": "6.32 ± 0.7 kPa",
+  "reference_id": "RN-S059-1",
+  "quote": "OPRH4N   6.32 ± 0.7",
+  "action": "converted to the column unit",
+  "value": 6.32
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S065",
+  "field": "cohesion",
+  "stated": "2.896 kPa",
+  "reference_id": "DS-S065-v1.4",
+  "quote": "Cohesion (c): 2.896 kPa",
+  "action": "converted to the column unit",
+  "value": 2.896
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S066",
+  "field": "cohesion",
+  "stated": "2.503 kPa",
+  "reference_id": "DS-S066-v2.2",
+  "quote": "Cohesion (c): 2.503 kPa",
+  "action": "converted to the column unit",
+  "value": 2.503
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S071",
+  "field": "cohesion",
+  "stated": "3.43 ± 12.45 (kPa)",
+  "reference_id": "RN-S071-1",
+  "quote": "Cohesion, c kPa 19.20 – 0.52 – 3.00 2.8 – 5.00 – 0 – 2.00 3.43 ± 12.45",
+  "action": "converted to the column unit",
+  "value": 3.43
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S100",
+  "field": "cohesion",
+  "stated": "7.43 ± 1.5 kPa",
+  "reference_id": "RN-S100-1",
+  "quote": "OPRH4W30   7.43 ± 1.5",
+  "action": "converted to the column unit",
+  "value": 7.43
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S136",
+  "field": "cohesion",
+  "stated": "3.1 kPa (low stress level); 18.80 kPa (conventional stress level)",
+  "reference_id": "RN-S136-2",
+  "quote": "the average cohesion is 3.1 kPa and the friction angle is 51.55°, whereas the average cohesion is 18.80 kPa and the friction angle is 48.17°for QH-E lunar soil simulant with particle density of 1640 kg/m3 at low and conventional stress levels, respectively.",
+  "action": "cleared: not a single number"
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S138",
+  "field": "cohesion",
+  "stated": "214.3 Pa (AP-cohesive strength, ambient pressure, rheometer)",
+  "reference_id": "RN-S138-1",
+  "quote": "The highest AP-cohesive strength was found for LX-T100 with 257.2 Pa, followed by LX-I50 with 214.3 Pa and LX-M100 with 185.2 Pa.",
+  "action": "converted to the column unit",
+  "value": 0.2143
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S059",
+  "field": "friction_angle",
+  "stated": "44.6 ± 0.8°",
+  "reference_id": "RN-S059-1",
+  "quote": "OPRH4N   44.6 ± 0.8",
+  "action": "converted to the column unit",
+  "value": 44.6
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S065",
+  "field": "friction_angle",
+  "stated": "46.12 º",
+  "reference_id": "DS-S065-v1.4",
+  "quote": "Internal Angle of Friction (φ⁰): 46.12 º",
+  "action": "converted to the column unit",
+  "value": 46.12
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S066",
+  "field": "friction_angle",
+  "stated": "44.58 º",
+  "reference_id": "DS-S066-v2.2",
+  "quote": "Internal Angle of Friction (φ⁰): 44.58 º",
+  "action": "converted to the column unit",
+  "value": 44.58
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S071",
+  "field": "friction_angle",
+  "stated": "34.76 ± 6.79 (°)",
+  "reference_id": "RN-S071-1",
+  "quote": "Friction angle, φ ◦ 41.80 53 – 56 30 – 50 39.84 – 41.09 46.48 39 – 51 34.76 ± 6.79",
+  "action": "converted to the column unit",
+  "value": 34.76
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S100",
+  "field": "friction_angle",
+  "stated": "49.1 ± 2.3°",
+  "reference_id": "RN-S100-1",
+  "quote": "OPRH4W30   49.1 ± 2.3",
+  "action": "converted to the column unit",
+  "value": 49.1
+ },
+ {
+  "table": "simulants",
+  "simulant_id": "S136",
+  "field": "friction_angle",
+  "stated": "51.55° (low stress level); 48.17° (conventional stress level)",
+  "reference_id": "RN-S136-2",
+  "quote": "the average cohesion is 3.1 kPa and the friction angle is 51.55°, whereas the average cohesion is 18.80 kPa and the friction angle is 48.17°for QH-E lunar soil simulant with particle density of 1640 kg/m3 at low and conventional stress levels, respectively.",
+  "action": "cleared: not a single number"
+ }
+]

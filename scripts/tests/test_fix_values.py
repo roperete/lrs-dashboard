@@ -99,3 +99,42 @@ class RepairTests(unittest.TestCase):
     def test_idempotent(self):
         again = repair(self.con, feedstock={("S5", "Coal"), ("S5", "Limestone")})
         self.assertEqual(again, [])
+
+
+class ColumnUnitRepairTests(unittest.TestCase):
+    """What was already stored with a unit is converted; what cannot be, is cleared and logged."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        con = sqlite3.connect(Path(self.tmp.name) / "lrs.sqlite")
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text())
+        ensure_provenance_schema(con)
+        con.executemany("INSERT INTO simulants (simulant_id, name, bulk_density, cohesion, friction_angle) VALUES (?,?,?,?,?)", [
+            ("S1", "TLH-0", "1.80 g/cm3", "2.896 kPa", "46.12 º"),
+            ("S2", "LX-M100", None, "185.2 Pa (AP-cohesive strength)", None),
+            ("S3", "QH-E", None, "3.1 kPa (low stress level); 18.80 kPa (conventional stress level)", "1.2"),
+        ])
+        con.execute("INSERT INTO references_ (reference_id, simulant_id, title) VALUES ('R3','S3','QH-E paper')")
+        con.execute("INSERT INTO property_sources (simulant_id, field, reference_id, quote) VALUES ('S3','cohesion','R3','3.1 kPa (low); 18.80 kPa')")
+        con.commit()
+        self.con = con
+        self.log = repair(con, feedstock=set())
+
+    def tearDown(self):
+        self.con.close(); self.tmp.cleanup()
+
+    def row(self, sid):
+        return self.con.execute("SELECT bulk_density, cohesion, friction_angle FROM simulants WHERE simulant_id=?", (sid,)).fetchone()
+
+    def test_units_are_stripped_into_the_column_unit(self):
+        bd, c, f = self.row("S1")
+        self.assertAlmostEqual(float(bd), 1.8); self.assertAlmostEqual(float(c), 2.896); self.assertAlmostEqual(float(f), 46.12)
+        self.assertAlmostEqual(float(self.row("S2")[1]), 0.1852)
+
+    def test_a_bare_number_is_left_alone(self):
+        self.assertEqual(self.row("S3")[2], "1.2")
+
+    def test_two_values_are_cleared_with_their_source_row(self):
+        self.assertIsNone(self.row("S3")[1])
+        self.assertEqual(self.con.execute("SELECT count(*) FROM property_sources WHERE simulant_id='S3' AND field='cohesion'").fetchone(), (0,))
+        self.assertTrue(any(e["action"] == "cleared: not a single number" and e["field"] == "cohesion" for e in self.log))

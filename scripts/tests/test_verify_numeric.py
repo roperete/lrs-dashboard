@@ -25,7 +25,7 @@ class NumericTests(unittest.TestCase):
 
     def test_clean_bundle_passes(self):
         errs = check_numeric_values(
-            [{"simulant_id": "S1", "particle_size_d50": 38.22, "ph": None, "bulk_density": "1.5-1.6"}],
+            [{"simulant_id": "S1", "particle_size_d50": 38.22, "ph": None, "bulk_density": "1.5", "bulk_density_range": "1.5-1.6"}],
             [{"composition_id": "C1", "simulant_id": "S1", "value_pct": 31.0}],
             [{"composition_id": "CH1", "simulant_id": "S1", "value_wt_pct": 49.96}])
         self.assertEqual(errs, [])
@@ -47,3 +47,27 @@ class NumericTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ColumnUnitVerifyTests(unittest.TestCase):
+    def test_a_unit_inside_a_physical_value_fails(self):
+        from verify_data import check_numeric_values
+        errs = check_numeric_values([{"simulant_id": "S1", "bulk_density": "1.80 g/cm3", "cohesion": "185.2 Pa", "friction_angle": "46.12"}], [], [])
+        self.assertEqual(len(errs), 2)
+
+    def test_a_bare_number_as_text_passes(self):
+        from verify_data import check_numeric_values
+        self.assertEqual(check_numeric_values([{"simulant_id": "S1", "bulk_density": "1.8", "cohesion": 0.1852, "friction_angle": "46.12"}], [], []), [])
+
+
+class RangeBelongsInItsOwnColumnTests(unittest.TestCase):
+    """The page reads bulk_density with Number(); a range stored there is never shown.
+    Ranges go in bulk_density_range, which the page prints as text."""
+
+    def test_a_range_in_bulk_density_fails(self):
+        from verify_data import check_numeric_values
+        self.assertEqual(len(check_numeric_values([{"simulant_id": "S1", "bulk_density": "1.5-1.6"}], [], [])), 1)
+
+    def test_a_range_in_bulk_density_range_is_fine(self):
+        from verify_data import check_numeric_values
+        self.assertEqual(check_numeric_values([{"simulant_id": "S1", "bulk_density_range": "1.40 – 1.94 g/cm3"}], [], []), [])

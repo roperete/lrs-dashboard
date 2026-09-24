@@ -361,3 +361,38 @@ class TemporaryIdTests(unittest.TestCase):
         con = sqlite3.connect(self.db); con.execute("DELETE FROM property_sources WHERE field='bulk_density'"); con.commit(); con.close()
         apply_group(self.db, [self.new_ref_extraction("NEW1", "NEW1")], [self.checks("NEW1")], checked_on="2026-09-24")
         self.assertEqual(len(self.q("SELECT reference_id FROM property_sources WHERE field='bulk_density'")), 1)
+
+
+class ColumnUnitApplyTests(unittest.TestCase):
+    """A new cohesion stated in pascals is stored in kilopascals, the unit the page prints."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.db = Path(self.tmp.name) / "a.sqlite"
+        make_db(self.db)
+        con = sqlite3.connect(self.db); con.execute("UPDATE simulants SET cohesion=NULL, friction_angle=NULL WHERE simulant_id='S010'"); con.commit(); con.close()
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def run_new(self, field, value):
+        e = extraction(values=[], new_values=[{"field": field, "value": value, "reference_id": "R010", "location": "T5", "quote": value}])
+        v = verification(value_checks=[], new_value_checks=[{"field": field, "verdict": "CONFIRMED"}])
+        return apply_group(self.db, [e], [v], checked_on="2026-09-24")
+
+    def value(self, field):
+        con = sqlite3.connect(self.db); r = con.execute(f"SELECT {field} FROM simulants WHERE simulant_id='S010'").fetchone()[0]; con.close()
+        return r
+
+    def test_pascals_become_kilopascals(self):
+        self.run_new("cohesion", "185.2 Pa (AP-cohesive strength, ambient pressure, rheometer)")
+        self.assertAlmostEqual(float(self.value("cohesion")), 0.1852)
+
+    def test_a_degree_written_as_the_ordinal_sign_is_stored_bare(self):
+        self.run_new("friction_angle", "46.12 º")
+        self.assertAlmostEqual(float(self.value("friction_angle")), 46.12)
+
+    def test_two_values_for_two_conditions_are_refused(self):
+        log = self.run_new("cohesion", "3.1 kPa (low stress level); 18.80 kPa (conventional stress level)")
+        self.assertIsNone(self.value("cohesion"))
+        self.assertTrue(any(e.get("field") == "cohesion" and e["outcome"].startswith("flagged: not a single number") for e in log))

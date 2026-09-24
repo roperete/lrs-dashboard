@@ -87,8 +87,10 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     for (const sim of data.simulants) {
       const props: PhysicalProperties = {};
       if (sim.bulk_density != null) props.bulk_density = Number(sim.bulk_density) || undefined;
-      if (sim.cohesion != null) props.cohesion = parseFloat(String(sim.cohesion)) || undefined;
-      if (sim.friction_angle != null) props.friction_angle = parseFloat(String(sim.friction_angle)) || undefined;
+      // Number(), not parseFloat(): a value stored with its unit must fail closed. parseFloat("185.2 Pa")
+      // is 185.2, which the panel would label kPa.
+      if (sim.cohesion != null) props.cohesion = Number(sim.cohesion) || undefined;
+      if (sim.friction_angle != null) props.friction_angle = Number(sim.friction_angle) || undefined;
       if (sim.specific_gravity != null) props.specific_gravity = Number(sim.specific_gravity) || undefined;
       if (sim.density_g_cm3 != null) props.density_g_cm3 = Number(sim.density_g_cm3) || undefined;
       if (sim.particle_size_d50 != null) props.particle_size_d50 = Number(sim.particle_size_d50) || undefined;

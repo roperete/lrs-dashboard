@@ -51,7 +51,7 @@ SCALAR_FIELDS = {
 }
 
 
-from parse_value import parse_number  # noqa: E402
+from parse_value import COLUMN_UNITS, parse_number, to_column_unit  # noqa: E402
 from provenance import ensure_provenance_schema  # noqa: E402
 
 _PLAIN_NUMBER = re.compile(r"[-+]?\d+(?:\.\d+)?")
@@ -262,7 +262,10 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
                 existing = cur[0] if cur else None
                 if existing not in (None, ""):
                     proposed = c.get("value")
-                    if field in numeric_cols:
+                    if field in COLUMN_UNITS:
+                        pv, ev = to_column_unit(field, proposed), to_column_unit(field, existing)
+                        same = pv is not None and ev is not None and abs(pv - ev) < 1e-9
+                    elif field in numeric_cols:
                         pp = parse_number(proposed)
                         same = pp is not None and isinstance(existing, (int, float)) and abs(pp.value - float(existing)) < 1e-9
                     else:
@@ -277,7 +280,14 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
                              existing=existing, proposed=proposed, reference_id=c["reference_id"], needs_review=True)
                     continue
                 value = c.get("value")
-                if field in numeric_cols:
+                if field in COLUMN_UNITS:
+                    converted = to_column_unit(field, value)
+                    if converted is None:
+                        note(simulant_id=sid, field=field, reference_id=c["reference_id"], value=value, needs_review=True,
+                             outcome="flagged: not a single number, kept out of the table")
+                        continue
+                    value = converted
+                elif field in numeric_cols:
                     parsed = parse_number(value)
                     if parsed is None:
                         note(simulant_id=sid, field=field, reference_id=c["reference_id"], value=value, needs_review=True,
