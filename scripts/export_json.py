@@ -71,6 +71,12 @@ def suppress_unsourced_extra(extra: list[dict], property_sources: list[dict]) ->
     return out, n
 
 
+def shown_references(references: list[dict]) -> list[dict]:
+    """A reference a reader confirmed does not name the product is kept in the database, as the
+    record of that check, but not listed under the product (test 2: a reference must concern it)."""
+    return [r for r in references if r.get("names_simulant") != 0]
+
+
 # Reference columns that exist for verification only and never leave the machine.
 # local_path is where the checked copy sits on the maintainer's disk; publishing it
 # would put a private filesystem path into a public bundle.
@@ -171,7 +177,7 @@ def run(db_path: Path, output: Path = OUTPUT, report_dir: Path = DOC_DIR, today:
     mineral_groups = fetch("SELECT * FROM mineral_groups ORDER BY group_id")
 
     # --- references: the registry of documents; drop verification-only columns ---
-    references = fetch("SELECT * FROM references_ ORDER BY reference_id")
+    references = shown_references(fetch("SELECT * FROM references_ ORDER BY reference_id"))
     for r in references:
         for col in PRIVATE_REFERENCE_COLUMNS:
             r.pop(col, None)

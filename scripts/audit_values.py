@@ -233,6 +233,39 @@ def shared_values(rows) -> dict:
     return {k: sorted(v) for k, v in by.items() if len(v) >= 3}
 
 
+def _title_key(t: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", re.sub(r"\[.*?\]", "", (t or "").lower()))
+
+
+def duplicate_references(refs: list[dict]) -> list[list[str]]:
+    """Groups of reference ids that are the same document twice in one simulant's list."""
+    groups = []
+    by_sim = defaultdict(list)
+    for r in refs:
+        by_sim[r["simulant_id"]].append(r)
+    for sid, rs in by_sim.items():
+        seen: dict[str, list[str]] = defaultdict(list)
+        for r in rs:
+            if r.get("doi") and r["doi"].strip():
+                key = "doi:" + r["doi"].strip().lower()
+            else:
+                key = "t:" + _title_key(r.get("title") or r.get("reference_text") or "")
+                if len(key) < 17:          # too short a title to call two entries the same document
+                    continue
+            seen[key].append(r["reference_id"])
+        groups += [ids for ids in seen.values() if len(ids) > 1]
+    return groups
+
+
+def vocabulary_variants(values) -> list[list[str]]:
+    """Spellings of one label that differ only in case, plural or spacing ("Highland"/"Highlands")."""
+    by = defaultdict(set)
+    for v in values:
+        if v:
+            by[re.sub(r"s\b", "", re.sub(r"[^a-z0-9]", "", v.lower()))].add(v)
+    return [sorted(v) for v in by.values() if len(v) > 1]
+
+
 def link_verdict(status) -> str:
     if status is None:
         return "unreachable"
@@ -376,6 +409,25 @@ def audit(root: Path = ROOT) -> list[dict]:
         if e.get("grain_size_mm") not in (None, "") and e["simulant_id"] in sims:
             flag(e["simulant_id"], "grain_size_mm", "unsourced", "warn",
                  f"grain size {e['grain_size_mm']} mm is shown among the physical properties with no source (Gasteiner database)", None, e["grain_size_mm"])
+
+    # Reference hygiene: what the numbered list under each simulant shows.
+    for ids in duplicate_references(d["references"]):
+        sid = ref_owner.get(ids[0])
+        flag(sid, "references", "duplicate", "warn", f"the same document is listed {len(ids)} times: {', '.join(ids)}", ids[0])
+    for r in d["references"]:
+        if r.get("names_simulant") == 0:
+            flag(r["simulant_id"], "references", "not about it", "warn",
+                 f"{r['reference_id']} is listed although a reader confirmed it does not name this product", r["reference_id"])
+        if not (r.get("title") or r.get("reference_text") or r.get("doi") or r.get("url")):
+            flag(r["simulant_id"], "references", "empty entry", "warn", f"{r['reference_id']} has no title, citation, DOI or link", r["reference_id"])
+        y = r.get("year")
+        if isinstance(y, int) and not (1950 <= y <= date.today().year):
+            flag(r["simulant_id"], "references", "year", "warn", f"{r['reference_id']} has year {y}", r["reference_id"])
+        if re.search(r"\[=|existing ref|NEW\d|temp id", f"{r.get('title') or ''} {r.get('reference_text') or ''}"):
+            flag(r["simulant_id"], "references", "reader note", "warn", f"{r['reference_id']} shows a reader's working note", r["reference_id"])
+    for field in ("lunar_sample_reference", "availability", "type"):
+        for variants in vocabulary_variants([s.get(field) for s in d["simulants"]]):
+            flag(None, field, "vocabulary", "warn", f"one label spelled {len(variants)} ways: {' / '.join(variants)}")
 
     for L in d.get("lunar_reference", []):
         chem = L.get("chemical_composition") or {}

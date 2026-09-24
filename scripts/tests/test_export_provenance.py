@@ -148,3 +148,12 @@ class GrainSizeGateTests(unittest.TestCase):
         out, n = export_json.suppress_unsourced_extra(extra, [{"simulant_id": "S2", "field": "grain_size_mm"}])
         self.assertEqual([e["grain_size_mm"] for e in out], [None, 0.1])
         self.assertEqual(n, 1)
+
+
+class NotAboutItTests(unittest.TestCase):
+    """A reference a reader confirmed does not name the product is not shown in its list."""
+
+    def test_only_references_not_confirmed_absent_are_exported(self):
+        import export_json
+        refs = [{"reference_id": "R1", "names_simulant": 1}, {"reference_id": "R2", "names_simulant": 0}, {"reference_id": "R3", "names_simulant": None}]
+        self.assertEqual([r["reference_id"] for r in export_json.shown_references(refs)], ["R1", "R3"])

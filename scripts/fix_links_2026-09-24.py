@@ -18,6 +18,7 @@ Idempotent; logs to documentation/link-repair-log-2026-09-24.json.
 from __future__ import annotations
 
 import json
+import re
 import sqlite3
 from pathlib import Path
 
@@ -40,6 +41,9 @@ ESRIC_OLD = "http://knowledge.esric.lu/simulants/"
 ESRIC_ARCHIVE = "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/"
 DEAD_VENDORS = {"https://astroport.us/"}
 R080 = {"doi": None, "url": "https://iaai-2021.sciforum.net", "local_path": "papers/LRS/manuscript.pdf"}
+# Links a reader saved the document from but never recorded (checked: the file at this address
+# is byte-identical to the verified copy).
+MISSING_URLS = {"RN-S043-2": "https://www.nasa.gov/wp-content/uploads/2019/04/batiste.pdf"}
 
 
 def fix(con: sqlite3.Connection) -> list[dict]:
@@ -68,6 +72,16 @@ def fix(con: sqlite3.Connection) -> list[dict]:
                     (R080["doi"], R080["url"], R080["local_path"], text))
         log.append({"reference_id": "R080", "was": {"doi": r[0], "url": r[1]}, "now": R080,
                     "action": "unregistered DOI removed; the paper's own address used"})
+    for rid, url in MISSING_URLS.items():
+        cur = con.execute("UPDATE references_ SET url=? WHERE reference_id=? AND coalesce(url,'')!=?", (url, rid, url))
+        if cur.rowcount:
+            log.append({"reference_id": rid, "now": url, "action": "link added (the reader saved the document from here)"})
+    # A reader's note is not part of a title: "Evaluations of lunar regolith simulants [= existing reference R066 ...]".
+    for rid, title in con.execute("SELECT reference_id, title FROM references_ WHERE title LIKE '%[=%'").fetchall():
+        clean = re.sub(r"\s*\[=[^\]]*\]?.*$", "", title).strip()
+        if clean and clean != title:
+            con.execute("UPDATE references_ SET title=? WHERE reference_id=?", (clean, rid))
+            log.append({"reference_id": rid, "was": title, "now": clean, "action": "reader's note removed from the title"})
     con.commit()
     return log
 

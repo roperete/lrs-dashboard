@@ -5,6 +5,29 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.16 — 2026-09-24 (staging)
+
+A third general check (reference hygiene); hover explanations and an honest source line in the Moon section.
+
+**Data**
+- Five simulants listed the same paper twice under two numbers (CAS-1, CUMT-1, EAC-1A,
+  WHU-1, PolyU-1); each is now listed once, with every citation moved to the entry kept.
+- 18 references a reader confirmed do not name the product are no longer listed under it
+  (kept in the database as the record of that check).
+- Readers' working notes removed from two reference titles; MLS-1's Batiste & Sture workshop
+  presentation now links to NASA's copy, which is the same file the reader verified.
+
+**Interface**
+- The Moon table's columns and the landing-site panel's labels explain themselves on hover.
+- The landing-site panel no longer says its soil values come from "Gasteiner et al. 2025": the
+  values are compiled from that database, but only about half occur in its paper, and none has
+  yet been checked against the mission reports. The panel now says so.
+
+**Process**
+- The audit also checks each simulant's reference list: duplicates, references confirmed not
+  to name the product, empty entries, impossible years, working notes, and one label spelled
+  several ways. Final pass: 0 errors over 1309 values.
+
 ## v2.9.15 — 2026-09-24 (staging)
 
 Owner's decisions on the audit applied; a second, wider check fixed dead links and unsourced grain sizes.

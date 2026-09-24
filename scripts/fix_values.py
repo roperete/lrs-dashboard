@@ -173,6 +173,37 @@ def _repair(con: sqlite3.Connection, feedstock) -> list[dict]:
             log.append({"table": table, "composition_id": r["composition_id"], "simulant_id": r["simulant_id"], "reference_id": r["reference_id"],
                         "now": own, "action": "re-cited: to the simulant's own row for the same document" if own else "citation dropped: another simulant's reference"})
 
+    # The same document listed twice under one simulant (same DOI): keep the row with the fuller
+    # details a reader sees (title, year, DOI, link, confirmed mention), then the one more values
+    # cite, then the lower id; move every citation to it, delete the other.
+    for (sid, doi) in con.execute("SELECT simulant_id, lower(trim(doi)) FROM references_ WHERE coalesce(trim(doi),'')!='' "
+                                  "GROUP BY simulant_id, lower(trim(doi)) HAVING count(*) > 1").fetchall():
+        ids = [r[0] for r in con.execute("SELECT reference_id FROM references_ WHERE simulant_id=? AND lower(trim(doi))=?", (sid, doi))]
+        def cites(rid):
+            return sum(con.execute(q, (rid,)).fetchone()[0] for q in (
+                "SELECT count(*) FROM property_sources WHERE reference_id=?",
+                "SELECT count(*) FROM chemical_compositions WHERE reference_id=?",
+                "SELECT count(*) FROM mineral_compositions WHERE reference_id=?"))
+        def completeness(rid):
+            r = con.execute("SELECT title, year, doi, url, names_simulant, mention_quote FROM references_ WHERE reference_id=?", (rid,)).fetchone()
+            return sum(1 for v in (r[0], r[1] if r[1] else None, r[2], r[3], r[4] == 1 or None, r[5]) if v)
+        keep = sorted(ids, key=lambda i: (-completeness(i), -cites(i), i))[0]
+        for other in ids:
+            if other == keep:
+                continue
+            con.execute("UPDATE property_sources SET reference_id=? WHERE reference_id=?", (keep, other))
+            for table, _ in COMPOSITION_TABLES:
+                con.execute(f"UPDATE {table} SET reference_id=? WHERE reference_id=?", (keep, other))
+            con.execute("DELETE FROM references_ WHERE reference_id=?", (other,))
+            log.append({"table": "references_", "simulant_id": sid, "reference_id": other, "now": keep, "doi": doi,
+                        "action": "merged: the same document listed twice"})
+    con.execute("UPDATE references_ SET year=NULL WHERE year=0")
+    for rid, text in con.execute("SELECT reference_id, reference_text FROM references_ WHERE reference_text LIKE '%[=%'").fetchall():
+        clean = re.sub(r"\s*\[=[^\]]*\]?", "", text).strip()
+        if clean != text:
+            con.execute("UPDATE references_ SET reference_text=? WHERE reference_id=?", (clean, rid))
+            log.append({"table": "references_", "reference_id": rid, "action": "reader's note removed from the citation"})
+
     # Single-line text fields carry no stray whitespace ("NASA-MSFC and USGS\r").
     for col in ("name", "institution", "availability", "type", "lunar_sample_reference", "country_code", "product_grade"):
         for r in con.execute(f"SELECT simulant_id, {col} AS v FROM simulants WHERE {col} IS NOT NULL").fetchall():

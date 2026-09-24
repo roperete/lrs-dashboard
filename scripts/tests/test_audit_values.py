@@ -202,3 +202,20 @@ class ThirdPassTests(unittest.TestCase):
     def test_usgs_spelled_out(self):
         from audit_values import institution_supported
         self.assertTrue(institution_supported("NASA-MSFC and USGS", "another NASA-produced simulant series [NASA/U. S. Geological Survey]"))
+
+
+class ReferenceHygieneTests(unittest.TestCase):
+    def test_duplicate_entries_in_one_list(self):
+        from audit_values import duplicate_references
+        refs = [{"reference_id": "R1", "simulant_id": "S1", "doi": "10.1/x", "title": "A"},
+                {"reference_id": "R2", "simulant_id": "S1", "doi": "10.1/X ", "title": "A again"},
+                {"reference_id": "R3", "simulant_id": "S1", "doi": None, "title": "Evaluations of lunar regolith simulants"},
+                {"reference_id": "R4", "simulant_id": "S1", "doi": None, "title": "Evaluations of Lunar Regolith Simulants."},
+                {"reference_id": "R5", "simulant_id": "S2", "doi": "10.1/x", "title": "A"}]
+        self.assertEqual(sorted(sorted(g) for g in duplicate_references(refs)), [["R1", "R2"], ["R3", "R4"]])
+
+    def test_label_vocabulary(self):
+        from audit_values import vocabulary_variants
+        got = vocabulary_variants(["Highlands", "Highland", "highlands", "Low-Ti Mare", "Low-Ti mare", "Mare"])
+        self.assertIn({"Highlands", "Highland", "highlands"}, [set(v) for v in got])
+        self.assertIn({"Low-Ti Mare", "Low-Ti mare"}, [set(v) for v in got])

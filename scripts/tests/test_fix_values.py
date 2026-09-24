@@ -244,3 +244,30 @@ class ForeignCitationRepairTests(unittest.TestCase):
 
     def test_stray_whitespace_is_stripped_from_single_line_fields(self):
         self.assertEqual(self.con.execute("SELECT institution FROM simulants WHERE simulant_id='S2'").fetchone(), ("NASA-MSFC and USGS",))
+
+
+class DuplicateReferenceMergeTests(unittest.TestCase):
+    """The same document listed twice under one simulant is merged: citations move to the row
+    kept, the other row goes, so the page numbers it once."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        con = sqlite3.connect(Path(self.tmp.name) / "lrs.sqlite")
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text()); ensure_provenance_schema(con)
+        con.execute("INSERT INTO simulants (simulant_id, name, cohesion) VALUES ('S1','CUMT-1','16.9')")
+        con.executemany("INSERT INTO references_ (reference_id, simulant_id, title, doi, names_simulant, year) VALUES (?,?,?,?,?,?)",
+                        [("R013", "S1", "CUMT-1 paper", "10.1016/j.ijmst.2021.09.003", 1, 2022),
+                         ("R108", "S1", "CUMT-1 paper (dup)", "10.1016/j.ijmst.2021.09.003", 1, 0)])
+        con.execute("INSERT INTO property_sources (simulant_id, field, reference_id, quote) VALUES ('S1','cohesion','R108','16.93 kPa')")
+        con.execute("INSERT INTO chemical_compositions (composition_id, simulant_id, component_type, component_name, value_wt_pct, reference_id) VALUES ('C1','S1','oxide','SiO2',47.0,'R108')")
+        con.commit(); self.con = con
+        self.log = repair(con, feedstock=set())
+
+    def tearDown(self):
+        self.con.close(); self.tmp.cleanup()
+
+    def test_one_row_remains_and_everything_cites_it(self):
+        self.assertEqual([r[0] for r in self.con.execute("SELECT reference_id FROM references_")], ["R013"])
+        self.assertEqual(self.con.execute("SELECT reference_id FROM property_sources").fetchone(), ("R013",))
+        self.assertEqual(self.con.execute("SELECT reference_id FROM chemical_compositions").fetchone(), ("R013",))
+        self.assertTrue(any(e["action"] == "merged: the same document listed twice" for e in self.log))
