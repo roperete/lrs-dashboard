@@ -4,9 +4,9 @@ Three tests per simulant. Detail per simulant in the CSV beside this file.
 
 | Test | Result |
 |---|---|
-| 1. Named in at least one reference | pass 137, unknown (references unchecked) 18, FAIL 0 |
-| 2. References checked against the document | 600 confirmed to name their simulant, 14 confirmed not to, 47 unchecked, of 661 |
-| 3. Every value traced to a document | scalars 264 of 347 sourced; composition rows 788 of 788 cited; simulants fully sourced 47, partial 29, none 9, nothing to source 70 |
+| 1. Named in at least one reference | pass 127, unknown (references unchecked) 18, FAIL 0 |
+| 2. References checked against the document | 580 confirmed to name their simulant, 14 confirmed not to, 47 unchecked, of 641 |
+| 3. Every value traced to a document | scalars 264 of 347 sourced; composition rows 788 of 788 cited; simulants fully sourced 47, partial 29, none 9, nothing to source 60 |
 
 ## Simulants failing test 1 (no reference confirmed to name them)
 

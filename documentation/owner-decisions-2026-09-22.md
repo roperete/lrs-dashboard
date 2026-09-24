@@ -111,8 +111,8 @@ Evidence in `documentation/provenance-findings-lean-wave2.json` (notes fields).
 
 | Id | Name | Finding | Options |
 |---|---|---|---|
-| S145 | OUHR-1 | Both documents naming it list it under **Mars**. None calls it lunar. | Retire, as TUBS-H was, or keep flagged as a Mars simulant. |
-| S146 | HR-2 | No document in the library calls it a lunar simulant. | Same. |
+| S145 | OUHR-1 | Both documents naming it list it under **Mars**. None calls it lunar. | **Retired 2026-09-24** — Martian simulants are out of scope. |
+| S146 | HR-2 | No document in the library calls it a lunar simulant. | **Retired 2026-09-24**, with OUSR-1, SR-2, OUEB-1, EB-2 and ES-1 to ES-4. |
 | S119 | CMU-1 | Its "mineralogy" is coal 63% and limestone 37% (wave 1). | Same. |
 
 ### Probable duplicates

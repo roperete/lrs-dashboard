@@ -113,6 +113,16 @@ Every change reconcile makes is written to `documentation/composition-audit-log.
 with the reason, so any removal can be explained to a user who asks where a number
 went.
 
+## Scope: lunar simulants only
+
+The database covers lunar regolith simulants. A product that the documents place under Mars —
+a "Mars" heading in a listing, a Martian analogue in its own paper — is out of scope and is
+retired, however it entered the database. On 2026-09-24 the owner retired ten such records,
+which had arrived from mixed lunar-and-Mars listings (ISECG Table 9, the ESRIC knowledge base):
+the Open University's OUSR-1, SR-2, OUEB-1, EB-2, OUHR-1 and HR-2, and ESA's engineering soils
+ES-1 to ES-4. A paper that studies lunar and Martian simulants together is not evidence that a
+lunar product is Martian.
+
 ## Retired records
 
 A simulant that turns out not to exist as a product under its recorded name is retired,

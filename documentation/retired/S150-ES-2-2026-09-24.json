@@ -1,0 +1,116 @@
+{
+ "simulant_id": "S150",
+ "name": "ES-2",
+ "retired_on": "2026-09-24",
+ "reason": "Mars regolith simulant, not lunar. ESA engineering soil listed in ISECG Table 9 (p.63) under the 'Mars' sub-header of the ESA block — confirmed from a rendered image of the page — and on the ESRIC simulants knowledge base under 'Mars Regolith Simulants'. Confirmed by a reader and an independent checker, 2026-09-23. Retired at the owner's decision: Martian simulants are out of scope.",
+ "alias_of": [],
+ "rows": {
+  "purchase_info": [
+   {
+    "simulant_id": "S150",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+   }
+  ],
+  "references_": [
+   {
+    "reference_id": "R170",
+    "simulant_id": "S150",
+    "reference_text": null,
+    "reference_type": "report",
+    "title": "In-Situ Resource Utilization Gap Assessment Report",
+    "authors": "International Space Exploration Coordination Group (ISECG)",
+    "year": 2021,
+    "doi": null,
+    "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
+    "names_simulant": 1,
+    "mention_quote": "ES-2 Engineering Soil 2 - ESA TN-MMA-MVW-20140606 Silverbond D6 DD fine quartz sand (from Sibelco, Belgium). No longer available from manufacturer. May be obtained from RUAG.",
+    "local_path": null,
+    "checked_on": "2026-09-23"
+   },
+   {
+    "reference_id": "RN-S150-1",
+    "simulant_id": "S150",
+    "reference_text": "ESRIC KSP - Simulants (saved webpage)",
+    "reference_type": "general",
+    "title": "ESRIC KSP - Simulants (saved webpage)",
+    "authors": null,
+    "year": null,
+    "doi": null,
+    "url": "http://knowledge.esric.lu/simulants/",
+    "names_simulant": 1,
+    "mention_quote": "Name ES-2 Description Silverbond D6 DD fine quartz sand (from Sibelco, Belgium) Availability Previously produced, some stockpiles exist, may be difficult to reproduce if needed Supplier/Contact RUAG Space United Kingdom",
+    "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+    "checked_on": "2026-09-23"
+   }
+  ],
+  "simulant_extra": [
+   {
+    "simulant_id": "S150",
+    "name": "ES-2",
+    "classification": "Engineering Grade",
+    "application": "Geotechnical",
+    "replica_of": "Engineering Soil",
+    "feedstock": "Silverbond D6 DD fine quartz sand",
+    "petrographic_class": null,
+    "grain_size_mm": null,
+    "specific_gravity": null,
+    "publicly_available_composition": 0,
+    "reference": "Duri, L. G., et al. (2022). The Potential for Lunar and Martian Regolith Simulants... Front. Astron. Space Sci. 8. https://doi.org/10.3389/fspas.2021.747821"
+   }
+  ],
+  "sites": [
+   {
+    "site_id": "X150",
+    "simulant_id": "S150",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+   }
+  ],
+  "simulants": [
+   {
+    "simulant_id": "S150",
+    "name": "ES-2",
+    "type": "Engineering",
+    "country_code": "UK",
+    "institution": "Open University",
+    "availability": "Unavailable",
+    "release_date": "2014",
+    "tons_produced_mt": null,
+    "notes": "Fine quartz sand",
+    "specific_gravity": null,
+    "lunar_sample_reference": "Engineering Soil",
+    "bulk_density": null,
+    "cohesion": null,
+    "friction_angle": null,
+    "density_g_cm3": null,
+    "particle_size_d50": null,
+    "particle_size_distribution": null,
+    "particle_morphology": null,
+    "particle_ruggedness": null,
+    "glass_content_percent": null,
+    "nasa_fom_score": null,
+    "ti_content_percent": null,
+    "datasheet_url": null,
+    "composition_status": "withheld_unverified",
+    "composition_source_title": null,
+    "composition_source_url": null,
+    "composition_source_kind": null,
+    "composition_needs_review": 1,
+    "ph": null,
+    "angle_of_repose": null,
+    "particle_size_mean_um": null,
+    "bulk_density_range": null,
+    "magnetic_susceptibility": null,
+    "product_grade": null,
+    "datasheet_document_id": null,
+    "datasheet_date": null,
+    "datasheet_notes": null
+   }
+  ]
+ }
+}

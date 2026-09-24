@@ -138,16 +138,6 @@ S137,TUBS-I,not_extracted,1,1,0,0,3,3,,0,0,pass,pass
 S138,LX-I50,not_extracted,2,2,0,0,7,4,"friction_angle, particle_size_d50, particle_size_distribution",0,0,pass,partial
 S139,SCC-1,not_extracted,1,1,0,0,0,0,,0,0,pass,n/a
 S140,SCC-2,not_extracted,1,1,0,0,0,0,,0,0,pass,n/a
-S141,OUSR-1,not_extracted,2,2,0,0,0,0,,0,0,pass,n/a
-S142,SR-2,not_extracted,2,2,0,0,0,0,,0,0,pass,n/a
-S143,OUEB-1,not_extracted,2,2,0,0,0,0,,0,0,pass,n/a
-S144,EB-2,withheld_unverified,2,2,0,0,0,0,,0,0,pass,n/a
-S145,OUHR-1,withheld_unverified,2,2,0,0,0,0,,0,0,pass,n/a
-S146,HR-2,withheld_unverified,2,2,0,0,0,0,,0,0,pass,n/a
-S149,ES-1,withheld_unverified,2,2,0,0,0,0,,0,0,pass,n/a
-S150,ES-2,withheld_unverified,2,2,0,0,0,0,,0,0,pass,n/a
-S151,ES-3,withheld_unverified,2,2,0,0,0,0,,0,0,pass,n/a
-S152,ES-4,not_extracted,2,2,0,0,0,0,,0,0,pass,n/a
 S153,LZS-1,verified,3,3,0,0,1,1,,10,10,pass,pass
 S154,KAUMLS,not_extracted,3,3,0,0,0,0,,0,0,pass,n/a
 S155,TRI-1,not_extracted,3,3,0,0,1,1,,0,0,pass,pass

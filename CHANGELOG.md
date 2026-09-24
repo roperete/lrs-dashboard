@@ -5,6 +5,22 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.11 — 2026-09-24 (staging)
+
+Martian simulants retired at the owner's decision: the database covers lunar simulants only.
+
+**Data**
+- Ten records retired: the Open University's OUSR-1, SR-2 (sulfur-rich), OUEB-1, EB-2 (early
+  basaltic), OUHR-1 and HR-2, and ESA's engineering soils ES-1 to ES-4. Each was placed under
+  Mars by both its reader and an independent checker, on the same two sources: the "Mars"
+  sub-header of ISECG Table 9, and the "Mars Regolith Simulants" section of the ESRIC
+  knowledge base. They had entered from listings that mix lunar and Martian products.
+- 145 simulants remain. The deleted rows are archived under `documentation/retired/` and each
+  decision is in `documentation/retired-simulants.md`; TUBS-H, retired on 2026-09-22, is
+  confirmed gone from the page.
+- `documentation/data-policy.md` records the scope rule. A paper studying lunar and Martian
+  simulants together is not evidence that a lunar product is Martian.
+
 ## v2.9.10 — 2026-09-24 (staging)
 
 Wave 2 of the provenance run (65 simulants).
