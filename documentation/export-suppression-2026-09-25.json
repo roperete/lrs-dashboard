@@ -1,0 +1,532 @@
+{
+  "generated": "2026-09-25",
+  "rule": "A scalar on simulants is exported only when property_sources has a row for (simulant_id, field). These values remain in lrs.sqlite and are written as null in public/data/data.json.",
+  "count": 79,
+  "by_field": {
+    "bulk_density": 21,
+    "friction_angle": 18,
+    "cohesion": 13,
+    "particle_size_distribution": 7,
+    "particle_morphology": 5,
+    "specific_gravity": 5,
+    "particle_size_d50": 5,
+    "glass_content_percent": 3,
+    "density_g_cm3": 1,
+    "particle_ruggedness": 1
+  },
+  "by_simulant": {
+    "S131": 5,
+    "S132": 5,
+    "S051": 4,
+    "S121": 4,
+    "S012": 3,
+    "S028": 3,
+    "S038": 3,
+    "S043": 3,
+    "S064": 3,
+    "S067": 3,
+    "S075": 3,
+    "S120": 3,
+    "S138": 3,
+    "S013": 2,
+    "S017": 2,
+    "S018": 2,
+    "S027": 2,
+    "S032": 2,
+    "S058": 2,
+    "S081": 2,
+    "S082": 2,
+    "S097": 2,
+    "S122": 2,
+    "S003": 1,
+    "S006": 1,
+    "S008": 1,
+    "S019": 1,
+    "S037": 1,
+    "S040": 1,
+    "S041": 1,
+    "S047": 1,
+    "S049": 1,
+    "S054": 1,
+    "S069": 1,
+    "S089": 1,
+    "S103": 1,
+    "S105": 1
+  },
+  "suppressed": [
+    {
+      "simulant_id": "S003",
+      "name": "ALS",
+      "field": "friction_angle",
+      "value": "12.0"
+    },
+    {
+      "simulant_id": "S006",
+      "name": "BP-1",
+      "field": "bulk_density",
+      "value": "1.65"
+    },
+    {
+      "simulant_id": "S008",
+      "name": "CHENOBI",
+      "field": "particle_morphology",
+      "value": "very high particle angularity"
+    },
+    {
+      "simulant_id": "S012",
+      "name": "CUG-1A",
+      "field": "bulk_density",
+      "value": "1.45"
+    },
+    {
+      "simulant_id": "S012",
+      "name": "CUG-1A",
+      "field": "cohesion",
+      "value": "5.0"
+    },
+    {
+      "simulant_id": "S012",
+      "name": "CUG-1A",
+      "field": "friction_angle",
+      "value": "21.0"
+    },
+    {
+      "simulant_id": "S013",
+      "name": "CUMT-1",
+      "field": "cohesion",
+      "value": "15.79"
+    },
+    {
+      "simulant_id": "S013",
+      "name": "CUMT-1",
+      "field": "friction_angle",
+      "value": "51.26"
+    },
+    {
+      "simulant_id": "S017",
+      "name": "EAC-1",
+      "field": "bulk_density",
+      "value": "1.45"
+    },
+    {
+      "simulant_id": "S017",
+      "name": "EAC-1",
+      "field": "cohesion",
+      "value": "0.38"
+    },
+    {
+      "simulant_id": "S018",
+      "name": "EAC-1A",
+      "field": "bulk_density",
+      "value": "1.95"
+    },
+    {
+      "simulant_id": "S018",
+      "name": "EAC-1A",
+      "field": "particle_size_distribution",
+      "value": "d50=181"
+    },
+    {
+      "simulant_id": "S019",
+      "name": "FJS-1",
+      "field": "bulk_density",
+      "value": "1.065"
+    },
+    {
+      "simulant_id": "S027",
+      "name": "JSC-1",
+      "field": "bulk_density",
+      "value": "1.065"
+    },
+    {
+      "simulant_id": "S027",
+      "name": "JSC-1",
+      "field": "specific_gravity",
+      "value": 2.92
+    },
+    {
+      "simulant_id": "S028",
+      "name": "JSC-1A",
+      "field": "bulk_density",
+      "value": "1.63"
+    },
+    {
+      "simulant_id": "S028",
+      "name": "JSC-1A",
+      "field": "cohesion",
+      "value": "1.9"
+    },
+    {
+      "simulant_id": "S028",
+      "name": "JSC-1A",
+      "field": "friction_angle",
+      "value": "45.85"
+    },
+    {
+      "simulant_id": "S032",
+      "name": "KLS-1",
+      "field": "density_g_cm3",
+      "value": 3.07
+    },
+    {
+      "simulant_id": "S032",
+      "name": "KLS-1",
+      "field": "particle_size_d50",
+      "value": 44.1
+    },
+    {
+      "simulant_id": "S037",
+      "name": "LMS-1",
+      "field": "specific_gravity",
+      "value": 3.0
+    },
+    {
+      "simulant_id": "S038",
+      "name": "LSS-ISAC-1",
+      "field": "bulk_density",
+      "value": "1.065"
+    },
+    {
+      "simulant_id": "S038",
+      "name": "LSS-ISAC-1",
+      "field": "cohesion",
+      "value": "0.343"
+    },
+    {
+      "simulant_id": "S038",
+      "name": "LSS-ISAC-1",
+      "field": "friction_angle",
+      "value": "36.34"
+    },
+    {
+      "simulant_id": "S040",
+      "name": "LX-M100",
+      "field": "friction_angle",
+      "value": "46.2"
+    },
+    {
+      "simulant_id": "S041",
+      "name": "LX-T100",
+      "field": "friction_angle",
+      "value": "46.2"
+    },
+    {
+      "simulant_id": "S043",
+      "name": "MLS-1",
+      "field": "bulk_density",
+      "value": "1.84"
+    },
+    {
+      "simulant_id": "S043",
+      "name": "MLS-1",
+      "field": "friction_angle",
+      "value": "51.85"
+    },
+    {
+      "simulant_id": "S043",
+      "name": "MLS-1",
+      "field": "particle_size_distribution",
+      "value": "ground into a Particle Size Distribution (PSD) to resemble lunar soil"
+    },
+    {
+      "simulant_id": "S047",
+      "name": "NU-LHT",
+      "field": "glass_content_percent",
+      "value": 40.0
+    },
+    {
+      "simulant_id": "S049",
+      "name": "NU-LHT-1M",
+      "field": "glass_content_percent",
+      "value": 40.0
+    },
+    {
+      "simulant_id": "S051",
+      "name": "NU-LHT-2M",
+      "field": "bulk_density",
+      "value": "1.715"
+    },
+    {
+      "simulant_id": "S051",
+      "name": "NU-LHT-2M",
+      "field": "friction_angle",
+      "value": "39.54"
+    },
+    {
+      "simulant_id": "S051",
+      "name": "NU-LHT-2M",
+      "field": "specific_gravity",
+      "value": 2.9319
+    },
+    {
+      "simulant_id": "S051",
+      "name": "NU-LHT-2M",
+      "field": "glass_content_percent",
+      "value": 40.0
+    },
+    {
+      "simulant_id": "S054",
+      "name": "OB-1A",
+      "field": "bulk_density",
+      "value": "1.57"
+    },
+    {
+      "simulant_id": "S058",
+      "name": "OPRH3N",
+      "field": "cohesion",
+      "value": "12.0"
+    },
+    {
+      "simulant_id": "S058",
+      "name": "OPRH3N",
+      "field": "friction_angle",
+      "value": "36.0"
+    },
+    {
+      "simulant_id": "S064",
+      "name": "TJ-1",
+      "field": "bulk_density",
+      "value": "1.55"
+    },
+    {
+      "simulant_id": "S064",
+      "name": "TJ-1",
+      "field": "cohesion",
+      "value": "1.0"
+    },
+    {
+      "simulant_id": "S064",
+      "name": "TJ-1",
+      "field": "specific_gravity",
+      "value": 2.9
+    },
+    {
+      "simulant_id": "S067",
+      "name": "TLS-01",
+      "field": "cohesion",
+      "value": "4.9"
+    },
+    {
+      "simulant_id": "S067",
+      "name": "TLS-01",
+      "field": "friction_angle",
+      "value": "42.2"
+    },
+    {
+      "simulant_id": "S067",
+      "name": "TLS-01",
+      "field": "particle_ruggedness",
+      "value": "evenly distributed, uncluttered"
+    },
+    {
+      "simulant_id": "S069",
+      "name": "TUBS-M",
+      "field": "particle_size_distribution",
+      "value": "x_50 = 76.7 to 96.0 µm"
+    },
+    {
+      "simulant_id": "S075",
+      "name": "WHU-1",
+      "field": "bulk_density",
+      "value": "1.65"
+    },
+    {
+      "simulant_id": "S075",
+      "name": "WHU-1",
+      "field": "cohesion",
+      "value": "9.9"
+    },
+    {
+      "simulant_id": "S075",
+      "name": "WHU-1",
+      "field": "friction_angle",
+      "value": "40.57"
+    },
+    {
+      "simulant_id": "S081",
+      "name": "JSC-2A",
+      "field": "particle_size_d50",
+      "value": 45.0
+    },
+    {
+      "simulant_id": "S081",
+      "name": "JSC-2A",
+      "field": "particle_size_distribution",
+      "value": "2.3-102 µm"
+    },
+    {
+      "simulant_id": "S082",
+      "name": "GRC-3",
+      "field": "bulk_density",
+      "value": "1.73"
+    },
+    {
+      "simulant_id": "S082",
+      "name": "GRC-3",
+      "field": "friction_angle",
+      "value": "42.8"
+    },
+    {
+      "simulant_id": "S089",
+      "name": "NU-LHT-4M",
+      "field": "bulk_density",
+      "value": "1.56"
+    },
+    {
+      "simulant_id": "S097",
+      "name": "FROST-Y",
+      "field": "bulk_density",
+      "value": "0.89"
+    },
+    {
+      "simulant_id": "S097",
+      "name": "FROST-Y",
+      "field": "particle_size_distribution",
+      "value": "<1000 µm"
+    },
+    {
+      "simulant_id": "S103",
+      "name": "CSM-LHT-1",
+      "field": "bulk_density",
+      "value": "1.7"
+    },
+    {
+      "simulant_id": "S105",
+      "name": "CSM-LMT-1",
+      "field": "bulk_density",
+      "value": "1.63"
+    },
+    {
+      "simulant_id": "S120",
+      "name": "PolyU-1",
+      "field": "cohesion",
+      "value": "6.75"
+    },
+    {
+      "simulant_id": "S120",
+      "name": "PolyU-1",
+      "field": "friction_angle",
+      "value": "38.0"
+    },
+    {
+      "simulant_id": "S120",
+      "name": "PolyU-1",
+      "field": "particle_size_distribution",
+      "value": "4.84-432.27 µm"
+    },
+    {
+      "simulant_id": "S121",
+      "name": "BH-2",
+      "field": "bulk_density",
+      "value": "1.72"
+    },
+    {
+      "simulant_id": "S121",
+      "name": "BH-2",
+      "field": "cohesion",
+      "value": "6.477"
+    },
+    {
+      "simulant_id": "S121",
+      "name": "BH-2",
+      "field": "friction_angle",
+      "value": "33.92"
+    },
+    {
+      "simulant_id": "S121",
+      "name": "BH-2",
+      "field": "particle_morphology",
+      "value": "polygonal and bar-shaped"
+    },
+    {
+      "simulant_id": "S122",
+      "name": "TJ-2",
+      "field": "specific_gravity",
+      "value": 2.7
+    },
+    {
+      "simulant_id": "S122",
+      "name": "TJ-2",
+      "field": "particle_morphology",
+      "value": "subprismoidal with subangular to angular shape"
+    },
+    {
+      "simulant_id": "S131",
+      "name": "LBD",
+      "field": "bulk_density",
+      "value": "1.67"
+    },
+    {
+      "simulant_id": "S131",
+      "name": "LBD",
+      "field": "cohesion",
+      "value": "2.369"
+    },
+    {
+      "simulant_id": "S131",
+      "name": "LBD",
+      "field": "friction_angle",
+      "value": "45.342"
+    },
+    {
+      "simulant_id": "S131",
+      "name": "LBD",
+      "field": "particle_size_d50",
+      "value": 137.6
+    },
+    {
+      "simulant_id": "S131",
+      "name": "LBD",
+      "field": "particle_morphology",
+      "value": "subangular"
+    },
+    {
+      "simulant_id": "S132",
+      "name": "TYII-0",
+      "field": "bulk_density",
+      "value": "1.52"
+    },
+    {
+      "simulant_id": "S132",
+      "name": "TYII-0",
+      "field": "cohesion",
+      "value": "13.299"
+    },
+    {
+      "simulant_id": "S132",
+      "name": "TYII-0",
+      "field": "friction_angle",
+      "value": "34.617"
+    },
+    {
+      "simulant_id": "S132",
+      "name": "TYII-0",
+      "field": "particle_size_d50",
+      "value": 48.4
+    },
+    {
+      "simulant_id": "S132",
+      "name": "TYII-0",
+      "field": "particle_morphology",
+      "value": "subangular"
+    },
+    {
+      "simulant_id": "S138",
+      "name": "LX-I50",
+      "field": "friction_angle",
+      "value": "46.2"
+    },
+    {
+      "simulant_id": "S138",
+      "name": "LX-I50",
+      "field": "particle_size_d50",
+      "value": 70.0
+    },
+    {
+      "simulant_id": "S138",
+      "name": "LX-I50",
+      "field": "particle_size_distribution",
+      "value": "<45-2000 µm"
+    }
+  ]
+}

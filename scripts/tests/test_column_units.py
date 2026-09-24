@@ -62,7 +62,7 @@ class ColumnUnitTests(unittest.TestCase):
                 self.assertIsNone(to_column_unit(field, raw))
 
     def test_the_three_columns_and_their_units(self):
-        self.assertEqual(set(COLUMN_UNITS), {"bulk_density", "cohesion", "friction_angle"})
+        self.assertEqual(set(COLUMN_UNITS), {"bulk_density", "cohesion", "friction_angle", "particle_size_d50", "particle_size_mean_um"})
 
     def test_the_ordinal_indicator_counts_as_a_degree_sign(self):
         self.assertAlmostEqual(parse_number("46.12 º").value, 46.12)
@@ -70,3 +70,15 @@ class ColumnUnitTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ParticleSizeUnitTests(unittest.TestCase):
+    """particle_size_d50 and particle_size_mean_um are shown in µm. Lumina2000's mean size is
+    printed as "2.4 mm"; stored as 2.4 it would read as a thousandth of its size."""
+
+    def test_sizes_land_in_micrometres(self):
+        self.assertAlmostEqual(to_column_unit("particle_size_mean_um", "2.4 mm (average particle size)"), 2400.0)
+        self.assertAlmostEqual(to_column_unit("particle_size_d50", "0.077 mm"), 77.0)
+        self.assertAlmostEqual(to_column_unit("particle_size_d50", "38.22 μm"), 38.22)
+        self.assertAlmostEqual(to_column_unit("particle_size_d50", "72"), 72.0)
+        self.assertIsNone(to_column_unit("particle_size_d50", "41–61 µm"))

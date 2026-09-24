@@ -254,3 +254,47 @@ properties list: classification, application, feedstock, rock classes. None is k
 wrong, but none is traced to a document. Under "empty rather than wrong" they need not be
 removed; under "every value traced" they would be. This decides whether the third test covers
 the whole page or its numbers only.
+
+## Figures of Merit and the Lumina products, 2026-09-25
+
+**Figures of Merit — 138 scores stored for 23 simulants**, one row per simulant, property and
+lunar reference, with the score as printed, its scale and the quoted table cell. Sources:
+Slabic et al. 2024, *Lunar Regolith Simulant User's Guide, Revision A* (83 scores, 0–100);
+Schrader et al. 2010 (39 scores, 0–1; particle-size scores keep the method they were measured
+with); the Hispansion TLH-0 and TLM-0 data sheets (16 scores). Each was read by one agent and checked by
+another against the text and a render of the page; every stored row was confirmed. APL 2022,
+APL 2024 and Deitrick et al. 2021 print no Figures of Merit. Log: `fom-apply-log-2026-09-25.json`.
+
+Not stored, for a decision:
+- **"OB-1(A*)"** (Slabic 2024, 2 scores). The guide scores OB-1 with this mark; the database
+  holds OB-1, but the mark suggests a variant, so the scores are not attached to it. Attach
+  them to OB-1, or leave them out?
+- **APL 2020's 48 ratings** rate suppliers (Exolith, Off Planet Research, Outward Technologies…)
+  by colour on 12 characteristics, not products by score. They are not Figures of Merit of a
+  product and are not stored.
+- The checker recomputed some Slabic scores from the guide's own tables and landed a few
+  points off (e.g. OPRH4W30 particle size: about 92 against the Highlands reference, 97
+  printed; JSC-1A chemistry: about 92, 88 printed). The page shows what the guide prints.
+
+**Lumina — three simulants added** from Zémeny et al. 2024 (Front. Space Technol.,
+doi:10.3389/frspt.2024.1510635): S159 Lunar90, S160 Lunar250, S161 Lunar2000, Lumina
+Sustainable Materials Ltd., lunar highland, 0–90 / 0–250 / 0–2000 µm. Each has its
+min–max dry density range, sphericity and the AMICS mineral table (97–98% of the area).
+Log: `add-simulant-log-2026-09-25.json`.
+
+Left out, under "empty rather than wrong":
+- **Lunar2000's mean particle size, 2.4 mm**, and the µCT grain volume (73 mm3) and
+  volume-to-surface ratio. The same paper gives the product as 0–2000 µm, and a 73 mm3 grain
+  is about 5 mm across, so these cannot describe the product as supplied. The unitless shape
+  figures (angularity 0.41, aspect ratio 2.14, sphericity 0.55) are kept. Log:
+  `curation-log-2026-09-25-lumina.json`.
+- The second mineral analysis (Mineralogic SEM-EDS) — one analysis per table; the XRD result
+  (plagioclase >85 wt%) and the oxide ranges, which are stated for the three samples jointly.
+- Lunar250's abstract line on the Luna Dust Chamber describes its intended use, not a lunar
+  reference; its "highland" label comes from Table 1's caption and the conclusion instead.
+
+**Possibly the same deposit as GreenSpar.** The paper places Lumina's anorthosite mine at
+Qaqortorsuaq, Kangerlussuaq Fjord, Greenland; GreenSpar is Greenland "White Mountain"
+anorthosite supplied by Hudson Resources (Gruener et al. 2020). These may be one deposit,
+but no document in the library says so, so the database records nothing about it. They are
+kept as separate products.

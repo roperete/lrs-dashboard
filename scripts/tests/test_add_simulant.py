@@ -79,3 +79,56 @@ class AddTests(unittest.TestCase):
         add_from_paper(self.con, finding(), PAPER, sources_root="/x/Sources", checked_on="2026-09-25")
         add_from_paper(self.con, finding(), PAPER, sources_root="/x/Sources", checked_on="2026-09-25")
         self.assertEqual(self.con.execute("SELECT count(*) FROM simulants WHERE name='Lunar90'").fetchone(), (1,))
+
+
+class PaperShapeTests(unittest.TestCase):
+    """What the Lumina reading actually looked like (2026-09-25)."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        con = sqlite3.connect(Path(self.tmp.name) / "lrs.sqlite")
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text()); ensure_provenance_schema(con)
+        con.execute("INSERT INTO simulants (simulant_id, name) VALUES ('S158','LuSIC-1')"); con.commit()
+        self.con = con
+        V = lambda f, v, t: {"field": f, "value": v, "table": t, "page": "3", "quote": f"{f} {v}"}
+        reading = {"names_quote": "Lumina Sustainable Lunar90 Lumina90 0-90 um", "names_location": "Table 1", "notes": "", "values": [
+            V("institution", "Lumina Sustainable Materials Ltd.", "Table 1"),
+            V("institution", "Lumina Sustainable Materials Ltd. (https://www.luminamaterials.com)", "running text, Section 2.1"),
+            V("mineral:Ca plagioclase (AMICS, area%)", "86.67% (major phase)", "AMICS modal mineralogy"),
+            V("mineral:quartz (AMICS, area%)", "4.14% (minor phase)", "AMICS modal mineralogy"),
+            V("mineral:muscovite (AMICS, area%)", "1.91%", "AMICS modal mineralogy"),
+            V("mineral:quartz (Mineralogic SEM-EDS, petrolab, wt%)", "3.1 wt%", "Section 3.6.4"),
+            V("mineral:anorthite (Mineralogic SEM-EDS, petrolab, wt%)", "87.4–89.9 wt%", "Section 3.6.4"),
+        ]}
+        check = {"names_verdict": "CONFIRMED", "missed": [], "checks": [
+            {"field": "institution [Lumina Sustainable Materials Ltd., Table 1]", "verdict": "CONFIRMED", "note": ""},
+            {"field": "institution [with URL, Section 2.1]", "verdict": "CONFIRMED", "note": ""},
+            {"field": "mineral:Ca plagioclase (AMICS, area%) [86.67%]", "verdict": "CONFIRMED", "note": ""},
+            {"field": "mineral:quartz (AMICS, area%) [4.14%]", "verdict": "CONFIRMED", "note": ""},
+            {"field": "mineral:muscovite (AMICS, area%)", "verdict": "CONFIRMED", "note": ""},
+            {"field": "mineral:quartz (Mineralogic SEM-EDS, petrolab, wt%)", "verdict": "CONFIRMED", "note": ""},
+            {"field": "mineral:anorthite (Mineralogic SEM-EDS, petrolab, wt%)", "verdict": "CONFIRMED", "note": ""},
+        ]}
+        self.log = add_from_paper(con, {"name": "Lunar90", "reading": reading, "check": check}, PAPER, sources_root="/x/Sources", checked_on="2026-09-25")
+
+    def tearDown(self):
+        self.con.close(); self.tmp.cleanup()
+
+    def test_a_checker_label_in_brackets_still_matches_the_field(self):
+        self.assertEqual(self.con.execute("SELECT institution FROM simulants WHERE name='Lunar90'").fetchone(), ("Lumina Sustainable Materials Ltd.",))
+
+    def test_one_mineral_analysis_per_table_named_without_its_method(self):
+        rows = self.con.execute("SELECT component_name, value_pct, value_text FROM mineral_compositions ORDER BY value_pct DESC").fetchall()
+        self.assertEqual([r[0] for r in rows], ["Ca plagioclase", "quartz", "muscovite"])
+        self.assertAlmostEqual(rows[1][1], 4.14)
+        self.assertIn("AMICS", rows[0][2])
+        self.assertTrue(any(e["outcome"].startswith("not merged: a second mineral analysis") for e in self.log))
+
+
+class FreeFormCheckerLabelTests(unittest.TestCase):
+    def test_a_checker_rewording_the_field_still_matches(self):
+        from add_simulant import field_key
+        self.assertEqual(field_key("mineral:Ca plagioclase (AMICS) 86.67%"), field_key("mineral:Ca plagioclase (AMICS, area%)"))
+        self.assertEqual(field_key("oxide:SiO2 48.4–49.8 wt% joint"), field_key("oxide:SiO2"))
+        self.assertEqual(field_key("institution [Table 1]"), field_key("institution"))
+        self.assertNotEqual(field_key("mineral:quartz (AMICS)"), field_key("mineral:quartz (Mineralogic SEM-EDS)"))

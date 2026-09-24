@@ -1,0 +1,1594 @@
+[
+ {
+  "document": "slabic2024",
+  "simulant": "BP-1",
+  "property": "Mineralogy",
+  "score": "62",
+  "simulant_id": "S006",
+  "reference_id": "RN-S006-1",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "JSC-1A",
+  "property": "Mineralogy",
+  "score": "84",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LHS-1",
+  "property": "Mineralogy",
+  "score": "84",
+  "simulant_id": "S036",
+  "reference_id": "RN-S036-4",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LMS-1",
+  "property": "Mineralogy",
+  "score": "89",
+  "simulant_id": "S037",
+  "reference_id": "RN-S037-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "MLS-1",
+  "property": "Mineralogy",
+  "score": "67",
+  "simulant_id": "S043",
+  "reference_id": "RN-S043-7",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-2M",
+  "property": "Mineralogy",
+  "score": "89",
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-4M",
+  "property": "Mineralogy",
+  "score": "78",
+  "simulant_id": "S089",
+  "reference_id": "RN-S089-6",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OB-1(A*)",
+  "property": "Mineralogy",
+  "score": "82",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "BP-1",
+  "property": "Chemistry",
+  "score": "85",
+  "simulant_id": "S006",
+  "reference_id": "RN-S006-1",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "CSM-LHT-1",
+  "property": "Chemistry",
+  "score": "92",
+  "simulant_id": "S103",
+  "reference_id": "RN-S103-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "CSM-LMT-1",
+  "property": "Chemistry",
+  "score": "89",
+  "simulant_id": "S105",
+  "reference_id": "RN-S105-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "GreenSpar",
+  "property": "Chemistry",
+  "score": "86",
+  "simulant_id": "S025",
+  "reference_id": "RN-S025-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "JSC-1A",
+  "property": "Chemistry",
+  "score": "88",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LHS-1",
+  "property": "Chemistry",
+  "score": "91",
+  "simulant_id": "S036",
+  "reference_id": "RN-S036-4",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LMS-1",
+  "property": "Chemistry",
+  "score": "88",
+  "simulant_id": "S037",
+  "reference_id": "RN-S037-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "MLS-1",
+  "property": "Chemistry",
+  "score": "96",
+  "simulant_id": "S043",
+  "reference_id": "RN-S043-7",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-2M",
+  "property": "Chemistry",
+  "score": "96",
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-4M",
+  "property": "Chemistry",
+  "score": "95",
+  "simulant_id": "S089",
+  "reference_id": "RN-S089-6",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OB-1(A*)",
+  "property": "Chemistry",
+  "score": "87",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRH3N",
+  "property": "Chemistry",
+  "score": "93",
+  "simulant_id": "S058",
+  "reference_id": "RN-S058-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRH4W30",
+  "property": "Chemistry",
+  "score": "88",
+  "simulant_id": "S100",
+  "reference_id": "R132",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRL2N",
+  "property": "Chemistry",
+  "score": "87",
+  "simulant_id": "S060",
+  "reference_id": "RN-S060-8",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "BP-1",
+  "property": "Particle Size Distribution",
+  "score": "95",
+  "simulant_id": "S006",
+  "reference_id": "RN-S006-1",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "CSM-LHT-1",
+  "property": "Particle Size Distribution",
+  "score": "96",
+  "simulant_id": "S103",
+  "reference_id": "RN-S103-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "CSM-LMT-1",
+  "property": "Particle Size Distribution",
+  "score": "97",
+  "simulant_id": "S105",
+  "reference_id": "RN-S105-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "GreenSpar",
+  "property": "Particle Size Distribution",
+  "score": "79",
+  "simulant_id": "S025",
+  "reference_id": "RN-S025-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "JSC-1A",
+  "property": "Particle Size Distribution",
+  "score": "92",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LHS-1",
+  "property": "Particle Size Distribution",
+  "score": "84",
+  "simulant_id": "S036",
+  "reference_id": "RN-S036-4",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LMS-1",
+  "property": "Particle Size Distribution",
+  "score": "92",
+  "simulant_id": "S037",
+  "reference_id": "RN-S037-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "MLS-1",
+  "property": "Particle Size Distribution",
+  "score": "99",
+  "simulant_id": "S043",
+  "reference_id": "RN-S043-7",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-2M",
+  "property": "Particle Size Distribution",
+  "score": "84",
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-4M",
+  "property": "Particle Size Distribution",
+  "score": "83",
+  "simulant_id": "S089",
+  "reference_id": "RN-S089-6",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OB-1A",
+  "property": "Particle Size Distribution",
+  "score": "94",
+  "simulant_id": "S054",
+  "reference_id": "RN-S054-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRH3N",
+  "property": "Particle Size Distribution",
+  "score": "89",
+  "simulant_id": "S058",
+  "reference_id": "RN-S058-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRH4W30",
+  "property": "Particle Size Distribution",
+  "score": "97",
+  "simulant_id": "S100",
+  "reference_id": "R132",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRL2N",
+  "property": "Particle Size Distribution",
+  "score": "94",
+  "simulant_id": "S060",
+  "reference_id": "RN-S060-8",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "BP-1",
+  "property": "Particle Geometry",
+  "score": "94",
+  "simulant_id": "S006",
+  "reference_id": "RN-S006-1",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "CSM-LHT-1",
+  "property": "Particle Geometry",
+  "score": "92",
+  "simulant_id": "S103",
+  "reference_id": "RN-S103-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "CSM-LMT-1",
+  "property": "Particle Geometry",
+  "score": "72",
+  "simulant_id": "S105",
+  "reference_id": "RN-S105-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "GreenSpar",
+  "property": "Particle Geometry",
+  "score": "84",
+  "simulant_id": "S025",
+  "reference_id": "RN-S025-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "JSC-1A",
+  "property": "Particle Geometry",
+  "score": "93",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LHS-1",
+  "property": "Particle Geometry",
+  "score": "84",
+  "simulant_id": "S036",
+  "reference_id": "RN-S036-4",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LMS-1",
+  "property": "Particle Geometry",
+  "score": "69",
+  "simulant_id": "S037",
+  "reference_id": "RN-S037-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "MLS-1",
+  "property": "Particle Geometry",
+  "score": "88",
+  "simulant_id": "S043",
+  "reference_id": "RN-S043-7",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-2M",
+  "property": "Particle Geometry",
+  "score": "88",
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-4M",
+  "property": "Particle Geometry",
+  "score": "85",
+  "simulant_id": "S089",
+  "reference_id": "RN-S089-6",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OB-1A",
+  "property": "Particle Geometry",
+  "score": "78",
+  "simulant_id": "S054",
+  "reference_id": "RN-S054-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRH3N",
+  "property": "Particle Geometry",
+  "score": "86",
+  "simulant_id": "S058",
+  "reference_id": "RN-S058-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRH4W30",
+  "property": "Particle Geometry",
+  "score": "84",
+  "simulant_id": "S100",
+  "reference_id": "R132",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRL2N",
+  "property": "Particle Geometry",
+  "score": "86",
+  "simulant_id": "S060",
+  "reference_id": "RN-S060-8",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "BP-1",
+  "property": "Material Density",
+  "score": "99",
+  "simulant_id": "S006",
+  "reference_id": "RN-S006-1",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "CSM-LHT-1",
+  "property": "Material Density",
+  "score": "99",
+  "simulant_id": "S103",
+  "reference_id": "RN-S103-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "CSM-LMT-1",
+  "property": "Material Density",
+  "score": "98",
+  "simulant_id": "S105",
+  "reference_id": "RN-S105-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "JSC-1A",
+  "property": "Material Density",
+  "score": "81",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LHS-1",
+  "property": "Material Density",
+  "score": "73",
+  "simulant_id": "S036",
+  "reference_id": "RN-S036-4",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LMS-1",
+  "property": "Material Density",
+  "score": "92",
+  "simulant_id": "S037",
+  "reference_id": "RN-S037-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "MLS-1",
+  "property": "Material Density",
+  "score": "76",
+  "simulant_id": "S043",
+  "reference_id": "RN-S043-7",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-2M",
+  "property": "Material Density",
+  "score": "91",
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-4M",
+  "property": "Material Density",
+  "score": "75",
+  "simulant_id": "S089",
+  "reference_id": "RN-S089-6",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OB-1A",
+  "property": "Material Density",
+  "score": "75",
+  "simulant_id": "S054",
+  "reference_id": "RN-S054-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRH3N",
+  "property": "Material Density",
+  "score": "69",
+  "simulant_id": "S058",
+  "reference_id": "RN-S058-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRL2N",
+  "property": "Material Density",
+  "score": "71",
+  "simulant_id": "S060",
+  "reference_id": "RN-S060-8",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "BP-1",
+  "property": "Shear Strength",
+  "score": "84",
+  "simulant_id": "S006",
+  "reference_id": "RN-S006-1",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "CSM-LHT-1",
+  "property": "Shear Strength",
+  "score": "43",
+  "simulant_id": "S103",
+  "reference_id": "RN-S103-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "CSM-LMT-1",
+  "property": "Shear Strength",
+  "score": "45",
+  "simulant_id": "S105",
+  "reference_id": "RN-S105-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "JSC-1A",
+  "property": "Shear Strength",
+  "score": "91",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LHS-1",
+  "property": "Shear Strength",
+  "score": "44",
+  "simulant_id": "S036",
+  "reference_id": "RN-S036-4",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LMS-1",
+  "property": "Shear Strength",
+  "score": "45",
+  "simulant_id": "S037",
+  "reference_id": "RN-S037-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "MLS-1",
+  "property": "Shear Strength",
+  "score": "91",
+  "simulant_id": "S043",
+  "reference_id": "RN-S043-7",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-4M",
+  "property": "Shear Strength",
+  "score": "46",
+  "simulant_id": "S089",
+  "reference_id": "RN-S089-6",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OB-1A",
+  "property": "Shear Strength",
+  "score": "44",
+  "simulant_id": "S054",
+  "reference_id": "RN-S054-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRH3N",
+  "property": "Shear Strength",
+  "score": "45",
+  "simulant_id": "S058",
+  "reference_id": "RN-S058-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRL2N",
+  "property": "Shear Strength",
+  "score": "46",
+  "simulant_id": "S060",
+  "reference_id": "RN-S060-8",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "BP-1",
+  "property": "Magnetic Susceptibility",
+  "score": "90",
+  "simulant_id": "S006",
+  "reference_id": "RN-S006-1",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "CSM-LHT-1",
+  "property": "Magnetic Susceptibility",
+  "score": "77",
+  "simulant_id": "S103",
+  "reference_id": "RN-S103-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "CSM-LMT-1",
+  "property": "Magnetic Susceptibility",
+  "score": "90",
+  "simulant_id": "S105",
+  "reference_id": "RN-S105-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "GreenSpar",
+  "property": "Magnetic Susceptibility",
+  "score": "06",
+  "simulant_id": "S025",
+  "reference_id": "RN-S025-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "JSC-1A",
+  "property": "Magnetic Susceptibility",
+  "score": "83",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LHS-1",
+  "property": "Magnetic Susceptibility",
+  "score": "79",
+  "simulant_id": "S036",
+  "reference_id": "RN-S036-4",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "LMS-1",
+  "property": "Magnetic Susceptibility",
+  "score": "84",
+  "simulant_id": "S037",
+  "reference_id": "RN-S037-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "MLS-1",
+  "property": "Magnetic Susceptibility",
+  "score": "99",
+  "simulant_id": "S043",
+  "reference_id": "RN-S043-7",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-2M",
+  "property": "Magnetic Susceptibility",
+  "score": "78",
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "NU-LHT-4M",
+  "property": "Magnetic Susceptibility",
+  "score": "74",
+  "simulant_id": "S089",
+  "reference_id": "RN-S089-6",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OB-1A",
+  "property": "Magnetic Susceptibility",
+  "score": "81",
+  "simulant_id": "S054",
+  "reference_id": "RN-S054-5",
+  "outcome": "already stored"
+ },
+ {
+  "document": "slabic2024",
+  "simulant": "OPRL2N",
+  "property": "Magnetic Susceptibility",
+  "score": "93",
+  "simulant_id": "S060",
+  "reference_id": "RN-S060-8",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-1M",
+  "property": "Composition",
+  "score": "0.65",
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-2M",
+  "property": "Composition",
+  "score": "0.55",
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "OB-1",
+  "property": "Composition",
+  "score": "0.28",
+  "simulant_id": "S053",
+  "reference_id": "RN-S053-11",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1",
+  "property": "Composition",
+  "score": "0.33",
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-13",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1A",
+  "property": "Composition",
+  "score": "0.35",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-16",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1AF",
+  "property": "Composition",
+  "score": "0.43",
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-10",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "MLS-1",
+  "property": "Composition",
+  "score": "0.35",
+  "simulant_id": "S043",
+  "reference_id": "RN-S043-8",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "FJS-1",
+  "property": "Composition",
+  "score": "0.36",
+  "simulant_id": "S019",
+  "reference_id": "RN-S019-7",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "OB-1 (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.23",
+  "simulant_id": "S053",
+  "reference_id": "RN-S053-11",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "OB-1 (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.54",
+  "simulant_id": "S053",
+  "reference_id": "RN-S053-11",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-1M (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.23",
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-1M (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.58",
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-2M (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.17",
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-2M (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.48",
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1 (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.22",
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-13",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1 (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.53",
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-13",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1A (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.25",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-16",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1A (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.56",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-16",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1AF (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.06",
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-10",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1AF (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.23",
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-10",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1AF (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.60",
+  "simulant_id": "S030",
+  "reference_id": "RN-S030-10",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "MLS-1 (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.20",
+  "simulant_id": "S043",
+  "reference_id": "RN-S043-8",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "MLS-1 (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.29",
+  "simulant_id": "S043",
+  "reference_id": "RN-S043-8",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "FJS-1 (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.26",
+  "simulant_id": "S019",
+  "reference_id": "RN-S019-7",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "FJS-1 (section image analysis)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.45",
+  "simulant_id": "S019",
+  "reference_id": "RN-S019-7",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "OB-1 (dry sieve)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.59",
+  "simulant_id": "S053",
+  "reference_id": "RN-S053-11",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-1M (dry sieve)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.26",
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-1M (dry sieve)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.75",
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1A (dry sieve)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.35",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-16",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1A (dry sieve)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.74",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-16",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "Chenobi (dry sieve + laser diffractometry)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.77",
+  "simulant_id": "S008",
+  "reference_id": "RN-S008-11",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "Chenobi (dry sieve + laser diffractometry)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.73",
+  "simulant_id": "S008",
+  "reference_id": "RN-S008-11",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-2M (laser diffractometry)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.29",
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-2M (laser diffractometry)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.82",
+  "simulant_id": "S051",
+  "reference_id": "RN-S051-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-1D (laser diffractometry)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.54",
+  "simulant_id": "S048",
+  "reference_id": "RN-S048-1",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-1M (laser diffractometry)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.26",
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "NU-LHT-1M (laser diffractometry)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.64",
+  "simulant_id": "S049",
+  "reference_id": "RN-S049-2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1A (laser diffractometry)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.28",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-16",
+  "outcome": "already stored"
+ },
+ {
+  "document": "schrader2010",
+  "simulant": "JSC-1A (laser diffractometry)",
+  "property": "Particle size distribution (PSD)",
+  "score": "0.74",
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-16",
+  "outcome": "already stored"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Bulk Properties: Chemistry",
+  "score": "Yellow",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Bulk Properties: Chemistry",
+  "score": "Yellow",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Bulk Properties: Mineralogy",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Bulk Properties: Mineralogy",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Grain Characteristics: Shape",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Grain Characteristics: Shape",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Grain Characteristics: Size Dist.",
+  "score": "Yellow",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Grain Characteristics: Size Dist.",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Agglutinate Characteristics: Glassiness",
+  "score": "TBD",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Outward Tech.",
+  "property": "Agglutinate Characteristics: Glassiness",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Agglutinate Characteristics: Shape",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Outward Tech.",
+  "property": "Agglutinate Characteristics: Shape",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Implanted Solar Particles",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Implanted Solar Particles",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Reactivity",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Reactivity",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Reflectivity",
+  "score": "TBD",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Reflectivity",
+  "score": "TBD",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Nanophase Fe",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Nanophase Fe",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Magnetic Properties",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Magnetic Properties",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Emissivity",
+  "score": "TBD",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Emissivity",
+  "score": "TBD",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Bulk Properties: Chemistry",
+  "score": "Yellow",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Bulk Properties: Chemistry",
+  "score": "Yellow",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Bulk Properties: Mineralogy",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Bulk Properties: Mineralogy",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Grain Characteristics: Shape",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Grain Characteristics: Shape",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Grain Characteristics: Size Dist.",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Grain Characteristics: Size Dist.",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Agglutinate Characteristics: Glassiness",
+  "score": "TBD",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Outward Tech.",
+  "property": "Agglutinate Characteristics: Glassiness",
+  "score": "TBD",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Agglutinate Characteristics: Shape",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Outward Tech.",
+  "property": "Agglutinate Characteristics: Shape",
+  "score": "Green",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Implanted Solar Particles",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Implanted Solar Particles",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Reactivity",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Reactivity",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Reflectivity",
+  "score": "TBD",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Reflectivity",
+  "score": "TBD",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Nanophase Fe",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Nanophase Fe",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Magnetic Properties",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Magnetic Properties",
+  "score": "Red",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Exolith",
+  "property": "Emissivity",
+  "score": "TBD",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "apl2020",
+  "simulant": "Off Planet Research",
+  "property": "Emissivity",
+  "score": "TBD",
+  "outcome": "not stored: no simulant of exactly this name"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLH-0",
+  "property": "Chemical",
+  "score": "97.3 %",
+  "simulant_id": "S065",
+  "reference_id": "RN-S065-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLH-0",
+  "property": "Particle Size Distribution",
+  "score": "91.7 %",
+  "simulant_id": "S065",
+  "reference_id": "RN-S065-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLH-0",
+  "property": "Bulk Density",
+  "score": "81.4 %",
+  "simulant_id": "S065",
+  "reference_id": "RN-S065-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLH-0",
+  "property": "Mineral",
+  "score": "83.7 %",
+  "simulant_id": "S065",
+  "reference_id": "RN-S065-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLH-0",
+  "property": "Shear Strength",
+  "score": "84.1 %",
+  "simulant_id": "S065",
+  "reference_id": "RN-S065-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLH-0",
+  "property": "Magnetic Susceptibility",
+  "score": "89.3 %",
+  "simulant_id": "S065",
+  "reference_id": "RN-S065-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLH-0",
+  "property": "Particle Geometry",
+  "score": "93.3 %",
+  "simulant_id": "S065",
+  "reference_id": "RN-S065-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLH-0",
+  "property": "Mean / overall",
+  "score": "88.7%",
+  "simulant_id": "S065",
+  "reference_id": "RN-S065-3",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLM-0",
+  "property": "Chemical",
+  "score": "92.0 %",
+  "simulant_id": "S066",
+  "reference_id": "DS-S066-v2.2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLM-0",
+  "property": "Particle Size Distribution",
+  "score": "94.8 %",
+  "simulant_id": "S066",
+  "reference_id": "DS-S066-v2.2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLM-0",
+  "property": "Bulk Density",
+  "score": "96.6 %",
+  "simulant_id": "S066",
+  "reference_id": "DS-S066-v2.2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLM-0",
+  "property": "Mineral",
+  "score": "81.1 %",
+  "simulant_id": "S066",
+  "reference_id": "DS-S066-v2.2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLM-0",
+  "property": "Shear Strength",
+  "score": "88.2%",
+  "simulant_id": "S066",
+  "reference_id": "DS-S066-v2.2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLM-0",
+  "property": "Magnetic Susceptibility",
+  "score": "91.9 %",
+  "simulant_id": "S066",
+  "reference_id": "DS-S066-v2.2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLM-0",
+  "property": "Particle Geometry",
+  "score": "91.8 %",
+  "simulant_id": "S066",
+  "reference_id": "DS-S066-v2.2",
+  "outcome": "already stored"
+ },
+ {
+  "document": "hispansion",
+  "simulant": "TLM-0",
+  "property": "Mean / overall",
+  "score": "90.9 %",
+  "simulant_id": "S066",
+  "reference_id": "DS-S066-v2.2",
+  "outcome": "already stored"
+ }
+]

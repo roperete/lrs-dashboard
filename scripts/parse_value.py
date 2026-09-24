@@ -75,6 +75,9 @@ COLUMN_UNITS = {
                      "kg/m3": 0.001},
     "cohesion": {"": 1.0, "kpa": 1.0, "pa": 0.001, "mpa": 1000.0},
     "friction_angle": {"": 1.0, "°": 1.0, "º": 1.0, "˚": 1.0, "deg": 1.0, "degree": 1.0, "degrees": 1.0},
+    # Particle sizes are shown in µm; a size printed in mm or cm is converted.
+    "particle_size_d50": {"": 1.0, "µm": 1.0, "μm": 1.0, "um": 1.0, "micron": 1.0, "microns": 1.0, "mm": 1000.0, "cm": 10000.0, "nm": 0.001},
+    "particle_size_mean_um": {"": 1.0, "µm": 1.0, "μm": 1.0, "um": 1.0, "micron": 1.0, "microns": 1.0, "mm": 1000.0, "cm": 10000.0, "nm": 0.001},
 }
 _UNIT_TOKEN = r"([A-Za-zµμ°º˚%][A-Za-z0-9µμ°º˚%/³.]*)"
 _LEAD = re.compile(rf"^\s*(?:~|≈|ca\.?|approx\.?)?\s*{_NUM}(?:\s*±\s*{_NUM})?\s*")

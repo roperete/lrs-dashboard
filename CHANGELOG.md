@@ -5,6 +5,33 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.17 — 2026-09-25 (staging)
+
+Figures of Merit, each traced to the table that prints it; three Lumina highland simulants.
+
+**Data**
+- 138 Figures of Merit for 23 simulants: Slabic et al. 2024 (*Lunar Regolith Simulant User's
+  Guide, Revision A*, 83 scores on 0–100), Schrader et al. 2010 (39 scores on 0–1) and the
+  Hispansion TLH-0 and TLM-0 data sheets (16). Each score is stored with what it measures
+  (chemistry, mineralogy, particle size, shape…), the lunar reference it is compared with,
+  its scale, and the table cell it was read from. Every score was confirmed by a second
+  agent against the page.
+- Not stored: two scores for "OB-1(A*)", which may be a variant of OB-1 (owner's decision
+  pending); APL 2020's supplier colour ratings, which are not product scores.
+- New simulants S159 Lunar90, S160 Lunar250 and S161 Lunar2000 (Lumina Sustainable Materials
+  Ltd.), from Zémeny et al. 2024, *Front. Space Technol.*: supplier, highland label, size
+  range, min–max dry density, sphericity and mineral table, each cited.
+- Lunar2000's reported mean particle size (2.4 mm) is left out: the same paper gives the
+  product as 0–2000 µm.
+
+**Interface**
+- The simulant panel has a Figures of Merit section: score, scale, property and lunar
+  reference, each with its superscript.
+
+**Process**
+- The audit reads the quotes behind simulants added from a paper, and a re-run of the
+  Figures of Merit step keeps a complete log. Final pass: 0 errors over 1337 values.
+
 ## v2.9.16 — 2026-09-24 (staging)
 
 A third general check (reference hygiene); hover explanations and an honest source line in the Moon section.

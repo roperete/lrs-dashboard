@@ -1,0 +1,2612 @@
+[
+ {
+  "simulant_id": "S018",
+  "name": "EAC-1A",
+  "where": "glass_content_percent",
+  "check": "stated in words",
+  "severity": "warn",
+  "detail": "0.0 rests on wording, not a number: 'EAC-1A is fully crystallized and contains plagioclase, which our XRD characterization indi'",
+  "reference_id": "RN-S018-1",
+  "value": 0.0
+ },
+ {
+  "simulant_id": "S027",
+  "name": "JSC-1",
+  "where": "glass_content_percent",
+  "check": "stated in words",
+  "severity": "warn",
+  "detail": "50.0 rests on wording, not a number: 'Approximately half of the volume of a typical particle is glass of basaltic composition.'",
+  "reference_id": "R086",
+  "value": 50.0
+ },
+ {
+  "simulant_id": "S051",
+  "name": "NU-LHT-2M",
+  "where": "cohesion",
+  "check": "stated in words",
+  "severity": "warn",
+  "detail": "0.0 rests on wording, not a number: 'The measured cohesion was too low to make any meaningful conclusion and is considered to b'",
+  "reference_id": "RN-S051-1",
+  "value": 0.0
+ },
+ {
+  "simulant_id": "S025",
+  "name": "GreenSpar",
+  "where": "mineral table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "mineral total 106.0% exceeds 100%",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S028",
+  "name": "JSC-1A",
+  "where": "oxide table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "oxide total 108.6% (expected 90–103%)",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S049",
+  "name": "NU-LHT-1M",
+  "where": "oxide table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "oxide total 103.5% (expected 90–103%)",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S080",
+  "name": "IGG-01",
+  "where": "oxide table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "oxide total 22.4% (expected 90–103%)",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S121",
+  "name": "BH-2",
+  "where": "oxide table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "oxide total 68.6% (expected 90–103%)",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S124",
+  "name": "NEU-1B",
+  "where": "oxide table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "oxide total 6.5% (expected 90–103%)",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S053",
+  "name": "OB-1",
+  "where": "cross-field",
+  "check": "consistency",
+  "severity": "warn",
+  "detail": "glass content 42% but the glass row is 52.6%",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S001",
+  "name": "AGK-2010",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S001",
+  "name": "AGK-2010",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2013",
+  "reference_id": null,
+  "value": 2013
+ },
+ {
+  "simulant_id": "S001",
+  "name": "AGK-2010",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S002",
+  "name": "ALRS-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Limited Stock'",
+  "reference_id": null,
+  "value": "Limited Stock"
+ },
+ {
+  "simulant_id": "S002",
+  "name": "ALRS-1",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Australian Space Agency'",
+  "reference_id": null,
+  "value": "Australian Space Agency"
+ },
+ {
+  "simulant_id": "S003",
+  "name": "ALS",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Production stopped'",
+  "reference_id": null,
+  "value": "Production stopped"
+ },
+ {
+  "simulant_id": "S003",
+  "name": "ALS",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1993",
+  "reference_id": null,
+  "value": 1993
+ },
+ {
+  "simulant_id": "S003",
+  "name": "ALS",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Univ. of Arizona'",
+  "reference_id": null,
+  "value": "Univ. of Arizona"
+ },
+ {
+  "simulant_id": "S004",
+  "name": "BH-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S005",
+  "name": "BHLD20",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S006",
+  "name": "BP-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S006",
+  "name": "BP-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2010",
+  "reference_id": null,
+  "value": 2010
+ },
+ {
+  "simulant_id": "S007",
+  "name": "CAS-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S007",
+  "name": "CAS-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2009",
+  "reference_id": null,
+  "value": 2009
+ },
+ {
+  "simulant_id": "S008",
+  "name": "CHENOBI",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Production stopped'",
+  "reference_id": null,
+  "value": "Production stopped"
+ },
+ {
+  "simulant_id": "S008",
+  "name": "CHENOBI",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2009",
+  "reference_id": null,
+  "value": 2009
+ },
+ {
+  "simulant_id": "S008",
+  "name": "CHENOBI",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Deltion / NORCAT'",
+  "reference_id": null,
+  "value": "Deltion / NORCAT"
+ },
+ {
+  "simulant_id": "S009",
+  "name": "CLDS-i",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S009",
+  "name": "CLDS-i",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2017",
+  "reference_id": null,
+  "value": 2017
+ },
+ {
+  "simulant_id": "S010",
+  "name": "CLRS-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S011",
+  "name": "CSM-CL",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S012",
+  "name": "CUG-1A",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S013",
+  "name": "CUMT-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S014",
+  "name": "DNA-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S014",
+  "name": "DNA-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2014",
+  "reference_id": null,
+  "value": 2014
+ },
+ {
+  "simulant_id": "S015",
+  "name": "DNA-1A",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S015",
+  "name": "DNA-1A",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2019",
+  "reference_id": null,
+  "value": 2019
+ },
+ {
+  "simulant_id": "S015",
+  "name": "DNA-1A",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Low-Ti Mare'",
+  "reference_id": null,
+  "value": "Low-Ti Mare"
+ },
+ {
+  "simulant_id": "S015",
+  "name": "DNA-1A",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Monolite / ESA'",
+  "reference_id": null,
+  "value": "Monolite / ESA"
+ },
+ {
+  "simulant_id": "S016",
+  "name": "DUST-Y",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S016",
+  "name": "DUST-Y",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2019",
+  "reference_id": null,
+  "value": 2019
+ },
+ {
+  "simulant_id": "S016",
+  "name": "DUST-Y",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo'",
+  "reference_id": null,
+  "value": "Apollo"
+ },
+ {
+  "simulant_id": "S016",
+  "name": "DUST-Y",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Space Resource Technologies'",
+  "reference_id": null,
+  "value": "Space Resource Technologies"
+ },
+ {
+  "simulant_id": "S017",
+  "name": "EAC-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S017",
+  "name": "EAC-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Low-Ti Mare'",
+  "reference_id": null,
+  "value": "Low-Ti Mare"
+ },
+ {
+  "simulant_id": "S018",
+  "name": "EAC-1A",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2020",
+  "reference_id": null,
+  "value": 2020
+ },
+ {
+  "simulant_id": "S018",
+  "name": "EAC-1A",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Low-Ti Mare'",
+  "reference_id": null,
+  "value": "Low-Ti Mare"
+ },
+ {
+  "simulant_id": "S019",
+  "name": "FJS-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1998",
+  "reference_id": null,
+  "value": 1998
+ },
+ {
+  "simulant_id": "S019",
+  "name": "FJS-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 14'",
+  "reference_id": null,
+  "value": "Apollo 14"
+ },
+ {
+  "simulant_id": "S020",
+  "name": "FJS-1g",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S020",
+  "name": "FJS-1g",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'JAXA / Shimizu Corporation'",
+  "reference_id": null,
+  "value": "JAXA / Shimizu Corporation"
+ },
+ {
+  "simulant_id": "S021",
+  "name": "FJS-2",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1998",
+  "reference_id": null,
+  "value": 1998
+ },
+ {
+  "simulant_id": "S021",
+  "name": "FJS-2",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Mare'",
+  "reference_id": null,
+  "value": "Mare"
+ },
+ {
+  "simulant_id": "S022",
+  "name": "FJS-3",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1998",
+  "reference_id": null,
+  "value": 1998
+ },
+ {
+  "simulant_id": "S023",
+  "name": "GCA-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Production stopped'",
+  "reference_id": null,
+  "value": "Production stopped"
+ },
+ {
+  "simulant_id": "S024",
+  "name": "GRC-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S024",
+  "name": "GRC-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S025",
+  "name": "GreenSpar",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S026",
+  "name": "JLU-H",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S029",
+  "name": "JSC-1AC",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 14'",
+  "reference_id": null,
+  "value": "Apollo 14"
+ },
+ {
+  "simulant_id": "S030",
+  "name": "JSC-1AF",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 14'",
+  "reference_id": null,
+  "value": "Apollo 14"
+ },
+ {
+  "simulant_id": "S031",
+  "name": "KIGAM-L1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S032",
+  "name": "KLS-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S032",
+  "name": "KLS-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2018",
+  "reference_id": null,
+  "value": 2018
+ },
+ {
+  "simulant_id": "S033",
+  "name": "KOHLS-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S033",
+  "name": "KOHLS-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2014",
+  "reference_id": null,
+  "value": 2014
+ },
+ {
+  "simulant_id": "S033",
+  "name": "KOHLS-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'High & Low Ti-mare'",
+  "reference_id": null,
+  "value": "High & Low Ti-mare"
+ },
+ {
+  "simulant_id": "S034",
+  "name": "Kohyama Simulant",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Limited Stock'",
+  "reference_id": null,
+  "value": "Limited Stock"
+ },
+ {
+  "simulant_id": "S034",
+  "name": "Kohyama Simulant",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Highlands'",
+  "reference_id": null,
+  "value": "Highlands"
+ },
+ {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2020",
+  "reference_id": null,
+  "value": 2020
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2020",
+  "reference_id": null,
+  "value": 2020
+ },
+ {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Space Resource Technologies'",
+  "reference_id": null,
+  "value": "Space Resource Technologies"
+ },
+ {
+  "simulant_id": "S038",
+  "name": "LSS-ISAC-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S038",
+  "name": "LSS-ISAC-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2020",
+  "reference_id": null,
+  "value": 2020
+ },
+ {
+  "simulant_id": "S039",
+  "name": "LuNOR",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S040",
+  "name": "LX-M100",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2025",
+  "reference_id": null,
+  "value": 2025
+ },
+ {
+  "simulant_id": "S041",
+  "name": "LX-T100",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2025",
+  "reference_id": null,
+  "value": 2025
+ },
+ {
+  "simulant_id": "S042",
+  "name": "MKS-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S042",
+  "name": "MKS-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1994",
+  "reference_id": null,
+  "value": 1994
+ },
+ {
+  "simulant_id": "S043",
+  "name": "MLS-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1990",
+  "reference_id": null,
+  "value": 1990
+ },
+ {
+  "simulant_id": "S044",
+  "name": "MLS-2",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1992",
+  "reference_id": null,
+  "value": 1992
+ },
+ {
+  "simulant_id": "S045",
+  "name": "NAO-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S045",
+  "name": "NAO-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2008",
+  "reference_id": null,
+  "value": 2008
+ },
+ {
+  "simulant_id": "S046",
+  "name": "NEU-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S046",
+  "name": "NEU-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2019",
+  "reference_id": null,
+  "value": 2019
+ },
+ {
+  "simulant_id": "S046",
+  "name": "NEU-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Low-Ti Mare'",
+  "reference_id": null,
+  "value": "Low-Ti Mare"
+ },
+ {
+  "simulant_id": "S047",
+  "name": "NU-LHT",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2007",
+  "reference_id": null,
+  "value": 2007
+ },
+ {
+  "simulant_id": "S048",
+  "name": "NU-LHT-1D",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Limited Stock'",
+  "reference_id": null,
+  "value": "Limited Stock"
+ },
+ {
+  "simulant_id": "S048",
+  "name": "NU-LHT-1D",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2007",
+  "reference_id": null,
+  "value": 2007
+ },
+ {
+  "simulant_id": "S049",
+  "name": "NU-LHT-1M",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2007",
+  "reference_id": null,
+  "value": 2007
+ },
+ {
+  "simulant_id": "S050",
+  "name": "NU-LHT-2C",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Limited Stock'",
+  "reference_id": null,
+  "value": "Limited Stock"
+ },
+ {
+  "simulant_id": "S050",
+  "name": "NU-LHT-2C",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2008",
+  "reference_id": null,
+  "value": 2008
+ },
+ {
+  "simulant_id": "S051",
+  "name": "NU-LHT-2M",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2008",
+  "reference_id": null,
+  "value": 2008
+ },
+ {
+  "simulant_id": "S052",
+  "name": "NUW-LHT-5M",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S053",
+  "name": "OB-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Limited Stock'",
+  "reference_id": null,
+  "value": "Limited Stock"
+ },
+ {
+  "simulant_id": "S053",
+  "name": "OB-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2007",
+  "reference_id": null,
+  "value": 2007
+ },
+ {
+  "simulant_id": "S054",
+  "name": "OB-1A",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2008",
+  "reference_id": null,
+  "value": 2008
+ },
+ {
+  "simulant_id": "S054",
+  "name": "OB-1A",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 16'",
+  "reference_id": null,
+  "value": "Apollo 16"
+ },
+ {
+  "simulant_id": "S055",
+  "name": "OPR Agglutinate",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S056",
+  "name": "OPRFLCROSS2",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S056",
+  "name": "OPRFLCROSS2",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2019",
+  "reference_id": null,
+  "value": 2019
+ },
+ {
+  "simulant_id": "S056",
+  "name": "OPRFLCROSS2",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Lunar South Pole'",
+  "reference_id": null,
+  "value": "Lunar South Pole"
+ },
+ {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S059",
+  "name": "OPRH4N",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2010",
+  "reference_id": null,
+  "value": 2010
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2010",
+  "reference_id": null,
+  "value": 2010
+ },
+ {
+  "simulant_id": "S061",
+  "name": "OPRL2NT",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2010",
+  "reference_id": null,
+  "value": 2010
+ },
+ {
+  "simulant_id": "S062",
+  "name": "Oshima Simulant",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Limited Stock'",
+  "reference_id": null,
+  "value": "Limited Stock"
+ },
+ {
+  "simulant_id": "S062",
+  "name": "Oshima Simulant",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'High & Low Ti-mare'",
+  "reference_id": null,
+  "value": "High & Low Ti-mare"
+ },
+ {
+  "simulant_id": "S063",
+  "name": "TBG-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S063",
+  "name": "TBG-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S063",
+  "name": "TBG-1",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Turkish Space Agency'",
+  "reference_id": null,
+  "value": "Turkish Space Agency"
+ },
+ {
+  "simulant_id": "S064",
+  "name": "TJ-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S064",
+  "name": "TJ-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2012",
+  "reference_id": null,
+  "value": 2012
+ },
+ {
+  "simulant_id": "S064",
+  "name": "TJ-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 14'",
+  "reference_id": null,
+  "value": "Apollo 14"
+ },
+ {
+  "simulant_id": "S067",
+  "name": "TLS-01",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S069",
+  "name": "TUBS-M",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2020",
+  "reference_id": null,
+  "value": 2020
+ },
+ {
+  "simulant_id": "S070",
+  "name": "TUBS-T",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2020",
+  "reference_id": null,
+  "value": 2020
+ },
+ {
+  "simulant_id": "S071",
+  "name": "UoM-B",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Low-fidelity Mare'",
+  "reference_id": null,
+  "value": "Low-fidelity Mare"
+ },
+ {
+  "simulant_id": "S072",
+  "name": "UoM-W",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Low-fidelity Highlands'",
+  "reference_id": null,
+  "value": "Low-fidelity Highlands"
+ },
+ {
+  "simulant_id": "S073",
+  "name": "UW-1H",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S073",
+  "name": "UW-1H",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'University of Winnipeg'",
+  "reference_id": null,
+  "value": "University of Winnipeg"
+ },
+ {
+  "simulant_id": "S074",
+  "name": "UW-1M",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S075",
+  "name": "WHU-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2025",
+  "reference_id": null,
+  "value": 2025
+ },
+ {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2025",
+  "reference_id": null,
+  "value": 2025
+ },
+ {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2025",
+  "reference_id": null,
+  "value": 2025
+ },
+ {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2025",
+  "reference_id": null,
+  "value": 2025
+ },
+ {
+  "simulant_id": "S080",
+  "name": "IGG-01",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S080",
+  "name": "IGG-01",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S081",
+  "name": "JSC-2A",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Production stopped'",
+  "reference_id": null,
+  "value": "Production stopped"
+ },
+ {
+  "simulant_id": "S081",
+  "name": "JSC-2A",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 14'",
+  "reference_id": null,
+  "value": "Apollo 14"
+ },
+ {
+  "simulant_id": "S082",
+  "name": "GRC-3",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S082",
+  "name": "GRC-3",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2013",
+  "reference_id": null,
+  "value": 2013
+ },
+ {
+  "simulant_id": "S082",
+  "name": "GRC-3",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S083",
+  "name": "NAO-2",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S084",
+  "name": "CLRS-2",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S085",
+  "name": "JSC-2",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Production stopped'",
+  "reference_id": null,
+  "value": "Production stopped"
+ },
+ {
+  "simulant_id": "S085",
+  "name": "JSC-2",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 14'",
+  "reference_id": null,
+  "value": "Apollo 14"
+ },
+ {
+  "simulant_id": "S086",
+  "name": "NU-LHT-2E",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 16'",
+  "reference_id": null,
+  "value": "Apollo 16"
+ },
+ {
+  "simulant_id": "S087",
+  "name": "NU-LHT-2EG",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 16'",
+  "reference_id": null,
+  "value": "Apollo 16"
+ },
+ {
+  "simulant_id": "S088",
+  "name": "NU-LHT-3M",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 16'",
+  "reference_id": null,
+  "value": "Apollo 16"
+ },
+ {
+  "simulant_id": "S088",
+  "name": "NU-LHT-3M",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'NASA / USGS'",
+  "reference_id": null,
+  "value": "NASA / USGS"
+ },
+ {
+  "simulant_id": "S089",
+  "name": "NU-LHT-4M",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Limited Stock'",
+  "reference_id": null,
+  "value": "Limited Stock"
+ },
+ {
+  "simulant_id": "S090",
+  "name": "NU-LHT-5M",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S090",
+  "name": "NU-LHT-5M",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2022",
+  "reference_id": null,
+  "value": 2022
+ },
+ {
+  "simulant_id": "S090",
+  "name": "NU-LHT-5M",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 16'",
+  "reference_id": null,
+  "value": "Apollo 16"
+ },
+ {
+  "simulant_id": "S090",
+  "name": "NU-LHT-5M",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'NASA / USGS'",
+  "reference_id": null,
+  "value": "NASA / USGS"
+ },
+ {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2021",
+  "reference_id": null,
+  "value": 2021
+ },
+ {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2025",
+  "reference_id": null,
+  "value": 2025
+ },
+ {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Space Resource Technologies'",
+  "reference_id": null,
+  "value": "Space Resource Technologies"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2021",
+  "reference_id": null,
+  "value": 2021
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2025",
+  "reference_id": null,
+  "value": 2025
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Average lunar maria'",
+  "reference_id": null,
+  "value": "Average lunar maria"
+ },
+ {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Space Resource Technologies'",
+  "reference_id": null,
+  "value": "Space Resource Technologies"
+ },
+ {
+  "simulant_id": "S096",
+  "name": "LHD-1D",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S096",
+  "name": "LHD-1D",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2024",
+  "reference_id": null,
+  "value": 2024
+ },
+ {
+  "simulant_id": "S096",
+  "name": "LHD-1D",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Average lunar highlands'",
+  "reference_id": null,
+  "value": "Average lunar highlands"
+ },
+ {
+  "simulant_id": "S097",
+  "name": "FROST-Y",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S097",
+  "name": "FROST-Y",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Lunar South Pole'",
+  "reference_id": null,
+  "value": "Lunar South Pole"
+ },
+ {
+  "simulant_id": "S097",
+  "name": "FROST-Y",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Space Resource Technologies'",
+  "reference_id": null,
+  "value": "Space Resource Technologies"
+ },
+ {
+  "simulant_id": "S098",
+  "name": "OPRH2W",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Nearside lunar highlands'",
+  "reference_id": null,
+  "value": "Nearside lunar highlands"
+ },
+ {
+  "simulant_id": "S099",
+  "name": "OPRH3W",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2010",
+  "reference_id": null,
+  "value": 2010
+ },
+ {
+  "simulant_id": "S099",
+  "name": "OPRH3W",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Farside lunar highlands'",
+  "reference_id": null,
+  "value": "Farside lunar highlands"
+ },
+ {
+  "simulant_id": "S100",
+  "name": "OPRH4W30",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S100",
+  "name": "OPRH4W30",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2010",
+  "reference_id": null,
+  "value": 2010
+ },
+ {
+  "simulant_id": "S101",
+  "name": "OPRL2W",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S101",
+  "name": "OPRL2W",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2010",
+  "reference_id": null,
+  "value": 2010
+ },
+ {
+  "simulant_id": "S101",
+  "name": "OPRL2W",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'High-Ti Mare'",
+  "reference_id": null,
+  "value": "High-Ti Mare"
+ },
+ {
+  "simulant_id": "S102",
+  "name": "OPRFLCROSS1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S102",
+  "name": "OPRFLCROSS1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2019",
+  "reference_id": null,
+  "value": 2019
+ },
+ {
+  "simulant_id": "S102",
+  "name": "OPRFLCROSS1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Lunar South Pole'",
+  "reference_id": null,
+  "value": "Lunar South Pole"
+ },
+ {
+  "simulant_id": "S104",
+  "name": "CSM-LHT-1G",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Colorado School of Mines'",
+  "reference_id": null,
+  "value": "Colorado School of Mines"
+ },
+ {
+  "simulant_id": "S106",
+  "name": "CSM-CL-S",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S106",
+  "name": "CSM-CL-S",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Colorado School of Mines'",
+  "reference_id": null,
+  "value": "Colorado School of Mines"
+ },
+ {
+  "simulant_id": "S107",
+  "name": "Mooncastle",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available'",
+  "reference_id": null,
+  "value": "Available"
+ },
+ {
+  "simulant_id": "S107",
+  "name": "Mooncastle",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Mare'",
+  "reference_id": null,
+  "value": "Mare"
+ },
+ {
+  "simulant_id": "S108",
+  "name": "LMA-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S108",
+  "name": "LMA-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2020",
+  "reference_id": null,
+  "value": 2020
+ },
+ {
+  "simulant_id": "S108",
+  "name": "LMA-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo mare'",
+  "reference_id": null,
+  "value": "Apollo mare"
+ },
+ {
+  "simulant_id": "S109",
+  "name": "LHA-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S109",
+  "name": "LHA-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2020",
+  "reference_id": null,
+  "value": 2020
+ },
+ {
+  "simulant_id": "S109",
+  "name": "LHA-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo highland'",
+  "reference_id": null,
+  "value": "Apollo highland"
+ },
+ {
+  "simulant_id": "S110",
+  "name": "MLS-1P",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Production stopped'",
+  "reference_id": null,
+  "value": "Production stopped"
+ },
+ {
+  "simulant_id": "S110",
+  "name": "MLS-1P",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1990",
+  "reference_id": null,
+  "value": 1990
+ },
+ {
+  "simulant_id": "S110",
+  "name": "MLS-1P",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 11'",
+  "reference_id": null,
+  "value": "Apollo 11"
+ },
+ {
+  "simulant_id": "S111",
+  "name": "MLS-1A",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Production stopped'",
+  "reference_id": null,
+  "value": "Production stopped"
+ },
+ {
+  "simulant_id": "S111",
+  "name": "MLS-1A",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Apollo 11'",
+  "reference_id": null,
+  "value": "Apollo 11"
+ },
+ {
+  "simulant_id": "S111",
+  "name": "MLS-1A",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Univ. of Minnesota'",
+  "reference_id": null,
+  "value": "Univ. of Minnesota"
+ },
+ {
+  "simulant_id": "S112",
+  "name": "LSS-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1968",
+  "reference_id": null,
+  "value": 1968
+ },
+ {
+  "simulant_id": "S113",
+  "name": "LSS-2",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1968",
+  "reference_id": null,
+  "value": 1968
+ },
+ {
+  "simulant_id": "S114",
+  "name": "LSS-3",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1968",
+  "reference_id": null,
+  "value": 1968
+ },
+ {
+  "simulant_id": "S115",
+  "name": "LSS-4",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1968",
+  "reference_id": null,
+  "value": 1968
+ },
+ {
+  "simulant_id": "S116",
+  "name": "LSS-5",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 1968",
+  "reference_id": null,
+  "value": 1968
+ },
+ {
+  "simulant_id": "S117",
+  "name": "GSC-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Production stopped'",
+  "reference_id": null,
+  "value": "Production stopped"
+ },
+ {
+  "simulant_id": "S117",
+  "name": "GSC-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Low-Ti Mare'",
+  "reference_id": null,
+  "value": "Low-Ti Mare"
+ },
+ {
+  "simulant_id": "S118",
+  "name": "Maryland-Sanders",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Production stopped'",
+  "reference_id": null,
+  "value": "Production stopped"
+ },
+ {
+  "simulant_id": "S118",
+  "name": "Maryland-Sanders",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Mare'",
+  "reference_id": null,
+  "value": "Mare"
+ },
+ {
+  "simulant_id": "S119",
+  "name": "CMU-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Production stopped'",
+  "reference_id": null,
+  "value": "Production stopped"
+ },
+ {
+  "simulant_id": "S119",
+  "name": "CMU-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Mare'",
+  "reference_id": null,
+  "value": "Mare"
+ },
+ {
+  "simulant_id": "S119",
+  "name": "CMU-1",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Carnegie Mellon University'",
+  "reference_id": null,
+  "value": "Carnegie Mellon University"
+ },
+ {
+  "simulant_id": "S120",
+  "name": "PolyU-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S121",
+  "name": "BH-2",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S122",
+  "name": "TJ-2",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S123",
+  "name": "NEU-1A",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S123",
+  "name": "NEU-1A",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2019",
+  "reference_id": null,
+  "value": 2019
+ },
+ {
+  "simulant_id": "S124",
+  "name": "NEU-1B",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S124",
+  "name": "NEU-1B",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2019",
+  "reference_id": null,
+  "value": 2019
+ },
+ {
+  "simulant_id": "S125",
+  "name": "CUG-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S125",
+  "name": "CUG-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2010",
+  "reference_id": null,
+  "value": 2010
+ },
+ {
+  "simulant_id": "S125",
+  "name": "CUG-1",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'China University of Geosciences'",
+  "reference_id": null,
+  "value": "China University of Geosciences"
+ },
+ {
+  "simulant_id": "S126",
+  "name": "HUST-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S126",
+  "name": "HUST-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2022",
+  "reference_id": null,
+  "value": 2022
+ },
+ {
+  "simulant_id": "S126",
+  "name": "HUST-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Mare'",
+  "reference_id": null,
+  "value": "Mare"
+ },
+ {
+  "simulant_id": "S126",
+  "name": "HUST-1",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'HUST'",
+  "reference_id": null,
+  "value": "HUST"
+ },
+ {
+  "simulant_id": "S127",
+  "name": "HIT-LRS-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S127",
+  "name": "HIT-LRS-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S128",
+  "name": "CQU-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S128",
+  "name": "CQU-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S129",
+  "name": "NJU-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S129",
+  "name": "NJU-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S130",
+  "name": "IRSM-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S130",
+  "name": "IRSM-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S131",
+  "name": "LBD",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S131",
+  "name": "LBD",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S132",
+  "name": "TYII-0",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S132",
+  "name": "TYII-0",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S133",
+  "name": "TYII-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S133",
+  "name": "TYII-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S134",
+  "name": "TYII-2",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S134",
+  "name": "TYII-2",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S135",
+  "name": "ZJM-01",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S135",
+  "name": "ZJM-01",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S136",
+  "name": "QH-E",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S136",
+  "name": "QH-E",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S137",
+  "name": "TUBS-I",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S137",
+  "name": "TUBS-I",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2022",
+  "reference_id": null,
+  "value": 2022
+ },
+ {
+  "simulant_id": "S137",
+  "name": "TUBS-I",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Ilmenite-rich'",
+  "reference_id": null,
+  "value": "Ilmenite-rich"
+ },
+ {
+  "simulant_id": "S138",
+  "name": "LX-I50",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S138",
+  "name": "LX-I50",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2025",
+  "reference_id": null,
+  "value": 2025
+ },
+ {
+  "simulant_id": "S139",
+  "name": "SCC-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S139",
+  "name": "SCC-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S139",
+  "name": "SCC-1",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Open University'",
+  "reference_id": null,
+  "value": "Open University"
+ },
+ {
+  "simulant_id": "S140",
+  "name": "SCC-2",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S140",
+  "name": "SCC-2",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S140",
+  "name": "SCC-2",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Open University'",
+  "reference_id": null,
+  "value": "Open University"
+ },
+ {
+  "simulant_id": "S153",
+  "name": "LZS-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S154",
+  "name": "KAUMLS",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S154",
+  "name": "KAUMLS",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S155",
+  "name": "TRI-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S155",
+  "name": "TRI-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S156",
+  "name": "TLS-01A",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Available (Research)'",
+  "reference_id": null,
+  "value": "Available (Research)"
+ },
+ {
+  "simulant_id": "S156",
+  "name": "TLS-01A",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Mare'",
+  "reference_id": null,
+  "value": "Mare"
+ },
+ {
+  "simulant_id": "S157",
+  "name": "FEFU-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S157",
+  "name": "FEFU-1",
+  "where": "lunar_sample_reference",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'General'",
+  "reference_id": null,
+  "value": "General"
+ },
+ {
+  "simulant_id": "S158",
+  "name": "LuSIC-1",
+  "where": "availability",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'Unavailable'",
+  "reference_id": null,
+  "value": "Unavailable"
+ },
+ {
+  "simulant_id": "S158",
+  "name": "LuSIC-1",
+  "where": "release_date",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 2025",
+  "reference_id": null,
+  "value": 2025
+ },
+ {
+  "simulant_id": "S158",
+  "name": "LuSIC-1",
+  "where": "institution",
+  "check": "unsourced",
+  "severity": "info",
+  "detail": "shown without a source: 'IBeA Research Group, UPV/EHU'",
+  "reference_id": null,
+  "value": "IBeA Research Group, UPV/EHU"
+ }
+]

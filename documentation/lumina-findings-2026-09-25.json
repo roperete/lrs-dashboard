@@ -1,0 +1,1171 @@
+{
+ "products": [
+  {
+   "name": "Lunar90",
+   "reading": {
+    "names_quote": "Lumina Sustainable Materials Ltd. | Lunar90 | Lumina90 | 0–90 μm | 4.95 kg (row of TABLE 1: 'The three lunar highland simulants purchased from Lumina Sustainable Materials Ltd. and the lunar mare simulant EAC-1 received from the European Astronaut Centre (EAC).')",
+    "names_location": "Table 1, page 3",
+    "values": [
+     {
+      "field": "institution",
+      "value": "Lumina Sustainable Materials Ltd.",
+      "table": "Table 1",
+      "page": "3",
+      "quote": "Lumina Sustainable Materials Ltd. Lunar90 Lumina90 0–90 μm 4.95 kg"
+     },
+     {
+      "field": "institution",
+      "value": "Lumina Sustainable Materials Ltd. (https://www.luminamaterials.com/about-us; Batch of 2023)",
+      "table": "running text, Section 2.1",
+      "page": "3",
+      "quote": "Lunar highland simulants were purchased from Lumina Sustainable Materials Ltd. (n = 3; https://www.luminamaterials.com/about-us; Batch of 2023) and were received at the Vulcan Analogue Sample Facility in June 2023 (Table 1)."
+     },
+     {
+      "field": "lunar_sample_reference",
+      "value": "lunar highland",
+      "table": "Table 1 caption / Title / Conclusion",
+      "page": "3, 1, 17",
+      "quote": "TABLE 1 The three lunar highland simulants purchased from Lumina Sustainable Materials Ltd. and the lunar mare simulant EAC-1...' (p.3); title: '...characterization work of highland (lunar) and mare (EAC-1) lunar regolith simulants' (p.1); Conclusion: 'the highland simulants (Lunar90, -250 and −2000) and mare simulant (EAC-1)' (p.17)"
+     },
+     {
+      "field": "particle_size_distribution",
+      "value": "0–90 μm",
+      "table": "Table 1",
+      "page": "3",
+      "quote": "0–90 μm (Particle-size range (PSR) column, Lumina90 row)"
+     },
+     {
+      "field": "particle_size_distribution",
+      "value": "fine silt fraction to coarse silt",
+      "table": "running text, Section 3.1",
+      "page": "6",
+      "quote": "the grain sizes of Lumina samples span from fine silt fraction to coarse silt for Lumina90, fine silt to medium sand for Lumina250 and coarse sand to fine gravel for Lumina 2000."
+     },
+     {
+      "field": "bulk_density",
+      "value": "loose 0.89 g/cm3; tapped 1.18 g/cm3",
+      "table": "Table 2",
+      "page": "15",
+      "quote": "ASTM D4781-18 procedures | Lumina90 | 0.94–1.57 / 0.89  1.18 | This work (column header: 'Min-max dry unit weight / Loose tapped bulk density (g/cm3)')"
+     },
+     {
+      "field": "bulk_density_range",
+      "value": "0.94–1.57 (g/cm3, min-max dry unit weight, density-equivalent)",
+      "table": "Table 2",
+      "page": "15",
+      "quote": "0.94–1.57 (first line of the Lumina90 cell under 'Min-max dry unit weight / Loose tapped bulk density (g/cm3)')"
+     },
+     {
+      "field": "bulk_density_range",
+      "value": "9.26 and 15.43 kN/m3 (min and max dry unit weight, un-converted)",
+      "table": "running text, Section 3.4",
+      "page": "7",
+      "quote": "Lumina90 has minimum and maximum dry unit weight as of 9.26 and 15.43 kN/m3, Lumina250 has values of 11.87 and 18.67 kN/m3, and Lumina2000 has values of 13.10 and 17.63 kN/m3, respectively."
+     },
+     {
+      "field": "particle_morphology",
+      "value": "average sphericity (VisiSize, 2D, Vulcan Facility) = 0.46",
+      "table": "running text Section 3.2 / Figure 3",
+      "page": "7",
+      "quote": "The average sphericity is 0.51 for Lumina 2000, 0.47 for Lumina250 and 0.46 for Lumina90 (Figure 3)."
+     },
+     {
+      "field": "mineral:Ca plagioclase (AMICS, area%)",
+      "value": "86.67% (major phase)",
+      "table": "AMICS modal mineralogy, running text (Supplementary Figure S5)",
+      "page": "9",
+      "quote": "Lumina90 (Supplementary Figure S5) consists of Ca plagioclase (86.67%) as the only major mineral phase"
+     },
+     {
+      "field": "mineral:quartz (AMICS, area%)",
+      "value": "4.14% (minor phase)",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "9",
+      "quote": "and quartz (4.14%), muscovite (1.91%), Mg-Al silicates (1.06%), Ca-Al silicates (3.02%) as minor phases."
+     },
+     {
+      "field": "mineral:muscovite (AMICS, area%)",
+      "value": "1.91% (minor phase)",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "9",
+      "quote": "muscovite (1.91%), Mg-Al silicates (1.06%), Ca-Al silicates (3.02%) as minor phases."
+     },
+     {
+      "field": "mineral:Mg-Al silicates (AMICS, area%)",
+      "value": "1.06% (minor phase)",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "9",
+      "quote": "Mg-Al silicates (1.06%), Ca-Al silicates (3.02%) as minor phases."
+     },
+     {
+      "field": "mineral:Ca-Al silicates (AMICS, area%)",
+      "value": "3.02% (minor phase)",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "9",
+      "quote": "Ca-Al silicates (3.02%) as minor phases."
+     },
+     {
+      "field": "mineral:trace phases (AMICS, no % given)",
+      "value": "K feldspar, Na plagioclase, Na-Ca plagioclase, biotite, chlorite, clinopyroxene and amphibole, Mg silicates, volcanic glass, titanite, apatite, calcite, pyrite, Ti oxides and ilmenite",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "9",
+      "quote": "Furthermore, K feldspar, Na plagioclase, Na-Ca plagioclase, biotite, chlorite, clinopyroxene and amphibole, Mg silicates, volcanic glass, titanite, apatite, calcite, pyrite, Ti oxides and ilmenite were present as trace mineral phases."
+     },
+     {
+      "field": "mineral:anorthite (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "87.4–89.9 wt% (stated jointly for 'the samples', i.e. all three Lumina products)",
+      "table": "Section 3.6.4, running text (Supplementary Table S9)",
+      "page": "12",
+      "quote": "The samples predominantly consist of anorthite, which comprises 87.4–89.9 wt% of the samples."
+     },
+     {
+      "field": "mineral:andesine (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "less than 0.4 wt% (joint, trace)",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "Andesine is only detected as a trace component, constituting less than 0.4 wt%"
+     },
+     {
+      "field": "mineral:anorthoclase (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "up to 0.1 wt% (joint, trace)",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "while anorthoclase is present at even lower levels, up to 0.1 wt%."
+     },
+     {
+      "field": "mineral:quartz (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "3.1 wt%",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "Quartz is a minor component, found in Lumina90 and Lumina250 at concentrations of 3.1 wt% and 5.3 wt%, respectively, and in Lumina2000 at 1.0 wt%."
+     },
+     {
+      "field": "mineral:clinozoisite (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "3.1–5.8 wt% (joint)",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "Other mineral phases within the Lumina samples are clinozoisite, present at 3.1–5.8 wt%."
+     },
+     {
+      "field": "mineral:additional minor/trace phases (Mineralogic SEM-EDS, petrolab, no % given)",
+      "value": "mica group minerals, clay minerals, carbonates, basaltic glass, sulphides, augite, accessory phases, iron oxides, and enstatite (joint)",
+      "table": "Section 3.6.4, running text",
+      "page": "12–13",
+      "quote": "Additional minor to trace phases consist of mica group minerals, clay minerals, carbonates, basaltic glass, sulphides, augite, accessory phases, iron oxides, and enstatite."
+     },
+     {
+      "field": "mineral:plagioclase (XRD, identified as bytownite An85)",
+      "value": "comprises the bulk of the mineralogy (no wt% given); joint statement for all Lumina samples",
+      "table": "Section 3.6.2 XRD, running text (Supplementary Table S8)",
+      "page": "10–11",
+      "quote": "Based on the XRD results (Supplementary Table S8), plagioclases comprise the bulk of the mineralogy in all samples analysed that appear to be bytownite (An85)... The Lumina samples together with the plagioclase, are composed of quartz, clinozoisite, chlorite, muscovite, biotite, and trace amount of amphibole."
+     },
+     {
+      "field": "oxide:SiO2",
+      "value": "48.4-49.8 wt% (joint range stated for 'the Lumina samples')",
+      "table": "running text Section 3.6 (data plotted in Figure 6; full data in Supplementary Table S4)",
+      "page": "8",
+      "quote": "Based on the XRF measurements, the SiO2 content of the Lumina samples have values between 48.4-49.8 wt%"
+     },
+     {
+      "field": "oxide:TiO2",
+      "value": "0.05–0.1 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "TiO2 contents of 0.05–0.1 wt%"
+     },
+     {
+      "field": "oxide:MgO",
+      "value": "0.1–0.4 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "MgO contents of 0.1–0.4 wt%"
+     },
+     {
+      "field": "oxide:Al2O3",
+      "value": "30-31.2 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "Al2O3 as of 30-31.2 wt%"
+     },
+     {
+      "field": "oxide:CaO",
+      "value": "14.9–15.5 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "CaO of 14.9–15.5 wt%"
+     },
+     {
+      "field": "oxide:Na2O",
+      "value": "2.3–2.5 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "and Na2O compositions of 2.3–2.5 wt%. The values carried out by ICP-OES analysis are highly similar to the XRF compositions."
+     }
+    ],
+    "notes": "particle_size_d50: paper gives D50≈72μm only for real lunar-surface regolith (Apollo/Carrier 2003 comparison, p.13), not for this product; not a measured Lumina90 value. particle_size_mean_um: the only stated 'average particle size' (2.4 mm, µCT) is for Lumina2000 only (3D shape analysis was carried out only on the Lumina2000 sample). density_g_cm3 (particle/grain density): Section 2.5 (p.3) describes the pycnometer method (NS-EN ISO 17892-3:2015) used to measure solid-particle density ρs, but no numeric result for any product appears in the main text, tables or figures — likely reported only in Supplementary Material, which is not included in this PDF. specific_gravity, cohesion, friction_angle, angle_of_repose, ph, glass_content_percent: none of these terms/values appear anywhere in the paper (checked with full-text search); 'volcanic glass' is listed only qualitatively as a trace AMICS mineral phase, with no glass content percentage given. Oxide values and most Mineralogic-method mineral wt% values (anorthite, andesine, anorthoclase, clinozoisite, and the unquantified trace list) are stated in running text only as joint ranges for 'the Lumina samples' collectively (no per-product breakdown, and no formal in-text bulk-chemistry or mineralogy table — the actual per-product tables are Supplementary Tables S4–S9, which are not present in this PDF); per the task's joint-value rule they are reported identically under all three products. Only the Mineralogic-method quartz wt% (3.1/5.3/1.0 wt%) and the AMICS-method modal percentages are resolved per specific product name. Bulk-density Table 2's single column merges two distinct quantities under one header ('Min-max dry unit weight' / 'Loose tapped bulk density (g/cm3)'); order of the two numbers on the second line was inferred to be (loose, tapped) based on internal consistency (loose < tapped in every row) and the header word order 'Loose tapped'."
+   },
+   "check": {
+    "names_verdict": "CONFIRMED",
+    "checks": [
+     {
+      "field": "institution [Lumina Sustainable Materials Ltd., Table 1]",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p.3, row: 'Lumina Sustainable Materials Ltd. | Lunar90 | Lumina90 | 0–90 μm | 4.95 kg'. Checked on the page render."
+     },
+     {
+      "field": "institution [with URL + Batch of 2023, Section 2.1]",
+      "verdict": "CONFIRMED",
+      "note": "The quote is verbatim, but it is on p.2 (Section 2.1, bottom of left column, running into the top of the right column), not p.3. Fix the page to 2."
+     },
+     {
+      "field": "lunar_sample_reference [lunar highland]",
+      "verdict": "CONFIRMED",
+      "note": "Table 1 caption on p.3 ('The three lunar highland simulants purchased from Lumina Sustainable Materials Ltd.') and Conclusion on p.17 ('highland simulants (Lunar90, -250 and −2000)'). The title quote is lightly paraphrased but says the same."
+     },
+     {
+      "field": "particle_size_distribution [0–90 μm]",
+      "verdict": "CONFIRMED",
+      "note": "Table 1 PSR column, p.3. Section 3.1 (p.7) also says 'Lumina90 was listed as having a top cut of 90 μm'."
+     },
+     {
+      "field": "particle_size_distribution [fine silt to coarse silt]",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.1, p.6, verbatim. This is the NGI falling-drop plus wet/dry sieving classification (ISO 14688)."
+     },
+     {
+      "field": "bulk_density [loose 0.89; tapped 1.18 g/cm3]",
+      "verdict": "CONFIRMED",
+      "note": "Table 2, p.15, second line of the cell: '0.89 1.18'. The loose-then-tapped order is independently confirmed by Figure 5B (p.9): the loose star is at ~8.8 kN/m3 (≈0.90 g/cm3) and the tapped circle at ~11.6 kN/m3 (≈1.18 g/cm3). Method is ASTM D7481-18 at NGI (Section 2.7)."
+     },
+     {
+      "field": "bulk_density_range [0.94–1.57 g/cm3 min-max dry unit weight]",
+      "verdict": "CONFIRMED",
+      "note": "Table 2, p.15, first line of the cell. Matches 9.26 and 15.43 kN/m3 divided by 9.807. Caveat: Table 2 labels every row 'ASTM D4781-18 procedures', but Section 2.6 says min/max dry density came from an NGI in-house method (pouring for the minimum, dry vibration under 4.2 kN/m2 surcharge for the maximum)."
+     },
+     {
+      "field": "bulk_density_range [9.26 and 15.43 kN/m3]",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.4, p.7, verbatim. Consistent with Figure 5A."
+     },
+     {
+      "field": "particle_morphology [VisiSize 2D sphericity 0.46]",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.2, p.7: 'The average sphericity is 0.51 for Lumina 2000, 0.47 for Lumina250 and 0.46 for Lumina90 (Figure 3).' The value is the mean of three subsamples at the Vulcan Facility."
+     },
+     {
+      "field": "mineral:Ca plagioclase (AMICS) 86.67%",
+      "verdict": "CONFIRMED",
+      "note": "p.9, verbatim. AMICS reports area %, and the paper defines >10% as major."
+     },
+     {
+      "field": "mineral:quartz (AMICS) 4.14%",
+      "verdict": "CONFIRMED",
+      "note": "p.9, verbatim."
+     },
+     {
+      "field": "mineral:muscovite (AMICS) 1.91%",
+      "verdict": "CONFIRMED",
+      "note": "p.9, verbatim."
+     },
+     {
+      "field": "mineral:Mg-Al silicates (AMICS) 1.06%",
+      "verdict": "CONFIRMED",
+      "note": "p.9, verbatim. Among the three products, only Lumina90 has Mg-Al silicates as a minor phase."
+     },
+     {
+      "field": "mineral:Ca-Al silicates (AMICS) 3.02%",
+      "verdict": "CONFIRMED",
+      "note": "p.9, verbatim."
+     },
+     {
+      "field": "mineral:trace phases (AMICS)",
+      "verdict": "CONFIRMED",
+      "note": "p.9, verbatim list. It includes apatite, pyrite, Ti oxides and ilmenite, which appear only in the Lumina90 trace list."
+     },
+     {
+      "field": "mineral:anorthite (Mineralogic) 87.4–89.9 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.6.4, p.12. The range covers 'the samples' (all three Lumina) together. Correctly labelled as joint."
+     },
+     {
+      "field": "mineral:andesine (Mineralogic) <0.4 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.12, verbatim, joint."
+     },
+     {
+      "field": "mineral:anorthoclase (Mineralogic) up to 0.1 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.12, verbatim, joint."
+     },
+     {
+      "field": "mineral:quartz (Mineralogic) 3.1 wt%",
+      "verdict": "CONFIRMED",
+      "note": "p.12. The value is assigned to Lumina90 by name ('Lumina90 and Lumina250 at 3.1 wt% and 5.3 wt%, respectively'). The Figure 7A Mineralogic bar (~3%) agrees."
+     },
+     {
+      "field": "mineral:clinozoisite (Mineralogic) 3.1–5.8 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.12, verbatim, joint."
+     },
+     {
+      "field": "mineral:additional minor/trace phases (Mineralogic)",
+      "verdict": "CONFIRMED",
+      "note": "The list runs from p.12 onto p.13 and is verbatim and joint."
+     },
+     {
+      "field": "mineral:plagioclase (XRD, bytownite An85)",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.6.2, pp.10–11, and the quote is accurate. However, the reader's annotation 'no wt% given' is wrong: Section 4.2 (p.16), which discusses the XRD quantitative results, gives plagioclase >85 wt% and other phases <15 wt% for the Lumina samples (added under missed)."
+     },
+     {
+      "field": "oxide:SiO2 48.4–49.8 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.6, p.8, verbatim. This is an XRF joint range for 'the Lumina samples'; label the method as XRF (Supplementary Table S4, not in the PDF)."
+     },
+     {
+      "field": "oxide:TiO2 0.05–0.1 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:MgO 0.1–0.4 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:Al2O3 30–31.2 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:CaO 14.9–15.5 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:Na2O 2.3–2.5 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint. The Discussion on p.14 restates Na2O as '2-2.5 wt%', which is slightly different."
+     },
+     {
+      "field": "not_stated list",
+      "verdict": "CONFIRMED",
+      "note": "The main text gives no value for D50, mean size, particle density, specific gravity, cohesion, friction angle, angle of repose, pH or glass %. The only D50 values are lunar regolith (~72 μm) and the ASTM limit (<1.3 mm). Section 2.5 describes the pycnometer method only, with no result."
+     }
+    ],
+    "missed": [
+     {
+      "field": "mineral:plagioclase (XRD quantitative, joint)",
+      "value": ">85 wt% plagioclase; <15 wt% other major/minor phases (all Lumina samples)",
+      "table": "Section 4.2 running text (Figure 13, XRD mass%)",
+      "page": "16",
+      "quote": "The Lumina samples represent significantly higher plagioclase content (>85 wt%) and contain less than 15 wt% of other (major or minor) mineral phases that are present in the lunar regolith sampled by the Apollo missions."
+     },
+     {
+      "field": "lunar_sample_reference (comparison, joint)",
+      "value": "Apollo 16 (highland): near-identical Al2O3, TiO2, CaO; plagioclase content comparable to some Apollo-16 samples",
+      "table": "Section 4.2 running text / Figures 12, 13",
+      "page": "13–14, 16",
+      "quote": "The Lumina simulants display almost identical Al2O3, TiO2, and CaO values to the Apollo-16 (highland) samples (Figure 12) that show 2 wt% less silica. ... the Lumina samples are comparative to some of the Apollo-16 samples regarding the high plagioclase contents."
+     },
+     {
+      "field": "particle_morphology (joint, qualitative)",
+      "value": "irregular/angular shapes (sphericity <0.6); plot at lowest sphericity/diameter portion of Apollo samples (immature regolith counterpart)",
+      "table": "Section 4.1 running text / Figure 9B",
+      "page": "13",
+      "quote": "The Lumina samples analysed plot to the lowest sphericity/diameter portion of the Apollo samples. The Lumina samples therefore represent the immature counterpart of the lunar regolith, with irregular/angular (<0.6) shapes (Figure 9B)."
+     },
+     {
+      "field": "particle_size_distribution (Vulcan sieving, qualitative)",
+      "value": "Only 63 μm and 25 μm meshes applicable; fines in receiver pan significantly greater than for Lumina250/2000",
+      "table": "Section 3.1 running text",
+      "page": "7",
+      "quote": "it was only possible to measure the material stopped by the 63 μm and 25 μm meshes. The quantities of material accumulating as fines in the receiver pan was significantly greater than occurred with the Lumina2000 and Lumina250 subsamples"
+     },
+     {
+      "field": "particle_size_distribution (comparison to lunar average PSD)",
+      "value": "Shape similar to average lunar regolith PSD curve (Carrier 2003), similar PSD ratios in fine fractions",
+      "table": "Section 4.1 running text / Figure 9A",
+      "page": "13",
+      "quote": "Lumina90 shares similarities with the shape of the average lunar regolith PSD curve (Figure 9A), representing similar PSD ratios within the fine fractions"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Lunar250",
+   "reading": {
+    "names_quote": "Lumina Sustainable Materials Ltd. | Lunar250 | Lumina250 | 0–250 μm | 5 kg (row of TABLE 1)",
+    "names_location": "Table 1, page 3",
+    "values": [
+     {
+      "field": "institution",
+      "value": "Lumina Sustainable Materials Ltd.",
+      "table": "Table 1",
+      "page": "3",
+      "quote": "Lumina Sustainable Materials Ltd. Lunar250 Lumina250 0–250 μm 5 kg"
+     },
+     {
+      "field": "lunar_sample_reference",
+      "value": "lunar highland",
+      "table": "Table 1 caption / Conclusion",
+      "page": "3, 17",
+      "quote": "TABLE 1 The three lunar highland simulants purchased from Lumina Sustainable Materials Ltd. ...' (p.3); 'the highland simulants (Lunar90, -250 and −2000)' (p.17)"
+     },
+     {
+      "field": "lunar_sample_reference",
+      "value": "the batch simulant intended for the Luna Dust Chamber (highland)",
+      "table": "Abstract",
+      "page": "1",
+      "quote": "This work represents the geotechnical, geochemical and mineralogical characterization of the Lumina Sustainable Materials Ltd. 2023 batch highland simulants, from which Lunar250 is intended for use in the Luna Dust Chamber."
+     },
+     {
+      "field": "particle_size_distribution",
+      "value": "0–250 μm",
+      "table": "Table 1",
+      "page": "3",
+      "quote": "0–250 μm (Particle-size range (PSR) column, Lumina250 row)"
+     },
+     {
+      "field": "particle_size_distribution",
+      "value": "fine silt to medium sand",
+      "table": "running text, Section 3.1",
+      "page": "6",
+      "quote": "fine silt to medium sand for Lumina250"
+     },
+     {
+      "field": "bulk_density",
+      "value": "loose 1.14 g/cm3; tapped 1.45 g/cm3",
+      "table": "Table 2",
+      "page": "15",
+      "quote": "ASTM D4781-18 procedures | Lumina250 | 1.21–1.9 / 1.14  1.45 | This work"
+     },
+     {
+      "field": "bulk_density_range",
+      "value": "1.21–1.9 (g/cm3, min-max dry unit weight, density-equivalent)",
+      "table": "Table 2",
+      "page": "15",
+      "quote": "1.21–1.9 (first line of the Lumina250 cell)"
+     },
+     {
+      "field": "bulk_density_range",
+      "value": "11.87 and 18.67 kN/m3 (min and max dry unit weight, un-converted)",
+      "table": "running text, Section 3.4",
+      "page": "7",
+      "quote": "Lumina250 has values of 11.87 and 18.67 kN/m3"
+     },
+     {
+      "field": "particle_morphology",
+      "value": "average sphericity (VisiSize, 2D, Vulcan Facility) = 0.47",
+      "table": "running text Section 3.2 / Figure 3",
+      "page": "7",
+      "quote": "The average sphericity is 0.51 for Lumina 2000, 0.47 for Lumina250 and 0.46 for Lumina90 (Figure 3)."
+     },
+     {
+      "field": "mineral:Ca plagioclase (AMICS, area%)",
+      "value": "90.39% (major phase)",
+      "table": "AMICS modal mineralogy, running text (Supplementary Figure S6)",
+      "page": "9",
+      "quote": "Lumina250 (Supplementary Figure S6) is comprised of Ca plagioclase (90.39%) as the major phase, quartz (3.74%),"
+     },
+     {
+      "field": "mineral:quartz (AMICS, area%)",
+      "value": "3.74% (minor phase)",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "9–10",
+      "quote": "quartz (3.74%), muscovite (1.30%), Ca-Al silicates (3.01%) as minor phases"
+     },
+     {
+      "field": "mineral:muscovite (AMICS, area%)",
+      "value": "1.30% (minor phase)",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "10",
+      "quote": "muscovite (1.30%), Ca-Al silicates (3.01%) as minor phases"
+     },
+     {
+      "field": "mineral:Ca-Al silicates (AMICS, area%)",
+      "value": "3.01% (minor phase)",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "10",
+      "quote": "Ca-Al silicates (3.01%) as minor phases"
+     },
+     {
+      "field": "mineral:trace phases (AMICS, no % given)",
+      "value": "K feldspar, Na plagioclase, Na-Ca plagioclase, biotite, chlorite, Mg-Al silicates, clinopyroxene and amphibole, volcanic glass, titanite and calcite",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "10",
+      "quote": "and K feldspar, Na plagioclase, Na-Ca plagioclase, biotite, chlorite, Mg-Al silicates, clinopyroxene and amphibole, volcanic glass, titanite and calcite as trace minerals."
+     },
+     {
+      "field": "mineral:anorthite (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "87.4–89.9 wt% (joint, all three Lumina products)",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "The samples predominantly consist of anorthite, which comprises 87.4–89.9 wt% of the samples."
+     },
+     {
+      "field": "mineral:andesine (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "less than 0.4 wt% (joint, trace)",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "Andesine is only detected as a trace component, constituting less than 0.4 wt%"
+     },
+     {
+      "field": "mineral:anorthoclase (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "up to 0.1 wt% (joint, trace)",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "anorthoclase is present at even lower levels, up to 0.1 wt%."
+     },
+     {
+      "field": "mineral:quartz (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "5.3 wt%",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "Quartz is a minor component, found in Lumina90 and Lumina250 at concentrations of 3.1 wt% and 5.3 wt%, respectively, and in Lumina2000 at 1.0 wt%."
+     },
+     {
+      "field": "mineral:clinozoisite (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "3.1–5.8 wt% (joint)",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "Other mineral phases within the Lumina samples are clinozoisite, present at 3.1–5.8 wt%."
+     },
+     {
+      "field": "mineral:additional minor/trace phases (Mineralogic SEM-EDS, petrolab, no % given)",
+      "value": "mica group minerals, clay minerals, carbonates, basaltic glass, sulphides, augite, accessory phases, iron oxides, and enstatite (joint)",
+      "table": "Section 3.6.4, running text",
+      "page": "12–13",
+      "quote": "Additional minor to trace phases consist of mica group minerals, clay minerals, carbonates, basaltic glass, sulphides, augite, accessory phases, iron oxides, and enstatite."
+     },
+     {
+      "field": "mineral:plagioclase (XRD, identified as bytownite An85)",
+      "value": "comprises the bulk of the mineralogy (no wt% given); joint statement",
+      "table": "Section 3.6.2 XRD, running text",
+      "page": "10–11",
+      "quote": "plagioclases comprise the bulk of the mineralogy in all samples analysed that appear to be bytownite (An85)... The Lumina samples together with the plagioclase, are composed of quartz, clinozoisite, chlorite, muscovite, biotite, and trace amount of amphibole."
+     },
+     {
+      "field": "oxide:SiO2",
+      "value": "48.4-49.8 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "the SiO2 content of the Lumina samples have values between 48.4-49.8 wt%"
+     },
+     {
+      "field": "oxide:TiO2",
+      "value": "0.05–0.1 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "TiO2 contents of 0.05–0.1 wt%"
+     },
+     {
+      "field": "oxide:MgO",
+      "value": "0.1–0.4 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "MgO contents of 0.1–0.4 wt%"
+     },
+     {
+      "field": "oxide:Al2O3",
+      "value": "30-31.2 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "Al2O3 as of 30-31.2 wt%"
+     },
+     {
+      "field": "oxide:CaO",
+      "value": "14.9–15.5 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "CaO of 14.9–15.5 wt%"
+     },
+     {
+      "field": "oxide:Na2O",
+      "value": "2.3–2.5 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "Na2O compositions of 2.3–2.5 wt%"
+     }
+    ],
+    "notes": "Same caveats as Lumina90: no D50, no mean particle size (3D µCT morphology was only run on Lumina2000), no particle/grain density value, no specific gravity/cohesion/friction angle/angle of repose/pH/glass content % anywhere in the paper for this product. Oxide values and most Mineralogic wt% values are joint ranges for all three Lumina samples (no formal in-text table; true per-product tables are Supplementary S4–S9, absent from this PDF) and are repeated identically across all three products per the task's joint-value rule; only quartz (Mineralogic method) and the AMICS modal percentages are product-specific."
+   },
+   "check": {
+    "names_verdict": "CONFIRMED",
+    "checks": [
+     {
+      "field": "institution [Lumina Sustainable Materials Ltd., Table 1]",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p.3: 'Lumina Sustainable Materials Ltd. | Lunar250 | Lumina250 | 0–250 μm | 5 kg'."
+     },
+     {
+      "field": "lunar_sample_reference [lunar highland]",
+      "verdict": "CONFIRMED",
+      "note": "Table 1 caption on p.3 and Conclusion on p.17."
+     },
+     {
+      "field": "lunar_sample_reference [intended for Luna Dust Chamber (highland)]",
+      "verdict": "UNCERTAIN",
+      "note": "The abstract quote on p.1 is verbatim and does name Lunar250. However, it describes the intended use (the Dust Chamber, which replicates highland conditions with fines up to 250 µm), not a lunar reference sample. It fits an application or usage field better; for this field, the correct value is 'lunar highland' (already covered)."
+     },
+     {
+      "field": "particle_size_distribution [0–250 μm]",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p.3. Section 3.1 on p.6 also says 'top cut of 250 μm'."
+     },
+     {
+      "field": "particle_size_distribution [fine silt to medium sand]",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.1, p.6, verbatim (NGI)."
+     },
+     {
+      "field": "bulk_density [loose 1.14; tapped 1.45 g/cm3]",
+      "verdict": "CONFIRMED",
+      "note": "Table 2, p.15. Figure 5B agrees: loose ~11.2 kN/m3 (≈1.14 g/cm3), tapped ~14.2 kN/m3 (≈1.45 g/cm3)."
+     },
+     {
+      "field": "bulk_density_range [1.21–1.9 g/cm3]",
+      "verdict": "CONFIRMED",
+      "note": "Table 2, p.15. Equals 11.87 and 18.67 kN/m3 divided by 9.807 (1.21 and 1.90). The same method caveat as Lunar90 applies (NGI in-house method per Section 2.6)."
+     },
+     {
+      "field": "bulk_density_range [11.87 and 18.67 kN/m3]",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.4, p.7, verbatim."
+     },
+     {
+      "field": "particle_morphology [VisiSize 2D sphericity 0.47]",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.2, p.7, verbatim."
+     },
+     {
+      "field": "mineral:Ca plagioclase (AMICS) 90.39%",
+      "verdict": "CONFIRMED",
+      "note": "p.9, verbatim."
+     },
+     {
+      "field": "mineral:quartz (AMICS) 3.74%",
+      "verdict": "CONFIRMED",
+      "note": "p.9, verbatim."
+     },
+     {
+      "field": "mineral:muscovite (AMICS) 1.30%",
+      "verdict": "CONFIRMED",
+      "note": "p.10, verbatim."
+     },
+     {
+      "field": "mineral:Ca-Al silicates (AMICS) 3.01%",
+      "verdict": "CONFIRMED",
+      "note": "p.10, verbatim."
+     },
+     {
+      "field": "mineral:trace phases (AMICS)",
+      "verdict": "CONFIRMED",
+      "note": "p.10, verbatim (Mg-Al silicates are a trace phase here)."
+     },
+     {
+      "field": "mineral:anorthite (Mineralogic) 87.4–89.9 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.12, joint."
+     },
+     {
+      "field": "mineral:andesine (Mineralogic) <0.4 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.12, joint."
+     },
+     {
+      "field": "mineral:anorthoclase (Mineralogic) up to 0.1 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.12, joint."
+     },
+     {
+      "field": "mineral:quartz (Mineralogic) 5.3 wt%",
+      "verdict": "CONFIRMED",
+      "note": "p.12, assigned to Lumina250 by name ('respectively'). The Figure 7A Mineralogic bar (~5%) agrees."
+     },
+     {
+      "field": "mineral:clinozoisite (Mineralogic) 3.1–5.8 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.12, joint."
+     },
+     {
+      "field": "mineral:additional minor/trace phases (Mineralogic)",
+      "verdict": "CONFIRMED",
+      "note": "pp.12–13, joint."
+     },
+     {
+      "field": "mineral:plagioclase (XRD, bytownite An85)",
+      "verdict": "CONFIRMED",
+      "note": "pp.10–11, verbatim. The 'no wt% given' annotation is wrong: p.16 gives >85 wt% (see missed)."
+     },
+     {
+      "field": "oxide:SiO2 48.4–49.8 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:TiO2 0.05–0.1 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:MgO 0.1–0.4 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:Al2O3 30–31.2 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:CaO 14.9–15.5 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:Na2O 2.3–2.5 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "not_stated list",
+      "verdict": "CONFIRMED",
+      "note": "None of these fields has a value for Lumina250 in the main text. The µCT 3D shape analysis was run on Lumina2000 only."
+     }
+    ],
+    "missed": [
+     {
+      "field": "mineral:plagioclase (XRD quantitative, joint)",
+      "value": ">85 wt% plagioclase; <15 wt% other major/minor phases (all Lumina samples)",
+      "table": "Section 4.2 running text (Figure 13)",
+      "page": "16",
+      "quote": "The Lumina samples represent significantly higher plagioclase content (>85 wt%) and contain less than 15 wt% of other (major or minor) mineral phases that are present in the lunar regolith sampled by the Apollo missions."
+     },
+     {
+      "field": "lunar_sample_reference (comparison, joint)",
+      "value": "Apollo 16 (highland): near-identical Al2O3, TiO2, CaO; plagioclase content comparable to some Apollo-16 samples",
+      "table": "Section 4.2 running text / Figures 12, 13",
+      "page": "13–14, 16",
+      "quote": "The Lumina simulants display almost identical Al2O3, TiO2, and CaO values to the Apollo-16 (highland) samples (Figure 12) that show 2 wt% less silica."
+     },
+     {
+      "field": "particle_morphology (joint, qualitative)",
+      "value": "irregular/angular shapes (sphericity <0.6); immature regolith counterpart",
+      "table": "Section 4.1 running text / Figure 9B",
+      "page": "13",
+      "quote": "The Lumina samples therefore represent the immature counterpart of the lunar regolith, with irregular/angular (<0.6) shapes (Figure 9B)."
+     },
+     {
+      "field": "particle_size_distribution (Vulcan sieving)",
+      "value": "Bulk of mass in 125, 63 and 25 μm meshes, 63 μm fraction ~half of that; ca. 30% passed 25 μm; only a small proportion meets the 250 μm top cut",
+      "table": "Section 3.1 running text / Figure 1",
+      "page": "6",
+      "quote": "only a small proportion of each Lumina250 subsample meets the 250 μm top cut. The bulk of the material by mass falls into the 125 μm, 63 μm, and 25 μm mesh sizes, with 63 μm material representing approximately half of this material. ... This was particularly evident with the 25 μm material, which passed ca. 30% of material."
+     },
+     {
+      "field": "particle_size_distribution (comparison to lunar average PSD)",
+      "value": "Best approximation of the average lunar regolith PSD curve (Carrier 2003) among the Lumina samples",
+      "table": "Section 4.1 running text / Figure 9A",
+      "page": "13",
+      "quote": "Based on both the internal (Vulcan Facility) and external (NGI) analyses of the Lumina samples, it can be stated, that Lumina250 approximates best to the average PSD curve of the lunar regolith data (Figure 9A)."
+     }
+    ]
+   }
+  },
+  {
+   "name": "Lunar2000",
+   "reading": {
+    "names_quote": "Lumina Sustainable Materials Ltd. | Lunar2000 | Lumina2000 | 0–2000 μm | 5 kg (row of TABLE 1)",
+    "names_location": "Table 1, page 3",
+    "values": [
+     {
+      "field": "institution",
+      "value": "Lumina Sustainable Materials Ltd.",
+      "table": "Table 1",
+      "page": "3",
+      "quote": "Lumina Sustainable Materials Ltd. Lunar2000 Lumina2000 0–2000 μm 5 kg"
+     },
+     {
+      "field": "lunar_sample_reference",
+      "value": "lunar highland",
+      "table": "Table 1 caption / Conclusion",
+      "page": "3, 17",
+      "quote": "TABLE 1 The three lunar highland simulants purchased from Lumina Sustainable Materials Ltd. ...' (p.3); 'the highland simulants (Lunar90, -250 and −2000)' (p.17)"
+     },
+     {
+      "field": "particle_size_distribution",
+      "value": "0–2000 μm",
+      "table": "Table 1",
+      "page": "3",
+      "quote": "0–2000 μm (Particle-size range (PSR) column, Lumina2000 row)"
+     },
+     {
+      "field": "particle_size_distribution",
+      "value": "coarse sand to fine gravel",
+      "table": "running text, Section 3.1",
+      "page": "6",
+      "quote": "coarse sand to fine gravel for Lumina 2000"
+     },
+     {
+      "field": "particle_size_mean_um",
+      "value": "2.4 mm (average particle size; note: printed in millimetres, not micrometres — reported verbatim, not converted)",
+      "table": "Section 3.2 Particle shape, running text / Figure 2",
+      "page": "7",
+      "quote": "Three-dimensional particle shape analysis was carried out by NGI on the Lumina 2000 sample. Figure 2 shows summary plots of the morphological characteristics of the grains. The average particle size is 2.4 mm"
+     },
+     {
+      "field": "bulk_density",
+      "value": "loose 1.42 g/cm3; tapped 1.62 g/cm3",
+      "table": "Table 2",
+      "page": "15",
+      "quote": "ASTM D4781-18 procedures | Lumina2000 | 1.33–1.79 / 1.42  1.62 | This work"
+     },
+     {
+      "field": "bulk_density_range",
+      "value": "1.33–1.79 (g/cm3, min-max dry unit weight, density-equivalent)",
+      "table": "Table 2",
+      "page": "15",
+      "quote": "1.33–1.79 (first line of the Lumina2000 cell)"
+     },
+     {
+      "field": "bulk_density_range",
+      "value": "13.10 and 17.63 kN/m3 (min and max dry unit weight, un-converted)",
+      "table": "running text, Section 3.4",
+      "page": "7",
+      "quote": "Lumina2000 has values of 13.10 and 17.63 kN/m3, respectively."
+     },
+     {
+      "field": "particle_morphology",
+      "value": "3D µCT morphology (NGI, Lumina2000 sample only): average volume 73 mm3; average volume-to-surface ratio ca. 14; average angularity 0.41; average aspect ratio 2.14; average sphericity 0.55",
+      "table": "Section 3.2 Particle shape, running text / Figure 2",
+      "page": "7",
+      "quote": "the average volume is 73 mm3, the average volume to surface ratio is ca. 14, while the average angularity is 0.41. The average aspect ratio is 2.14, and the average sphericity is 0.55."
+     },
+     {
+      "field": "particle_morphology",
+      "value": "average sphericity (VisiSize, 2D, Vulcan Facility) = 0.51 (different method/value from the 0.55 µCT sphericity above)",
+      "table": "running text Section 3.2 / Figure 3",
+      "page": "7",
+      "quote": "The average sphericity is 0.51 for Lumina 2000, 0.47 for Lumina250 and 0.46 for Lumina90 (Figure 3)."
+     },
+     {
+      "field": "mineral:Ca plagioclase (AMICS, area%)",
+      "value": "93.24% (major phase)",
+      "table": "AMICS modal mineralogy, running text (Supplementary Figure S7)",
+      "page": "10",
+      "quote": "Lumina 2000 (Supplementary Figure S7) represents Ca plagioclase (93.24%) as the major phase, quartz (1.03%),"
+     },
+     {
+      "field": "mineral:quartz (AMICS, area%)",
+      "value": "1.03% (minor phase)",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "10",
+      "quote": "quartz (1.03%), muscovite (1.31%), Ca-Al silicates (2.85%) as minor phases"
+     },
+     {
+      "field": "mineral:muscovite (AMICS, area%)",
+      "value": "1.31% (minor phase)",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "10",
+      "quote": "muscovite (1.31%), Ca-Al silicates (2.85%) as minor phases"
+     },
+     {
+      "field": "mineral:Ca-Al silicates (AMICS, area%)",
+      "value": "2.85% (minor phase)",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "10",
+      "quote": "Ca-Al silicates (2.85%) as minor phases"
+     },
+     {
+      "field": "mineral:trace phases (AMICS, no % given)",
+      "value": "K feldspar, Na plagioclase, Na-Ca plagioclase, biotite, chlorite, Mg-Al silicates, clinopyroxene, amphibole, volcanic glass, titanite and calcite",
+      "table": "AMICS modal mineralogy, running text",
+      "page": "10",
+      "quote": "and K feldspar, Na plagioclase, Na-Ca plagioclase, biotite, chlorite, Mg-Al silicates, clinopyroxene, amphibole, volcanic glass, titanite and calcite as trace minerals."
+     },
+     {
+      "field": "mineral:anorthite (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "87.4–89.9 wt% (joint, all three Lumina products)",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "The samples predominantly consist of anorthite, which comprises 87.4–89.9 wt% of the samples."
+     },
+     {
+      "field": "mineral:andesine (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "less than 0.4 wt% (joint, trace)",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "Andesine is only detected as a trace component, constituting less than 0.4 wt%"
+     },
+     {
+      "field": "mineral:anorthoclase (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "up to 0.1 wt% (joint, trace)",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "anorthoclase is present at even lower levels, up to 0.1 wt%."
+     },
+     {
+      "field": "mineral:quartz (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "1.0 wt%",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "Quartz is a minor component, found in Lumina90 and Lumina250 at concentrations of 3.1 wt% and 5.3 wt%, respectively, and in Lumina2000 at 1.0 wt%."
+     },
+     {
+      "field": "mineral:clinozoisite (Mineralogic SEM-EDS, petrolab, wt%)",
+      "value": "3.1–5.8 wt% (joint)",
+      "table": "Section 3.6.4, running text",
+      "page": "12",
+      "quote": "Other mineral phases within the Lumina samples are clinozoisite, present at 3.1–5.8 wt%."
+     },
+     {
+      "field": "mineral:additional minor/trace phases (Mineralogic SEM-EDS, petrolab, no % given)",
+      "value": "mica group minerals, clay minerals, carbonates, basaltic glass, sulphides, augite, accessory phases, iron oxides, and enstatite (joint)",
+      "table": "Section 3.6.4, running text",
+      "page": "12–13",
+      "quote": "Additional minor to trace phases consist of mica group minerals, clay minerals, carbonates, basaltic glass, sulphides, augite, accessory phases, iron oxides, and enstatite."
+     },
+     {
+      "field": "mineral:plagioclase (XRD, identified as bytownite An85)",
+      "value": "comprises the bulk of the mineralogy (no wt% given); joint statement",
+      "table": "Section 3.6.2 XRD, running text",
+      "page": "10–11",
+      "quote": "plagioclases comprise the bulk of the mineralogy in all samples analysed that appear to be bytownite (An85)... The Lumina samples together with the plagioclase, are composed of quartz, clinozoisite, chlorite, muscovite, biotite, and trace amount of amphibole."
+     },
+     {
+      "field": "oxide:SiO2",
+      "value": "48.4-49.8 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "the SiO2 content of the Lumina samples have values between 48.4-49.8 wt%"
+     },
+     {
+      "field": "oxide:TiO2",
+      "value": "0.05–0.1 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "TiO2 contents of 0.05–0.1 wt%"
+     },
+     {
+      "field": "oxide:MgO",
+      "value": "0.1–0.4 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "MgO contents of 0.1–0.4 wt%"
+     },
+     {
+      "field": "oxide:Al2O3",
+      "value": "30-31.2 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "Al2O3 as of 30-31.2 wt%"
+     },
+     {
+      "field": "oxide:CaO",
+      "value": "14.9–15.5 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "CaO of 14.9–15.5 wt%"
+     },
+     {
+      "field": "oxide:Na2O",
+      "value": "2.3–2.5 wt% (joint range)",
+      "table": "running text Section 3.6",
+      "page": "8",
+      "quote": "Na2O compositions of 2.3–2.5 wt%"
+     }
+    ],
+    "notes": "particle_size_d50 not stated for this product (the paper's only D50 figure, ~72 μm, is for real lunar-surface regolith, p.13, not for Lumina2000). Unlike Lumina90/250, Lumina2000 DOES have a stated mean/average particle size (2.4 mm from 3D µCT, p.7) plus full 3D shape-descriptor statistics (volume, volume:surface ratio, angularity, aspect ratio, sphericity) because the µCT/3D shape analysis (Section 2.3.1/3.2) was performed only on the Lumina2000 sample; note two different sphericity values are reported for Lumina2000 by two different methods (0.55 by 3D µCT/NGI vs 0.51 by 2D VisiSize/Vulcan) — both are given, not averaged. No particle/grain density value, specific gravity, cohesion, friction angle, angle of repose, pH, or glass content % appears anywhere in the paper for this product. Oxide values and most Mineralogic wt% values are joint ranges for all three Lumina samples (no formal in-text table; true per-product tables are Supplementary S4–S9, absent from this PDF) and are repeated identically across all three products per the task's joint-value rule; only quartz (Mineralogic method) and the AMICS modal percentages are product-specific."
+   },
+   "check": {
+    "names_verdict": "CONFIRMED",
+    "checks": [
+     {
+      "field": "institution [Lumina Sustainable Materials Ltd., Table 1]",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p.3: 'Lumina Sustainable Materials Ltd. | Lunar2000 | Lumina2000 | 0–2000 μm | 5 kg'."
+     },
+     {
+      "field": "lunar_sample_reference [lunar highland]",
+      "verdict": "CONFIRMED",
+      "note": "Table 1 caption on p.3 and Conclusion on p.17."
+     },
+     {
+      "field": "particle_size_distribution [0–2000 μm]",
+      "verdict": "CONFIRMED",
+      "note": "Table 1, p.3. Section 3.1 on p.6 also says 'top cut of 2000 μm'."
+     },
+     {
+      "field": "particle_size_distribution [coarse sand to fine gravel]",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.1, p.6, verbatim. Under ISO 14688, 'fine gravel' starts at 2 mm, above the stated 0–2000 μm range. This is the NGI reading as printed."
+     },
+     {
+      "field": "particle_size_mean_um [2.4 mm]",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.2, p.7, verbatim, and explicitly about the Lumina 2000 sample. Label the value. Figure 2 marks this panel 'Major axis length', and its histogram spans about 1.1–4.4 mm, so the 2.4 mm is the mean µCT major-axis length of the scanned grains (NGI). It is not a sieve or laser mean, which is why it exceeds the 2000 μm top cut. Store it as 2.4 mm (µCT major axis), not as 2400 μm 'mean particle size' without a qualifier."
+     },
+     {
+      "field": "bulk_density [loose 1.42; tapped 1.62 g/cm3]",
+      "verdict": "CONFIRMED",
+      "note": "Table 2, p.15. Figure 5B agrees: loose ~14.0 kN/m3 (≈1.42 g/cm3), tapped ~15.9 kN/m3 (≈1.62 g/cm3)."
+     },
+     {
+      "field": "bulk_density_range [1.33–1.79 g/cm3]",
+      "verdict": "CONFIRMED",
+      "note": "Table 2, p.15, as printed. Converting 13.10 and 17.63 kN/m3 gives 1.336 and 1.798, so the table truncates rather than rounds. The NGI in-house method caveat applies."
+     },
+     {
+      "field": "bulk_density_range [13.10 and 17.63 kN/m3]",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.4, p.7, verbatim."
+     },
+     {
+      "field": "particle_morphology [3D µCT: volume 73 mm3, V/S ~14, angularity 0.41, aspect ratio 2.14, sphericity 0.55]",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.2, p.7, verbatim, and Lumina2000 only. The paper contradicts itself on aspect ratio. In Figure 2 the dashed 'Average' line of the aspect-ratio panel sits at ≈3.1 (median ≈2.4), not at 2.14. The other four values match the figure's average lines (volume ≈72, V/S ≈14, angularity ≈0.41, sphericity ≈0.55). Keep 2.14 traced to the text and add a caveat."
+     },
+     {
+      "field": "particle_morphology [VisiSize 2D sphericity 0.51]",
+      "verdict": "CONFIRMED",
+      "note": "Section 3.2, p.7, verbatim. This is a different method from the 0.55 µCT value, and both are correctly kept separate."
+     },
+     {
+      "field": "mineral:Ca plagioclase (AMICS) 93.24%",
+      "verdict": "CONFIRMED",
+      "note": "p.10, verbatim."
+     },
+     {
+      "field": "mineral:quartz (AMICS) 1.03%",
+      "verdict": "CONFIRMED",
+      "note": "p.10, verbatim."
+     },
+     {
+      "field": "mineral:muscovite (AMICS) 1.31%",
+      "verdict": "CONFIRMED",
+      "note": "p.10, verbatim."
+     },
+     {
+      "field": "mineral:Ca-Al silicates (AMICS) 2.85%",
+      "verdict": "CONFIRMED",
+      "note": "p.10, verbatim."
+     },
+     {
+      "field": "mineral:trace phases (AMICS)",
+      "verdict": "CONFIRMED",
+      "note": "p.10, verbatim. Do not confuse it with the association percentages that follow (quartz 3.3%, muscovite 5.7%, Ca-Al silicates 8.3%, etc.). Those describe what Ca plagioclase is associated with and are not modal abundances; the reader correctly left them out."
+     },
+     {
+      "field": "mineral:anorthite (Mineralogic) 87.4–89.9 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.12, joint."
+     },
+     {
+      "field": "mineral:andesine (Mineralogic) <0.4 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.12, joint."
+     },
+     {
+      "field": "mineral:anorthoclase (Mineralogic) up to 0.1 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.12, joint."
+     },
+     {
+      "field": "mineral:quartz (Mineralogic) 1.0 wt%",
+      "verdict": "CONFIRMED",
+      "note": "p.12: 'in Lumina2000 at 1.0 wt%'. The Figure 7A Mineralogic bar (~1%) agrees."
+     },
+     {
+      "field": "mineral:clinozoisite (Mineralogic) 3.1–5.8 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.12, joint."
+     },
+     {
+      "field": "mineral:additional minor/trace phases (Mineralogic)",
+      "verdict": "CONFIRMED",
+      "note": "pp.12–13, joint."
+     },
+     {
+      "field": "mineral:plagioclase (XRD, bytownite An85)",
+      "verdict": "CONFIRMED",
+      "note": "pp.10–11, verbatim. The 'no wt% given' annotation is wrong: p.16 gives >85 wt% (see missed)."
+     },
+     {
+      "field": "oxide:SiO2 48.4–49.8 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:TiO2 0.05–0.1 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:MgO 0.1–0.4 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:Al2O3 30–31.2 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:CaO 14.9–15.5 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "oxide:Na2O 2.3–2.5 wt% joint",
+      "verdict": "CONFIRMED",
+      "note": "p.8, XRF, joint."
+     },
+     {
+      "field": "not_stated list",
+      "verdict": "CONFIRMED",
+      "note": "The main text gives no D50, particle density, specific gravity, cohesion, friction angle, angle of repose, pH or glass % for Lumina2000."
+     }
+    ],
+    "missed": [
+     {
+      "field": "mineral:plagioclase (XRD quantitative, joint)",
+      "value": ">85 wt% plagioclase; <15 wt% other major/minor phases (all Lumina samples)",
+      "table": "Section 4.2 running text (Figure 13)",
+      "page": "16",
+      "quote": "The Lumina samples represent significantly higher plagioclase content (>85 wt%) and contain less than 15 wt% of other (major or minor) mineral phases that are present in the lunar regolith sampled by the Apollo missions."
+     },
+     {
+      "field": "lunar_sample_reference (comparison, joint)",
+      "value": "Apollo 16 (highland): near-identical Al2O3, TiO2, CaO; plagioclase content comparable to some Apollo-16 samples",
+      "table": "Section 4.2 running text / Figures 12, 13",
+      "page": "13–14, 16",
+      "quote": "The Lumina simulants display almost identical Al2O3, TiO2, and CaO values to the Apollo-16 (highland) samples (Figure 12) that show 2 wt% less silica."
+     },
+     {
+      "field": "particle_morphology (joint, qualitative)",
+      "value": "irregular/angular shapes (sphericity <0.6); immature regolith counterpart",
+      "table": "Section 4.1 running text / Figure 9B",
+      "page": "13",
+      "quote": "The Lumina samples therefore represent the immature counterpart of the lunar regolith, with irregular/angular (<0.6) shapes (Figure 9B)."
+     },
+     {
+      "field": "particle_size_distribution (Vulcan sieving)",
+      "value": "Largest mass fraction retained on the 1000 μm mesh, second largest on 500 μm; only a very small portion at 2000 μm; consistent across 5 subsamples",
+      "table": "Section 3.1 running text / Figure 1",
+      "page": "6",
+      "quote": "By mass, only a very small portion of each subsample was 2000 μm, whereas the largest percentage of each subsample fell into the 1,000 μm and the 500 μm mesh stopped the second largest portion of the subsample."
+     },
+     {
+      "field": "particle_size_distribution (comparison to lunar average PSD)",
+      "value": "Represents the coarse fraction of the lunar regolith PSD",
+      "table": "Section 4.1 running text / Figure 9A",
+      "page": "13",
+      "quote": "whereas Lumina2000 represents the coarse fraction of the lunar regolith."
+     }
+    ]
+   }
+  }
+ ]
+}

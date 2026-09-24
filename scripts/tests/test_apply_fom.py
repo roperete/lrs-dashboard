@@ -74,6 +74,19 @@ class ApplyFomTests(unittest.TestCase):
         self.assertTrue(rid.startswith("RN-S051-"))
         self.assertEqual(self.con.execute("SELECT names_simulant FROM references_ WHERE reference_id=?", (rid,)).fetchone(), (1,))
 
+    def test_a_reused_unchecked_reference_records_the_confirmed_mention(self):
+        # JSC-1A lists the guide but nobody has checked that it names JSC-1A; a confirmed score row does
+        self.con.execute("INSERT INTO references_ (reference_id, simulant_id, title) VALUES ('R132','S028','Lunar Regolith Simulant User''s Guide Revision A')")
+        apply_document(self.con, result([row("JSC-1A", "Chemistry", "0.88")], ["CONFIRMED"]), checked_on="2026-09-25")
+        self.assertEqual(self.con.execute("SELECT reference_id FROM figures_of_merit").fetchone(), ("R132",))
+        self.assertEqual(self.con.execute("SELECT names_simulant, mention_quote, local_path, checked_on FROM references_ WHERE reference_id='R132'").fetchone(),
+                         (1, "JSC-1A Chemistry 0.88", "papers/Slabic_2024.pdf", "2026-09-25"))
+
+    def test_a_reference_confirmed_not_to_name_the_product_is_left_alone(self):
+        self.con.execute("INSERT INTO references_ (reference_id, simulant_id, title, names_simulant) VALUES ('R132','S028','Lunar Regolith Simulant User''s Guide Revision A',0)")
+        apply_document(self.con, result([row("JSC-1A", "Chemistry", "0.88")], ["CONFIRMED"]), checked_on="2026-09-25")
+        self.assertEqual(self.con.execute("SELECT names_simulant, mention_quote FROM references_ WHERE reference_id='R132'").fetchone(), (0, None))
+
     def test_refuted_and_unmatched_rows_are_not_stored(self):
         log = apply_document(self.con, result([row("JSC-1A", "Shape", "0.7"), row("MLS-1 (processed for glass)", "Composition", "0.9"),
                                                row("KLS-1", "Size", "0.8")], ["REFUTED", "CONFIRMED", "CONFIRMED"]), checked_on="2026-09-25")
@@ -84,9 +97,36 @@ class ApplyFomTests(unittest.TestCase):
 
     def test_applying_twice_does_not_duplicate(self):
         r = result([row("MLS-1", "Composition", "0.82")], ["CONFIRMED"])
-        apply_document(self.con, r, checked_on="2026-09-25"); apply_document(self.con, r, checked_on="2026-09-25")
+        apply_document(self.con, r, checked_on="2026-09-25"); log = apply_document(self.con, r, checked_on="2026-09-25")
         self.assertEqual(self.con.execute("SELECT count(*) FROM figures_of_merit").fetchone(), (1,))
+        self.assertEqual([e["outcome"] for e in log], ["already stored"])   # a re-run's log still lists the row
 
     def test_a_score_that_is_not_a_number_is_not_stored(self):
         log = apply_document(self.con, result([row("MLS-1", "Composition", "n/a")], ["CONFIRMED"]), checked_on="2026-09-25")
         self.assertEqual(self.con.execute("SELECT count(*) FROM figures_of_merit").fetchone(), (0,))
+
+
+class MethodQualifierTests(unittest.TestCase):
+    """A measurement method in brackets is not a different product.
+
+    Schrader et al. 2010, Table 5, "FoM size results for all simulants", writes "JSC-1A (dry
+    sieve)", "NU-LHT-1M (laser diffractometry)": the same product, its size distribution
+    measured one way or another. "MLS-1 (processed for glass)" is a different material."""
+
+    def test_the_method_moves_into_the_property(self):
+        from apply_fom import split_method
+        self.assertEqual(split_method("JSC-1A (dry sieve)"), ("JSC-1A", "dry sieve"))
+        self.assertEqual(split_method("NU-LHT-1M (laser diffractometry)"), ("NU-LHT-1M", "laser diffractometry"))
+        self.assertEqual(split_method("Chenobi (dry sieve + laser diffractometry)"), ("Chenobi", "dry sieve + laser diffractometry"))
+        self.assertEqual(split_method("OB-1 (section image analysis)"), ("OB-1", "section image analysis"))
+        self.assertEqual(split_method("MLS-1 (processed for glass)"), ("MLS-1 (processed for glass)", None))
+        self.assertEqual(split_method("OB-1(A*)"), ("OB-1(A*)", None))
+
+    def test_a_method_qualified_row_is_stored_on_the_base_product(self):
+        tmp = tempfile.TemporaryDirectory(); self.addCleanup(tmp.cleanup)
+        con = sqlite3.connect(Path(tmp.name) / "lrs.sqlite"); self.addCleanup(con.close)
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text()); ensure_provenance_schema(con)
+        con.execute("INSERT INTO simulants (simulant_id, name) VALUES ('S028','JSC-1A')"); con.commit()
+        apply_document(con, result([row("JSC-1A (dry sieve)", "Particle size distribution", "0.35")], ["CONFIRMED"]), checked_on="2026-09-25")
+        self.assertEqual(con.execute("SELECT simulant_id, property, property_label FROM figures_of_merit").fetchone(),
+                         ("S028", "particle_size", "Particle size distribution (dry sieve)"))

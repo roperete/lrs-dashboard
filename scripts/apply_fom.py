@@ -57,6 +57,19 @@ def match_simulant(printed: str, names: dict) -> str | None:
     return None
 
 
+# Measurement methods a document puts in brackets after a product name. They say how a
+# property was measured, not which product it is; anything else in brackets is kept.
+METHODS = re.compile(r"^\s*(dry sieve|wet sieve|laser diffract\w*|section image analysis|image analysis|sieve|"
+                     r"dry sieve \+ laser diffract\w*|laser diffract\w* \+ dry sieve)\s*$", re.I)
+
+
+def split_method(printed: str) -> tuple[str, str | None]:
+    m = re.match(r"^(.*?)\s*\(([^()]*)\)\s*$", printed or "")
+    if m and METHODS.match(m.group(2)):
+        return m.group(1).strip(), m.group(2).strip()
+    return printed, None
+
+
 def _norm(t):
     return re.sub(r"[^a-z0-9]", "", re.sub(r"\[.*?\]", "", (t or "").lower()))
 
@@ -66,14 +79,13 @@ def reference_for(con, sid, reading, checked_on, quote) -> str:
     path = reading.get("document_path") or ""
     title = reading.get("document_title") or ""
     t = _norm(title)[:60]
-    for rid, rtitle, rtext, lp in con.execute("SELECT reference_id, title, reference_text, local_path FROM references_ WHERE simulant_id=?", (sid,)):
-        if path and lp and Path(lp).name == Path(path).name:
-            return rid
+    for rid, rtitle, rtext, lp in con.execute("SELECT reference_id, title, reference_text, local_path FROM references_ WHERE simulant_id=?", (sid,)).fetchall():
         c = _norm(f"{rtitle or ''} {rtext or ''}")
-        for probe in (_norm(rtitle)[:40], ):
-            if len(probe) >= 25 and probe in _norm(title):
-                return rid
-        if len(t) >= 25 and t[:40] in c:
+        probe = _norm(rtitle)[:40]
+        if (path and lp and Path(lp).name == Path(path).name) or (len(probe) >= 25 and probe in _norm(title)) or (len(t) >= 25 and t[:40] in c):
+            # a confirmed score row names the product: record it on a row nobody has checked yet
+            con.execute("UPDATE references_ SET names_simulant=1, mention_quote=?, local_path=COALESCE(local_path, ?), checked_on=? "
+                        "WHERE reference_id=? AND names_simulant IS NULL", (quote, path or None, checked_on, rid))
             return rid
     n = con.execute("SELECT count(*) FROM references_ WHERE reference_id LIKE ?", (f"RN-{sid}-%",)).fetchone()[0]
     rid = f"RN-{sid}-{n + 1}"
@@ -97,7 +109,8 @@ def apply_document(con: sqlite3.Connection, res: dict, checked_on: str | None = 
         if verdicts.get(i) != "CONFIRMED":
             log.append({**base, "outcome": "not stored: refuted by the checker" if verdicts.get(i) == "REFUTED" else "not stored: the checker could not confirm"})
             continue
-        sid = match_simulant(r["simulant"], names)
+        product, method = split_method(r["simulant"])
+        sid = match_simulant(product, names)
         if not sid:
             log.append({**base, "outcome": "not stored: no simulant of exactly this name"})
             continue
@@ -107,13 +120,15 @@ def apply_document(con: sqlite3.Connection, res: dict, checked_on: str | None = 
             continue
         rid = reference_for(con, sid, reading, checked_on, r["quote"])
         ref_sample = (r.get("reference") or "").strip() or None
-        fid = f"FOM-{sid}-{doc}-{_key(r['property'])[:20]}-{_key(ref_sample or 'na')[:20]}"
+        label = r["property"].strip() + (f" ({method})" if method else "")
+        fid = f"FOM-{sid}-{doc}-{_key(label)[:34]}-{_key(ref_sample or 'na')[:20]}"
         have = con.execute("SELECT score FROM figures_of_merit WHERE fom_id=?", (fid,)).fetchone()
         if have and abs(have[0] - p.value) < 1e-9:
+            log.append({**base, "simulant_id": sid, "reference_id": rid, "outcome": "already stored"})
             continue
         con.execute("INSERT OR REPLACE INTO figures_of_merit (fom_id, simulant_id, property, property_label, reference_sample, score, scale, "
                     "score_text, reference_id, location, quote) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
-                    (fid, sid, property_kind(r["property"]), r["property"].strip(), ref_sample, p.value, (r.get("scale") or "").strip() or None,
+                    (fid, sid, property_kind(r["property"]), label, ref_sample, p.value, (r.get("scale") or "").strip() or None,
                      r["score"], rid, f"{r.get('table', '')}, p.{r.get('page', '')}".strip(", "), r["quote"]))
         log.append({**base, "simulant_id": sid, "reference_id": rid, "outcome": "stored"})
     con.commit()

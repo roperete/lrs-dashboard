@@ -303,6 +303,23 @@ def _quotes(root: Path) -> dict:
                 if ":" in f:
                     kind, name = f.split(":", 1)
                     q[(s["simulant_id"], kind, _norm(name))].insert(0, v["quote"])
+    # products added from a paper (add_simulant.py): findings by product name, ids from its log
+    ids = {}
+    for fp in glob.glob(str(root / "documentation/add-simulant-log-*.json")):
+        ids.update({e["name"]: e["simulant_id"] for e in json.load(open(fp)) if e.get("outcome") == "record created"})
+    for fp in sorted(glob.glob(str(root / "documentation/*-findings-*.json"))):
+        try:
+            data = json.load(open(fp))
+        except json.JSONDecodeError:
+            continue
+        for prod in (data.get("products", []) if isinstance(data, dict) else []):
+            if prod.get("name") not in ids or not prod.get("check"):
+                continue
+            for v in (prod.get("reading") or {}).get("values", []):
+                f = v.get("field") or ""
+                if ":" in f and v.get("quote"):
+                    kind, name = f.split(":", 1)
+                    q[(ids[prod["name"]], kind, _norm(re.sub(r"\s*\(.*$", "", name)))].append(v["quote"])
     return q
 
 
