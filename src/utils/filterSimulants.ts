@@ -21,10 +21,12 @@ export function filterSimulantsDynamic(
   return simulants.filter(s => {
     // Search query
     if (searchQuery) {
+      // Any of these can be empty on a record (Lunar90/250/2000 have no type or country yet);
+      // an empty field simply does not match.
       const q = searchQuery.toLowerCase();
-      const match = s.name.toLowerCase().includes(q) ||
-        s.country_code.toLowerCase().includes(q) ||
-        s.type.toLowerCase().includes(q) ||
+      const match = (s.name || '').toLowerCase().includes(q) ||
+        (s.country_code || '').toLowerCase().includes(q) ||
+        (s.type || '').toLowerCase().includes(q) ||
         (s.institution || '').toLowerCase().includes(q);
       if (!match) return false;
     }

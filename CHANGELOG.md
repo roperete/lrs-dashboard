@@ -5,6 +5,19 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.18 — 2026-09-25 (staging)
+
+Hotfix: searching in the left panel no longer blanks the page.
+
+**Interface**
+- Typing in the left panel's search box crashed the whole page on the first letter. The three
+  Lumina simulants added in v2.9.17 have no type or country yet, and the search read those
+  fields without allowing them to be empty. An empty field now simply does not match.
+
+**Process**
+- `scripts/check_filters.tsx` runs the search and every filter over the real data file, so an
+  empty field cannot break them unnoticed.
+
 ## v2.9.17 — 2026-09-25 (staging)
 
 Figures of Merit, each traced to the table that prints it; three Lumina highland simulants.

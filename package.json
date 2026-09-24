@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
-    "check:render": "tsx scripts/render_smoke.tsx"
+    "check:render": "tsx scripts/render_smoke.tsx",
+    "check:filters": "tsx scripts/check_filters.tsx"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
