@@ -5,6 +5,24 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.12 — 2026-09-24 (staging)
+
+Wave 3, the last of the provenance run: every simulant has now been read.
+
+**Data**
+- The remaining 20 simulants read by a reader and an independent checker. With wave 3,
+  **all 145 simulants are named in a reference confirmed to name them** — the first test
+  passes in full. References checked against their document: 679 of 708. Verified
+  compositions 60 → 64; physical values with a source 505 → 549; every one of the 801
+  composition rows cites its document.
+- The readers confirmed all twenty are lunar products; none needed the new scope rule.
+- GRC-1 and GRC-3's crystalline-silica rows renamed from `crystalline_silica` for display.
+
+**Open**
+- Descriptive fields — availability, release year, lunar analogue, institution, type — are
+  shown whether or not a document states them. See the owner-decisions file for the counts
+  and the options.
+
 ## v2.9.11 — 2026-09-24 (staging)
 
 Martian simulants retired at the owner's decision: the database covers lunar simulants only.

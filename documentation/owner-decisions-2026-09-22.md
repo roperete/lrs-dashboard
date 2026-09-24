@@ -153,3 +153,38 @@ inconsistent. Either rock-component breakdowns belong in the mineral table — t
 CSM-LMT-1 can be restored from `documentation/value-repair-log-2026-09-23.json` — or they do
 not, and the Exolith rows move out too. OPRH4W30's 90/10/+30 and CMU-1's coal/limestone are
 recipes under either rule.
+
+## Wave 3, 2026-09-24 (20 simulants)
+
+With wave 3 every simulant in the database has been read by a reader and an independent
+checker, and all 145 are named in a confirmed reference. Evidence in
+`documentation/provenance-findings-lean-wave3.json`.
+
+| Id | Name | Finding | Suggest |
+|---|---|---|---|
+| S124 | NEU-1B | Stored lunar_sample_reference "Low-Ti Mare"; every document calls it the **high-Ti** variant (TiO2 6.5%, against NEU-1A's 2.87%). | Set "High-Ti Mare". |
+| S046 | NEU-1 | The series name; Li et al. 2019 introduced two products, NEU-1a and NEU-1b, which are S123 and S124. No document gives values for plain NEU-1. | Keep as a family record with no values, or retire as a series name (same question as NU-LHT). |
+| S102, S056 | OPRFLCROSS1, OPRFLCROSS2 | OPRFLCROSS1 (LPSC 2019) looks like the predecessor name of OPRFLCROSS2, which appears from 2020 and is still sold. | Probable duplicate; confirm with Off Planet Research. |
+| S055 | OPR Agglutinate | Availability contradicted: ESRIC and ISECG both list it as currently available. | Correct. |
+| S039 | LuNOR | SolSys Mining's 2025 ESA workshop abstract describes its availability differently from the stored value. | Check the abstract (NEW1 in the findings) and correct. |
+| S065, S066 | TLH-0, TLM-0 | The data sheets' §1 composition (anorthosite, basalt, altered peridotite) is the feedstock blend; the readers rightly did not record it as mineralogy. | Relevant to the rock-component rule above. |
+
+## Across all waves: descriptive fields are shown without a source
+
+The per-value rule hides a physical property that has no source row. It does not cover the
+descriptive fields, which the page shows regardless. On 2026-09-24:
+
+| Field | Shown | With a source row | Without |
+|---|---:|---:|---:|
+| availability | 145 | 47 | 98 |
+| release_date | 109 | 40 | 69 |
+| lunar_sample_reference | 142 | 80 | 62 |
+| institution | 129 | 106 | 23 |
+| type (highland / mare / general) | 145 | 0 | 145 |
+
+The readers found many of these stated nowhere, and several contradicted — availability most
+often (BHLD20, OUSR-1, OPR Agglutinate, JLU-H, BH-1, FJS-1g…). `type` was never in the readers'
+brief at all. Options: hide the unsourced ones as physical properties are hidden (availability
+would disappear for two thirds of the simulants, and `type` drives the map colours and filters);
+mark them visibly as unverified; or accept them as editorial fields. Your call — this decides
+whether the third test covers the whole page or only its numbers.

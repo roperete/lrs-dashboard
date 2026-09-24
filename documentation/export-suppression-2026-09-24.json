@@ -1,14 +1,14 @@
 {
   "generated": "2026-09-24",
   "rule": "A scalar on simulants is exported only when property_sources has a row for (simulant_id, field). These values remain in lrs.sqlite and are written as null in public/data/data.json.",
-  "count": 83,
+  "count": 79,
   "by_field": {
-    "bulk_density": 22,
-    "friction_angle": 19,
-    "cohesion": 14,
+    "bulk_density": 21,
+    "friction_angle": 18,
+    "cohesion": 13,
     "particle_size_distribution": 7,
-    "specific_gravity": 6,
     "particle_morphology": 5,
+    "specific_gravity": 5,
     "particle_size_d50": 5,
     "glass_content_percent": 3,
     "density_g_cm3": 1,
@@ -19,7 +19,6 @@
     "S132": 5,
     "S051": 4,
     "S121": 4,
-    "S001": 3,
     "S012": 3,
     "S028": 3,
     "S038": 3,
@@ -27,7 +26,6 @@
     "S064": 3,
     "S067": 3,
     "S075": 3,
-    "S082": 3,
     "S120": 3,
     "S138": 3,
     "S013": 2,
@@ -37,6 +35,7 @@
     "S032": 2,
     "S058": 2,
     "S081": 2,
+    "S082": 2,
     "S097": 2,
     "S122": 2,
     "S003": 1,
@@ -55,24 +54,6 @@
     "S105": 1
   },
   "suppressed": [
-    {
-      "simulant_id": "S001",
-      "name": "AGK-2010",
-      "field": "bulk_density",
-      "value": "1.295"
-    },
-    {
-      "simulant_id": "S001",
-      "name": "AGK-2010",
-      "field": "cohesion",
-      "value": "3.85"
-    },
-    {
-      "simulant_id": "S001",
-      "name": "AGK-2010",
-      "field": "friction_angle",
-      "value": "37.67"
-    },
     {
       "simulant_id": "S003",
       "name": "ALS",
@@ -384,12 +365,6 @@
       "name": "GRC-3",
       "field": "friction_angle",
       "value": "42.8"
-    },
-    {
-      "simulant_id": "S082",
-      "name": "GRC-3",
-      "field": "specific_gravity",
-      "value": 2.633
     },
     {
       "simulant_id": "S089",

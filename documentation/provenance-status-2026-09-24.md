@@ -4,9 +4,9 @@ Three tests per simulant. Detail per simulant in the CSV beside this file.
 
 | Test | Result |
 |---|---|
-| 1. Named in at least one reference | pass 127, unknown (references unchecked) 18, FAIL 0 |
-| 2. References checked against the document | 580 confirmed to name their simulant, 14 confirmed not to, 47 unchecked, of 641 |
-| 3. Every value traced to a document | scalars 264 of 347 sourced; composition rows 788 of 788 cited; simulants fully sourced 47, partial 29, none 9, nothing to source 60 |
+| 1. Named in at least one reference | pass 145, unknown (references unchecked) 0, FAIL 0 |
+| 2. References checked against the document | 661 confirmed to name their simulant, 18 confirmed not to, 29 unchecked, of 708 |
+| 3. Every value traced to a document | scalars 276 of 355 sourced; composition rows 801 of 801 cited; simulants fully sourced 53, partial 30, none 7, nothing to source 55 |
 
 ## Simulants failing test 1 (no reference confirmed to name them)
 
@@ -14,7 +14,6 @@ Three tests per simulant. Detail per simulant in the CSV beside this file.
 
 ## Simulants with unsourced values still in the database (hidden from the page)
 
-- AGK-2010 (S001): bulk_density, cohesion, friction_angle
 - ALS (S003): friction_angle
 - BP-1 (S006): bulk_density
 - CHENOBI (S008): particle_morphology
@@ -41,7 +40,7 @@ Three tests per simulant. Detail per simulant in the CSV beside this file.
 - TUBS-M (S069): particle_size_distribution
 - WHU-1 (S075): bulk_density, cohesion, friction_angle
 - JSC-2A (S081): particle_size_d50, particle_size_distribution
-- GRC-3 (S082): bulk_density, friction_angle, specific_gravity
+- GRC-3 (S082): bulk_density, friction_angle
 - NU-LHT-4M (S089): bulk_density
 - FROST-Y (S097): bulk_density, particle_size_distribution
 - CSM-LHT-1 (S103): bulk_density
