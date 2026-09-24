@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useMemo, useCallback } from 'react';
 import { useData, type DataState } from '../hooks/useData';
 import { referenceNumber } from '../utils/references';
+import { lunarCitations, SITE_FIELD_ORDER, SAMPLE_FIELD_ORDER, type LunarCitations } from '../utils/lunarCitations';
 import type { Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, Site, MineralSourcing, PurchaseInfo, PhysicalProperties, PropertySource, FigureOfMerit } from '../types';
 
 interface DataContextValue extends DataState {
@@ -20,6 +21,8 @@ interface DataContextValue extends DataState {
   /** 1-based number of a reference within its simulant's list, in reference_id order.
    *  Derived from the reference list on each call, never stored. */
   refNumber: (simulantId: string, referenceId: string | null | undefined) => number | undefined;
+  /** Numbered sources of a lunar site's or sample's values. */
+  lunarCitationsFor: (entityId: string) => LunarCitations;
 }
 
 const DataCtx = createContext<DataContextValue | null>(null);
@@ -86,6 +89,17 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
       referenceNumber(referencesBySimulant.get(simulantId) ?? [], referenceId),
     [referencesBySimulant]);
 
+  const lunarCitationMap = useMemo(() => {
+    const m = new Map<string, LunarCitations>();
+    for (const s of data.lunarSites) m.set(s.id, lunarCitations(s.id, data.lunarSources, data.lunarDocuments, SITE_FIELD_ORDER));
+    for (const r of data.lunarReference) m.set(r.sample_id, lunarCitations(r.sample_id, data.lunarSources, data.lunarDocuments, SAMPLE_FIELD_ORDER));
+    return m;
+  }, [data.lunarSites, data.lunarReference, data.lunarSources, data.lunarDocuments]);
+
+  const lunarCitationsFor = useCallback(
+    (entityId: string) => lunarCitationMap.get(entityId) ?? lunarCitations(entityId, [], []),
+    [lunarCitationMap]);
+
   const physicalPropsBySimulant = useMemo(() => {
     const m = new Map<string, PhysicalProperties>();
     for (const sim of data.simulants) {
@@ -132,7 +146,8 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     propertySourcesBySimulant,
     fomsBySimulant,
     refNumber,
-  }), [data, compositionBySimulant, chemicalBySimulant, referencesBySimulant, mineralGroupsBySimulant, extraBySimulant, siteBySimulant, mineralSourcingByMineral, purchaseBySimulant, physicalPropsBySimulant, propertySourcesBySimulant, fomsBySimulant, refNumber]);
+    lunarCitationsFor,
+  }), [data, compositionBySimulant, chemicalBySimulant, referencesBySimulant, mineralGroupsBySimulant, extraBySimulant, siteBySimulant, mineralSourcingByMineral, purchaseBySimulant, physicalPropsBySimulant, propertySourcesBySimulant, fomsBySimulant, refNumber, lunarCitationsFor]);
 
   return <DataCtx.Provider value={value}>{children}</DataCtx.Provider>;
 }

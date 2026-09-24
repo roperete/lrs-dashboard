@@ -133,16 +133,39 @@ export interface SimulantExtra {
   reference: string | null;
 }
 
+/** A lunar reference sample. Every field but the number and mission is null when no
+ *  document stating it is on record (lunarSources); compositions keep only sourced rows. */
 export interface LunarReference {
   mission: string;
-  landing_site: string;
-  coordinates: { lat: number; lon: number };
-  type: string;
   sample_id: string;
-  sample_description: string;
-  chemical_composition: Record<string, number>;
-  mineral_composition?: Record<string, number>;
-  sources: string[];
+  landing_site: string | null;
+  coordinates: { lat: number; lon: number } | null;
+  type: string | null;
+  sample_description: string | null;
+  chemical_composition: Record<string, number> | null;
+  mineral_composition: Record<string, number> | null;
+}
+
+/** A document about a lunar site or sample (the simulants' references are per simulant). */
+export interface LunarDocument {
+  document_id: string;
+  title: string;
+  authors?: string | null;
+  year?: string | null;
+  doi?: string | null;
+  url?: string | null;
+  kind?: string | null;
+}
+
+/** The source of one value of a lunar site or sample: field is a column name,
+ *  "oxide:SiO2", "mineral:Plagioclase" or "description". */
+export interface LunarSource {
+  entity_id: string;
+  field: string;
+  document_id: string;
+  location: string | null;
+  quote: string;
+  value_text: string | null;
 }
 
 export interface MineralSourcing {
@@ -196,11 +219,11 @@ export interface LunarSite {
   id: string;
   name: string;
   mission: string;
-  date: string;
+  date: string | null;
   lat: number;
   lng: number;
-  samples_returned?: string;
-  description: string;
+  samples_returned?: string | null;
+  description: string | null;
   type: 'Apollo' | 'Luna' | 'Chang-e' | 'Other';
   geotechnical?: {
     bulk_density?: number;

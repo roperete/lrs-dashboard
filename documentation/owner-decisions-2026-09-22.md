@@ -266,9 +266,10 @@ another against the text and a render of the page; every stored row was confirme
 APL 2024 and Deitrick et al. 2021 print no Figures of Merit. Log: `fom-apply-log-2026-09-25.json`.
 
 Not stored, for a decision:
-- **"OB-1(A*)"** (Slabic 2024, 2 scores). The guide scores OB-1 with this mark; the database
-  holds OB-1, but the mark suggests a variant, so the scores are not attached to it. Attach
-  them to OB-1, or leave them out?
+- **"OB-1(A*)"** (Slabic 2024: mineralogy 82, chemistry 87). The guide's footnote: "Some
+  measurements performed on OB-1 were extrapolated to OB-1A", and "no direct [mineralogical,
+  chemistry] measurement of OB-1A exists". **Decided 2026-09-25 ("keep only OB-1"): both
+  scores are stored on OB-1**, the footnote added to their quote; OB-1A keeps its own five.
 - **APL 2020's 48 ratings** rate suppliers (Exolith, Off Planet Research, Outward Technologies…)
   by colour on 12 characteristics, not products by score. They are not Figures of Merit of a
   product and are not stored.
@@ -293,8 +294,26 @@ Left out, under "empty rather than wrong":
 - Lunar250's abstract line on the Luna Dust Chamber describes its intended use, not a lunar
   reference; its "highland" label comes from Table 1's caption and the conclusion instead.
 
-**Possibly the same deposit as GreenSpar.** The paper places Lumina's anorthosite mine at
-Qaqortorsuaq, Kangerlussuaq Fjord, Greenland; GreenSpar is Greenland "White Mountain"
-anorthosite supplied by Hudson Resources (Gruener et al. 2020). These may be one deposit,
-but no document in the library says so, so the database records nothing about it. They are
-kept as separate products.
+**Lumina and GreenSpar: same deposit, same company line (web search 2026-09-25, checker-confirmed).**
+- Lumina Sustainable Materials is the renamed Hudson Greenland A/S, the licence holder;
+  Hudson Resources Inc. keeps 31% (press release, 3 Jan 2022). Head office in Nuuk, Greenland.
+- White Mountain and Qaqortorsuaq are the same mine (title of the Danish/Greenlandic
+  government's 2025 environmental monitoring report, DCE TR353).
+- So GreenSpar (NASA's name, supplied by Hudson Resources) and the Lumina products come from
+  one deposit through one company line. They stay separate records: different products and
+  size cuts.
+- Lumina's current catalogue does not use the names Lunar90/250/2000. Its "Greenspar
+  15/45/60/2000" data sheets are industrial powders (paints, e-glass); they never mention the
+  Moon and must not be used for the lunar products. No new value for Lunar90/250/2000 was
+  found beyond Zémeny et al. 2024. The 20 t in ESA's LUNA dust chamber were a bespoke batch.
+- Lunar250 gained a second reference naming it: EGU 2026 abstract EGU26-19748.
+
+**For a decision:**
+- **XP A16.** Lumina's current lunar product ("Apollo 16 recipe" analogue), sold on inquiry,
+  no price, no data sheet (lumina.gl/anorthite, live 2026-09-25). Add it as a simulant with
+  supplier, claimed Apollo 16 analogue and the inquiry link, or wait for a data sheet?
+- **Two misplaced map sites** (found while checking the new map projection, not caused by
+  it): FEFU-1 sits on central Moscow with the site name "Russia" (a placeholder; FEFU is the
+  Far Eastern Federal University, Vladivostok); GreenSpar sits in Anchorage, Alaska, filed
+  under Hudson Resources, whose licence and deposit are in Greenland. Move them to a place a
+  source states, or take them off the map?

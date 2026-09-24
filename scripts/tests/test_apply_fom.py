@@ -87,6 +87,14 @@ class ApplyFomTests(unittest.TestCase):
         apply_document(self.con, result([row("JSC-1A", "Chemistry", "0.88")], ["CONFIRMED"]), checked_on="2026-09-25")
         self.assertEqual(self.con.execute("SELECT names_simulant, mention_quote FROM references_ WHERE reference_id='R132'").fetchone(), (0, None))
 
+    def test_an_owner_decided_name_is_stored_on_that_product_with_the_footnote(self):
+        # Slabic 2024 prints "OB-1(A*)": OB-1 measurements extrapolated to OB-1A (owner, 2026-09-25: keep on OB-1)
+        self.con.execute("INSERT INTO simulants (simulant_id, name) VALUES ('S053','OB-1'), ('S054','OB-1A')")
+        apply_document(self.con, result([row("OB-1(A*)", "Chemistry", "0.87")], ["CONFIRMED"]), checked_on="2026-09-25")
+        sid, quote = self.con.execute("SELECT simulant_id, quote FROM figures_of_merit").fetchone()
+        self.assertEqual(sid, "S053")
+        self.assertIn("extrapolated to OB-1A", quote)
+
     def test_refuted_and_unmatched_rows_are_not_stored(self):
         log = apply_document(self.con, result([row("JSC-1A", "Shape", "0.7"), row("MLS-1 (processed for glass)", "Composition", "0.9"),
                                                row("KLS-1", "Size", "0.8")], ["REFUTED", "CONFIRMED", "CONFIRMED"]), checked_on="2026-09-25")

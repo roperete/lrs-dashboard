@@ -9,6 +9,10 @@
     figures cannot describe the product as supplied. Owner's rule: "I'd rather have an empty
     value than a wrong value." The unitless shape figures (angularity, aspect ratio,
     sphericity) contradict nothing and stay.
+  * Lunar250 gains a second reference that names it, found by the Lumina web search of
+    2026-09-25 and confirmed by the checker: Knapmeyer-Endrun et al., EGU General Assembly 2026
+    abstract EGU26-19748 ("a smaller dust lab filled to about 60 cm depth with the Lumina250
+    highland simulant"). It states no value the database stores.
 
 Idempotent; logs to documentation/curation-log-2026-09-25-lumina.json.
 """
@@ -35,8 +39,26 @@ RESTATE = {
 }
 
 
+ADD_REFERENCES = [
+    {"reference_id": "RN-S160-2", "simulant_id": "S160", "reference_type": "abstract",
+     "title": "First seismic in-situ characterization of regolith simulants in LUNA (EGU General Assembly 2026, EGU26-19748)",
+     "authors": "Knapmeyer-Endrun, B., et al.", "year": 2026, "doi": "10.5194/egusphere-egu26-19748",
+     "url": "https://meetingorganizer.copernicus.org/EGU26/EGU26-19748.html",
+     "local_path": "datasheets/Lumina/EGU26-19748_Knapmeyer-Endrun_abstract.html",
+     "mention_quote": "a smaller dust lab filled to about 60 cm depth with the Lumina250 highland simulant"},
+]
+
+
 def curate(con: sqlite3.Connection) -> list[dict]:
     log = []
+    for ref in ADD_REFERENCES:
+        if con.execute("SELECT 1 FROM references_ WHERE reference_id=?", (ref["reference_id"],)).fetchone():
+            continue
+        con.execute("INSERT INTO references_ (reference_id, simulant_id, reference_text, reference_type, title, authors, year, doi, url, "
+                    "names_simulant, mention_quote, local_path, checked_on) VALUES (?,?,?,?,?,?,?,?,?,1,?,?,?)",
+                    (ref["reference_id"], ref["simulant_id"], ref["title"], ref["reference_type"], ref["title"], ref["authors"],
+                     ref["year"], ref["doi"], ref["url"], ref["mention_quote"], ref["local_path"], "2026-09-25"))
+        log.append({"simulant_id": ref["simulant_id"], "reference_id": ref["reference_id"], "action": "reference added: names the product"})
     for (sid, field), why in OMIT.items():
         v = con.execute(f"SELECT {field} FROM simulants WHERE simulant_id=?", (sid,)).fetchone()
         if v and v[0] not in (None, ""):
@@ -65,9 +87,10 @@ def main() -> None:
     con = sqlite3.connect(ROOT / "lrs.sqlite")
     log = curate(con)
     if log:
-        LOG.write_text(json.dumps(log, indent=2, ensure_ascii=False) + "\n")
+        old = json.loads(LOG.read_text()) if LOG.exists() else []
+        LOG.write_text(json.dumps(old + log, indent=2, ensure_ascii=False) + "\n")
     for e in log:
-        print(f"  {e['simulant_id']} {e['field']}: {e['action']}")
+        print(f"  {e['simulant_id']} {e.get('field') or e.get('reference_id')}: {e['action']}")
     print(f"{len(log)} change(s)")
 
 

@@ -6,7 +6,6 @@ import { useDataContext } from './context/DataContext';
 import { useFilters } from './hooks/useFilters';
 import { useMapState } from './hooks/useMapState';
 import { usePanelState } from './hooks/usePanelState';
-import { lunarSites } from './lunarData';
 import { clusterByDistance, altitudeToRadius } from './utils/clusterPoints';
 import type { GlobeViewHandle, ClusterPoint } from './components/map/GlobeView';
 
@@ -45,7 +44,7 @@ export default function App() {
     lunarReference, compositionBySimulant, chemicalBySimulant, referencesBySimulant,
     mineralGroupsBySimulant, extraBySimulant, siteBySimulant,
     mineralSourcingByMineral, purchaseBySimulant, physicalPropsBySimulant, propertySourcesBySimulant,
-    fomsBySimulant, refNumber,
+    fomsBySimulant, refNumber, lunarSites, lunarCitationsFor,
   } = data;
 
   const globeRef = useRef<GlobeViewHandle>(null);
@@ -69,7 +68,7 @@ export default function App() {
   // Lookup selected entities
   const selectedSimulant = useMemo(() => simulants.find(s => s.simulant_id === panelState.panel1.simulantId) || null, [simulants, panelState.panel1.simulantId]);
   const selectedSimulant2 = useMemo(() => simulants.find(s => s.simulant_id === panelState.panel2.simulantId) || null, [simulants, panelState.panel2.simulantId]);
-  const selectedLunarSite = useMemo(() => lunarSites.find(s => s.id === panelState.selectedLunarSiteId) || null, [panelState.selectedLunarSiteId]);
+  const selectedLunarSite = useMemo(() => lunarSites.find(s => s.id === panelState.selectedLunarSiteId) || null, [lunarSites, panelState.selectedLunarSiteId]);
   const selectedLunarRef = useMemo(() => lunarReference.find(r => r.mission === panelState.selectedLunarRefMission) || null, [lunarReference, panelState.selectedLunarRefMission]);
 
   // Globe altitude state for zoom-reactive clustering
@@ -107,7 +106,7 @@ export default function App() {
     const radius = altitudeToRadius(mapState.viewMode === 'globe' ? globeAltitude : 0);
     const { singles, clusters } = clusterByDistance(rawEarthPoints, radius);
     return { singlePoints: singles, clusterPoints: clusters };
-  }, [mapState.planet, mapState.viewMode, rawEarthPoints, globeAltitude]);
+  }, [mapState.planet, mapState.viewMode, rawEarthPoints, globeAltitude, lunarSites]);
 
   // Cluster popover state (for 3D globe)
   const [clusterPopover, setClusterPopover] = useState<{
@@ -201,6 +200,7 @@ export default function App() {
                 sites={lunarSites}
                 selectedSiteId={panelState.selectedLunarSiteId}
                 onSelectSite={(id) => panelState.setSelectedLunarSiteId(id)}
+                citationsFor={lunarCitationsFor}
               />
             ) : (
               <SimulantTable
@@ -386,6 +386,7 @@ export default function App() {
             mineralGroups={mineralGroupsBySimulant.get(selectedSimulant.simulant_id) || []}
             extra={extraBySimulant.get(selectedSimulant.simulant_id)}
             lunarReferences={lunarReference}
+            lunarCitationsFor={lunarCitationsFor}
             physicalProperties={physicalPropsBySimulant.get(selectedSimulant.simulant_id)}
             propertySources={propertySourcesBySimulant.get(selectedSimulant.simulant_id)}
             figuresOfMerit={fomsBySimulant.get(selectedSimulant.simulant_id)}
@@ -401,7 +402,7 @@ export default function App() {
           />
         )}
         {selectedLunarSite && (
-          <LunarSitePanel site={selectedLunarSite} onClose={() => panelState.setSelectedLunarSiteId(null)} />
+          <LunarSitePanel site={selectedLunarSite} citations={lunarCitationsFor(selectedLunarSite.id)} onClose={() => panelState.setSelectedLunarSiteId(null)} />
         )}
         {panelState.showComparison && selectedSimulant && selectedSimulant2 && (
           <Suspense fallback={null}>
@@ -424,6 +425,7 @@ export default function App() {
               compositions={compositionBySimulant.get(selectedSimulant.simulant_id) || []}
               mineralGroups={mineralGroupsBySimulant.get(selectedSimulant.simulant_id) || []}
               lunarRef={selectedLunarRef}
+              lunarCitations={lunarCitationsFor(selectedLunarRef.sample_id)}
               onClose={() => panelState.setShowCrossComparison(false)}
             />
           </Suspense>

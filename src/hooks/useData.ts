@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import type {
   Simulant, Site, Composition, ChemicalComposition, Reference, FigureOfMerit,
-  MineralGroup, SimulantExtra, LunarReference, MineralSourcing, PurchaseInfo, PropertySource
+  MineralGroup, SimulantExtra, LunarReference, MineralSourcing, PurchaseInfo, PropertySource,
+  LunarSite, LunarDocument, LunarSource
 } from '../types';
 
 export interface DataState {
@@ -15,6 +16,9 @@ export interface DataState {
   mineralGroups: MineralGroup[];
   simulantExtra: SimulantExtra[];
   lunarReference: LunarReference[];
+  lunarSites: LunarSite[];
+  lunarDocuments: LunarDocument[];
+  lunarSources: LunarSource[];
   mineralSourcing: MineralSourcing[];
   purchaseInfo: PurchaseInfo[];
   propertySources: PropertySource[];
@@ -33,6 +37,9 @@ interface RawBundle {
   mineral_groups?: MineralGroup[];
   simulant_extra?: SimulantExtra[];
   lunar_reference?: LunarReference[];
+  lunar_sites?: LunarSite[];
+  lunar_documents?: LunarDocument[];
+  lunar_sources?: LunarSource[];
   mineral_sourcing?: MineralSourcing[];
   purchase_info?: PurchaseInfo[];
   property_sources?: PropertySource[];
@@ -53,6 +60,9 @@ export function useData(): DataState {
     mineralGroups: [],
     simulantExtra: [],
     lunarReference: [],
+    lunarSites: [],
+    lunarDocuments: [],
+    lunarSources: [],
     mineralSourcing: [],
     purchaseInfo: [],
     propertySources: [],
@@ -76,6 +86,9 @@ export function useData(): DataState {
         mineralGroups: data.mineral_groups ?? [],
         simulantExtra: data.simulant_extra ?? [],
         lunarReference: data.lunar_reference ?? [],
+        lunarSites: data.lunar_sites ?? [],
+        lunarDocuments: data.lunar_documents ?? [],
+        lunarSources: data.lunar_sources ?? [],
         mineralSourcing: data.mineral_sourcing ?? [],
         purchaseInfo: data.purchase_info ?? [],
         propertySources: data.property_sources ?? [],

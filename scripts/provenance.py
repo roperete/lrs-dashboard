@@ -52,6 +52,56 @@ FOM_TABLE = """CREATE TABLE IF NOT EXISTS figures_of_merit (
   location TEXT, quote TEXT)"""
 
 
+# The Moon section (2026-09-25): landing sites moved out of src/lunarData.ts, and sources for
+# every value of a site or a lunar reference sample. A document is shared by many sites (the
+# Lunar Sourcebook serves all of them), so documents have their own table; lunar_mentions
+# records that a document names a site or sample, lunar_sources that it states a value.
+LUNAR_DDL = """
+CREATE TABLE IF NOT EXISTS lunar_sites (
+  site_id          TEXT PRIMARY KEY,
+  name             TEXT NOT NULL,
+  mission          TEXT NOT NULL,
+  programme        TEXT NOT NULL,   -- Apollo | Luna | Chang-e | Other
+  date             TEXT,
+  lat              REAL,
+  lng              REAL,
+  samples_returned TEXT,
+  description      TEXT,
+  bulk_density     REAL,            -- g/cm3
+  friction_angle   REAL,            -- degrees
+  cohesion         REAL,            -- kPa
+  bearing_capacity REAL             -- kPa
+);
+CREATE TABLE IF NOT EXISTS lunar_documents (
+  document_id TEXT PRIMARY KEY,     -- LD-001 ...
+  title       TEXT NOT NULL,
+  authors     TEXT,
+  year        TEXT,
+  doi         TEXT,
+  url         TEXT,
+  local_path  TEXT,                 -- relative to DIRT/Sources
+  kind        TEXT,
+  checked_on  TEXT
+);
+CREATE TABLE IF NOT EXISTS lunar_mentions (
+  entity_id     TEXT NOT NULL,      -- site_id or sample_id
+  document_id   TEXT NOT NULL REFERENCES lunar_documents(document_id),
+  mention_quote TEXT NOT NULL,
+  location      TEXT,
+  PRIMARY KEY (entity_id, document_id)
+);
+CREATE TABLE IF NOT EXISTS lunar_sources (
+  entity_id   TEXT NOT NULL,
+  field       TEXT NOT NULL,        -- column, "oxide:SiO2", "mineral:Plagioclase", "description"
+  document_id TEXT NOT NULL REFERENCES lunar_documents(document_id),
+  location    TEXT,
+  quote       TEXT NOT NULL,
+  value_text  TEXT,                 -- the value as the document states it
+  PRIMARY KEY (entity_id, field, document_id)
+);
+"""
+
+
 def ensure_provenance_schema(con: sqlite3.Connection) -> list[str]:
     added: list[str] = []
     added += [f"references_.{c}" for c in ensure_columns(con, "references_", REFERENCE_COLUMNS)]
@@ -64,6 +114,10 @@ def ensure_provenance_schema(con: sqlite3.Connection) -> list[str]:
     if "property_sources" not in have:
         con.execute(PROPERTY_SOURCES_DDL)
         added.append("property_sources")
+    for t in ("lunar_sites", "lunar_documents", "lunar_mentions", "lunar_sources"):
+        if t not in have:
+            added.append(t)
+    con.executescript(LUNAR_DDL)
     con.commit()
     return added
 

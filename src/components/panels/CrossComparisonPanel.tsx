@@ -4,6 +4,8 @@ import { ArrowRightLeft, X, FlaskConical, Activity, BarChart3, TableProperties }
 import { motion } from 'motion/react';
 import { cn } from '../../utils/cn';
 import type { Simulant, ChemicalComposition, Composition, MineralGroup, LunarReference } from '../../types';
+import { LunarRefs, LunarSourceList } from '../ui/LunarRefs';
+import { EMPTY_CITATIONS, type LunarCitations } from '../../utils/lunarCitations';
 
 type ViewMode = 'chart' | 'table';
 
@@ -13,11 +15,13 @@ interface CrossComparisonPanelProps {
   compositions: Composition[];
   mineralGroups: MineralGroup[];
   lunarRef: LunarReference;
+  /** Sources of the lunar sample's values, shown as [L1] ... */
+  lunarCitations?: LunarCitations;
   onClose: () => void;
 }
 
 export function CrossComparisonPanel({
-  simulant, chemicalCompositions, compositions, mineralGroups, lunarRef, onClose,
+  simulant, chemicalCompositions, compositions, mineralGroups, lunarRef, lunarCitations = EMPTY_CITATIONS, onClose,
 }: CrossComparisonPanelProps) {
   const [viewMode, setViewMode] = useState<ViewMode>('table');
 
@@ -97,8 +101,8 @@ export function CrossComparisonPanel({
 
         {/* Metadata row */}
         <div className="flex gap-4 mb-6 text-xs text-slate-500">
-          <span>Landing site: <span className="text-slate-300">{lunarRef.landing_site}</span></span>
-          <span>Type: <span className="text-slate-300">{lunarRef.type}</span></span>
+          {lunarRef.landing_site && <span>Landing site: <span className="text-slate-300">{lunarRef.landing_site}<LunarRefs cites={lunarCitations.cite('landing_site')} prefix="L" /></span></span>}
+          {lunarRef.type && <span>Type: <span className="text-slate-300">{lunarRef.type}<LunarRefs cites={lunarCitations.cite('type')} prefix="L" /></span></span>}
           {simulant.lunar_sample_reference && (
             <span>Simulant reference: <span className="text-slate-300">{simulant.lunar_sample_reference}</span></span>
           )}
@@ -133,6 +137,7 @@ export function CrossComparisonPanel({
                 data={chemicalData}
                 simulantName={simulant.name}
                 refName={lunarRef.mission}
+                cites={name => lunarCitations.cite(`oxide:${name}`)}
               />
               {mineralData.length > 0 && (
                 <DeltaTable
@@ -141,10 +146,14 @@ export function CrossComparisonPanel({
                   data={mineralData}
                   simulantName={simulant.name}
                   refName={lunarRef.mission}
+                  cites={name => lunarCitations.cite(`mineral:${name}`)}
                 />
               )}
             </>
           )}
+        </div>
+        <div className="mt-6">
+          <LunarSourceList citations={lunarCitations} prefix="L" title={`Sources for ${lunarRef.mission} ${lunarRef.sample_id}`} />
         </div>
       </div>
     </motion.div>
@@ -182,10 +191,11 @@ function ChartSection({ title, icon, data, simulantName, refName }: {
   );
 }
 
-function DeltaTable({ title, icon, data, simulantName, refName }: {
+function DeltaTable({ title, icon, data, simulantName, refName, cites }: {
   title: string; icon: React.ReactNode;
   data: { name: string; simulant: number; reference: number }[];
   simulantName: string; refName: string;
+  cites: (name: string) => import('../../utils/lunarCitations').LunarCite[];
 }) {
   return (
     <section>
@@ -210,7 +220,7 @@ function DeltaTable({ title, icon, data, simulantName, refName }: {
                 <tr key={row.name} className={i % 2 === 0 ? 'bg-slate-800/20' : ''}>
                   <td className="py-2 px-4 text-slate-300 font-medium">{row.name}</td>
                   <td className="py-2 px-4 text-right font-mono text-slate-200">{row.simulant > 0 ? row.simulant.toFixed(2) : '\u2014'}</td>
-                  <td className="py-2 px-4 text-right font-mono text-slate-200">{row.reference > 0 ? row.reference.toFixed(2) : '\u2014'}</td>
+                  <td className="py-2 px-4 text-right font-mono text-slate-200">{row.reference > 0 ? <>{row.reference.toFixed(2)}<LunarRefs cites={cites(row.name)} prefix="L" align="right" /></> : '\u2014'}</td>
                   <td className={cn("py-2 px-4 text-right font-mono text-xs",
                     diff > 0 ? "text-blue-400" : diff < 0 ? "text-amber-400" : "text-slate-500"
                   )}>

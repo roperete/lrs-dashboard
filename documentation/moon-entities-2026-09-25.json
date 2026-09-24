@@ -1,0 +1,562 @@
+[
+ {
+  "id": "A11",
+  "kind": "site",
+  "name": "Apollo 11 - Sea of Tranquility",
+  "mission": "Apollo 11",
+  "stored": {
+   "date": "July 20, 1969",
+   "lat": 0.67409,
+   "lng": 23.47297,
+   "samples_returned": "21.5 kg",
+   "description": "First human landing on the Moon. Collected basaltic rocks and breccias.",
+   "bulk_density": "1.61 g/cm³",
+   "friction_angle": "40.7 °",
+   "cohesion": "1.06 kPa",
+   "bearing_capacity": "10 kPa"
+  }
+ },
+ {
+  "id": "A12",
+  "kind": "site",
+  "name": "Apollo 12 - Ocean of Storms",
+  "mission": "Apollo 12",
+  "stored": {
+   "date": "November 19, 1969",
+   "lat": -3.01239,
+   "lng": -23.42157,
+   "samples_returned": "34.3 kg",
+   "description": "Landed near Surveyor 3. Collected basaltic samples from the Oceanus Procellarum.",
+   "bulk_density": "1.65 g/cm³",
+   "friction_angle": "31.8 °",
+   "cohesion": "1.04 kPa",
+   "bearing_capacity": "8.5 kPa"
+  }
+ },
+ {
+  "id": "A14",
+  "kind": "site",
+  "name": "Apollo 14 - Fra Mauro",
+  "mission": "Apollo 14",
+  "stored": {
+   "date": "February 5, 1971",
+   "lat": -3.6453,
+   "lng": -17.47136,
+   "samples_returned": "42.3 kg",
+   "description": "Landed in the Fra Mauro highlands. Collected impact-derived breccias.",
+   "bulk_density": "1.54 g/cm³",
+   "friction_angle": "39 °",
+   "cohesion": "0.18 kPa"
+  }
+ },
+ {
+  "id": "A15",
+  "kind": "site",
+  "name": "Apollo 15 - Hadley-Apennine",
+  "mission": "Apollo 15",
+  "stored": {
+   "date": "July 30, 1971",
+   "lat": 26.13222,
+   "lng": 3.63386,
+   "samples_returned": "77.3 kg",
+   "description": "First use of the Lunar Roving Vehicle. Collected samples from the Apennine Front and Hadley Rille.",
+   "bulk_density": "1.7 g/cm³",
+   "friction_angle": "48.1 °",
+   "cohesion": "0.77 kPa"
+  }
+ },
+ {
+  "id": "A16",
+  "kind": "site",
+  "name": "Apollo 16 - Descartes Highlands",
+  "mission": "Apollo 16",
+  "stored": {
+   "date": "April 21, 1972",
+   "lat": -8.97301,
+   "lng": 15.49812,
+   "samples_returned": "95.7 kg",
+   "description": "Landed in the lunar highlands. Collected ancient crustal rocks (anorthosites).",
+   "bulk_density": "1.68 g/cm³",
+   "friction_angle": "47.5 °",
+   "cohesion": "0.77 kPa"
+  }
+ },
+ {
+  "id": "A17",
+  "kind": "site",
+  "name": "Apollo 17 - Taurus-Littrow",
+  "mission": "Apollo 17",
+  "stored": {
+   "date": "December 11, 1972",
+   "lat": 20.1908,
+   "lng": 30.77168,
+   "samples_returned": "110.5 kg",
+   "description": "Final Apollo mission. Collected orange soil and diverse rock types from a valley.",
+   "bulk_density": "1.81 g/cm³",
+   "friction_angle": "36.7 °",
+   "cohesion": "0.6 kPa"
+  }
+ },
+ {
+  "id": "L16",
+  "kind": "site",
+  "name": "Luna 16 - Mare Fecunditatis",
+  "mission": "Luna 16",
+  "stored": {
+   "date": "September 20, 1970",
+   "lat": -0.68,
+   "lng": 56.3,
+   "samples_returned": "101 g",
+   "description": "First robotic sample return mission. Collected mare basalt.",
+   "bulk_density": "1.44 g/cm³",
+   "friction_angle": "26.7 °",
+   "cohesion": "3.81 kPa"
+  }
+ },
+ {
+  "id": "L20",
+  "kind": "site",
+  "name": "Luna 20 - Apollonius Highlands",
+  "mission": "Luna 20",
+  "stored": {
+   "date": "February 21, 1972",
+   "lat": 3.53,
+   "lng": 56.55,
+   "samples_returned": "55 g",
+   "description": "Robotic sample return from the highlands near Mare Fecunditatis.",
+   "bulk_density": "1.31 g/cm³",
+   "friction_angle": "24.4 °",
+   "cohesion": "4.66 kPa"
+  }
+ },
+ {
+  "id": "L24",
+  "kind": "site",
+  "name": "Luna 24 - Mare Crisium",
+  "mission": "Luna 24",
+  "stored": {
+   "date": "August 18, 1976",
+   "lat": 12.71,
+   "lng": 62.21,
+   "samples_returned": "170 g",
+   "description": "Final Soviet Luna mission. Collected samples from Mare Crisium.",
+   "bulk_density": "1.85 g/cm³"
+  }
+ },
+ {
+  "id": "CE5",
+  "kind": "site",
+  "name": "Chang'e 5 - Oceanus Procellarum",
+  "mission": "Chang'e 5",
+  "stored": {
+   "date": "December 1, 2020",
+   "lat": 43.0576,
+   "lng": -51.9161,
+   "samples_returned": "1.73 kg",
+   "description": "First Chinese sample return mission. Collected young volcanic rocks."
+  }
+ },
+ {
+  "id": "CE3",
+  "kind": "site",
+  "name": "Chang'e 3 - Mare Imbrium",
+  "mission": "Chang'e 3",
+  "stored": {
+   "date": "December 14, 2013",
+   "lat": 44.1214,
+   "lng": -19.5116,
+   "description": "First Chinese lunar lander. Deployed Yutu rover on the Mare Imbrium.",
+   "bulk_density": "1.63 g/cm³"
+  }
+ },
+ {
+  "id": "CE4",
+  "kind": "site",
+  "name": "Chang'e 4 - Von Karman Crater",
+  "mission": "Chang'e 4",
+  "stored": {
+   "date": "January 3, 2019",
+   "lat": -45.4446,
+   "lng": 177.5991,
+   "description": "First landing on the lunar far side. Deployed Yutu-2 rover in the South Pole-Aitken basin."
+  }
+ },
+ {
+  "id": "CH3",
+  "kind": "site",
+  "name": "Chandrayaan 3 - Shiv Shakti Point",
+  "mission": "Chandrayaan 3",
+  "stored": {
+   "date": "August 23, 2023",
+   "lat": -69.3726,
+   "lng": 32.3188,
+   "description": "First Indian lunar landing. Pragyan rover explored near the south pole.",
+   "bulk_density": "1.3 g/cm³"
+  }
+ },
+ {
+  "id": "S1",
+  "kind": "site",
+  "name": "Surveyor 1 - Flamsteed P",
+  "mission": "Surveyor 1",
+  "stored": {
+   "date": "June 2, 1966",
+   "lat": -2.474,
+   "lng": -43.339,
+   "description": "First US soft landing on the Moon. Conducted surface mechanics experiments.",
+   "bulk_density": "1.5 g/cm³",
+   "friction_angle": "41.7 °",
+   "cohesion": "4.52 kPa",
+   "bearing_capacity": "40 kPa"
+  }
+ },
+ {
+  "id": "S3",
+  "kind": "site",
+  "name": "Surveyor 3 - Oceanus Procellarum",
+  "mission": "Surveyor 3",
+  "stored": {
+   "date": "April 20, 1967",
+   "lat": -3.0155,
+   "lng": -23.4219,
+   "description": "Equipped with soil mechanics surface sampler. Later visited by Apollo 12.",
+   "bulk_density": "1.5 g/cm³",
+   "friction_angle": "42 °",
+   "cohesion": "0.47 kPa",
+   "bearing_capacity": "40 kPa"
+  }
+ },
+ {
+  "id": "L13",
+  "kind": "site",
+  "name": "Luna 13 - Oceanus Procellarum",
+  "mission": "Luna 13",
+  "stored": {
+   "date": "December 24, 1966",
+   "lat": 18.87,
+   "lng": -62.05,
+   "description": "Soviet lander with soil mechanics probe. Measured regolith bearing capacity.",
+   "bulk_density": "0.8 g/cm³",
+   "friction_angle": "32 °",
+   "cohesion": "0.49 kPa",
+   "bearing_capacity": "68 kPa"
+  }
+ },
+ {
+  "id": "L17",
+  "kind": "site",
+  "name": "Luna 17 - Mare Imbrium",
+  "mission": "Luna 17",
+  "stored": {
+   "date": "November 17, 1970",
+   "lat": 38.28,
+   "lng": -35,
+   "description": "Deployed Lunokhod 1, the first robotic rover on the Moon.",
+   "friction_angle": "34.3 °",
+   "cohesion": "2.25 kPa",
+   "bearing_capacity": "33.3 kPa"
+  }
+ },
+ {
+  "id": "L21",
+  "kind": "site",
+  "name": "Luna 21 - Le Monnier Crater",
+  "mission": "Luna 21",
+  "stored": {
+   "date": "January 15, 1973",
+   "lat": 25.85,
+   "lng": 30.45,
+   "description": "Deployed Lunokhod 2. Traversed 37 km across the lunar surface.",
+   "friction_angle": "22.5 °",
+   "cohesion": "5 kPa",
+   "bearing_capacity": "40 kPa"
+  }
+ },
+ {
+  "id": "CE6",
+  "kind": "site",
+  "name": "Chang'e 6 - South Pole-Aitken Basin",
+  "mission": "Chang'e 6",
+  "stored": {
+   "date": "June 2, 2024",
+   "lat": -41.6385,
+   "lng": -153.9852,
+   "samples_returned": "1.93 kg",
+   "description": "First sample return from the lunar far side. Collected samples from the Apollo crater."
+  }
+ },
+ {
+  "id": "10084",
+  "kind": "sample",
+  "name": "Apollo 11 sample 10084",
+  "mission": "Apollo 11",
+  "stored": {
+   "mission": "Apollo 11",
+   "landing_site": "Sea of Tranquility (Mare Tranquillitatis)",
+   "coordinates": {
+    "lat": 0.6875,
+    "lon": 23.4333
+   },
+   "type": "Mare (High-Ti Basalt)",
+   "sample_description": "Bulk regolith soil, most extensively characterized lunar sample",
+   "oxide:SiO2": "42.2 wt%",
+   "oxide:TiO2": "7.8 wt%",
+   "oxide:Al2O3": "13.6 wt%",
+   "oxide:Cr2O3": "0.3 wt%",
+   "oxide:FeO": "15.3 wt%",
+   "oxide:MnO": "0.2 wt%",
+   "oxide:MgO": "7.8 wt%",
+   "oxide:CaO": "11.9 wt%",
+   "oxide:Na2O": "0.47 wt%",
+   "oxide:K2O": "0.16 wt%",
+   "oxide:P2O5": "0.05 wt%",
+   "mineral:Plagioclase": "21.0 (vol%? as displayed, unit not stated)",
+   "mineral:Pyroxene": "36.0 (vol%? as displayed, unit not stated)",
+   "mineral:Olivine": "2.0 (vol%? as displayed, unit not stated)",
+   "mineral:Ilmenite": "15.0 (vol%? as displayed, unit not stated)",
+   "mineral:Agglutinates": "18.0 (vol%? as displayed, unit not stated)",
+   "mineral:Glass": "5.0 (vol%? as displayed, unit not stated)",
+   "mineral:Other": "3.0 (vol%? as displayed, unit not stated)"
+  },
+  "listed_sources": [
+   "Meyer, C. (2009). Lunar Sample Compendium: 10084. NASA Johnson Space Center.",
+   "Heiken, G.H., Vaniman, D.T., & French, B.M. (1991). Lunar Sourcebook. Cambridge University Press.",
+   "Korotev, R.L. The chemical composition of lunar soil. Washington University in St. Louis."
+  ]
+ },
+ {
+  "id": "12070",
+  "kind": "sample",
+  "name": "Apollo 12 sample 12070",
+  "mission": "Apollo 12",
+  "stored": {
+   "mission": "Apollo 12",
+   "landing_site": "Ocean of Storms (Oceanus Procellarum)",
+   "coordinates": {
+    "lat": -3.0128,
+    "lon": -23.4219
+   },
+   "type": "Mare (Low-Ti Basalt)",
+   "sample_description": "Bulk regolith soil from ALSEP site, well-gardened surface soil",
+   "oxide:SiO2": "46.3 wt%",
+   "oxide:TiO2": "3.0 wt%",
+   "oxide:Al2O3": "12.9 wt%",
+   "oxide:Cr2O3": "0.34 wt%",
+   "oxide:FeO": "15.1 wt%",
+   "oxide:MnO": "0.22 wt%",
+   "oxide:MgO": "9.3 wt%",
+   "oxide:CaO": "10.7 wt%",
+   "oxide:Na2O": "0.54 wt%",
+   "oxide:K2O": "0.31 wt%",
+   "oxide:P2O5": "0.4 wt%",
+   "mineral:Plagioclase": "23.0 (vol%? as displayed, unit not stated)",
+   "mineral:Pyroxene": "46.0 (vol%? as displayed, unit not stated)",
+   "mineral:Olivine": "6.0 (vol%? as displayed, unit not stated)",
+   "mineral:Ilmenite": "4.0 (vol%? as displayed, unit not stated)",
+   "mineral:Agglutinates": "14.0 (vol%? as displayed, unit not stated)",
+   "mineral:Glass": "5.0 (vol%? as displayed, unit not stated)",
+   "mineral:Other": "2.0 (vol%? as displayed, unit not stated)"
+  },
+  "listed_sources": [
+   "Meyer, C. (2007). Lunar Sample Compendium: 12070. NASA Johnson Space Center.",
+   "Heiken, G.H., Vaniman, D.T., & French, B.M. (1991). Lunar Sourcebook. Cambridge University Press.",
+   "Korotev, R.L. The chemical composition of lunar soil. Washington University in St. Louis."
+  ]
+ },
+ {
+  "id": "14163",
+  "kind": "sample",
+  "name": "Apollo 14 sample 14163",
+  "mission": "Apollo 14",
+  "stored": {
+   "mission": "Apollo 14",
+   "landing_site": "Fra Mauro Highlands",
+   "coordinates": {
+    "lat": -3.6453,
+    "lon": -17.4714
+   },
+   "type": "Highland (KREEP-rich)",
+   "sample_description": "Comprehensive regolith soil from Fra Mauro formation, KREEP-rich highland material",
+   "oxide:SiO2": "48.1 wt%",
+   "oxide:TiO2": "1.7 wt%",
+   "oxide:Al2O3": "17.4 wt%",
+   "oxide:Cr2O3": "0.23 wt%",
+   "oxide:FeO": "10.4 wt%",
+   "oxide:MnO": "0.14 wt%",
+   "oxide:MgO": "9.4 wt%",
+   "oxide:CaO": "10.7 wt%",
+   "oxide:Na2O": "0.7 wt%",
+   "oxide:K2O": "0.55 wt%",
+   "oxide:P2O5": "0.51 wt%",
+   "mineral:Plagioclase": "37.0 (vol%? as displayed, unit not stated)",
+   "mineral:Pyroxene": "27.0 (vol%? as displayed, unit not stated)",
+   "mineral:Olivine": "5.0 (vol%? as displayed, unit not stated)",
+   "mineral:Ilmenite": "1.0 (vol%? as displayed, unit not stated)",
+   "mineral:Agglutinates": "20.0 (vol%? as displayed, unit not stated)",
+   "mineral:Glass": "7.0 (vol%? as displayed, unit not stated)",
+   "mineral:Other": "3.0 (vol%? as displayed, unit not stated)"
+  },
+  "listed_sources": [
+   "Meyer, C. (2011). Lunar Sample Compendium: 14163/14259. NASA Johnson Space Center.",
+   "Heiken, G.H., Vaniman, D.T., & French, B.M. (1991). Lunar Sourcebook. Cambridge University Press.",
+   "Korotev, R.L. The chemical composition of lunar soil. Washington University in St. Louis."
+  ]
+ },
+ {
+  "id": "15271",
+  "kind": "sample",
+  "name": "Apollo 15 sample 15271",
+  "mission": "Apollo 15",
+  "stored": {
+   "mission": "Apollo 15",
+   "landing_site": "Hadley-Apennine (Hadley Rille / Apennine Mountains)",
+   "coordinates": {
+    "lat": 26.1322,
+    "lon": 3.6339
+   },
+   "type": "Mare/Highland boundary (Low-Ti Basalt with Highland component)",
+   "sample_description": "Reference regolith soil from station 2 near Hadley Rille, mare-highland mixed soil",
+   "oxide:SiO2": "46.8 wt%",
+   "oxide:TiO2": "1.4 wt%",
+   "oxide:Al2O3": "14.6 wt%",
+   "oxide:Cr2O3": "0.37 wt%",
+   "oxide:FeO": "14.3 wt%",
+   "oxide:MnO": "0.19 wt%",
+   "oxide:MgO": "11.5 wt%",
+   "oxide:CaO": "10.8 wt%",
+   "oxide:Na2O": "0.39 wt%",
+   "oxide:K2O": "0.21 wt%",
+   "oxide:P2O5": "0.18 wt%",
+   "mineral:Plagioclase": "27.0 (vol%? as displayed, unit not stated)",
+   "mineral:Pyroxene": "41.0 (vol%? as displayed, unit not stated)",
+   "mineral:Olivine": "8.0 (vol%? as displayed, unit not stated)",
+   "mineral:Ilmenite": "2.0 (vol%? as displayed, unit not stated)",
+   "mineral:Agglutinates": "15.0 (vol%? as displayed, unit not stated)",
+   "mineral:Glass": "5.0 (vol%? as displayed, unit not stated)",
+   "mineral:Other": "2.0 (vol%? as displayed, unit not stated)"
+  },
+  "listed_sources": [
+   "Meyer, C. (2010). Lunar Sample Compendium: 15271. Lunar and Planetary Institute.",
+   "Heiken, G.H., Vaniman, D.T., & French, B.M. (1991). Lunar Sourcebook. Cambridge University Press.",
+   "Korotev, R.L. The chemical composition of lunar soil. Washington University in St. Louis."
+  ]
+ },
+ {
+  "id": "60501",
+  "kind": "sample",
+  "name": "Apollo 16 sample 60501",
+  "mission": "Apollo 16",
+  "stored": {
+   "mission": "Apollo 16",
+   "landing_site": "Descartes Highlands (Cayley Plains)",
+   "coordinates": {
+    "lat": -8.9734,
+    "lon": 15.5011
+   },
+   "type": "Highland (Feldspathic / Anorthositic)",
+   "sample_description": "Bulk regolith soil from station LM/ALSEP area, feldspathic highland regolith",
+   "oxide:SiO2": "45.0 wt%",
+   "oxide:TiO2": "0.54 wt%",
+   "oxide:Al2O3": "27.3 wt%",
+   "oxide:Cr2O3": "0.1 wt%",
+   "oxide:FeO": "5.1 wt%",
+   "oxide:MnO": "0.07 wt%",
+   "oxide:MgO": "5.7 wt%",
+   "oxide:CaO": "15.7 wt%",
+   "oxide:Na2O": "0.46 wt%",
+   "oxide:K2O": "0.17 wt%",
+   "oxide:P2O5": "0.11 wt%",
+   "mineral:Plagioclase": "60.0 (vol%? as displayed, unit not stated)",
+   "mineral:Pyroxene": "13.0 (vol%? as displayed, unit not stated)",
+   "mineral:Olivine": "3.0 (vol%? as displayed, unit not stated)",
+   "mineral:Ilmenite": "0.5 (vol%? as displayed, unit not stated)",
+   "mineral:Agglutinates": "17.0 (vol%? as displayed, unit not stated)",
+   "mineral:Glass": "4.0 (vol%? as displayed, unit not stated)",
+   "mineral:Other": "2.5 (vol%? as displayed, unit not stated)"
+  },
+  "listed_sources": [
+   "Meyer, C. (2010). Lunar Sample Compendium: 60050/60500. NASA Johnson Space Center.",
+   "Heiken, G.H., Vaniman, D.T., & French, B.M. (1991). Lunar Sourcebook. Cambridge University Press.",
+   "Korotev, R.L. The chemical composition of lunar soil. Washington University in St. Louis.",
+   "Laul, J.C. & Schmitt, R.A. (1973). Chemical composition of Apollo 15, 16, and 17 samples. Proc. 4th Lunar Sci. Conf., 1349-1367."
+  ]
+ },
+ {
+  "id": "71501",
+  "kind": "sample",
+  "name": "Apollo 17 sample 71501",
+  "mission": "Apollo 17",
+  "stored": {
+   "mission": "Apollo 17",
+   "landing_site": "Taurus-Littrow Valley",
+   "coordinates": {
+    "lat": 20.1908,
+    "lon": 30.7717
+   },
+   "type": "Mare/Highland boundary (High-Ti Basalt with Highland component)",
+   "sample_description": "Bulk regolith soil from station 1A near Steno Crater, mare-highland mixed regolith",
+   "oxide:SiO2": "43.2 wt%",
+   "oxide:TiO2": "4.2 wt%",
+   "oxide:Al2O3": "17.1 wt%",
+   "oxide:Cr2O3": "0.33 wt%",
+   "oxide:FeO": "12.2 wt%",
+   "oxide:MnO": "0.17 wt%",
+   "oxide:MgO": "10.4 wt%",
+   "oxide:CaO": "11.8 wt%",
+   "oxide:Na2O": "0.4 wt%",
+   "oxide:K2O": "0.13 wt%",
+   "oxide:P2O5": "0.12 wt%",
+   "mineral:Plagioclase": "32.0 (vol%? as displayed, unit not stated)",
+   "mineral:Pyroxene": "31.0 (vol%? as displayed, unit not stated)",
+   "mineral:Olivine": "5.0 (vol%? as displayed, unit not stated)",
+   "mineral:Ilmenite": "7.0 (vol%? as displayed, unit not stated)",
+   "mineral:Agglutinates": "16.0 (vol%? as displayed, unit not stated)",
+   "mineral:Glass": "6.0 (vol%? as displayed, unit not stated)",
+   "mineral:Other": "3.0 (vol%? as displayed, unit not stated)"
+  },
+  "listed_sources": [
+   "Meyer, C. (2010). Lunar Sample Compendium: 71500/71501. Lunar and Planetary Institute.",
+   "Heiken, G.H., Vaniman, D.T., & French, B.M. (1991). Lunar Sourcebook. Cambridge University Press.",
+   "Korotev, R.L. The chemical composition of lunar soil. Washington University in St. Louis.",
+   "Laul, J.C. & Schmitt, R.A. (1973). Chemical composition of Apollo 15, 16, and 17 samples. Proc. 4th Lunar Sci. Conf., 1349-1367."
+  ]
+ },
+ {
+  "id": "CE5C0400",
+  "kind": "sample",
+  "name": "Chang'e-5 sample CE5C0400",
+  "mission": "Chang'e-5",
+  "stored": {
+   "mission": "Chang'e-5",
+   "landing_site": "Northern Oceanus Procellarum (Mons Ruemker)",
+   "coordinates": {
+    "lat": 43.06,
+    "lon": -51.92
+   },
+   "type": "Mare (Young Low-Ti Basalt, ~2.0 Ga)",
+   "sample_description": "Scooped regolith from lunar surface, youngest known mare basalt (~2.0 Ga), low-Ti/low-Al/low-K type",
+   "oxide:SiO2": "42.2 wt%",
+   "oxide:TiO2": "5.12 wt%",
+   "oxide:Al2O3": "10.8 wt%",
+   "oxide:Cr2O3": "0.49 wt%",
+   "oxide:FeO": "22.7 wt%",
+   "oxide:MnO": "0.28 wt%",
+   "oxide:MgO": "6.3 wt%",
+   "oxide:CaO": "10.3 wt%",
+   "oxide:Na2O": "0.33 wt%",
+   "oxide:K2O": "0.08 wt%",
+   "oxide:P2O5": "0.12 wt%",
+   "mineral:Plagioclase": "37.5 (vol%? as displayed, unit not stated)",
+   "mineral:Pyroxene": "39.4 (vol%? as displayed, unit not stated)",
+   "mineral:Olivine": "9.8 (vol%? as displayed, unit not stated)",
+   "mineral:Fe-Ti_Oxides": "1.9 (vol%? as displayed, unit not stated)",
+   "mineral:Glass": "8.3 (vol%? as displayed, unit not stated)",
+   "mineral:Other": "3.1 (vol%? as displayed, unit not stated)"
+  },
+  "listed_sources": [
+   "Li, C., Hu, H., Yang, M.F. et al. (2022). Characteristics of the lunar samples returned by the Chang'E-5 mission. National Science Review, 9(2), nwab188.",
+   "Zong, K., Wang, Z., Li, J. et al. (2022). Bulk compositions of the Chang'E-5 lunar soil. Geochimica et Cosmochimica Acta, 335, 284-296.",
+   "Xu, Y., Tian, H., Zhang, C. et al. (2022). Simultaneous analysis of particle size and mineralogy for Chang'E-5 lunar soil. Science China Earth Sciences, 65, 1-14."
+  ]
+ }
+]

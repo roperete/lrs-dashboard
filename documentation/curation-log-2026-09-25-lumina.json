@@ -33,5 +33,10 @@
     "now": "average angularity 0.41; average aspect ratio 2.14; average sphericity 0.55 (X-ray µCT, NGI)",
     "quote_was": "the average volume is 73 mm3, the average volume to surface ratio is ca. 14, while the average angularity is 0.41. The average aspect ratio is 2.14, and the average sphericity is 0.55.",
     "action": "restated in its quote's own numbers"
+  },
+  {
+    "simulant_id": "S160",
+    "reference_id": "RN-S160-2",
+    "action": "reference added: names the product"
   }
 ]

@@ -1,11 +1,15 @@
 import React from 'react';
 import { RefSup } from '../ui/RefSup';
+import { LunarRefs } from '../ui/LunarRefs';
+import type { LunarCite } from '../../utils/lunarCitations';
 
 interface TableRow {
   name: string;
   value: number;
   /** The lunar reference sample's value for the same component. */
   refValue?: number;
+  /** Where the lunar sample's value was read, shown as [L1] ... */
+  refValueCites?: LunarCite[];
   /** Number of the document this row was read from, within the simulant's References list.
    *  Shown on the row itself, even when every row cites the same document: a reader
    *  checking one value should not have to look elsewhere for its source. */
@@ -58,7 +62,7 @@ export function CompositionTable({ data, valueLabel, refLabel, decimals = 2, par
               </td>
               {refLabel && (
                 <td className="py-1.5 px-3 text-right text-amber-400/70 font-mono">
-                  {row.refValue !== undefined ? fmt(row.refValue) : '-'}
+                  {row.refValue !== undefined ? <>{fmt(row.refValue)}{row.refValueCites && <LunarRefs cites={row.refValueCites} prefix="L" align="right" />}</> : '-'}
                 </td>
               )}
             </tr>

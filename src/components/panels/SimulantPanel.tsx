@@ -12,6 +12,8 @@ import { ReferencesSection } from './ReferencesSection';
 import { DataSourceLine } from './CompositionStatus';
 import { downloadSimulantCSV } from '../../utils/csv';
 import { referenceNumbers, referenceHoverLabel } from '../../utils/references';
+import { LunarSourceList } from '../ui/LunarRefs';
+import { EMPTY_CITATIONS, type LunarCitations } from '../../utils/lunarCitations';
 import type { Simulant, Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, LunarReference, PhysicalProperties, PurchaseInfo, PropertySource, FigureOfMerit } from '../../types';
 
 function inferLunarRef(ref: string | null | undefined, lunarRefs: LunarReference[]): string | null {
@@ -35,6 +37,8 @@ interface SimulantPanelProps {
   mineralGroups: MineralGroup[];
   extra?: SimulantExtra;
   lunarReferences: LunarReference[];
+  /** Numbered sources of a lunar reference sample's values, shown as [L1], [L2] ... */
+  lunarCitationsFor?: (sampleId: string) => LunarCitations;
   physicalProperties?: PhysicalProperties;
   /** property_sources rows of this simulant keyed by field, for the citation superscripts. */
   propertySources?: Map<string, PropertySource>;
@@ -53,11 +57,12 @@ interface SimulantPanelProps {
 
 export function SimulantPanel({
   simulant, compositions, chemicalCompositions, references, mineralGroups, extra,
-  lunarReferences, physicalProperties, propertySources, figuresOfMerit = [], purchaseInfo,
+  lunarReferences, lunarCitationsFor, physicalProperties, propertySources, figuresOfMerit = [], purchaseInfo,
   selectedLunarRefMission, onSelectLunarRef, onOpenCrossComparison,
   pinned, onClose, onTogglePin, onCompare, compareActive,
 }: SimulantPanelProps) {
   const lunarRef = lunarReferences.find(r => r.mission === selectedLunarRefMission) || null;
+  const lunarCites = lunarRef && lunarCitationsFor ? lunarCitationsFor(lunarRef.sample_id) : EMPTY_CITATIONS;
   const missionsWithChem = lunarReferences.filter(r => r.chemical_composition && Object.keys(r.chemical_composition).length > 0);
 
   // Reference numbers are derived here from the reference list, never stored.
@@ -130,7 +135,7 @@ export function SimulantPanel({
               <option value="">No reference comparison</option>
               {missionsWithChem.map(r => (
                 <option key={r.mission} value={r.mission}>
-                  {r.mission} — {r.landing_site} ({r.type})
+                  {[r.mission, r.sample_id, r.landing_site, r.type && `(${r.type})`].filter(Boolean).join(' — ')}
                 </option>
               ))}
             </select>
@@ -142,6 +147,7 @@ export function SimulantPanel({
                 <ArrowRightLeft size={12} />Full comparison view
               </button>
             )}
+            {lunarRef && <LunarSourceList citations={lunarCites} prefix="L" title={`Sources for ${lunarRef.mission} ${lunarRef.sample_id}`} />}
           </div>
         )}
 
@@ -151,6 +157,7 @@ export function SimulantPanel({
           compositions={compositions}
           mineralGroups={mineralGroups}
           lunarRef={lunarRef}
+          lunarCitations={lunarCites}
           simulantName={simulant.name}
           simulant={simulant}
           references={references}
@@ -159,6 +166,7 @@ export function SimulantPanel({
         <ChemicalChart
           chemicalCompositions={chemicalCompositions}
           lunarRef={lunarRef}
+          lunarCitations={lunarCites}
           simulantName={simulant.name}
           simulant={simulant}
           references={references}

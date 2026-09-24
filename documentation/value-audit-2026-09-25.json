@@ -2608,5 +2608,75 @@
   "detail": "shown without a source: 'IBeA Research Group, UPV/EHU'",
   "reference_id": null,
   "value": "IBeA Research Group, UPV/EHU"
+ },
+ {
+  "simulant_id": null,
+  "name": "(page)",
+  "where": "lunar reference Apollo 11",
+  "check": "unsourced",
+  "severity": "warn",
+  "detail": "Apollo comparison data shown with no source",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": null,
+  "name": "(page)",
+  "where": "lunar reference Apollo 12",
+  "check": "unsourced",
+  "severity": "warn",
+  "detail": "Apollo comparison data shown with no source",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": null,
+  "name": "(page)",
+  "where": "lunar reference Apollo 14",
+  "check": "unsourced",
+  "severity": "warn",
+  "detail": "Apollo comparison data shown with no source",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": null,
+  "name": "(page)",
+  "where": "lunar reference Apollo 15",
+  "check": "unsourced",
+  "severity": "warn",
+  "detail": "Apollo comparison data shown with no source",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": null,
+  "name": "(page)",
+  "where": "lunar reference Apollo 16",
+  "check": "unsourced",
+  "severity": "warn",
+  "detail": "Apollo comparison data shown with no source",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": null,
+  "name": "(page)",
+  "where": "lunar reference Apollo 17",
+  "check": "unsourced",
+  "severity": "warn",
+  "detail": "Apollo comparison data shown with no source",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": null,
+  "name": "(page)",
+  "where": "lunar reference Chang'e-5",
+  "check": "unsourced",
+  "severity": "warn",
+  "detail": "Apollo comparison data shown with no source",
+  "reference_id": null,
+  "value": null
  }
 ]

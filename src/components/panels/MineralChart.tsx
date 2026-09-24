@@ -6,18 +6,21 @@ import { CompositionTable } from './CompositionTable';
 import { CompositionStatusNotice, statusOf } from './CompositionStatus';
 import { referenceNumbers, referenceHoverLabel, rowCitationTooltip } from '../../utils/references';
 import type { Composition, MineralGroup, LunarReference, Simulant, Reference } from '../../types';
+import { EMPTY_CITATIONS, type LunarCitations } from '../../utils/lunarCitations';
 
 interface MineralChartProps {
   compositions: Composition[];
   mineralGroups: MineralGroup[];
   lunarRef?: LunarReference | null;
+  /** Sources of the lunar sample's values. */
+  lunarCitations?: LunarCitations;
   simulantName: string;
   simulant: Simulant;
   /** This simulant's references, for numbering the documents the rows cite. */
   references?: Reference[];
 }
 
-export function MineralChart({ compositions, mineralGroups, lunarRef, simulantName, simulant, references = [] }: MineralChartProps) {
+export function MineralChart({ compositions, mineralGroups, lunarRef, lunarCitations = EMPTY_CITATIONS, simulantName, simulant, references = [] }: MineralChartProps) {
   // Grouped (NASA mineral family) rows are derived data and exist only where a source
   // states them; since the 2026-09 audit most simulants have none. Open on whichever
   // view actually has data, and fall back to the detailed list when groups are absent.
@@ -65,6 +68,7 @@ export function MineralChart({ compositions, mineralGroups, lunarRef, simulantNa
         name: d.component_name,
         value: d.value_pct,
         refValue: lunarRef?.mineral_composition?.[d.component_name],
+        refValueCites: lunarCitations.cite(`mineral:${d.component_name}`),
         refNumber: d.reference_id ? refNumbers.get(d.reference_id) : undefined,
         refTooltip: rowCitationTooltip(d.value_text, undefined),
         refSource: d.reference_id ? referenceHoverLabel(refById.get(d.reference_id)) : undefined,
@@ -75,8 +79,9 @@ export function MineralChart({ compositions, mineralGroups, lunarRef, simulantNa
       name: g.group_name,
       value: g.value_pct,
       refValue: lunarRef?.mineral_composition?.[g.group_name],
+      refValueCites: lunarCitations.cite(`mineral:${g.group_name}`),
     }));
-  }, [view, detailedData, groupData, lunarRef, refNumbers, refById]);
+  }, [view, detailedData, groupData, lunarRef, lunarCitations, refNumbers, refById]);
 
   const hasData = view === 'detailed' ? detailedData.length > 0 : groupData.length > 0;
 

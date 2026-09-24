@@ -6,17 +6,20 @@ import { CompositionTable } from './CompositionTable';
 import { CompositionStatusNotice, statusOf } from './CompositionStatus';
 import { referenceNumbers, referenceHoverLabel, rowCitationTooltip } from '../../utils/references';
 import type { ChemicalComposition, LunarReference, Simulant, Reference } from '../../types';
+import { EMPTY_CITATIONS, type LunarCitations } from '../../utils/lunarCitations';
 
 interface ChemicalChartProps {
   chemicalCompositions: ChemicalComposition[];
   lunarRef?: LunarReference | null;
+  /** Sources of the lunar sample's values. */
+  lunarCitations?: LunarCitations;
   simulantName: string;
   simulant: Simulant;
   /** This simulant's references, for numbering the documents the rows cite. */
   references?: Reference[];
 }
 
-export function ChemicalChart({ chemicalCompositions, lunarRef, simulantName, simulant, references = [] }: ChemicalChartProps) {
+export function ChemicalChart({ chemicalCompositions, lunarRef, lunarCitations = EMPTY_CITATIONS, simulantName, simulant, references = [] }: ChemicalChartProps) {
   const [displayMode, setDisplayMode] = useState<'chart' | 'table'>('table');
 
   const chemData = useMemo(() =>
@@ -43,11 +46,12 @@ export function ChemicalChart({ chemicalCompositions, lunarRef, simulantName, si
       name: c.component_name,
       value: c.value_wt_pct,
       refValue: lunarRef?.chemical_composition?.[c.component_name],
+      refValueCites: lunarCitations.cite(`oxide:${c.component_name}`),
       refNumber: c.reference_id ? refNumbers.get(c.reference_id) : undefined,
       refTooltip: rowCitationTooltip(c.value_text, undefined),
         refSource: c.reference_id ? referenceHoverLabel(refById.get(c.reference_id)) : undefined,
     })),
-    [chemData, lunarRef, refNumbers, refById]);
+    [chemData, lunarRef, lunarCitations, refNumbers, refById]);
 
   return (
     <div>

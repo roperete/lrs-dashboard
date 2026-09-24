@@ -70,6 +70,15 @@ def split_method(printed: str) -> tuple[str, str | None]:
     return printed, None
 
 
+# Printed names that are not exactly one product, attached where the owner decided, with the
+# document's own explanation added to the quote. Alvaro, 2026-09-25, "keep only OB-1": Slabic
+# 2024 marks OB-1A "(A*)" where OB-1's measurements were extrapolated to it.
+NAME_DECISIONS = {
+    "OB-1(A*)": ("OB-1", "* Some measurements performed on OB-1 were extrapolated to OB-1A due to the "
+                         "similarity in their feedstock composition."),
+}
+
+
 def _norm(t):
     return re.sub(r"[^a-z0-9]", "", re.sub(r"\[.*?\]", "", (t or "").lower()))
 
@@ -110,6 +119,9 @@ def apply_document(con: sqlite3.Connection, res: dict, checked_on: str | None = 
             log.append({**base, "outcome": "not stored: refuted by the checker" if verdicts.get(i) == "REFUTED" else "not stored: the checker could not confirm"})
             continue
         product, method = split_method(r["simulant"])
+        product, footnote = NAME_DECISIONS.get(product, (product, None))
+        if footnote:
+            r = {**r, "quote": f"{r['quote']} … {footnote}"}
         sid = match_simulant(product, names)
         if not sid:
             log.append({**base, "outcome": "not stored: no simulant of exactly this name"})

@@ -3,6 +3,8 @@ import { ChevronUp, ChevronDown } from 'lucide-react';
 import { cn } from '../../utils/cn';
 import { Tooltip } from '../ui/Tooltip';
 import type { LunarSite } from '../../types';
+import { LunarRefs } from '../ui/LunarRefs';
+import { EMPTY_CITATIONS, type LunarCitations } from '../../utils/lunarCitations';
 
 type SortDir = 'asc' | 'desc';
 type SortKey = 'name' | 'mission' | 'date' | 'type' | 'samples';
@@ -23,9 +25,11 @@ interface LunarSampleTableProps {
   sites: LunarSite[];
   selectedSiteId: string | null;
   onSelectSite: (id: string) => void;
+  /** Numbered sources of a site's values (the same numbers as in its panel). */
+  citationsFor?: (siteId: string) => LunarCitations;
 }
 
-export function LunarSampleTable({ sites, selectedSiteId, onSelectSite }: LunarSampleTableProps) {
+export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, citationsFor = () => EMPTY_CITATIONS }: LunarSampleTableProps) {
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
 
@@ -42,7 +46,7 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite }: LunarS
       switch (sortKey) {
         case 'name': va = a.name.toLowerCase(); vb = b.name.toLowerCase(); break;
         case 'mission': va = a.mission.toLowerCase(); vb = b.mission.toLowerCase(); break;
-        case 'date': va = a.date; vb = b.date; break;
+        case 'date': va = a.date ?? ''; vb = b.date ?? ''; break;
         case 'type': va = a.type.toLowerCase(); vb = b.type.toLowerCase(); break;
         case 'samples': va = (a.samples_returned || '').toLowerCase(); vb = (b.samples_returned || '').toLowerCase(); break;
         default: return 0;
@@ -102,6 +106,8 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite }: LunarS
         <tbody>
           {sorted.map((s, i) => {
             const isSelected = s.id === selectedSiteId;
+            const c = citationsFor(s.id);
+            const refs = (field: string) => <LunarRefs cites={c.cite(field)} align="right" />;
             return (
               <tr
                 key={s.id}
@@ -118,11 +124,11 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite }: LunarS
                 <td className={cn("py-2 px-3 font-medium", isSelected ? "text-amber-400" : "text-slate-200")}>{s.name}</td>
                 <td className={cn("py-2 px-3 font-medium whitespace-nowrap", missionColor[s.type] || 'text-purple-400')}>{s.mission}</td>
                 <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.type}</td>
-                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.date}</td>
-                <td className="py-2 px-3 text-slate-300 whitespace-nowrap">{s.samples_returned || '\u2014'}</td>
-                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.bulk_density ?? '\u2014'}</td>
-                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.friction_angle != null ? `${s.geotechnical.friction_angle}\u00B0` : '\u2014'}</td>
-                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.cohesion != null ? `${s.geotechnical.cohesion} kPa` : '\u2014'}</td>
+                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.date ? <>{s.date}{refs('date')}</> : '\u2014'}</td>
+                <td className="py-2 px-3 text-slate-300 whitespace-nowrap">{s.samples_returned ? <>{s.samples_returned}{refs('samples_returned')}</> : '\u2014'}</td>
+                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.bulk_density != null ? <>{s.geotechnical.bulk_density}{refs('bulk_density')}</> : '\u2014'}</td>
+                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.friction_angle != null ? <>{`${s.geotechnical.friction_angle}\u00B0`}{refs('friction_angle')}</> : '\u2014'}</td>
+                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.cohesion != null ? <>{`${s.geotechnical.cohesion} kPa`}{refs('cohesion')}</> : '\u2014'}</td>
               </tr>
             );
           })}

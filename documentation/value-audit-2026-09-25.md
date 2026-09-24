@@ -10,12 +10,20 @@ Nothing was changed. Errors go to an agent to re-read; warnings are for a human.
 | warn | consistency | 1 |
 | warn | stated in words | 3 |
 | warn | total | 6 |
+| warn | unsourced | 7 |
 
 ## Errors
 
 
 ## Warns
 
+- **(page)** (None) `lunar reference Apollo 11` — unsourced: Apollo comparison data shown with no source
+- **(page)** (None) `lunar reference Apollo 12` — unsourced: Apollo comparison data shown with no source
+- **(page)** (None) `lunar reference Apollo 14` — unsourced: Apollo comparison data shown with no source
+- **(page)** (None) `lunar reference Apollo 15` — unsourced: Apollo comparison data shown with no source
+- **(page)** (None) `lunar reference Apollo 16` — unsourced: Apollo comparison data shown with no source
+- **(page)** (None) `lunar reference Apollo 17` — unsourced: Apollo comparison data shown with no source
+- **(page)** (None) `lunar reference Chang'e-5` — unsourced: Apollo comparison data shown with no source
 - **BH-2** (S121) `oxide table` — total: oxide total 68.6% (expected 90–103%)
 - **EAC-1A** (S018) `glass_content_percent` — stated in words: 0.0 rests on wording, not a number: 'EAC-1A is fully crystallized and contains plagioclase, which our XRD characterization indi'
 - **GreenSpar** (S025) `mineral table` — total: mineral total 106.0% exceeds 100%

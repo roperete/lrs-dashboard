@@ -25,6 +25,10 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent))
+from moon import export_moon  # noqa: E402
+from provenance import ensure_provenance_schema  # noqa: E402
+
 ROOT = Path(__file__).parent.parent
 DEFAULT_DB = ROOT / "lrs.sqlite"
 OUTPUT = ROOT / "public" / "data" / "data.json"
@@ -105,7 +109,7 @@ def suppress_unsourced_scalars(simulants: list, property_sources: list) -> list:
     return hidden
 
 
-def write_suppression_report(hidden: list, report_dir: Path, today: str) -> Path:
+def write_suppression_report(hidden: list, report_dir: Path, today: str, moon_hidden: list | None = None) -> Path:
     report_dir.mkdir(parents=True, exist_ok=True)
     path = report_dir / f"export-suppression-{today}.json"
     report = {
@@ -116,6 +120,10 @@ def write_suppression_report(hidden: list, report_dir: Path, today: str) -> Path
         "by_field": dict(Counter(h["field"] for h in hidden).most_common()),
         "by_simulant": dict(Counter(h["simulant_id"] for h in hidden).most_common()),
         "suppressed": hidden,
+        "moon_rule": "A value of a lunar site or reference sample is exported only when lunar_sources has a row for "
+                     "(entity_id, field); a site without both coordinates sourced is left off the map.",
+        "moon_count": len(moon_hidden or []),
+        "moon_suppressed": moon_hidden or [],
     }
     with open(path, "w") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
@@ -190,15 +198,10 @@ def run(db_path: Path, output: Path = OUTPUT, report_dir: Path = DOC_DIR, today:
     # --- purchase_info ---
     purchase_info = fetch("SELECT * FROM purchase_info ORDER BY simulant_id")
 
-    # --- lunar_references: deserialize JSON fields ---
-    lunar_raw = fetch("SELECT * FROM lunar_references ORDER BY sample_id")
-    lunar_reference = []
-    for lr in lunar_raw:
-        lr["coordinates"] = json.loads(lr["coordinates"]) if lr["coordinates"] else {}
-        lr["chemical_composition"] = json.loads(lr["chemical_composition"]) if lr["chemical_composition"] else {}
-        lr["mineral_composition"] = json.loads(lr["mineral_composition"]) if lr["mineral_composition"] else None
-        lr["sources"] = json.loads(lr["sources"]) if lr["sources"] else []
-        lunar_reference.append(lr)
+    # --- the Moon section: sites and reference samples, each value only with its source ---
+    ensure_provenance_schema(con)
+    moon = export_moon(con)
+    lunar_reference = moon["lunar_reference"]
 
     # --- mineral_sourcing: restore booleans ---
     mineral_sourcing = fetch("SELECT * FROM mineral_sourcing ORDER BY mineral_name")
@@ -218,6 +221,9 @@ def run(db_path: Path, output: Path = OUTPUT, report_dir: Path = DOC_DIR, today:
         "mineral_groups": mineral_groups,
         "simulant_extra": simulant_extra,
         "lunar_reference": lunar_reference,
+        "lunar_sites": moon["lunar_sites"],
+        "lunar_documents": moon["lunar_documents"],
+        "lunar_sources": moon["lunar_sources"],
         "mineral_sourcing": mineral_sourcing,
         "purchase_info": purchase_info,
         "property_sources": property_sources,
@@ -228,13 +234,14 @@ def run(db_path: Path, output: Path = OUTPUT, report_dir: Path = DOC_DIR, today:
     with open(output, "w") as f:
         json.dump(data, f, separators=(",", ":"))
 
-    report_path = write_suppression_report(hidden, report_dir, today)
+    report_path = write_suppression_report(hidden, report_dir, today, moon["hidden"])
 
     size_kb = output.stat().st_size // 1024
     print(f"Exported to {output} ({size_kb}KB)")
     for key, val in data.items():
         print(f"  {key:<30} {len(val)} records")
     print(f"Suppressed {len(hidden)} unsourced scalar values (kept in the database); see {report_path}")
+    print(f"Moon: {len(moon['lunar_sites'])} sites exported, {len(moon['hidden'])} unsourced values hidden")
     return data
 
 

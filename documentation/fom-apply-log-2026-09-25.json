@@ -67,7 +67,9 @@
   "simulant": "OB-1(A*)",
   "property": "Mineralogy",
   "score": "82",
-  "outcome": "not stored: no simulant of exactly this name"
+  "simulant_id": "S053",
+  "reference_id": "RN-S053-8",
+  "outcome": "stored"
  },
  {
   "document": "slabic2024",
@@ -164,7 +166,9 @@
   "simulant": "OB-1(A*)",
   "property": "Chemistry",
   "score": "87",
-  "outcome": "not stored: no simulant of exactly this name"
+  "simulant_id": "S053",
+  "reference_id": "RN-S053-8",
+  "outcome": "stored"
  },
  {
   "document": "slabic2024",
