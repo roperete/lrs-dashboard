@@ -10,8 +10,10 @@ interface TableRow {
    *  Shown on the row itself, even when every row cites the same document: a reader
    *  checking one value should not have to look elsewhere for its source. */
   refNumber?: number;
-  /** Hover text for that citation: the document's title. */
+  /** Hover text for that citation: the value as stated. */
   refTooltip?: string;
+  /** The document it cites, the first line of the hover. */
+  refSource?: string;
 }
 
 interface CompositionTableProps {
@@ -51,7 +53,7 @@ export function CompositionTable({ data, valueLabel, refLabel, decimals = 2, par
               <td className="py-1.5 px-3 text-right text-slate-200 font-mono">
                 {fmt(row.value)}
                 {row.refNumber != null && (
-                  <RefSup n={row.refNumber} fallback={row.refTooltip} align="right" />
+                  <RefSup n={row.refNumber} fallback={row.refTooltip} source={row.refSource} align="right" />
                 )}
               </td>
               {refLabel && (

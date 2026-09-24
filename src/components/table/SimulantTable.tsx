@@ -4,6 +4,7 @@ import { ChevronUp, ChevronDown, Check, ArrowRightLeft, Download } from 'lucide-
 import { cn } from '../../utils/cn';
 import { Tooltip } from '../ui/Tooltip';
 import { RefSup } from '../ui/RefSup';
+import { referenceHoverLabel } from '../../utils/references';
 import { getCountryDisplay } from '../../utils/countryUtils';
 import type { Simulant, ChemicalComposition, Composition, Reference, PropertySource } from '../../types';
 
@@ -78,7 +79,8 @@ export function SimulantTable({
       <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">
         {show(v)}
         {v != null && v !== '' && source && n != null && (
-          <RefSup n={n} location={source.location} quote={source.quote} align="right" />
+          <RefSup n={n} location={source.location} quote={source.quote} align="right"
+            source={referenceHoverLabel(referencesBySimulant.get(s.simulant_id)?.find(r => r.reference_id === source.reference_id))} />
         )}
       </td>
     );

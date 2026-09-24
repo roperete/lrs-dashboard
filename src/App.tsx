@@ -246,6 +246,7 @@ export default function App() {
                 mapCenter={mapState.mapCenter} mapZoom={mapState.mapZoom}
                 filteredSimulants={displayedSimulants} siteBySimulant={siteBySimulant}
                 lunarSites={lunarSites}
+                countries={data.countriesGeoJson}
                 onSimulantClick={handleSimulantClick} onLunarSiteClick={handleLunarSiteClick}
                 onMapClick={handleMapClick}
               />

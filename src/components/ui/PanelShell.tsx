@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { X, Pin, Search, Download, ArrowRightLeft } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion, useDragControls } from 'motion/react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { DragGrip, dragToClose } from './DragToClose';
 
 function cn(...inputs: any[]) { return twMerge(clsx(inputs)); }
+
+/** Wider than a phone: the panel sits on the right; below this it is a bottom sheet. */
+function useIsSideSheet() {
+  const query = '(min-width: 640px)';
+  const [side, setSide] = useState(() => typeof window === 'undefined' || window.matchMedia(query).matches);
+  useEffect(() => {
+    const m = window.matchMedia(query);
+    const on = () => setSide(m.matches);
+    m.addEventListener('change', on);
+    return () => m.removeEventListener('change', on);
+  }, []);
+  return side;
+}
 
 interface PanelShellProps {
   title: string;
@@ -26,13 +40,18 @@ export function PanelShell({
   title, subtitle, pinned, onClose, onTogglePin, onSearchSources, onDownload,
   onCompare, compareActive, accentColor = 'text-emerald-400', headerNote, children,
 }: PanelShellProps) {
+  const side = useIsSideSheet();
+  const drag = useDragControls();
+  const hidden = side ? { x: '100%', y: 0 } : { x: 0, y: '100%' };
   return (
     <motion.div
-      initial={{ x: '100%', y: 0 }} animate={{ x: 0, y: 0 }} exit={{ x: '100%', y: 0 }}
+      initial={hidden} animate={{ x: 0, y: 0 }} exit={hidden}
       transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-      className="fixed right-0 bottom-0 h-[70vh] w-full sm:top-0 sm:bottom-auto sm:h-full sm:w-[450px] bg-slate-900/95 backdrop-blur-xl border-l border-t sm:border-t-0 border-slate-800 z-[1000] overflow-y-auto shadow-2xl rounded-t-2xl sm:rounded-none"
+      {...dragToClose(side ? 'right' : 'down', drag, onClose)}
+      className="fixed right-0 bottom-0 h-[70vh] w-full sm:top-0 sm:bottom-auto sm:h-full sm:w-[450px] bg-slate-900/95 backdrop-blur-xl border-l border-t sm:border-t-0 border-slate-800 z-[1000] shadow-2xl rounded-t-2xl sm:rounded-none"
     >
-      <div className="p-6">
+      <DragGrip direction={side ? 'right' : 'down'} controls={drag} onClose={onClose} />
+      <div className="h-full overflow-y-auto p-6">
         <div className="flex justify-between items-start mb-6">
           <div className="flex-1 min-w-0">
             <h2 className={cn("text-2xl font-bold tracking-tight truncate", accentColor)}>{title}</h2>

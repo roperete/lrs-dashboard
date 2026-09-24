@@ -7,13 +7,16 @@
  */
 import { readFileSync } from 'node:fs';
 import { filterSimulantsDynamic, type FilterContext } from '../src/utils/filterSimulants';
+import { getCountryDisplay } from '../src/utils/countryUtils';
 import type { Simulant, DynamicFilter } from '../src/types';
 
 const data = JSON.parse(readFileSync(new URL('../public/data/data.json', import.meta.url), 'utf8'));
 const simulants: Simulant[] = data.simulants;
+const referencesBySimulant = new Map<string, any[]>();
+for (const r of data.references) referencesBySimulant.set(r.simulant_id, [...(referencesBySimulant.get(r.simulant_id) ?? []), r]);
 const ctx: FilterContext = {
   compositions: data.compositions, chemicalCompositions: data.chemical_compositions, mineralGroups: data.mineral_groups,
-  chemicalBySimulant: new Map(), compositionBySimulant: new Map(), referencesBySimulant: new Map(),
+  chemicalBySimulant: new Map(), compositionBySimulant: new Map(), referencesBySimulant,
 };
 
 let failed = 0;
@@ -39,6 +42,16 @@ const filters: DynamicFilter[] = [
   { id: 'f3', property: 'institution', values: ['NASA (all)'] } as DynamicFilter,
   { id: 'f4', property: 'availability', values: ['Available'] } as DynamicFilter,
 ];
+// the Reference filter: 61 references have a title but no citation text
+const noText = data.references.filter((r: any) => !r.reference_text).length;
+console.log(`references without citation text: ${noText}`);
+filters.push({ id: 'f5', property: 'reference', values: ['lunar'] } as DynamicFilter);
+check('Reference filter "Zémeny" finds the Lumina products by title', () => {
+  const names = filterSimulantsDynamic(simulants, [{ id: 'r', property: 'reference', values: ['luna analog facility'] } as DynamicFilter], '', ctx).map(s => s.name);
+  return names.includes('Lunar90') && names.includes('EAC-1');
+});
+// the table's Country column sorts on getCountryDisplay(country_code)
+check('every country, empty or not, has a display name that sorts', () => simulants.every(s => typeof getCountryDisplay(s.country_code).toLowerCase() === 'string'));
 for (const f of filters) check(`filter ${f.property} runs`, () => Array.isArray(filterSimulantsDynamic(simulants, [f], '', ctx)));
 check('search and all filters together run', () => Array.isArray(filterSimulantsDynamic(simulants, filters, 'a', ctx)));
 

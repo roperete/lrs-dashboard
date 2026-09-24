@@ -120,7 +120,8 @@ export function filterSimulantsDynamic(
           if (!q) break;
           const refs = ctx.referencesBySimulant.get(s.simulant_id);
           if (!refs || refs.length === 0) return false;
-          const match = refs.some(r => r.reference_text.toLowerCase().includes(q));
+          // 61 references have a title but no citation text: search both, and the authors
+          const match = refs.some(r => [r.reference_text, r.title, r.authors].some(t => (t || '').toLowerCase().includes(q)));
           if (!match) return false;
           break;
         }

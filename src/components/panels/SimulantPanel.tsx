@@ -11,7 +11,7 @@ import { ChemicalChart } from './ChemicalChart';
 import { ReferencesSection } from './ReferencesSection';
 import { DataSourceLine } from './CompositionStatus';
 import { downloadSimulantCSV } from '../../utils/csv';
-import { referenceNumbers } from '../../utils/references';
+import { referenceNumbers, referenceHoverLabel } from '../../utils/references';
 import type { Simulant, Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, LunarReference, PhysicalProperties, PurchaseInfo, PropertySource, FigureOfMerit } from '../../types';
 
 function inferLunarRef(ref: string | null | undefined, lunarRefs: LunarReference[]): string | null {
@@ -62,6 +62,7 @@ export function SimulantPanel({
 
   // Reference numbers are derived here from the reference list, never stored.
   const refNumbers = useMemo(() => referenceNumbers(references), [references]);
+  const refLabel = (referenceId: string) => referenceHoverLabel(references.find(r => r.reference_id === referenceId));
   // Existence line: how many documents on file a reader confirmed to name this simulant.
   const namedIn = references.filter(r => r.names_simulant === 1).length;
   const existenceNote = (
@@ -106,10 +107,11 @@ export function SimulantPanel({
             properties={physicalProperties}
             sources={propertySources}
             refNumber={(referenceId) => refNumbers.get(referenceId)}
+            refLabel={refLabel}
           />
         )}
 
-        <FigureOfMeritSection foms={figuresOfMerit} refNumber={(referenceId) => refNumbers.get(referenceId)} />
+        <FigureOfMeritSection foms={figuresOfMerit} refNumber={(referenceId) => refNumbers.get(referenceId)} refLabel={refLabel} />
 
         <PurchaseSection availability={simulant.availability} purchaseInfo={purchaseInfo} />
 

@@ -4,7 +4,7 @@ import { FlaskConical } from 'lucide-react';
 import { ToggleButtonGroup } from '../ui/ToggleButtonGroup';
 import { CompositionTable } from './CompositionTable';
 import { CompositionStatusNotice, statusOf } from './CompositionStatus';
-import { referenceNumbers, referenceShortLabel, rowCitationTooltip } from '../../utils/references';
+import { referenceNumbers, referenceHoverLabel, rowCitationTooltip } from '../../utils/references';
 import type { ChemicalComposition, LunarReference, Simulant, Reference } from '../../types';
 
 interface ChemicalChartProps {
@@ -44,7 +44,8 @@ export function ChemicalChart({ chemicalCompositions, lunarRef, simulantName, si
       value: c.value_wt_pct,
       refValue: lunarRef?.chemical_composition?.[c.component_name],
       refNumber: c.reference_id ? refNumbers.get(c.reference_id) : undefined,
-      refTooltip: rowCitationTooltip(c.value_text, c.reference_id ? referenceShortLabel(refById.get(c.reference_id)) : undefined),
+      refTooltip: rowCitationTooltip(c.value_text, undefined),
+        refSource: c.reference_id ? referenceHoverLabel(refById.get(c.reference_id)) : undefined,
     })),
     [chemData, lunarRef, refNumbers, refById]);
 

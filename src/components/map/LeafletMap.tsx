@@ -1,10 +1,18 @@
 import React, { useEffect } from 'react';
 import {
-  MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents,
+  MapContainer, TileLayer, GeoJSON, Marker, Popup, Tooltip, useMap, useMapEvents,
 } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import L from 'leaflet';
 import type { Simulant, Site, LunarSite } from '../../types';
+import { EqualEarthCRS, sphereOutline, graticule } from './equalEarth';
+
+// Earth base map in Equal Earth: the globe's outline as the ocean, then countries and a 30° graticule.
+const OCEAN = sphereOutline();
+const GRATICULE = graticule();
+const oceanStyle = { fillColor: '#0b1f3a', fillOpacity: 1, color: '#1e3a5f', weight: 1 };
+const graticuleStyle = { color: '#1e3a5f', weight: 0.6, opacity: 0.8, interactive: false };
+const countryStyle = { fillColor: '#1e293b', fillOpacity: 1, color: '#475569', weight: 0.6 };
 
 // Fix Leaflet default icons
 // @ts-ignore
@@ -93,6 +101,8 @@ interface LeafletMapProps {
   filteredSimulants: Simulant[];
   siteBySimulant: Map<string, Site>;
   lunarSites: LunarSite[];
+  /** Country outlines for the Earth base map (public/data/countries.geojson). */
+  countries?: GeoJSON.FeatureCollection | null;
   onSimulantClick: (id: string, lat: number, lon: number) => void;
   onLunarSiteClick: (id: string, lat: number, lng: number) => void;
   onMapClick: (e: L.LeafletMouseEvent) => void;
@@ -100,17 +110,28 @@ interface LeafletMapProps {
 
 export function LeafletMap({
   planet, mapCenter, mapZoom,
-  filteredSimulants, siteBySimulant, lunarSites,
+  filteredSimulants, siteBySimulant, lunarSites, countries,
   onSimulantClick, onLunarSiteClick, onMapClick,
 }: LeafletMapProps) {
-  const tileUrl = planet === 'moon'
-    ? 'https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-moon-basemap-v0-1/all/{z}/{x}/{y}.png'
-    : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
-
+  // The Earth map is drawn in Equal Earth (endorsed by the UN General Assembly, 4 Sep 2026) as
+  // vectors, since map tiles exist only in Web Mercator; the Moon keeps its Mercator tiles.
+  // A map's CRS cannot change after it is created, so each planet gets its own map (key).
   return (
-    <MapContainer center={mapCenter} zoom={mapZoom}
+    <MapContainer key={planet} center={mapCenter} zoom={mapZoom}
+      crs={planet === 'earth' ? EqualEarthCRS : L.CRS.EPSG3857}
+      minZoom={planet === 'earth' ? 1 : undefined} maxZoom={planet === 'earth' ? 8 : undefined}
       style={{ height: '100%', width: '100%', background: '#020617' }} zoomControl={false}>
-      <TileLayer url={tileUrl} attribution={planet === 'moon' ? '&copy; OpenPlanetaryMap' : '&copy; OpenStreetMap'} />
+      {planet === 'moon' ? (
+        <TileLayer url="https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-moon-basemap-v0-1/all/{z}/{x}/{y}.png"
+          attribution="&copy; OpenPlanetaryMap" />
+      ) : (
+        <>
+          <GeoJSON data={OCEAN} style={oceanStyle} interactive={false} />
+          <GeoJSON data={GRATICULE} style={graticuleStyle} interactive={false} />
+          {countries && <GeoJSON key="countries" data={countries} style={countryStyle} interactive={false}
+            attribution="Natural Earth; Equal Earth projection" />}
+        </>
+      )}
       <MapController center={mapCenter} zoom={mapZoom} />
       <MapEvents onMapClick={onMapClick} />
 

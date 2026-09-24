@@ -42,7 +42,9 @@ export const countryDisplayNames: Record<string, string> = {
   TWN: 'Taiwan',
 };
 
-export function getCountryDisplay(code: string): string {
+/** Display name of a country; '' when the record has none yet. */
+export function getCountryDisplay(code: string | null | undefined): string {
+  if (!code) return '';
   return countryDisplayNames[code] || code;
 }
 

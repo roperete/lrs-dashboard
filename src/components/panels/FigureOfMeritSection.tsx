@@ -25,9 +25,11 @@ interface Props {
   foms: FigureOfMerit[];
   /** Number of a reference within this simulant's list; see utils/references.ts. */
   refNumber: (referenceId: string) => number | undefined;
+  /** First line of a citation hover: which document the score is from. */
+  refLabel?: (referenceId: string) => string | undefined;
 }
 
-export function FigureOfMeritSection({ foms, refNumber }: Props) {
+export function FigureOfMeritSection({ foms, refNumber, refLabel }: Props) {
   if (foms.length === 0) return null;
   const rows = [...foms].sort((a, b) => ORDER.indexOf(a.property) - ORDER.indexOf(b.property)
     || (a.reference_sample || '').localeCompare(b.reference_sample || ''));
@@ -63,7 +65,7 @@ export function FigureOfMeritSection({ foms, refNumber }: Props) {
                   <td className="py-1.5 px-3 text-right text-slate-200 font-mono whitespace-nowrap">
                     {f.score_text || f.score}
                     {f.scale && !String(f.score_text || '').includes('%') && f.scale.includes('%') ? '%' : ''}
-                    {n != null && <RefSup n={n} location={f.location} quote={f.quote} align="right" />}
+                    {n != null && <RefSup n={n} location={f.location} quote={f.quote} align="right" source={refLabel?.(f.reference_id)} />}
                   </td>
                 </tr>
               );

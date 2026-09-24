@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Database, Search, ChevronLeft, ArrowRightLeft, ChevronDown, MessageSquare, HelpCircle, X } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion, useDragControls } from 'motion/react';
+import { DragGrip, dragToClose } from '../ui/DragToClose';
 import { DynamicFilterPanel } from './DynamicFilterPanel';
 import { SimulantList } from './SimulantList';
 import type { Simulant, LunarSite, DynamicFilter, FilterProperty } from '../../types';
@@ -39,20 +40,23 @@ interface SidebarProps {
 export function Sidebar(props: SidebarProps) {
   const [listOpen, setListOpen] = useState(true);
   const [helpOpen, setHelpOpen] = useState(false);
+  const drag = useDragControls();
 
   return (
     <motion.div
       initial={{ x: '-100%' }} animate={{ x: 0 }} exit={{ x: '-100%' }}
       transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+      {...dragToClose('left', drag, props.onClose)}
       className="absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-slate-900/90 backdrop-blur-xl border-r border-slate-800 z-[50] flex flex-col"
     >
+      <DragGrip direction="left" controls={drag} onClose={props.onClose} />
       {/* Header */}
       <div className="p-4 border-b border-slate-800 space-y-3">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-lg font-bold text-white tracking-tight">Lunar Regolith Simulants</h2>
             <p className="text-[10px] text-slate-500 uppercase tracking-widest">
-              Interactive Database <span className="text-emerald-400 font-semibold">v2.9.18</span>
+              Interactive Database <span className="text-emerald-400 font-semibold">v2.9.19</span>
             </p>
           </div>
           <button onClick={props.onClose} className="p-1.5 hover:bg-slate-800 rounded-lg text-slate-500">

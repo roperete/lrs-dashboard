@@ -10,7 +10,8 @@
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
     "check:render": "tsx scripts/render_smoke.tsx",
-    "check:filters": "tsx scripts/check_filters.tsx"
+    "check:filters": "tsx scripts/check_filters.tsx",
+    "check:projection": "tsx scripts/check_projection.tsx"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",

@@ -4,7 +4,7 @@ import { Activity } from 'lucide-react';
 import { ToggleButtonGroup } from '../ui/ToggleButtonGroup';
 import { CompositionTable } from './CompositionTable';
 import { CompositionStatusNotice, statusOf } from './CompositionStatus';
-import { referenceNumbers, referenceShortLabel, rowCitationTooltip } from '../../utils/references';
+import { referenceNumbers, referenceHoverLabel, rowCitationTooltip } from '../../utils/references';
 import type { Composition, MineralGroup, LunarReference, Simulant, Reference } from '../../types';
 
 interface MineralChartProps {
@@ -66,7 +66,8 @@ export function MineralChart({ compositions, mineralGroups, lunarRef, simulantNa
         value: d.value_pct,
         refValue: lunarRef?.mineral_composition?.[d.component_name],
         refNumber: d.reference_id ? refNumbers.get(d.reference_id) : undefined,
-        refTooltip: rowCitationTooltip(d.value_text, d.reference_id ? referenceShortLabel(refById.get(d.reference_id)) : undefined),
+        refTooltip: rowCitationTooltip(d.value_text, undefined),
+        refSource: d.reference_id ? referenceHoverLabel(refById.get(d.reference_id)) : undefined,
       }));
     }
     // Grouped rows are derived from the detailed list and carry no citation of their own.

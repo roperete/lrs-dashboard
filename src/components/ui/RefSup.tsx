@@ -12,6 +12,9 @@ interface RefSupProps {
    *  document as a whole; falls back to "Reference n". */
   fallback?: string;
   align?: 'left' | 'center' | 'right';
+  /** The document the mark points to, shown first: otherwise nothing on the hover says which
+   *  reference [n] is, short of scrolling to the References section. */
+  source?: string | null;
 }
 
 /**
@@ -19,9 +22,10 @@ interface RefSupProps {
  * simulant's numbered References section; hovering shows where in that document the
  * value was read. A real <sup> so it sits like a footnote mark next to the value.
  */
-export function RefSup({ n, location, quote, fallback, align = 'center' }: RefSupProps) {
+export function RefSup({ n, location, quote, fallback, align = 'center', source }: RefSupProps) {
   const parts = [location?.trim(), quote?.trim()].filter((p): p is string => !!p);
-  const text = parts.length > 0 ? parts.join(' — ') : fallback || `Reference ${n}`;
+  const detail = parts.length > 0 ? parts.join(' — ') : fallback;
+  const text = [source?.trim() ? `[${n}] ${source.trim()}` : undefined, detail].filter(Boolean).join('\n') || `Reference ${n}`;
   return (
     <sup className="ml-0.5 text-[10px] leading-none">
       <Tooltip text={text} align={align}>

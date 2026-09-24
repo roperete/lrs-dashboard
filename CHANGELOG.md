@@ -5,6 +5,30 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.19 — 2026-09-25 (staging)
+
+Two more crash fixes; the 2D Earth map in Equal Earth; drag to close the side panels; the document's name on every citation hover.
+
+**Interface**
+- Sorting the table by Country, or typing in the Reference filter, blanked the page, like the
+  search did in v2.9.17: the three Lumina simulants have no country yet, and 61 references
+  have a title but no citation text. Both now allow empty fields; the Reference filter also
+  searches titles and authors, so those references can be found.
+- The 2D Earth map uses the Equal Earth projection, endorsed by the UN General Assembly on
+  4 September 2026 (resolution A/80/L.104) in place of Mercator, which enlarges land towards
+  the poles. Map tiles exist only in Mercator, so the base map is now drawn: ocean, country
+  outlines and a 30° graticule. Coordinates are unchanged; only how they are drawn.
+- Hovering a citation mark [n] now shows first which document it is (author, year, title),
+  then the page and the quote. Before, nothing on the hover said which reference [n] was.
+- The right panel and the left panel each have a grip on their inner edge: drag it towards the
+  panel's own edge to close it (down on phones). A short drag springs back.
+- The lunar comparison table printed "+" for every difference; it now shows the sign.
+
+**Process**
+- `check:projection` tests the map projection against the published Equal Earth formulas, north-up
+  and east-right, round trips and equal area, and that all 146 simulant sites stay in their
+  country outline; `check:filters` now covers the Reference filter and the Country sort.
+
 ## v2.9.18 — 2026-09-25 (staging)
 
 Hotfix: searching in the left panel no longer blanks the page.

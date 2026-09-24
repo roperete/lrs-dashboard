@@ -32,9 +32,11 @@ interface PhysicalPropertiesSectionProps {
   sources?: Map<string, PropertySource>;
   /** Number of a reference within this simulant's list; see utils/references.ts. */
   refNumber?: (referenceId: string) => number | undefined;
+  /** "Author et al. (year). Title" of a reference, the first line of its citation hover. */
+  refLabel?: (referenceId: string) => string | undefined;
 }
 
-export function PhysicalPropertiesSection({ properties, sources, refNumber }: PhysicalPropertiesSectionProps) {
+export function PhysicalPropertiesSection({ properties, sources, refNumber, refLabel }: PhysicalPropertiesSectionProps) {
   const entries = PROP_CONFIG.filter(({ key }) => properties[key] != null);
 
   if (entries.length === 0) return null;
@@ -53,7 +55,7 @@ export function PhysicalPropertiesSection({ properties, sources, refNumber }: Ph
               </Tooltip>
               <p className="text-sm font-medium text-cyan-400">
                 {String(properties[key])}{unit && <span className="text-slate-500 ml-1">{unit}</span>}
-                {source && n != null && <RefSup n={n} location={source.location} quote={source.quote} align="left" />}
+                {source && n != null && <RefSup n={n} location={source.location} quote={source.quote} align="left" source={refLabel?.(source.reference_id)} />}
               </p>
             </div>
           );
