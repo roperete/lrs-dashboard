@@ -1,0 +1,142 @@
+[
+ {
+  "simulant_id": "S018",
+  "name": "EAC-1A",
+  "where": "glass_content_percent",
+  "check": "stated in words",
+  "severity": "warn",
+  "detail": "0.0 rests on wording, not a number: 'EAC-1A is fully crystallized and contains plagioclase, which our XRD characterization indi'",
+  "reference_id": "RN-S018-1",
+  "value": 0.0
+ },
+ {
+  "simulant_id": "S027",
+  "name": "JSC-1",
+  "where": "glass_content_percent",
+  "check": "stated in words",
+  "severity": "warn",
+  "detail": "50.0 rests on wording, not a number: 'Approximately half of the volume of a typical particle is glass of basaltic composition.'",
+  "reference_id": "R086",
+  "value": 50.0
+ },
+ {
+  "simulant_id": "S045",
+  "name": "NAO-1",
+  "where": "cohesion",
+  "check": "plausibility",
+  "severity": "error",
+  "detail": "95.3 kPa is outside the plausible range 0–30 kPa",
+  "reference_id": "R095",
+  "value": 95.3
+ },
+ {
+  "simulant_id": "S051",
+  "name": "NU-LHT-2M",
+  "where": "cohesion",
+  "check": "stated in words",
+  "severity": "warn",
+  "detail": "0.0 rests on wording, not a number: 'The measured cohesion was too low to make any meaningful conclusion and is considered to b'",
+  "reference_id": "RN-S051-1",
+  "value": 0.0
+ },
+ {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "where": "particle_size_distribution",
+  "check": "quote",
+  "severity": "error",
+  "detail": "2000, 4.19, 850, 9.09, 425, 15.43, 250, 20.32, 150, 26.81, 75, 37.99, 32, 61.31, 22, 71.04, 13, 80.38, 9, 85.42, 7, 91.36, 3.2, 96.51, 1.3, 98.25 not in its quote",
+  "reference_id": "DS-S060",
+  "value": "Cumulative, % by mass coarser than: 4750.0 µm 0.65; 2000.0 µm 4.19; 850.0 µm 9.09; 425.0 µm 15.43; 250.0 µm 20.32; 150.0 µm 26.81; 75.0 µm 37.99; 32.0 µm 61.31; 22.0 µm 71.04; 13.0 µm 80.38; 9.0 µm 85.42; 7.0 µm 91.36; 3.2 µm 96.51; 1.3 µm 98.25; 1.0 µm 100.00"
+ },
+ {
+  "simulant_id": "S157",
+  "name": "FEFU-1",
+  "where": "particle_size_mean_um",
+  "check": "plausibility",
+  "severity": "error",
+  "detail": "0.8 µm is outside the plausible range 1–5000 µm",
+  "reference_id": "RN-S157-1",
+  "value": 0.8
+ },
+ {
+  "simulant_id": "S025",
+  "name": "GreenSpar",
+  "where": "mineral table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "mineral total 106.0% exceeds 100%",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S028",
+  "name": "JSC-1A",
+  "where": "oxide table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "oxide total 108.6% (expected 90–103%)",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S049",
+  "name": "NU-LHT-1M",
+  "where": "oxide table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "oxide total 103.5% (expected 90–103%)",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S080",
+  "name": "IGG-01",
+  "where": "oxide table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "oxide total 22.4% (expected 90–103%)",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S121",
+  "name": "BH-2",
+  "where": "oxide table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "oxide total 68.6% (expected 90–103%)",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S124",
+  "name": "NEU-1B",
+  "where": "oxide table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "oxide total 6.5% (expected 90–103%)",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S053",
+  "name": "OB-1",
+  "where": "cross-field",
+  "check": "consistency",
+  "severity": "warn",
+  "detail": "glass content 42% but the glass row is 52.6%",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S124",
+  "name": "NEU-1B",
+  "where": "cross-field",
+  "check": "consistency",
+  "severity": "warn",
+  "detail": "labelled 'Low-Ti Mare' but TiO2 is 6.5%",
+  "reference_id": null,
+  "value": null
+ }
+]

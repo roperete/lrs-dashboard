@@ -138,3 +138,76 @@ class ColumnUnitRepairTests(unittest.TestCase):
         self.assertIsNone(self.row("S3")[1])
         self.assertEqual(self.con.execute("SELECT count(*) FROM property_sources WHERE simulant_id='S3' AND field='cohesion'").fetchone(), (0,))
         self.assertTrue(any(e["action"] == "cleared: not a single number" and e["field"] == "cohesion" for e in self.log))
+
+
+class MixedTableRepairTests(unittest.TestCase):
+    """Tables already assembled from several documents keep one analysis; the rest is logged."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        con = sqlite3.connect(Path(self.tmp.name) / "lrs.sqlite")
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text())
+        ensure_provenance_schema(con)
+        con.execute("INSERT INTO simulants (simulant_id, name) VALUES ('S1','NU-LHT-2M')")
+        con.executemany("INSERT INTO references_ (reference_id, simulant_id, title, reference_type) VALUES (?,?,?,?)",
+                        [("RA", "S1", "Slabic 2024 guide", "report"), ("RB", "S1", "Rickman 2024 NUW-LHT-5M", "general")])
+        con.executemany("INSERT INTO chemical_compositions (composition_id, simulant_id, component_type, component_name, value_wt_pct, reference_id) VALUES (?,?,?,?,?,?)",
+                        # RA is NU-LHT-2M's complete analysis as the guide prints it (99.2%); RB grafts on
+                        # another paper's Cr2O3 and total iron.
+                        [("C1", "S1", "oxide", "SiO2", 47.0, "RA"), ("C2", "S1", "oxide", "Al2O3", 24.5, "RA"), ("C3", "S1", "oxide", "FeO", 3.7, "RA"),
+                         ("C6", "S1", "oxide", "CaO", 13.6, "RA"), ("C7", "S1", "oxide", "MgO", 8.4, "RA"), ("C8", "S1", "oxide", "Na2O", 1.5, "RA"),
+                         ("C9", "S1", "oxide", "TiO2", 0.4, "RA"), ("C10", "S1", "oxide", "K2O", 0.1, "RA"),
+                         ("C4", "S1", "oxide", "Cr2O3", 0.1, "RB"), ("C5", "S1", "oxide", "Fe2O3", 4.15, "RB")])
+        con.commit()
+        self.con = con
+        self.log = repair(con, feedstock=set())
+
+    def tearDown(self):
+        self.con.close(); self.tmp.cleanup()
+
+    def test_the_analysis_with_most_rows_is_kept(self):
+        self.assertEqual({r[0] for r in self.con.execute("SELECT reference_id FROM chemical_compositions WHERE simulant_id='S1'")}, {"RA"})
+        self.assertEqual(self.con.execute("SELECT count(*) FROM chemical_compositions WHERE simulant_id='S1'").fetchone(), (8,))
+
+    def test_the_other_documents_rows_are_logged_with_their_values(self):
+        moved = [e for e in self.log if e["action"] == "removed: a second document's analysis"]
+        self.assertEqual({(e["component"], e["stated"], e["reference_id"]) for e in moved}, {("Cr2O3", 0.1, "RB"), ("Fe2O3", 4.15, "RB")})
+
+
+class PiecemealAnalysisTests(unittest.TestCase):
+    """One analysis cited across several documents is not a merge, and must survive.
+
+    Engelschiøn 2020's EAC-1 XRF table is reproduced in later papers, and readers cited each
+    row to whichever paper they found it in: SiO2, MgO, TiO2 to one, Al2O3, Fe2O3, CaO to
+    another — disjoint components, 98.4% together. BH-1's paper omitted iron and its
+    corrigendum supplies it. A graft is different: one document is already a complete
+    analysis and another adds rows on top of it (NU-LHT-2M, 99.2% + 4.4%).
+    """
+
+    def build(self, rows):
+        tmp = tempfile.TemporaryDirectory(); self.addCleanup(tmp.cleanup)
+        con = sqlite3.connect(Path(tmp.name) / "lrs.sqlite"); self.addCleanup(con.close)
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text()); ensure_provenance_schema(con)
+        con.execute("INSERT INTO simulants (simulant_id, name) VALUES ('S1','X')")
+        for rid in {r[2] for r in rows}:
+            con.execute("INSERT INTO references_ (reference_id, simulant_id, title) VALUES (?, 'S1', ?)", (rid, rid))
+        con.executemany("INSERT INTO chemical_compositions (composition_id, simulant_id, component_type, component_name, value_wt_pct, reference_id) "
+                        "VALUES (?, 'S1', 'oxide', ?, ?, ?)", [(f"C{i}", n, v, rid) for i, (n, v, rid) in enumerate(rows)])
+        con.commit()
+        return con, repair(con, feedstock=set())
+
+    def test_disjoint_fragments_of_one_analysis_are_all_kept(self):
+        con, log = self.build([("SiO2", 43.7, "RA"), ("MgO", 11.9, "RA"), ("TiO2", 2.4, "RA"),
+                               ("Al2O3", 12.6, "RB"), ("Fe2O3", 12.0, "RB"), ("CaO", 10.8, "RB"), ("Na2O", 2.9, "RB")])
+        self.assertEqual(con.execute("SELECT count(*) FROM chemical_compositions").fetchone(), (7,))
+        self.assertTrue(any(e["action"] == "kept: one analysis cited across several documents" for e in log))
+
+    def test_a_paper_and_its_corrigendum_are_kept_together(self):
+        con, _ = self.build([("SiO2", 43.3, "RA"), ("Al2O3", 16.5, "RA"), ("CaO", 8.8, "RA"), ("MgO", 3.0, "RA"),
+                             ("Na2O", 3.8, "RA"), ("K2O", 3.3, "RA"), ("TiO2", 2.9, "RA"), ("Fe2O3", 16.7, "RC")])
+        self.assertEqual(con.execute("SELECT count(*) FROM chemical_compositions").fetchone(), (8,))
+
+    def test_of_two_complete_analyses_the_one_nearest_100_is_kept(self):
+        con, _ = self.build([("SiO2", 47.0, "RA"), ("Al2O3", 24.5, "RA"), ("CaO", 25.0, "RA"),
+                             ("SiO2", 46.0, "RB"), ("Al2O3", 30.0, "RB"), ("CaO", 30.0, "RB")])
+        self.assertEqual({r[0] for r in con.execute("SELECT reference_id FROM chemical_compositions")}, {"RA"})

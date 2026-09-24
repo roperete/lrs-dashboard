@@ -299,6 +299,15 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
                 note(simulant_id=sid, field=field, reference_id=c["reference_id"], outcome="new value inserted with source", value=c.get("value"))
             else:
                 table, col = ("chemical_compositions", "value_wt_pct") if kind == "oxide" else ("mineral_compositions", "value_pct")
+                # One table, one analysis: a row from another document is not merged into a
+                # table a document already fills, or two samples' numbers end up summed.
+                others = [r[0] for r in con.execute(
+                    f"SELECT DISTINCT reference_id FROM {table} WHERE simulant_id=? AND reference_id IS NOT NULL AND reference_id!=?",
+                    (sid, c["reference_id"]))]
+                if others:
+                    note(simulant_id=sid, field=field, reference_id=c["reference_id"], value=c.get("value"), needs_review=True,
+                         outcome="not merged: the table already holds another document's analysis", table_cites=others)
+                    continue
                 exists = con.execute(f"SELECT 1 FROM {table} WHERE simulant_id=? AND component_name=?", (sid, component)).fetchone()
                 if exists:
                     note(simulant_id=sid, field=field, outcome="conflict: composition row already present, kept", needs_review=True)

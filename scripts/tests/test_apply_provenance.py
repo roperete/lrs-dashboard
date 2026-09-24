@@ -396,3 +396,40 @@ class ColumnUnitApplyTests(unittest.TestCase):
         log = self.run_new("cohesion", "3.1 kPa (low stress level); 18.80 kPa (conventional stress level)")
         self.assertIsNone(self.value("cohesion"))
         self.assertTrue(any(e.get("field") == "cohesion" and e["outcome"].startswith("flagged: not a single number") for e in log))
+
+
+class OneAnalysisPerTableTests(unittest.TestCase):
+    """A composition table is one analysis of one sample, from one document.
+
+    On 2026-09-24 the audit found nine tables assembled from several documents: EAC-1's
+    mineral table was two complete analyses stacked (194.5%), NU-LHT-2M's oxides carried
+    Cr2O3, MnO, P2O5 and a total iron grafted on from another paper. A row from a second
+    document is not merged into a table another document already fills.
+    """
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.db = Path(self.tmp.name) / "a.sqlite"
+        make_db(self.db)            # S010 has SiO2 49.24, cited to R010 once applied
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_a_row_from_a_second_document_is_not_merged(self):
+        apply_group(self.db, [extraction()], [verification()], checked_on="2026-09-24")   # SiO2 cites R010
+        e = extraction(values=[], new_values=[{"field": "oxide:Cr2O3", "value": "0.12", "reference_id": "R011", "location": "T4", "quote": "Cr2O3 0.12"}])
+        v = verification(value_checks=[], new_value_checks=[{"field": "oxide:Cr2O3", "verdict": "CONFIRMED"}])
+        log = apply_group(self.db, [e], [v], checked_on="2026-09-24")
+        con = sqlite3.connect(self.db)
+        self.assertEqual(con.execute("SELECT count(*) FROM chemical_compositions WHERE component_name='Cr2O3'").fetchone(), (0,))
+        con.close()
+        self.assertTrue(any(x["outcome"] == "not merged: the table already holds another document's analysis" for x in log))
+
+    def test_rows_from_the_same_document_still_complete_its_table(self):
+        apply_group(self.db, [extraction()], [verification()], checked_on="2026-09-24")
+        e = extraction(values=[], new_values=[{"field": "oxide:TiO2", "value": "1.9", "reference_id": "R010", "location": "T2", "quote": "TiO2 1.9"}])
+        v = verification(value_checks=[], new_value_checks=[{"field": "oxide:TiO2", "verdict": "CONFIRMED"}])
+        apply_group(self.db, [e], [v], checked_on="2026-09-24")
+        con = sqlite3.connect(self.db)
+        self.assertEqual(con.execute("SELECT reference_id FROM chemical_compositions WHERE component_name='TiO2'").fetchone(), ("R010",))
+        con.close()

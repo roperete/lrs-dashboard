@@ -207,3 +207,21 @@ whether the third test covers the whole page or only its numbers.
   QH-E cohesion and friction (a value for each of two stress levels — pick one or show both);
   TLS-01 bulk density (1.72 before, 2.30 after crushing); TRI-1 bulk density (a minimum and a
   maximum — this one belongs in bulk_density_range).
+
+## Value audit, 2026-09-24 — what needs a human
+
+`scripts/audit_values.py` tested all 1310 displayed values against their own quotes, physical
+plausibility, composition totals, the simulant's other values and their citations
+(`documentation/value-audit-2026-09-24.md`). It found and the pipeline fixed nine composition
+tables assembled from more than one document, a group total counted with its members (PolyU-1),
+and a particle density of 1.065 g/cm³ (TLS-01). What is left is judgement:
+
+| Id | Name | Value shown | Question |
+|---|---|---|---|
+| S045 | NAO-1 | cohesion 95.3 kPa | The paper states it, then calls it an artefact of the dense (1.93 g/cm³) specimen and assumes cohesion ≈ 0. Show 95.3 with that caveat, show ~0, or show neither? |
+| S157 | FEFU-1 | mean particle size 0.8 µm | From a review's sintering table ("Particle size (μm)"): the powder used in one sintering study, perhaps milled, not necessarily the simulant as supplied. |
+| S124 | NEU-1B | lunar analogue "Low-Ti Mare" | TiO2 is 6.5% and every document calls it the high-Ti variant. Correct to "High-Ti Mare"? |
+| S053 | OB-1 | glass 42% (property) and 52.6% (mineral row) | Two documents, both cited on the page. Keep both, or one? |
+| S018, S027, S051 | EAC-1A, JSC-1, NU-LHT-2M | glass 0%, glass 50%, cohesion 0 | Stated in words — "fully crystallized", "approximately half", "considered to be zero". Acceptable as numbers? |
+| S067 | TLS-01 | (cleared) density 1.065 g/cm³ | The paper says only "density". Is it a bulk density? If so it can go in that column. |
+| S053 | OB-1 | oxides | Cited to the KLS-1 paper's comparison table, which reproduces NORCAT's data: a secondary source labelled as a primary paper. |

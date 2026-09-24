@@ -15,4 +15,5 @@ python3 "$R/scripts/export_json.py" | grep "^Suppressed"
 python3 "$R/scripts/verify_data.py" | tail -1
 python3 "$R/scripts/provenance_report.py" | grep "^| [123]\."
 "$R/node_modules/.bin/tsx" --tsconfig "$R/tsconfig.json" "$R/scripts/render_smoke.tsx" | tail -1
+python3 "$R/scripts/audit_values.py" | sed -n '1,2p'     # every displayed value against its own quote
 sqlite3 "$R/lrs.sqlite" "select 'verified '||count(*) from simulants where composition_status='verified'; select 'sourced scalars '||count(*) from property_sources;" | paste -sd' ' -

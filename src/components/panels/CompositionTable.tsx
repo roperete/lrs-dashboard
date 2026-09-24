@@ -21,10 +21,14 @@ interface CompositionTableProps {
   /** Decimal places shown. Manufacturer sheets report oxides to two decimals; rounding
    *  to one hid 0.06 as 0.1 and made the total disagree with the rows. Default 2. */
   decimals?: number;
+  /** Below this sum the table is a partial analysis — only the components a source states —
+   *  and a "Total" would read as a failed analysis (NEU-1B's lone TiO2 row "totalled" 6.50%). */
+  partialBelow?: number;
 }
 
-export function CompositionTable({ data, valueLabel, refLabel, decimals = 2 }: CompositionTableProps) {
+export function CompositionTable({ data, valueLabel, refLabel, decimals = 2, partialBelow }: CompositionTableProps) {
   const total = data.reduce((sum, d) => sum + d.value, 0);
+  const partial = partialBelow !== undefined && total < partialBelow;
   const refTotal = refLabel ? data.reduce((sum, d) => sum + (d.refValue || 0), 0) : undefined;
   const fmt = (v: number) => v.toFixed(decimals);
 
@@ -58,8 +62,10 @@ export function CompositionTable({ data, valueLabel, refLabel, decimals = 2 }: C
             </tr>
           ))}
           <tr className="border-t border-slate-700/50 font-bold">
-            <td className="py-2 px-3 text-slate-400" title="Sum of the rows listed above, as published by the source">Total</td>
-            <td className="py-2 px-3 text-right text-slate-200 font-mono">{fmt(total)}</td>
+            <td className="py-2 px-3 text-slate-400" title={partial
+              ? 'The source states only these components, so there is no total to show.'
+              : 'Sum of the rows listed above, as published by the source'}>{partial ? 'Partial analysis' : 'Total'}</td>
+            <td className="py-2 px-3 text-right text-slate-500 font-mono">{partial ? '—' : <span className="text-slate-200">{fmt(total)}</span>}</td>
             {refLabel && (
               <td className="py-2 px-3 text-right text-amber-400/70 font-mono">
                 {refTotal !== undefined ? fmt(refTotal) : '-'}

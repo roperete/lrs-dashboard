@@ -5,6 +5,35 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.14 — 2026-09-24 (staging)
+
+Every value on the page audited against its own quote; composition tables that mixed analyses repaired.
+
+**Data**
+- `scripts/audit_values.py` tests all 1310 displayed values — 546 properties, 547 oxide rows,
+  217 mineral rows across 145 simulants — against their own quote (allowing only the unit
+  conversions the pipeline makes), physical plausibility, composition totals, the simulant's
+  other values, and their citation. The first pass found 24 errors; three passes and the
+  source documents resolved all but three judgement calls, listed for the owner.
+- **Nine composition tables mixed analyses from different documents.** EAC-1's mineral table
+  was two complete analyses stacked (194.5%); NU-LHT-1M, -2M and -4M carried Cr2O3, MnO, P2O5
+  and total iron grafted on from another paper; GSC-1 added a review's pyroxene to the primary
+  paper's full analysis. Grafts onto a complete analysis are removed and logged. One analysis
+  cited piecemeal — EAC-1's XRF table reproduced across later papers, BH-1's paper and its
+  corrigendum — is kept whole.
+- PolyU-1's "Pyroxene 41.7" is removed: it is the sum of the hedenbergite and augite rows
+  listed with it. TLS-01's 1.065 g/cm³ leaves the particle-density column, which no rock that
+  light can belong in.
+- JSC-1A (108.6%) and NU-LHT-1M (103.5%) reproduce sources that give iron twice; their rows say so.
+
+**Interface**
+- A partial oxide analysis — only the components a source states — shows "Partial analysis"
+  instead of a total (NEU-1B's single TiO2 row had "totalled" 6.50%).
+
+**Process**
+- A row from a second document is never merged into a table another document already fills.
+- The audit runs after every apply.
+
 ## v2.9.13 — 2026-09-24 (staging)
 
 Hispansion data sheets restored, on their current versions; physical values stored with their unit repaired.

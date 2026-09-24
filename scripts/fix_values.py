@@ -38,6 +38,23 @@ from provenance import ensure_provenance_schema  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "lrs.sqlite"
 
+# A group row listed alongside the members it sums, counting them twice: PolyU-1's paper gives
+# "Pyroxene 41.7" and its members Hedenbergite 27.6 and Augite 14.1.
+GROUP_ROWS = {("S120", "Pyroxene")}
+
+# The source's own total, when it is not 100%: the NASA JSC-1A summary gives iron both as
+# Fe2O3 (total) and as FeO and prints a total of 108.64%.
+STATED_AS = {("S028", "Fe2O3"): "12.5 (total iron as Fe2O3; the sheet also gives FeO, and its own total is 108.64%)",
+             ("S049", "Fe2O3T"): "4.79 (total iron as Fe2O3; the source also gives FeO 3.3, so the rows sum above 100%)"}
+
+# A value in a column it cannot belong to, cleared with its source row and logged. TLS-01's
+# paper gives "density 1.065 g/cm3": no rock grain is that light, so it is not a particle density;
+# whether it is a bulk density is for a human reading the paper.
+WRONG_COLUMN = {("S067", "density_g_cm3"): "1.065 g/cm3 cannot be a particle density; the paper says only 'density'"}
+
+REFERENCE_PRIORITY = {"datasheet": 0, "report": 1, "composition": 2, "geotechnical": 3}
+COMPLETE_ANALYSIS = 90.0     # a document whose rows alone sum to this much is a whole analysis
+
 # Feedstock mixing ratios recorded as mineral composition by the 2026-09-23 wave: the rocks
 # blended to make the product, not the minerals in it. Named explicitly rather than guessed.
 FEEDSTOCK_ROWS = {
@@ -87,6 +104,54 @@ def _repair(con: sqlite3.Connection, feedstock) -> list[dict]:
             log.append({"table": "mineral_compositions", "composition_id": r["composition_id"], "simulant_id": sid,
                         "component": component, "stated": r["value_pct"], "reference_id": r["reference_id"],
                         "action": "removed: feedstock ratio, not a mineral"})
+
+    for sid, component in sorted(GROUP_ROWS):
+        r = con.execute("SELECT composition_id, value_pct, reference_id FROM mineral_compositions WHERE simulant_id=? AND component_name=?",
+                        (sid, component)).fetchone()
+        if r:
+            con.execute("DELETE FROM mineral_compositions WHERE composition_id=?", (r["composition_id"],))
+            log.append({"table": "mineral_compositions", "composition_id": r["composition_id"], "simulant_id": sid,
+                        "component": component, "stated": r["value_pct"], "reference_id": r["reference_id"],
+                        "action": "removed: a group total listed with its members"})
+    for (sid, component), stated in STATED_AS.items():
+        cur = con.execute("UPDATE chemical_compositions SET value_text=? WHERE simulant_id=? AND component_name=? AND coalesce(value_text,'')!=?",
+                          (stated, sid, component, stated))
+        if cur.rowcount:
+            log.append({"table": "chemical_compositions", "simulant_id": sid, "component": component, "stated": stated,
+                        "action": "annotated: the source's own total"})
+
+    for (sid, field), why in WRONG_COLUMN.items():
+        r = con.execute(f"SELECT {field} FROM simulants WHERE simulant_id=?", (sid,)).fetchone()
+        if r and r[0] not in (None, ""):
+            src = con.execute("SELECT reference_id, quote FROM property_sources WHERE simulant_id=? AND field=?", (sid, field)).fetchone()
+            con.execute(f"UPDATE simulants SET {field}=NULL WHERE simulant_id=?", (sid,))
+            con.execute("DELETE FROM property_sources WHERE simulant_id=? AND field=?", (sid, field))
+            log.append({"table": "simulants", "simulant_id": sid, "field": field, "stated": r[0], "why": why,
+                        "reference_id": src["reference_id"] if src else None, "quote": src["quote"] if src else None,
+                        "action": "cleared: a value in a column it cannot belong to"})
+
+    # One table, one analysis. When one document's rows are already a complete analysis, rows
+    # from other documents are grafts from another sample and move to the log. When no single
+    # document is complete, the rows are one analysis cited piecemeal — a table reproduced in
+    # later papers, or a paper and its corrigendum — and all are kept.
+    for table, col in COMPOSITION_TABLES:
+        for (sid,) in con.execute(f"SELECT simulant_id FROM {table} WHERE reference_id IS NOT NULL GROUP BY simulant_id "
+                                  f"HAVING count(DISTINCT reference_id) > 1").fetchall():
+            parts = con.execute(f"SELECT c.reference_id, count(*), sum(c.{col}), coalesce(r.reference_type,'') FROM {table} c "
+                                f"LEFT JOIN references_ r ON r.reference_id=c.reference_id WHERE c.simulant_id=? "
+                                f"AND c.reference_id IS NOT NULL GROUP BY c.reference_id", (sid,)).fetchall()
+            complete = [t for t in parts if (t[2] or 0) >= COMPLETE_ANALYSIS]
+            if not complete:
+                log.append({"table": table, "simulant_id": sid, "references": [t[0] for t in parts],
+                            "action": "kept: one analysis cited across several documents"})
+                continue
+            keep = sorted(complete, key=lambda t: (abs(100 - t[2]), REFERENCE_PRIORITY.get(t[3], 9), -t[1], t[0]))[0][0]
+            for r in con.execute(f"SELECT composition_id, component_name, {col} AS v, reference_id FROM {table} "
+                                 f"WHERE simulant_id=? AND reference_id IS NOT NULL AND reference_id!=?", (sid, keep)).fetchall():
+                con.execute(f"DELETE FROM {table} WHERE composition_id=?", (r["composition_id"],))
+                log.append({"table": table, "composition_id": r["composition_id"], "simulant_id": sid, "component": r["component_name"],
+                            "stated": r["v"], "reference_id": r["reference_id"], "kept_reference": keep,
+                            "action": "removed: a second document's analysis"})
 
     numeric = [r[1] for r in con.execute("PRAGMA table_info(simulants)") if (r[2] or "").upper() == "REAL"]
     for col in numeric:

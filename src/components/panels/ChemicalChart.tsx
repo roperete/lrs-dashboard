@@ -83,7 +83,7 @@ export function ChemicalChart({ chemicalCompositions, lunarRef, simulantName, si
           </ResponsiveContainer>
         </div>
       ) : (
-        <CompositionTable data={tableData} valueLabel="wt%" refLabel={lunarRef?.mission || undefined} />
+        <CompositionTable data={tableData} valueLabel="wt%" refLabel={lunarRef?.mission || undefined} partialBelow={90} />
       )}
     </div>
   );
