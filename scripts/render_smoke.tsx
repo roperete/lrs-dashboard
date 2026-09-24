@@ -18,6 +18,7 @@ import { PhysicalPropertiesSection } from '../src/components/panels/PhysicalProp
 import { ChemicalChart } from '../src/components/panels/ChemicalChart';
 import { MineralChart } from '../src/components/panels/MineralChart';
 import { SimulantTable } from '../src/components/table/SimulantTable';
+import { FigureOfMeritSection } from '../src/components/panels/FigureOfMeritSection';
 import { referenceNumbers } from '../src/utils/references';
 import type { ChemicalComposition, Composition, PhysicalProperties, PropertySource, Reference, Simulant } from '../src/types';
 
@@ -83,6 +84,18 @@ for (const sim of d.simulants as Simulant[]) {
     const html = renderToStaticMarkup(
       <MineralChart compositions={mins} mineralGroups={[]} lunarRef={null} simulantName={sim.name} simulant={sim} references={refs} />);
     expect(`${sim.name} mineral rows`, sups(html), mins.filter(c => c.reference_id && c.value_pct > 0).length);
+  }
+}
+
+// Figures of Merit: one mark per score.
+{
+  const bySimFom = bySim<any>(d.figures_of_merit || []);
+  for (const sim of d.simulants as Simulant[]) {
+    const foms = bySimFom.get(sim.simulant_id) ?? [];
+    if (foms.length === 0) continue;
+    const nums = referenceNumbers(refsBy.get(sim.simulant_id) ?? []);
+    const html = renderToStaticMarkup(<FigureOfMeritSection foms={foms} refNumber={(id) => nums.get(id)} />);
+    expect(`${sim.name} figures of merit`, sups(html), foms.length);
   }
 }
 

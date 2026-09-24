@@ -45,7 +45,7 @@ export default function App() {
     lunarReference, compositionBySimulant, chemicalBySimulant, referencesBySimulant,
     mineralGroupsBySimulant, extraBySimulant, siteBySimulant,
     mineralSourcingByMineral, purchaseBySimulant, physicalPropsBySimulant, propertySourcesBySimulant,
-    refNumber,
+    fomsBySimulant, refNumber,
   } = data;
 
   const globeRef = useRef<GlobeViewHandle>(null);
@@ -387,6 +387,7 @@ export default function App() {
             lunarReferences={lunarReference}
             physicalProperties={physicalPropsBySimulant.get(selectedSimulant.simulant_id)}
             propertySources={propertySourcesBySimulant.get(selectedSimulant.simulant_id)}
+            figuresOfMerit={fomsBySimulant.get(selectedSimulant.simulant_id)}
             purchaseInfo={purchaseBySimulant.get(selectedSimulant.simulant_id)}
             selectedLunarRefMission={panelState.selectedLunarRefMission}
             onSelectLunarRef={panelState.setSelectedLunarRefMission}

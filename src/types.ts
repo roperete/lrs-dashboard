@@ -88,6 +88,21 @@ export interface Reference {
   checked_on?: string | null;      // ISO date of the last verification
 }
 
+/** A Figure of Merit: one cited score per (simulant, property, lunar reference). */
+export interface FigureOfMerit {
+  fom_id: string;
+  simulant_id: string;
+  property: string;               // composition | mineralogy | particle_size | shape | density | overall | other
+  property_label: string;         // as the document names it
+  reference_sample: string | null;
+  score: number;
+  scale: string | null;
+  score_text: string | null;
+  reference_id: string;
+  location: string | null;
+  quote: string | null;
+}
+
 /** Where a scalar on `simulants` was read from: one row per (simulant, field). */
 export interface PropertySource {
   simulant_id: string;

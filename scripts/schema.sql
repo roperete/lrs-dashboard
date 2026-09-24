@@ -165,3 +165,20 @@ CREATE TABLE IF NOT EXISTS mineral_sourcing (
   european_sources         TEXT,
   european_locations_detail TEXT
 );
+
+-- Figures of Merit: one score per (simulant, property, lunar reference), each cited (2026-09-25).
+-- An FoM compares a simulant with a lunar reference material property by property; a single
+-- column would lose what it measures and against what.
+CREATE TABLE IF NOT EXISTS figures_of_merit (
+  fom_id           TEXT PRIMARY KEY,
+  simulant_id      TEXT NOT NULL REFERENCES simulants(simulant_id),
+  property         TEXT NOT NULL,   -- composition | mineralogy | particle_size | shape | density | overall | other
+  property_label   TEXT NOT NULL,   -- as the document names it
+  reference_sample TEXT,            -- the lunar material it is scored against, as stated
+  score            REAL NOT NULL,
+  scale            TEXT,            -- 0-1, 0-100, % ... as the document uses
+  score_text       TEXT,            -- the score as printed
+  reference_id     TEXT NOT NULL REFERENCES references_(reference_id),
+  location         TEXT,
+  quote            TEXT
+);

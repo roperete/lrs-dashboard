@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import type {
-  Simulant, Site, Composition, ChemicalComposition, Reference,
+  Simulant, Site, Composition, ChemicalComposition, Reference, FigureOfMerit,
   MineralGroup, SimulantExtra, LunarReference, MineralSourcing, PurchaseInfo, PropertySource
 } from '../types';
 
@@ -18,6 +18,7 @@ export interface DataState {
   mineralSourcing: MineralSourcing[];
   purchaseInfo: PurchaseInfo[];
   propertySources: PropertySource[];
+  figuresOfMerit: FigureOfMerit[];
   countriesGeoJson: GeoJSON.FeatureCollection | null;
 }
 
@@ -35,6 +36,7 @@ interface RawBundle {
   mineral_sourcing?: MineralSourcing[];
   purchase_info?: PurchaseInfo[];
   property_sources?: PropertySource[];
+  figures_of_merit?: FigureOfMerit[];
 }
 
 const DATA_BASE = import.meta.env.BASE_URL + 'data/';
@@ -54,6 +56,7 @@ export function useData(): DataState {
     mineralSourcing: [],
     purchaseInfo: [],
     propertySources: [],
+    figuresOfMerit: [],
     countriesGeoJson: null,
   });
 
@@ -76,6 +79,7 @@ export function useData(): DataState {
         mineralSourcing: data.mineral_sourcing ?? [],
         purchaseInfo: data.purchase_info ?? [],
         propertySources: data.property_sources ?? [],
+        figuresOfMerit: data.figures_of_merit ?? [],
         countriesGeoJson: countriesGeoJson?.type ? countriesGeoJson : null,
       });
     }).catch(err => {

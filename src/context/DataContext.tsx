@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useMemo, useCallback } from 'react';
 import { useData, type DataState } from '../hooks/useData';
 import { referenceNumber } from '../utils/references';
-import type { Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, Site, MineralSourcing, PurchaseInfo, PhysicalProperties, PropertySource } from '../types';
+import type { Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, Site, MineralSourcing, PurchaseInfo, PhysicalProperties, PropertySource, FigureOfMerit } from '../types';
 
 interface DataContextValue extends DataState {
   compositionBySimulant: Map<string, Composition[]>;
@@ -15,6 +15,8 @@ interface DataContextValue extends DataState {
   physicalPropsBySimulant: Map<string, PhysicalProperties>;
   /** simulant_id -> field -> where that scalar was read from. */
   propertySourcesBySimulant: Map<string, Map<string, PropertySource>>;
+  /** simulant_id -> its Figures of Merit. */
+  fomsBySimulant: Map<string, FigureOfMerit[]>;
   /** 1-based number of a reference within its simulant's list, in reference_id order.
    *  Derived from the reference list on each call, never stored. */
   refNumber: (simulantId: string, referenceId: string | null | undefined) => number | undefined;
@@ -77,6 +79,8 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     return m;
   }, [data.propertySources]);
 
+  const fomsBySimulant = useMemo(() => buildGroupMap(data.figuresOfMerit), [data.figuresOfMerit]);
+
   const refNumber = useCallback(
     (simulantId: string, referenceId: string | null | undefined) =>
       referenceNumber(referencesBySimulant.get(simulantId) ?? [], referenceId),
@@ -126,8 +130,9 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     purchaseBySimulant,
     physicalPropsBySimulant,
     propertySourcesBySimulant,
+    fomsBySimulant,
     refNumber,
-  }), [data, compositionBySimulant, chemicalBySimulant, referencesBySimulant, mineralGroupsBySimulant, extraBySimulant, siteBySimulant, mineralSourcingByMineral, purchaseBySimulant, physicalPropsBySimulant, propertySourcesBySimulant, refNumber]);
+  }), [data, compositionBySimulant, chemicalBySimulant, referencesBySimulant, mineralGroupsBySimulant, extraBySimulant, siteBySimulant, mineralSourcingByMineral, purchaseBySimulant, physicalPropsBySimulant, propertySourcesBySimulant, fomsBySimulant, refNumber]);
 
   return <DataCtx.Provider value={value}>{children}</DataCtx.Provider>;
 }

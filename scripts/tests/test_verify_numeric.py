@@ -71,3 +71,16 @@ class RangeBelongsInItsOwnColumnTests(unittest.TestCase):
     def test_a_range_in_bulk_density_range_is_fine(self):
         from verify_data import check_numeric_values
         self.assertEqual(check_numeric_values([{"simulant_id": "S1", "bulk_density_range": "1.40 – 1.94 g/cm3"}], [], []), [])
+
+
+class FomVerifyTests(unittest.TestCase):
+    def test_a_score_must_cite_a_listed_reference_and_fit_its_scale(self):
+        from verify_data import check_figures_of_merit
+        sims = {"S1"}; refs = {"R1"}
+        ok = [{"fom_id": "F1", "simulant_id": "S1", "score": 0.82, "scale": "0-1", "reference_id": "R1"},
+              {"fom_id": "F2", "simulant_id": "S1", "score": 88.7, "scale": "%", "reference_id": "R1"}]
+        self.assertEqual(check_figures_of_merit(ok, sims, refs), [])
+        bad = [{"fom_id": "F3", "simulant_id": "S1", "score": 1.4, "scale": "0-1", "reference_id": "R1"},
+               {"fom_id": "F4", "simulant_id": "S1", "score": 0.5, "scale": "0-1", "reference_id": "R9"},
+               {"fom_id": "F5", "simulant_id": "S9", "score": 0.5, "scale": "0-1", "reference_id": "R1"}]
+        self.assertEqual(len(check_figures_of_merit(bad, sims, refs)), 3)

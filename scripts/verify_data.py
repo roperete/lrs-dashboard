@@ -25,6 +25,7 @@ _KEYS = {
     "references.json": "references", "mineral_groups.json": "mineral_groups",
     "mineral_sourcing.json": "mineral_sourcing", "lunar_reference.json": "lunar_reference",
     "property_sources.json": "property_sources",
+    "figures_of_merit.json": "figures_of_merit",
 }
 
 
@@ -79,6 +80,22 @@ def check_numeric_values(simulants, compositions, chemicals):
                 float(str(v))
             except ValueError:
                 errors.append(f"Physical value is not a bare number: {s.get('simulant_id')} {f} = {v!r}")
+    return errors
+
+
+def check_figures_of_merit(foms, sim_ids, ref_ids):
+    """Every FoM row names a simulant on the page, cites a reference in the bundle, and fits
+    the scale it states (0-1, or 0-100 / %)."""
+    errors = []
+    for f in foms:
+        if f.get("simulant_id") not in sim_ids:
+            errors.append(f"FoM {f.get('fom_id')} names an unknown simulant {f.get('simulant_id')}")
+        if f.get("reference_id") not in ref_ids:
+            errors.append(f"FoM {f.get('fom_id')} cites unknown reference {f.get('reference_id')}")
+        s, scale = f.get("score"), (f.get("scale") or "").replace(" ", "")
+        top = 1.0 if scale in ("0-1", "0–1") else 100.0
+        if not _is_number(s) or not (0 <= s <= top):
+            errors.append(f"FoM {f.get('fom_id')} score {s!r} outside its scale {scale or '0-100'}")
     return errors
 
 
@@ -187,6 +204,8 @@ def main():
     # 11. Per-value provenance: every exported scalar has a source row, and every
     #     source row and composition citation points at a real simulant and reference
     errors.extend(check_scalar_provenance(simulants, property_sources))
+    # 14. Figures of Merit cite a listed reference and fit their scale
+    errors.extend(check_figures_of_merit(load("figures_of_merit.json"), sim_ids, ref_ids))
     # 12. Numbers reach the page as numbers
     errors.extend(check_numeric_values(simulants, compositions, chemicals))
     # 13. No citation of the project's own registry — it is the data being checked

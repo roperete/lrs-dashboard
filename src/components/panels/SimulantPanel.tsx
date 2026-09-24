@@ -4,6 +4,7 @@ import { PanelShell } from '../ui/PanelShell';
 import { Tooltip } from '../ui/Tooltip';
 import { SimulantProperties } from './SimulantProperties';
 import { PhysicalPropertiesSection } from './PhysicalPropertiesSection';
+import { FigureOfMeritSection } from './FigureOfMeritSection';
 import { PurchaseSection } from './PurchaseSection';
 import { MineralChart } from './MineralChart';
 import { ChemicalChart } from './ChemicalChart';
@@ -11,7 +12,7 @@ import { ReferencesSection } from './ReferencesSection';
 import { DataSourceLine } from './CompositionStatus';
 import { downloadSimulantCSV } from '../../utils/csv';
 import { referenceNumbers } from '../../utils/references';
-import type { Simulant, Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, LunarReference, PhysicalProperties, PurchaseInfo, PropertySource } from '../../types';
+import type { Simulant, Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, LunarReference, PhysicalProperties, PurchaseInfo, PropertySource, FigureOfMerit } from '../../types';
 
 function inferLunarRef(ref: string | null | undefined, lunarRefs: LunarReference[]): string | null {
   if (!ref) return null;
@@ -37,6 +38,8 @@ interface SimulantPanelProps {
   physicalProperties?: PhysicalProperties;
   /** property_sources rows of this simulant keyed by field, for the citation superscripts. */
   propertySources?: Map<string, PropertySource>;
+  /** This simulant's Figures of Merit. */
+  figuresOfMerit?: FigureOfMerit[];
   purchaseInfo?: PurchaseInfo;
   selectedLunarRefMission: string | null;
   onSelectLunarRef: (mission: string | null) => void;
@@ -50,7 +53,7 @@ interface SimulantPanelProps {
 
 export function SimulantPanel({
   simulant, compositions, chemicalCompositions, references, mineralGroups, extra,
-  lunarReferences, physicalProperties, propertySources, purchaseInfo,
+  lunarReferences, physicalProperties, propertySources, figuresOfMerit = [], purchaseInfo,
   selectedLunarRefMission, onSelectLunarRef, onOpenCrossComparison,
   pinned, onClose, onTogglePin, onCompare, compareActive,
 }: SimulantPanelProps) {
@@ -105,6 +108,8 @@ export function SimulantPanel({
             refNumber={(referenceId) => refNumbers.get(referenceId)}
           />
         )}
+
+        <FigureOfMeritSection foms={figuresOfMerit} refNumber={(referenceId) => refNumbers.get(referenceId)} />
 
         <PurchaseSection availability={simulant.availability} purchaseInfo={purchaseInfo} />
 

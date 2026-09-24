@@ -388,6 +388,15 @@ def audit(root: Path = ROOT) -> list[dict]:
                 prob = composition_total_problem(kind, [x for x in comp[kind].values() if x is not None])
                 if prob:
                     flag(sid, f"{kind} table", "total", "warn", prob)
+    for f in d.get("figures_of_merit", []):
+        sid = f["simulant_id"]
+        where = f"FoM {f['property_label']} vs {f.get('reference_sample') or '—'}"
+        if not quote_supports("composition", f.get("score_text") or f["score"], f.get("quote") or "")[0]:
+            flag(sid, where, "quote", "error", f"FoM {f['score']:g} not stated in its quote: {(f.get('quote') or '')[:90]!r}", f["reference_id"], f["score"])
+        if ref_owner.get(f["reference_id"]) not in (None, sid):
+            flag(sid, where, "citation", "error", f"cites {f['reference_id']}, which belongs to another simulant's list", f["reference_id"], f["score"])
+        citation(sid, where, f["reference_id"])
+
     for sid, s in sims.items():
         for prob in cross_field_problems(s, by_sim[sid]["oxide"], by_sim[sid]["mineral"]):
             flag(sid, "cross-field", "consistency", "warn", prob)

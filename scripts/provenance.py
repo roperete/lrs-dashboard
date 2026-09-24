@@ -45,11 +45,21 @@ CREATE TABLE IF NOT EXISTS property_sources (
 """
 
 
+FOM_TABLE = """CREATE TABLE IF NOT EXISTS figures_of_merit (
+  fom_id TEXT PRIMARY KEY, simulant_id TEXT NOT NULL REFERENCES simulants(simulant_id),
+  property TEXT NOT NULL, property_label TEXT NOT NULL, reference_sample TEXT, score REAL NOT NULL,
+  scale TEXT, score_text TEXT, reference_id TEXT NOT NULL REFERENCES references_(reference_id),
+  location TEXT, quote TEXT)"""
+
+
 def ensure_provenance_schema(con: sqlite3.Connection) -> list[str]:
     added: list[str] = []
     added += [f"references_.{c}" for c in ensure_columns(con, "references_", REFERENCE_COLUMNS)]
     added += [f"chemical_compositions.{c}" for c in ensure_columns(con, "chemical_compositions", COMPOSITION_COLUMNS)]
     added += [f"mineral_compositions.{c}" for c in ensure_columns(con, "mineral_compositions", COMPOSITION_COLUMNS)]
+    if not con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='figures_of_merit'").fetchone():
+        con.execute(FOM_TABLE)
+        added.append("figures_of_merit")
     have = {r[0] for r in con.execute("SELECT name FROM sqlite_master WHERE type='table'")}
     if "property_sources" not in have:
         con.execute(PROPERTY_SOURCES_DDL)

@@ -137,6 +137,11 @@ def run(db_path: Path, output: Path = OUTPUT, report_dir: Path = DOC_DIR, today:
 
     # --- property_sources: which scalar came from which document ---
     property_sources = fetch("SELECT * FROM property_sources ORDER BY simulant_id, field")
+    # Figures of Merit: one cited score per (simulant, property, lunar reference).
+    try:
+        figures_of_merit = fetch("SELECT * FROM figures_of_merit WHERE reference_id IS NOT NULL ORDER BY simulant_id, property, reference_sample")
+    except sqlite3.OperationalError:
+        figures_of_merit = []
 
     # --- simulants: suppress unsourced scalars, then restore original types ---
     simulants = fetch("SELECT * FROM simulants ORDER BY simulant_id")
@@ -216,6 +221,7 @@ def run(db_path: Path, output: Path = OUTPUT, report_dir: Path = DOC_DIR, today:
         "mineral_sourcing": mineral_sourcing,
         "purchase_info": purchase_info,
         "property_sources": property_sources,
+        "figures_of_merit": figures_of_merit,
     }
 
     output.parent.mkdir(parents=True, exist_ok=True)
