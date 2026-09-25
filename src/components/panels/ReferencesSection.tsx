@@ -1,5 +1,5 @@
-import React from 'react';
-import { BookOpen, ExternalLink, Search, Quote, Sparkles, CircleCheck, TriangleAlert } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { BookOpen, ExternalLink, Search, CircleCheck, TriangleAlert } from 'lucide-react';
 import { Tooltip } from '../ui/Tooltip';
 import { orderReferences } from '../../utils/references';
 import type { Reference } from '../../types';
@@ -34,15 +34,6 @@ function extractDoi(text: string): string | null {
   return doiMatch ? `https://doi.org/${trimLinkEnd(doiMatch[0])}` : null;
 }
 
-/** Extract likely article title: text before the year or first ~100 chars */
-function extractTitle(text: string): string {
-  // Try to grab text before a (YYYY) or , YYYY pattern
-  const beforeYear = text.match(/^(.+?)(?:\(?\d{4}\)?)/);
-  if (beforeYear && beforeYear[1].length > 10) {
-    return beforeYear[1].replace(/[,.\s]+$/, '').trim();
-  }
-  return text.slice(0, 100).replace(/[,.\s]+$/, '').trim();
-}
 
 /** One badge per reference type (schema.sql lists the known ones). A reference may
  *  carry several, comma-separated, such as "composition,geotechnical". */
@@ -127,18 +118,6 @@ function ReferenceCard({ reference, n }: { reference: Reference; n: number }) {
               {doi && !url ? 'DOI' : 'Source'}
             </a>
           )}
-          <a href={`https://scholar.google.com/scholar?q=${encodeURIComponent(refText.slice(0, 120))}`}
-            target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-400 transition-colors">
-            <BookOpen size={11} />
-            Scholar
-          </a>
-          <a href={`https://scholar.google.com/scholar?q=${encodeURIComponent('"' + extractTitle(refText) + '"')}`}
-            target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-400 transition-colors">
-            <Quote size={11} />
-            Cited by
-          </a>
           {typesOf(reference).map(type => {
             const badge = badgeFor(type);
             return (
@@ -164,6 +143,17 @@ export function ReferencesSection({ references, simulantName }: ReferencesSectio
   // same order utils/references.ts uses for the superscripts on values above.
   const ordered = orderReferences(references);
   const named = references.filter(r => r.names_simulant === 1).length;
+  // The first five, then "Show all"; a citation mark pointing further down expands the list.
+  const [showAll, setShowAll] = useState(false);
+  useEffect(() => {
+    const onShow = (e: Event) => {
+      const { n, prefix } = (e as CustomEvent).detail || {};
+      if (!prefix && n > 5) setShowAll(true);
+    };
+    window.addEventListener('lrs:show-reference', onShow);
+    return () => window.removeEventListener('lrs:show-reference', onShow);
+  }, []);
+  const shown = showAll ? ordered : ordered.slice(0, 5);
 
   return (
     <div>
@@ -179,12 +169,17 @@ export function ReferencesSection({ references, simulantName }: ReferencesSectio
             Numbers match the superscripts on values above. {named} of {ordered.length} confirmed to name {simulantName || 'this simulant'}.
           </p>
           <ol className="space-y-2 list-none p-0 m-0">
-            {ordered.map((r, i) => (
-              <li key={r.reference_id}>
+            {shown.map((r, i) => (
+              <li key={r.reference_id} id={`pane-ref-${i + 1}`} className="scroll-mt-16 rounded-lg transition-shadow">
                 <ReferenceCard reference={r} n={i + 1} />
               </li>
             ))}
           </ol>
+          {ordered.length > 5 && (
+            <button onClick={() => setShowAll(v => !v)} className="mt-2 text-xs text-emerald-400 hover:text-emerald-300">
+              {showAll ? 'Show the first 5' : `Show all ${ordered.length}`}
+            </button>
+          )}
         </div>
       )}
 
@@ -201,19 +196,6 @@ export function ReferencesSection({ references, simulantName }: ReferencesSectio
             <div>
               <p className="text-sm font-medium text-emerald-400">Find Citing Sources</p>
               <p className="text-[10px] text-slate-500">Search Google Scholar for papers citing {simulantName}</p>
-            </div>
-          </a>
-          <a
-            href={`https://www.google.com/search?q=${encodeURIComponent(simulantName + ' lunar regolith simulant published studies experiments applications site:scholar.google.com OR site:researchgate.net OR site:sciencedirect.com')}&udm=50`}
-            target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 bg-purple-500/5 hover:bg-purple-500/10 border border-purple-500/20 rounded-xl transition-all group"
-          >
-            <div className="p-2 bg-purple-500/10 rounded-lg group-hover:bg-purple-500/20 transition-colors">
-              <Sparkles size={16} className="text-purple-400" />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-purple-400">Ask AI about this simulant</p>
-              <p className="text-[10px] text-slate-500">AI-powered search for published studies using {simulantName}</p>
             </div>
           </a>
         </div>

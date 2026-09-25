@@ -20,6 +20,20 @@ interface MineralChartProps {
   references?: Reference[];
 }
 
+/** The table's basis as its rows state it ("vol%", "area% (AMICS SEM-EDS)", "wt% (XRD)"): the one
+ *  every row names, else a bare "%" with the note that the source leaves it unstated. */
+function basisLabel(rows: { value_text?: string | null }[]): string {
+  const bases = rows.map(r => {
+    const t = r.value_text || '';
+    const bracket = t.match(/\[([^\]]+)\]\s*$/);
+    if (bracket) return bracket[1];
+    const m = t.match(/(?:^|\s|\()((?:vol|wt|area|mol)%[^\]]*|[a-z-]+ (?:modal|normative)[^\]]*|estimated modal[^\]]*|% of [^\]]+)$/i);
+    return m ? m[1].replace(/\)$/, '').trim() : null;
+  });
+  const first = bases[0];
+  return first && bases.every(b => b === first) ? first : '% (basis as stated per row)';
+}
+
 export function MineralChart({ compositions, mineralGroups, lunarRef, lunarCitations = EMPTY_CITATIONS, simulantName, simulant, references = [] }: MineralChartProps) {
   // Grouped (NASA mineral family) rows are derived data and exist only where a source
   // states them; since the 2026-09 audit most simulants have none. Open on whichever
@@ -137,7 +151,7 @@ export function MineralChart({ compositions, mineralGroups, lunarRef, lunarCitat
           </ResponsiveContainer>
         </div>
       ) : (
-        <CompositionTable data={tableData} valueLabel="%" refLabel={lunarRef?.mission || undefined} />
+        <CompositionTable data={tableData} valueLabel={view === 'detailed' ? basisLabel(detailedData) : '%'} refLabel={lunarRef?.mission || undefined} completeFrom={99} />
       )}
     </div>
   );

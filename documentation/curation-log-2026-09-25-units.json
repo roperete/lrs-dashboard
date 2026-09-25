@@ -1,0 +1,672 @@
+[
+  {
+    "simulant_id": "S040",
+    "field": "cohesion",
+    "was": "0.1852",
+    "source": [
+      "RN-S040-1",
+      "The highest AP-cohesive strength was found for LX-T100 with 257.2 Pa, followed by LX-I50 with 214.3 Pa and LX-M100 with 185.2 Pa."
+    ],
+    "why": "rheometer 'AP-cohesive strength', which the paper says is not an absolute value; not Mohr-Coulomb cohesion",
+    "action": "omitted"
+  },
+  {
+    "simulant_id": "S041",
+    "field": "cohesion",
+    "was": "0.2572",
+    "source": [
+      "RN-S041-1",
+      "The highest AP-cohesive strength was found for LX-T100 with 257.2 Pa, followed by LX-I50 with 214.3 Pa and LX-M100 with 185.2 Pa."
+    ],
+    "why": "rheometer 'AP-cohesive strength', not cohesion",
+    "action": "omitted"
+  },
+  {
+    "simulant_id": "S138",
+    "field": "cohesion",
+    "was": "0.2143",
+    "source": [
+      "RN-S138-1",
+      "The highest AP-cohesive strength was found for LX-T100 with 257.2 Pa, followed by LX-I50 with 214.3 Pa and LX-M100 with 185.2 Pa."
+    ],
+    "why": "rheometer 'AP-cohesive strength', not cohesion",
+    "action": "omitted"
+  },
+  {
+    "simulant_id": "S043",
+    "field": "ti_content_percent",
+    "was": 6.8,
+    "source": [
+      "R090",
+      "MLS-1   High-Ti Mare   42.8   6.8   12.1   16.3   6.2   11.1   2.2   0.2   Weiblen and Gordon 1988"
+    ],
+    "why": "6.8 is TiO2 wt% (User's Guide Table 7), not Ti; it is in the oxide table already",
+    "action": "omitted"
+  },
+  {
+    "simulant_id": "S045",
+    "field": "bulk_density",
+    "was": "1.93",
+    "source": [
+      "R095",
+      "that is because those results represent the experiment sample made from NAO-1 which has a density of 1.93 g / cm3, which is almost equal to the maximum relative density of NAO-1."
+    ],
+    "why": "1.93 g/cm3 is a compacted triaxial specimen near maximum density, not the simulant's bulk density",
+    "action": "omitted"
+  },
+  {
+    "simulant_id": "S014",
+    "field": "particle_size_distribution",
+    "was": "large particle size distribution",
+    "source": [
+      "RN-S014-2",
+      "lunar soils are angular, sharp and have a large particle size distribution, qualities which are reflected in the simulant soils"
+    ],
+    "why": "a qualitative phrase about lunar soils, no size stated",
+    "action": "omitted"
+  },
+  {
+    "simulant_id": "S037",
+    "field": "magnetic_susceptibility",
+    "was": "3.43",
+    "now": "log χ = 3.43 (χ in 10⁻⁹ m³/kg)",
+    "action": "restated as the document states it"
+  },
+  {
+    "simulant_id": "S043",
+    "field": "magnetic_susceptibility",
+    "was": "4.01",
+    "now": "log χ = 4.01 (χ in 10⁻⁹ m³/kg)",
+    "action": "restated as the document states it"
+  },
+  {
+    "simulant_id": "S024",
+    "field": "angle_of_repose",
+    "was": "35.3 ± 0.711",
+    "now": "35.3 ± 0.711°",
+    "action": "restated as the document states it"
+  },
+  {
+    "simulant_id": "S008",
+    "field": "particle_size_distribution",
+    "was": "Uniformity coefficient Cu=3.68, Curvature coefficient Cc=0.66",
+    "now": "Cu = 3.68, Cc = 0.66 (gradation coefficients, dimensionless)",
+    "action": "restated as the document states it"
+  },
+  {
+    "simulant_id": "S081",
+    "field": "chemical_compositions:Fe2O3",
+    "was": 15.02,
+    "reference_id": "R102",
+    "why": "stated for a different batch; contradicts the cited analysis",
+    "action": "row omitted"
+  },
+  {
+    "simulant_id": "S067",
+    "field": "mineral_compositions:ilmenite",
+    "was": 14.5,
+    "reference_id": "RN-S067-2",
+    "why": "implausible against the chemistry shown beside it",
+    "action": "row omitted"
+  },
+  {
+    "simulant_id": "S067",
+    "field": "mineral_compositions:quartz",
+    "was": 20.0,
+    "reference_id": "RN-S067-2",
+    "why": "cannot be reconciled with the chemistry shown (checker UNCERTAIN): empty rather than wrong",
+    "action": "row omitted"
+  },
+  {
+    "simulant_id": "S012",
+    "field": "mineral_compositions:Olivine",
+    "was": 48.0,
+    "reference_id": "R076",
+    "why": "implausible for this simulant (checker CONFIRMED)",
+    "action": "row omitted"
+  },
+  {
+    "simulant_id": "S012",
+    "field": "mineral_compositions:Plagioclase",
+    "was": 9.0,
+    "reference_id": "R076",
+    "why": "implausible for this simulant (checker CONFIRMED)",
+    "action": "row omitted"
+  },
+  {
+    "simulant_id": "S018",
+    "field": "chemical_compositions:Na2O",
+    "was": 2.8,
+    "reference_id": "RN-S018-1",
+    "why": "from the RN-S018-1 batch, not the analysis the rest of the table cites",
+    "action": "row omitted"
+  },
+  {
+    "simulant_id": "S018",
+    "field": "chemical_compositions:K2O",
+    "was": 1.0,
+    "reference_id": "RN-S018-1",
+    "why": "from the RN-S018-1 batch, not the analysis the rest of the table cites",
+    "action": "row omitted"
+  },
+  {
+    "simulant_id": "S028",
+    "field": "mineral_compositions:Glass",
+    "now": "Glass-rich basalt",
+    "quote": "Coker et al. 2026 Table 1: 'glass-rich basalt ... 49.3'",
+    "action": "renamed as the document names it"
+  },
+  {
+    "simulant_id": "S117",
+    "field": "mineral_compositions:Magnetite",
+    "now": "Opaques (probably magnetite)",
+    "quote": "'opaques (probably magnetite, 5%'",
+    "action": "renamed as the document names it"
+  },
+  {
+    "simulant_id": "S025",
+    "field": "mineral_compositions:Plagioclase",
+    "was": 94.0,
+    "now": 82.0,
+    "quote": "X-ray diffraction analyses and whole pattern fitting and Rietveld refinement suggest a plagioclase content of approximately 82 wt. %.",
+    "action": "restated as the document states it"
+  },
+  {
+    "simulant_id": "S005",
+    "field": "mineral_compositions:Synthetic agglutinates",
+    "now": 35.0,
+    "reference_id": "RN-S005-1",
+    "quote": "Table 3 'Mineral compositions and percentages of lunar regolith simulants, %': BHLD20 ... Other minerals 'Synthetic agglutinates (35)'",
+    "action": "row added from its document"
+  },
+  {
+    "simulant_id": "S009",
+    "field": "mineral_compositions:C-S009-01",
+    "was": null,
+    "now": "75 vol%",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S009",
+    "field": "mineral_compositions:C-S009-02",
+    "was": null,
+    "now": "15 vol%",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S009",
+    "field": "mineral_compositions:C-S009-03",
+    "was": null,
+    "now": "10 vol%",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S159",
+    "field": "mineral_compositions:C-S159-01",
+    "was": "86.67% (major phase) (AMICS, area%)",
+    "now": "86.67% (major phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S159",
+    "field": "mineral_compositions:C-S159-02",
+    "was": "4.14% (minor phase) (AMICS, area%)",
+    "now": "4.14% (minor phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S159",
+    "field": "mineral_compositions:C-S159-03",
+    "was": "1.91% (minor phase) (AMICS, area%)",
+    "now": "1.91% (minor phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S159",
+    "field": "mineral_compositions:C-S159-04",
+    "was": "1.06% (minor phase) (AMICS, area%)",
+    "now": "1.06% (minor phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S159",
+    "field": "mineral_compositions:C-S159-05",
+    "was": "3.02% (minor phase) (AMICS, area%)",
+    "now": "3.02% (minor phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S160",
+    "field": "mineral_compositions:C-S160-01",
+    "was": "90.39% (major phase) (AMICS, area%)",
+    "now": "90.39% (major phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S160",
+    "field": "mineral_compositions:C-S160-02",
+    "was": "3.74% (minor phase) (AMICS, area%)",
+    "now": "3.74% (minor phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S160",
+    "field": "mineral_compositions:C-S160-03",
+    "was": "1.30% (minor phase) (AMICS, area%)",
+    "now": "1.30% (minor phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S160",
+    "field": "mineral_compositions:C-S160-04",
+    "was": "3.01% (minor phase) (AMICS, area%)",
+    "now": "3.01% (minor phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S161",
+    "field": "mineral_compositions:C-S161-01",
+    "was": "93.24% (major phase) (AMICS, area%)",
+    "now": "93.24% (major phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S161",
+    "field": "mineral_compositions:C-S161-02",
+    "was": "1.03% (minor phase) (AMICS, area%)",
+    "now": "1.03% (minor phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S161",
+    "field": "mineral_compositions:C-S161-03",
+    "was": "1.31% (minor phase) (AMICS, area%)",
+    "now": "1.31% (minor phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S161",
+    "field": "mineral_compositions:C-S161-04",
+    "was": "2.85% (minor phase) (AMICS, area%)",
+    "now": "2.85% (minor phase) (AMICS, area%) [area% (AMICS SEM-EDS)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S049",
+    "field": "mineral_compositions:C-S049-01",
+    "was": "22.4 (vol%)",
+    "now": "22.4 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S049",
+    "field": "mineral_compositions:C-S049-02",
+    "was": "29.0 (vol%)",
+    "now": "29.0 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S049",
+    "field": "mineral_compositions:C-S049-03",
+    "was": "38.8 (vol%; An 80)",
+    "now": "38.8 (vol%; An 80) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S049",
+    "field": "mineral_compositions:C-S049-04",
+    "was": "2.9 (vol%)",
+    "now": "2.9 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S049",
+    "field": "mineral_compositions:C-S049-05",
+    "was": "2.0 (vol%)",
+    "now": "2.0 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S049",
+    "field": "mineral_compositions:C-S049-06",
+    "was": "4.4 (vol%)",
+    "now": "4.4 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S049",
+    "field": "mineral_compositions:C-S049-07",
+    "was": "0.3 (vol%)",
+    "now": "0.3 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S049",
+    "field": "mineral_compositions:C-S049-08",
+    "was": "0.05 (vol%)",
+    "now": "0.05 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S051",
+    "field": "mineral_compositions:C-S051-01",
+    "was": "7.2 (vol%)",
+    "now": "7.2 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S051",
+    "field": "mineral_compositions:C-S051-02",
+    "was": "23.5 (vol%)",
+    "now": "23.5 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S051",
+    "field": "mineral_compositions:C-S051-03",
+    "was": "54.9 (vol%; An 80)",
+    "now": "54.9 (vol%; An 80) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S051",
+    "field": "mineral_compositions:C-S051-04",
+    "was": "9.5 (vol%)",
+    "now": "9.5 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S051",
+    "field": "mineral_compositions:C-S051-05",
+    "was": "4.0 (vol%)",
+    "now": "4.0 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S051",
+    "field": "mineral_compositions:C-S051-06",
+    "was": "0.2 (vol%)",
+    "now": "0.2 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S051",
+    "field": "mineral_compositions:C-S051-07",
+    "was": "0.2 (vol%)",
+    "now": "0.2 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S051",
+    "field": "mineral_compositions:C-S051-08",
+    "was": "0.43 (vol%)",
+    "now": "0.43 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S051",
+    "field": "mineral_compositions:C-S051-09",
+    "was": "0.04 (vol%)",
+    "now": "0.04 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S051",
+    "field": "mineral_compositions:C-S051-10",
+    "was": "0.01 (vol%)",
+    "now": "0.01 (vol%) [particle-type modal %]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S053",
+    "field": "mineral_compositions:C-S053-01",
+    "was": null,
+    "now": "52.6 particle-type modal %",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S053",
+    "field": "mineral_compositions:C-S053-02",
+    "was": null,
+    "now": "43.9 particle-type modal %",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S053",
+    "field": "mineral_compositions:C-S053-03",
+    "was": null,
+    "now": "0 particle-type modal %",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S053",
+    "field": "mineral_compositions:C-S053-04",
+    "was": null,
+    "now": "0.1 particle-type modal %",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S053",
+    "field": "mineral_compositions:C-S053-05",
+    "was": null,
+    "now": "0.19 particle-type modal %",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S053",
+    "field": "mineral_compositions:C-S053-06",
+    "was": null,
+    "now": "0 particle-type modal %",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S070",
+    "field": "mineral_compositions:C-S070-01",
+    "was": null,
+    "now": "97 vol% (thin section)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S117",
+    "field": "mineral_compositions:C-S117-01",
+    "was": "45%",
+    "now": "45 estimated modal % (thin section)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S117",
+    "field": "mineral_compositions:C-S117-02",
+    "was": "45%",
+    "now": "45 estimated modal % (thin section)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S117",
+    "field": "mineral_compositions:C-S117-03",
+    "was": "5%",
+    "now": "5 estimated modal % (thin section)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S117",
+    "field": "mineral_compositions:C-S117-04",
+    "was": "3%",
+    "now": "3 estimated modal % (thin section)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S117",
+    "field": "mineral_compositions:C-S117-05",
+    "was": "2%",
+    "now": "2 estimated modal % (thin section)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S007",
+    "field": "mineral_compositions:C-S007-01",
+    "was": null,
+    "now": "22.34 normative wt% (CIPW, calculated)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S007",
+    "field": "mineral_compositions:C-S007-02",
+    "was": null,
+    "now": "63.52 normative wt% (CIPW, calculated)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S007",
+    "field": "mineral_compositions:C-S007-03",
+    "was": null,
+    "now": "2.33 normative wt% (CIPW, calculated)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S007",
+    "field": "mineral_compositions:C-S007-04",
+    "was": null,
+    "now": "8.13 normative wt% (CIPW, calculated)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S007",
+    "field": "mineral_compositions:C-S007-05",
+    "was": null,
+    "now": "0.65 normative wt% (CIPW, calculated)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S007",
+    "field": "mineral_compositions:C-S007-06",
+    "was": null,
+    "now": "3.03 normative wt% (CIPW, calculated)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S017",
+    "field": "mineral_compositions:C-S017-13",
+    "was": null,
+    "now": "29.71 normative wt% (calculated from bulk chemistry)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S017",
+    "field": "mineral_compositions:C-S017-14",
+    "was": null,
+    "now": "6.15 normative wt% (calculated from bulk chemistry)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S017",
+    "field": "mineral_compositions:C-S017-15",
+    "was": null,
+    "now": "5.08 normative wt% (calculated from bulk chemistry)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S017",
+    "field": "mineral_compositions:C-S017-16",
+    "was": null,
+    "now": "23.73 normative wt% (calculated from bulk chemistry)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S017",
+    "field": "mineral_compositions:C-S017-17",
+    "was": null,
+    "now": "13.88 normative wt% (calculated from bulk chemistry)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S017",
+    "field": "mineral_compositions:C-S017-18",
+    "was": null,
+    "now": "0.45 normative wt% (calculated from bulk chemistry)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S017",
+    "field": "mineral_compositions:C-S017-19",
+    "was": null,
+    "now": "13.52 normative wt% (calculated from bulk chemistry)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S017",
+    "field": "mineral_compositions:C-S017-20",
+    "was": null,
+    "now": "1.51 normative wt% (calculated from bulk chemistry)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S017",
+    "field": "mineral_compositions:C-S017-21",
+    "was": null,
+    "now": "3.48 normative wt% (calculated from bulk chemistry)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S081",
+    "field": "mineral_compositions:C-S081-01",
+    "was": "ca. 92 (of crystalline fraction, Rietveld XRD; amorphous phase present but not quantified)",
+    "now": "ca. 92 (of crystalline fraction, Rietveld XRD; amorphous phase present but not quantified) [% of crystalline fraction (Rietveld XRD)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S081",
+    "field": "mineral_compositions:C-S081-02",
+    "was": "ca. 8 (of crystalline fraction, Rietveld XRD)",
+    "now": "ca. 8 (of crystalline fraction, Rietveld XRD) [% of crystalline fraction (Rietveld XRD)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S052",
+    "field": "mineral_compositions:C-S052-01",
+    "was": null,
+    "now": "17.6 wt% of the feedstock recipe",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S052",
+    "field": "mineral_compositions:C-S052-02",
+    "was": null,
+    "now": "37.7 wt% of the feedstock recipe",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S052",
+    "field": "mineral_compositions:C-S052-03",
+    "was": null,
+    "now": "4.7 wt% of the feedstock recipe",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S025",
+    "field": "mineral_compositions:C-S025-01",
+    "was": "~82 wt% (XRD, Rietveld)",
+    "now": "~82 wt% (XRD, Rietveld) [wt% (XRD)]",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S025",
+    "field": "mineral_compositions:C-S025-02",
+    "was": "~5",
+    "now": "5 wt% (XRD)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S025",
+    "field": "mineral_compositions:C-S025-03",
+    "was": "~7",
+    "now": "7 wt% (XRD)",
+    "action": "basis written"
+  },
+  {
+    "simulant_id": "S082",
+    "field": "mineral_compositions:C-S082-01",
+    "was": null,
+    "now": "29.8 wt% total crystalline silica",
+    "action": "basis written"
+  }
+]

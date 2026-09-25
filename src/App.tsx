@@ -12,6 +12,7 @@ import type { Simulant } from './types';
 
 import { ErrorBoundary } from './components/ui/ErrorBoundary';
 import { suggestedLunarMission } from './utils/lunarRef';
+import { readUrlState, writeUrlState, filtersForUrl, type UrlState } from './hooks/useUrlState';
 import { LoadingScreen } from './components/controls/LoadingScreen';
 import { LegendWidget } from './components/controls/LegendWidget';
 import { ExportMenu } from './components/controls/ExportMenu';
@@ -69,6 +70,43 @@ export default function App() {
   const mapState = useMapState();
   const panelState = usePanelState();
   const filterState = useFilters(simulants, compositions, chemicalCompositions, mineralGroups, chemicalBySimulant, compositionBySimulant, referencesBySimulant);
+
+  // The page's state in the address bar (review #13): read once on load, written back as it
+  // changes. A new selection is a history entry, so Back returns to the previous one.
+  const urlReady = useRef(false);
+  const applyUrl = useCallback((u: UrlState) => {
+    if (u.planet) mapState.setPlanet(u.planet);
+    if (u.view) mapState.setViewMode(u.view);
+    filterState.clearAllFilters();
+    for (const f of u.filters ?? []) filterState.setFacet(f.property, f.values);
+    if (u.q) filterState.setSearchQuery(u.q);
+    panelState.setCompareIds(u.cmp ?? []);
+    if (u.sim) panelState.selectSimulant(u.sim); else panelState.closePanel();
+    panelState.setSelectedLunarSiteId(u.site ?? null);
+  }, [mapState, filterState, panelState]);
+  useEffect(() => {
+    applyUrl(readUrlState());
+    urlReady.current = true;
+    const onPop = () => applyUrl(readUrlState());
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const lastSelection = useRef('');
+  useEffect(() => {
+    if (!urlReady.current) return;
+    const next = writeUrlState({
+      planet: mapState.planet, view: mapState.viewMode,
+      sim: panelState.panel1.open ? panelState.panel1.simulantId ?? undefined : undefined,
+      cmp: panelState.compareIds, filters: filtersForUrl(filterState.filters), q: filterState.searchQuery || undefined,
+      site: panelState.selectedLunarSiteId ?? undefined,
+    });
+    const selection = `${panelState.panel1.open ? panelState.panel1.simulantId : ''}|${panelState.selectedLunarSiteId ?? ''}`;
+    if (next === window.location.search || (next === window.location.pathname && !window.location.search)) { lastSelection.current = selection; return; }
+    if (selection !== lastSelection.current) window.history.pushState(null, '', next);
+    else window.history.replaceState(null, '', next);
+    lastSelection.current = selection;
+  }, [mapState.planet, mapState.viewMode, panelState.panel1, panelState.compareIds, panelState.selectedLunarSiteId, filterState.filters, filterState.searchQuery]);
 
   const displayedSimulants = filterState.filteredSimulants;
 
@@ -219,6 +257,8 @@ export default function App() {
             compositions={compositions}
             chemicalCompositions={chemicalCompositions}
             references={references}
+            propertySources={data.propertySources}
+            figuresOfMerit={data.figuresOfMerit}
           />
         ) : undefined}
       />
@@ -465,7 +505,7 @@ export default function App() {
             simulants={compareSimulants}
             onRemove={panelState.toggleCompare}
             onCompare={() => panelState.setShowComparison(true)}
-            onExport={() => exportToCSV(compareSimulants, compositions, chemicalCompositions, references, `lrs_compared_${new Date().toISOString().slice(0, 10)}.csv`)}
+            onExport={() => exportToCSV(compareSimulants, { compositions, chemicalCompositions, references, propertySources: data.propertySources, figuresOfMerit: data.figuresOfMerit }, `lrs_compared_${new Date().toISOString().slice(0, 10)}.csv`)}
             onClear={panelState.clearCompare}
             paneOpen={paneOpen}
           />

@@ -17,23 +17,43 @@ interface RefSupProps {
   source?: string | null;
   /** Marks a separate numbering, e.g. "L" for the lunar sources listed under the lunar comparison. */
   prefix?: string;
+  /** Instead of jumping to the reference in the pane (e.g. the table opens the pane). */
+  onActivate?: () => void;
+}
+
+/** Scroll the pane to reference n and flash it; the References list expands if it was shortened. */
+export function goToReference(n: number, prefix = ''): boolean {
+  window.dispatchEvent(new CustomEvent('lrs:show-reference', { detail: { n, prefix } }));
+  const find = () => document.getElementById(`pane-ref-${prefix}${n}`);
+  const el = find();
+  if (!el && prefix) return false;
+  setTimeout(() => {
+    const target = find();
+    if (!target) return;
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    target.classList.add('ring-2', 'ring-amber-400');
+    setTimeout(() => target.classList.remove('ring-2', 'ring-amber-400'), 1600);
+  }, el ? 0 : 60);
+  return true;
 }
 
 /**
- * Citation superscript such as [2]. The number is the reference's position in the
- * simulant's numbered References section; hovering shows where in that document the
- * value was read. A real <sup> so it sits like a footnote mark next to the value.
+ * Citation mark such as [2]. Hover, focus or tap shows which document states the value, where,
+ * and the quoted line; clicking jumps to that reference in the pane (review #10), or runs
+ * onActivate where there is no list to jump to (the table opens the pane at its References).
  */
-export function RefSup({ n, location, quote, fallback, align = 'center', source, prefix = '' }: RefSupProps) {
+export function RefSup({ n, location, quote, fallback, align = 'center', source, prefix = '', onActivate }: RefSupProps) {
   const parts = [location?.trim(), quote?.trim()].filter((p): p is string => !!p);
   const detail = parts.length > 0 ? parts.join(' — ') : fallback;
   const text = [source?.trim() ? `[${prefix}${n}] ${source.trim()}` : undefined, detail].filter(Boolean).join('\n') || `Reference ${prefix}${n}`;
   return (
     <sup className="ml-0.5 text-[10px] leading-none">
-      <Tooltip text={text} align={align}>
-        <span className="font-semibold text-amber-400/90 hover:text-amber-300" aria-label={`Reference ${prefix}${n}`}>
+      <Tooltip text={text} align={align} focusable={false}>
+        <button type="button" aria-label={`Reference ${prefix}${n}${source ? `: ${source}` : ''}`}
+          onClick={(e) => { e.stopPropagation(); if (onActivate) onActivate(); else goToReference(n, prefix); }}
+          className="font-semibold text-amber-400/90 hover:text-amber-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded-sm">
           [{prefix}{n}]
-        </span>
+        </button>
       </Tooltip>
     </sup>
   );

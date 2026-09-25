@@ -88,7 +88,9 @@ export function ChemicalChart({ chemicalCompositions, lunarRef, lunarCitations =
           </ResponsiveContainer>
         </div>
       ) : (
-        <CompositionTable data={tableData} valueLabel="wt%" refLabel={lunarRef?.mission || undefined} partialBelow={90} />
+        <CompositionTable data={tableData} valueLabel="wt%" refLabel={lunarRef?.mission || undefined} partialBelow={90}
+          noTotalReason={tableData.some(r => r.name === 'FeO') && tableData.some(r => /^Fe2O3/.test(r.name))
+            ? 'The source gives iron twice (FeO and Fe2O3), as two determinations of the same iron; adding both would count it twice.' : undefined} />
       )}
     </div>
   );

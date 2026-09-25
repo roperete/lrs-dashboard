@@ -19,7 +19,7 @@ const PROP_CONFIG: { key: keyof PhysicalProperties; label: string; unit: string;
   { key: 'particle_morphology', label: 'Morphology', unit: '', desc: 'Shape characteristics of individual grains (angular, rounded, etc.)' },
   { key: 'particle_ruggedness', label: 'Ruggedness', unit: '', desc: 'Surface roughness and irregularity of grain surfaces' },
   { key: 'glass_content_percent', label: 'Glass Content', unit: '%', desc: 'Proportion of amorphous glassy material — key for simulating agglutinates' },
-  { key: 'nasa_fom_score', label: 'NASA FoM Score', unit: '', desc: 'NASA Figure of Merit — overall fidelity score comparing simulant to real regolith' },
+  { key: 'nasa_fom_score', label: 'NASA FoM score', unit: '%', desc: 'NASA Figure of Merit — overall fidelity score comparing simulant to real regolith' },
   { key: 'ti_content_percent', label: 'Ti Content', unit: '%', desc: 'Titanium content — distinguishes high-Ti mare from low-Ti highland simulants' },
   { key: 'grain_size_mm', label: 'Grain Size', unit: 'mm', desc: 'Representative grain size or size range from the Gasteiner database' },
 ];

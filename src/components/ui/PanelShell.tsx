@@ -50,7 +50,7 @@ export function PanelShell({
       className="fixed right-0 bottom-0 h-[70vh] w-full sm:top-14 sm:bottom-0 sm:h-auto sm:w-[450px] bg-slate-900/95 backdrop-blur-xl border-l border-t sm:border-t-0 border-slate-800 z-[1000] shadow-2xl rounded-t-2xl sm:rounded-none"
     >
       <DragGrip direction={side ? 'right' : 'down'} controls={drag} onClose={onClose} />
-      <div className="h-full overflow-y-auto p-6">
+      <div className="h-full overflow-y-auto overflow-x-hidden p-6">
         <div className="flex justify-between items-start mb-6">
           <div className="flex-1 min-w-0">
             <h2 className={cn("text-2xl font-bold tracking-tight truncate", accentColor)}>{title}</h2>

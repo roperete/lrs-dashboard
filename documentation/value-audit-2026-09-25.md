@@ -1,6 +1,6 @@
 # Value audit, 2026-09-25
 
-Every value the page shows — 1337 across 148 simulants — tested against its own quote,
+Every value the page shows — 1328 across 148 simulants — tested against its own quote,
 physical plausibility, composition totals, the simulant's other values, and its citation.
 Nothing was changed. Errors go to an agent to re-read; warnings are for a human.
 
@@ -8,6 +8,7 @@ Nothing was changed. Errors go to an agent to re-read; warnings are for a human.
 |---|---|---:|
 | info | unsourced | 251 |
 | warn | consistency | 1 |
+| warn | quote | 2 |
 | warn | stated in words | 3 |
 | warn | total | 6 |
 | warn | unsourced | 7 |
@@ -26,10 +27,12 @@ Nothing was changed. Errors go to an agent to re-read; warnings are for a human.
 - **(page)** (None) `lunar reference Chang'e-5` — unsourced: Apollo comparison data shown with no source
 - **BH-2** (S121) `oxide table` — total: oxide total 68.6% (expected 90–103%)
 - **EAC-1A** (S018) `glass_content_percent` — stated in words: 0.0 rests on wording, not a number: 'EAC-1A is fully crystallized and contains plagioclase, which our XRD characterization indi'
-- **GreenSpar** (S025) `mineral table` — total: mineral total 106.0% exceeds 100%
+- **GSC-1** (S117) `mineral:Opaques (probably magnetite)` — quote: no reader's quote on record for this row
 - **IGG-01** (S080) `oxide table` — total: oxide total 22.4% (expected 90–103%)
 - **JSC-1** (S027) `glass_content_percent` — stated in words: 50.0 rests on wording, not a number: 'Approximately half of the volume of a typical particle is glass of basaltic composition.'
+- **JSC-1A** (S028) `mineral:Glass-rich basalt` — quote: no reader's quote on record for this row
 - **JSC-1A** (S028) `oxide table` — total: oxide total 108.6% (expected 90–103%)
+- **JSC-2A** (S081) `oxide table` — total: oxide total 84.3% (expected 90–103%)
 - **NEU-1B** (S124) `oxide table` — total: oxide total 6.5% (expected 90–103%)
 - **NU-LHT-1M** (S049) `oxide table` — total: oxide total 103.5% (expected 90–103%)
 - **NU-LHT-2M** (S051) `cohesion` — stated in words: 0.0 rests on wording, not a number: 'The measured cohesion was too low to make any meaningful conclusion and is considered to b'

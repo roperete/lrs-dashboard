@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Tooltip } from '../ui/Tooltip';
 import { RefSup } from '../ui/RefSup';
 import type { FigureOfMerit } from '../../types';
@@ -10,7 +10,7 @@ const FOM_HELP =
   'cited document prints it, against the lunar material that document names.';
 
 const PROPERTY_HELP: Record<string, string> = {
-  composition: 'How closely the bulk chemistry matches the lunar reference.',
+  composition: 'How closely the composition matches the lunar reference: bulk chemistry in Slabic et al. 2024, particle types (with plagioclase An) in Schrader et al. 2010. See the citation.',
   mineralogy: 'How closely the mineral content matches the lunar reference.',
   particle_size: 'How closely the particle size distribution matches the lunar reference.',
   shape: 'How closely the particle shapes match the lunar reference.',
@@ -21,6 +21,18 @@ const PROPERTY_HELP: Record<string, string> = {
 
 const ORDER = ['overall', 'composition', 'mineralogy', 'particle_size', 'shape', 'density', 'other'];
 
+/** The score with its scale, so 0–1 and 0–100 scores in one column cannot be confused:
+ *  "88 / 100", "0.28 / 1", "72%". */
+function scored(f: FigureOfMerit): string {
+  const printed = String(f.score_text || f.score).trim();
+  const scale = (f.scale || '').replace(/\s+/g, '');
+  if (printed.includes('%') || scale.includes('%')) return printed.endsWith('%') ? printed : `${printed}%`;
+  if (/(^|[^0-9.])0?-?100\b/.test(scale) || /^0-100/.test(scale)) return `${printed} / 100`;
+  if (/^0-1\b|^0–1\b|^0-1\(|^0-1$/.test(scale)) return `${printed} / 1`;
+  if (/unitless|notstated|implied/i.test(scale)) return `${printed} (scale not stated)`;
+  return printed;
+}
+
 interface Props {
   foms: FigureOfMerit[];
   /** Number of a reference within this simulant's list; see utils/references.ts. */
@@ -30,25 +42,29 @@ interface Props {
 }
 
 export function FigureOfMeritSection({ foms, refNumber, refLabel }: Props) {
+  const [showAll, setShowAll] = useState(false);
   if (foms.length === 0) return null;
-  const rows = [...foms].sort((a, b) => ORDER.indexOf(a.property) - ORDER.indexOf(b.property)
+  const sorted = [...foms].sort((a, b) => ORDER.indexOf(a.property) - ORDER.indexOf(b.property)
     || (a.reference_sample || '').localeCompare(b.reference_sample || ''));
+  // one row per property first (the overall score leads); the rest behind "Show all"
+  const firstOfEach = sorted.filter((f, i) => sorted.findIndex(g => g.property === f.property) === i);
+  const rows = showAll ? sorted : firstOfEach;
   return (
     <div className="space-y-3">
       <Tooltip text={FOM_HELP} align="left">
-        <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider border-b border-dotted border-slate-600">Figures of Merit</h3>
+        <h3 className="text-sm font-semibold text-slate-300 border-b border-dotted border-slate-600">Figures of Merit</h3>
       </Tooltip>
       <div className="bg-slate-800/30 rounded-xl border border-slate-700/30 overflow-hidden">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-slate-700/50">
-              <th className="text-left py-2 px-3 text-xs font-bold text-slate-500 uppercase">
+              <th className="text-left py-2 px-3 text-xs font-semibold text-slate-400">
                 <Tooltip text="The property the score compares." align="left"><span>Property</span></Tooltip>
               </th>
-              <th className="text-left py-2 px-3 text-xs font-bold text-slate-500 uppercase">
+              <th className="text-left py-2 px-3 text-xs font-semibold text-slate-400">
                 <Tooltip text="The lunar material the score is computed against, as the cited document names it." align="left"><span>Against</span></Tooltip>
               </th>
-              <th className="text-right py-2 px-3 text-xs font-bold text-slate-500 uppercase">
+              <th className="text-right py-2 px-3 text-xs font-semibold text-slate-400">
                 <Tooltip text="The score as printed, on the document's own scale (0–1 or 0–100 / %)." align="right"><span>Score</span></Tooltip>
               </th>
             </tr>
@@ -63,8 +79,7 @@ export function FigureOfMeritSection({ foms, refNumber, refLabel }: Props) {
                   </td>
                   <td className="py-1.5 px-3 text-slate-400 text-xs">{f.reference_sample || '—'}</td>
                   <td className="py-1.5 px-3 text-right text-slate-200 font-mono whitespace-nowrap">
-                    {f.score_text || f.score}
-                    {f.scale && !String(f.score_text || '').includes('%') && f.scale.includes('%') ? '%' : ''}
+                    {scored(f)}
                     {n != null && <RefSup n={n} location={f.location} quote={f.quote} align="right" source={refLabel?.(f.reference_id)} />}
                   </td>
                 </tr>
@@ -73,6 +88,11 @@ export function FigureOfMeritSection({ foms, refNumber, refLabel }: Props) {
           </tbody>
         </table>
       </div>
+      {sorted.length > firstOfEach.length && (
+        <button onClick={() => setShowAll(v => !v)} className="text-xs text-emerald-400 hover:text-emerald-300">
+          {showAll ? 'Show one score per property' : `Show all ${sorted.length} scores`}
+        </button>
+      )}
     </div>
   );
 }

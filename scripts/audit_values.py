@@ -394,7 +394,9 @@ def audit(root: Path = ROOT) -> list[dict]:
             stated = c.get("value_text") or v
             if not qs:
                 flag(sid, where, "quote", "warn", "no reader's quote on record for this row", c.get("reference_id"), v)
-            elif not any(quote_supports("composition", stated, q)[0] for q in qs):
+            # value_text may carry the table's basis after the number ("22.34 normative wt%"): the
+            # stored number counts as stated when the quote gives it
+            elif not any(quote_supports("composition", stated, q)[0] or quote_supports("composition", v, q)[0] for q in qs):
                 flag(sid, where, "quote", "error", f"{v:g} not stated in the quote the reader gave: {qs[0][:90]!r}", c.get("reference_id"), v)
             if c.get("reference_id"):
                 citation(sid, where, c["reference_id"])

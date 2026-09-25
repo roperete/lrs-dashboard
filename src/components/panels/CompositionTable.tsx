@@ -30,12 +30,18 @@ interface CompositionTableProps {
   /** Below this sum the table is a partial analysis — only the components a source states —
    *  and a "Total" would read as a failed analysis (NEU-1B's lone TiO2 row "totalled" 6.50%). */
   partialBelow?: number;
+  /** A total is shown only when the rows sum to at least this (a complete analysis); below it
+   *  the rows are a partial or normalised table and a "Total" would mislead. */
+  completeFrom?: number;
+  /** Why no total is shown, when the caller knows (two iron rows, for instance). */
+  noTotalReason?: string;
 }
 
-export function CompositionTable({ data, valueLabel, refLabel, decimals = 2, partialBelow }: CompositionTableProps) {
+export function CompositionTable({ data, valueLabel, refLabel, decimals = 2, partialBelow, completeFrom, noTotalReason }: CompositionTableProps) {
   const total = data.reduce((sum, d) => sum + d.value, 0);
-  const partial = partialBelow !== undefined && total < partialBelow;
-  const refTotal = refLabel ? data.reduce((sum, d) => sum + (d.refValue || 0), 0) : undefined;
+  const partial = !!noTotalReason || (partialBelow !== undefined && total < partialBelow) || (completeFrom !== undefined && total < completeFrom);
+  // No total for the lunar column: it would add only the rows this simulant has (Apollo 14's
+  // minerals "totalled" 49.00), which reads as the sample's own total.
   const fmt = (v: number) => v.toFixed(decimals);
 
   return (
@@ -43,10 +49,10 @@ export function CompositionTable({ data, valueLabel, refLabel, decimals = 2, par
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-slate-700/50">
-            <th className="text-left py-2 px-3 text-xs font-bold text-slate-500 uppercase">Name</th>
-            <th className="text-right py-2 px-3 text-xs font-bold text-slate-500 uppercase">{valueLabel}</th>
+            <th className="text-left py-2 px-3 text-xs font-semibold text-slate-400">Name</th>
+            <th className="text-right py-2 px-3 text-xs font-semibold text-slate-400">{valueLabel}</th>
             {refLabel && (
-              <th className="text-right py-2 px-3 text-xs font-bold text-amber-500/70 uppercase">{refLabel}</th>
+              <th className="text-right py-2 px-3 text-xs font-semibold text-amber-400/80">{refLabel}</th>
             )}
           </tr>
         </thead>
@@ -62,19 +68,19 @@ export function CompositionTable({ data, valueLabel, refLabel, decimals = 2, par
               </td>
               {refLabel && (
                 <td className="py-1.5 px-3 text-right text-amber-400/70 font-mono">
-                  {row.refValue !== undefined ? <>{fmt(row.refValue)}{row.refValueCites && <LunarRefs cites={row.refValueCites} prefix="L" align="right" />}</> : '-'}
+                  {row.refValue !== undefined ? <>{fmt(row.refValue)}{row.refValueCites && <LunarRefs cites={row.refValueCites} prefix="L" align="right" />}</> : '\u2014'}
                 </td>
               )}
             </tr>
           ))}
           <tr className="border-t border-slate-700/50 font-bold">
-            <td className="py-2 px-3 text-slate-400" title={partial
-              ? 'The source states only these components, so there is no total to show.'
-              : 'Sum of the rows listed above, as published by the source'}>{partial ? 'Partial analysis' : 'Total'}</td>
+            <td className="py-2 px-3 text-slate-400" title={noTotalReason || (partial
+              ? 'The source states only these components, or a table that does not add up to 100, so there is no total to show.'
+              : 'Sum of the rows listed above')}>{noTotalReason ? 'No total' : partial ? 'Partial table' : 'Total'}</td>
             <td className="py-2 px-3 text-right text-slate-500 font-mono">{partial ? '—' : <span className="text-slate-200">{fmt(total)}</span>}</td>
             {refLabel && (
               <td className="py-2 px-3 text-right text-amber-400/70 font-mono">
-                {refTotal !== undefined ? fmt(refTotal) : '-'}
+                {'\u2014'}
               </td>
             )}
           </tr>

@@ -83,89 +83,116 @@ export function SimulantPanel({
   return (
     <PanelShell
       title={simulant.name}
-      subtitle={extra?.classification || extra?.replica_of || simulant.type}
+      subtitle={simulant.type || extra?.classification || undefined}
       headerNote={existenceNote}
       accentColor={simulant.type?.toLowerCase().includes('highland') ? 'text-cyan-400' : 'text-emerald-400'}
       onClose={onClose}
-      onDownload={() => downloadSimulantCSV(simulant, compositions, chemicalCompositions, references)}
+      onDownload={() => downloadSimulantCSV(simulant, { compositions, chemicalCompositions, references, propertySources: propertySources ? [...propertySources.values()] : [], figuresOfMerit })}
       onCompare={onCompare}
       compareActive={compareActive}
     >
+      {/* Jump links (review #9): the pane is long; these stay at the top while it scrolls */}
+      <nav aria-label="Sections" className="sticky -top-6 z-10 -mx-6 mb-4 px-6 py-2 bg-slate-900/95 backdrop-blur border-b border-slate-800 flex flex-wrap gap-x-3 gap-y-1 text-xs">
+        {[
+          ['properties', 'Properties', !!physicalProperties],
+          ['composition', 'Composition', true],
+          ['fom', 'FoM', figuresOfMerit.length > 0],
+          ['purchase', 'Purchase', true],
+          ['about', 'About', true],
+          ['references', 'References', true],
+        ].filter(([, , show]) => show).map(([id, label]) => (
+          <a key={id as string} href={`#pane-${id}`} className="text-slate-300 hover:text-white"
+            onClick={(e) => { e.preventDefault(); document.getElementById(`pane-${id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
+            {label}
+          </a>
+        ))}
+      </nav>
       <div className="space-y-8">
-        <SimulantProperties simulant={simulant} extra={extra} />
-
         {physicalProperties && (
-          <PhysicalPropertiesSection
-            properties={physicalProperties}
-            sources={propertySources}
-            refNumber={(referenceId) => refNumbers.get(referenceId)}
-            refLabel={refLabel}
-          />
+          <section id="pane-properties" className="scroll-mt-14">
+            <PhysicalPropertiesSection
+              properties={physicalProperties}
+              sources={propertySources}
+              refNumber={(referenceId) => refNumbers.get(referenceId)}
+              refLabel={refLabel}
+            />
+          </section>
         )}
 
-        <FigureOfMeritSection foms={figuresOfMerit} refNumber={(referenceId) => refNumbers.get(referenceId)} refLabel={refLabel} />
-
-        <PurchaseSection availability={simulant.availability} purchaseInfo={purchaseInfo} />
-
-        {/* Lunar reference selector */}
-        {missionsWithChem.length > 0 && (
-          <div className="bg-amber-500/5 border border-amber-500/20 rounded-xl p-3 space-y-2">
-            <div className="flex items-center gap-2">
-              <Moon size={14} className="text-amber-400" />
-              <span className="text-xs font-bold text-amber-400 uppercase tracking-wider">Compare against lunar reference</span>
-            </div>
-            <select
-              value={selectedLunarRefMission || ''}
-              onChange={(e) => onSelectLunarRef(e.target.value || null)}
-              className="w-full bg-slate-800 border border-slate-700 rounded-lg py-1.5 px-3 text-xs text-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500/50"
-            >
-              <option value="">No reference comparison</option>
-              {missionsWithChem.map(r => (
-                <option key={r.mission} value={r.mission}>
-                  {[r.mission, r.sample_id, r.landing_site, r.type && `(${r.type})`].filter(Boolean).join(' — ')}
-                </option>
-              ))}
-            </select>
-            {lunarRef && (
-              <button
-                onClick={onOpenCrossComparison}
-                className="w-full flex items-center justify-center gap-2 py-2 bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/30 rounded-lg text-xs font-medium text-amber-300 transition-colors"
+        <section id="pane-composition" className="scroll-mt-14 space-y-6">
+          {/* Lunar reference selector */}
+          {missionsWithChem.length > 0 && (
+            <div className="bg-amber-500/5 border border-amber-500/20 rounded-xl p-3 space-y-2">
+              <div className="flex items-center gap-2">
+                <Moon size={14} className="text-amber-400" />
+                <span className="text-xs font-bold text-amber-400">Compare with a lunar sample</span>
+              </div>
+              <select
+                value={selectedLunarRefMission || ''}
+                onChange={(e) => onSelectLunarRef(e.target.value || null)}
+                className="w-full bg-slate-800 border border-slate-700 rounded-lg py-1.5 px-3 text-xs text-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500/50"
               >
-                <ArrowRightLeft size={12} />Full comparison view
-              </button>
-            )}
-            {lunarRef && lunarRefSuggested && (
-              <p className="text-xs text-slate-400">Suggested from the lunar sample the producer says this simulant replicates.</p>
-            )}
-            {lunarRef && <LunarSourceList citations={lunarCites} prefix="L" title={`Sources for ${lunarRef.mission} ${lunarRef.sample_id}`} />}
-          </div>
+                <option value="">No reference comparison</option>
+                {missionsWithChem.map(r => (
+                  <option key={r.mission} value={r.mission}>
+                    {[r.mission, r.sample_id, r.landing_site, r.type && `(${r.type})`].filter(Boolean).join(' — ')}
+                  </option>
+                ))}
+              </select>
+              {lunarRef && (
+                <button
+                  onClick={onOpenCrossComparison}
+                  className="w-full flex items-center justify-center gap-2 py-2 bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/30 rounded-lg text-xs font-medium text-amber-300 transition-colors"
+                >
+                  <ArrowRightLeft size={12} />Full comparison
+                </button>
+              )}
+              {lunarRef && lunarRefSuggested && (
+                <p className="text-xs text-slate-400">Suggested from the lunar sample the producer says this simulant replicates.</p>
+              )}
+              {lunarRef && <LunarSourceList citations={lunarCites} prefix="L" title={`Sources for ${lunarRef.mission} ${lunarRef.sample_id}`} />}
+            </div>
+          )}
+  
+            <DataSourceLine simulant={simulant} />
+          <MineralChart
+            compositions={compositions}
+            mineralGroups={mineralGroups}
+            lunarRef={lunarRef}
+            lunarCitations={lunarCites}
+            simulantName={simulant.name}
+            simulant={simulant}
+            references={references}
+          />
+          <ChemicalChart
+            chemicalCompositions={chemicalCompositions}
+            lunarRef={lunarRef}
+            lunarCitations={lunarCites}
+            simulantName={simulant.name}
+            simulant={simulant}
+            references={references}
+          />
+        </section>
+
+        {figuresOfMerit.length > 0 && (
+          <section id="pane-fom" className="scroll-mt-14">
+            <FigureOfMeritSection foms={figuresOfMerit} refNumber={(referenceId) => refNumbers.get(referenceId)} refLabel={refLabel} />
+          </section>
         )}
 
-        <div id="pane-composition" className="scroll-mt-4" />
-        <DataSourceLine simulant={simulant} />
+        <section id="pane-purchase" className="scroll-mt-14">
+          <PurchaseSection availability={simulant.availability} purchaseInfo={purchaseInfo} />
+        </section>
 
-        <MineralChart
-          compositions={compositions}
-          mineralGroups={mineralGroups}
-          lunarRef={lunarRef}
-          lunarCitations={lunarCites}
-          simulantName={simulant.name}
-          simulant={simulant}
-          references={references}
-        />
+        <section id="pane-about" className="scroll-mt-14">
+          <h3 className="text-sm font-semibold text-slate-300 mb-2">About</h3>
+          <SimulantProperties simulant={simulant} extra={extra} sources={propertySources}
+            refNumber={(referenceId) => refNumbers.get(referenceId)} refLabel={refLabel} />
+        </section>
 
-        <ChemicalChart
-          chemicalCompositions={chemicalCompositions}
-          lunarRef={lunarRef}
-          lunarCitations={lunarCites}
-          simulantName={simulant.name}
-          simulant={simulant}
-          references={references}
-        />
-
-        <div id="pane-references" className="scroll-mt-4">
+        <section id="pane-references" className="scroll-mt-14">
           <ReferencesSection references={references} simulantName={simulant.name} />
-        </div>
+        </section>
       </div>
     </PanelShell>
   );

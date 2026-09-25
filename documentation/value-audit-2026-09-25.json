@@ -30,14 +30,24 @@
   "value": 0.0
  },
  {
-  "simulant_id": "S025",
-  "name": "GreenSpar",
-  "where": "mineral table",
-  "check": "total",
+  "simulant_id": "S028",
+  "name": "JSC-1A",
+  "where": "mineral:Glass-rich basalt",
+  "check": "quote",
   "severity": "warn",
-  "detail": "mineral total 106.0% exceeds 100%",
-  "reference_id": null,
-  "value": null
+  "detail": "no reader's quote on record for this row",
+  "reference_id": "RN-S028-9",
+  "value": 49.3
+ },
+ {
+  "simulant_id": "S117",
+  "name": "GSC-1",
+  "where": "mineral:Opaques (probably magnetite)",
+  "check": "quote",
+  "severity": "warn",
+  "detail": "no reader's quote on record for this row",
+  "reference_id": "RN-S117-1",
+  "value": 5.0
  },
  {
   "simulant_id": "S028",
@@ -66,6 +76,16 @@
   "check": "total",
   "severity": "warn",
   "detail": "oxide total 22.4% (expected 90–103%)",
+  "reference_id": null,
+  "value": null
+ },
+ {
+  "simulant_id": "S081",
+  "name": "JSC-2A",
+  "where": "oxide table",
+  "check": "total",
+  "severity": "warn",
+  "detail": "oxide total 84.3% (expected 90–103%)",
   "reference_id": null,
   "value": null
  },

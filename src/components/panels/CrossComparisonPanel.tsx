@@ -42,19 +42,20 @@ export function CrossComparisonPanel({
   }, [chemicalCompositions, lunarRef]);
 
   const mineralData = useMemo(() => {
-    const groups = mineralGroups.filter(g => g.value_pct > 0);
-    const allNames = new Set([
-      ...groups.map(g => g.group_name),
-      ...Object.keys(lunarRef.mineral_composition || {}),
-    ]);
+    // NASA mineral groups where the simulant has them; otherwise its own mineral table (most
+    // simulants since the audit), so its minerals are not all shown as missing.
+    const groups = mineralGroups.filter(g => g.value_pct > 0).map(g => ({ name: g.group_name, value: g.value_pct }));
+    const own = groups.length > 0 ? groups
+      : compositions.filter(c => c.value_pct > 0).map(c => ({ name: c.component_name, value: c.value_pct }));
+    const allNames = new Set([...own.map(g => g.name), ...Object.keys(lunarRef.mineral_composition || {})]);
     return Array.from(allNames).map(name => ({
       name,
-      simulant: groups.find(g => g.group_name === name)?.value_pct || 0,
+      simulant: own.find(g => g.name === name)?.value || 0,
       reference: lunarRef.mineral_composition?.[name] || 0,
     }))
       .filter(d => d.simulant > 0 || d.reference > 0)
       .sort((a, b) => (b.simulant + b.reference) - (a.simulant + a.reference));
-  }, [mineralGroups, lunarRef]);
+  }, [mineralGroups, compositions, lunarRef]);
 
   return (
     <motion.div

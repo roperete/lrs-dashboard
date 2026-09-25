@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Download, ChevronDown } from 'lucide-react';
 import { exportToCSV } from '../../utils/csv';
-import type { Simulant, Composition, ChemicalComposition, Reference } from '../../types';
+import type { Simulant, Composition, ChemicalComposition, Reference, PropertySource, FigureOfMerit } from '../../types';
 
 interface ExportMenuProps {
   currentSimulant: Simulant | null;
@@ -10,11 +10,13 @@ interface ExportMenuProps {
   compositions: Composition[];
   chemicalCompositions: ChemicalComposition[];
   references: Reference[];
+  propertySources?: PropertySource[];
+  figuresOfMerit?: FigureOfMerit[];
 }
 
 export function ExportMenu({
   currentSimulant, filteredSimulants, allSimulants,
-  compositions, chemicalCompositions, references,
+  compositions, chemicalCompositions, references, propertySources, figuresOfMerit,
 }: ExportMenuProps) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -30,7 +32,7 @@ export function ExportMenu({
   const timestamp = new Date().toISOString().slice(0, 10);
 
   const doExport = (simulants: Simulant[], label: string) => {
-    exportToCSV(simulants, compositions, chemicalCompositions, references, `lrs_${label}_${timestamp}.csv`);
+    exportToCSV(simulants, { compositions, chemicalCompositions, references, propertySources, figuresOfMerit }, `lrs_${label}_${timestamp}.csv`);
     setOpen(false);
   };
 

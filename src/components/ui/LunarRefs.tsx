@@ -28,7 +28,7 @@ export function LunarSourceList({ citations, prefix = '', title = 'Sources' }: {
         {citations.documents.map((d, i) => {
           const href = d.url || (d.doi ? `https://doi.org/${d.doi}` : null);
           return (
-            <li key={d.document_id} className="flex gap-2">
+            <li key={d.document_id} id={`pane-ref-${prefix}${i + 1}`} className="flex gap-2 scroll-mt-16 rounded transition-shadow">
               <span className="font-semibold text-amber-400/90 shrink-0">[{prefix}{i + 1}]</span>
               <span>
                 {d.authors ? `${d.authors}${d.year ? ` (${d.year})` : ''}. ` : d.year ? `(${d.year}) ` : ''}

@@ -22,7 +22,7 @@ const COLUMN_HELP: Record<SortKey, string> = {
   lunar_sample_reference: 'The lunar material the producer says the simulant replicates, in the producer\'s own words.',
   year: 'Year first produced or released, as recorded. Not yet audited; the sheets do not state it.',
   specific_gravity: 'Grain density relative to water. Cleared wherever the value only repeated the bulk density.',
-  bulk_density: 'Mass per unit volume of the loose material, pore space included, in g/cm³.',
+  bulk_density: 'Mass per unit volume, pore space included, in g/cm³, as the source states it: sources differ in packing (loose, compacted, optimal); the citation says which.',
   d50: 'Median particle size in micrometres: half the grains, by mass, are finer than this.',
   friction_angle: 'Internal angle of friction from shear testing, in degrees. Governs slope stability and bearing capacity.',
   cohesion: 'Shear strength at zero normal stress, in kPa. How much the grains hold together.',
