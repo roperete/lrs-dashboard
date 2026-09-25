@@ -47,5 +47,20 @@
     "now": 30.4076,
     "document_id": "LD-055",
     "action": "written: number agreed by reader and checker, quote verified in the document"
+  },
+  {
+    "entity_id": "A16",
+    "field": "lng",
+    "was": 15.5002,
+    "now": 15.5002,
+    "document_id": "LD-024",
+    "action": "written: number agreed by reader and checker, quote verified in the document"
+  },
+  {
+    "entity_id": "60501",
+    "field": "oxide:MnO",
+    "document_id": "LD-057",
+    "value_text": "0.07 wt% (Rose et al. 1975, coarse fraction)",
+    "action": "source removed, value hidden: one of five MnO analyses in the document, read as a coarse fraction; alone it would stand for the sample's bulk chemistry"
   }
 ]

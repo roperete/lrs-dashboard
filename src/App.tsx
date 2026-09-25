@@ -281,6 +281,10 @@ export default function App() {
                 sites={displayedLunarSites}
                 selectedSiteId={panelState.selectedLunarSiteId}
                 onSelectSite={(id) => panelState.setSelectedLunarSiteId(id)}
+                onOpenSources={(id) => {
+                  panelState.setSelectedLunarSiteId(id);
+                  setTimeout(() => document.getElementById('pane-sources')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 400);
+                }}
                 citationsFor={lunarCitationsFor}
               />
             ) : (

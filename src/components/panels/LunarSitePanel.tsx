@@ -116,7 +116,7 @@ export function LunarSitePanel({ site, citations = EMPTY_CITATIONS, replicas = [
             <p className="mt-1 text-[11px] text-slate-400">As each producer states the lunar sample it replicates.</p>
           </div>
         )}
-        <LunarSourceList citations={citations} />
+        <LunarSourceList citations={citations} id="pane-sources" />
         <p className="text-[10px] text-slate-400">
           Each value is cited to the document that states it. A value no document confirms is not shown.
         </p>

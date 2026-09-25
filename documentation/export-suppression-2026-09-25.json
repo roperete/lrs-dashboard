@@ -530,7 +530,7 @@
     }
   ],
   "moon_rule": "A value of a lunar site or reference sample is exported only when lunar_sources has a row for (entity_id, field); a site without both coordinates sourced is left off the map.",
-  "moon_count": 136,
+  "moon_count": 116,
   "moon_suppressed": [
     {
       "entity_id": "A11",
@@ -838,26 +838,11 @@
     },
     {
       "entity_id": "15271",
-      "field": "landing_site",
-      "value": "Hadley-Apennine (Hadley Rille / Apennine Mountains)"
-    },
-    {
-      "entity_id": "15271",
       "field": "coordinates",
       "value": {
         "lat": 26.1322,
         "lon": 3.6339
       }
-    },
-    {
-      "entity_id": "15271",
-      "field": "type",
-      "value": "Mare/Highland boundary (Low-Ti Basalt with Highland component)"
-    },
-    {
-      "entity_id": "15271",
-      "field": "sample_description",
-      "value": "Reference regolith soil from station 2 near Hadley Rille, mare-highland mixed soil"
     },
     {
       "entity_id": "15271",
@@ -906,43 +891,8 @@
     },
     {
       "entity_id": "15271",
-      "field": "oxide:K2O",
-      "value": 0.21
-    },
-    {
-      "entity_id": "15271",
       "field": "oxide:P2O5",
       "value": 0.18
-    },
-    {
-      "entity_id": "15271",
-      "field": "mineral:Plagioclase",
-      "value": 27.0
-    },
-    {
-      "entity_id": "15271",
-      "field": "mineral:Pyroxene",
-      "value": 41.0
-    },
-    {
-      "entity_id": "15271",
-      "field": "mineral:Olivine",
-      "value": 8.0
-    },
-    {
-      "entity_id": "15271",
-      "field": "mineral:Ilmenite",
-      "value": 2.0
-    },
-    {
-      "entity_id": "15271",
-      "field": "mineral:Agglutinates",
-      "value": 15.0
-    },
-    {
-      "entity_id": "15271",
-      "field": "mineral:Glass",
-      "value": 5.0
     },
     {
       "entity_id": "15271",
@@ -951,26 +901,11 @@
     },
     {
       "entity_id": "60501",
-      "field": "landing_site",
-      "value": "Descartes Highlands (Cayley Plains)"
-    },
-    {
-      "entity_id": "60501",
       "field": "coordinates",
       "value": {
         "lat": -8.9734,
         "lon": 15.5011
       }
-    },
-    {
-      "entity_id": "60501",
-      "field": "type",
-      "value": "Highland (Feldspathic / Anorthositic)"
-    },
-    {
-      "entity_id": "60501",
-      "field": "sample_description",
-      "value": "Bulk regolith soil from station LM/ALSEP area, feldspathic highland regolith"
     },
     {
       "entity_id": "60501",
@@ -1064,21 +999,11 @@
     },
     {
       "entity_id": "71501",
-      "field": "landing_site",
-      "value": "Taurus-Littrow Valley"
-    },
-    {
-      "entity_id": "71501",
       "field": "coordinates",
       "value": {
         "lat": 20.1908,
         "lon": 30.7717
       }
-    },
-    {
-      "entity_id": "71501",
-      "field": "type",
-      "value": "Mare/Highland boundary (High-Ti Basalt with Highland component)"
     },
     {
       "entity_id": "71501",
@@ -1137,33 +1062,8 @@
     },
     {
       "entity_id": "71501",
-      "field": "oxide:P2O5",
-      "value": 0.12
-    },
-    {
-      "entity_id": "71501",
-      "field": "mineral:Plagioclase",
-      "value": 32.0
-    },
-    {
-      "entity_id": "71501",
-      "field": "mineral:Pyroxene",
-      "value": 31.0
-    },
-    {
-      "entity_id": "71501",
       "field": "mineral:Olivine",
       "value": 5.0
-    },
-    {
-      "entity_id": "71501",
-      "field": "mineral:Ilmenite",
-      "value": 7.0
-    },
-    {
-      "entity_id": "71501",
-      "field": "mineral:Agglutinates",
-      "value": 16.0
     },
     {
       "entity_id": "71501",

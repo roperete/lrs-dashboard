@@ -1474,5 +1474,432 @@
   "entity_id": "CH3",
   "field": "description",
   "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "15271",
+  "field": null,
+  "reference": "Lunar Sourcebook: A User's Guide to the Moon",
+  "outcome": "document not confirmed to name this site or sample"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mission",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "15271",
+  "field": "landing_site",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "15271",
+  "field": "coordinates",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "15271",
+  "field": "type",
+  "outcome": "corrected to the source",
+  "was": "Mare/Highland boundary (Low-Ti Basalt with Highland component)",
+  "now": "mixture of mare material, highland material and green glass; ~28-34% mare basalt, ~25% KREEP, ~25% LKFM, ~4-15% green glass (Walker & Papike 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "sample_description",
+  "outcome": "corrected to the source",
+  "was": "Reference regolith soil from station 2 near Hadley Rille, mare-highland mixed soil",
+  "now": "Reference Soil ... collected at station 6, on the lower slope of the Apennine Front"
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:SiO2",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "46.0-46.73 wt% (LSPET 1971=46.7; Duncan et al. 1975=46.62; Laul & Papike 1981=46.0; Maxwell et al. 1972=46.73)",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:TiO2",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:Al2O3",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "16.19-16.6 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:Cr2O3",
+  "outcome": "no source: not_found, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.38 wt% (LSPET XRF, A15 PSR Table 6-IV); Papike et al. 1982 bulk gives 0.35 wt% (Sourcebook Table 7.16). Use whichever analysis is chosen for the whole oxide table.",
+  "correct_reference": "Sources/papers/lunar/A15_PSR_SP289_full.pdf (Table 6-IV, p.6-17, PDF p.199); alt: R2 Table 7.16 (book p.347)",
+  "problems": [
+   "not_found is wrong: two documents state Cr2O3 wt% for 15271.",
+   "A15 PSR Table 6-IV, column '15271 (6)', gives Cr2O3 .38.",
+   "Sourcebook Table 7.16 '15271,27 Bulk' gives Cr2O3 0.350. Sibille et al. Table 7 repeats 0.35 for 15271."
+  ]
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:FeO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "11.9-12.8 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:MnO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.155-0.17 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:MgO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "10.48-10.8 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:CaO",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:Na2O",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.41-0.53 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:K2O",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:P2O5",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.21-0.222 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Plagioclase",
+  "outcome": "corrected to the source",
+  "was": "27.0 (vol%? as displayed, unit not stated)",
+  "now": "7 (modal %, Basu 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Pyroxene",
+  "outcome": "corrected to the source",
+  "was": "41.0 (vol%? as displayed, unit not stated)",
+  "now": "11.4 (modal %, Basu 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Olivine",
+  "outcome": "corrected to the source",
+  "was": "8.0 (vol%? as displayed, unit not stated)",
+  "now": "1.8 (modal %, Basu 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Ilmenite",
+  "outcome": "corrected to the source",
+  "was": "2.0 (vol%? as displayed, unit not stated)",
+  "now": "0.2 (modal %, Basu 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Agglutinates",
+  "outcome": "corrected to the source",
+  "was": "15.0 (vol%? as displayed, unit not stated)",
+  "now": "42.2 (modal %, Basu 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Glass",
+  "outcome": "corrected to the source",
+  "was": "5.0 (vol%? as displayed, unit not stated)",
+  "now": "14.1 ('Glass other', Basu 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Other",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mission",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "60501",
+  "field": "landing_site",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "60501",
+  "field": "coordinates",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "type",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "60501",
+  "field": "sample_description",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:SiO2",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:TiO2",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.59-0.63 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:Al2O3",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:Cr2O3",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:FeO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "5.15-6.05 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:MnO",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:MgO",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:CaO",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:Na2O",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:K2O",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.1-0.13 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:P2O5",
+  "outcome": "no source: supported, checker REFUTED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Plagioclase",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Pyroxene",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Olivine",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Ilmenite",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Agglutinates",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Glass",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Other",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mission",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "71501",
+  "field": "landing_site",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "71501",
+  "field": "coordinates",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "type",
+  "outcome": "corrected to the source",
+  "was": "Mare/Highland boundary (High-Ti Basalt with Highland component)",
+  "now": "similar to other mare soils at Apollo 17; composed mostly of basalt fragments"
+ },
+ {
+  "entity_id": "71501",
+  "field": "sample_description",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:SiO2",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:TiO2",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "8.4-9.52 wt% (LSPET 1973=9.52; Laul et al. 1974=8.5; Brunfelt et al. 1974=8.4)",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:Al2O3",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "11.13-11.9 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:Cr2O3",
+  "outcome": "no source: not_found, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.46 wt%",
+  "correct_reference": "Sources/papers/lunar/A17_PSR_SP330_full.pdf (Table 7-VI, p.7-22, PDF p.208)",
+  "problems": [
+   "not_found is wrong. A17 PSR Table 7-VI (XRF by Rhodes, Rodgers & Bansal) gives Cr2O3 .46 wt% for 71501,3. This is the same LSPET analysis as the LSC Table 1 'LSPET73' column (SiO2 39.82, TiO2 9.52)."
+  ]
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:FeO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "17.0-17.8 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:MnO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.222-0.25 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:MgO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "8.95-9.51 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:CaO",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:Na2O",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:K2O",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.07-0.085 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:P2O5",
+  "outcome": "corrected to the source",
+  "was": "0.12 wt%",
+  "now": "0.06 wt% (LSPET 1973, only documented analysis)"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Plagioclase",
+  "outcome": "corrected to the source",
+  "was": "32.0 (vol%? as displayed, unit not stated)",
+  "now": "5 (vol%, 90-150 µm fraction; Heiken & McKay 1974)"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Pyroxene",
+  "outcome": "corrected to the source",
+  "was": "31.0 (vol%? as displayed, unit not stated)",
+  "now": "17.9 (vol%, 90-150 µm; Heiken & McKay 1974)"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Olivine",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Ilmenite",
+  "outcome": "corrected to the source",
+  "was": "7.0 (vol%? as displayed, unit not stated)",
+  "now": "8 (vol%, 90-150 µm; Heiken & McKay 1974)"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Agglutinates",
+  "outcome": "corrected to the source",
+  "was": "16.0 (vol%? as displayed, unit not stated)",
+  "now": "35 (vol%, 90-150 µm; Heiken & McKay 1974)"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Glass",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "2.2 ('Glass other') and 1.3 ('Orange glass') - two separate glass categories, 90-150 µm; Heiken & McKay 1974",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Other",
+  "outcome": "no source: not_found, checker CONFIRMED"
  }
 ]

@@ -7,6 +7,7 @@
 //   {"clickSel": "css selector"}       the first element matching
 //   {"type": "text"}                   type into the focused element
 //   {"focus": "css selector"}
+//   {"hover": "css selector"}       move the mouse onto the first match (scrolled into view)
 //   {"key": "ArrowDown"}               press a key
 //   {"wait": 1500}
 //   {"eval": "js expression", "as": "name"}   record a value
@@ -59,6 +60,10 @@ for (const [i, st] of steps.entries()) {
     const ok = await evaluate(`(() => { const el = document.querySelector(${JSON.stringify(st.clickSel)}); if (!el) return false; el.click(); return true; })()`);
     if (!ok) failures.push(`${where}: no element`);
     await sleep(st.after ?? 900);
+  } else if (st.hover) {
+    const pos = await evaluate(`(() => { const el = document.querySelector(${JSON.stringify(st.hover)}); if (!el) return null; el.scrollIntoView({ block: 'center', inline: 'center' }); const b = el.getBoundingClientRect(); return { x: b.left + b.width / 2, y: b.top + b.height / 2 }; })()`);
+    if (!pos) failures.push(`${where}: nothing to hover`);
+    else { await send('Input.dispatchMouseEvent', { type: 'mouseMoved', x: pos.x, y: pos.y }); await sleep(st.after ?? 600); }
   } else if (st.focus) {
     await evaluate(`document.querySelector(${JSON.stringify(st.focus)})?.focus()`);
   } else if (st.type !== undefined) {
@@ -87,4 +92,6 @@ for (const [i, st] of steps.entries()) {
 const alerts = await evaluate(`[...document.querySelectorAll('[role=alert]')].map(a => a.innerText.slice(0, 200))`);
 console.log(JSON.stringify({ values, failures, errors, alerts, environment: environment.length ? `${environment.length} software-GL shader messages` : undefined }, null, 1));
 ws.close();
+// close the tab: left open, each run's globe keeps a WebGL context until Chrome can make no more
+await fetch(`http://127.0.0.1:${port}/json/close/${target.id}`).catch(() => {});
 process.exit(failures.length || errors.length ? 1 : 0);

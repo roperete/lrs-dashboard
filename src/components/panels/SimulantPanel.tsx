@@ -135,7 +135,8 @@ export function SimulantPanel({
                 <option value="">No reference comparison</option>
                 {missionsWithChem.map(r => (
                   <option key={r.mission} value={r.mission}>
-                    {[r.mission, r.sample_id, r.landing_site, r.type && `(${r.type})`].filter(Boolean).join(' — ')}
+                    {/* the type as its document words it can run long; the first clause fits a menu */}
+                    {[r.mission, r.sample_id, r.landing_site, r.type && `(${r.type.split(';')[0].trim()})`].filter(Boolean).join(' — ')}
                   </option>
                 ))}
               </select>

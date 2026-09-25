@@ -14,8 +14,7 @@ export function MineralSourcingSection({ compositions, mineralSourcingByMineral 
   const mineralsWithSourcing = compositions
     .map(c => ({
       composition: c,
-      sourcing: mineralSourcingByMineral.get(c.component_name?.toLowerCase()) ||
-                mineralSourcingByMineral.get(c.mineral_name?.toLowerCase()),
+      sourcing: mineralSourcingByMineral.get(c.component_name?.toLowerCase()),
     }))
     .filter(m => m.sourcing);
 
@@ -26,7 +25,7 @@ export function MineralSourcingSection({ compositions, mineralSourcingByMineral 
       <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Mineral Sourcing</h3>
       <div className="space-y-1.5">
         {mineralsWithSourcing.map(({ composition, sourcing }) => {
-          const name = composition.component_name || composition.mineral_name;
+          const name = composition.component_name;
           const isOpen = expanded === name;
 
           return (
@@ -39,7 +38,7 @@ export function MineralSourcingSection({ compositions, mineralSourcingByMineral 
                   {isOpen ? <ChevronDown size={14} className="text-slate-400" /> : <ChevronRight size={14} className="text-slate-400" />}
                   <span className="text-sm font-medium text-slate-200">{name}</span>
                   <span className="text-xs text-slate-400">
-                    {composition.value_pct || composition.percentage}%
+                    {composition.value_pct}%
                   </span>
                 </div>
                 {sourcing!.available_europe && (

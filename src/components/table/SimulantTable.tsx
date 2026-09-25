@@ -28,7 +28,7 @@ const COLUMN_HELP: Record<SortKey, string> = {
   cohesion: 'Shear strength at zero normal stress, in kPa. How much the grains hold together.',
   has_chemistry: 'Oxide chemistry on record, each value cited. Click the mark to open it in the pane.',
   has_mineralogy: 'Mineral or component composition on record, each value cited. Click the mark to open it in the pane.',
-  references: 'Documents on record for this simulant, and how many a reader confirmed name it. Click to open them in the pane.',
+  references: 'Documents on record for this simulant. "Unchecked": no reader has yet confirmed that the document names this simulant. Click to open them in the pane.',
 };
 
 /** Display a sparse field, falling back to an em-dash when empty. */
@@ -182,7 +182,7 @@ export function SimulantTable({
             return (
               <tr key={s.simulant_id} data-row tabIndex={0} aria-selected={isSelected}
                 onClick={() => onSelectSimulant(s.simulant_id)} onKeyDown={(e) => onRowKey(e, i)}
-                className={cn("group cursor-pointer border-b border-slate-800/50 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-emerald-500",
+                className={cn("cursor-pointer border-b border-slate-800/50 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-emerald-500",
                   rowBg, "hover:brightness-125")}>
                 <td className={cn("py-2 px-2 text-center", stickyBox, rowBg)}>
                   <input type="checkbox" checked={inTray} aria-label={`Add ${s.name} to the comparison`}
@@ -207,7 +207,7 @@ export function SimulantTable({
                   {refs.length > 0
                     ? <button type="button" onClick={(e) => { e.stopPropagation(); onSelectSimulant(s.simulant_id, 'references'); }}
                         aria-label={`Open ${s.name}'s references in the pane`} className="text-slate-300 hover:text-white">
-                        {refs.length} <span className="text-slate-400">· {named} named</span>
+                        {refs.length}{named < refs.length && <span className="text-amber-400/90"> · {refs.length - named} unchecked</span>}
                       </button>
                     : <span className="text-slate-500">{DASH}</span>}
                 </td>

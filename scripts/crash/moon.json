@@ -6,6 +6,17 @@
   "click": "Table"
  },
  {
+  "clickSel": "tbody tr button[aria-label$=\"sources\"]",
+  "after": 1600
+ },
+ {
+  "expect": "(() => { const el = document.getElementById('pane-sources'); if (!el) return false; const b = el.getBoundingClientRect(); return b.top >= 0 && b.top < innerHeight; })()",
+  "why": "the Sources cell opens the site panel at its source list"
+ },
+ {
+  "shot": "moon_sources_column"
+ },
+ {
   "eval": "(async () => { const heads = [...document.querySelectorAll('thead th')]; for (const h of heads) { h.click(); await new Promise(r => setTimeout(r, 100)); h.click(); await new Promise(r => setTimeout(r, 100)); } return heads.length; })()",
   "as": "moonSorts"
  },

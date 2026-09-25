@@ -19,10 +19,10 @@ export function LunarRefs({ cites, prefix = '', align = 'center' }: { cites: Lun
 }
 
 /** The numbered list of documents a lunar site or sample cites. */
-export function LunarSourceList({ citations, prefix = '', title = 'Sources' }: { citations: LunarCitations; prefix?: string; title?: string }) {
+export function LunarSourceList({ citations, prefix = '', title = 'Sources', id }: { citations: LunarCitations; prefix?: string; title?: string; id?: string }) {
   if (citations.documents.length === 0) return null;
   return (
-    <div>
+    <div id={id} className="scroll-mt-4">
       <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">{title}</h3>
       <ol className="space-y-1.5 text-xs text-slate-400">
         {citations.documents.map((d, i) => {

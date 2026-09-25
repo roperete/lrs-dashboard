@@ -3,6 +3,13 @@
   "click": "Table"
  },
  {
+  "hover": "tbody tr[data-row]:nth-child(1) sup button"
+ },
+ {
+  "expect": "[...document.querySelectorAll('[role=tooltip]')].filter(t => parseFloat(getComputedStyle(t).opacity) > 0.5).length === 1",
+  "why": "hovering one citation mark opens exactly one tooltip (2026-09-26: a row opened all of them)"
+ },
+ {
   "eval": "(async () => { const heads = [...document.querySelectorAll('thead th button')]; for (const h of heads) { h.click(); await new Promise(r => setTimeout(r, 120)); h.click(); await new Promise(r => setTimeout(r, 120)); } return heads.length; })()",
   "as": "sortsClicked"
  },

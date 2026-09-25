@@ -6382,16 +6382,1274 @@
     ],
     "notes": "I re-opened every document myself: the saved PDF and HTML copies, page images for the tables, Lunar Sourcebook Table 9.11 as an image, and the Gasteiner CSV rows. All 17 references open and contain the quoted mention.\n\nRefuted:\n- S3 bearing_capacity. Scott & Roberson 1968 p.4073, and the same wording in TR 32-1177 p.108, say the 4×10^5 dynes/cm² footpad value 'is deduced from the Surveyor 1 landing'. It is not a Surveyor 3 measurement.\n\nNot a value error, but a reader note that is wrong:\n- CE6 lng: the reader called the primary paper's coordinates (41.625°S, 153.978°W) consistent with Wikipedia's 41.6385/153.9852. They are not a rounding and differ by 0.007–0.0135°.\n\nOther problems:\n- The reader's Table 5 transcription has the wrong exponent on the parenthetical cohesions (they are ×10³).\n- S1 bulk_density 1.5 is an assumed 'typical terrestrial' density. The report's own finding is 1.2–1.5, and Jaffe 1967 gives about 0.7.\n- CE3 bulk_density rests only on Gasteiner; the primary is closed, and Fa 2020 gives a different depth profile.\n- For CH3 bulk_density, the only support for the stored 1.3 is Gasteiner citing a closed paper. The opened primary gives 1.94.\n\nSurveyor III Mission Report (JPL TR 32-1177, 465 MB, downloaded from NTRS): I read it and saved an excerpt of pdf pages 1, 2, 10, 13, 113 and 114 at /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/JPL_TR32-1177_Surveyor3_MissionReport_PartII_1967_EXCERPT_pdfp1-2-10-13-113-114.pdf. It gives Surveyor 3 site ranges only: cohesion 0.15–0.7 kPa, friction 35–40°, static bearing capacity 20–60 kPa. So S3 friction 42° is outside the range. S3 cohesion 0.47 and bearing 40 lie inside ranges, but no document states either number.\n\nOpenAlex abstract records I saved (the full texts are closed) in the same folder:\n- Jaffe_etal_1968_JGR73-3983_PrincipalResults_Surveyor3_abstract_OpenAlex.json\n- Christensen_etal_1968_JGR73-4081_MechProps_Surveyor3_abstract_OpenAlex.json\n- Jaffe_1967_JGR72-1727_SurfaceStructure_LunarMaria_Surveyor1_abstract_OpenAlex.json\n- Fa_etal_2020_ESS_BulkDensity_CE3_LPR_abstract_OpenAlex.json\n\nA correct_value given on a CONFIRMED 'differs' check is what the reader's own document states, repeated for convenience."
    }
-  }
- ],
- "unchecked": [
+  },
   {
    "group": "apollo-samples-2",
    "ids": [
     "15271",
     "60501",
     "71501"
-   ]
+   ],
+   "reading": {
+    "entities": [
+     {
+      "id": "15271",
+      "references": [
+       {
+        "temp_id": "R1",
+        "title": "Lunar Sample Compendium: 15271 (Reference Soil, 798.3 g)",
+        "authors": "Meyer, C.",
+        "year": "2010",
+        "kind": "primary_report",
+        "local_path": "papers/lunar/LSC_15271.pdf",
+        "mention_quote": "15271 was one of the soils that Papike et al. (1982) chose for their reference suite. It was collected at station 6, on the lower slope of the Apennine Front and contains a mixture of mare material, highland material and green glass.",
+        "location": "Introduction, p.1"
+       },
+       {
+        "temp_id": "R2",
+        "title": "Lunar Sourcebook: A User's Guide to the Moon",
+        "authors": "Heiken, G.H., Vaniman, D.T. & French, B.M. (eds.)",
+        "year": "1991",
+        "kind": "compendium",
+        "local_path": "papers/LRS/LunarSourceBook.pdf",
+        "mention_quote": "TABLE 7.15. Chemical compositions (wt.%) of average soils at lunar landing sites and in selected regions at the Apollo 15, Apollo 16, Apollo 17, Luna 16, Luna 20, and Luna 24 sites.",
+        "location": "Table 7.15, book p.346 (PDF p.369); Table 7.16, book p.347-348 (PDF p.370-371)"
+       }
+      ],
+      "values": [
+       {
+        "field": "mission",
+        "stored": "Apollo 15",
+        "status": "supported",
+        "value_in_source": "Apollo 15",
+        "reference_id": "R1",
+        "location": "Figure 1 caption, p.1",
+        "quote": "Figure 1: Location of soil samples, trench and drive tube at station 6, Apollo 15."
+       },
+       {
+        "field": "landing_site",
+        "stored": "Hadley-Apennine (Hadley Rille / Apennine Mountains)",
+        "status": "supported",
+        "value_in_source": "Apennine Front / \"Hadley-Apennine region\"",
+        "reference_id": "R1",
+        "location": "Introduction; reference list",
+        "quote": "It was collected at station 6, on the lower slope of the Apennine Front and contains a mixture of mare material, highland material and green glass. / Kothari B.K. and Goel P.S. (1972) Total nitrogen abundances in five Apollo-15 samples (Hadley-Apennine region) by neutron activation analysis.",
+        "note": "'Hadley Rille' specifically is not named in this document's body text; the site as a whole is named 'Apennine Front' / 'Hadley-Apennine region'."
+       },
+       {
+        "field": "coordinates",
+        "stored": "lat 26.1322, lon 3.6339",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "R1 gives no numeric coordinates for 15271's own collection point; it only says it was collected 'at station 6, on the lower slope of the Apennine Front.' The stored figure equals the commonly-cited Apollo 15 LM coordinate (26°07'56\"N 3°38'02\"E), which describes the lander, not station 6."
+       },
+       {
+        "field": "type",
+        "stored": "Mare/Highland boundary (Low-Ti Basalt with Highland component)",
+        "status": "differs",
+        "value_in_source": "mixture of mare material, highland material and green glass; ~28-34% mare basalt, ~25% KREEP, ~25% LKFM, ~4-15% green glass (Walker & Papike 1981)",
+        "reference_id": "R1",
+        "location": "Introduction; Chemistry section",
+        "quote": "contains a mixture of mare material, highland material and green glass ... Walker and Papike (1981) calculated that 15271 was 28 – 34 % mare basalt, 25 % KREEP, 25 % LKFM and 4 – 15 % green glass.",
+        "note": "The 'mixture' framing is supported, but R1 never classifies 15271 as a 'Low-Ti Basalt'; it is dominated by KREEP/LKFM components, and R1 does not apply a mare-basalt TiO2 classification to the bulk soil."
+       },
+       {
+        "field": "sample_description",
+        "stored": "Reference regolith soil from station 2 near Hadley Rille, mare-highland mixed soil",
+        "status": "differs",
+        "value_in_source": "Reference Soil ... collected at station 6, on the lower slope of the Apennine Front",
+        "reference_id": "R1",
+        "location": "Header; Introduction",
+        "quote": "15271 Reference Soil 798.3 grams ... It was collected at station 6, on the lower slope of the Apennine Front",
+        "note": "'Reference soil' and 'mare-highland mixed' are supported by R1. But R1 states STATION 6, not station 2 - the stored 'station 2' is a factual error - and station 6 is on the Apennine Front, not specifically 'near Hadley Rille.'"
+       },
+       {
+        "field": "oxide:SiO2",
+        "stored": "46.8 wt%",
+        "status": "differs",
+        "value_in_source": "46.0-46.73 wt% (LSPET 1971=46.7; Duncan et al. 1975=46.62; Laul & Papike 1981=46.0; Maxwell et al. 1972=46.73)",
+        "reference_id": "R1",
+        "location": "Table 1a",
+        "quote": "SiO2 % 46.7 (b) ... 46.62 (b) 46 (a) ... 46.73 (d)",
+        "note": "Stored 46.8 lies just above the sample's own documented range. It instead equals exactly R2's Table 7.15 'Apollo 15' site-average column (SiO2=46.8), which averages many Apollo 15 soils, not sample 15271 specifically."
+       },
+       {
+        "field": "oxide:TiO2",
+        "stored": "1.4 wt%",
+        "status": "differs",
+        "value_in_source": "1.42-1.5 wt% across 6 analyses",
+        "reference_id": "R1",
+        "location": "Table 1a",
+        "quote": "TiO2 1.47 (b) 1.47 1.5 (a) 1.5 (b) 1.5 (a) 1.42 (d)",
+        "note": "Stored (1.4) is just below the sample's own range but matches R2's Apollo-15 site-average column exactly (1.4)."
+       },
+       {
+        "field": "oxide:Al2O3",
+        "stored": "14.6 wt%",
+        "status": "differs",
+        "value_in_source": "16.19-16.6 wt%",
+        "reference_id": "R1",
+        "location": "Table 1a",
+        "quote": "Al2O3 16.51 (b) 16.5 16.6 (a) 16.57 (b) 16.4 (a) 16.19 (d)",
+        "note": "Stored (14.6) is far below every one of the sample's own analyses; it matches R2's Apollo-15 site-average column exactly (14.6)."
+       },
+       {
+        "field": "oxide:Cr2O3",
+        "stored": "0.37 wt%",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "R1's Table 1a gives only elemental Cr (2260-2600 ppm, 6 analyses), not Cr2O3 wt%. Converting (Cr2O3=Cr_ppm×1.4614/10000) gives ≈0.33-0.38 wt%, bracketing the stored figure, but no document states a Cr2O3 wt% value for this sample. R2's Apollo-15 site-average column states Cr2O3=0.36, not 0.37."
+       },
+       {
+        "field": "oxide:FeO",
+        "stored": "14.3 wt%",
+        "status": "differs",
+        "value_in_source": "11.9-12.8 wt%",
+        "reference_id": "R1",
+        "location": "Table 1a",
+        "quote": "FeO 12.15 (b) 12.2 11.9 (a) 12.14 (b) 12.8 (a) 12.19 (d)",
+        "note": "Stored (14.3) is far above every documented analysis of 15271; matches R2's Apollo-15 site-average column exactly (14.3)."
+       },
+       {
+        "field": "oxide:MnO",
+        "stored": "0.19 wt%",
+        "status": "differs",
+        "value_in_source": "0.155-0.17 wt%",
+        "reference_id": "R1",
+        "location": "Table 1a",
+        "quote": "MnO 0.16 (b) 0.155 0.157 (a) 0.157 (b) 0.162 (a) 0.17 (d)",
+        "note": "Matches R2's site-average column exactly (0.19), not the sample's own range."
+       },
+       {
+        "field": "oxide:MgO",
+        "stored": "11.5 wt%",
+        "status": "differs",
+        "value_in_source": "10.48-10.8 wt%",
+        "reference_id": "R1",
+        "location": "Table 1a",
+        "quote": "MgO 10.55 (b) 10.6 10.7 (a) 10.66 (b) 10.8 (a) 10.48 (d)",
+        "note": "Matches R2's site-average column exactly (11.5)."
+       },
+       {
+        "field": "oxide:CaO",
+        "stored": "10.8 wt%",
+        "status": "range_only",
+        "value_in_source": "10.5-11.7 wt% across 6 analyses",
+        "reference_id": "R1",
+        "location": "Table 1a",
+        "quote": "CaO 11.29 (b) 10.5 10.7 (a) 11.24 (b) 11.7 (a) 11.23 (d)",
+        "note": "10.8 falls inside the sample's documented range (no single analysis states exactly 10.8); also equals R2's site-average column."
+       },
+       {
+        "field": "oxide:Na2O",
+        "stored": "0.39 wt%",
+        "status": "differs",
+        "value_in_source": "0.41-0.53 wt%",
+        "reference_id": "R1",
+        "location": "Table 1a",
+        "quote": "Na2O 0.43 (b) 0.44 0.48 (a) 0.41 (b) 0.49 (a) 0.53 (d)",
+        "note": "Stored value is below every documented analysis of 15271; matches R2's site-average column exactly (0.39)."
+       },
+       {
+        "field": "oxide:K2O",
+        "stored": "0.21 wt%",
+        "status": "supported",
+        "value_in_source": "0.21 wt% (LSPET 1971, XRF; and Baedecker et al. 1973, radiation counting)",
+        "reference_id": "R1",
+        "location": "Table 1a",
+        "quote": "K2O 0.21 (b) ... 0.21 (e)",
+        "note": "Also equals R2's site-average column (0.21), so both sources agree here."
+       },
+       {
+        "field": "oxide:P2O5",
+        "stored": "0.18 wt%",
+        "status": "differs",
+        "value_in_source": "0.21-0.222 wt%",
+        "reference_id": "R1",
+        "location": "Table 1a",
+        "quote": "P2O5 0.21 (b) 0.222 (b) 0.21 (d)",
+        "note": "Matches R2's site-average column exactly (0.18; printed there as 'P2O3', likely a typographic slip for P2O5), not the sample's own analyses."
+       },
+       {
+        "field": "mineral:Plagioclase",
+        "stored": "27.0 (vol%? as displayed, unit not stated)",
+        "status": "differs",
+        "value_in_source": "7 (modal %, Basu 1981)",
+        "reference_id": "R1",
+        "location": "'Modal content of soil 15271. From Basu 1981' table",
+        "quote": "Plagioclase 7",
+        "note": "Unit/size-fraction not stated in this specific table; modal point counts of this kind are conventionally vol%. Simon et al. (1981)'s separate 1000-90µm vol% table (also in R1/R2) gives Plagioclase=7.4 for 15271 - consistent with Basu's 7, and similarly far from the stored 27."
+       },
+       {
+        "field": "mineral:Pyroxene",
+        "stored": "41.0 (vol%? as displayed, unit not stated)",
+        "status": "differs",
+        "value_in_source": "11.4 (modal %, Basu 1981)",
+        "reference_id": "R1",
+        "location": "same table",
+        "quote": "Pyroxene 11.4"
+       },
+       {
+        "field": "mineral:Olivine",
+        "stored": "8.0 (vol%? as displayed, unit not stated)",
+        "status": "differs",
+        "value_in_source": "1.8 (modal %, Basu 1981)",
+        "reference_id": "R1",
+        "location": "same table",
+        "quote": "Olivine 1.8"
+       },
+       {
+        "field": "mineral:Ilmenite",
+        "stored": "2.0 (vol%? as displayed, unit not stated)",
+        "status": "differs",
+        "value_in_source": "0.2 (modal %, Basu 1981)",
+        "reference_id": "R1",
+        "location": "same table",
+        "quote": "Ilmenite 0.2"
+       },
+       {
+        "field": "mineral:Agglutinates",
+        "stored": "15.0 (vol%? as displayed, unit not stated)",
+        "status": "differs",
+        "value_in_source": "42.2 (modal %, Basu 1981)",
+        "reference_id": "R1",
+        "location": "same table",
+        "quote": "Agglutinates 42.2"
+       },
+       {
+        "field": "mineral:Glass",
+        "stored": "5.0 (vol%? as displayed, unit not stated)",
+        "status": "differs",
+        "value_in_source": "14.1 ('Glass other', Basu 1981)",
+        "reference_id": "R1",
+        "location": "same table",
+        "quote": "Glass other 14.1"
+       },
+       {
+        "field": "mineral:Other",
+        "stored": "2.0 (vol%? as displayed, unit not stated)",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Basu 1981's table has no single 'Other' line; its residual categories are Mare basalt 3.6, KREEP basalt 2.7, Breccia 12.7, Anorthosite 1, Gabbro 0.3 (Norite blank) - lithic components, not a single comparable 'Other' figure, so no stand-in value is reported (per the no-averaging rule)."
+       }
+      ]
+     },
+     {
+      "id": "60501",
+      "references": [
+       {
+        "temp_id": "R1",
+        "title": "Lunar Sample Compendium: 60500 and 65510 (Soil, 702 and 8 g)",
+        "authors": "Meyer, C.",
+        "year": "2010",
+        "kind": "primary_report",
+        "local_path": "papers/lunar/LSC_60500.pdf",
+        "mention_quote": "60500 was collected adjacent to drive tube 60010/60009, about 100 m from the LM.",
+        "location": "Introduction, p.1"
+       },
+       {
+        "temp_id": "R2",
+        "title": "Lunar Sourcebook: A User's Guide to the Moon",
+        "authors": "Heiken, G.H., Vaniman, D.T. & French, B.M. (eds.)",
+        "year": "1991",
+        "kind": "compendium",
+        "local_path": "papers/LRS/LunarSourceBook.pdf",
+        "mention_quote": "16a Average composition of Cayley Plain soil (60050, 60500, 61140, 61161, 61180, 61220, 61240, 61500, 62240, 62280) from the Apollo 16 site.",
+        "location": "Table 7.15, book p.346 (PDF p.369)"
+       }
+      ],
+      "values": [
+       {
+        "field": "mission",
+        "stored": "Apollo 16",
+        "status": "supported",
+        "value_in_source": "Apollo 16",
+        "reference_id": "R1",
+        "location": "Petrography section",
+        "quote": "Glass splashed on rocks is a common feature at Apollo 16 (See et al. 1986; Morris et al. 1986) and seems to derived from melted soils."
+       },
+       {
+        "field": "landing_site",
+        "stored": "Descartes Highlands (Cayley Plains)",
+        "status": "supported",
+        "value_in_source": "Cayley Plain (Apollo 16 site); Descartes region",
+        "reference_id": "R2",
+        "location": "R1 reference list (Fruchter et al. 1974 title); R2 Table 7.15 footnote naming 60500",
+        "quote": "Breccia 66055 and related clastic materials from the Decartes region, Apollo 16. [R1, sic 'Decartes'] / 16a Average composition of Cayley Plain soil (60050, 60500, ...) from the Apollo 16 site. [R2, names 60500 directly]"
+       },
+       {
+        "field": "coordinates",
+        "stored": "lat -8.9734, lon 15.5011",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "R1 gives only a relative description ('collected adjacent to drive tube 60010/60009, about 100 m from the LM'); no document opened states numeric coordinates for 60501 itself. Stored figure equals the standard Apollo 16 LM coordinate (~8.97°S, 15.51°E); given 60501 is ~100 m from the LM this is a reasonable proxy but is not a value R1 itself states."
+       },
+       {
+        "field": "type",
+        "stored": "Highland (Feldspathic / Anorthositic)",
+        "status": "supported",
+        "value_in_source": "~55% anorthosite, ~30% impact melt, ~10% mare component (Kempa et al. 1980)",
+        "reference_id": "R1",
+        "location": "Petrography section",
+        "quote": "Kempa et al. (1980) calculated that 60500 was ~ 55 % anorthosite, ~ 30 % impact melt and ~ 10 % mare component."
+       },
+       {
+        "field": "sample_description",
+        "stored": "Bulk regolith soil from station LM/ALSEP area, feldspathic highland regolith",
+        "status": "supported",
+        "value_in_source": "collected adjacent to drive tube 60010/60009, about 100 m from the LM",
+        "reference_id": "R1",
+        "location": "Introduction",
+        "quote": "60500 was collected adjacent to drive tube 60010/60009, about 100 m from the LM.",
+        "note": "R1 does not use the words 'ALSEP area' verbatim, but 100 m from the LM is consistent with it; 'feldspathic highland' is supported by Kempa et al.'s ~55% anorthosite estimate and by Al2O3~26-27 wt% (Table 1)."
+       },
+       {
+        "field": "oxide:SiO2",
+        "stored": "45.0 wt%",
+        "status": "range_only",
+        "value_in_source": "44.95-45.44 wt% across 4 analyses",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "SiO2 % 45.22 (a) 44.95 45.44 (b) ... 45.17 (a)",
+        "note": "45.0 falls inside the documented range (no single analysis states exactly 45.0); also equals R2's Apollo-16 site-average column."
+       },
+       {
+        "field": "oxide:TiO2",
+        "stored": "0.54 wt%",
+        "status": "differs",
+        "value_in_source": "0.59-0.63 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "TiO2 0.59 (a) 0.6 0.61 (b) 0.63 (c ) ... 0.6 (d) ... 0.59 (a)",
+        "note": "Stored (0.54) is below every documented analysis of 60500/60501; matches R2's Apollo-16 site-average column exactly (0.54)."
+       },
+       {
+        "field": "oxide:Al2O3",
+        "stored": "27.3 wt%",
+        "status": "range_only",
+        "value_in_source": "25.5-27.4 wt% across 8 analyses",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "Al2O3 26.84 (a) 26.45 25.54 (b) 25.5 (c ) 26.6 26.4 (d) 26.71 (a) 27.4 (d)",
+        "note": "27.3 is inside the range, near Fruchter et al.'s 27.4; also equals R2's site-average column exactly."
+       },
+       {
+        "field": "oxide:Cr2O3",
+        "stored": "0.1 wt%",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Table 1 gives only elemental Cr (710-958 ppm), not Cr2O3 wt%; converting gives ≈0.10-0.14 wt%, consistent with the stored figure at its low end, but no document states Cr2O3 wt% directly. R2's Apollo-16 site-average column instead states Cr2O3=0.33, which does not match the stored 0.1 at all."
+       },
+       {
+        "field": "oxide:FeO",
+        "stored": "5.1 wt%",
+        "status": "differs",
+        "value_in_source": "5.15-6.05 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "FeO 5.51 (a) 5.38 5.46 (b) 5.45 (c ) 5.7 6.05 (d) 5.57 (a) 5.15 (d)",
+        "note": "Stored (5.1) is just below the lowest documented analysis (5.15, Fruchter et al. 1974); matches R2's site-average column exactly (5.1)."
+       },
+       {
+        "field": "oxide:MnO",
+        "stored": "0.07 wt%",
+        "status": "supported",
+        "value_in_source": "0.07 wt% (Rose et al. 1975, coarse fraction)",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "MnO 0.072 (a) 0.08 0.07 (b) 0.067 (c ) ... 0.076 (d) 0.08 (a)",
+        "note": "Genuine sample-specific match. This does NOT match R2's Apollo-16 site-average column, which states MnO=0.30 - a value none of 60500/60501's own analyses support."
+       },
+       {
+        "field": "oxide:MgO",
+        "stored": "5.7 wt%",
+        "status": "range_only",
+        "value_in_source": "5.52-6.58 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "MgO 5.52 (a) 6.05 6.43 (b) 6.58 (c ) 6.38 6.03 (d) 6.03 (a)",
+        "note": "5.7 is inside the range; also equals R2's site-average column exactly."
+       },
+       {
+        "field": "oxide:CaO",
+        "stored": "15.7 wt%",
+        "status": "range_only",
+        "value_in_source": "15.32-16.1 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "CaO 15.32 (a) 15.42 15.39 (b) 15.8 (c ) 15.5 16.1 (d) 15.61 (a)",
+        "note": "15.7 inside range; also equals R2's site-average column exactly."
+       },
+       {
+        "field": "oxide:Na2O",
+        "stored": "0.46 wt%",
+        "status": "range_only",
+        "value_in_source": "0.3-0.53 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "Na2O 0.4 (a) 0.44 0.45 (b) 0.44 (c ) 0.53 0.5 (d) 0.44 (a) 0.3 (d)",
+        "note": "0.46 inside range; also equals R2's site-average column exactly."
+       },
+       {
+        "field": "oxide:K2O",
+        "stored": "0.17 wt%",
+        "status": "differs",
+        "value_in_source": "0.1-0.13 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "K2O 0.114 (a) 0.13 0.12 (b) 0.1 (c ) 0.12 0.12 (e) 0.12 (a)",
+        "note": "Stored (0.17) is above every documented analysis of 60500/60501; matches R2's site-average column exactly (0.17)."
+       },
+       {
+        "field": "oxide:P2O5",
+        "stored": "0.11 wt%",
+        "status": "supported",
+        "value_in_source": "0.11 wt% (Morrison et al. 1973)",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "P2O5 0.137 (a) 0.12 0.11 (b) 0.064 (c ) ... 0.12 (a)",
+        "note": "Genuine sample-specific match; also coincides with R2's site-average column (0.11), so no conflict."
+       },
+       {
+        "field": "mineral:Plagioclase",
+        "stored": "60.0 (vol%? as displayed, unit not stated)",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "No document opened gives a Plagioclase/Pyroxene/Olivine/Ilmenite/Agglutinate/Glass modal breakdown for 60500/60501. The only compositional-mix estimate found is lithology-based (Kempa et al. 1980, R1): '60500 was ~55% anorthosite, ~30% impact melt and ~10% mare component.' A high stored Plagioclase value is qualitatively consistent with a majority-anorthosite soil, but R1 states anorthosite (a rock type), not a plagioclase mineral %, so it is not reported as a stand-in value."
+       },
+       {
+        "field": "mineral:Pyroxene",
+        "stored": "13.0 (vol%? as displayed, unit not stated)",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "See mineral:Plagioclase note - no mineral-modal source found for 60500/60501."
+       },
+       {
+        "field": "mineral:Olivine",
+        "stored": "3.0 (vol%? as displayed, unit not stated)",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "See mineral:Plagioclase note - no mineral-modal source found for 60500/60501."
+       },
+       {
+        "field": "mineral:Ilmenite",
+        "stored": "0.5 (vol%? as displayed, unit not stated)",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "See mineral:Plagioclase note - no mineral-modal source found for 60500/60501."
+       },
+       {
+        "field": "mineral:Agglutinates",
+        "stored": "17.0 (vol%? as displayed, unit not stated)",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "See mineral:Plagioclase note - no mineral-modal source found for 60500/60501."
+       },
+       {
+        "field": "mineral:Glass",
+        "stored": "4.0 (vol%? as displayed, unit not stated)",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "See mineral:Plagioclase note - no mineral-modal source found for 60500/60501."
+       },
+       {
+        "field": "mineral:Other",
+        "stored": "2.5 (vol%? as displayed, unit not stated)",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "See mineral:Plagioclase note - no mineral-modal source found for 60500/60501."
+       }
+      ]
+     },
+     {
+      "id": "71501",
+      "references": [
+       {
+        "temp_id": "R1",
+        "title": "Lunar Sample Compendium: 71500 and 71520 (Soil, 1066 and 48 g)",
+        "authors": "Meyer, C.",
+        "year": "2010",
+        "kind": "primary_report",
+        "local_path": "papers/lunar/LSC_71500.pdf",
+        "mention_quote": "71500 is the comprehensive soil sample at station 1, collected to accompany a rake sample (figure 1). It is one of the most studied Apollo 17 soil samples.",
+        "location": "Introduction, p.1"
+       },
+       {
+        "temp_id": "R2",
+        "title": "Lunar Sourcebook: A User's Guide to the Moon",
+        "authors": "Heiken, G.H., Vaniman, D.T. & French, B.M. (eds.)",
+        "year": "1991",
+        "kind": "compendium",
+        "local_path": "papers/LRS/LunarSourceBook.pdf",
+        "mention_quote": "17a Average composition of selected mare soils (70011, 70160, 70180, 71040, 71060, 71500, 72160, 75060, 75080, 79220, 79240) from the Apollo 17 site.",
+        "location": "Table 7.15, book p.346 (PDF p.369)"
+       }
+      ],
+      "values": [
+       {
+        "field": "mission",
+        "stored": "Apollo 17",
+        "status": "supported",
+        "value_in_source": "Apollo 17",
+        "reference_id": "R1",
+        "location": "Introduction",
+        "quote": "71500 is the comprehensive soil sample at station 1, collected to accompany a rake sample (figure 1). It is one of the most studied Apollo 17 soil samples."
+       },
+       {
+        "field": "landing_site",
+        "stored": "Taurus-Littrow Valley",
+        "status": "supported",
+        "value_in_source": "Taurus-Littrow Valley",
+        "reference_id": "R1",
+        "location": "Reference list (Wolfe et al. 1981 title)",
+        "quote": "Wolfe E.W., Bailey N.G., Lucchitta B.K., Muehlberger W.R., Scott D.H., Sutton R.L and Wilshire H.G. (1981) The geologic investigation of the Taurus-Littrow Valley: Apollo 17 Landing Site."
+       },
+       {
+        "field": "coordinates",
+        "stored": "lat 20.1908, lon 30.7717",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "R1 gives only a relative description ('Station 1 was located about 150 meters from Steno Crater'); no document opened states numeric coordinates for 71501/station 1 itself. Stored figure equals the standard Apollo 17 LM coordinate commonly cited for the site (~20.19°N, 30.77°E), not a station-1-specific fix."
+       },
+       {
+        "field": "type",
+        "stored": "Mare/Highland boundary (High-Ti Basalt with Highland component)",
+        "status": "differs",
+        "value_in_source": "similar to other mare soils at Apollo 17; composed mostly of basalt fragments",
+        "reference_id": "R1",
+        "location": "Chemistry / Petrography sections",
+        "quote": "Figures 3 and 6 show that 71501 is similar to other mare soils at Apollo 17. ... The mineral mode shows that this soil is composed mostly of basalt fragments and composites or minerals derived from them.",
+        "note": "R1 characterizes 71501 as essentially a MARE soil, not a mare/highland 'boundary' mix; no highland-component language is used for this sample. 'High-Ti' is well supported by the sample's own TiO2 (8.4-9.52 wt%, Table 1) - but the stored oxide:TiO2 value itself (4.2 wt%) contradicts that same label (see oxide:TiO2 below)."
+       },
+       {
+        "field": "sample_description",
+        "stored": "Bulk regolith soil from station 1A near Steno Crater, mare-highland mixed regolith",
+        "status": "differs",
+        "value_in_source": "comprehensive soil sample at station 1 ... about 150 meters from Steno Crater",
+        "reference_id": "R1",
+        "location": "Introduction",
+        "quote": "71500 is the comprehensive soil sample at station 1, collected to accompany a rake sample ... Station 1 was located about 150 meters from Steno Crater",
+        "note": "R1 states 'station 1', not 'station 1A' - Apollo 17's traverse stations were 1, 2, 2A, 3, 4, 5, 6, 6A, 7, 8, 9, 9A; there was no 'station 1A'. 'Mare-highland mixed' is not how R1 describes this soil (it calls it similar to other Apollo 17 MARE soils, composed mostly of basalt fragments)."
+       },
+       {
+        "field": "oxide:SiO2",
+        "stored": "43.2 wt%",
+        "status": "differs",
+        "value_in_source": "39.82 wt% (LSPET 1973, the only bulk-soil analysis reporting SiO2)",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "SiO2 % 39.82 (b)",
+        "note": "Stored 43.2 is far from the sample's only documented SiO2 analysis; it matches R2's Apollo-17 site-average column exactly (43.2)."
+       },
+       {
+        "field": "oxide:TiO2",
+        "stored": "4.2 wt%",
+        "status": "differs",
+        "value_in_source": "8.4-9.52 wt% (LSPET 1973=9.52; Laul et al. 1974=8.5; Brunfelt et al. 1974=8.4)",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "TiO2 9.52 (b) 8.5 (a) 8.4 (a)",
+        "note": "71501 is a genuinely HIGH-Ti soil per every one of its own analyses (8.4-9.52 wt%) - consistent with the stored 'type' label 'High-Ti Basalt.' Yet the stored oxide value (4.2) is less than half that, and instead matches R2's Apollo-17 site-average column exactly (4.2), which is diluted by lower-Ti, highland-influenced soils from other Apollo 17 stations."
+       },
+       {
+        "field": "oxide:Al2O3",
+        "stored": "17.1 wt%",
+        "status": "differs",
+        "value_in_source": "11.13-11.9 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "Al2O3 11.13 (b) 11.3 (a) 11.9 (a)",
+        "note": "Stored (17.1) is far above every documented analysis of 71501 itself; matches R2's site-average column exactly (17.1)."
+       },
+       {
+        "field": "oxide:Cr2O3",
+        "stored": "0.33 wt%",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Table 1 gives only elemental Cr (2770-3256 ppm), not Cr2O3 wt%; converting gives ≈0.40-0.48 wt%, well above the stored figure. R2's Apollo-17 site-average column happens to state Cr2O3=0.33, an exact match to the stored figure, but that column is a site-wide average, not this sample's own chemistry, and no document states 0.33 as this sample's own Cr2O3."
+       },
+       {
+        "field": "oxide:FeO",
+        "stored": "12.2 wt%",
+        "status": "differs",
+        "value_in_source": "17.0-17.8 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "FeO 17.8 17.4 (a) 17.41 (b) 17.6 (a) 17 (a) 17.4 (a)",
+        "note": "71501 is genuinely FeO-rich (17-17.8 wt%) per every one of its own analyses; the stored figure (12.2) is far lower and instead matches R2's Apollo-17 site-average column exactly (12.2)."
+       },
+       {
+        "field": "oxide:MnO",
+        "stored": "0.17 wt%",
+        "status": "differs",
+        "value_in_source": "0.222-0.25 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "MnO 0.25 (b) 0.222 (a) 0.226 (a)",
+        "note": "Matches R2's site-average column exactly (0.17), not the sample's own analyses."
+       },
+       {
+        "field": "oxide:MgO",
+        "stored": "10.4 wt%",
+        "status": "differs",
+        "value_in_source": "8.95-9.51 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "MgO 9.51 (b) 9 (a) 8.95 (a)",
+        "note": "Matches R2's site-average column exactly (10.4)."
+       },
+       {
+        "field": "oxide:CaO",
+        "stored": "11.8 wt%",
+        "status": "range_only",
+        "value_in_source": "10.2-12.0 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "CaO 10.85 (b) 10.2 (a) 12 (a)",
+        "note": "11.8 falls inside this range; also equals R2's site-average column exactly."
+       },
+       {
+        "field": "oxide:Na2O",
+        "stored": "0.4 wt%",
+        "status": "differs",
+        "value_in_source": "0.32-0.396 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "Na2O 0.38 0.38 (a) 0.32 (b) 0.35 0.36 (a) 0.38 (a) 0.396 (a)",
+        "note": "Stored (0.4) is just above every documented analysis; matches R2's site-average column exactly (0.40)."
+       },
+       {
+        "field": "oxide:K2O",
+        "stored": "0.13 wt%",
+        "status": "differs",
+        "value_in_source": "0.07-0.085 wt%",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "K2O 0.07 (b) 0.074 (c ) 0.076 (a) 0.072 (c ) 0.07 (d) 0.085 (a)",
+        "note": "Stored (0.13) is far above every documented analysis of 71501; matches R2's site-average column exactly (0.13)."
+       },
+       {
+        "field": "oxide:P2O5",
+        "stored": "0.12 wt%",
+        "status": "differs",
+        "value_in_source": "0.06 wt% (LSPET 1973, only documented analysis)",
+        "reference_id": "R1",
+        "location": "Table 1",
+        "quote": "P2O5 0.06 (b)",
+        "note": "Stored figure is double the sample's only documented analysis; matches R2's site-average column exactly (0.12)."
+       },
+       {
+        "field": "mineral:Plagioclase",
+        "stored": "32.0 (vol%? as displayed, unit not stated)",
+        "status": "differs",
+        "value_in_source": "5 (vol%, 90-150 µm fraction; Heiken & McKay 1974)",
+        "reference_id": "R1",
+        "location": "'Modal content of soil 71501 (90-150 micron). From Heiken and McKay 1974.' table",
+        "quote": "Plagioclase 5"
+       },
+       {
+        "field": "mineral:Pyroxene",
+        "stored": "31.0 (vol%? as displayed, unit not stated)",
+        "status": "differs",
+        "value_in_source": "17.9 (vol%, 90-150 µm; Heiken & McKay 1974)",
+        "reference_id": "R1",
+        "location": "same table",
+        "quote": "Pyroxene 17.9"
+       },
+       {
+        "field": "mineral:Olivine",
+        "stored": "5.0 (vol%? as displayed, unit not stated)",
+        "status": "differs",
+        "value_in_source": "blank/not reported (≈0%) in the 90-150 µm table",
+        "reference_id": "R1",
+        "location": "same table",
+        "quote": "Olivine [row present, value blank]",
+        "note": "The table has an explicit Olivine category left blank for 71501, i.e. negligible/not observed, versus the stored 5.0."
+       },
+       {
+        "field": "mineral:Ilmenite",
+        "stored": "7.0 (vol%? as displayed, unit not stated)",
+        "status": "differs",
+        "value_in_source": "8 (vol%, 90-150 µm; Heiken & McKay 1974)",
+        "reference_id": "R1",
+        "location": "same table",
+        "quote": "Ilmenite 8",
+        "note": "Closest of the seven mineral fields to the stored figure, but not an exact match."
+       },
+       {
+        "field": "mineral:Agglutinates",
+        "stored": "16.0 (vol%? as displayed, unit not stated)",
+        "status": "differs",
+        "value_in_source": "35 (vol%, 90-150 µm; Heiken & McKay 1974)",
+        "reference_id": "R1",
+        "location": "same table",
+        "quote": "Agglutinates 35"
+       },
+       {
+        "field": "mineral:Glass",
+        "stored": "6.0 (vol%? as displayed, unit not stated)",
+        "status": "differs",
+        "value_in_source": "2.2 ('Glass other') and 1.3 ('Orange glass') - two separate glass categories, 90-150 µm; Heiken & McKay 1974",
+        "reference_id": "R1",
+        "location": "same table",
+        "quote": "Orange glass 1.3 / Glass other 2.2",
+        "note": "The table splits glass into 'Orange glass' and 'Glass other'; neither individually nor combined (~3.5) matches the stored 6.0."
+       },
+       {
+        "field": "mineral:Other",
+        "stored": "3.0 (vol%? as displayed, unit not stated)",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Heiken & McKay 1974's table has no 'Other' line; its residual categories are Basalt (24.6) and Breccia (5.2) - lithic components, not a single comparable 'Other' figure, so no stand-in value is reported."
+       }
+      ]
+     }
+    ],
+    "notes": "Scope: only the three requested entities (15271, 60501, 71501), all \"kind\":\"sample\" per moon-entities-2026-09-25.json. No \"kind\":\"site\" fields (bulk_density/friction_angle/cohesion/bearing_capacity) apply to samples, so none were checked.\n\nPrimary sources opened and used: the three Lunar Sample Compendium entries already on disk (LSC_15271.pdf; LSC_60500.pdf, which is the only compendium entry for 60501 - there is no separate 60501 entry; LSC_71500.pdf, likewise the only entry covering 71501), and the Lunar Sourcebook (LunarSourceBook.pdf), specifically Table 7.15 (site-average soil chemistry, book p.346), Table 7.16 (per-sample \"reference suite\" soil chemistry, book p.347-348) and Table 7.2 (Simon et al. 1981 modal mineralogy for representative soils, book p.291).\n\nCentral finding, repeated across all three samples and essentially all 11 oxide fields: the stored oxide:* values almost exactly reproduce Lunar Sourcebook Table 7.15's SITE-WIDE AVERAGE column (\"15\" for Apollo 15, \"16\" for Apollo 16, \"17\" for Apollo 17) - not any analysis of the specific numbered sample. This was checked oxide-by-oxide against each sample's own primary chemical-analysis table in its Lunar Sample Compendium entry (Table 1/Table 1a, which compiles the actual published analyses of that exact sample, e.g. LSPET 1973, Laul et al. 1974, Korotev, Duncan et al., etc.). For 15271 and especially 71501, the sample's own documented chemistry differs substantially from the stored figures (most starkly: 71501 is genuinely a high-FeO, high-TiO2 mare soil per every one of its own analyses - FeO 17.0-17.8 wt%, TiO2 8.4-9.52 wt% - yet the stored entry shows FeO 12.2 wt% and TiO2 4.2 wt%, which are the Apollo-17 SITE average, diluted by other, more highland-influenced stations). For 60501, most oxides coincide between the sample's own range and the site average (Apollo 16 is compositionally more homogeneous), but MnO and Cr2O3 clearly do not: the stored MnO (0.07) matches the sample's OWN analysis (Rose et al. 1975) while contradicting the mismatched site-average column (0.30); Cr2O3 (stored 0.1) matches neither cleanly and is only reproducible via an unstated ppm-to-oxide conversion.\n\nPer the task's test 2 (\"the reference is really about that site or sample\"), values that only match the Sourcebook's site-average column are reported as \"differs\" against the sample's own compendium data, since a site-wide average is not really about the individual numbered sample even when the digits coincide; the sample's own documented value/range is given as value_in_source. Two additional caveats apply throughout: (1) several oxides (Cr2O3 in all three entities) are only stated by the Lunar Sample Compendium as elemental ppm, never as a Cr2O3 wt% figure - converting is a computation I chose not to present as if \"stated,\" so these are marked not_found even where the converted figure is numerically close to the stored one; (2) where a sample's own analyses form a genuine range that brackets the stored figure without any single analysis stating it, status is range_only per instructions (never averaging/picking).\n\nMineral (modal) fields: no single document was found that reports the stored 7-category breakdown (Plagioclase/Pyroxene/Olivine/Ilmenite/Agglutinates/Glass/Other) matching the stored numbers for any of the three samples. Real, sample-specific modal analyses were located and used as the comparison for 15271 (Basu 1981, quoted inside LSC_15271.pdf) and 71501 (Heiken & McKay 1974, quoted inside LSC_71500.pdf); both differ substantially from the stored figures. For 60501, no per-mineral modal table exists in any document opened; only a lithology-based mix (Kempa et al. 1980: ~55% anorthosite/~30% impact melt/~10% mare) was found, which is not directly comparable to a mineral-percentage table, so all seven mineral fields are not_found for that entity.\n\nDocuments checked but NOT used as a match (kept for the record): Gasteiner et al. 2026 (\"An Open Database of Lunar Regolith and Simulants Properties\") does not mention samples 15271, 60501, 60500, 71501 or 71500 anywhere in its text, and its physical-properties focus (friction angle, bearing capacity, drawn from the Apollo 15/16/17 Preliminary Science Reports) does not apply to these \"sample\" entities' fields at all - it is a compilation of SITE-level geotechnical data, not sample composition. I could not locate its underlying open dataset/GitHub table within the time available to double-check indirectly-sourced values, but the paper's own text gave no lead to these specific sample IDs. Riegsecker, Tieman & Basu (1998), \"Average Mineral Composition of Apollo Landing Site Soils\" (fetched from https://www.lpi.usra.edu/meetings/moon98/pdf/6040.pdf and saved to the scratchpad, not to Sources/, since it was not used as a citation) gives a 4-category (Plagioclase/Pyroxene/Olivine/Opaque, normalized to just those four) SITE-average mineralogy that also does not match the stored 7-category, per-sample-numbered figures.\n\nCoordinates: for all three samples, no opened document (compendium or catalogue) states numeric collection coordinates for the specific numbered sample; each compendium instead gives only a qualitative station description (e.g., \"station 6, on the lower slope of the Apennine Front\" for 15271; \"about 100 m from the LM\" for 60501; \"about 150 meters from Steno Crater\" [station 1] for 71501). The stored lat/lon in every case equals the standard, commonly-cited Apollo LM/landing-site coordinate for that mission, not a station-specific fix - reasonably close for 60501 (~100 m from LM) but a real mismatch in kind (site coordinate presented as if it were the sample's own collection point) for 15271 and 71501, whose stations are materially farther from the LM. All three are reported as not_found rather than differs, since I could not locate any source (primary or catalogue) that states a numeric value for this field at all.\n\nLocal saved-document paths (all relative to /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/): papers/lunar/LSC_15271.pdf, papers/lunar/LSC_60500.pdf, papers/lunar/LSC_71500.pdf, papers/LRS/LunarSourceBook.pdf, papers/LRS/Gasteiner et al. - 2026 - An Open Database of Lunar Regolith and Simulants Properties.pdf (checked, not cited)."
+   },
+   "check": {
+    "entities": [
+     {
+      "id": "15271",
+      "reference_checks": [
+       {
+        "temp_id": "R1",
+        "verdict": "CONFIRMED",
+        "problems": []
+       },
+       {
+        "temp_id": "R2",
+        "verdict": "REFUTED",
+        "problems": [
+         "The mention_quote (Table 7.15 caption) does not name 15271. Table 7.15 lists only 15270 (the parent sample) inside the 15b Apennine Front average, and the stored oxides match column '15' (all Apollo 15 soils), not 15b.",
+         "The Sourcebook does name 15271 elsewhere, so the reference itself is usable with a different quote. Table 7.16 (book p.347, PDF p.370) has '15271,27 Bulk 46.0 1.5 16.4 12.8 10.8 11.7 0.49 0.22 0.162 0.350 100.4', and Table 7.2 (book p.291, PDF p.314) has a Simon et al. 1981 column for 15271."
+        ]
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "mission",
+        "verdict": "CONFIRMED",
+        "note": "The Figure 1 caption is on p.1 of LSC_15271.pdf as quoted."
+       },
+       {
+        "field": "landing_site",
+        "verdict": "CONFIRMED",
+        "note": "The Apennine Front is stated in the Introduction. 'Hadley-Apennine region' appears only in reference-list titles (Kothari & Goel 1972; Powell et al. 1973), which is weak but real. 'Hadley Rille' is not stated for this sample, as the reader noted."
+       },
+       {
+        "field": "coordinates",
+        "verdict": "CONFIRMED",
+        "note": "not_found holds. No opened document (LSC, A15 PSR, LROC 2016 coordinate list, ALSJ coordinate list) gives coordinates for station 6 or 15271. The stored 26.1322/3.6339 is an LM position, and it matches neither the LROC 2016 LM (26.13239, 3.63330) nor the ALSJ LM (26.13224, 3.63400) exactly."
+       },
+       {
+        "field": "type",
+        "verdict": "CONFIRMED",
+        "note": "The quotes are in R1. 'Low-Ti Basalt' is not stated, and Walker & Papike's 28-34% mare basalt against ~50% KREEP+LKFM argues against a basalt-dominated label. The 'Mare/Highland boundary' part is supported by another document (see missed: Patzwald et al. 2025)."
+       },
+       {
+        "field": "sample_description",
+        "verdict": "CONFIRMED",
+        "note": "R1 says station 6, on the lower slope of the Apennine Front. The A15 PSR (SP-289, p.5-88, PDF p.157) agrees: 'Samples 15270 to 15274: These soil samples were collected from the compressed wheel track behind the Rover ... at station 6.' 'Station 2 near Hadley Rille' is wrong."
+       },
+       {
+        "field": "oxide:SiO2",
+        "verdict": "CONFIRMED",
+        "note": "Table 1a values are 46.7, 46.62, 46, 46.73. A15 PSR Table 6-IV gives 46.70 (the same LSPET analysis), and Sourcebook Table 7.16 gives bulk 46.0. None rounds to 46.8, which equals Table 7.15 column 15."
+       },
+       {
+        "field": "oxide:TiO2",
+        "verdict": "REFUTED",
+        "problems": [
+         "Maxwell et al. 1972 gives 1.42 wt%, which rounds to the stored 1.4, so the stored value is not outside the sample's range within the source's rounding."
+        ],
+        "note": "The status should be range_only (1.42-1.5), or at most supported-at-rounding by Maxwell 1972, not differs. The value almost certainly came from Table 7.15 column 15 (1.4). Keeping it alone would mix analyses in a composition whose other oxides come from the site average. No single correct value to give."
+       },
+       {
+        "field": "oxide:Al2O3",
+        "verdict": "CONFIRMED",
+        "note": "Table 1a range is 16.19-16.6; Table 7.16 bulk is 16.4; A15 PSR is 16.51. Stored 14.6 = Table 7.15 column 15."
+       },
+       {
+        "field": "oxide:Cr2O3",
+        "verdict": "REFUTED",
+        "correct_value": "0.38 wt% (LSPET XRF, A15 PSR Table 6-IV); Papike et al. 1982 bulk gives 0.35 wt% (Sourcebook Table 7.16). Use whichever analysis is chosen for the whole oxide table.",
+        "correct_reference": "Sources/papers/lunar/A15_PSR_SP289_full.pdf (Table 6-IV, p.6-17, PDF p.199); alt: R2 Table 7.16 (book p.347)",
+        "problems": [
+         "not_found is wrong: two documents state Cr2O3 wt% for 15271.",
+         "A15 PSR Table 6-IV, column '15271 (6)', gives Cr2O3 .38.",
+         "Sourcebook Table 7.16 '15271,27 Bulk' gives Cr2O3 0.350. Sibille et al. Table 7 repeats 0.35 for 15271."
+        ],
+        "note": "Stored 0.37 matches neither bulk analysis. It equals Table 7.15 column 15c (green-glass soils) and the 15271 >90 µm size fraction (0.370), neither of which is the bulk sample. Status should be differs."
+       },
+       {
+        "field": "oxide:FeO",
+        "verdict": "CONFIRMED",
+        "note": "Tables 1a/1b range is 11.9-12.8; A15 PSR gives 12.15. Stored 14.3 = column 15."
+       },
+       {
+        "field": "oxide:MnO",
+        "verdict": "CONFIRMED",
+        "note": "Range 0.155-0.17 confirmed; stored 0.19 = column 15."
+       },
+       {
+        "field": "oxide:MgO",
+        "verdict": "CONFIRMED",
+        "note": "Range 10.48-10.8 confirmed; stored 11.5 = column 15."
+       },
+       {
+        "field": "oxide:CaO",
+        "verdict": "CONFIRMED",
+        "note": "range_only is correct. The full range is 10.4-11.7, because Table 1b (Ryder 1987) adds 10.4, which the reader missed. No bulk analysis states 10.8; only the >90 µm fraction in Table 7.16 does."
+       },
+       {
+        "field": "oxide:Na2O",
+        "verdict": "CONFIRMED",
+        "note": "Table 1a 0.41-0.53; Table 1b 0.46 and 0.449. Stored 0.39 is below all of them and equals column 15."
+       },
+       {
+        "field": "oxide:K2O",
+        "verdict": "CONFIRMED",
+        "note": "LSPET 0.21 (b) is confirmed, and so is A15 PSR .21. The second 0.21 (e, radiation counting) sits in the Rancitelli et al. 1972 column, not Baedecker et al. 1973. This misattribution does not affect support."
+       },
+       {
+        "field": "oxide:P2O5",
+        "verdict": "CONFIRMED",
+        "note": "0.21-0.222 confirmed; stored 0.18 = column 15 (printed 'P2O3')."
+       },
+       {
+        "field": "mineral:Plagioclase",
+        "verdict": "CONFIRMED",
+        "note": "The Basu 1981 table on p.1 of R1 says 'Plagioclase 7'. Simon et al. 1981 (R1 and Sourcebook Table 7.2) gives 7.4 vol% (1000-90 µm)."
+       },
+       {
+        "field": "mineral:Pyroxene",
+        "verdict": "CONFIRMED",
+        "note": "Basu gives 11.4. Simon gives Pyroxene+Olivine 13.5 combined."
+       },
+       {
+        "field": "mineral:Olivine",
+        "verdict": "CONFIRMED",
+        "note": "Basu gives 1.8."
+       },
+       {
+        "field": "mineral:Ilmenite",
+        "verdict": "CONFIRMED",
+        "note": "Basu gives 0.2. Simon gives Opaque 0.3."
+       },
+       {
+        "field": "mineral:Agglutinates",
+        "verdict": "CONFIRMED",
+        "note": "Basu gives 42.2. Simon gives 37.0."
+       },
+       {
+        "field": "mineral:Glass",
+        "verdict": "CONFIRMED",
+        "note": "Basu 'Glass other' is 14.1. Simon's glass fragments total 12.7, plus 5.6 devitrified. Neither is near 5.0."
+       },
+       {
+        "field": "mineral:Other",
+        "verdict": "CONFIRMED",
+        "note": "not_found stands. Simon et al. 1981 does list 'Others 0.2' under Miscellaneous (R1; Sourcebook Table 7.2), but that is a narrow catch-all, not the residual implied by the stored 7-category scheme. It is also a different analysis from Basu's, so it is not a comparable value."
+       }
+      ],
+      "missed": [
+       {
+        "field": "type",
+        "value": "intermediate region between mare and highland (supports the 'Mare/Highland boundary' part only)",
+        "document": "Sources/papers/LRS/1-s2.0-S0094576525001109-main.pdf (Patzwald et al. 2025, Acta Astronautica 231:200-222)",
+        "location": "PDF p.3 (journal p.202), Fig. 1 discussion",
+        "quote": "Samples 10084 (Apollo 11) and 12033 (Apollo 12) originate from mare regions, 15271 (Apollo 15) and 76501 (Apollo 17) from intermediate regions between mare and highland"
+       },
+       {
+        "field": "oxide:Cr2O3",
+        "value": "0.38 wt%",
+        "document": "Sources/papers/lunar/A15_PSR_SP289_full.pdf",
+        "location": "Table 6-IV, p.6-17 (PDF p.199), column 15271 (station 6)",
+        "quote": "TABLE 6-IV.-X-Ray Fluorescence Analysis of Soil and Breccia Samples ... 15271 (6) ... CR2O3 .38"
+       },
+       {
+        "field": "oxide:Cr2O3",
+        "value": "0.350 wt% (bulk, Papike et al. 1982)",
+        "document": "Sources/papers/LRS/LunarSourceBook.pdf",
+        "location": "Table 7.16, book p.347 (PDF p.370)",
+        "quote": "15271,27    Bulk     46.0 1.5 16.4 12.8 10.8 11.7 0.49 0.22  0.162 0.350 100.4"
+       }
+      ]
+     },
+     {
+      "id": "60501",
+      "reference_checks": [
+       {
+        "temp_id": "R1",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "The mention_quote names the parent 60500, not 60501. The document does name 60501 directly: 'Soil sample 60501 has been well analyzed by numerous investigators (table 1).' Its processing diagram also shows 60500 -> 60501 (434 g)."
+        ]
+       },
+       {
+        "temp_id": "R2",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "The quote names 60500 only as one of ten soils in the 16a average. The stored oxides match column '16' (all Apollo 16 soils), not 16a, so R2 does not give a sample-specific value."
+        ]
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "mission",
+        "verdict": "CONFIRMED",
+        "note": "The quote is present but indirect. A better quote in R1 is 'Figure 3: Normalized rare-earth-element diagram for Apollo 16 soils with 60501 shown.'"
+       },
+       {
+        "field": "landing_site",
+        "verdict": "CONFIRMED",
+        "note": "R2's 16a footnote ('Cayley Plain soil (... 60500 ...) from the Apollo 16 site') and R1's Fruchter et al. 1974 title ('Decartes region, Apollo 16') are both present."
+       },
+       {
+        "field": "coordinates",
+        "verdict": "CONFIRMED",
+        "note": "not_found holds for the sample. Note, however, that Sources/papers/lunar/LROC_SpacecraftCoordinates_2016Update.txt states 'Apollo 16 LM -8.9734 15.5011', exactly the stored value. That is the LM, not 60501 (about 100 m away), so it only fits if the field is meant as landing-site coordinates."
+       },
+       {
+        "field": "type",
+        "verdict": "CONFIRMED",
+        "note": "The Kempa et al. 1980 quote is in the Petrography section of R1."
+       },
+       {
+        "field": "sample_description",
+        "verdict": "CONFIRMED",
+        "note": "'About 100 m from the LM' is in R1. The 'ALSEP area' part is also documented, in the A16 PSR (see missed). 'Feldspathic highland' is supported by Kempa et al."
+       },
+       {
+        "field": "oxide:SiO2",
+        "verdict": "CONFIRMED",
+        "note": "Table 1 values 45.22, 44.95, 45.44, 45.17 confirmed. Rose et al. 1975 fines (44.95) rounds to 45.0, but the stored value matches Table 7.15 columns 16/16a (45.0). range_only is acceptable."
+       },
+       {
+        "field": "oxide:TiO2",
+        "verdict": "CONFIRMED",
+        "note": "0.59-0.63 confirmed; stored 0.54 = column 16."
+       },
+       {
+        "field": "oxide:Al2O3",
+        "verdict": "CONFIRMED",
+        "note": "25.5-27.4 across 8 values confirmed; no value is 27.3."
+       },
+       {
+        "field": "oxide:Cr2O3",
+        "verdict": "CONFIRMED",
+        "note": "No document states Cr2O3 wt% for 60501. LSC Table 1 gives Cr ppm only (710-958). A16 PSR Table 7-IV (fetched) also gives Cr ppm only, and labels its LM rake soil '60600,2'. Sourcebook column 16 is 0.33."
+       },
+       {
+        "field": "oxide:FeO",
+        "verdict": "CONFIRMED",
+        "note": "5.15-6.05 confirmed. Fruchter's 5.15 does not round to 5.1."
+       },
+       {
+        "field": "oxide:MnO",
+        "verdict": "CONFIRMED",
+        "note": "Rose 1975 coarse gives 0.07; Duncan 1973 (0.072) and Morrison 1973 (0.067) also round to 0.07. Caveat: this oxide is not from the same source as the other nine stored oxides (site-average column 16), so the stored table as a whole is not one analysis."
+       },
+       {
+        "field": "oxide:MgO",
+        "verdict": "CONFIRMED",
+        "note": "5.52-6.58 confirmed."
+       },
+       {
+        "field": "oxide:CaO",
+        "verdict": "CONFIRMED",
+        "note": "15.32-16.1 confirmed."
+       },
+       {
+        "field": "oxide:Na2O",
+        "verdict": "CONFIRMED",
+        "note": "0.3-0.53 confirmed."
+       },
+       {
+        "field": "oxide:K2O",
+        "verdict": "CONFIRMED",
+        "note": "0.1-0.13 confirmed; stored 0.17 = column 16."
+       },
+       {
+        "field": "oxide:P2O5",
+        "verdict": "REFUTED",
+        "problems": [
+         "Misattributed. In Table 1 Morrison et al. 1973 (INAA) gives 0.064. The 0.11 is in the Rose et al. 1975 'coarse' sub-column; Rose 'fines' gives 0.12.",
+         "The analyses give 0.064, 0.11, 0.12, 0.12 and 0.137. The only 0.11 is a 'coarse' split, while bulk/fines analyses give 0.12-0.137 and 0.064. By the reader's own convention the status fits range_only better than supported."
+        ],
+        "note": "The stored 0.11 equals Table 7.15 column 16 (0.11), the same column as most other stored oxides. No correct value to give."
+       },
+       {
+        "field": "mineral:Plagioclase",
+        "verdict": "CONFIRMED",
+        "note": "No modal data for 60501 found. Sourcebook Table 7.2 has 64501 and 67461 but not 60501, and A16 PSR Table 7-VI (nine soils) excludes 60501."
+       },
+       {
+        "field": "mineral:Pyroxene",
+        "verdict": "CONFIRMED",
+        "note": "Same as Plagioclase."
+       },
+       {
+        "field": "mineral:Olivine",
+        "verdict": "CONFIRMED",
+        "note": "Same as Plagioclase."
+       },
+       {
+        "field": "mineral:Ilmenite",
+        "verdict": "CONFIRMED",
+        "note": "Same as Plagioclase."
+       },
+       {
+        "field": "mineral:Agglutinates",
+        "verdict": "CONFIRMED",
+        "note": "Same as Plagioclase."
+       },
+       {
+        "field": "mineral:Glass",
+        "verdict": "CONFIRMED",
+        "note": "Same as Plagioclase. Ridley et al. 1973 classifies glass particle compositions; it is not a mode."
+       },
+       {
+        "field": "mineral:Other",
+        "verdict": "CONFIRMED",
+        "note": "Same as Plagioclase."
+       }
+      ],
+      "missed": [
+       {
+        "field": "sample_description",
+        "value": "LM/ALSEP area (drive tube 60010/60009, next to which 60500 was collected, listed under 'ALSEP area'; the traverse map shows '60500 (rake soil)' in the LM-ALSEP area)",
+        "document": "Apollo 16 Preliminary Science Report NASA SP-315 (not in Sources; fetched from https://an.rsl.wustl.edu/apollo/data/A16/resources/preliminary_science_report.pdf, saved at /private/tmp/claude-501/-Volumes-Extreme-SSD-Spring---Forest-on-the-moon/c419eb20-9d70-4d28-bb19-397156c1b594/scratchpad/chk/A16PSR.pdf)",
+        "location": "Drive-tube table PDF p.193; LM/ALSEP area map PDF p.93",
+        "quote": "ALSEP area           a60010        635.3 ... 60009        759.8"
+       }
+      ]
+     },
+     {
+      "id": "71501",
+      "reference_checks": [
+       {
+        "temp_id": "R1",
+        "verdict": "CONFIRMED",
+        "problems": []
+       },
+       {
+        "temp_id": "R2",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "The quote names 71500 only as one of eleven soils in the 17a mare-soil average. The stored oxides match column '17' (all Apollo 17 soils), not 17a, so R2 does not give a sample-specific value."
+        ]
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "mission",
+        "verdict": "CONFIRMED",
+        "note": "The quote is on p.1 of LSC_71500.pdf."
+       },
+       {
+        "field": "landing_site",
+        "verdict": "CONFIRMED",
+        "note": "The Wolfe et al. 1981 title is in the reference list. The A17 PSR also covers the Taurus-Littrow site."
+       },
+       {
+        "field": "coordinates",
+        "verdict": "CONFIRMED",
+        "note": "not_found holds. Stored 20.1908/30.7717 matches neither LROC 2016 (LM 20.1911, 30.7723) nor ALSJ. No document gives coordinates for station 1/1A."
+       },
+       {
+        "field": "type",
+        "verdict": "CONFIRMED",
+        "note": "Both quotes are in R1. The A17 PSR also describes station 1 as on the mare plain (subfloor basalt)."
+       },
+       {
+        "field": "sample_description",
+        "verdict": "REFUTED",
+        "problems": [
+         "The claim that there was no 'station 1A' is false. The A17 PSR (SP-330, p.2-4, PDF p.25) says the first traverse station was relocated to 'an area near the rim of Steno Crater. At station 1A, the crew collected geological samples, including a rake sample'. 71500 is the comprehensive soil taken to accompany that rake sample (R1).",
+         "So 'station 1A near Steno Crater' is supported. Only 'mare-highland mixed regolith' is unsupported: R1 says 71501 'is similar to other mare soils at Apollo 17'."
+        ],
+        "note": "Status differs is justified only by the 'mare-highland mixed' wording. The station should not be changed."
+       },
+       {
+        "field": "oxide:SiO2",
+        "verdict": "REFUTED",
+        "problems": [
+         "LSPET 1973 is not the only SiO2 analysis. LSC_71500 Table 2 gives Miller et al. 1974 SiO2 40.2 wt%. A17 PSR Table 7-VI gives 71501,3 SiO2 39.82 (the LSPET analysis itself)."
+        ],
+        "note": "Status differs is still correct (39.82-40.2 against stored 43.2 = Table 7.15 column 17). Only value_in_source is wrong."
+       },
+       {
+        "field": "oxide:TiO2",
+        "verdict": "CONFIRMED",
+        "note": "9.52, 8.5, 8.4 confirmed (Miller gives 9). Stored 4.2 = column 17."
+       },
+       {
+        "field": "oxide:Al2O3",
+        "verdict": "CONFIRMED",
+        "note": "Differs is correct. The full range is 10.96-11.9 including Miller 1974 in Table 2."
+       },
+       {
+        "field": "oxide:Cr2O3",
+        "verdict": "REFUTED",
+        "correct_value": "0.46 wt%",
+        "correct_reference": "Sources/papers/lunar/A17_PSR_SP330_full.pdf (Table 7-VI, p.7-22, PDF p.208)",
+        "problems": [
+         "not_found is wrong. A17 PSR Table 7-VI (XRF by Rhodes, Rodgers & Bansal) gives Cr2O3 .46 wt% for 71501,3. This is the same LSPET analysis as the LSC Table 1 'LSPET73' column (SiO2 39.82, TiO2 9.52)."
+        ],
+        "note": "Status should be differs. Stored 0.33 = Table 7.15 column 17."
+       },
+       {
+        "field": "oxide:FeO",
+        "verdict": "CONFIRMED",
+        "note": "Differs is correct. Table 2 extends the range to 17.0-18.5."
+       },
+       {
+        "field": "oxide:MnO",
+        "verdict": "CONFIRMED",
+        "note": "Differs is correct. Table 2 extends the range to 0.222-0.26."
+       },
+       {
+        "field": "oxide:MgO",
+        "verdict": "CONFIRMED",
+        "note": "8.95-9.51 confirmed (Miller gives 9.3)."
+       },
+       {
+        "field": "oxide:CaO",
+        "verdict": "CONFIRMED",
+        "note": "10.2-12 confirmed; no analysis states 11.8."
+       },
+       {
+        "field": "oxide:Na2O",
+        "verdict": "REFUTED",
+        "problems": [
+         "Korotev 1976 (Table 1) gives 0.396 and Blanchard 1975 (Table 2) gives 0.395; both round to the stored 0.4. Miller 1974 (Table 2) gives 0.47, above the stored value. So the stored value is not 'above every documented analysis'."
+        ],
+        "note": "The status should be range_only (0.32-0.47), or supported at rounding, not differs. The stored 0.4 still equals Table 7.15 column 17 (0.40). Removing or keeping it is a one-analysis decision, not a correction."
+       },
+       {
+        "field": "oxide:K2O",
+        "verdict": "CONFIRMED",
+        "note": "0.07-0.085 confirmed (Chou gives 0.08)."
+       },
+       {
+        "field": "oxide:P2O5",
+        "verdict": "CONFIRMED",
+        "note": "LSPET 0.06 is the only value, and A17 PSR repeats .06."
+       },
+       {
+        "field": "mineral:Plagioclase",
+        "verdict": "CONFIRMED",
+        "note": "The Heiken & McKay 1974 table in R1 gives 5 (90-150 µm)."
+       },
+       {
+        "field": "mineral:Pyroxene",
+        "verdict": "CONFIRMED",
+        "note": "17.9 confirmed."
+       },
+       {
+        "field": "mineral:Olivine",
+        "verdict": "REFUTED",
+        "problems": [
+         "A blank cell is not a stated value, so status should be not_found, not differs. Correcting to 0 would state something the source does not."
+        ],
+        "note": "A17 PSR Table 7-VI gives a CIPW normative Olivine of 5.01 for 71501,3. It is a calculated norm, not a mode, and the other norm minerals (ilmenite 18.08, anorthite 28.73) do not match the stored set, so it does not support the stored 5.0."
+       },
+       {
+        "field": "mineral:Ilmenite",
+        "verdict": "CONFIRMED",
+        "note": "8 confirmed."
+       },
+       {
+        "field": "mineral:Agglutinates",
+        "verdict": "CONFIRMED",
+        "note": "35 confirmed."
+       },
+       {
+        "field": "mineral:Glass",
+        "verdict": "CONFIRMED",
+        "note": "Orange glass 1.3 and Glass other 2.2 confirmed."
+       },
+       {
+        "field": "mineral:Other",
+        "verdict": "CONFIRMED",
+        "note": "The table has no Other line."
+       }
+      ],
+      "missed": [
+       {
+        "field": "sample_description",
+        "value": "station 1A near the rim of Steno Crater (rake-sample station)",
+        "document": "Sources/papers/lunar/A17_PSR_SP330_full.pdf",
+        "location": "p.2-4 (PDF p.25)",
+        "quote": "relocating the first traverse station to an area near the rim of Steno Crater. At station 1A, the crew collected geological samples, including a rake sample"
+       },
+       {
+        "field": "oxide:Cr2O3",
+        "value": "0.46 wt%",
+        "document": "Sources/papers/lunar/A17_PSR_SP330_full.pdf",
+        "location": "Table 7-VI, p.7-22 (PDF p.208), column 71501,3",
+        "quote": "TABLE 7-VI.-X-Ray Fluorescence Analyses of Apollo 17 Soils ... 71501,3 ... Cr2O3 .46"
+       },
+       {
+        "field": "oxide:SiO2",
+        "value": "40.2 wt% (Miller et al. 1974)",
+        "document": "Sources/papers/lunar/LSC_71500.pdf",
+        "location": "Table 2",
+        "quote": "SiO2 %               ave. 20       40.2"
+       }
+      ]
+     }
+    ],
+    "notes": "I re-opened LSC_15271/60500/71500, the Lunar Sourcebook (Tables 7.2, 7.15, 7.16, rendered as page images where the text was unclear), the A15 PSR (Table 6-IV, p.6-17) and the A17 PSR (Tables 7-III and 7-VI, p.2-4) in Sources, plus the LROC and ALSJ coordinate files and Sibille et al. Table 7. The A16 PSR is not in Sources; I fetched it from https://an.rsl.wustl.edu/apollo/data/A16/resources/preliminary_science_report.pdf and saved it to the scratchpad only (/private/tmp/claude-501/-Volumes-Extreme-SSD-Spring---Forest-on-the-moon/c419eb20-9d70-4d28-bb19-397156c1b594/scratchpad/chk/A16PSR.pdf). I also grepped all 295 source PDFs for the three sample numbers.\n\nThe reader's main finding holds. For 15271 and 71501 the stored oxides are exactly Lunar Sourcebook Table 7.15 columns '15' and '17' (averages of all Apollo 15 / Apollo 17 soils). The one exception is 15271 Cr2O3 0.37, which equals column 15c, not column 15 (0.36). For 60501, nine oxides equal column '16'; MnO 0.07 and Cr2O3 0.1 come from somewhere else. None of the three stored compositions is a single analysis.\n\nMain refutations:\n(1) Cr2O3 wt% is stated for 15271 (0.38 in A15 PSR Table 6-IV; 0.35 in Sourcebook Table 7.16 / Sibille Table 7) and for 71501 (0.46 in A17 PSR Table 7-VI).\n(2) Apollo 17 'station 1A' is real (A17 PSR p.2-4), so the stored station for 71501 is right.\n(3) Rounding matches were called 'differs': 15271 TiO2 (Maxwell 1.42) and 71501 Na2O (0.396/0.395).\n(4) 60501 P2O5 0.11 is from the Rose et al. 1975 'coarse' column, not Morrison et al. 1973 (0.064).\n(5) A blank olivine cell for 71501 is not a stated value.\n(6) The 15271 R2 mention quote does not name 15271.\n\nSingle-analysis replacements exist in Sources, if the owner wants to rebuild a composition from one analysis:\n- 15271: LSPET XRF (A15 PSR Table 6-IV, column 15271 (6)). SiO2 46.70, TiO2 1.47, Al2O3 16.51, FeO 12.15, MnO .16, MgO 10.55, CaO 11.29, Na2O .43, K2O .21, P2O5 .21, Cr2O3 .38.\n- 15271 alternative: Papike et al. 1982 bulk (Sourcebook Table 7.16). Ten oxides, no P2O5.\n- 71501: LSPET XRF (A17 PSR Table 7-VI, 71501,3). SiO2 39.82, TiO2 9.52, Al2O3 11.13, FeO 17.41, MnO .25, MgO 9.51, CaO 10.85, Na2O .32, K2O .07, P2O5 .06, Cr2O3 .46.\n- 60501: no single analysis in any document gives all 11 oxides including Cr2O3 wt%. Duncan et al. 1973 XRF (LSC Table 1) covers the others, but gives no Cr.\n\nCoordinates: the stored 60501 value is exactly the LROC 2016 Apollo 16 LM position. The 15271 and 71501 values are LM-type positions that match neither LROC nor ALSJ exactly. No document gives station-level coordinates for any of the three."
+   }
   }
- ]
+ ],
+ "unchecked": []
 }

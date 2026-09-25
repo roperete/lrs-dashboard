@@ -19,7 +19,8 @@ export function Tooltip({ text, children, className, align = 'center', focusable
   focusable?: boolean;
 }) {
   return (
-    <span className={cn('relative inline-flex group cursor-help', className)} tabIndex={focusable ? 0 : undefined}>
+    // a named group (group/tip): only this trigger opens this bubble, not a hovered row or card around it
+    <span className={cn('relative inline-flex group/tip cursor-help', className)} tabIndex={focusable ? 0 : undefined}>
       {children}
       <span
         role="tooltip"
@@ -27,7 +28,7 @@ export function Tooltip({ text, children, className, align = 'center', focusable
           'pointer-events-none absolute top-full z-50 mt-1.5 w-max max-w-[260px] whitespace-pre-line rounded-lg',
           'border border-slate-700 bg-slate-900 px-2.5 py-1.5 shadow-xl',
           'text-left text-[11px] font-normal normal-case leading-snug tracking-normal text-slate-200',
-          'opacity-0 transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100',
+          'opacity-0 transition-opacity duration-150 group-hover/tip:opacity-100 group-focus-within/tip:opacity-100',
           align === 'center' && 'left-1/2 -translate-x-1/2',
           align === 'left' && 'left-0',
           align === 'right' && 'right-0',

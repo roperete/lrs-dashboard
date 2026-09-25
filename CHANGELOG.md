@@ -5,6 +5,30 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.21 — 2026-09-25 (staging)
+
+Fixes to the tables, and the last three lunar samples checked.
+
+**Interface**
+- Hovering one citation mark shows only its own tooltip; a row with several marks opened all of
+  them.
+- The Moon table has a **Sources** column again: how many documents a site's values are cited
+  to, and the first one. Clicking opens the site at its source list.
+- The References column says what is missing: "7 · 1 unchecked" means seven documents on file,
+  one that no reader has yet confirmed names the simulant. A plain number means all are
+  confirmed.
+
+**Moon**
+- 15271, 60501 and 71501 checked against the Lunar Sample Compendium. 15271 and 71501 show their
+  modal mineralogy as the compendium gives it (Basu 1981; Heiken & McKay 1974, 90–150 µm), and
+  15271's station is corrected to station 6. The stored oxides were the Lunar Sourcebook's
+  mission-average soils, not these samples; the compendium gives each as a range of analyses,
+  so they are not shown. 193 values are now cited to 47 documents.
+
+**Process**
+- The crash scenarios check that one hover opens one tooltip, and that the Sources cell opens
+  the site's sources. The type check (`npm run lint`) is clean.
+
 ## v2.9.20 — 2026-09-25 (staging)
 
 The design review, applied; the Moon section cited value by value; a units check of every value.

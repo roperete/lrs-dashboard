@@ -4,10 +4,10 @@ import { cn } from '../../utils/cn';
 import { Tooltip } from '../ui/Tooltip';
 import type { LunarSite } from '../../types';
 import { LunarRefs } from '../ui/LunarRefs';
-import { EMPTY_CITATIONS, type LunarCitations } from '../../utils/lunarCitations';
+import { EMPTY_CITATIONS, lunarDocumentLabel, type LunarCitations } from '../../utils/lunarCitations';
 
 type SortDir = 'asc' | 'desc';
-type SortKey = 'name' | 'mission' | 'date' | 'type' | 'samples' | 'density' | 'friction' | 'cohesion';
+type SortKey = 'name' | 'mission' | 'date' | 'type' | 'samples' | 'density' | 'friction' | 'cohesion' | 'sources';
 
 /** Returned mass in grams, from "21.55 kg" or "101 g"; null when not stated. */
 function grams(v: string | null | undefined): number | null {
@@ -26,17 +26,20 @@ const COLUMN_HELP: Record<SortKey, string> = {
   density: 'Bulk density of the regolith at the site, in g/cm³: mass per volume including the pore space, from in-situ measurements or returned cores.',
   friction: 'Internal angle of friction of the regolith, in degrees, from in-situ soil-mechanics measurements. Governs slope stability and bearing capacity.',
   cohesion: 'Shear strength of the regolith at zero normal stress, in kPa: how much the grains hold together.',
+  sources: 'Documents the site\'s values are cited to. Click to open the site at its source list.',
 };
 
 interface LunarSampleTableProps {
   sites: LunarSite[];
   selectedSiteId: string | null;
   onSelectSite: (id: string) => void;
+  /** Open the site's panel at its source list (the Sources column). */
+  onOpenSources?: (id: string) => void;
   /** Numbered sources of a site's values (the same numbers as in its panel). */
   citationsFor?: (siteId: string) => LunarCitations;
 }
 
-export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, citationsFor = () => EMPTY_CITATIONS }: LunarSampleTableProps) {
+export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, onOpenSources, citationsFor = () => EMPTY_CITATIONS }: LunarSampleTableProps) {
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
 
@@ -57,6 +60,7 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, citation
         case 'density': return x.geotechnical?.bulk_density ?? null;
         case 'friction': return x.geotechnical?.friction_angle ?? null;
         case 'cohesion': return x.geotechnical?.cohesion ?? null;
+        case 'sources': return citationsFor(x.id).documents.length || null;
       }
     };
     // empty values last in both directions: a missing value is not the smallest
@@ -67,7 +71,7 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, citation
       if (vb == null) return -1;
       return (typeof va === 'string' ? va.localeCompare(vb as string) : (va as number) - (vb as number)) * dir;
     });
-  }, [sites, sortKey, sortDir]);
+  }, [sites, sortKey, sortDir, citationsFor]);
 
   const SortIcon = ({ col }: { col: SortKey }) => {
     if (sortKey !== col) return <span className="w-4" />;
@@ -114,6 +118,7 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, citation
             <TH col="density" label="Density (g/cm³)" />
             <TH col="friction" label="Friction (°)" />
             <TH col="cohesion" label="Cohesion (kPa)" />
+            <TH col="sources" label="Sources" />
           </tr>
         </thead>
         <tbody>
@@ -142,6 +147,15 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, citation
                 <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.bulk_density != null ? <>{s.geotechnical.bulk_density}{refs('bulk_density')}</> : '\u2014'}</td>
                 <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.friction_angle != null ? <>{`${s.geotechnical.friction_angle}\u00B0`}{refs('friction_angle')}</> : '\u2014'}</td>
                 <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.cohesion != null ? <>{`${s.geotechnical.cohesion} kPa`}{refs('cohesion')}</> : '\u2014'}</td>
+                <td className="py-2 px-3 max-w-[260px]">
+                  {c.documents.length > 0
+                    ? <button type="button" onClick={(e) => { e.stopPropagation(); (onOpenSources ?? onSelectSite)(s.id); }}
+                        aria-label={`Open ${s.name}'s sources`} className="flex items-baseline gap-1.5 text-left text-slate-300 hover:text-white min-w-0">
+                        <span className="font-semibold text-amber-400/90 shrink-0">{c.documents.length}</span>
+                        <span className="truncate text-xs text-slate-400">{lunarDocumentLabel(c.documents[0])}{c.documents.length > 1 ? ' …' : ''}</span>
+                      </button>
+                    : <span className="text-slate-500">{'\u2014'}</span>}
+                </td>
               </tr>
             );
           })}
