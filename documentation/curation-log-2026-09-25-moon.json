@@ -1,0 +1,51 @@
+[
+  {
+    "entity_id": "A16",
+    "field": "lat",
+    "was": -8.97301,
+    "now": -8.973,
+    "document_id": "LD-024",
+    "action": "written: number agreed by reader and checker, quote verified in the document"
+  },
+  {
+    "entity_id": "A16",
+    "field": "lng",
+    "was": 15.5002,
+    "now": 15.5002,
+    "document_id": "LD-024",
+    "action": "written: number agreed by reader and checker, quote verified in the document"
+  },
+  {
+    "entity_id": "L21",
+    "field": "lat",
+    "action": "skipped: document not on record or not on disk",
+    "document": "papers/lunar/NSSDCA_Luna21.txt"
+  },
+  {
+    "entity_id": "L21",
+    "field": "lat",
+    "action": "skipped: document not on record or not on disk",
+    "document": "papers/lunar/NSSDCA_Luna21.txt"
+  },
+  {
+    "entity_id": "L21",
+    "document_id": "LD-055",
+    "action": "document registered: it names the mission (sentence found verbatim)"
+  },
+  {
+    "entity_id": "L21",
+    "field": "lat",
+    "was": 25.85,
+    "now": 25.9994,
+    "document_id": "LD-055",
+    "action": "written: number agreed by reader and checker, quote verified in the document"
+  },
+  {
+    "entity_id": "L21",
+    "field": "lng",
+    "was": 30.45,
+    "now": 30.4076,
+    "document_id": "LD-055",
+    "action": "written: number agreed by reader and checker, quote verified in the document"
+  }
+]

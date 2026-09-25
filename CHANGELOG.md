@@ -5,6 +5,61 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.20 — 2026-09-25 (staging)
+
+The design review, applied; the Moon section cited value by value; a units check of every value.
+
+**Interface** (design review, documentation/ui-ux-review-2026-09-25.md)
+- A fixed top bar holds the view switch, Export, Feedback and Help, so an open pane never covers
+  them. The version shows there and on the loading screen.
+- The left pane is **Find**: search, one-click chips with counts (type, availability, which data a
+  simulant has), ranges for bulk density, D50, friction angle and cohesion, more filters, and a
+  one-line results list. On the Moon it is **Missions**, with programme chips. A chip under the
+  bar keeps active filters visible when the pane is closed.
+- The table opens a simulant only in the right pane (row click, Enter, ↑/↓); the chemistry,
+  mineralogy and reference cells open the pane at that section. Name stays in view when the
+  table scrolls sideways. On phones the table is a list.
+- One **compare tray** collects simulants from the pane, the table and the list; compare two to
+  four. Differences have a sign, and a value no source gives shows "—", not 0.00. Every compared
+  value carries its citation.
+- Citation marks are buttons: hover, focus or tap shows the document, the page and the quote;
+  clicking jumps to the reference. The pane has jump links (Properties, Composition, FoM,
+  Purchase, About, References), a compact About list, and Figures of Merit with their scale.
+- Links can be shared: the address holds the view, the simulant, the compare tray and the filters.
+- Export writes every value with its reference number, location and quote, and the reference list.
+- The lunar sample is suggested for each simulant, not carried over from the previous one.
+- No uppercase on units or names (µm had become ΜM), DOIs with brackets link correctly, higher
+  text contrast, Escape closes the top panel, no forced splash, the globe no longer spins.
+- A failure in one part (the 3D globe without WebGL, say) shows a message there instead of
+  blanking the page.
+
+**Data**
+- Units check of 280 property values and 915 composition rows (two finders, two checkers,
+  documentation/units-audit-2026-09-25.json). Omitted: three rheometer strengths shown as
+  cohesion, TiO2 shown as Ti, a compacted test specimen shown as bulk density, implausible
+  mineral rows, oxide rows from another batch. Restated as the document states them: log χ with
+  its unit, GreenSpar's plagioclase (XRD 82 wt%, not a CIPW norm), "glass-rich basalt",
+  "opaques (probably magnetite)". Each mineral table now says its basis (vol%, area%, modal,
+  normative); a table is totalled only when complete, and never with two iron rows.
+- Map sites corrected to their sources: GreenSpar at the White Mountain mine in Greenland; FEFU-1
+  removed from the map (no document places it; the Moscow point was a placeholder).
+- Lunar90, Lunar250 and Lunar2000 are Highlands; Lunar250 has a second reference.
+
+**Moon**
+- The 19 landing sites now live in the database, and every value shown on the Moon — in the site
+  panel, the Moon table and the lunar comparisons — carries its citation ([n], or [L n] beside a
+  simulant). 170 values are cited to 44 documents (NSSDCA, mission reports, the Lunar
+  Sourcebook, LROC coordinates, sample compendia); 47 were corrected to what their document
+  states (coordinates to LRO-derived values, returned masses to the curated figures). Values no
+  document states as one number — most Apollo soil values, which the sources give as ranges or
+  per station — are no longer shown. Each read by one agent and checked by another.
+- 4 of the 7 lunar reference samples show cited compositions; 15271, 60501 and 71501 wait
+  for their checker (session limit) and are hidden until then.
+
+**Process**
+- Scenario tests drive the built app in headless Chrome (scripts/ui_scenario.mjs, scripts/crash/):
+  every view, search and filter, every sort, panes, comparisons, the phone layout.
+
 ## v2.9.19 — 2026-09-25 (staging)
 
 Two more crash fixes; the 2D Earth map in Equal Earth; drag to close the side panels; the document's name on every citation hover.

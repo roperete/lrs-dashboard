@@ -112,10 +112,18 @@ class ApplyMoonTests(unittest.TestCase):
         self.assertEqual(to_moon_unit("lng", "3.63330 E longitude (Lunar Module)"), 3.6333)
         self.assertEqual(to_moon_unit("lat", "8.9730 S"), -8.973)
         self.assertEqual(to_moon_unit("lng", "-23.4219"), -23.4219)
-        self.assertIsNone(to_moon_unit("lat", "3.01612°S (Wikipedia); -3.0162 (LROC)"))     # two values: not one
+        # the reader's own claim is the first; restatements in brackets and alternatives after ";" are not
+        self.assertEqual(to_moon_unit("lat", "3.01612°S (Wikipedia); -3.0162 (LROC)"), -3.01612)
+        self.assertEqual(to_moon_unit("lat", "-0.5137 (0.5137° S)"), -0.5137)
+        self.assertEqual(to_moon_unit("lng", "15.5002 E longitude (Lunar Module; IAU system); 15.5011 in the 2016 table"), 15.5002)
+        self.assertIsNone(to_moon_unit("lat", "between 3.0 and 3.1"))
         self.assertEqual(to_moon_unit("bulk_density", "1940 ± 10 kg m⁻³"), 1.94)
         self.assertEqual(to_moon_unit("cohesion", "0.17 kN/m2"), 0.17)
         self.assertIsNone(to_moon_unit("friction_angle", "between 30° and 40°"))
+
+    def test_returned_mass_is_stored_as_the_quantity(self):
+        self.run_one("A11", [val("samples_returned", "21.5 kg", "differs", "77.31 kg of rock and soil samples")], {"samples_returned": ("CONFIRMED", {})})
+        self.assertEqual(self.con.execute("SELECT samples_returned FROM lunar_sites").fetchone(), ("77.31 kg",))
 
     def test_applying_twice_changes_nothing_more(self):
         args = ("A11", [val("samples_returned", "21.5 kg", "differs", "21.55 kg")], {"samples_returned": ("CONFIRMED", {})})

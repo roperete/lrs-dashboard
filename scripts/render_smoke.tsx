@@ -34,7 +34,8 @@ const PHYSICAL_FIELDS: (keyof PhysicalProperties)[] = [
 /** The scalar columns the main table shows. */
 const TABLE_FIELDS = ['specific_gravity', 'bulk_density', 'particle_size_d50', 'friction_angle', 'cohesion'];
 
-const sups = (html: string) => (html.match(/aria-label="Reference \d+"/g) || []).length;
+// a simulant's citation mark ("Reference 3", or "Reference 3: <document>"); lunar marks are "Reference L3"
+const sups = (html: string) => (html.match(/aria-label="Reference \d+(?::[^"]*)?"/g) || []).length;
 let failures = 0;
 function expect(label: string, got: number, want: number) {
   const ok = got === want;
@@ -95,7 +96,8 @@ for (const sim of d.simulants as Simulant[]) {
     if (foms.length === 0) continue;
     const nums = referenceNumbers(refsBy.get(sim.simulant_id) ?? []);
     const html = renderToStaticMarkup(<FigureOfMeritSection foms={foms} refNumber={(id) => nums.get(id)} />);
-    expect(`${sim.name} figures of merit`, sups(html), foms.length);
+    // the section shows one score per property until "Show all"
+    expect(`${sim.name} figures of merit`, sups(html), new Set(foms.map((f: any) => f.property)).size);
   }
 }
 

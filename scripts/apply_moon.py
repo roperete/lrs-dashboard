@@ -62,9 +62,10 @@ def to_moon_unit(field: str, raw: str) -> float | None:
     if field in ("lat", "lng"):
         # one coordinate, possibly followed by words ("26.13239 N latitude (Lunar Module; ...)");
         # a text giving two values ("3.01612°S (Wikipedia); -3.0162 (LROC)") is not one value
-        if len(re.findall(r"-?\d+\.\d+", text)) != 1:
+        claim = re.sub(r"\([^)]*\)", " ", text.split(";")[0])     # the reader's own claim, restatements dropped
+        if len(re.findall(r"-?\d+\.\d+", claim)) != 1:
             return None
-        m = re.match(r"^\s*(-?\d+(?:\.\d+)?)\s*°?\s*([NSEW])?(?![A-Za-z])", text)
+        m = re.match(r"^\s*(-?\d+(?:\.\d+)?)\s*°?\s*([NSEW])?(?![A-Za-z])", claim)
         if not m:
             return None
         v = float(m.group(1))
@@ -152,7 +153,13 @@ def apply_entity(con: sqlite3.Connection, reading: dict, check: dict, checked_on
             continue
         # differs: correct the stored value to the document's
         stated = v.get("value_in_source") or ""
-        if is_site and field in SITE_TEXT:
+        if is_site and field == "samples_returned":
+            q = re.search(r"\d+(?:\.\d+)?\s*(?:kg|g)\b", stated)      # the quantity, not the sentence around it
+            if not q:
+                note(field=field, outcome="no source: the stated value is not a mass", stated=stated, needs_review=True)
+                continue
+            con.execute("UPDATE lunar_sites SET samples_returned=? WHERE site_id=?", (q.group(0), eid))
+        elif is_site and field in SITE_TEXT:
             con.execute(f"UPDATE lunar_sites SET {field}=? WHERE site_id=?", (stated.strip(), eid))
         elif is_site and field in SITE_NUMBER:
             x = to_moon_unit(field, stated)

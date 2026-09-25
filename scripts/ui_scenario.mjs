@@ -23,12 +23,16 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 const target = await (await fetch(`http://127.0.0.1:${port}/json/new?${encodeURIComponent('about:blank')}`, { method: 'PUT' })).json();
 const ws = new WebSocket(target.webSocketDebuggerUrl);
 await new Promise(r => ws.addEventListener('open', r));
-let id = 0; const pending = new Map(); const errors = []; const values = {}; const failures = [];
+let id = 0; const pending = new Map(); const errors = []; const values = {}; const failures = []; const environment = [];
 ws.addEventListener('message', e => {
   const m = JSON.parse(e.data);
   if (m.id && pending.has(m.id)) { pending.get(m.id)(m); pending.delete(m.id); }
   if (m.method === 'Runtime.exceptionThrown') errors.push((m.params.exceptionDetails.exception?.description || m.params.exceptionDetails.text).split('\n')[0].slice(0, 300));
-  if (m.method === 'Runtime.consoleAPICalled' && m.params.type === 'error') errors.push('console.error: ' + m.params.args.map(a => a.value ?? a.description ?? '').join(' ').split('\n')[0].slice(0, 300));
+  if (m.method === 'Runtime.consoleAPICalled' && m.params.type === 'error') {
+    const msg = m.params.args.map(a => a.value ?? a.description ?? '').join(' ').split('\n')[0].slice(0, 300);
+    // headless Chrome's software GL cannot compile some globe shaders: the test machine, not the app
+    if (/THREE\.WebGLProgram: Shader Error/.test(msg)) environment.push(msg); else errors.push('console.error: ' + msg);
+  }
 });
 const send = (method, params = {}) => new Promise(r => { const i = ++id; pending.set(i, r); ws.send(JSON.stringify({ id: i, method, params })); });
 const evaluate = async expr => {
@@ -81,6 +85,6 @@ for (const [i, st] of steps.entries()) {
   if (!alive) { failures.push(`${where}: the page went blank`); break; }
 }
 const alerts = await evaluate(`[...document.querySelectorAll('[role=alert]')].map(a => a.innerText.slice(0, 200))`);
-console.log(JSON.stringify({ values, failures, errors, alerts }, null, 1));
+console.log(JSON.stringify({ values, failures, errors, alerts, environment: environment.length ? `${environment.length} software-GL shader messages` : undefined }, null, 1));
 ws.close();
 process.exit(failures.length || errors.length ? 1 : 0);

@@ -530,32 +530,12 @@
     }
   ],
   "moon_rule": "A value of a lunar site or reference sample is exported only when lunar_sources has a row for (entity_id, field); a site without both coordinates sourced is left off the map.",
-  "moon_count": 287,
+  "moon_count": 136,
   "moon_suppressed": [
-    {
-      "entity_id": "A11",
-      "field": "date",
-      "value": "July 20, 1969"
-    },
-    {
-      "entity_id": "A11",
-      "field": "lat",
-      "value": 0.67409
-    },
-    {
-      "entity_id": "A11",
-      "field": "lng",
-      "value": 23.47297
-    },
     {
       "entity_id": "A11",
       "field": "samples_returned",
       "value": "21.5 kg"
-    },
-    {
-      "entity_id": "A11",
-      "field": "description",
-      "value": "First human landing on the Moon. Collected basaltic rocks and breccias."
     },
     {
       "entity_id": "A11",
@@ -579,31 +559,6 @@
     },
     {
       "entity_id": "A12",
-      "field": "date",
-      "value": "November 19, 1969"
-    },
-    {
-      "entity_id": "A12",
-      "field": "lat",
-      "value": -3.01239
-    },
-    {
-      "entity_id": "A12",
-      "field": "lng",
-      "value": -23.42157
-    },
-    {
-      "entity_id": "A12",
-      "field": "samples_returned",
-      "value": "34.3 kg"
-    },
-    {
-      "entity_id": "A12",
-      "field": "description",
-      "value": "Landed near Surveyor 3. Collected basaltic samples from the Oceanus Procellarum."
-    },
-    {
-      "entity_id": "A12",
       "field": "bulk_density",
       "value": 1.65
     },
@@ -624,31 +579,6 @@
     },
     {
       "entity_id": "A14",
-      "field": "date",
-      "value": "February 5, 1971"
-    },
-    {
-      "entity_id": "A14",
-      "field": "lat",
-      "value": -3.6453
-    },
-    {
-      "entity_id": "A14",
-      "field": "lng",
-      "value": -17.47136
-    },
-    {
-      "entity_id": "A14",
-      "field": "samples_returned",
-      "value": "42.3 kg"
-    },
-    {
-      "entity_id": "A14",
-      "field": "description",
-      "value": "Landed in the Fra Mauro highlands. Collected impact-derived breccias."
-    },
-    {
-      "entity_id": "A14",
       "field": "bulk_density",
       "value": 1.54
     },
@@ -661,31 +591,6 @@
       "entity_id": "A14",
       "field": "cohesion",
       "value": 0.18
-    },
-    {
-      "entity_id": "A15",
-      "field": "date",
-      "value": "July 30, 1971"
-    },
-    {
-      "entity_id": "A15",
-      "field": "lat",
-      "value": 26.13222
-    },
-    {
-      "entity_id": "A15",
-      "field": "lng",
-      "value": 3.63386
-    },
-    {
-      "entity_id": "A15",
-      "field": "samples_returned",
-      "value": "77.3 kg"
-    },
-    {
-      "entity_id": "A15",
-      "field": "description",
-      "value": "First use of the Lunar Roving Vehicle. Collected samples from the Apennine Front and Hadley Rille."
     },
     {
       "entity_id": "A15",
@@ -704,31 +609,6 @@
     },
     {
       "entity_id": "A16",
-      "field": "date",
-      "value": "April 21, 1972"
-    },
-    {
-      "entity_id": "A16",
-      "field": "lat",
-      "value": -8.97301
-    },
-    {
-      "entity_id": "A16",
-      "field": "lng",
-      "value": 15.49812
-    },
-    {
-      "entity_id": "A16",
-      "field": "samples_returned",
-      "value": "95.7 kg"
-    },
-    {
-      "entity_id": "A16",
-      "field": "description",
-      "value": "Landed in the lunar highlands. Collected ancient crustal rocks (anorthosites)."
-    },
-    {
-      "entity_id": "A16",
       "field": "bulk_density",
       "value": 1.68
     },
@@ -741,31 +621,6 @@
       "entity_id": "A16",
       "field": "cohesion",
       "value": 0.77
-    },
-    {
-      "entity_id": "A17",
-      "field": "date",
-      "value": "December 11, 1972"
-    },
-    {
-      "entity_id": "A17",
-      "field": "lat",
-      "value": 20.1908
-    },
-    {
-      "entity_id": "A17",
-      "field": "lng",
-      "value": 30.77168
-    },
-    {
-      "entity_id": "A17",
-      "field": "samples_returned",
-      "value": "110.5 kg"
-    },
-    {
-      "entity_id": "A17",
-      "field": "description",
-      "value": "Final Apollo mission. Collected orange soil and diverse rock types from a valley."
     },
     {
       "entity_id": "A17",
@@ -783,196 +638,6 @@
       "value": 0.6
     },
     {
-      "entity_id": "CE3",
-      "field": "date",
-      "value": "December 14, 2013"
-    },
-    {
-      "entity_id": "CE3",
-      "field": "lat",
-      "value": 44.1214
-    },
-    {
-      "entity_id": "CE3",
-      "field": "lng",
-      "value": -19.5116
-    },
-    {
-      "entity_id": "CE3",
-      "field": "description",
-      "value": "First Chinese lunar lander. Deployed Yutu rover on the Mare Imbrium."
-    },
-    {
-      "entity_id": "CE3",
-      "field": "bulk_density",
-      "value": 1.63
-    },
-    {
-      "entity_id": "CE4",
-      "field": "date",
-      "value": "January 3, 2019"
-    },
-    {
-      "entity_id": "CE4",
-      "field": "lat",
-      "value": -45.4446
-    },
-    {
-      "entity_id": "CE4",
-      "field": "lng",
-      "value": 177.5991
-    },
-    {
-      "entity_id": "CE4",
-      "field": "description",
-      "value": "First landing on the lunar far side. Deployed Yutu-2 rover in the South Pole-Aitken basin."
-    },
-    {
-      "entity_id": "CE5",
-      "field": "date",
-      "value": "December 1, 2020"
-    },
-    {
-      "entity_id": "CE5",
-      "field": "lat",
-      "value": 43.0576
-    },
-    {
-      "entity_id": "CE5",
-      "field": "lng",
-      "value": -51.9161
-    },
-    {
-      "entity_id": "CE5",
-      "field": "samples_returned",
-      "value": "1.73 kg"
-    },
-    {
-      "entity_id": "CE5",
-      "field": "description",
-      "value": "First Chinese sample return mission. Collected young volcanic rocks."
-    },
-    {
-      "entity_id": "CE6",
-      "field": "date",
-      "value": "June 2, 2024"
-    },
-    {
-      "entity_id": "CE6",
-      "field": "lat",
-      "value": -41.6385
-    },
-    {
-      "entity_id": "CE6",
-      "field": "lng",
-      "value": -153.9852
-    },
-    {
-      "entity_id": "CE6",
-      "field": "samples_returned",
-      "value": "1.93 kg"
-    },
-    {
-      "entity_id": "CE6",
-      "field": "description",
-      "value": "First sample return from the lunar far side. Collected samples from the Apollo crater."
-    },
-    {
-      "entity_id": "CH3",
-      "field": "date",
-      "value": "August 23, 2023"
-    },
-    {
-      "entity_id": "CH3",
-      "field": "lat",
-      "value": -69.3726
-    },
-    {
-      "entity_id": "CH3",
-      "field": "lng",
-      "value": 32.3188
-    },
-    {
-      "entity_id": "CH3",
-      "field": "description",
-      "value": "First Indian lunar landing. Pragyan rover explored near the south pole."
-    },
-    {
-      "entity_id": "CH3",
-      "field": "bulk_density",
-      "value": 1.3
-    },
-    {
-      "entity_id": "L13",
-      "field": "date",
-      "value": "December 24, 1966"
-    },
-    {
-      "entity_id": "L13",
-      "field": "lat",
-      "value": 18.87
-    },
-    {
-      "entity_id": "L13",
-      "field": "lng",
-      "value": -62.05
-    },
-    {
-      "entity_id": "L13",
-      "field": "description",
-      "value": "Soviet lander with soil mechanics probe. Measured regolith bearing capacity."
-    },
-    {
-      "entity_id": "L13",
-      "field": "bulk_density",
-      "value": 0.8
-    },
-    {
-      "entity_id": "L13",
-      "field": "friction_angle",
-      "value": 32.0
-    },
-    {
-      "entity_id": "L13",
-      "field": "cohesion",
-      "value": 0.49
-    },
-    {
-      "entity_id": "L13",
-      "field": "bearing_capacity",
-      "value": 68.0
-    },
-    {
-      "entity_id": "L16",
-      "field": "date",
-      "value": "September 20, 1970"
-    },
-    {
-      "entity_id": "L16",
-      "field": "lat",
-      "value": -0.68
-    },
-    {
-      "entity_id": "L16",
-      "field": "lng",
-      "value": 56.3
-    },
-    {
-      "entity_id": "L16",
-      "field": "samples_returned",
-      "value": "101 g"
-    },
-    {
-      "entity_id": "L16",
-      "field": "description",
-      "value": "First robotic sample return mission. Collected mare basalt."
-    },
-    {
-      "entity_id": "L16",
-      "field": "bulk_density",
-      "value": 1.44
-    },
-    {
       "entity_id": "L16",
       "field": "friction_angle",
       "value": 26.7
@@ -981,66 +646,6 @@
       "entity_id": "L16",
       "field": "cohesion",
       "value": 3.81
-    },
-    {
-      "entity_id": "L17",
-      "field": "date",
-      "value": "November 17, 1970"
-    },
-    {
-      "entity_id": "L17",
-      "field": "lat",
-      "value": 38.28
-    },
-    {
-      "entity_id": "L17",
-      "field": "lng",
-      "value": -35.0
-    },
-    {
-      "entity_id": "L17",
-      "field": "description",
-      "value": "Deployed Lunokhod 1, the first robotic rover on the Moon."
-    },
-    {
-      "entity_id": "L17",
-      "field": "friction_angle",
-      "value": 34.3
-    },
-    {
-      "entity_id": "L17",
-      "field": "cohesion",
-      "value": 2.25
-    },
-    {
-      "entity_id": "L17",
-      "field": "bearing_capacity",
-      "value": 33.3
-    },
-    {
-      "entity_id": "L20",
-      "field": "date",
-      "value": "February 21, 1972"
-    },
-    {
-      "entity_id": "L20",
-      "field": "lat",
-      "value": 3.53
-    },
-    {
-      "entity_id": "L20",
-      "field": "lng",
-      "value": 56.55
-    },
-    {
-      "entity_id": "L20",
-      "field": "samples_returned",
-      "value": "55 g"
-    },
-    {
-      "entity_id": "L20",
-      "field": "description",
-      "value": "Robotic sample return from the highlands near Mare Fecunditatis."
     },
     {
       "entity_id": "L20",
@@ -1064,88 +669,13 @@
     },
     {
       "entity_id": "L21",
-      "field": "lat",
-      "value": 25.85
-    },
-    {
-      "entity_id": "L21",
-      "field": "lng",
-      "value": 30.45
-    },
-    {
-      "entity_id": "L21",
       "field": "description",
       "value": "Deployed Lunokhod 2. Traversed 37 km across the lunar surface."
-    },
-    {
-      "entity_id": "L21",
-      "field": "friction_angle",
-      "value": 22.5
-    },
-    {
-      "entity_id": "L21",
-      "field": "cohesion",
-      "value": 5.0
-    },
-    {
-      "entity_id": "L21",
-      "field": "bearing_capacity",
-      "value": 40.0
-    },
-    {
-      "entity_id": "L24",
-      "field": "date",
-      "value": "August 18, 1976"
-    },
-    {
-      "entity_id": "L24",
-      "field": "lat",
-      "value": 12.71
-    },
-    {
-      "entity_id": "L24",
-      "field": "lng",
-      "value": 62.21
-    },
-    {
-      "entity_id": "L24",
-      "field": "samples_returned",
-      "value": "170 g"
-    },
-    {
-      "entity_id": "L24",
-      "field": "description",
-      "value": "Final Soviet Luna mission. Collected samples from Mare Crisium."
     },
     {
       "entity_id": "L24",
       "field": "bulk_density",
       "value": 1.85
-    },
-    {
-      "entity_id": "S1",
-      "field": "date",
-      "value": "June 2, 1966"
-    },
-    {
-      "entity_id": "S1",
-      "field": "lat",
-      "value": -2.474
-    },
-    {
-      "entity_id": "S1",
-      "field": "lng",
-      "value": -43.339
-    },
-    {
-      "entity_id": "S1",
-      "field": "description",
-      "value": "First US soft landing on the Moon. Conducted surface mechanics experiments."
-    },
-    {
-      "entity_id": "S1",
-      "field": "bulk_density",
-      "value": 1.5
     },
     {
       "entity_id": "S1",
@@ -1156,36 +686,6 @@
       "entity_id": "S1",
       "field": "cohesion",
       "value": 4.52
-    },
-    {
-      "entity_id": "S1",
-      "field": "bearing_capacity",
-      "value": 40.0
-    },
-    {
-      "entity_id": "S3",
-      "field": "date",
-      "value": "April 20, 1967"
-    },
-    {
-      "entity_id": "S3",
-      "field": "lat",
-      "value": -3.0155
-    },
-    {
-      "entity_id": "S3",
-      "field": "lng",
-      "value": -23.4219
-    },
-    {
-      "entity_id": "S3",
-      "field": "description",
-      "value": "Equipped with soil mechanics surface sampler. Later visited by Apollo 12."
-    },
-    {
-      "entity_id": "S3",
-      "field": "bulk_density",
-      "value": 1.5
     },
     {
       "entity_id": "S3",
@@ -1204,11 +704,6 @@
     },
     {
       "entity_id": "10084",
-      "field": "landing_site",
-      "value": "Sea of Tranquility (Mare Tranquillitatis)"
-    },
-    {
-      "entity_id": "10084",
       "field": "coordinates",
       "value": {
         "lat": 0.6875,
@@ -1217,73 +712,8 @@
     },
     {
       "entity_id": "10084",
-      "field": "type",
-      "value": "Mare (High-Ti Basalt)"
-    },
-    {
-      "entity_id": "10084",
-      "field": "sample_description",
-      "value": "Bulk regolith soil, most extensively characterized lunar sample"
-    },
-    {
-      "entity_id": "10084",
-      "field": "oxide:SiO2",
-      "value": 42.2
-    },
-    {
-      "entity_id": "10084",
-      "field": "oxide:TiO2",
-      "value": 7.8
-    },
-    {
-      "entity_id": "10084",
-      "field": "oxide:Al2O3",
-      "value": 13.6
-    },
-    {
-      "entity_id": "10084",
       "field": "oxide:Cr2O3",
       "value": 0.3
-    },
-    {
-      "entity_id": "10084",
-      "field": "oxide:FeO",
-      "value": 15.3
-    },
-    {
-      "entity_id": "10084",
-      "field": "oxide:MnO",
-      "value": 0.2
-    },
-    {
-      "entity_id": "10084",
-      "field": "oxide:MgO",
-      "value": 7.8
-    },
-    {
-      "entity_id": "10084",
-      "field": "oxide:CaO",
-      "value": 11.9
-    },
-    {
-      "entity_id": "10084",
-      "field": "oxide:Na2O",
-      "value": 0.47
-    },
-    {
-      "entity_id": "10084",
-      "field": "oxide:K2O",
-      "value": 0.16
-    },
-    {
-      "entity_id": "10084",
-      "field": "oxide:P2O5",
-      "value": 0.05
-    },
-    {
-      "entity_id": "10084",
-      "field": "mineral:Plagioclase",
-      "value": 21.0
     },
     {
       "entity_id": "10084",
@@ -1302,23 +732,8 @@
     },
     {
       "entity_id": "10084",
-      "field": "mineral:Agglutinates",
-      "value": 18.0
-    },
-    {
-      "entity_id": "10084",
-      "field": "mineral:Glass",
-      "value": 5.0
-    },
-    {
-      "entity_id": "10084",
       "field": "mineral:Other",
       "value": 3.0
-    },
-    {
-      "entity_id": "12070",
-      "field": "landing_site",
-      "value": "Ocean of Storms (Oceanus Procellarum)"
     },
     {
       "entity_id": "12070",
@@ -1330,68 +745,8 @@
     },
     {
       "entity_id": "12070",
-      "field": "type",
-      "value": "Mare (Low-Ti Basalt)"
-    },
-    {
-      "entity_id": "12070",
-      "field": "sample_description",
-      "value": "Bulk regolith soil from ALSEP site, well-gardened surface soil"
-    },
-    {
-      "entity_id": "12070",
-      "field": "oxide:SiO2",
-      "value": 46.3
-    },
-    {
-      "entity_id": "12070",
-      "field": "oxide:TiO2",
-      "value": 3.0
-    },
-    {
-      "entity_id": "12070",
-      "field": "oxide:Al2O3",
-      "value": 12.9
-    },
-    {
-      "entity_id": "12070",
       "field": "oxide:Cr2O3",
       "value": 0.34
-    },
-    {
-      "entity_id": "12070",
-      "field": "oxide:FeO",
-      "value": 15.1
-    },
-    {
-      "entity_id": "12070",
-      "field": "oxide:MnO",
-      "value": 0.22
-    },
-    {
-      "entity_id": "12070",
-      "field": "oxide:MgO",
-      "value": 9.3
-    },
-    {
-      "entity_id": "12070",
-      "field": "oxide:CaO",
-      "value": 10.7
-    },
-    {
-      "entity_id": "12070",
-      "field": "oxide:Na2O",
-      "value": 0.54
-    },
-    {
-      "entity_id": "12070",
-      "field": "oxide:K2O",
-      "value": 0.31
-    },
-    {
-      "entity_id": "12070",
-      "field": "oxide:P2O5",
-      "value": 0.4
     },
     {
       "entity_id": "12070",
@@ -1430,11 +785,6 @@
     },
     {
       "entity_id": "14163",
-      "field": "landing_site",
-      "value": "Fra Mauro Highlands"
-    },
-    {
-      "entity_id": "14163",
       "field": "coordinates",
       "value": {
         "lat": -3.6453,
@@ -1443,28 +793,8 @@
     },
     {
       "entity_id": "14163",
-      "field": "type",
-      "value": "Highland (KREEP-rich)"
-    },
-    {
-      "entity_id": "14163",
       "field": "sample_description",
       "value": "Comprehensive regolith soil from Fra Mauro formation, KREEP-rich highland material"
-    },
-    {
-      "entity_id": "14163",
-      "field": "oxide:SiO2",
-      "value": 48.1
-    },
-    {
-      "entity_id": "14163",
-      "field": "oxide:TiO2",
-      "value": 1.7
-    },
-    {
-      "entity_id": "14163",
-      "field": "oxide:Al2O3",
-      "value": 17.4
     },
     {
       "entity_id": "14163",
@@ -1483,33 +813,8 @@
     },
     {
       "entity_id": "14163",
-      "field": "oxide:MgO",
-      "value": 9.4
-    },
-    {
-      "entity_id": "14163",
-      "field": "oxide:CaO",
-      "value": 10.7
-    },
-    {
-      "entity_id": "14163",
       "field": "oxide:Na2O",
       "value": 0.7
-    },
-    {
-      "entity_id": "14163",
-      "field": "oxide:K2O",
-      "value": 0.55
-    },
-    {
-      "entity_id": "14163",
-      "field": "oxide:P2O5",
-      "value": 0.51
-    },
-    {
-      "entity_id": "14163",
-      "field": "mineral:Plagioclase",
-      "value": 37.0
     },
     {
       "entity_id": "14163",
@@ -1525,16 +830,6 @@
       "entity_id": "14163",
       "field": "mineral:Ilmenite",
       "value": 1.0
-    },
-    {
-      "entity_id": "14163",
-      "field": "mineral:Agglutinates",
-      "value": 20.0
-    },
-    {
-      "entity_id": "14163",
-      "field": "mineral:Glass",
-      "value": 7.0
     },
     {
       "entity_id": "14163",
@@ -1882,19 +1177,6 @@
     },
     {
       "entity_id": "CE5C0400",
-      "field": "landing_site",
-      "value": "Northern Oceanus Procellarum (Mons Ruemker)"
-    },
-    {
-      "entity_id": "CE5C0400",
-      "field": "coordinates",
-      "value": {
-        "lat": 43.06,
-        "lon": -51.92
-      }
-    },
-    {
-      "entity_id": "CE5C0400",
       "field": "type",
       "value": "Mare (Young Low-Ti Basalt, ~2.0 Ga)"
     },
@@ -1910,11 +1192,6 @@
     },
     {
       "entity_id": "CE5C0400",
-      "field": "oxide:TiO2",
-      "value": 5.12
-    },
-    {
-      "entity_id": "CE5C0400",
       "field": "oxide:Al2O3",
       "value": 10.8
     },
@@ -1922,11 +1199,6 @@
       "entity_id": "CE5C0400",
       "field": "oxide:Cr2O3",
       "value": 0.49
-    },
-    {
-      "entity_id": "CE5C0400",
-      "field": "oxide:FeO",
-      "value": 22.7
     },
     {
       "entity_id": "CE5C0400",
@@ -1957,36 +1229,6 @@
       "entity_id": "CE5C0400",
       "field": "oxide:P2O5",
       "value": 0.12
-    },
-    {
-      "entity_id": "CE5C0400",
-      "field": "mineral:Plagioclase",
-      "value": 37.5
-    },
-    {
-      "entity_id": "CE5C0400",
-      "field": "mineral:Pyroxene",
-      "value": 39.4
-    },
-    {
-      "entity_id": "CE5C0400",
-      "field": "mineral:Olivine",
-      "value": 9.8
-    },
-    {
-      "entity_id": "CE5C0400",
-      "field": "mineral:Fe-Ti_Oxides",
-      "value": 1.9
-    },
-    {
-      "entity_id": "CE5C0400",
-      "field": "mineral:Glass",
-      "value": 8.3
-    },
-    {
-      "entity_id": "CE5C0400",
-      "field": "mineral:Other",
-      "value": 3.1
     }
   ]
 }
