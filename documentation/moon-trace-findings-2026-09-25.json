@@ -1,0 +1,2131 @@
+{
+ "results": [
+  {
+   "group": "apollo",
+   "ids": [
+    "A11",
+    "A12",
+    "A14",
+    "A17",
+    "10084",
+    "12070"
+   ],
+   "reading": {
+    "entities": [
+     {
+      "id": "A11",
+      "notes": "Stored coordinates match Davies & Colvin (2000) Table 5 exactly: Lunar module, mean-Earth/polar-axis system, latitude in °N and longitude in °E. The LROC 2016 table on record (LD-022/LD-036, Wagner et al. 2017 values) gives a newer Apollo 11 LM position of 0.67416, 23.47314 (mean Earth/polar axis). That differs by about 0.0001-0.0002°. If the project prefers the LRO-derived values, those are already in allowed catalogue documents on record.",
+      "references": [
+       {
+        "temp_id": "R1",
+        "title": "Lunar coordinates in the regions of the Apollo landers",
+        "authors": "Merton E. Davies and Tim R. Colvin",
+        "year": "2000",
+        "doi": "10.1029/1999JE001165",
+        "url": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/1999JE001165 (retrieved via web.archive.org snapshot 20241215200334)",
+        "local_path": "papers/lunar/Davies_Colvin_2000_JGR105E8_LunarCoordinates_ApolloLanders.pdf",
+        "kind": "paper",
+        "venue": "Journal of Geophysical Research: Planets, vol. 105, no. E8, pp. 20,277-20,280 (AGU peer-reviewed journal)",
+        "mention_quote": "An unpublished USGS map of the Apollo 11 landing site at a scale of 1:200 is available, and so is a map on the traverses map at a scale of 1:250.",
+        "location": "Section 8, Coordinates of the Lander Sites, p. 20,279"
+       }
+      ],
+      "values": [
+       {
+        "field": "lat",
+        "stored": "0.67408",
+        "status": "supported",
+        "value_in_source": "0.67408 (Latitude, °N)",
+        "reference_id": "R1",
+        "location": "Table 5, Lunakhod 2 and Apollo Lander Sites, p. 20,279 (PDF p. 3)",
+        "quote": "Table 5. Lunakhod 2 and Apollo Lander Sites ... Mean-Earth/Polar Axis Coordinates ... Point Latitude, °N Longitude, °E Radius, m ... Apollo 11 ... Lunar module 0.67408 23.47297",
+        "note": "Object: Apollo 11 Lunar module. Datum: mean-Earth/polar-axis. Positive = North. Digits checked against the rendered page image. LROC/Wagner 2017 (LD-022) gives 0.67416 for the LM."
+       },
+       {
+        "field": "lng",
+        "stored": "23.47297",
+        "status": "supported",
+        "value_in_source": "23.47297 (Longitude, °E)",
+        "reference_id": "R1",
+        "location": "Table 5, Lunakhod 2 and Apollo Lander Sites, p. 20,279 (PDF p. 3)",
+        "quote": "Table 5. Lunakhod 2 and Apollo Lander Sites ... Mean-Earth/Polar Axis Coordinates ... Point Latitude, °N Longitude, °E Radius, m ... Apollo 11 ... Lunar module 0.67408 23.47297",
+        "note": "Object: Apollo 11 Lunar module. Datum: mean-Earth/polar-axis. Positive = East. LROC/Wagner 2017 (LD-022) gives 23.47314 for the LM."
+       }
+      ]
+     },
+     {
+      "id": "A12",
+      "notes": "Coordinates match Davies & Colvin (2000) Table 5 exactly. NSSDCA LD-007 and LROC LD-022 give the newer LRO-derived LM position 3.0128 S, 23.4219 W (LROC: -3.0128, 336.5781). Returned mass matches Lunar Sourcebook Table 2.2 exactly (34.3 kg, Apollo 12 column). NSSDCA LD-007 prints 34.35 kg ('They collected a total of 34.35 kg of rock and soil samples'). Table 2.2 is an image in the PDF, so the value was read from the rendered page (printed p. 9, PDF p. 33).",
+      "references": [
+       {
+        "temp_id": "R2",
+        "title": "Lunar coordinates in the regions of the Apollo landers",
+        "authors": "Merton E. Davies and Tim R. Colvin",
+        "year": "2000",
+        "doi": "10.1029/1999JE001165",
+        "url": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/1999JE001165 (retrieved via web.archive.org snapshot 20241215200334)",
+        "local_path": "papers/lunar/Davies_Colvin_2000_JGR105E8_LunarCoordinates_ApolloLanders.pdf",
+        "kind": "paper",
+        "venue": "Journal of Geophysical Research: Planets, vol. 105, no. E8, pp. 20,277-20,280 (AGU peer-reviewed journal)",
+        "mention_quote": "An unpublished USGS map of the Apollo 12 landing site at a scale of 1:2000 was compiled from Lunar Orbiter images.",
+        "location": "Section 8, Coordinates of the Lander Sites, p. 20,279"
+       },
+       {
+        "temp_id": "R3",
+        "title": "Lunar Sourcebook: A User's Guide to the Moon",
+        "authors": "G. H. Heiken, D. T. Vaniman, B. M. French (eds.)",
+        "year": "1991",
+        "local_path": "papers/LRS/LunarSourceBook.pdf",
+        "kind": "compendium",
+        "venue": "Lunar Sourcebook (Heiken, Vaniman & French 1991, Cambridge University Press), the allowed compendium",
+        "mention_quote": "Apollo 12. The cratered surface at the Apollo 12 site, on Oceanus Procellarum, was similar to that of Apollo 11.",
+        "location": "Section 3.3.1 Mare Surfaces, printed p. 31 (PDF p. 55)"
+       }
+      ],
+      "values": [
+       {
+        "field": "lat",
+        "stored": "-3.01239",
+        "status": "supported",
+        "value_in_source": "-3.01239 (Latitude, °N)",
+        "reference_id": "R2",
+        "location": "Table 5, Lunakhod 2 and Apollo Lander Sites, p. 20,279 (PDF p. 3)",
+        "quote": "Point Latitude, °N Longitude, °E Radius, m ... Apollo 12 ... ALSEP -3.00942 -23.42458 1736014 ... Lunar module -3.01239 -23.42157",
+        "note": "Object: Apollo 12 Lunar module. Datum: mean-Earth/polar-axis. Printed with a minus sign (South). NSSDCA/LROC LRO-derived value: 3.0128 S."
+       },
+       {
+        "field": "lng",
+        "stored": "-23.42157",
+        "status": "supported",
+        "value_in_source": "-23.42157 (Longitude, °E)",
+        "reference_id": "R2",
+        "location": "Table 5, Lunakhod 2 and Apollo Lander Sites, p. 20,279 (PDF p. 3)",
+        "quote": "Point Latitude, °N Longitude, °E Radius, m ... Apollo 12 ... ALSEP -3.00942 -23.42458 1736014 ... Lunar module -3.01239 -23.42157",
+        "note": "Object: Apollo 12 Lunar module. Datum: mean-Earth/polar-axis. Printed with a minus sign (West). NSSDCA/LROC LRO-derived value: 23.4219 W (336.5781 E)."
+       },
+       {
+        "field": "samples_returned",
+        "stored": "34.3 kg",
+        "status": "supported",
+        "value_in_source": "34.3 (Total weight (kg))",
+        "reference_id": "R3",
+        "location": "Chapter 2, Table 2.2 Apollo sample summary, printed p. 9 (PDF p. 33), Apollo 12 column",
+        "quote": "TABLE 2.2. Apollo sample summary. ... Apollo 11 Apollo 12 Apollo 14 Apollo 15 Apollo 16 Apollo 17 Apollo Total ... Original Collection ... Total weight (kg) 21.6 34.3 42.3 77.3 95.7 110.5 381.7",
+        "note": "Read from the rendered table image. NSSDCA LD-007 states 34.35 kg."
+       }
+      ]
+     },
+     {
+      "id": "A14",
+      "notes": "Coordinates match Davies & Colvin (2000) Table 5 exactly. NSSDCA LD-009 and LROC LD-022 give the newer LRO-derived LM position 3.64589 S, 17.47194 W (LROC: -3.64589, 342.52806). The mass matches Lunar Sourcebook Table 2.2 (42.3 kg). NSSDCA LD-009 prints 42.28 kg, and the A14 PSR summary says 'Approximately 43 kg'. For the 'Fra Mauro highlands' claim: the PSR uses the phrase and NSSDCA says 'in the lunar highlands near the crater Fra Mauro'. The Lunar Sourcebook, however, files Apollo 14 under 'Large-scale Ejecta Ridges' (the Fra Mauro Formation, Imbrium ejecta), not under 'Lunar Highlands'. For the breccia claim: the PSR presents impact (Imbrium-ejecta) origin as 'compatible with their hypothesized derivation', and Lunar Sourcebook Table 2.2 gives breccia as (58.2)% of Apollo 14 total weight. The removed LROC 'Trail of Discovery' page was not used.",
+      "references": [
+       {
+        "temp_id": "R4",
+        "title": "Lunar coordinates in the regions of the Apollo landers",
+        "authors": "Merton E. Davies and Tim R. Colvin",
+        "year": "2000",
+        "doi": "10.1029/1999JE001165",
+        "url": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/1999JE001165 (retrieved via web.archive.org snapshot 20241215200334)",
+        "local_path": "papers/lunar/Davies_Colvin_2000_JGR105E8_LunarCoordinates_ApolloLanders.pdf",
+        "kind": "paper",
+        "venue": "Journal of Geophysical Research: Planets, vol. 105, no. E8, pp. 20,277-20,280 (AGU peer-reviewed journal)",
+        "mention_quote": "A map of the Apollo 14 landing site at a scale of 1:4000 is on the traverses map.",
+        "location": "Section 8, Coordinates of the Lander Sites, p. 20,279"
+       },
+       {
+        "temp_id": "R5",
+        "title": "Lunar Sourcebook: A User's Guide to the Moon",
+        "authors": "G. H. Heiken, D. T. Vaniman, B. M. French (eds.)",
+        "year": "1991",
+        "local_path": "papers/LRS/LunarSourceBook.pdf",
+        "kind": "compendium",
+        "venue": "Lunar Sourcebook (Heiken, Vaniman & French 1991, Cambridge University Press), the allowed compendium",
+        "mention_quote": "Apollo 14. The Apollo 14 landing site is located on the Fra Mauro Formation, which is characterized by elongate ridges 1 to 4 km wide and a few to tens of meters high.",
+        "location": "Section 3.3.2 Large-scale Ejecta Ridges, printed p. 31 (PDF p. 55)"
+       },
+       {
+        "temp_id": "R6",
+        "title": "Apollo 14 Preliminary Science Report (NASA SP-272)",
+        "authors": "NASA Manned Spacecraft Center (chapters: F. J. Herbert & W. K. Stephenson; P. K. Chapman, A. J. Calio & M. G. Simmons; Lunar Sample Preliminary Examination Team)",
+        "year": "1971",
+        "local_path": "papers/lunar/Apollo14_PSR_SP-272.pdf",
+        "kind": "primary_report",
+        "venue": "NASA Special Publication SP-272, the flying agency's Preliminary Science Report",
+        "mention_quote": "The Apollo 14 mission successfully landed the third exploration team on the lunar surface.",
+        "location": "Mission Description, p. xiii (PDF p. 11)"
+       }
+      ],
+      "values": [
+       {
+        "field": "lat",
+        "stored": "-3.6453",
+        "status": "supported",
+        "value_in_source": "-3.64530 (Latitude, °N)",
+        "reference_id": "R4",
+        "location": "Table 5, Lunakhod 2 and Apollo Lander Sites, p. 20,279 (PDF p. 3)",
+        "quote": "Point Latitude, °N Longitude, °E Radius, m ... Apollo 14 ... LRRR -3.64421 -17.47880 1736335 ... ALSEP -3.64398 -17.47748 1736343 ... Lunar module -3.64530 -17.47136",
+        "note": "Object: Apollo 14 Lunar module. Datum: mean-Earth/polar-axis. Printed with a minus sign (South). The stored value drops the trailing zero. NSSDCA/LROC LRO-derived value: 3.64589 S."
+       },
+       {
+        "field": "lng",
+        "stored": "-17.47136",
+        "status": "supported",
+        "value_in_source": "-17.47136 (Longitude, °E)",
+        "reference_id": "R4",
+        "location": "Table 5, Lunakhod 2 and Apollo Lander Sites, p. 20,279 (PDF p. 3)",
+        "quote": "Point Latitude, °N Longitude, °E Radius, m ... Apollo 14 ... LRRR -3.64421 -17.47880 1736335 ... ALSEP -3.64398 -17.47748 1736343 ... Lunar module -3.64530 -17.47136",
+        "note": "Object: Apollo 14 Lunar module. Datum: mean-Earth/polar-axis. Printed with a minus sign (West). NSSDCA/LROC LRO-derived value: 17.47194 W (342.52806 E)."
+       },
+       {
+        "field": "samples_returned",
+        "stored": "42.3 kg",
+        "status": "supported",
+        "value_in_source": "42.3 (Total weight (kg))",
+        "reference_id": "R5",
+        "location": "Chapter 2, Table 2.2 Apollo sample summary, printed p. 9 (PDF p. 33), Apollo 14 column",
+        "quote": "TABLE 2.2. Apollo sample summary. ... Apollo 11 Apollo 12 Apollo 14 Apollo 15 Apollo 16 Apollo 17 Apollo Total ... Original Collection ... Total weight (kg) 21.6 34.3 42.3 77.3 95.7 110.5 381.7",
+        "note": "Read from the rendered table image. NSSDCA LD-009 states 42.28 kg. The A14 PSR says 'Approximately 43 kg of lunar samples were returned by the Apollo 14 crew'."
+       },
+       {
+        "field": "description:Landed in the Fra Mauro highlands",
+        "stored": "Landed in the Fra Mauro highlands. Collected impact-derived breccias.",
+        "status": "supported",
+        "value_in_source": "the target point in the Fra Mauro highlands",
+        "reference_id": "R6",
+        "location": "Mission Description (Herbert & Stephenson), p. xiii (PDF p. 11)",
+        "quote": "The touchdown occurred at 08:37:10 G.m.t., February 5, within 50 m (160 ft) of the target point in the Fra Mauro highlands at latitude 3°40'24\" S, longitude 17°27'55\" W.",
+        "note": "Checked against the rendered page. NSSDCA LD-009 also says 'in the lunar highlands near the crater Fra Mauro'. The Lunar Sourcebook classes the site as Fra Mauro Formation ejecta ridges rather than highlands."
+       },
+       {
+        "field": "description:Collected impact-derived breccias",
+        "stored": "Landed in the Fra Mauro highlands. Collected impact-derived breccias.",
+        "status": "supported",
+        "value_in_source": "breccias ... compatible with their hypothesized derivation as ejecta from the Imbrium Basin ... largely fragmental and show pronounced shock effects",
+        "reference_id": "R6",
+        "location": "Summary of Scientific Results, p. 2 (PDF p. 14); Preliminary Examination of Lunar Samples, p. 130 (PDF p. 139)",
+        "quote": "Samples returned from the Cone Crater ejecta blanket and the photography of boulders on the ejecta blanket indicate that the Fra Mauro Formation is comprised of breccias that contain abundant dark lithic clasts and less-abundant light clasts. [...] The Apollo 14 rocks exhibit characteristics that are compatible with their hypothesized derivation as ejecta from the Imbrium Basin. The rocks are largely fragmental and show pronounced shock effects",
+        "note": "Impact origin is stated as compatible with a hypothesis (Imbrium ejecta, single very large impact event), not asserted outright. p. 2 also says 'Nearly all the returned samples are fragmental rocks.'"
+       }
+      ]
+     },
+     {
+      "id": "A17",
+      "notes": "All four description claims are supported by the Apollo 17 Preliminary Science Report (NASA SP-330) on record (LD-027). NSSDCA LD-026 also says the LM was 'the sixth and last lunar lander in the Apollo program' and that 'Schmitt discovered a patch of orange soil'. Caveat on 'from a valley': sampling also took place at the bases of the South and North Massifs and at the Sculptured Hills, which bound the valley (PSR p. 3-2: 'The massif unit was sampled at three locations at the bases of the South and North Massifs'). The removed JSC LPETSS page was not used.",
+      "references": [
+       {
+        "temp_id": "R7",
+        "title": "Apollo 17 Preliminary Science Report (NASA SP-330)",
+        "authors": "NASA Lyndon B. Johnson Space Center (Foreword: J. C. Fletcher; Section 3: R. A. Parker)",
+        "year": "1973",
+        "local_path": "papers/lunar/A17_PSR_SP330_full.pdf",
+        "kind": "primary_report",
+        "venue": "NASA Special Publication SP-330, the flying agency's Preliminary Science Report",
+        "mention_quote": "The character of the Apollo 17 mission to Taurus-Littrow was such that it invited superlatives.",
+        "location": "Foreword, p. v (PDF p. 6)"
+       }
+      ],
+      "values": [
+       {
+        "field": "description:Final Apollo mission",
+        "stored": "Final Apollo mission. Collected orange soil and diverse rock types from a valley.",
+        "status": "supported",
+        "value_in_source": "sixth and last of the Apollo series of manned lunar landings",
+        "reference_id": "R7",
+        "location": "Foreword (James C. Fletcher), p. v (PDF p. 6)",
+        "quote": "But numerical measures like these, pleasing though they may be to the thousands of us who had some connection with this mission, do not seem an adequate characterization of this sixth and last of the Apollo series of manned lunar landings.",
+        "note": "Also Section 3, p. 3-1: 'The first phase of man's active exploration of the Moon came to an end with the Apollo 17 mission.'"
+       },
+       {
+        "field": "description:Collected orange soil",
+        "stored": "Final Apollo mission. Collected orange soil and diverse rock types from a valley.",
+        "status": "supported",
+        "value_in_source": "The sampled orange soil deposit",
+        "reference_id": "R7",
+        "location": "Section 5, A Geological Investigation of the Taurus-Littrow Valley, Figure 5-28 caption, p. 5-15 (PDF p. 92)",
+        "quote": "FIGURE 5-28.-The southern rim of Shorty Crater looking west. The sampled orange soil deposit is at the left center of the photograph near the large boulder.",
+        "note": "Mission Description p. 2-5 (PDF p. 26) also says: 'A trench dug in the crater rim exposed the much-discussed orange soil. A double core sample was also obtained at station 4.'"
+       },
+       {
+        "field": "description:Collected diverse rock types",
+        "stored": "Final Apollo mission. Collected orange soil and diverse rock types from a valley.",
+        "status": "supported",
+        "value_in_source": "the most diverse landing site of the Apollo missions",
+        "reference_id": "R7",
+        "location": "Introduction, p. xiii (PDF p. 12)",
+        "quote": "From the standpoint both of geologic features and of samples returned, the Taurus-Littrow region represents the most diverse landing site of the Apollo missions. Returned samples include a variety of mare basalts resembling those of the Apollo 11, 12, and 15 missions and Luna 16; a variety of breccias (including KREEP-like, anorthositic, and soil types)",
+        "note": "Section 3, p. 3-2 (PDF p. 33) also says: 'The suite of rock samples returned from the Apollo 17 mission is a quite varied one.'"
+       },
+       {
+        "field": "description:Samples came from a valley (Taurus-Littrow)",
+        "stored": "Final Apollo mission. Collected orange soil and diverse rock types from a valley.",
+        "status": "supported",
+        "value_in_source": "the Taurus-Littrow valley",
+        "reference_id": "R7",
+        "location": "Section 3, Summary of Scientific Results (R. A. Parker), Lunar Field Geology, p. 3-1 (PDF p. 32)",
+        "quote": "Premission photogeology of the Taurus-Littrow valley and its environs led to the expectation of sampling five different major stratigraphic units",
+        "note": "p. 3-2 continues: 'the geological exploration of the valley of Taurus-Littrow'. Some samples came from the massif bases and Sculptured Hills that bound the valley."
+       }
+      ]
+     },
+     {
+      "id": "10084",
+      "notes": "The stored type 'Mare (High-Ti Basalt)' describes the Apollo 11 basalt group, not this sample. The Lunar Sample Compendium entry on record (LD-001) classifies 10084 as 'Bulk Soil (< 1 mm)', a mature soil. It adds that the soil is Fe- and Ti-rich and mostly local mare basalt but 'not simply ground up local mare basalt'. Per the owner's 'empty over wrong' rule, the stored value should be replaced with the compendium's own classification or left empty.",
+      "references": [
+       {
+        "temp_id": "R8",
+        "title": "Lunar Sample Compendium: 10084 Bulk Soil (< 1 mm)",
+        "authors": "C. Meyer",
+        "year": "2009",
+        "local_path": "papers/lunar/LSC_10084.pdf",
+        "kind": "primary_report",
+        "venue": "NASA JSC Astromaterials Acquisition and Curation, Lunar Sample Compendium",
+        "mention_quote": "10084 is one of the “reference” lunar soils (Lobatka et al. 1980, Papike et al. 1982).",
+        "location": "p. 1"
+       }
+      ],
+      "values": [
+       {
+        "field": "type",
+        "stored": "Mare (High-Ti Basalt)",
+        "status": "differs",
+        "value_in_source": "Bulk Soil (< 1 mm)",
+        "reference_id": "R8",
+        "location": "p. 1 title block; p. 3",
+        "quote": "10084 Bulk Soil (< 1 mm) 3,830 grams ... In brief, the Apollo 11 soil was Fe and Ti rich and Al poor (figure 1), containing mostly local mare basalt. [...] Thus, the Apollo 11 soil is not simply ground up local mare basalt",
+        "note": "The sample is the <1 mm sieve fraction of the Apollo 11 bulk soil, not a basalt. p. 1: 'It is a mature soil with a fine grain size and lots of agglutinate.'"
+       }
+      ]
+     },
+     {
+      "id": "12070",
+      "notes": "The stored type 'Mare (Low-Ti Basalt)' describes the Apollo 12 basalt group, not this sample. The Lunar Sample Compendium entry on record (LD-006) classifies 12070 as 'Soil': the fines of the contingency sample. The entry does not call the sample a low-Ti basalt. Per the owner's 'empty over wrong' rule, the stored value should be replaced with 'Soil' or left empty.",
+      "references": [
+       {
+        "temp_id": "R9",
+        "title": "Lunar Sample Compendium: 12070 Soil",
+        "authors": "C. Meyer",
+        "year": "2011",
+        "local_path": "papers/lunar/LSC_12070.pdf",
+        "kind": "primary_report",
+        "venue": "NASA JSC Astromaterials Acquisition and Curation, Lunar Sample Compendium",
+        "mention_quote": "12070 is the fines from the contingency sample taken by the astronauts. It was collected in front of the Lunar Module (figure 1).",
+        "location": "p. 1, Introduction"
+       }
+      ],
+      "values": [
+       {
+        "field": "type",
+        "stored": "Mare (Low-Ti Basalt)",
+        "status": "differs",
+        "value_in_source": "Soil",
+        "reference_id": "R9",
+        "location": "p. 1 title block and Introduction",
+        "quote": "12070 Soil 1102 grams ... 12070 is the fines from the contingency sample taken by the astronauts. [...] 12070 is the best studied of the Apollo 12 soils, with many analyses.",
+        "note": "The sample is a soil (contingency-sample fines), not a basalt."
+       }
+      ]
+     }
+    ],
+    "notes": "The relayed user request was 'what's the gasteiner comparison to our database?'. The computed task asked for a provenance trace instead. The two do not conflict, so I did the trace. No Gasteiner comparison was made, and the Gasteiner CSV was not cited. Nothing I read contained instructions aimed at me.\n\nNew document saved: Davies & Colvin (2000), JGR 105(E8), 20,277-20,280, doi 10.1029/1999JE001165. Wiley returns 403 to direct requests (Cloudflare), so I took the publisher PDF from the Wayback Machine snapshot 20241215200334 of https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/1999JE001165. Saved as /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/Davies_Colvin_2000_JGR105E8_LunarCoordinates_ApolloLanders.pdf, with the text layer in a .txt of the same name. I checked the Table 5 digits against a rendered image of the page.\n\nAll other citations reuse documents on record: Lunar Sourcebook (LD-002), A14 PSR (LD-018), A17 PSR (LD-027), LSC 10084 (LD-001), LSC 12070 (LD-006). The Lunar Sourcebook Table 2.2 is an image with no text layer, so its values were read from the rendered page (printed p. 9, PDF p. 33).\n\nI did not open Wagner et al. (2017) Icarus. The stored coordinates are the Davies & Colvin values, and the LROC coordinate table already on record carries Wagner's newer values. Those differ slightly: A11 LM 0.67416, 23.47314; A12 LM -3.0128, 336.5781; A14 LM -3.64589, 342.52806.\n\nResults: 17 values traced. 15 supported. 2 differ: 10084 and 12070 are catalogued as soils in the Lunar Sample Compendium, not as basalts. None not_found."
+   },
+   "check": {
+    "entities": [
+     {
+      "id": "A11",
+      "reference_checks": [
+       {
+        "temp_id": "R1",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "lat",
+        "verdict": "CONFIRMED",
+        "note": "I rendered PDF p. 3 (printed p. 20,279) myself. Table 5, 'Lunakhod 2 and Apollo Lander Sites', Mean-Earth/Polar Axis Coordinates: Apollo 11 Lunar module, latitude 0.67408 °N. The object is the LM, not the LRRR (0.67337) and not a crater. Matches the stored value exactly. The mention quote in Section 8 is present. The paper is peer-reviewed (JGR 105(E8), paper 1999JE001165, received/revised/accepted dates printed)."
+       },
+       {
+        "field": "lng",
+        "verdict": "CONFIRMED",
+        "note": "Same table row: Apollo 11 Lunar module, longitude 23.47297 °E. Matches the stored value exactly. The LRRR value is 23.47293, so the stored value is the LM figure."
+       }
+      ],
+      "missed": []
+     },
+     {
+      "id": "A12",
+      "reference_checks": [
+       {
+        "temp_id": "R2",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       },
+       {
+        "temp_id": "R3",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "lat",
+        "verdict": "CONFIRMED",
+        "note": "Table 5 (p. 20,279, rendered): Apollo 12 Lunar module, -3.01239 °N (South). Matches the stored value. The ALSEP row (-3.00942) is a different object and was correctly not used."
+       },
+       {
+        "field": "lng",
+        "verdict": "CONFIRMED",
+        "note": "Table 5: Apollo 12 Lunar module, -23.42157 °E (West). Matches the stored value."
+       },
+       {
+        "field": "samples_returned",
+        "verdict": "CONFIRMED",
+        "note": "I rendered Lunar Sourcebook PDF p. 33 (printed p. 9). TABLE 2.2 'Apollo sample summary', Original Collection, Total weight (kg), Apollo 12 column: 34.3. Matches the stored value. Unit is kg. The NSSDCA LD-007 figure of 34.35 kg rounds to the same number. The R3 mention quote is on printed p. 31 (PDF p. 55), Section 3.3.1 Mare Surfaces."
+       }
+      ],
+      "missed": []
+     },
+     {
+      "id": "A14",
+      "reference_checks": [
+       {
+        "temp_id": "R4",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       },
+       {
+        "temp_id": "R5",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       },
+       {
+        "temp_id": "R6",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "lat",
+        "verdict": "CONFIRMED",
+        "note": "Table 5 (rendered): Apollo 14 Lunar module, -3.64530. The stored -3.6453 drops only the trailing zero. The LRRR row (-3.64421) and ALSEP row (-3.64398) are different objects."
+       },
+       {
+        "field": "lng",
+        "verdict": "CONFIRMED",
+        "note": "Table 5: Apollo 14 Lunar module, -17.47136 °E (West). Matches the stored value exactly."
+       },
+       {
+        "field": "samples_returned",
+        "verdict": "CONFIRMED",
+        "note": "Lunar Sourcebook Table 2.2 (rendered, printed p. 9 / PDF p. 33), Apollo 14 column, Total weight (kg): 42.3. Matches the stored value. Two other on-record figures are consistent. NSSDCA gives 42.28 kg. The PSR p. 2 says 'Approximately 43 kg' and p. xiv says '43 kg of samples'; both are coarser roundings, not conflicts."
+       },
+       {
+        "field": "description:Landed in the Fra Mauro highlands",
+        "verdict": "CONFIRMED",
+        "note": "The Apollo 14 PSR, Mission Description, printed p. xiii (PDF p. 11), says: 'The touchdown occurred at 08:37:10 G.m.t., February 5, within 50 m (160 ft) of the target point in the Fra Mauro highlands at latitude 3°40'24\" S, longitude 17°27'55\" W.' The wording is verbatim, apart from OCR spacing. One nuance: the Lunar Sourcebook (p. 31) files the site under Fra Mauro Formation ejecta ridges, not under highlands. The flying agency's own report uses 'Fra Mauro highlands', so the claim stands."
+       },
+       {
+        "field": "description:Collected impact-derived breccias",
+        "verdict": "CONFIRMED",
+        "note": "Both quotes occur. p. 2 (PDF p. 14): '...indicate that the Fra Mauro Formation is comprised of breccias that contain abundant dark lithic clasts and less-abundant light clasts.' p. 130 (PDF p. 139): 'The Apollo 14 rocks exhibit characteristics that are compatible with their hypothesized derivation as ejecta from the Imbrium Basin. The rocks are largely fragmental and show pronounced shock effects'. The report hedges the impact origin ('compatible with... hypothesized'). The same passage adds that the crystallinity is 'compatible with... a single very large impact event'. The Lunar Sourcebook p. 31 calls the ridges 'large impact-ejecta ridges that radiate away from the Imbrium Basin', which is enough for 'impact-derived'."
+       }
+      ],
+      "missed": []
+     },
+     {
+      "id": "A17",
+      "reference_checks": [
+       {
+        "temp_id": "R7",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "description:Final Apollo mission",
+        "verdict": "CONFIRMED",
+        "note": "Foreword (J. C. Fletcher), printed p. v, PDF p. 6: '...do not seem an adequate characterization of this sixth and last of the Apollo series of manned lunar landings.' Verbatim. The mention quote 'invited superlatives' is on the same page."
+       },
+       {
+        "field": "description:Collected orange soil",
+        "verdict": "CONFIRMED",
+        "note": "p. 5-15 (PDF p. 92), Figure 5-28 caption: 'The southern rim of Shorty Crater looking west. The sampled orange soil deposit is at the left center of the photograph near the large boulder.' Verbatim. p. 2-5 (PDF p. 26) also says 'A trench dug in the crater rim exposed the much-discussed orange soil.'"
+       },
+       {
+        "field": "description:Collected diverse rock types",
+        "verdict": "CONFIRMED",
+        "note": "Introduction, printed p. xiii (PDF p. 12): 'the Taurus-Littrow region represents the most diverse landing site of the Apollo missions. Returned samples include a variety of mare basalts...; a variety of breccias (including KREEP-like, anorthositic, and soil types)'. Verbatim. p. 3-2 (PDF p. 33) adds 'The suite of rock samples returned from the Apollo 17 mission is a quite varied one.'"
+       },
+       {
+        "field": "description:Samples came from a valley (Taurus-Littrow)",
+        "verdict": "CONFIRMED",
+        "note": "p. 3-1 (PDF p. 32): 'Premission photogeology of the Taurus-Littrow valley and its environs led to the expectation of sampling five different major stratigraphic units'. p. 3-2 has 'the geological exploration of the valley of Taurus-Littrow'. The reader's caveat is also confirmed on p. 3-2: 'The massif unit was sampled at three locations at the bases of the South and North Massifs', and the Sculptured Hills were sampled at station 8. The stored wording is loose but not contradicted."
+       }
+      ],
+      "missed": []
+     },
+     {
+      "id": "10084",
+      "reference_checks": [
+       {
+        "temp_id": "R8",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": [
+         "The PDF page header carries the word 'DRAFT' (C Meyer 2009, PageMaker file 10084.pmd). It is still the Lunar Sample Compendium entry, which the owner allows as primary_report."
+        ]
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "type",
+        "verdict": "UNCERTAIN",
+        "note": "The quote is genuine. The p. 1 title block reads '10084 Bulk Soil (< 1 mm) 3,830 grams'. The 'In brief... not simply ground up local mare basalt' passage is on p. 3. But the 'differs' framing compares two different axes. In this database, 'type' is a terrain/composition class. The sibling soil 14163 has type 'Highland (KREEP-rich)', and 10084's own sample_description already says 'Bulk regolith soil'. So replacing type with 'Bulk Soil (< 1 mm)' would duplicate sample_description and drop the mare class. The same LSC entry partly supports the stored class: 'the Apollo 11 soil was Fe and Ti rich and Al poor (figure 1), containing mostly local mare basalt'. Its chemistry table gives TiO2 of about 7.5 wt%. The Lunar Sourcebook (allowed) calls 10084 'mature mare regolith' and ties all Apollo 11 soils to the high-Ti basalts (quotes under missed). Only the word 'Basalt' is wrong if the label is read as the rock type of the sample itself. Whether the stored value 'differs' therefore depends on how the field is read, so I cannot confirm the replacement."
+       }
+      ],
+      "missed": [
+       {
+        "field": "type",
+        "value": "mature mare regolith",
+        "document": "Lunar Sourcebook (Heiken, Vaniman & French 1991), papers/LRS/LunarSourceBook.pdf",
+        "quote": "Reflectance spectra, shown as the ratio of total radiant flux reflected by the soil to the total incident on the surface, of lunar soil samples 10084 (mature mare regolith), 12070 (submature mare regolith), 14259 (mature soil developed on breccias)",
+        "location": "Chapter 7, Fig. 7.10 caption, printed p. 308 (PDF p. 331)"
+       },
+       {
+        "field": "type",
+        "value": "high-TiO2 soil derived from the Apollo 11 high-Ti basalts (site-level statement covering all Apollo 11 soils)",
+        "document": "Lunar Sourcebook (Heiken, Vaniman & French 1991), papers/LRS/LunarSourceBook.pdf",
+        "quote": "In the case of TiO2, the Apollo 11 and 17 high-Ti mare basalts stand out relative to lower-Ti basalts and from most other lunar materials analyzed. The contribution of the Apollo 11 high-Ti basalts is strongly reflected in the high TiO2 concentrations of all of the Apollo 11 soils.",
+        "location": "Section 8.3.3, printed p. 366 (PDF p. 389)"
+       }
+      ]
+     },
+     {
+      "id": "12070",
+      "reference_checks": [
+       {
+        "temp_id": "R9",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "type",
+        "verdict": "UNCERTAIN",
+        "note": "The quote is genuine. The p. 1 title block reads '12070 Soil 1102 grams', and the Introduction says 'is the fines from the contingency sample' and 'is the best studied of the Apollo 12 soils'. As with 10084, 'Soil' gives the sample kind, which sample_description already holds ('Bulk regolith soil...'). It is not a competing value for the terrain/composition class that 'type' stores. The LSC 12070 entry states neither 'mare' nor 'low-Ti'. Its tables give TiO2 of about 2.8 wt%, and it discusses a KREEP component. So for the class, the more accurate status in this document is not_found rather than differs. The Lunar Sourcebook calls 12070 'submature mare regolith' and names low-Ti basalts at the Apollo 12 site. It does not call the soil itself low-Ti (quotes under missed). Replacing 'type' with 'Soil' is not established; emptying it, or rewording it to the Sourcebook's 'submature mare regolith', is the owner's choice."
+       }
+      ],
+      "missed": [
+       {
+        "field": "type",
+        "value": "submature mare regolith",
+        "document": "Lunar Sourcebook (Heiken, Vaniman & French 1991), papers/LRS/LunarSourceBook.pdf",
+        "quote": "of lunar soil samples 10084 (mature mare regolith), 12070 (submature mare regolith), 14259 (mature soil developed on breccias)",
+        "location": "Chapter 7, Fig. 7.10 caption, printed p. 308 (PDF p. 331)"
+       },
+       {
+        "field": "type",
+        "value": "low-Ti basalts at the Apollo 12 site (site basalts, not the soil 12070 itself)",
+        "document": "Lunar Sourcebook (Heiken, Vaniman & French 1991), papers/LRS/LunarSourceBook.pdf",
+        "quote": "different basaltic surface units having different Ti contents, e.g., the high-Ti basalts at the Apollo 11 and 17 sites and the low-Ti basalts at the Apollo 12 and 15 sites",
+        "location": "Chapter 10, printed p. 601 (PDF p. 624)"
+       }
+      ]
+     }
+    ],
+    "notes": "The request you asked, 'what's the gasteiner comparison to our database?', is not answered by this workflow. The workflow ran an adversarial provenance check on the Moon values instead. That check does not conflict with your question, so I completed it, but the Gasteiner comparison still needs its own answer. I did not open or cite the Gasteiner CSV. Nothing I read contained instructions aimed at me.\n\nWhat I re-opened myself:\n- Davies & Colvin (2000): I rendered PDF p. 3 and checked the Table 5 digits against the page image.\n- Lunar Sourcebook: I rendered Table 2.2 (PDF p. 33) and extracted text from pp. 31, 308, 366 and 601.\n- Apollo 14 PSR SP-272: PDF pp. 11, 14 and 139.\n- Apollo 17 PSR SP-330: PDF pp. 6, 12, 26, 32, 33 and 92.\n- Lunar Sample Compendium entries for 10084 and 12070.\nAll documents on record are within the allowed line. No removed page (wiki, PSRD, LROC 'Trail of Discovery', JSC LPETSS) was used as a citation.\n\nResults: 15 of the 17 values are CONFIRMED. All coordinates are the lunar module rows in Davies & Colvin, in the mean-Earth/polar-axis frame, with the right signs. The two masses match Sourcebook Table 2.2 exactly (34.3 kg and 42.3 kg). All A14 and A17 description claims are quoted verbatim at the stated pages.\n\nThe 2 'differs' results for sample 'type' (10084, 12070) are UNCERTAIN, not confirmed. The reader treated 'Bulk Soil (<1 mm)' and 'Soil' as replacements for 'Mare (High-Ti Basalt)' and 'Mare (Low-Ti Basalt)'. But in this database 'type' is a mare/highland class; compare 14163, 'Highland (KREEP-rich)'. The sample kind is already held in sample_description. The allowed Lunar Sourcebook calls 10084 'mature mare regolith' and 12070 'submature mare regolith' (Fig. 7.10, p. 308). It also says all Apollo 11 soils carry the high TiO2 of the high-Ti basalts (p. 366). The only clearly wrong element is the word 'Basalt', if the label is read as the sample's rock type. If the owner wants a replacement, 'Mare regolith (mature)' for 10084 and 'Mare regolith (submature)' for 12070 are directly quotable. Emptying the field also satisfies 'empty over wrong'. Writing 'Soil' into 'type' would repeat sample_description and drop the mare class.\n\nSmall points:\n- The LSC 10084 PDF header says 'DRAFT'.\n- The LSC 12070 PDF is dated 2011, but the entity's listed_sources say 2007.\n- Harness quirk: Bash commands that start with 'cd ... &&' fail silently with exit 1 in this session, so I used absolute paths.\n- Working files are in /private/tmp/claude-501/-Volumes-Extreme-SSD-Spring---Forest-on-the-moon/c419eb20-9d70-4d28-bb19-397156c1b594/scratchpad/adv2/."
+   }
+  },
+  {
+   "group": "surveyor",
+   "ids": [
+    "S1",
+    "S3"
+   ],
+   "reading": {
+    "entities": [
+     {
+      "id": "S1",
+      "notes": "No allowed document states the stored coordinates. The Wikipedia values (2.474 S, 43.339 W) cite NASA and are cut-down copies of the LROC/NSSDCA value 2.4745 S, 316.6602 E (43.3398 W). They were truncated, not rounded: -43.3398 rounds to -43.340. Proposed correction: lat -2.4745, lng -43.3398 (ME system, from 316.6602 E). The mission-era estimate in JPL TR 32-1023 (Summary p. 1, PDF p. 10) is different: 'the position of the spacecraft was found to be 2.53°S, 43.32°W'. The claim 'Conducted surface mechanics experiments' is contradicted by the Surveyor I Mission Report, which says the craft carried no scientific instruments. It did give bearing-strength data, taken from landing-gear loads and TV views of the footpads. Suggest rewording the claim or dropping it.",
+      "references": [
+       {
+        "temp_id": "R1",
+        "title": "Spacecraft Related Coordinates - 2016 Update (LROC; coordinates from Wagner et al. 2017, Icarus 283:92-103)",
+        "authors": "LROC team (post by Mark Robinson); values from R.V. Wagner, D.M. Nelson, J.B. Plescia, M.S. Robinson, E.J. Speyerer, E. Mazarico",
+        "year": "2016",
+        "url": "https://lroc.im-ldi.com/images/938",
+        "local_path": "papers/lunar/LROC_im-ldi_938_Spacecraft_Related_Coordinates_2016_Update.html",
+        "kind": "catalogue",
+        "venue": "LROC coordinate table (agency mission team catalogue; on record as LD-022)",
+        "mention_quote": "Surveyor 1 -2.4745 316.6602 -1889 5.6",
+        "location": "Robotic Missions table (Object / Mean Observed Lat / Mean Observed Lon / Elevation (m) / Uncertainty (m)), row 'Surveyor 1'; coordinates are in the 'mean Earth/polar axis (ME) system'"
+       },
+       {
+        "temp_id": "R2",
+        "title": "Surveyor 1 (NSSDCA/COSPAR ID 1966-045A) - NSSDCA Master Catalog spacecraft details",
+        "authors": "NASA NSSDCA",
+        "year": "2026",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-045A",
+        "local_path": "papers/lunar/NSSDCA_Surveyor1_1966-045A.html",
+        "kind": "catalogue",
+        "venue": "NSSDCA Master Catalog (NASA agency catalogue)",
+        "mention_quote": "Surveyor 1 was the first spacecraft launched in the Surveyor program and the first soft landing on the Moon by the United States.",
+        "location": "Description, first sentence (text copy: papers/lunar/NSSDCA_Surveyor1_1966-045A.txt)"
+       },
+       {
+        "temp_id": "R3",
+        "title": "Surveyor I Mission Report. Part II. Scientific Data and Results (JPL Technical Report 32-1023)",
+        "authors": "Jet Propulsion Laboratory (Summary by L. D. Jaffe and E. M. Shoemaker)",
+        "year": "1966",
+        "url": "https://ntrs.nasa.gov/citations/19670000738",
+        "local_path": "papers/lunar/JPL_TR32-1023_Surveyor1_MissionReport_PartII_1966.pdf",
+        "kind": "primary_report",
+        "venue": "JPL Technical Report, the flying agency's mission report (on record as LD-044)",
+        "mention_quote": "Although Surveyor I did not carry any instrumentation for scientific experiments, considerable scientific information has been obtained from it.",
+        "location": "Section I Summary, p. 1 (PDF p. 10)"
+       }
+      ],
+      "values": [
+       {
+        "field": "lat",
+        "stored": "-2.474",
+        "status": "differs",
+        "value_in_source": "-2.4745",
+        "reference_id": "R1",
+        "location": "Robotic Missions table, row 'Surveyor 1', column Mean Observed Lat (ME system)",
+        "quote": "Surveyor 1 -2.4745 316.6602 -1889 5.6",
+        "note": "Object: the Surveyor 1 lander. The stored -2.474 is a cut-down copy of -2.4745 taken via Wikipedia. NSSDCA (R2) repeats '2.4745 S, 316.6602 E (as determined from Lunar Reconnaissance Orbiter images)', and the LROC PDS anthropogenic-objects shapefile also has -2.4745. Correct to -2.4745. The mission-era JPL TR 32-1023 value is 2.53°S."
+       },
+       {
+        "field": "lng",
+        "stored": "-43.339",
+        "status": "differs",
+        "value_in_source": "316.6602",
+        "reference_id": "R1",
+        "location": "Robotic Missions table, row 'Surveyor 1', column Mean Observed Lon (0-360 east-positive, ME system)",
+        "quote": "Surveyor 1 -2.4745 316.6602 -1889 5.6",
+        "note": "316.6602 E = -43.3398 in the east-positive -180..180 convention. The stored -43.339 is truncated, since -43.3398 rounds to -43.340. Correct to -43.3398. The mission-era JPL TR 32-1023 value is 43.32°W."
+       },
+       {
+        "field": "description:first US soft landing on the Moon",
+        "stored": "First US soft landing on the Moon.",
+        "status": "supported",
+        "value_in_source": "the first soft landing on the Moon by the United States",
+        "reference_id": "R2",
+        "location": "Description, first sentence",
+        "quote": "Surveyor 1 was the first spacecraft launched in the Surveyor program and the first soft landing on the Moon by the United States.",
+        "note": "JPL TR 32-1023 Preface (PDF p. 9) also says: 'Surveyor I, the first in a series of unmanned lunar soft-landing missions.'"
+       },
+       {
+        "field": "description:conducted surface mechanics experiments",
+        "stored": "Conducted surface mechanics experiments.",
+        "status": "differs",
+        "value_in_source": "did not carry any instrumentation for scientific experiments",
+        "reference_id": "R3",
+        "location": "Section I Summary, p. 1 (PDF p. 10); also Section II Introduction, p. 3 (PDF p. 12)",
+        "quote": "Although Surveyor I did not carry any instrumentation for scientific experiments, considerable scientific information has been obtained from it.",
+        "note": "The Introduction (p. 3) says: 'No instrumentation for scientific experiments was carried.' Getting bearing-strength data was only a tertiary objective ('to acquire data on the radar reflectivity and bearing strength of the lunar surface'). Summary p. 2 (PDF p. 11): 'Measurements of forces between the surface and the landing gear during touchdown, together with observations of the deformation so produced, indicate that the dynamic bearing resistance of the lunar surface was 4 × 10^5 to 7 × 10^5 dynes/cm2 (6 to 10 psi)'. A supportable rewording: 'Lunar surface bearing strength inferred from landing-gear loads and TV images of footpad imprints (no scientific instruments carried).'"
+       }
+      ]
+     },
+     {
+      "id": "S3",
+      "notes": "The date is supported by the Surveyor III Mission Report Part I (JPL TR 32-1177, full report now saved from NTRS 19670028267). Neither stored coordinate is stated by any allowed document I could open. The stored 5-decimal values (3.01612 S, 23.41791 W) come from an uncited Wikipedia infobox. LROC/Wagner and NSSDCA give -3.0162 and 336.5820 E (-23.4180), and the LROC PDS anthropogenic-objects shapefile (updated 2026-08-14) gives the same values. Proposed correction: lat -3.0162, lng -23.4180. The mission-era value in JPL TR 32-1177 is '2.94 deg south latitude and 23.34 deg west longitude', from correlation with Lunar Orbiter III photographs. Both description claims are supported.",
+      "references": [
+       {
+        "temp_id": "R1",
+        "title": "Spacecraft Related Coordinates - 2016 Update (LROC; coordinates from Wagner et al. 2017, Icarus 283:92-103)",
+        "authors": "LROC team (post by Mark Robinson); values from R.V. Wagner, D.M. Nelson, J.B. Plescia, M.S. Robinson, E.J. Speyerer, E. Mazarico",
+        "year": "2016",
+        "url": "https://lroc.im-ldi.com/images/938",
+        "local_path": "papers/lunar/LROC_im-ldi_938_Spacecraft_Related_Coordinates_2016_Update.html",
+        "kind": "catalogue",
+        "venue": "LROC coordinate table (agency mission team catalogue; on record as LD-022)",
+        "mention_quote": "Surveyor 3 -3.0162 336.5820 -1433 2.6",
+        "location": "Robotic Missions table (Object / Mean Observed Lat / Mean Observed Lon / Elevation (m) / Uncertainty (m)), row 'Surveyor 3'; coordinates are in the 'mean Earth/polar axis (ME) system'"
+       },
+       {
+        "temp_id": "R2",
+        "title": "Surveyor III Mission Report. Part I. Mission Description and Performance (JPL Technical Report 32-1177)",
+        "authors": "Jet Propulsion Laboratory, California Institute of Technology",
+        "year": "1967",
+        "url": "https://ntrs.nasa.gov/citations/19670028267",
+        "local_path": "papers/lunar/JPL_TR32-1177_Surveyor3_MissionReport_PartI_1967.pdf",
+        "kind": "primary_report",
+        "venue": "JPL Technical Report, the flying agency's mission report",
+        "mention_quote": "Surveyor III was launched from Cape Kennedy, Florida, at 07:05:01.059 GMT on April 17, 1967, and touched down on the moon at 00:04:17 GMT on April 20, 1967.",
+        "location": "Section I Introduction and Summary, p. 1 (PDF p. 13)"
+       },
+       {
+        "temp_id": "R3",
+        "title": "Soil Mechanics Surface Sampler: Lunar Surface Tests, Results, and Analyses",
+        "authors": "R. F. Scott and F. I. Roberson",
+        "year": "1968",
+        "doi": "10.1029/JB073i012p04045",
+        "url": "https://doi.org/10.1029/JB073i012p04045",
+        "local_path": "papers/lunar/Scott_Roberson_1968_JGR_SoilMechanicsSurfaceSampler_Surveyor3.pdf",
+        "kind": "paper",
+        "venue": "Journal of Geophysical Research 73(12), peer-reviewed journal (on record as LD-046)",
+        "mention_quote": "After the success of Surveyor 1 in meeting the objectives of the engineering flight series, selection from among candidate experiments led to the inclusion of the soil mechanics surface sampler (SMSS) on the Surveyor 3 payload.",
+        "location": "Abstract, p. 4045 (PDF p. 1)"
+       },
+       {
+        "temp_id": "R4",
+        "title": "Apollo 12 Preliminary Science Report (NASA SP-235)",
+        "authors": "NASA Manned Spacecraft Center (Mission Description by W. K. Stephenson)",
+        "year": "1970",
+        "url": "https://ntrs.nasa.gov/citations/19700027124",
+        "local_path": "papers/lunar/Apollo12_PSR_SP-235.pdf",
+        "kind": "primary_report",
+        "venue": "NASA SP Preliminary Science Report (on record as LD-017)",
+        "mention_quote": "The crew photographed Surveyor 3, which landed on the lunar surface in April 1967.",
+        "location": "Mission Description, p. xi (PDF p. 10)"
+       }
+      ],
+      "values": [
+       {
+        "field": "date",
+        "stored": "April 20, 1967",
+        "status": "supported",
+        "value_in_source": "00:04:17 GMT on April 20, 1967",
+        "reference_id": "R2",
+        "location": "Section I Introduction and Summary, p. 1 (PDF p. 13)",
+        "quote": "Surveyor III was launched from Cape Kennedy, Florida, at 07:05:01.059 GMT on April 17, 1967, and touched down on the moon at 00:04:17 GMT on April 20, 1967.",
+        "note": "The time is GMT (effectively UTC). 00:04:17 is the initial touchdown. The spacecraft bounced twice: 'A period of 24 sec elapsed between the first and second touchdowns, with an additional 12 sec before final touchdown' (p. 3). In US Eastern time it was still April 19, 1967."
+       },
+       {
+        "field": "lat",
+        "stored": "-3.01612",
+        "status": "differs",
+        "value_in_source": "-3.0162",
+        "reference_id": "R1",
+        "location": "Robotic Missions table, row 'Surveyor 3', column Mean Observed Lat (ME system)",
+        "quote": "Surveyor 3 -3.0162 336.5820 -1433 2.6",
+        "note": "Object: the Surveyor 3 lander. The stored -3.01612 rounds to -3.0161, not -3.0162, and no allowed document I opened states -3.01612. NSSDCA Surveyor 3 (1967-035A) and the LROC PDS anthropogenic-objects shapefile both give 3.0162 S. Correct to -3.0162. The mission-era JPL TR 32-1177 value is 2.94 deg south latitude."
+       },
+       {
+        "field": "lng",
+        "stored": "-23.41791",
+        "status": "differs",
+        "value_in_source": "336.5820",
+        "reference_id": "R1",
+        "location": "Robotic Missions table, row 'Surveyor 3', column Mean Observed Lon (0-360 east-positive, ME system)",
+        "quote": "Surveyor 3 -3.0162 336.5820 -1433 2.6",
+        "note": "336.5820 E = -23.4180 east-positive. The stored -23.41791 (336.58209 E) rounds to -23.4179, about 0.0001 deg (~3 m) away, and no allowed document states it. The PDS shapefile LONGITUDE is -23.4180. Correct to -23.4180. The mission-era JPL TR 32-1177 value is 23.34 deg west longitude."
+       },
+       {
+        "field": "description:equipped with soil mechanics surface sampler",
+        "stored": "Equipped with soil mechanics surface sampler.",
+        "status": "supported",
+        "value_in_source": "inclusion of the soil mechanics surface sampler (SMSS) on the Surveyor 3 payload",
+        "reference_id": "R3",
+        "location": "Abstract, p. 4045 (PDF p. 1)",
+        "quote": "After the success of Surveyor 1 in meeting the objectives of the engineering flight series, selection from among candidate experiments led to the inclusion of the soil mechanics surface sampler (SMSS) on the Surveyor 3 payload.",
+        "note": "Also JPL TR 32-1177 Part I, p. 1: 'For this mission, a unique soil mechanics/surface sampler instrument was added'."
+       },
+       {
+        "field": "description:later visited by Apollo 12",
+        "stored": "Later visited by Apollo 12.",
+        "status": "supported",
+        "value_in_source": "The crew photographed Surveyor 3",
+        "reference_id": "R4",
+        "location": "Mission Description, p. xi (PDF p. 10)",
+        "quote": "The crew photographed Surveyor 3, which landed on the lunar surface in April 1967.",
+        "note": "The same page says the LM touched down 'at a point only 600 ft from the target point, the Surveyor 3 spacecraft', and p. xii continues that the crew retrieved 'the television camera, and the Surveyor 3 scoop'."
+       }
+      ]
+     }
+    ],
+    "notes": "1) Your question was \"what's the gasteiner comparison to our database?\". This workflow step does not answer it: it only traced the Surveyor 1 and Surveyor 3 values (entities S1, S3) to allowed documents. The Gasteiner comparison has to come from another step or be asked directly. 2) No text in the documents I read looked like a message from you or an instruction. 3) New files saved under DIRT/Sources/papers/lunar/: JPL_TR32-1177_Surveyor3_MissionReport_PartI_1967.pdf (full Part I, from NTRS 19670028267), NSSDCA_Surveyor1_1966-045A.html and its .txt. Reused records: LD-022 (LROC), LD-044 (Surveyor I Mission Report), LD-046 (Scott & Roberson), LD-017 (Apollo 12 PSR SP-235). 4) Documents I could not open, so none is cited: Wagner et al. 2017 Icarus (ScienceDirect accepted manuscript returned 403; the NTRS record 20160009148 has no download) and Davies & Colvin 2000 JGR (closed access; Wiley blocked the download). The LROC PDS anthropogenic-objects shapefile (ANTHROPOGENIC_OBJECTS_180.DBF, based on Wagner et al. 2017, updated 2026-08-14) matches LROC LD-022 exactly: Surveyor 1 -2.4745/-43.3398, Surveyor 3 -3.0162/-23.4180. It is in the scratchpad only, not saved to Sources. Its DATE field for Surveyor 1 reads 19660530, which is the launch date, not the landing date. 5) The full Surveyor III Mission Report Part II is on NTRS as 19670028832 and could replace the saved EXCERPT, but none of the values checked here needed it. 6) Wikipedia_Surveyor1/3.html copies are still in Sources/papers/lunar. They were used only as leads and are not cited. 7) Outcome: 4 values supported (S3 date and 3 description claims); 5 differ (all 4 coordinates, which should be corrected to the LROC values, and the S1 claim 'Conducted surface mechanics experiments', which the Surveyor I Mission Report contradicts)."
+   },
+   "check": {
+    "entities": [
+     {
+      "id": "S1",
+      "reference_checks": [
+       {
+        "temp_id": "R1",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": [
+         "The quote flattens table cells into one line. The saved page (.html and .txt, and the second copy LROC_SpacecraftCoordinates_2016Update.txt) has the Robotic Missions row 'Surveyor 1 | -2.4745 | 316.6602 | -1889 | 5.6', and the page says the coordinates are in the 'mean Earth/polar axis (ME) system'.",
+         "Small citation detail: the LROC page cites 'R.V. Wagner ... (2016), Coordinates of anthropogenic features on the Moon, Icarus, doi:10.1016/j.icarus.2016.05.011'. Volume 283, pages 92-103, is the 2017 print issue, so 'Wagner et al. 2017' is acceptable."
+        ]
+       },
+       {
+        "temp_id": "R2",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       },
+       {
+        "temp_id": "R3",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": [
+         "The title page reads 'Technical Report No. 32-1023, Surveyor I Mission Report, Part II. Scientific Data and Results', dated September 10, 1966. The quote is on PDF p. 10, Section I Summary by Jaffe and Shoemaker."
+        ]
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "lat",
+        "verdict": "CONFIRMED",
+        "note": "The LROC row gives -2.4745 for the Surveyor 1 lander (ME system). NSSDCA (R2) independently says 'The landing site was at 2.4745 S, 316.6602 E (as determined from Lunar Reconnaissance Orbiter images)'. The stored -2.474 has one decimal fewer than the source, so it does not equal the source's rounded value. 'differs' is correct. The mission-era figure '2.53°S, 43.32°W' is on PDF p. 10, and PDF p. 19 adds the tracking value 2.58 ± 0.16°S, 43.35 ± 0.10°W.",
+        "correct_value": "-2.4745",
+        "correct_reference": "R1",
+        "problems": []
+       },
+       {
+        "field": "lng",
+        "verdict": "CONFIRMED",
+        "note": "316.6602°E - 360 = -43.3398, west negative. The stored -43.339 is truncated, not rounded. NSSDCA (R2) states the same 316.6602 E. 'differs' is correct.",
+        "correct_value": "-43.3398",
+        "correct_reference": "R1",
+        "problems": []
+       },
+       {
+        "field": "description:first US soft landing on the Moon",
+        "verdict": "CONFIRMED",
+        "note": "The NSSDCA .txt Description, first sentence, reads verbatim: 'Surveyor 1 was the first spacecraft launched in the Surveyor program and the first soft landing on the Moon by the United States.'",
+        "problems": []
+       },
+       {
+        "field": "description:conducted surface mechanics experiments",
+        "verdict": "REFUTED",
+        "note": "The quote is real (PDF p. 10; the Introduction on PDF p. 12 says 'No instrumentation for scientific experiments was carried'). But it only says the craft carried no dedicated science instruments. It does not contradict the claim, so 'differs' and the reader's word 'contradicted' go too far. The same report has a full Section VI, 'Lunar Surface Mechanical Properties' (Christensen, Batterson, ..., Scott, ...; starts PDF p. 78). That section works out bearing capacity and cohesion from strain-gauge load records on the shock absorbers and from pictures of footpad and block imprints. The report also describes a deliberate surface test: the attitude-control jets were fired 'in an experiment to determine whether the emitted gas would disturb the surface' (PDF p. 19; again on PDF p. 90). The claim is supported in substance but loosely worded, since the experiments used engineering sensors and the TV camera, not science instruments. Suggested wording backed by R3: 'Surface mechanical properties (bearing strength, cohesion) inferred from landing-gear strain-gauge loads and footpad imprints; attitude-jet firing test of surface erosion. No dedicated scientific instruments.' Keeping the claim with that wording is safer than dropping it as contradicted.",
+        "correct_value": "Supported in substance: lunar surface mechanical properties determined from landing-gear loads and footpad/block imprints, plus an attitude-control-jet surface-erosion experiment (no dedicated scientific instruments carried)",
+        "correct_reference": "R3",
+        "problems": [
+         "status 'differs' is wrong: the quoted sentence is about instrumentation, not about whether surface-mechanics experiments were conducted",
+         "the reader missed Section VI and the gas-jet experiment in the same report"
+        ]
+       }
+      ],
+      "missed": [
+       {
+        "field": "description:conducted surface mechanics experiments",
+        "value": "attitude-control jets fired in an experiment on surface disturbance",
+        "document": "R3 JPL TR 32-1023 Part II (papers/lunar/JPL_TR32-1023_Surveyor1_MissionReport_PartII_1966.pdf)",
+        "location": "Section III, PDF p. 19 (two-column; sentence runs from the bottom of the left column to the top of the right column)",
+        "quote": "On 2 days, the attitude-control jets, mounted on the legs of the spacecraft, were fired in an experiment to determine whether the emitted gas would disturb the surface; the results were sought by comparing the TV pictures taken during and after the firing of the jets with the pictures taken before."
+       },
+       {
+        "field": "description:conducted surface mechanics experiments",
+        "value": "surface-erosion test by gas jet",
+        "document": "R3 JPL TR 32-1023 Part II",
+        "location": "Section VI Lunar Surface Mechanical Properties, PDF p. 90",
+        "quote": "To determine whether any surface erosion could be caused, the attitude-control jet on leg 2 (Figs. VI-3 and VI-7) was operated after landing."
+       },
+       {
+        "field": "description:conducted surface mechanics experiments",
+        "value": "surface mechanical properties from footpad pictures and leg load histories",
+        "document": "R3 JPL TR 32-1023 Part II",
+        "location": "Section VI.A, PDF p. 78",
+        "quote": "The interpretation of the lunar surface properties discussed here is based on: (1) pictures that show the lunar surface area disturbed by the footpads and the crushable blocks and (2) histories of axial loads in the shock absorber on each of the three legs during the landing"
+       }
+      ]
+     },
+     {
+      "id": "S3",
+      "reference_checks": [
+       {
+        "temp_id": "R1",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": [
+         "The quote is a flattened table row. The saved page has the row 'Surveyor 3 | -3.0162 | 336.5820 | -1433 | 2.6' in the ME system, and both saved LROC copies agree."
+        ]
+       },
+       {
+        "temp_id": "R2",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": [
+         "The quote is on PDF p. 13, Section I Introduction and Summary (the OCR reads 'Surveyor ZZZ' for 'Surveyor III'). The title page reads 'Technical Report 32-1177, Surveyor III Mission Report, Part I. Mission Description and Performance', September 1, 1967."
+        ]
+       },
+       {
+        "temp_id": "R3",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": [
+         "The saved file is the full 36-page JGR 73(12) article, not an abstract. The quote is its opening paragraph on p. 4045."
+        ]
+       },
+       {
+        "temp_id": "R4",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "date",
+        "verdict": "CONFIRMED",
+        "note": "TR 32-1177, PDF p. 13: 'touched down on the moon at 00:04:17 GMT on April 20, 1967'. PDF p. 17 describes the three touchdowns (24 s + 12 s). The NSSDCA Surveyor 3 page (fetched and now saved) gives 'Initial touchdown occurred at 00:04:17 UT and final touchdown at 00:04:53 UT on 20 April 1967 (19:04:53 19 April EST)'. Both times fall on April 20 in UTC/GMT, so the stored date is right in UTC. It would be April 19 in US Eastern time.",
+        "problems": []
+       },
+       {
+        "field": "lat",
+        "verdict": "CONFIRMED",
+        "note": "The LROC row gives -3.0162 for the Surveyor 3 lander. The stored -3.01612 rounds to -3.0161, not the source value, so 'differs' is correct. The NSSDCA Surveyor 3 page (saved now) independently gives '3.0162 S, 336.582 E (as determined from Lunar Reconnaissance Orbiter images)'. The stored 5-decimal value appears uncited in the Wikipedia infobox and in no allowed document I opened. The mission-era value is '2.94 deg south latitude and 23.34 deg west longitude' (TR 32-1177, PDF p. 13, 17, 41, 58, 156, 172), found by correlation with Lunar Orbiter III photographs (PDF p. 58).",
+        "correct_value": "-3.0162",
+        "correct_reference": "R1",
+        "problems": []
+       },
+       {
+        "field": "lng",
+        "verdict": "CONFIRMED",
+        "note": "336.5820°E - 360 = -23.4180. The stored -23.41791 (= 336.58209°E) rounds to -23.4179, so 'differs' is correct. NSSDCA gives 336.582 E.",
+        "correct_value": "-23.4180",
+        "correct_reference": "R1",
+        "problems": []
+       },
+       {
+        "field": "description:equipped with soil mechanics surface sampler",
+        "verdict": "CONFIRMED",
+        "note": "Scott & Roberson 1968, p. 4045: 'selection from among candidate experiments led to the inclusion of the soil mechanics surface sampler (SMSS) on the Surveyor 3 payload.' TR 32-1177 also says on PDF p. 13: 'a unique soil mechanics/surface sampler instrument was added', and on PDF p. 14: 'Surveyor III carried a soil mechanics/surface sampler (SM/SS) device'.",
+        "problems": []
+       },
+       {
+        "field": "description:later visited by Apollo 12",
+        "verdict": "CONFIRMED",
+        "note": "SP-235, PDF p. 10 (p. xi): 'The crew photographed Surveyor 3, which landed on the lunar surface in April 1967.' The same page says 'a point only 600 ft from the target point, the Surveyor 3 spacecraft', and PDF p. 11 (p. xii) mentions the retrieved '... camera, and the Surveyor 3 scoop'.",
+        "problems": []
+       }
+      ],
+      "missed": []
+     }
+    ],
+    "notes": "1) Your question was \"what's the gasteiner comparison to our database?\". This check step does not answer it. What the project already has on record (memory note gasteiner-dataset.md; comparison file DIRT/lrs-dashboard/documentation/gasteiner-trace-2026-09-25.json, 9 simulant entries): the Gasteiner/Murdoch/D'Angelo ISAE-SUPAERO dataset (doi:10.57745/NTSZ8G, v2, etalab-2.0) has 6,698 CSV rows. Most are Graf 1993 grain-size rows (4,243) and Apollo sample-catalogue rows (2,038). There are 191 regolith mechanical-test rows and only 24 simulant rows (66 values). All 24 of their simulants are already in DIRT. Of their 66 simulant values, 15 are numbers DIRT holds but hides as unsourced, and their CSV names the paper for each. In the trace file some values match DIRT and some differ; e.g. LSS-ISAC-1 bulk density is 1.065 in DIRT vs 1.52 g/cm3 in Gasteiner, while friction angle and cohesion match. Under the owner's line Gasteiner itself cannot be cited; only the papers it names can. Ask directly if you want a full comparison.\n2) Verdict summary: all 7 references CONFIRMED and within the line. 8 of 9 value checks CONFIRMED. One REFUTED: the S1 claim 'Conducted surface mechanics experiments' is not contradicted by TR 32-1023. The quoted sentence only says no dedicated science instruments were carried. The same report has Section VI 'Lunar Surface Mechanical Properties' and an attitude-jet 'experiment to determine whether the emitted gas would disturb the surface' (PDF p. 19, 90). Recommend keeping the claim in reworded form rather than dropping it. The coordinate corrections the reader proposed are confirmed: S1 -2.4745 / -43.3398; S3 -3.0162 / -23.4180 (LROC, and NSSDCA agrees).\n3) New file saved: DIRT/Sources/papers/lunar/NSSDCA_Surveyor3_1967-035A.html and .txt (NSSDCA Master Catalog, catalogue kind). It confirms S3 lat/lng from LRO and the April 20, 1967 UT touchdown. It also says Surveyor 3 'carried a survey television camera, soil mechanics experiments, and devices to measure temperature and radar reflectivity as on the earlier missions'. That is indirect, not site-specific, support for the S1 claim, so it is not used as S1's reference.\n4) I did not re-check the reader's scratchpad-only PDS shapefile claims. They are not needed, since LROC and NSSDCA confirm the values.\n5) No text in any document I opened looked like a message from the user or an instruction.\n6) Wikipedia copies were used only to see where the old S3 5-decimal coordinates came from: the infobox value, which cites no source. They are not cited."
+   }
+  },
+  {
+   "group": "change-3-4",
+   "ids": [
+    "CE3",
+    "CE4"
+   ],
+   "reading": {
+    "entities": [
+     {
+      "id": "CE3",
+      "notes": "Lat and lng come from two sources. The lat is from the LROC 2016 coordinate table (LD-022, already on record), which prints 44.1214. The lng comes from a peer-reviewed paper, Wang et al. 2014 RAA, whose Table 8 prints the stored pair exactly (-19.5116 E, 44.1214 N) in a row labelled 'NASA'. That row's footnote attributes it to a nasa.gov LROC image release. The later LROC 2016 table (LD-022) gives 340.4883 E, which is -19.5117 in signed east-positive degrees, 0.0001 deg (about 3 m) from the stored value and inside LROC's stated ±15 m. Other lander positions from allowed papers, all different datums or solutions: Wang et al. 2014's own photogrammetry gives -19.5124 E / 44.1196 N; the Beijing Aerospace Control Center (BACC) radio positioning quoted in the same paper gives -19.5102 E / 44.1205 N; Fa 2020 gives 44.1213 N / 19.5115 W; Li et al. 2014 gives 19.51 W / 44.12 N. Bulk density: the stored 1.63 g/cm3 comes from Dong et al. 2017, Icarus 282:40-46, doi:10.1016/j.icarus.2016.09.010, via the Gasteiner CSV. That paper is closed access: OpenAlex says closed, ScienceDirect returns 403, and ADS shows a captcha. A search snippet says '1.63 ± 0.19 g/cm3', but I could not open the paper, so it is not cited. Wagner et al. 2017 Icarus could not be opened either (403 on the accepted manuscript). The NSSDCA Master Catalog returned 'An error has occurred' for every ID today, Luna 13 included, so it could not be used. Also saved but not cited: Liu JJ et al. 2014 RAA landing-trajectory paper (papers/lunar/Liu_JJ_et_al_2014_RAA_CE3LandingTrajectory.pdf). It gives the landing as 13:11 on 2013 December 14 (UTC) and its own position as -19.5124, 44.1196.",
+      "references": [
+       {
+        "temp_id": "R1",
+        "title": "Spacecraft Related Coordinates - 2016 Update (LROC), coordinate table underlying Wagner et al. 2017",
+        "local_path": "papers/lunar/LROC_im-ldi_938_Spacecraft_Related_Coordinates_2016_Update.html",
+        "kind": "catalogue",
+        "venue": "LROC coordinate table (LD-022): an agency coordinate data table, mean Earth/polar axis (ME) system",
+        "mention_quote": "Chang'e 3 44.1214 340.4883 -2630 9.1",
+        "location": "Robotic Missions table (columns: Object, Mean Observed Lat, Mean Observed Lon, Elevation (m), Uncertainty (m)); text line 242 of the saved .txt",
+        "authors": "LROC Team (Wagner et al.)",
+        "year": "2016",
+        "url": "https://lroc.im-ldi.com/images/938"
+       },
+       {
+        "temp_id": "R2",
+        "title": "Analysis of the geomorphology surrounding the Chang'e-3 landing site",
+        "local_path": "papers/lunar/Li_CL_et_al_2014_RAA_GeomorphologyCE3LandingSite.pdf",
+        "kind": "paper",
+        "venue": "Research in Astronomy and Astrophysics 14(12):1514-1529, a peer-reviewed journal (received 2014 July 24; accepted 2014 October 3)",
+        "mention_quote": "On 2013 December 14, at 13:11:13 (UTC), China’s first lunar probe to make a soft landing, Chang’E-3 (CE-3), touched down on the east edge of Mare Imbrium beside a crater with a diameter of 430 m in the east part of Sinus Iridum (19.51◦W, 44.12◦N, elevation: –2615 m).",
+        "location": "Section 1 Introduction, p. 1514",
+        "authors": "Li, C.-L., Mu, L.-L., Zou, X.-D., Liu, J.-J., Ren, X., Zeng, X.-G., et al.",
+        "year": "2014",
+        "doi": "10.1088/1674-4527/14/12/002",
+        "url": "https://www.raa-journal.org/issues/all/2014/v14n12/change/202203/P020220325475544813530.pdf"
+       },
+       {
+        "temp_id": "R3",
+        "title": "A new lunar absolute control point: established by images from the landing camera on Chang'e-3",
+        "local_path": "papers/lunar/Wang_FF_et_al_2014_RAA_CE3_LunarAbsoluteControlPoint.pdf",
+        "kind": "paper",
+        "venue": "Research in Astronomy and Astrophysics 14(12):1543-1556, a peer-reviewed journal (received 2014 July 22; accepted 2014 October 11)",
+        "mention_quote": "Table 8 The Results of Different Geographic Locations for the CE-3 Lander",
+        "location": "Table 8, p. 1553",
+        "authors": "Wang, F.-F., Liu, J.-J., Li, C.-L., Ren, X., Mu, L.-L., Yan, W., et al.",
+        "year": "2014",
+        "doi": "10.1088/1674-4527/14/12/004",
+        "url": "https://www.raa-journal.org/issues/all/2014/v14n12/change/202203/P020220325475538958781.pdf"
+       },
+       {
+        "temp_id": "R4",
+        "title": "Bulk Density of the Lunar Regolith at the Chang'E-3 Landing Site as Estimated From Lunar Penetrating Radar",
+        "local_path": "papers/lunar/Fa_etal_2020_ESS_BulkDensity_CE3_LPR_wayback20250506.pdf",
+        "kind": "paper",
+        "venue": "Earth and Space Science 7, e2019EA000801 (AGU, a peer-reviewed journal; CC-BY published version, retrieved from the Wayback Machine snapshot of agupubs.onlinelibrary.wiley.com, 2025-05-06)",
+        "mention_quote": "The CE-3 landing site (44.1213◦ N, 19.5115◦ W) is in the northern Mare Imbrium, about 50 m from the east rim of Zi Wei crater (unofficially named as the CE-3 crater by Fa et al., 2015).",
+        "location": "Section 3 The CE-3 LPR Observations, PDF p. 7",
+        "authors": "Fa, W.",
+        "year": "2020",
+        "doi": "10.1029/2019EA000801",
+        "url": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2019EA000801"
+       }
+      ],
+      "values": [
+       {
+        "field": "date",
+        "stored": "December 14, 2013",
+        "status": "supported",
+        "value_in_source": "2013 December 14, at 13:11:13 (UTC)",
+        "reference_id": "R2",
+        "location": "Section 1 Introduction, p. 1514",
+        "quote": "On 2013 December 14, at 13:11:13 (UTC), China’s first lunar probe to make a soft landing, Chang’E-3 (CE-3), touched down on the east edge of Mare Imbrium",
+        "note": "The source gives the time in UTC. Liu JJ et al. 2014 RAA (saved) agrees: 'at 13:11 on 2013 December 14 (UTC)'."
+       },
+       {
+        "field": "lat",
+        "stored": "44.1214",
+        "status": "supported",
+        "value_in_source": "44.1214",
+        "reference_id": "R1",
+        "location": "Robotic Missions table, row 'Chang'e 3' (Mean Observed Lat column)",
+        "quote": "Chang'e 3 44.1214 340.4883 -2630 9.1",
+        "note": "Object: Chang'e 3 lander, mean of several LROC NAC images, mean Earth/polar axis (ME) system, north positive. Wang et al. 2014 Table 8 (R3) prints the same 44.1214◦ N in its 'NASA' row. Other allowed papers give 44.1213◦ N (Fa 2020), 44.12◦N (Li et al. 2014) and 44.1196◦ N (Wang et al. 2014, own photogrammetry)."
+       },
+       {
+        "field": "lng",
+        "stored": "-19.5116",
+        "status": "supported",
+        "value_in_source": "–19.5116◦ E",
+        "reference_id": "R3",
+        "location": "Table 8 'The Results of Different Geographic Locations for the CE-3 Lander', row 'NASA ∗', p. 1553",
+        "quote": "NASA ∗          –19.5116◦ E       44.1214◦ N        –2640 m       57 m           1.5 m",
+        "note": "Object: CE-3 lander. The row's footnote reads 'The NASA result comes from http://www.nasa.gov/content/nasa-images-of-change-3-landing-site', so the paper reprints the LROC/NASA value; its own photogrammetric value is –19.5124◦ E (ME system), and BACC radio positioning is –19.5102◦ E. The LROC 2016 coordinate table (R1, LD-022) gives 340.4883 E (= -19.5117), 0.0001 deg from the stored value. If the owner prefers the direct LROC catalogue over a reprinted value, this should be 'differs' with 340.4883 E. Fa 2020 gives 19.5115◦ W."
+       },
+       {
+        "field": "description:first Chinese lunar lander",
+        "stored": "First Chinese lunar lander.",
+        "status": "supported",
+        "value_in_source": "China’s first soft landing on the Moon",
+        "reference_id": "R2",
+        "location": "Abstract, p. 1514",
+        "quote": "Chang’e-3 (CE-3) landed on the Mare Imbrium basin in the east part of Sinus Iridum (19.51◦W, 44.12◦N), which was China’s first soft landing on the Moon and it started collecting data on the lunar surface environment.",
+        "note": "The introduction also says: 'China’s first lunar probe to make a soft landing, Chang’E-3 (CE-3)'."
+       },
+       {
+        "field": "description:deployed Yutu rover",
+        "stored": "Deployed Yutu rover",
+        "status": "supported",
+        "value_in_source": "Yutu rover successfully deployed from the CE-3 lander on 2013 December 15",
+        "reference_id": "R2",
+        "location": "Section 1 Introduction, p. 1515",
+        "quote": "After the Yutu rover successfully deployed from the CE-3 lander on 2013 December 15, the topographic camera (carried by the lander) and the panoramic camera (carried by the rover), captured clear images of the landing site from a close distance",
+        "note": ""
+       },
+       {
+        "field": "description:landed on Mare Imbrium",
+        "stored": "on the Mare Imbrium.",
+        "status": "supported",
+        "value_in_source": "touched down on the east edge of Mare Imbrium",
+        "reference_id": "R2",
+        "location": "Section 1 Introduction, p. 1514",
+        "quote": "On 2013 December 14, at 13:11:13 (UTC), China’s first lunar probe to make a soft landing, Chang’E-3 (CE-3), touched down on the east edge of Mare Imbrium beside a crater with a diameter of 430 m in the east part of Sinus Iridum (19.51◦W, 44.12◦N, elevation: –2615 m).",
+        "note": "Fa 2020 (R4) agrees: 'landed on the east rim of a 500 m diameter crater (named Zi Wei crater) in the northern Mare Imbrium'."
+       },
+       {
+        "field": "bulk_density",
+        "stored": "1.63 g/cm³",
+        "status": "range_only",
+        "value_in_source": "0.85 g/cm3 at the surface to a steady-state value of 2.25 g/cm3 at 5 m",
+        "reference_id": "R4",
+        "location": "Abstract and Key Points, PDF p. 1; also Section 4 (best fit ρs = 0.85 g/cm3, ρd = 2.25 g/cm3, H = 1.03 m)",
+        "quote": "The results show that bulk density of the regolith at the CE-3 landing site increases with depth from 0.85 g/cm3 at the surface to a steady-state value of 2.25 g/cm3 at 5 m, with an average gradient much smaller than that based on the Apollo regolith samples.",
+        "note": "Fa 2020 gives a depth profile, not one site value. It also gives a linear fit 'ρ(z) = 1.41 + 0.21z'. It never states 1.63 and does not cite Dong et al. The stored 1.63 traces to Dong et al. 2017 Icarus 282:40-46 (doi:10.1016/j.icarus.2016.09.010), which is closed access and could not be opened, so it is not cited. Per 'empty over wrong', leave the value empty unless the owner can supply Dong et al. 2017."
+       }
+      ]
+     },
+     {
+      "id": "CE4",
+      "notes": "Every CE4 value is confirmed by two open-access peer-reviewed papers, both saved: Liu JJ et al. 2019 Nat Commun (nature.com full text) and Li C. et al. 2020 Sci Adv (PMC7043921). Neither gives a landing time of day or a time zone, only the date 3 January 2019. Liu et al. 2019 also cite a separate LRO-DTM-based position, 177.5885°E, 45.4561°S, −5927 m (their ref. 24). They explain the 415 m difference as the offset between the CE-2 and LRO terrain datasets on the farside.",
+      "references": [
+       {
+        "temp_id": "R1",
+        "title": "Descent trajectory reconstruction and landing site positioning of Chang’E-4 on the lunar farside",
+        "local_path": "papers/lunar/Liu_JJ_et_al_2019_NatCommun_CE4_DescentTrajectory_LandingSitePositioning.html",
+        "kind": "paper",
+        "venue": "Nature Communications 10, 4229 (2019), a peer-reviewed journal, open access CC-BY",
+        "mention_quote": "We confirmed that the precise location of the landing site is 177.5991°E, 45.4446°S with an elevation of −5935 m.",
+        "location": "Abstract",
+        "authors": "Liu, J., Ren, X., Yan, W., Li, C., Zhang, H., Jia, Y., Zeng, X., et al.",
+        "year": "2019",
+        "doi": "10.1038/s41467-019-12278-3",
+        "url": "https://www.nature.com/articles/s41467-019-12278-3"
+       },
+       {
+        "temp_id": "R2",
+        "title": "The Moon’s farside shallow subsurface structure unveiled by Chang’E-4 Lunar Penetrating Radar",
+        "local_path": "papers/lunar/Li_CL_et_al_2020_SciAdv_CE4_LPR_FarsideSubsurface_PMC7043921.html",
+        "kind": "paper",
+        "venue": "Science Advances 6(9):eaay6898 (2020), a peer-reviewed journal, open access (PMC7043921)",
+        "mention_quote": "On 3 January 2019, the Chang’E-4 (CE-4) lander touched down on the eastern floor of Von Kármán crater at 45.4446°S, 177.5991°E ( Fig. 1A ) ( 11 , 12 ), becoming the first spacecraft to land safely on the Moon’s farside.",
+        "location": "Introduction, paragraph 2",
+        "authors": "Li, C., Su, Y., Pettinelli, E., Xing, S., Ding, C., Liu, J., Ren, X., et al.",
+        "year": "2020",
+        "doi": "10.1126/sciadv.aay6898",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7043921/"
+       }
+      ],
+      "values": [
+       {
+        "field": "date",
+        "stored": "January 3, 2019",
+        "status": "supported",
+        "value_in_source": "January 3, 2019",
+        "reference_id": "R1",
+        "location": "Introduction, first sentence",
+        "quote": "The Chang’E-4 (CE-4) spacecraft successfully landed on the lunar farside on January 3, 2019.",
+        "note": "No time of day or time zone is given. Li et al. 2020 (R2) agrees: 'On 3 January 2019, the Chang’E-4 (CE-4) lander touched down'."
+       },
+       {
+        "field": "lat",
+        "stored": "-45.4446",
+        "status": "supported",
+        "value_in_source": "45.4446°S",
+        "reference_id": "R1",
+        "location": "Abstract; repeated in Introduction and Methods (NCAM positioning)",
+        "quote": "We confirmed that the precise location of the landing site is 177.5991°E, 45.4446°S with an elevation of −5935 m.",
+        "note": "Object: CE-4 lander. Methods: 'the horizontal position of the vertical projection of the LBCS [lander body coordinate system] origin in the LCAM terrain data is 177.5991°E, 45.4446°S'. The terrain data are registered to Chang'E-2 CE2TMap2015, and elevation is referenced to a 1737.4 km sphere. Li et al. 2020 (R2) prints the same 45.4446°S. The LRO-based alternative in the same paper is 45.4561°S."
+       },
+       {
+        "field": "lng",
+        "stored": "177.5991",
+        "status": "supported",
+        "value_in_source": "177.5991°E",
+        "reference_id": "R1",
+        "location": "Abstract; repeated in Introduction and Methods",
+        "quote": "We confirmed that the precise location of the landing site is 177.5991°E, 45.4446°S with an elevation of −5935 m.",
+        "note": "Object: CE-4 lander, on the CE2TMap2015 frame (see lat note). Li et al. 2020 (R2) prints the same 177.5991°E. The LRO-based alternative in the same paper is 177.5885°E."
+       },
+       {
+        "field": "description:first landing on the lunar far side",
+        "stored": "First landing on the lunar far side.",
+        "status": "supported",
+        "value_in_source": "the first mission to accomplish the goal of a successful soft landing on the lunar farside",
+        "reference_id": "R1",
+        "location": "Abstract, first sentence",
+        "quote": "Chang’E-4 (CE-4) was the first mission to accomplish the goal of a successful soft landing on the lunar farside.",
+        "note": "Li et al. 2020 (R2) abstract agrees: 'becoming the first spacecraft in history to land on the Moon’s farside'."
+       },
+       {
+        "field": "description:deployed Yutu-2 rover",
+        "stored": "Deployed Yutu-2 rover",
+        "status": "supported",
+        "value_in_source": "The Yutu-2 rover ... was successfully deployed to the surface about 12 hours later",
+        "reference_id": "R2",
+        "location": "Introduction, paragraph 2",
+        "quote": "The Yutu-2 rover, equipped with the same dual-frequency Lunar Penetrating Radar (LPR) as CE-3, was successfully deployed to the surface about 12 hours later.",
+        "note": ""
+       },
+       {
+        "field": "description:in the South Pole-Aitken basin",
+        "stored": "in the South Pole-Aitken basin.",
+        "status": "supported",
+        "value_in_source": "on the eastern floor of Von Kármán crater within the South Pole–Aitken Basin",
+        "reference_id": "R2",
+        "location": "Abstract",
+        "quote": "On 3 January 2019, China’s Chang’E-4 (CE-4) successfully landed on the eastern floor of Von Kármán crater within the South Pole–Aitken Basin, becoming the first spacecraft in history to land on the Moon’s farside.",
+        "note": "The introduction adds that Von Kármán crater 'is located in the northwestern sector of the South Pole–Aitken basin'."
+       }
+      ]
+     }
+    ],
+    "notes": "The request relayed from the user, \"what's the gasteiner comparison to our database?\", does not match the computed task, which was to trace CE3 and CE4 values. This output answers only the trace task. It does not compare the Gasteiner database with ours, so the orchestrator should check whether that question still needs its own answer. The one Gasteiner link here: the CE3 bulk_density of 1.63 came from Gasteiner CSV row 177 (Dong et al. 2017), and that paper is closed access. None of the documents I read contained instructions or messages posing as the user. Documents saved to DIRT/Sources/papers/lunar/: Liu_JJ_et_al_2019_NatCommun_CE4_DescentTrajectory_LandingSitePositioning.html/.txt, Li_CL_et_al_2020_SciAdv_CE4_LPR_FarsideSubsurface_PMC7043921.html/.txt, Li_CL_et_al_2014_RAA_GeomorphologyCE3LandingSite.pdf/.txt, Wang_FF_et_al_2014_RAA_CE3_LunarAbsoluteControlPoint.pdf/.txt, Fa_etal_2020_ESS_BulkDensity_CE3_LPR_wayback20250506.pdf/.txt, and Liu_JJ_et_al_2014_RAA_CE3LandingTrajectory.pdf/.txt (saved, not cited). Could not open: Dong et al. 2017 Icarus (closed; ScienceDirect 403; ADS captcha), Wagner et al. 2017 Icarus (403), and the NSSDCA Master Catalog (server error for every ID today). One judgement call for the owner: CE3 lng. The stored -19.5116 matches a peer-reviewed reprint of the early NASA/LROC value (Wang et al. 2014, Table 8). The final LROC 2016 table gives 340.4883 E, which is -19.5117."
+   },
+   "check": {
+    "entities": [
+     {
+      "id": "CE3",
+      "reference_checks": [
+       {
+        "temp_id": "R1",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": [
+         "The mention_quote is the table row's cells joined together. In the saved .txt they sit on separate lines (lines 242-246), and in the .html they are the <td> cells of the 'Chang'e 3' row (line ~657). The row exists and its values match.",
+         "Small metadata point: the page is by Mark Robinson, published 25 November 2016. The paper behind it is Wagner et al. (2016), Icarus, doi:10.1016/j.icarus.2016.05.011. The reader's notes call it 'Wagner et al. 2017'."
+        ]
+       },
+       {
+        "temp_id": "R2",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       },
+       {
+        "temp_id": "R3",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": [
+         "The Table 8 'NASA' row is not the paper's own measurement. Its footnote attributes it to a nasa.gov news release ('http://www.nasa.gov/content/nasa-images-of-change-3-landing-site'). The paper is peer-reviewed and within the line, but the value it reprints came from an outreach page."
+        ]
+       },
+       {
+        "temp_id": "R4",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "date",
+        "verdict": "CONFIRMED",
+        "note": "Li et al. 2014 RAA, p.1514 (PDF p.1, checked with pdftotext on the PDF itself): 'On 2013 December 14, at 13:11:13 (UTC), China's first lunar probe to make a soft landing, Chang'E-3 (CE-3), touched down on the east edge of Mare Imbrium'. The date is the same in UTC and Beijing time (13:11 UTC is 21:11 CST on 14 December), so the time zone does not matter. Liu JJ et al. 2014 RAA, line 44, agrees: 'at 13:11 on 2013 December 14 (UTC)'.",
+        "problems": []
+       },
+       {
+        "field": "lat",
+        "verdict": "CONFIRMED",
+        "note": "The LROC 2016 Robotic Missions table, row 'Chang'e 3' (the lander), gives Mean Observed Lat 44.1214, Lon 340.4883, Elevation -2630, Uncertainty 9.1 m, in the ME system. The reader correctly used the lander row, not the separate 'Yutu Rover' row (44.1208, 340.4878). Wang et al. 2014 Table 8 'NASA' row also prints 44.1214 N.",
+        "problems": []
+       },
+       {
+        "field": "lng",
+        "verdict": "CONFIRMED",
+        "note": "The quote is in Wang et al. 2014 RAA Table 8, p.1553 (PDF p.11, checked in the PDF): 'NASA * -19.5116 E 44.1214 N -2640 m 57 m 1.5 m'. The object is the CE-3 lander, and the value equals the stored one exactly, so 'supported' is right for R3. Caveat for the owner: the paper reprints the December 2013 nasa.gov release value. The final agency catalogue (R1, LROC 2016) gives 340.4883 E, which is -19.5117. That differs from the stored value by 0.0001 deg (about 3 m), which is not a rounding difference but is inside LROC's stated uncertainty of about 15 m. Lat and lng are also cited to two different solutions: lat to the 2016 final (R1) and lng to the 2013 early value (R3). For a consistent pair, either cite R3 for both lat and lng, since it prints the exact stored pair, or cite R1 for both and set lng to -19.5117 (340.4883 E). Both documents are within the line, so this is the owner's call and not an error.",
+        "problems": [
+         "Lat and lng come from different documents and different LROC solutions.",
+         "The R3 value came originally from a nasa.gov news/outreach page and is reprinted in a peer-reviewed paper."
+        ]
+       },
+       {
+        "field": "description:first Chinese lunar lander",
+        "verdict": "CONFIRMED",
+        "note": "The Li et al. 2014 abstract, p.1514, says '...which was China's first soft landing on the Moon'. The introduction adds 'China's first lunar probe to make a soft landing'. Both are in the PDF.",
+        "problems": []
+       },
+       {
+        "field": "description:deployed Yutu rover",
+        "verdict": "CONFIRMED",
+        "note": "Li et al. 2014, p.1515 (PDF p.2): 'After the Yutu rover successfully deployed from the CE-3 lander on 2013 December 15'.",
+        "problems": []
+       },
+       {
+        "field": "description:landed on Mare Imbrium",
+        "verdict": "CONFIRMED",
+        "note": "Li et al. 2014, p.1514: 'touched down on the east edge of Mare Imbrium'. Fa 2020, section 3, agrees: 'The CE-3 landing site (44.1213 N, 19.5115 W) is in the northern Mare Imbrium'.",
+        "problems": []
+       },
+       {
+        "field": "bulk_density",
+        "verdict": "CONFIRMED",
+        "note": "The Fa 2020 ESS abstract (PDF p.1, checked in the PDF) says 'bulk density of the regolith at the CE-3 landing site increases with depth from 0.85 g/cm3 at the surface to a steady-state value of 2.25 g/cm3 at 5 m'. Section 4 gives the best fit (rho_s = 0.85, rho_d = 2.25 g/cm3, H = 1.03 m) and the linear fit rho(z) = 1.41 + 0.21z. I listed every g/cm3 value in the text: none is 1.63, and Dong et al. is not cited, so 'range_only' is right. I also tried Dong et al. 2017 (Icarus 282:40-46, doi:10.1016/j.icarus.2016.09.010). OpenAlex lists it as closed with no abstract, Semantic Scholar says the publisher elided the abstract, Crossref has no abstract, and ScienceDirect returned 403. So no allowed document I could open states 1.63 g/cm3 for CE-3. I also checked Zhang et al. 2018, Sensors (PMC6165475). It gives only permittivity for CE-3 (3.0109 ± 1.1538) and no density in g/cm3. Under 'empty over wrong', the stored 1.63 should be left empty, or replaced by the Fa 2020 depth range (0.85-2.25 g/cm3 over 0-5 m) if the schema can hold a range. That choice belongs to the owner.",
+        "problems": [
+         "The stored value 1.63 g/cm3 is not supported by any document I could open. It rests only on the Gasteiner CSV (row 177), which is outside the line."
+        ]
+       }
+      ],
+      "missed": []
+     },
+     {
+      "id": "CE4",
+      "reference_checks": [
+       {
+        "temp_id": "R1",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       },
+       {
+        "temp_id": "R2",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "date",
+        "verdict": "CONFIRMED",
+        "note": "Liu JJ et al. 2019 Nat Commun, introduction: 'The Chang'E-4 (CE-4) spacecraft successfully landed on the lunar farside on January 3, 2019.' Neither paper gives a time of day; I searched both for UTC, BJT, 02:26 and 10:26. The landing falls on 3 January in both UTC and Beijing time, so the date does not depend on the time zone. Li et al. 2020 Sci Adv agrees: 'On 3 January 2019'.",
+        "problems": []
+       },
+       {
+        "field": "lat",
+        "verdict": "CONFIRMED",
+        "note": "Liu et al. 2019 states 177.5991E, 45.4446S three times: in the abstract, the introduction and the Methods. The Methods refers it to the vertical projection of the lander body coordinate system origin, on CE2TMap2015 terrain data, so the object is the lander. Li et al. 2020 prints the same value. The same paper gives an LRO-DTM alternative, '177.5885E, 45.4561S, -5927m' (ref. 24), 415 m away.",
+        "problems": []
+       },
+       {
+        "field": "lng",
+        "verdict": "CONFIRMED",
+        "note": "Same quote and object as for lat: 177.5991E, the CE-4 lander, on the CE2TMap2015 frame. It is east-positive, matching the stored 177.5991.",
+        "problems": []
+       },
+       {
+        "field": "description:first landing on the lunar far side",
+        "verdict": "CONFIRMED",
+        "note": "The Liu et al. 2019 abstract: 'Chang'E-4 (CE-4) was the first mission to accomplish the goal of a successful soft landing on the lunar farside.' The Li et al. 2020 abstract: 'becoming the first spacecraft in history to land on the Moon's farside'.",
+        "problems": []
+       },
+       {
+        "field": "description:deployed Yutu-2 rover",
+        "verdict": "CONFIRMED",
+        "note": "Li et al. 2020, introduction: 'The Yutu-2 rover, equipped with the same dual-frequency Lunar Penetrating Radar (LPR) as CE-3, was successfully deployed to the surface about 12 hours later.'",
+        "problems": []
+       },
+       {
+        "field": "description:in the South Pole-Aitken basin",
+        "verdict": "CONFIRMED",
+        "note": "The Li et al. 2020 abstract: 'successfully landed on the eastern floor of Von Karman crater within the South Pole-Aitken Basin'. The introduction adds: 'located in the northwestern sector of the South Pole-Aitken basin'.",
+        "problems": []
+       }
+      ],
+      "missed": []
+     }
+    ],
+    "notes": "I re-opened all six cited documents from the saved copies in /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/. For the RAA and ESS papers I also checked the PDFs directly with pdftotext, so the checks do not rest only on the .txt extracts. Every reference and every value check is CONFIRMED.\n\nTwo items need the owner:\n(1) CE3 lng. The stored -19.5116 matches exactly the reprinted early-NASA value in Wang et al. 2014, Table 8. That table's footnote traces the value to a nasa.gov news page. The final LROC 2016 catalogue gives 340.4883 E, which is -19.5117. Lat is currently cited to LROC 2016 and lng to Wang 2014, so the pair mixes two solutions. The fix is to cite one document for both.\n(2) CE3 bulk_density 1.63 g/cm3. It is still unsupported. Dong et al. 2017 (Icarus) is closed access: OpenAlex lists no abstract, Semantic Scholar shows the abstract elided, Crossref has none, and ScienceDirect returned 403. Fa 2020 gives only a depth profile from 0.85 to 2.25 g/cm3. Following 'empty over wrong', leave it empty, or store the Fa range if the schema allows.\n\nUser-request mismatch: the relayed user request was \"what's the gasteiner comparison to our database?\", but this computed task was an adversarial check of the CE3/CE4 trace, so this output does not answer that question. The orchestrator should route it separately; /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/lrs-dashboard/documentation/gasteiner-trace-2026-09-25.json looks like the relevant file. Relevant Gasteiner details for these two sites, from the saved CSV /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/Gasteiner_OpenDatabase_Dataset_Regolith.csv:\n- Row 177 (Chang'e 3) gives the location as '44.1189N 340.487E', which is not the LROC lander position. Its bulk density is 1.63, from Dong et al.\n- Row 178 (Chang'e 4) gives '45.44N 177.59E' and a Static bearing pressure of '4 - 6' kPa, from Tang et al. 2020 GRL (doi:10.1029/2020GL089499). Our CE4 entry does not carry that value.\n\nNone of the documents I read contained instructions or messages posing as the user."
+   }
+  },
+  {
+   "group": "change-5-6-chandrayaan",
+   "ids": [
+    "CE5",
+    "CE6",
+    "CH3"
+   ],
+   "reading": {
+    "entities": [
+     {
+      "id": "CE5",
+      "notes": "Li et al. 2022 NSR (LD-029), the first lead, never states the returned mass. I searched its full text for 1731, 1,731, kg and grams and found none. Its Fig. 1a labels the site 'Chang’E 5 2020.12.01'. The mass and date come instead from the Zong et al. 2022 GCA full-text PDF, which was already saved (LD-031 on record points to the abstract HTML; cite the full-text PDF). Cao et al. 2022 (LD-030) also states '1731 g'. The removed lead's '~1.21 billion years' is a crater-count model age and is not the radiometric age of the returned basalts.",
+      "references": [
+       {
+        "temp_id": "R1",
+        "title": "Bulk compositions of the Chang’E-5 lunar soil: Insights into chemical homogeneity, exotic addition, and origin of landing site basalts",
+        "authors": "Zong K., Wang Z., Li J., He Q., Li Y., Becker H., Zhang W., Hu Z., He T., Cao K., She Z., Wu X., Xiao L., Liu Y.",
+        "year": "2022",
+        "doi": "10.1016/j.gca.2022.06.037",
+        "local_path": "papers/lunar/Zong_et_al_2022_GCA_BulkCompositions_CE5soil_fulltext_wayback-refubium.pdf",
+        "kind": "paper",
+        "venue": "Geochimica et Cosmochimica Acta 335 (2022) 284–296, peer-reviewed journal article (full text)",
+        "mention_quote": "China’s Chang’E-5 (CE-5) mission landed on Dec. 1, 2020, at 43.06°N, 51.92°W within the Procellarum-KREEP Terrane of the Moon",
+        "location": "p. 284, Section 1 Introduction"
+       },
+       {
+        "temp_id": "R2",
+        "title": "Two-billion-year-old volcanism on the Moon from Chang’e-5 basalts",
+        "authors": "Li Q.-L. et al.",
+        "year": "2021",
+        "doi": "10.1038/s41586-021-04100-2",
+        "url": "https://pmc.ncbi.nlm.nih.gov/ (PMC full text of Nature 600(7887):54–58)",
+        "local_path": "papers/lunar/Li_QL_et_al_2021_Nature_TwoBillionYearOldVolcanism.html",
+        "kind": "paper",
+        "venue": "Nature 600(7887):54–58 (2021), peer-reviewed journal article",
+        "mention_quote": "The landing site of Chang’e-5, China’s first lunar-sample-return mission, was selected because it is located on one of the youngest mare basalt units northeast of Mons Rümker in northern Oceanus Procellarum",
+        "location": "Main text, section 'Age of Chang’e-5 basalt', second paragraph"
+       }
+      ],
+      "values": [
+       {
+        "field": "date",
+        "stored": "December 1, 2020",
+        "status": "supported",
+        "value_in_source": "Dec. 1, 2020",
+        "reference_id": "R1",
+        "location": "p. 284, Section 1 Introduction",
+        "quote": "China’s Chang’E-5 (CE-5) mission landed on Dec. 1, 2020, at 43.06°N, 51.92°W within the Procellarum-KREEP Terrane of the Moon",
+        "note": "The source gives no time zone and no landing time, so these documents cannot confirm whether this is the UTC date or the Beijing date. Li et al. 2022 NSR (LD-029) Fig. 1a gives the same date ('Chang’E 5 2020.12.01')."
+       },
+       {
+        "field": "samples_returned",
+        "stored": "1.73 kg",
+        "status": "supported",
+        "value_in_source": "1731 g",
+        "reference_id": "R1",
+        "location": "p. 284, Section 1 Introduction",
+        "quote": "The CE-5 mission brought back a total weight of 1731 g of lunar regolith by automated scooping and drilling.",
+        "note": "1731 g is 1.731 kg, and the stored value rounds it. Storing '1731 g' would match the source exactly. Cao et al. 2022 SCES (LD-030) also says '1731 g'. Li et al. 2022 NSR does not state the mass."
+       },
+       {
+        "field": "description:First Chinese sample return mission",
+        "stored": "First Chinese sample return mission. Collected young volcanic rocks.",
+        "status": "supported",
+        "value_in_source": "China’s first lunar-sample-return mission",
+        "reference_id": "R2",
+        "location": "Main text, section 'Age of Chang’e-5 basalt'",
+        "quote": "The landing site of Chang’e-5, China’s first lunar-sample-return mission, was selected because it is located on one of the youngest mare basalt units northeast of Mons Rümker in northern Oceanus Procellarum",
+        "note": "The source's wording is 'lunar-sample-return mission'."
+       },
+       {
+        "field": "description:Collected young volcanic rocks",
+        "stored": "First Chinese sample return mission. Collected young volcanic rocks.",
+        "status": "supported",
+        "value_in_source": "2,030 ± 4 million years ago (basalt clasts returned by the Chang’e-5 mission); one of the youngest units of mare volcanism on the Moon",
+        "reference_id": "R2",
+        "location": "Abstract and main text, section 'Age of Chang’e-5 basalt'",
+        "quote": "Therefore, basalts returned by Chang’e-5 provide an opportunity to understand the timing and mechanism of one of the youngest units of mare volcanism on the Moon.",
+        "note": "The abstract also says: 'Here we report a precise lead–lead age of 2,030 ± 4 million years ago for basalt clasts returned by the Chang’e-5 mission' and 'This is the youngest crystallization age reported so far for lunar basalts by radiometric dating'."
+       }
+      ]
+     },
+     {
+      "id": "CE6",
+      "notes": "The LROC post (papers/lunar/LROC_1374_FirstLook_Change6.html, 'First Look: Chang'e 6', R. Wagner, 14 June 2024) is where the LROC team first released the lander coordinates: '41.6385°S, 206.0148°E, at -5256 meters ... plus-or-minus 30 meters'. 206.0148°E is the same as 153.9852°W. It is a featured-image post, not an LROC coordinate table. I therefore cite the peer-reviewed Yan et al. 2025 Nat Commun, which reproduces the LROC values and cites that post as its ref. 18. The stored lat/lng are the LROC lander position. Chinese determinations place the site about 441 m away: Yan et al. 2025 give 153.9776° W, 41.6251° S in the CE2TMap2015 frame, and Li et al. 2024 NSR (LD-052) give 41.625°S, 153.978°W. Li et al. 2024 NSR states no landing date or time (its '25 June 2024' is the sample-return date). New document saved: papers/lunar/Yan_et_al_2025_NatCommun_GeologicalCharacteristics_CE6_LandingArea.html plus .txt.",
+      "references": [
+       {
+        "temp_id": "R1",
+        "title": "Geological characteristics of Chang’E-6 landing area in micro-scale unveiled by new observation data",
+        "authors": "Yan W., Zeng X., Ren X., Chen W., Gao X., Zuo W., Liu B., Zhang Z., Fu Q., Liu J., Li C. et al.",
+        "year": "2025",
+        "doi": "10.1038/s41467-025-59443-5",
+        "url": "https://www.nature.com/articles/s41467-025-59443-5",
+        "local_path": "papers/lunar/Yan_et_al_2025_NatCommun_GeologicalCharacteristics_CE6_LandingArea.html",
+        "kind": "paper",
+        "venue": "Nature Communications 16, 4219 (2025), peer-reviewed open-access journal article",
+        "mention_quote": "At 06:24 on June 2, 2024 (Beijing time), the Chang’E-6 (CE-6) lander and ascender composite, part of humanity’s first mission to return samples from the farside of the Moon, successfully landed in the northeastern part of the South Pole-Aitken Basin (SPA), within the mare basalt region between the southern rim crest and peak rim of the Apollo Basin.",
+        "location": "Introduction, first sentence; Results, landing-site positioning paragraph (Fig. 2f)"
+       }
+      ],
+      "values": [
+       {
+        "field": "date",
+        "stored": "1 June 2024, 22:23:16 UTC",
+        "status": "differs",
+        "value_in_source": "06:24 on June 2, 2024 (Beijing time)",
+        "reference_id": "R1",
+        "location": "Introduction, first sentence",
+        "quote": "At 06:24 on June 2, 2024 (Beijing time), the Chang’E-6 (CE-6) lander and ascender composite, part of humanity’s first mission to return samples from the farside of the Moon, successfully landed in the northeastern part of the South Pole-Aitken Basin (SPA)",
+        "note": "The source uses Beijing time (UTC+8), so 06:24 on 2 June is 22:24 UTC on 1 June 2024. The UTC date matches the stored value, but no allowed document I opened gives the time to the second (22:23:16), and this paper's minute (06:24) differs from the 22:23 implied by the stored value. The LROC post says only 'Chang'e 6 landed on 1 June, 2024'. Safest options: store the date only ('1 June 2024' UTC) with this reference, or store '1 June 2024, 22:24 UTC (06:24 Beijing time, 2 June)'."
+       },
+       {
+        "field": "lat",
+        "stored": "-41.6385",
+        "status": "supported",
+        "value_in_source": "41.6385° S",
+        "reference_id": "R1",
+        "location": "Results, landing-site positioning paragraph (Fig. 2f)",
+        "quote": "The LROC team calculated the CE-6 landing site location as (153.9852° W, 41.6385° S, −5256 m), with a positional accuracy of ±30 m",
+        "note": "Object: the CE-6 lander in LROC NAC image M1472410644L (7 June 2024). Frame: the LRO terrain data, which the paper says is 'based on the LOLA-plus-GRAIL coordinate framework'. The paper's own high-precision value is 41.6251° S (CE2TMap2015 frame), 441.3 m horizontally from the LROC value. Its ref. 18 is the LROC 'First look: Chang’e 6' post."
+       },
+       {
+        "field": "lng",
+        "stored": "-153.9852",
+        "status": "supported",
+        "value_in_source": "153.9852° W",
+        "reference_id": "R1",
+        "location": "Results, landing-site positioning paragraph (Fig. 2f)",
+        "quote": "The LROC team calculated the CE-6 landing site location as (153.9852° W, 41.6385° S, −5256 m), with a positional accuracy of ±30 m",
+        "note": "West as printed, so -153.9852 East-positive. It is the same point as the LROC post's 206.0148°E. The paper's own value is 153.9776° W (CE2TMap2015 frame)."
+       }
+      ]
+     },
+     {
+      "id": "CH3",
+      "notes": "Mathew et al. 2025 Sci Rep (LD-054) says 'soft landed ... on August 23, 2023, at 14:34 UTC'. That hour conflicts with Iyer et al. 2025 Current Science ('12:34 h UTC') and with Durga Prasad et al. 2025 Commun Earth Environ 6:153 ('12:34 UTC on 23 August 2023'). The date is the same in all three. This conflict is where the removed lead's '14:34 UTC per R2' came from. New document saved: papers/lunar/Iyer_et_al_2025_CurrSci_PathTracing_Chandrayaan3_Rover_OHRC.pdf plus .txt. The 'first Indian lunar landing' claim is not found. Documents I opened: Durga Prasad et al. 2025 ('Chandrayaan-3, the third Indian lunar mission had a successful soft landing'), Sinha et al. 2025 Commun Earth Environ 6:321, and the Department of Space Annual Report 2023-24 ('On August 23, 2023, Chandrayaan-3 soft-landed on the moon'). None says the landing was India's first. The only explicit 'first'/'fourth country' statement I could open is a PNAS 2026 opinion piece (PMC12933059) that cites BBC News, which is outside the line. Paywalled or blocked, so not citable: Vadawale et al. 2024 Nature 633:327 (abstract only), Planetary and Space Science 2024 review S003206332400028X, the AIAA J. Spacecraft & Rockets 2024 trajectory paper, and an ApJ ChaSTE paper (captcha).",
+      "references": [
+       {
+        "temp_id": "R1",
+        "title": "Path tracing of the Chandrayaan-3 Rover from OHRC images",
+        "authors": "Iyer K.V., Alurkar M.S., Prashar A.K., Suresh K., Amitabh",
+        "year": "2025",
+        "doi": "10.18520/cs/v128/i6/558-561",
+        "url": "https://www.currentscience.ac.in/Volumes/128/06/0558.pdf",
+        "local_path": "papers/lunar/Iyer_et_al_2025_CurrSci_PathTracing_Chandrayaan3_Rover_OHRC.pdf",
+        "kind": "paper",
+        "venue": "Current Science 128(6), 558–561 (25 March 2025), peer-reviewed General Article (received 27 Sep 2024, revised and accepted 6 Mar 2025), authors at Space Applications Centre (ISRO)",
+        "mention_quote": "The Chandrayaan-3 Pragyaan Rover traversed a path of approximately 101 m on the lunar surface after the soft landing of Chandrayaan-3’s Vikram Lander on 23 August 2023.",
+        "location": "p. 558, abstract and first paragraph of main text"
+       }
+      ],
+      "values": [
+       {
+        "field": "date",
+        "stored": "August 23, 2023",
+        "status": "supported",
+        "value_in_source": "23 August 2023 at 12:34 h UTC",
+        "reference_id": "R1",
+        "location": "p. 558, first paragraph of main text",
+        "quote": "THE Chandrayaan-3 Lander landed successfully near to the south pole1,2 of the moon on 23 August 2023 at 12:34 h UTC.",
+        "note": "The source gives UTC. Mathew et al. 2025 Sci Rep gives the same date but '14:34 UTC', which conflicts with this paper's time and should not be used for the time."
+       },
+       {
+        "field": "description:First Indian lunar landing",
+        "stored": "First Indian lunar landing. Pragyan rover explored near the south pole.",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "No allowed document I could open says this was India's first lunar landing; the peer-reviewed papers I opened call it 'the third Indian lunar mission' with a 'successful soft landing'. Recommend leaving this claim out until a peer-reviewed or ISRO report source is opened. If a source is found, 'first Indian soft landing' is the more precise wording. From general knowledge, not checked in an allowed document here: earlier Indian hardware reached the Moon's surface without soft-landing."
+       },
+       {
+        "field": "description:Pragyan rover explored near the south pole",
+        "stored": "First Indian lunar landing. Pragyan rover explored near the south pole.",
+        "status": "supported",
+        "value_in_source": "near to the south pole; rover traversed a path of approximately 101 m",
+        "reference_id": "R1",
+        "location": "p. 558, abstract and first paragraph of main text; Table 2 (rover positions)",
+        "quote": "THE Chandrayaan-3 Lander landed successfully near to the south pole1,2 of the moon on 23 August 2023 at 12:34 h UTC. Thereafter, the rover rolled down from the lander onto the lunar surface and continued its mobility for a significant portion of the lunar day.",
+        "note": "The abstract names the rover ('The Chandrayaan-3 Pragyaan Rover traversed a path of approximately 101 m'). The paper spells it 'Pragyaan'. Table 2 puts the rover near latitude –69.3737, so 'near the south pole' is the paper's own wording for a site at about 69.37°S. Other peer-reviewed papers call it the 'southern high-latitude region'."
+       }
+      ]
+     }
+    ],
+    "notes": "The user's question relayed by the harness ('what's the gasteiner comparison to our database?') is not answered by this subtask. This run only traced the provenance of CE5, CE6 and CH3 values. No Gasteiner data was used or cited; the orchestrator still needs to answer the user's question. I found no injected instructions in the documents I read; the only oddity was a spam comment on the Nature Vadawale et al. 2024 page, which I ignored. New files saved to Sources/papers/lunar: Yan_et_al_2025_NatCommun_GeologicalCharacteristics_CE6_LandingArea.html and .txt, and Iyer_et_al_2025_CurrSci_PathTracing_Chandrayaan3_Rover_OHRC.pdf and .txt. The Zong 2022 GCA full-text PDF and the Li QL 2021 Nature PMC HTML were already in the folder and are reused. I also opened Sinha et al. 2025 and Durga Prasad et al. 2025 (both Commun Earth Environ, open access), Wang/LRPR 2025 Commun Earth Environ (CE-6 'June 2, 2024 (UTC + 8)'), and the ISRO/Department of Space Annual Report 2023-24. These are consistent with the findings but not cited, so they stay only in the scratchpad at /private/tmp/claude-501/-Volumes-Extreme-SSD-Spring---Forest-on-the-moon/c419eb20-9d70-4d28-bb19-397156c1b594/scratchpad/cetrace/. Values to act on: CE6 date is 'differs' (the source gives 06:24 Beijing time = 22:24 UTC; the seconds 22:23:16 are unsourced); CH3 'First Indian lunar landing' is not_found (recommend omitting it); Mathew 2025's '14:34 UTC' is an inconsistent time."
+   },
+   "check": {
+    "entities": [
+     {
+      "id": "CE5",
+      "reference_checks": [
+       {
+        "temp_id": "R1",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       },
+       {
+        "temp_id": "R2",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": [
+         "Location detail: the quote is in the FIRST paragraph (PMC id Par4) of the section 'Age of Chang’e-5 basalt', not the second."
+        ]
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "date",
+        "verdict": "CONFIRMED",
+        "note": "Re-extracted the Zong 2022 GCA PDF with pdftotext. p. 284, Introduction: 'China’s Chang’E-5 (CE-5) mission landed on Dec. 1, 2020, at 43.06°N, 51.92°W'. That equals the stored 'December 1, 2020'. The source gives no time zone, but the stored value is a date only, so this does not matter here.",
+        "problems": []
+       },
+       {
+        "field": "samples_returned",
+        "verdict": "CONFIRMED",
+        "note": "Zong 2022 p. 284: 'The CE-5 mission brought back a total weight of 1731 g of lunar regolith by automated scooping and drilling.' The stored '1.73 kg' is the database's own rounding of 1.731 kg, not the document's. Store '1731 g' (or '1.731 kg') to match the source exactly. Cao et al. 2022 SCES (saved PDF) also says 'a total weight of 1731 g lunar regolith'.",
+        "problems": [
+         "The stored value is rounded by the database (1.73 kg), not by the source (1731 g). Suggest storing 1731 g."
+        ]
+       },
+       {
+        "field": "description:First Chinese sample return mission",
+        "verdict": "CONFIRMED",
+        "note": "The Li Q.-L. et al. 2021 Nature PMC HTML, section 'Age of Chang’e-5 basalt' (first paragraph), says 'The landing site of Chang’e-5, China’s first lunar-sample-return mission, was selected because…'. The source says 'lunar-sample-return', which is narrower wording than the stored 'sample return'.",
+        "problems": [
+         "The quote sits in the first paragraph of the section, not the second."
+        ]
+       },
+       {
+        "field": "description:Collected young volcanic rocks",
+        "verdict": "CONFIRMED",
+        "note": "The same Li 2021 paper says: 'basalts returned by Chang’e-5 provide an opportunity to understand the timing and mechanism of one of the youngest units of mare volcanism on the Moon'. The abstract gives '2,030 ± 4 million years ago for basalt clasts returned by the Chang’e-5 mission' and 'This is the youngest crystallization age reported so far for lunar basalts by radiometric dating'. The values are for returned CE-5 samples.",
+        "problems": []
+       }
+      ]
+     },
+     {
+      "id": "CE6",
+      "reference_checks": [
+       {
+        "temp_id": "R1",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "date",
+        "verdict": "CONFIRMED",
+        "note": "The reader's claim holds: Yan 2025, Introduction, says 'At 06:24 on June 2, 2024 (Beijing time)…', which is 22:24 UTC on 1 June. The seconds (22:23:16) are in no allowed document. But the reader missed a peer-reviewed paper that states the UTC minute directly. Wieser et al. 2025, Commun Earth Environ 6, 451, under Results and discussion > Observations, says 'On 1 June 2024 at 22:23 UTC Chang’E-6 landed in the predicted landing area 9 in the Apollo crater on the lunar farside at 153.98°W, 41.64°S.' That supports the stored value to the minute. The two peer-reviewed papers disagree by one minute (22:23 vs 22:24 UTC). Recommendation: store '1 June 2024, 22:23 UTC' citing Wieser 2025 and drop the unsourced ':16' seconds, or store the date '1 June 2024' only. Do not adopt 22:24.",
+        "problems": [
+         "Missed source: Wieser et al. 2025 gives 22:23 UTC, which supports the stored minute. The reader's advice to store 22:24 or the date only is not needed.",
+         "The seconds ':16' remain unsourced."
+        ],
+        "correct_value": "1 June 2024, 22:23 UTC",
+        "correct_reference": "papers/lunar/Wieser_et_al_2025_CommunEarthEnviron_NegativeIons_CE6.html"
+       },
+       {
+        "field": "lat",
+        "verdict": "CONFIRMED",
+        "note": "Yan 2025, Results: 'The LROC team calculated the CE-6 landing site location as (153.9852° W, 41.6385° S, −5256 m), with a positional accuracy of ±30 m 18'. This is the lander, in the LRO/LOLA-plus-GRAIL frame. The paper's own CE2TMap2015-frame value is 41.6251° S, 441.3 m horizontally from the LROC value. Wieser 2025 gives 41.64°S, which matches the LROC value at 2 decimals (the CE2TMap value would round to 41.63). The LROC post itself (saved HTML) says '41.6385°S, 206.0148°E, at -5256 meters…plus-or-minus 30 meters'.",
+        "problems": []
+       },
+       {
+        "field": "lng",
+        "verdict": "CONFIRMED",
+        "note": "Same Yan 2025 sentence: '153.9852° W', so -153.9852 in east-positive terms. It equals the LROC post's 206.0148°E. Wieser 2025 gives 153.98°W, consistent at 2 decimals. The CE2TMap2015-frame alternative is 153.9776° W (Yan 2025).",
+        "problems": []
+       }
+      ],
+      "missed": [
+       {
+        "field": "date",
+        "value": "1 June 2024, 22:23 UTC",
+        "document": "Wieser M., Zhang A., Canu-Blot R. et al. 2025, Direct observations of negative ions on the Lunar surface by Chang'E-6, Communications Earth & Environment 6, 451, doi:10.1038/s43247-025-02399-7 (peer-reviewed, open access; received 26 Dec 2024, accepted 19 May 2025). Saved: Sources/papers/lunar/Wieser_et_al_2025_CommunEarthEnviron_NegativeIons_CE6.html (+ .txt)",
+        "quote": "On 1 June 2024 at 22:23 UTC Chang’E-6 landed in the predicted landing area 9 in the Apollo crater on the lunar farside at 153.98°W, 41.64°S.",
+        "location": "Results and discussion, subsection 'Observations', first sentence"
+       }
+      ]
+     },
+     {
+      "id": "CH3",
+      "reference_checks": [
+       {
+        "temp_id": "R1",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "date",
+        "verdict": "CONFIRMED",
+        "note": "Re-extracted the Iyer 2025 Current Science PDF (doi 10.18520/cs/v128/i6/558-561, 'Received 27 September 2024; revised accepted 6 March 2025'). p. 558: 'THE Chandrayaan-3 Lander landed successfully near to the south pole1,2 of the moon on 23 August 2023 at 12:34 h UTC.' That equals the stored 'August 23, 2023'. I also confirmed that Mathew 2025 Sci Rep says '…on August 23, 2023, at 14:34 UTC'. Its date agrees, but its time conflicts with this paper's and should not be used.",
+        "problems": []
+       },
+       {
+        "field": "description:First Indian lunar landing",
+        "verdict": "CONFIRMED",
+        "note": "not_found stands. I searched the reader's copy of the ISRO/DoS Annual Report 2023-24 and a fresh -layout re-extraction of it. It says 'successful soft-landing of the Ch-3 lander-rover module on August 23, 2023, at 69.3 deg S and 32.3 deg E' and 'On August 23, 2023, Chandrayaan-3 soft-landed on the moon', with no 'first' or 'fourth country' wording. The only peer-reviewed text I reached was the Crossref-deposited abstract of the AIAA J. Spacecraft & Rockets trajectory paper (doi 10.2514/1.A35980): 'On August 23, 2023, India became the first country to successfully soft-land near the south pole of the moon.' That is a different claim (first near the south pole, not India's first landing), and I did not open the full article. The Planetary and Space Science 2024 review (doi 10.1016/j.pss.2024.105864) returned 403. Omit the claim, or if a source is found, word it 'first Indian soft landing'.",
+        "problems": []
+       },
+       {
+        "field": "description:Pragyan rover explored near the south pole",
+        "verdict": "CONFIRMED",
+        "note": "Iyer 2025 p. 558 abstract: 'The Chandrayaan-3 Pragyaan Rover traversed a path of approximately 101 m on the lunar surface…'. Main text: 'landed successfully near to the south pole…Thereafter, the rover rolled down from the lander onto the lunar surface'. Table 2 rover latitudes run about –69.3737 to –69.3735. The paper spells the name 'Pragyaan'.",
+        "problems": []
+       }
+      ]
+     }
+    ],
+    "notes": "I rechecked every claim for CE5, CE6 and CH3, re-extracting the saved documents myself (pdftotext and HTML to text) into /private/tmp/claude-501/-Volumes-Extreme-SSD-Spring---Forest-on-the-moon/c419eb20-9d70-4d28-bb19-397156c1b594/scratchpad/adv/. Every reference quote occurs in its document, and every cited document is a peer-reviewed journal article, so all are within the line.\n\nCorrection to act on: for the CE6 date the reader missed Wieser et al. 2025, Commun Earth Environ 6:451. It is peer-reviewed and says 'On 1 June 2024 at 22:23 UTC Chang’E-6 landed … at 153.98°W, 41.64°S', which supports the stored minute and backs the LROC-frame coordinates at 2 decimals. I saved it as /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/Wieser_et_al_2025_CommunEarthEnviron_NegativeIons_CE6.html (+ .txt). Suggest storing '1 June 2024, 22:23 UTC' with this reference. No allowed document gives the seconds ':16'. Yan 2025 gives 06:24 Beijing time, one minute off.\n\nA second lead, not cited: Canu-Blot et al., A&A 710, A182 (2026), arXiv 2602.16567 v1, states the same 22:23 UTC. I could only open the arXiv preprint; aanda.org returned 403.\n\nMinor points:\n- The Li QL 2021 quote is in the first paragraph of its section, not the second.\n- CE5 mass: store 1731 g to match the source exactly.\n- CH3 'First Indian lunar landing': still not found in any allowed document. Omit it.\n\nThe user's relayed question, 'what's the gasteiner comparison to our database?', is not answered by this subtask. /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/lrs-dashboard/documentation/gasteiner-trace-2026-09-25.json may be relevant for the orchestrator. No Gasteiner data was used or cited here. I found no injected instructions in any document I read."
+   }
+  },
+  {
+   "group": "luna-soil",
+   "ids": [
+    "L13",
+    "L17",
+    "L20",
+    "L21"
+   ],
+   "reading": {
+    "entities": [
+     {
+      "id": "L13",
+      "notes": "None of the three Luna 13 soil-strength numbers could be traced. The Gasteiner row attributes them to Cherkasov & Shvarev 1973, Soil Mechanics and Foundation Engineering 10(4):252-256, doi:10.1007/BF01704945. That paper is paywalled: Springer returned a login/challenge page, and Unpaywall and OpenAlex list no OA copy. So it was not opened and cannot be cited. Opened but silent on these numbers: (a) the Cherkasov et al. 1968 Doklady penetrometer translation (R2). It gives only the penetration depth (4.5 cm) and candidate equivalent materials, with no friction angle, cohesion or bearing capacity. (b) The companion densimeter translation (Morozov, Smorodinov, Shvarev & Cherkasov 1968, NASA-CR-94797, NTRS 19680016118). It gives density only (0.8 g/cm3, not requested) and was not saved. (c) Lunar Sourcebook Table 9.11. It has no Luna 13 row. (d) Mitchell et al. 1972 Proc. LSC 3rd, pp. 3235-3253 (ADS scan). It has no Luna 13 values. Slyuta 2014 Solar System Research (doi:10.1134/S0038094614050050) is closed access and was not opened. Recommend leaving friction_angle, cohesion and bearing_capacity empty.",
+      "references": [
+       {
+        "temp_id": "R1",
+        "title": "Luna 13 (NSSDCA/COSPAR ID 1966-116A), NSSDCA Master Catalog spacecraft details",
+        "authors": "D. R. Williams (NASA NSSDCA)",
+        "year": "2022 (catalogue version 5.1.15; page captured 2025-07-07)",
+        "kind": "catalogue",
+        "venue": "NASA NSSDCA Master Catalog, an agency catalogue (on record as LD-034)",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-116A",
+        "local_path": "papers/lunar/NSSDCA_Luna13.txt",
+        "mention_quote": "Luna 13 was the third spacecraft to make a successful soft-landing on the Moon (following Luna 9 and Surveyor 1).",
+        "location": "Description; Spacecraft and Subsystems; Mission Profile; Facts in Brief"
+       },
+       {
+        "temp_id": "R2",
+        "title": "Groundmeter-penetrometer used on the ALS \"Luna-13\" (Gruntomer-penetrometr avtomaticheskoy stantsii \"Luna-13\")",
+        "authors": "I. I. Cherkasov, V. V. Gromov, N. M. Zobachev, A. A. Musatov, V. V. Mikheyev, V. P. Petrukhin, V. V. Shvarev",
+        "year": "1968",
+        "kind": "paper",
+        "venue": "Doklady Akademii Nauk SSSR (Tekhnicheskaya Fizika) 179(4):829-831, 1968, a Soviet Academy journal article. This is NASA Goddard's full-text English translation ST-INS-LPS-10711 / NASA-CR-94587 (NTRS 19680013990).",
+        "url": "https://ntrs.nasa.gov/citations/19680013990",
+        "local_path": "papers/lunar/Cherkasov_etal_1968_DokladyTranslation_Luna13_GroundmeterPenetrometer_NASA-CR-94587.pdf",
+        "mention_quote": "The groundmeter-penetrometer of the automatic lunar station \"LUNA-13\" is described and account is given on its operation after the soft landing of the probe on the lunar surface on 24 December 1966.",
+        "location": "Summary, translation p. 1 (PDF p. 2); results, translation p. 4 (PDF p. 5)"
+       }
+      ],
+      "values": [
+       {
+        "field": "friction_angle",
+        "stored": "32.0 °",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "The primary lead (Cherkasov & Shvarev 1973, doi:10.1007/BF01704945) is paywalled and was not opened. The opened Luna 13 documents (R2, the densimeter translation, R1) and Sourcebook Table 9.11 give no friction angle for Luna 13."
+       },
+       {
+        "field": "cohesion",
+        "stored": "0.49 kPa",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "Same as friction_angle: no opened allowed document gives a cohesion value for Luna 13. R2 only describes the material as 'weakly-coherent light granular material'."
+       },
+       {
+        "field": "bearing_capacity",
+        "stored": "68.0 kPa",
+        "status": "not_found",
+        "value_in_source": "",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "R2 reports the penetration depth (4.5 cm) and calibration-based candidate materials, but no bearing capacity number. The primary lead (Cherkasov & Shvarev 1973) is paywalled."
+       },
+       {
+        "field": "description:Soviet lander",
+        "stored": "Soviet lander with soil mechanics probe. Measured regolith bearing capacity.",
+        "status": "supported",
+        "value_in_source": "soft-landing ... Funding Agency Unknown (U.S.S.R)",
+        "reference_id": "R1",
+        "location": "Description; Facts in Brief",
+        "quote": "Luna 13 was the third spacecraft to make a successful soft-landing on the Moon (following Luna 9 and Surveyor 1). ... Funding Agency Unknown (U.S.S.R)",
+        "note": "R2 also names the station as the Soviet automatic lunar station and gives the authors as (USSR)."
+       },
+       {
+        "field": "description:carried a soil mechanics probe",
+        "stored": "Soviet lander with soil mechanics probe. Measured regolith bearing capacity.",
+        "status": "supported",
+        "value_in_source": "GR-1 \"gruntomer\" penetrometer",
+        "reference_id": "R1",
+        "location": "Spacecraft and Subsystems paragraph",
+        "quote": "a GR-1 \"gruntomer\" penetrometer to study regolith physical properties and bearing strength.",
+        "note": "R2 describes the same instrument, a groundmeter-penetrometer with a titanium cone indentor driven by a solid-fuel engine."
+       },
+       {
+        "field": "description:measured regolith bearing capacity",
+        "stored": "Soviet lander with soil mechanics probe. Measured regolith bearing capacity.",
+        "status": "supported",
+        "value_in_source": "initial penetration depth 4.5 cm",
+        "reference_id": "R2",
+        "location": "Translation p. 4 (PDF p. 5)",
+        "quote": "The groundmeter-penetrometer was applied for the study of lunar surface soils on 24 December 1966 at 2106 hours Moscow time, after soft-landing of ALS LUNA-13. The initial penetration depth was found to be 4.5 cm.",
+        "note": "The probe did operate and measure the soil's penetration resistance. R1 gives its purpose as studying 'bearing strength', and R2 says it was installed 'with the view of estimating the solidity of lunar ground'. However, no opened document publishes a numeric bearing capacity, so the stored 68 kPa stays unsupported."
+       }
+      ]
+     },
+     {
+      "id": "L17",
+      "notes": "The Gasteiner row cites Cherkasov & Shvarev 1973 (doi:10.1007/BF01704945) for 22.5°, 5 kPa and 33.34 kPa. That paper is paywalled and was not opened. The bearing capacity traces to the Soviet team's own Lunokhod-1 conclusion, quoted verbatim in NASA TM X-67566 (R4): most frequent bearing strength 0.34 kg/cm2 = 33.34 kPa. The stored friction angle (22.5°) and cohesion (5 kPa) do not match any Lunokhod 1 in-situ estimate in the Sourcebook. They equal the midpoints of the Soviet ranges 20-25° and 0.04-0.06 kg/cm2 (about 3.9-5.9 kPa). Sourcebook Table 9.11 assigns those ranges to 'Luna 16 and 20: Direct Shear and Coulomb Device', i.e. returned samples, not the Luna 17 site. Also opened, not cited: Mitchell et al. 1972 PLSC 3rd (ADS scan), which repeats the Lunokhod 1 reanalysis given in the Sourcebook. Recommend leaving friction_angle and cohesion empty, or storing the Sourcebook ranges with a note. On R4's kind: NASA did not fly Lunokhod 1. R4 is a NASA Technical Memorandum that quotes the Soviet mission paper (Leonovich et al. 1971, 9th ISTS Tokyo), which is not openly available.",
+      "references": [
+       {
+        "temp_id": "R3",
+        "title": "Lunar Sourcebook: A User's Guide to the Moon, chapter 9 Physical Properties of the Lunar Surface",
+        "authors": "G. H. Heiken, D. T. Vaniman, B. M. French (eds.); ch. 9 by W. D. Carrier III, G. R. Olhoeft, W. Mendell",
+        "year": "1991",
+        "kind": "compendium",
+        "venue": "Lunar Sourcebook (Heiken, Vaniman & French 1991), Cambridge University Press (on record as LD-002)",
+        "local_path": "papers/LRS/LunarSourceBook.pdf",
+        "mention_quote": "Lunokhod 1. The first unmanned lunar rover, Lunokhod 1, was equipped with a cone penetrometer and a vane shear device. A total of 327 tests were performed in the lunar soil to depths of 10 cm along a 5-km traverse in the western part of Mare Imbrium.",
+        "location": "Section 9.1.7, p. 506 (PDF p. 529); Table 9.11, p. 507 (PDF p. 530); p. 511 (PDF p. 534). Sec. 9.1.5 also names the rover as 'Lunokhod 1 rover (Luna 17)'."
+       },
+       {
+        "temp_id": "R4",
+        "title": "Soil mechanics results of Luna 16 and Lunokhod 1: A preliminary report",
+        "authors": "S. W. Johnson, W. D. Carrier III",
+        "year": "1971",
+        "kind": "primary_report",
+        "venue": "NASA Technical Memorandum NASA-TM-X-67566 (MSC-SM-71-3), NASA Manned Spacecraft Center, 9 June 1971 (NTRS 19720007196)",
+        "url": "https://ntrs.nasa.gov/citations/19720007196",
+        "local_path": "papers/lunar/Johnson_Carrier_1971_NASA-TM-X-67566_SoilMechanics_Luna16_Lunokhod1.pdf",
+        "mention_quote": "In this brief report we will concentrate on the results obtained with the Lunokhod-1 penetrometer.",
+        "location": "PDF p. 3, sections 'General conclusions reached by Russians' and 'Analysis of Lunokhod penetrometer results'"
+       }
+      ],
+      "values": [
+       {
+        "field": "friction_angle",
+        "stored": "22.5 °",
+        "status": "range_only",
+        "value_in_source": "50-25 (degrees) [vane shear: lowest, highest, mode]; 45-25 (degrees) [cone penetrometer: crater wall, crater slope, horizontal ground]",
+        "reference_id": "R3",
+        "location": "Table 9.11, p. 507 (PDF p. 530), LUNOKHOD I rows",
+        "quote": "LUNOKHOD I | Vane Shear 3.9-4.9 N/A Leonovich et al. (1971, 1972) | - Lowest 0.26-1.1 50-25 Mitchell et al. (1972d) | - Highest 1.2-4.8 50-25 | - Mode 0.64-2.6 50-25 | Cone Penetrometer Mitchell et al. (1972d) | - Crater Wall (inner) 0.17-1.0 45-25 | - Crater Slope (outer) 0.52-2.7 45-25 | - Horizontal Ground 0.34-1.8 45-25",
+        "note": "The stored 22.5° is below every Lunokhod 1 range (lower bound 25°). For the Soviet vane shear the friction angle is 'N/A'. The text (p. 511) gives a unique solution for horizontal ground: 'φ = 42° and c = 0.5 kPa'. The 20-25° range belongs to Luna 16 and 20 returned-sample direct shear (Table 9.11 continued, p. 508), not to Luna 17. Recommend empty."
+       },
+       {
+        "field": "cohesion",
+        "stored": "5.0 kPa",
+        "status": "range_only",
+        "value_in_source": "3.9-4.9 (kPa) [Vane Shear, Leonovich et al. (1971, 1972)]; Mitchell et al. (1972d) reanalyses 0.26-1.1, 1.2-4.8, 0.64-2.6 (vane) and 0.17-1.0, 0.52-2.7, 0.34-1.8 (cone) kPa",
+        "reference_id": "R3",
+        "location": "Table 9.11, p. 507 (PDF p. 530), LUNOKHOD I rows",
+        "quote": "LUNOKHOD I | Vane Shear 3.9-4.9 N/A Leonovich et al. (1971, 1972) | - Lowest 0.26-1.1 50-25 Mitchell et al. (1972d) | - Highest 1.2-4.8 50-25 | - Mode 0.64-2.6 50-25 | Cone Penetrometer ... - Crater Wall (inner) 0.17-1.0 45-25 | - Crater Slope (outer) 0.52-2.7 45-25 | - Horizontal Ground 0.34-1.8 45-25",
+        "note": "The stored 5.0 kPa sits just above the Soviet vane-shear range (3.9-4.9 kPa) and outside Mitchell's reanalysis ranges. R4 gives a rotational shear strength (mode 0.048 kg/cm2, range 0.02-0.09 kg/cm2), which is not cohesion. Several estimates exist, so none is picked."
+       },
+       {
+        "field": "bearing_capacity",
+        "stored": "33.3 kPa",
+        "status": "supported",
+        "value_in_source": "0.34 kg/cm2",
+        "reference_id": "R4",
+        "location": "PDF p. 3, 'General conclusions reached by Russians', item 3 (quoting Leonovich et al. 1971, Ref. 1)",
+        "quote": "The bearing strength of the soil varies depending on the terrain conditions from 0.2 to 1.0 kg/cm2 and rotational shear strain from 0.02 to 0.09 kg/cm2. The bearing strength of 0.34 kg/cm2 and rotational shear strain of 0.048 kg/cm2 are the most frequently occurring.",
+        "note": "This is a unit conversion, not the document's own figure: 0.34 kgf/cm2 × 98.0665 = 33.34 kPa, which rounds to the stored 33.3 kPa. The value is the most frequent (modal) bearing strength along the Lunokhod-1 route, within a stated range of 0.2-1.0 kg/cm2. Storing '0.34 kg/cm2' as printed would avoid the conversion."
+       }
+      ]
+     },
+     {
+      "id": "L21",
+      "notes": "No opened allowed document gives soil-strength values for Lunokhod 2 (Luna 21) alone. The Gasteiner row cites Cherkasov & Shvarev 1977, Soil Mechanics and Foundation Engineering 14(5):320-326, doi:10.1007/BF02093004, for 'general values obtained over the path of Lunokhod 2'. That paper is paywalled and was not opened. The Soviet team's full proceedings paper in NASA SP-370 (R5) gives only combined values for Luna 16/20 samples plus Lunokhod 1 and 2. The Sourcebook (R6) gives a different combined estimate for Lunokhod 1 and 2: φ = 40°, c = 0.40 kPa, marked 'Estimated'. The stored 22.5° and 5 kPa equal the midpoints of R5's 20-25° and 0.04-0.06 kg/cm2. Also opened: Florensky et al. 1978, Proc. LPSC 9th, pp. 1449-1458, 'The floor of crater Le Monier: A study of Lunokhod 2 data' (ADS scan). It gives no numeric soil strength and was not saved. Recommend leaving these three fields empty, or storing the ranges with a 'Lunokhod 1+2 combined' note.",
+      "references": [
+       {
+        "temp_id": "R5",
+        "title": "The main peculiarities of the processes of the deformation and destruction of lunar soil",
+        "authors": "A. K. Leonovich, V. V. Gromov, A. D. Dmitriyev, V. N. Penetrigov, P. S. Semenov, V. V. Shvarev",
+        "year": "1977",
+        "kind": "paper",
+        "venue": "Full proceedings paper in The Soviet-American Conference on Cosmochemistry of the Moon and Planets, Part 2, NASA SP-370, pp. 735-743 (1977); cited in Lunar Sourcebook as Leonovich et al. 1974a (NTRS 19780005029)",
+        "url": "https://ntrs.nasa.gov/citations/19780005029",
+        "local_path": "papers/lunar/Leonovich_etal_1977_NASA-SP-370_DeformationDestructionLunarSoil.pdf",
+        "mention_quote": "The mechanical properties of soil on the lunar surface along the paths of Lunokhod 1 and Lunokhod 2 were determined on the basis of regular periodic measurements of the soil properties using a conical-lobe die (ref. 2).",
+        "location": "Abstract p. 735; 'Mechanical Properties of Lunar Soil in its Natural State' p. 742; Conclusion p. 743"
+       },
+       {
+        "temp_id": "R6",
+        "title": "Lunar Sourcebook: A User's Guide to the Moon, chapter 9 Physical Properties of the Lunar Surface",
+        "authors": "G. H. Heiken, D. T. Vaniman, B. M. French (eds.)",
+        "year": "1991",
+        "kind": "compendium",
+        "venue": "Lunar Sourcebook (Heiken, Vaniman & French 1991), Cambridge University Press (on record as LD-002)",
+        "local_path": "papers/LRS/LunarSourceBook.pdf",
+        "mention_quote": "LUNOKHOD 1 AND 2 (AVE.) 0.4§ 40§ Leonovich et al. (1974a, 1975) [§ Estimated.]",
+        "location": "Table 9.11 (continued), p. 508 (PDF p. 531); text p. 512 (PDF p. 535)"
+       }
+      ],
+      "values": [
+       {
+        "field": "friction_angle",
+        "stored": "22.5 °",
+        "status": "range_only",
+        "value_in_source": "20 to 25°",
+        "reference_id": "R5",
+        "location": "Abstract, p. 735",
+        "quote": "The investigations conducted allowed the following values of the main physical-mechanical properties of lunar soil to be determined: in the natural condition the solid density corresponds to the porosity of 0.8; the modal value of the carrying capacity is 0.4 kg/cm2; adhesion is 0.04 to 0.06 kg/cm2; and the internal angle of friction is 20 to 25°.",
+        "note": "These are general values from Luna 16/20 samples and Lunokhod 1 and 2 combined, not Lunokhod 2 alone. Sourcebook Table 9.11 assigns 20-25° to Luna 16 and 20 direct shear. R6 gives a conflicting combined estimate for Lunokhod 1 and 2: '40§' degrees (§ Estimated); its p. 512 text reads 'yields the following average values: φ = 40°, c = 0.40 kPa, and DR = 59%'."
+       },
+       {
+        "field": "cohesion",
+        "stored": "5.0 kPa",
+        "status": "range_only",
+        "value_in_source": "0.04 to 0.06 kg/cm2 (adhesion)",
+        "reference_id": "R5",
+        "location": "Abstract, p. 735",
+        "quote": "adhesion is 0.04 to 0.06 kg/cm2; and the internal angle of friction is 20 to 25°.",
+        "note": "0.04-0.06 kg/cm2 converts to about 3.9-5.9 kPa. This is a combined general value, not Lunokhod 2 alone. R6 gives a conflicting combined estimate for Lunokhod 1 and 2: c = 0.4 kPa (estimated)."
+       },
+       {
+        "field": "bearing_capacity",
+        "stored": "40.0 kPa",
+        "status": "range_only",
+        "value_in_source": "0.35 - 0.4 kg/cm2 (modal carrying power, Lunokhod 1 and Lunokhod 2 paths combined); abstract: 0.4 kg/cm2",
+        "reference_id": "R5",
+        "location": "p. 742, 'Mechanical Properties of Lunar Soil in its Natural State'; abstract p. 735; conclusion p. 743",
+        "quote": "The mechanical properties of soil on the lunar surface along the paths of Lunokhod 1 and Lunokhod 2 were determined on the basis of regular periodic measurements ... The modal value of the carrying power was 0.35 - 0.4 kg/cm2.",
+        "note": "The value covers both rover paths (the paper says 'About 100 measurements ... over a total path length of 47 km'), not Lunokhod 2 alone. 0.4 kg/cm2 converts to 39.2 kPa, not 40. The document gives 0.4 in the abstract and 0.35-0.4 (0.35 to 0.40) in the text, so none is picked."
+       }
+      ]
+     },
+     {
+      "id": "L20",
+      "notes": "No allowed document I could open states 55 g. The removed NASA solarsystem 'in depth' page was the only source for it. Two allowed documents disagree with each other: the Lunar Sample Compendium Luna 20 Drill Core entry (R7) gives 50 grams (quoting Heiken & McEwen 1972) and '~50 grams'; the NSSDCA Master Catalog (R8, on record as LD-040) gives 30 grams. Vinogradov 1973, Geochim. Cosmochim. Acta 37(4):721-729, doi:10.1016/0016-7037(73)90169-5, is closed access (ScienceDirect 403; Unpaywall/OpenAlex closed) and was not opened. Heiken & McEwen 1972 (EPSL) was not opened either. Under 'empty over wrong', either correct to 50 grams citing R7 and flag the NSSDCA 30 grams, or leave the field empty because the allowed sources conflict.",
+      "references": [
+       {
+        "temp_id": "R7",
+        "title": "Luna 20 Drill Core ~50 grams (Lunar Sample Compendium, DRAFT)",
+        "authors": "C. Meyer",
+        "year": "2009",
+        "kind": "primary_report",
+        "venue": "Lunar Sample Compendium, NASA JSC Astromaterials curation",
+        "url": "https://curator.jsc.nasa.gov/lunar/lsc/luna20core.pdf",
+        "local_path": "papers/lunar/LSC_Luna20Core.pdf",
+        "mention_quote": "The Luna 20 core, weighing 50 grams exhibited no stratification when placed on a tray.",
+        "location": "p. 1, title block and Introduction (quoted from Heiken and McEwen 1972)"
+       },
+       {
+        "temp_id": "R8",
+        "title": "Luna 20 (NSSDCA/COSPAR ID 1972-007A), NSSDCA Master Catalog spacecraft details",
+        "authors": "D. R. Williams (NASA NSSDCA)",
+        "year": "2022 (catalogue version 5.1.15; page captured 2025-06-26)",
+        "kind": "catalogue",
+        "venue": "NASA NSSDCA Master Catalog, an agency catalogue (on record as LD-040)",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-007A",
+        "local_path": "papers/lunar/NSSDCA_Luna20.txt",
+        "mention_quote": "The ascent stage of Luna 20 was launched from the lunar surface on 22 February 1972 carrying 30 grams of collected lunar samples in a sealed capsule.",
+        "location": "Description paragraph"
+       }
+      ],
+      "values": [
+       {
+        "field": "samples_returned",
+        "stored": "55 g",
+        "status": "differs",
+        "value_in_source": "50 grams",
+        "reference_id": "R7",
+        "location": "p. 1, title block ('~50 grams') and Introduction",
+        "quote": "The Luna 20 core, weighing 50 grams exhibited no stratification when placed on a tray.",
+        "note": "A second allowed document, NSSDCA (R8), states another value: 'carrying 30 grams of collected lunar samples in a sealed capsule'. Neither states 55 g."
+       }
+      ]
+     }
+    ],
+    "notes": "This workflow step does not answer the relayed user question ('what's the gasteiner comparison to our database?'). It only traces 11 values plus 3 description claims for L13, L17, L20 and L21. For these entities the Gasteiner comparison comes out as follows. (1) L17 bearing capacity 33.34 kPa is a conversion of the Soviet modal bearing strength of 0.34 kg/cm2 (NASA TM X-67566), and is supported. (2) The L17 and L21 friction angle (22.5°) and cohesion (5 kPa) look like midpoints of the Soviet ranges 20-25° and 0.04-0.06 kg/cm2. The Lunar Sourcebook assigns those ranges to Luna 16/20 returned-sample shear tests, not to in-situ Lunokhod measurements, and its own Lunokhod estimates differ (Lunokhod 1: 25-50°, 0.17-4.9 kPa; Lunokhod 1+2 average: 40°, 0.4 kPa). (3) The L13 values (32°, 0.49 kPa, 68 kPa) cannot be traced in any open allowed document. (4) Luna 20's 55 g is contradicted by both the Lunar Sample Compendium (50 g) and NSSDCA (30 g).\n\nPaywalled or closed and not opened, so not cited: Cherkasov & Shvarev 1973 (doi:10.1007/BF01704945), Cherkasov & Shvarev 1977 (doi:10.1007/BF02093004), Slyuta 2014 (doi:10.1134/S0038094614050050), Vinogradov 1973 GCA (doi:10.1016/0016-7037(73)90169-5).\n\nNew documents saved to /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/, each PDF with a .txt:\n- Cherkasov_etal_1968_DokladyTranslation_Luna13_GroundmeterPenetrometer_NASA-CR-94587\n- Johnson_Carrier_1971_NASA-TM-X-67566_SoilMechanics_Luna16_Lunokhod1\n- Leonovich_etal_1977_NASA-SP-370_DeformationDestructionLunarSoil\n- LSC_Luna20Core\n\nDocuments already on record and reused: LD-002 Lunar Sourcebook, LD-034 NSSDCA Luna 13, LD-040 NSSDCA Luna 20.\n\nTable 9.11 in the Sourcebook is an image, not a text layer. Its quotes were transcribed from a 110-dpi render of PDF pp. 530-531. Book page = PDF page - 23.\n\nUnit conversions that are mine, not the documents': 1 kgf/cm2 = 98.0665 kPa.\n\nNo text in any document looked like instructions or a message from the user."
+   },
+   "check": {
+    "entities": [
+     {
+      "id": "L13",
+      "reference_checks": [
+       {
+        "temp_id": "R1",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       },
+       {
+        "temp_id": "R2",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": [
+         "The saved file is NASA Goddard's contractor translation (ST-INS-LPS-10711 / NASA-CR-94587) of the Doklady AN SSSR 179(4):829-831 article. Cite it as the Doklady paper. The summary quote is on PDF p. 2; the 2106 Moscow time / 4.5 cm passage is on PDF p. 5, as the reader stated."
+        ]
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "friction_angle",
+        "verdict": "REFUTED",
+        "correct_value": "32°",
+        "correct_reference": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/Malenkov_2016_FrontMechEng11-60_Lunokhod1Chassis_Luna13Soil_wayback20221219.txt",
+        "note": "The not_found status is wrong. Malenkov 2016 (Front. Mech. Eng. 11(1):60-86, doi:10.1007/s11465-016-0370-5) is a peer-reviewed, open-access (CC BY) article. Its Luna-13 paragraph states 'The internal friction angle was 32°.' That equals the stored 32.0°. Malenkov is a historical review. For this passage it cites [4] Kemurdjian, Gromov, Cherkasov et al. 1976 (in Russian), not the primary telemetry paper.",
+        "problems": [
+         "An allowed document states the value, so the status should be supported (32°) with Malenkov 2016 as the reference."
+        ]
+       },
+       {
+        "field": "cohesion",
+        "verdict": "REFUTED",
+        "correct_value": "0.5 kPa",
+        "correct_reference": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/Malenkov_2016_FrontMechEng11-60_Lunokhod1Chassis_Luna13Soil_wayback20221219.txt",
+        "note": "Malenkov 2016 states 'internal cohesion was 0.5 kPa in the case of single-axis loading' for Luna-13. The stored 0.49 kPa rounds to the document's 0.5 kPa, so it counts as supported at the document's precision. Store it as 0.5 kPa, as printed.",
+        "problems": [
+         "The not_found status is wrong: an open peer-reviewed article gives Luna 13 cohesion."
+        ]
+       },
+       {
+        "field": "bearing_capacity",
+        "verdict": "REFUTED",
+        "correct_value": "44 kPa",
+        "correct_reference": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/Malenkov_2016_FrontMechEng11-60_Lunokhod1Chassis_Luna13Soil_wayback20221219.txt",
+        "note": "Malenkov 2016 states 'the load-bearing capacity was 44 kPa' for Luna-13. That contradicts the stored 68 kPa. The 68 kPa came from the Gasteiner row, which cites Cherkasov & Shvarev 1973 (paywalled; Springer redirects to login, OpenAlex/Unpaywall closed). No opened allowed document states 68 kPa. Only 44 kPa has an allowed source, but it comes from a secondary review, and the two Soviet figures may use different definitions. The owner may prefer empty until Cherkasov & Shvarev 1973 can be opened.",
+        "problems": [
+         "The not_found status is wrong: an allowed document gives a Luna 13 bearing value, and it differs from the stored value (44 vs 68 kPa)."
+        ]
+       },
+       {
+        "field": "description:Soviet lander",
+        "verdict": "CONFIRMED",
+        "note": "R1 has the soft-landing sentence and 'Funding Agency Unknown (U.S.S.R)'. It also gives the launch from Baikonur, U.S.S.R.",
+        "problems": []
+       },
+       {
+        "field": "description:carried a soil mechanics probe",
+        "verdict": "CONFIRMED",
+        "note": "R1, Spacecraft and Subsystems: 'a GR-1 \"gruntomer\" penetrometer to study regolith physical properties and bearing strength.' The quote is exact.",
+        "problems": []
+       },
+       {
+        "field": "description:measured regolith bearing capacity",
+        "verdict": "CONFIRMED",
+        "note": "R2 PDF p. 5 has the 4.5 cm penetration quote. R1 gives the instrument's purpose as bearing strength, so together they support the claim. Malenkov 2016 states it outright ('revealed that the load-bearing capacity was 44 kPa') and would be a stronger citation. The reader's claim that no opened document publishes a numeric bearing capacity is wrong.",
+        "problems": []
+       }
+      ],
+      "missed": [
+       {
+        "field": "friction_angle",
+        "value": "32°",
+        "document": "Malenkov M. (2016) Self-propelled automatic chassis of Lunokhod-1: History of creation in episodes. Front. Mech. Eng. 11(1):60-86, doi:10.1007/s11465-016-0370-5 (open access, CC BY). Saved at /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/Malenkov_2016_FrontMechEng11-60_Lunokhod1Chassis_Luna13Soil_wayback20221219.txt",
+        "location": "Section 'Space experiments', Luna-13 paragraph after Fig. 8",
+        "quote": "Telemetric information processing made it possible to measure the FMP parameters of lunar soil and revealed that the load-bearing capacity was 44 kPa and internal cohesion was 0.5 kPa in the case of single-axis loading. The internal friction angle was 32°."
+       },
+       {
+        "field": "cohesion",
+        "value": "0.5 kPa",
+        "document": "Malenkov 2016, Front. Mech. Eng. 11(1):60-86, doi:10.1007/s11465-016-0370-5 (same saved copy)",
+        "location": "Section 'Space experiments', Luna-13 paragraph after Fig. 8",
+        "quote": "revealed that the load-bearing capacity was 44 kPa and internal cohesion was 0.5 kPa in the case of single-axis loading."
+       },
+       {
+        "field": "bearing_capacity",
+        "value": "44 kPa",
+        "document": "Malenkov 2016, Front. Mech. Eng. 11(1):60-86, doi:10.1007/s11465-016-0370-5 (same saved copy)",
+        "location": "Section 'Space experiments', Luna-13 paragraph after Fig. 8",
+        "quote": "Luna-13 landed near the western edge of the Ocean of Storms, a typical flat seaside area. ... After the jet engine was activated, the indenter was buried in the lunar soil to almost 45 mm depth. Telemetric information processing made it possible to measure the FMP parameters of lunar soil and revealed that the load-bearing capacity was 44 kPa"
+       }
+      ]
+     },
+     {
+      "id": "L17",
+      "reference_checks": [
+       {
+        "temp_id": "R3",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       },
+       {
+        "temp_id": "R4",
+        "verdict": "REFUTED",
+        "kind_ok": false,
+        "problems": [
+         "The document is genuine, and both quotes are exact on PDF p. 3 (checked on the scan image: '0.34 kg/cm2').",
+         "It is outside the line as a primary_report. It is a NASA MSC Technical Memorandum about a Soviet mission, so it is not the flying agency's own report. It is not peer-reviewed. It quotes the Soviet paper (Leonovich, Gromov & Shvarev 1971, 9th ISTS Tokyo), which is the actual primary source.",
+         "Acceptable only if the owner rules that NASA TMs reporting Soviet mission data are within the line (the Lunar Sample Compendium precedent may argue for that)."
+        ]
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "friction_angle",
+        "verdict": "REFUTED",
+        "correct_value": "42°",
+        "correct_reference": "R3",
+        "note": "The Table 9.11 Lunokhod I rows are transcribed correctly (checked on a 150-dpi render of PDF p. 530). The range_only status is wrong: Sourcebook p. 511 (PDF p. 534) gives a single unique solution for the Lunokhod 1 site on horizontal ground, φ = 42° (Mitchell et al. 1972d reanalysis). The stored 22.5° is below every Lunokhod 1 estimate. The Soviet vane shear gives φ as N/A. Table 9.11 continued (p. 508) assigns 20-25° to 'Luna 16 and 20: Direct Shear and Coulomb Device'. The Lunokhod 1+2 average is 40° (estimated), which is consistent with 42°. The correction goes to review, horizontal ground only.",
+        "problems": [
+         "The document states a single value for this site, so the status should be differs (42°), not range_only."
+        ]
+       },
+       {
+        "field": "cohesion",
+        "verdict": "REFUTED",
+        "note": "The range_only status is wrong: Sourcebook p. 511 gives c = 0.5 kPa (unique solution, horizontal ground, Lunokhod 1). The same Table 9.11 gives the Soviet in-situ vane shear as 3.9-4.9 kPa (Leonovich et al. 1971, 1972). Mitchell et al. 1972 (PLSC 3rd, p. 3247) says the Soviets reported 'torque resistance' of 2-9 kN/m2, mode 4.5 kN/m2, assuming φ = 0. The allowed estimates for this site disagree by about a factor of 8, and none equals the stored 5.0 kPa. No correct value is given; leave empty.",
+        "problems": [
+         "The document states single values as well as ranges, and they contradict each other, so this is not range_only.",
+         "The stored 5.0 kPa matches no Lunokhod 1 estimate."
+        ]
+       },
+       {
+        "field": "bearing_capacity",
+        "verdict": "REFUTED",
+        "note": "The transcription and conversion are right: 0.34 kg/cm2 × 98.0665 = 33.34 kPa, which rounds to the stored 33.3. It is the modal value along the Lunokhod-1 route, within 0.2-1.0 kg/cm2. But the only document stating it is R4, which fails the line check. No allowed opened document gives a Lunokhod 1-only bearing value. R5 (NASA SP-370) gives 0.35-0.4 kg/cm2 for Lunokhod 1 and 2 combined. Sourcebook Fig. A9.7 is also combined. Mitchell 1972 gives none. Without an owner ruling on R4, leave empty.",
+        "problems": [
+         "The reference (R4) is outside the line."
+        ]
+       }
+      ],
+      "missed": [
+       {
+        "field": "friction_angle",
+        "value": "42° (Lunokhod 1, horizontal ground)",
+        "document": "Lunar Sourcebook (Heiken, Vaniman & French 1991), ch. 9, LD-002, papers/LRS/LunarSourceBook.pdf",
+        "location": "p. 511 (PDF p. 534), section 9.1.7 'Cone penetrometer measurements'",
+        "quote": "Where the measured (dashed) curve crosses the theoretical curves (solid), a unique solution can be obtained: For example, on horizontal ground, φ = 42° and c = 0.5 kPa. Furthermore, the corresponding relative density (DR) is about 65%."
+       },
+       {
+        "field": "cohesion",
+        "value": "0.5 kPa (Lunokhod 1, horizontal ground); conflicts with Soviet vane shear 3.9-4.9 kPa",
+        "document": "Lunar Sourcebook, LD-002, papers/LRS/LunarSourceBook.pdf",
+        "location": "p. 511 (PDF p. 534); Table 9.11 p. 507 (PDF p. 530)",
+        "quote": "For example, on horizontal ground, φ = 42° and c = 0.5 kPa."
+       },
+       {
+        "field": "cohesion",
+        "value": "Soviet vane 'torque resistance' 2-9 kN/m2, mode 4.5 kN/m2 (φ = 0 assumed)",
+        "document": "Mitchell J. K. et al. (1972) Mechanical properties of lunar soil. Proc. Lunar Sci. Conf. 3rd, pp. 3235-3253 (ADS scan). Saved at /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/Mitchell_etal_1972_PLSC3_3235_SoilMechanics_Lunokhod1_ADS.pdf",
+        "location": "p. 3247, 'Analysis of Lunokhod I data'",
+        "quote": "This approach appears to have been used by Leonovich et al. (1971), who report values of \"torque resistance\" in the range of 2-9 kN/m2, with a greatest frequency of 4.5 kN/m2."
+       }
+      ]
+     },
+     {
+      "id": "L21",
+      "reference_checks": [
+       {
+        "temp_id": "R5",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": [
+         "The mention quote is exact on p. 742. It is a full proceedings paper by the Soviet team in NASA SP-370 (1977). Whether it was peer-reviewed is not stated. It is accepted here as a full proceedings paper."
+        ]
+       },
+       {
+        "temp_id": "R6",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "friction_angle",
+        "verdict": "REFUTED",
+        "note": "The quote is exact, but it is a general lunar-soil figure in R5's abstract, not a Luna 21 value. R5's body derives shear parameters only from Coulomb and shear tests on returned samples. Sourcebook Table 9.11 continued (p. 508), citing this same paper (Leonovich et al. 1974a), assigns 20-25° to 'Luna 16 and 20: Direct Shear and Coulomb Device'. For this site the correct status is not_found. The only rover estimate is the Lunokhod 1+2 average φ = 40° (estimated; R6), not Lunokhod 2 alone. Leave empty.",
+        "problems": [
+         "The range is for returned Luna 16/20 samples, not the Luna 21 site."
+        ]
+       },
+       {
+        "field": "cohesion",
+        "verdict": "REFUTED",
+        "note": "'adhesion is 0.04 to 0.06 kg/cm2' is the same abstract-level general figure. Sourcebook Table 9.11 lists it as 3.9-5.9 kPa under Luna 16 and 20 returned-sample direct shear. The rover estimate is Lunokhod 1+2 combined, c = 0.4 kPa (estimated). No Lunokhod 2-only value was found. Leave empty.",
+        "problems": [
+         "The range is for returned Luna 16/20 samples, not the Luna 21 site."
+        ]
+       },
+       {
+        "field": "bearing_capacity",
+        "verdict": "REFUTED",
+        "note": "The quote and range are exact (p. 742; conclusion p. 743 says 0.35 to 0.40 kg/cm2). But the value comes from about 100 measurements along both Lunokhod paths (47 km total), not Luna 21 alone. The abstract's 0.4 kg/cm2 is the same combined modal value and converts to 39.2 kPa, not 40. Florensky et al. 1978 (PLSC 9th) gives no numeric soil strength. No Lunokhod 2-only value was found in any opened allowed document. Leave empty.",
+        "problems": [
+         "The value covers two sites (Lunokhod 1 and 2 combined), not that site alone."
+        ]
+       }
+      ],
+      "missed": []
+     },
+     {
+      "id": "L20",
+      "reference_checks": [
+       {
+        "temp_id": "R7",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       },
+       {
+        "temp_id": "R8",
+        "verdict": "CONFIRMED",
+        "kind_ok": true,
+        "problems": []
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "samples_returned",
+        "verdict": "UNCERTAIN",
+        "note": "The quote is exact: R7 (LSC Luna 20 Drill Core, title '~50 grams') states 50 grams, quoting Heiken & McEwen 1972, so 'differs' is right about R7. But R8, an allowed catalogue also on record (LD-040), states 'carrying 30 grams of collected lunar samples'. Two allowed sources contradict each other. No opened allowed document states 55 g. Vinogradov 1973 GCA and Heiken & McEwen 1972 EPSL are closed. The apply script would rewrite the value to 50 g on a CONFIRMED verdict, so it is held here: the owner chooses 50 g (LSC) or empty.",
+        "problems": [
+         "The allowed sources conflict (50 g vs 30 g)."
+        ]
+       }
+      ],
+      "missed": []
+     }
+    ],
+    "notes": "This workflow step does not answer the relayed user question ('what's the gasteiner comparison to our database?'). It only checks the L13/L17/L20/L21 traces. A separate file, lrs-dashboard/documentation/gasteiner-trace-2026-09-25.json, exists and may be what that question needs.\n\nMain reversal: L13 has an open, peer-reviewed source. Malenkov M. (2016), Front. Mech. Eng. 11(1):60-86, doi:10.1007/s11465-016-0370-5, is CC BY but marked closed in OpenAlex/Unpaywall. The publisher site academic.hep.com.cn is under maintenance 2026-09-23 to 09-27, so I read the Wayback capture of the publisher's full-text page (20221219). For Luna-13 it states 32°, 0.5 kPa and 44 kPa. The first two match the stored values. The bearing value contradicts the stored 68 kPa.\n\nLine rulings the owner may want to make:\n(a) R4, NASA TM X-67566, is a NASA report on Soviet Lunokhod-1 data, so I refused it as a primary_report. If NASA TMs on Soviet missions are in the line, the L17 bearing value 0.34 kg/cm2 = 33.34 kPa becomes supported.\n(b) L20 mass: the LSC says 50 g and NSSDCA says 30 g. I marked it UNCERTAIN so the apply script does not auto-correct it to 50 g.\n\nGasteiner pattern confirmed from Sourcebook Table 9.11 (continued), p. 508. The L17/L21 values 22.5° and 5 kPa are midpoints of Leonovich's 20-25° and 0.04-0.06 kg/cm2, which the Sourcebook assigns to Luna 16/20 returned samples. The L21 40 kPa is 0.4 kg/cm2 converted at 100 kPa per kg/cm2 (it should be 39.2), and that figure is for Lunokhod 1+2 combined.\n\nStill paywalled or closed, and not opened: Cherkasov & Shvarev 1973 (doi:10.1007/BF01704945) and 1977 (doi:10.1007/BF02093004), where Springer redirects to login; Vinogradov 1973 GCA; Slyuta 2014. ADS returned empty 202 responses to direct fetches, so I used the reader's Mitchell 1972 and Florensky 1978 scans from the session scratchpad.\n\nFiles added to /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/:\n- Malenkov_2016_FrontMechEng11-60_Lunokhod1Chassis_Luna13Soil_wayback20221219.html and .txt (the .txt has a provenance header)\n- Mitchell_etal_1972_PLSC3_3235_SoilMechanics_Lunokhod1_ADS.pdf and _OCR.txt\n\nNo document text looked like instructions or a user message. The HEP site returned only a Chinese-language maintenance notice."
+   }
+  }
+ ],
+ "missing": []
+}
