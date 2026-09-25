@@ -52,7 +52,7 @@ export function SimulantProperties({ simulant, extra }: SimulantPropertiesProps)
       <div className="grid grid-cols-2 gap-3">
         {props.map(([label, value]) => (
           <div key={label as string} className="bg-slate-800/50 p-3 rounded-xl border border-slate-700/50">
-            <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">{label}</p>
+            <p className="text-[11px] text-slate-400 font-semibold mb-1">{label}</p>
             {label === 'Institution' && institutionUrl ? (
               <a href={institutionUrl} target="_blank" rel="noopener noreferrer"
                 className="text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors">
@@ -67,7 +67,7 @@ export function SimulantProperties({ simulant, extra }: SimulantPropertiesProps)
 
       {simulant.notes && (
         <div className="bg-slate-800/30 p-3 rounded-xl border border-slate-700/30">
-          <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">Notes</p>
+          <p className="text-[11px] text-slate-400 font-semibold mb-1">Notes</p>
           <p className="text-sm text-slate-300 leading-relaxed">{simulant.notes}</p>
         </div>
       )}

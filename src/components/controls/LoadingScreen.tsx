@@ -1,6 +1,7 @@
 import React from 'react';
 import { Database } from 'lucide-react';
 import { motion } from 'motion/react';
+import { APP_VERSION } from '../../version';
 
 export function LoadingScreen() {
   return (
@@ -20,6 +21,7 @@ export function LoadingScreen() {
         <p className="text-xs text-slate-500 font-mono uppercase tracking-[0.2em]">
           Interactive Research Tool
         </p>
+        <p className="mt-2 text-xs font-mono text-emerald-400/80">{APP_VERSION}</p>
       </motion.div>
 
       {/* Loading indicator */}

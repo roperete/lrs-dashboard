@@ -207,10 +207,10 @@ function DeltaTable({ title, icon, data, simulantName, refName, cites }: {
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-slate-700/50">
-              <th className="py-2.5 px-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Component</th>
-              <th className="py-2.5 px-4 text-right text-xs font-bold text-blue-400 uppercase tracking-wider truncate max-w-[120px]">{simulantName}</th>
-              <th className="py-2.5 px-4 text-right text-xs font-bold text-amber-400 uppercase tracking-wider truncate max-w-[120px]">{refName}</th>
-              <th className="py-2.5 px-4 text-right text-xs font-bold text-slate-500 uppercase tracking-wider">{'\u0394'}</th>
+              <th className="py-2.5 px-4 text-left text-xs font-semibold text-slate-500">Component</th>
+              <th className="py-2.5 px-4 text-right text-xs font-semibold text-blue-400 truncate max-w-[120px]">{simulantName}</th>
+              <th className="py-2.5 px-4 text-right text-xs font-semibold text-amber-400 truncate max-w-[120px]">{refName}</th>
+              <th className="py-2.5 px-4 text-right text-xs font-semibold text-slate-500">{'\u0394'}</th>
             </tr>
           </thead>
           <tbody>

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Bump the version the sidebar shows, and open its CHANGELOG section.
+"""Bump the version the page shows (sidebar and loading screen), and open its CHANGELOG section.
 
 The number in the sidebar is how a reader tells whether the page in front of them already
 contains a given change, so every push carries a new one. This does both edits together —
-`v2.9.x` in src/components/sidebar/Sidebar.tsx and a dated section at the top of
+`v2.9.x` in src/version.ts (read by the sidebar and the loading screen) and a dated section at the top of
 CHANGELOG.md — so the bump lands in the same commit as the work it describes.
 
     python3 scripts/bump_version.py --body "One line on what changed."
@@ -22,7 +22,8 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SIDEBAR = ROOT / "src" / "components" / "sidebar" / "Sidebar.tsx"
+# The one place the version is written; the sidebar and the loading screen import it.
+SIDEBAR = ROOT / "src" / "version.ts"
 CHANGELOG = ROOT / "CHANGELOG.md"
 
 VERSION_RE = re.compile(r"\bv(\d+\.\d+\.\d+)\b")

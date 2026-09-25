@@ -9,19 +9,29 @@ interface ReferencesSectionProps {
   simulantName?: string;
 }
 
+/** Trailing punctuation that ends a sentence, not a link; a closing bracket only when it has no
+ *  opening partner (DOIs such as 10.1061/(ASCE)0893-1321(2009)22:1(53) contain brackets). */
+export function trimLinkEnd(link: string): string {
+  let out = link.replace(/[.,;:]+$/, '');
+  while (out.endsWith(')') && (out.match(/\(/g) || []).length < (out.match(/\)/g) || []).length) {
+    out = out.slice(0, -1).replace(/[.,;:]+$/, '');
+  }
+  return out;
+}
+
 /** Extract the first URL from text, if any */
 function extractUrl(text: string): { url: string | null; cleanText: string } {
-  const urlMatch = text.match(/https?:\/\/[^\s)]+/);
+  const urlMatch = text.match(/https?:\/\/\S+/);
   if (!urlMatch) return { url: null, cleanText: text };
-  const url = urlMatch[0];
+  const url = trimLinkEnd(urlMatch[0]);
   const cleanText = text.replace(url, '').replace(/\s{2,}/g, ' ').trim().replace(/\.$/, '');
   return { url, cleanText };
 }
 
 /** Detect DOI and return link */
 function extractDoi(text: string): string | null {
-  const doiMatch = text.match(/10\.\d{4,}\/[^\s)]+/);
-  return doiMatch ? `https://doi.org/${doiMatch[0]}` : null;
+  const doiMatch = text.match(/10\.\d{4,}\/\S+/);
+  return doiMatch ? `https://doi.org/${trimLinkEnd(doiMatch[0])}` : null;
 }
 
 /** Extract likely article title: text before the year or first ~100 chars */
@@ -95,7 +105,8 @@ function ReferenceCard({ reference, n }: { reference: Reference; n: number }) {
   const refText = reference.reference_text
     || [reference.authors, `(${reference.year})`, `"${reference.title}"`, reference.doi ? `https://doi.org/${reference.doi}` : ''].filter(Boolean).join(', ');
   const { url, cleanText } = extractUrl(refText);
-  const doi = extractDoi(refText);
+  // the stored DOI field first; the citation text only when there is none
+  const doi = reference.doi ? `https://doi.org/${reference.doi.trim()}` : extractDoi(refText);
   const linkUrl = url || doi;
 
   return (

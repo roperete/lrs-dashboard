@@ -44,7 +44,9 @@ export function referenceHoverLabel(reference: Reference | undefined): string | 
   const who = authors ? `${first}${first.length < authors.length || /et al/.test(authors) ? ' et al.' : ''}` : '';
   const head = [who, reference.year ? `(${reference.year})` : ''].filter(Boolean).join(' ');
   const title = (reference.title || '').trim();
-  const text = title ? (head ? `${head}. ${title}` : title) : (reference.reference_text || '').trim();
+  // no authors: "Title (2025)" reads better than "(2025). Title"
+  const text = title ? (who ? `${head}. ${title}` : reference.year ? `${title} (${reference.year})` : title)
+    : (reference.reference_text || '').trim();
   if (!text) return undefined;
   return text.length > 180 ? text.slice(0, 177) + '...' : text;
 }

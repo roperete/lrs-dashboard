@@ -106,7 +106,7 @@ for (const sim of d.simulants as Simulant[]) {
     <SimulantTable simulants={d.simulants} selectedSimulantId={null}
       chemicalBySimulant={chemBy} compositionBySimulant={minBy} referencesBySimulant={refsBy}
       propertySourcesBySimulant={sourcesBy} refNumber={refNumber}
-      onSelectSimulant={() => {}} />);
+      onSelectSimulant={() => {}} compareIds={[]} onToggleCompare={() => {}} />);
   let want = 0;
   for (const sim of d.simulants as Simulant[]) {
     const sources = sourcesBy.get(sim.simulant_id);

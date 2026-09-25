@@ -105,6 +105,28 @@ export function filterSimulantsDynamic(
           break;
         }
 
+        case 'has_geotechnical': {
+          const has = [s.bulk_density, s.friction_angle, s.cohesion].some(v => v != null && v !== '');
+          if (has !== (f.values[0] === 'yes')) return false;
+          break;
+        }
+
+        case 'bulk_density':
+        case 'd50':
+        case 'friction_angle':
+        case 'cohesion': {
+          // a simulant with no value for the property is left out once a range is set
+          const raw = f.property === 'd50' ? s.particle_size_d50 : s[f.property];
+          const x = raw == null || raw === '' ? null : Number(raw);
+          const min = f.values[0] ? parseFloat(f.values[0]) : null;
+          const max = f.values[1] ? parseFloat(f.values[1]) : null;
+          if (min == null && max == null) break;
+          if (x == null || Number.isNaN(x)) return false;
+          if (min != null && x < min) return false;
+          if (max != null && x > max) return false;
+          break;
+        }
+
         case 'year': {
           const year = typeof s.release_date === 'number' ? s.release_date : null;
           const min = f.values[0] ? parseInt(f.values[0]) : null;

@@ -24,6 +24,11 @@ const PROP_CONFIG: { key: keyof PhysicalProperties; label: string; unit: string;
   { key: 'grain_size_mm', label: 'Grain Size', unit: 'mm', desc: 'Representative grain size or size range from the Gasteiner database' },
 ];
 
+/** A text value that already names a unit ("<1mm", "0–90 μm") gets no second one. */
+function statesOwnUnit(v: unknown): boolean {
+  return typeof v === 'string' && /[a-zµμ°%]/i.test(v);
+}
+
 interface PhysicalPropertiesSectionProps {
   properties: PhysicalProperties;
   /** property_sources rows of this simulant keyed by field. The export nulls any scalar
@@ -51,10 +56,11 @@ export function PhysicalPropertiesSection({ properties, sources, refNumber, refL
           return (
             <div key={key} className="bg-slate-800/50 p-2.5 rounded-lg border border-slate-700/50">
               <Tooltip text={desc} align="left">
-                <p className="text-[10px] text-slate-500 uppercase font-bold mb-0.5 border-b border-dotted border-slate-600">{label}</p>
+                <p className="text-[11px] text-slate-400 font-semibold mb-0.5 border-b border-dotted border-slate-600">{label}</p>
               </Tooltip>
               <p className="text-sm font-medium text-cyan-400">
-                {String(properties[key])}{unit && <span className="text-slate-500 ml-1">{unit}</span>}
+                {String(properties[key])}
+                {unit && !statesOwnUnit(properties[key]) && <span className="text-slate-400 ml-1">{unit}</span>}
                 {source && n != null && <RefSup n={n} location={source.location} quote={source.quote} align="left" source={refLabel?.(source.reference_id)} />}
               </p>
             </div>

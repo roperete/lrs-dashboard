@@ -65,7 +65,7 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, citation
     <th
       onClick={() => toggleSort(col)}
       className={cn(
-        "py-2.5 px-3 text-xs font-bold text-slate-500 uppercase tracking-wider cursor-pointer select-none hover:text-slate-300 transition-colors whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10",
+        "py-2.5 px-3 text-xs font-semibold text-slate-400 cursor-pointer select-none hover:text-slate-300 transition-colors whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10",
         sortKey === col && 'text-amber-400',
       )}
     >
@@ -77,7 +77,7 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, citation
 
   /** A header the table does not sort by, with its explanation on hover. */
   const Plain = ({ help, label }: { help: string; label: string }) => (
-    <th className="py-2.5 px-3 text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10 text-right">
+    <th className="py-2.5 px-3 text-xs font-semibold text-slate-400 whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10 text-right">
       <Tooltip text={help} align="right"><span>{label}</span></Tooltip>
     </th>
   );

@@ -261,8 +261,8 @@ export type FilterPropertyType = 'categorical' | 'boolean' | 'range' | 'text';
 export type FilterProperty =
   | 'type' | 'country' | 'institution' | 'availability'
   | 'mineral' | 'chemical'
-  | 'has_chemistry' | 'has_mineralogy'
-  | 'year'
+  | 'has_chemistry' | 'has_mineralogy' | 'has_geotechnical'
+  | 'year' | 'bulk_density' | 'd50' | 'friction_angle' | 'cohesion'
   | 'reference' | 'lunar_ref';
 
 export interface DynamicFilter {
@@ -279,6 +279,5 @@ export interface FilterPropertyMeta {
 
 export interface PanelState {
   open: boolean;
-  pinned: boolean;
   simulantId: string | null;
 }

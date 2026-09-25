@@ -8,6 +8,7 @@
 import { readFileSync } from 'node:fs';
 import { filterSimulantsDynamic, type FilterContext } from '../src/utils/filterSimulants';
 import { getCountryDisplay } from '../src/utils/countryUtils';
+import { sortSimulants, SORT_KEYS } from '../src/utils/sortSimulants';
 import type { Simulant, DynamicFilter } from '../src/types';
 
 const data = JSON.parse(readFileSync(new URL('../public/data/data.json', import.meta.url), 'utf8'));
@@ -52,6 +53,16 @@ check('Reference filter "Zémeny" finds the Lumina products by title', () => {
 });
 // the table's Country column sorts on getCountryDisplay(country_code)
 check('every country, empty or not, has a display name that sorts', () => simulants.every(s => typeof getCountryDisplay(s.country_code).toLowerCase() === 'string'));
+// every table sort, both directions, over the real data; empty values last
+const sortCtx = { chemicalBySimulant: new Map(data.chemical_compositions.map((c: any) => [c.simulant_id, [c]])),
+  compositionBySimulant: new Map(data.compositions.map((c: any) => [c.simulant_id, [c]])), referencesBySimulant };
+for (const key of SORT_KEYS) for (const dir of ['asc', 'desc'] as const) {
+  check(`sort by ${key} ${dir} keeps all ${simulants.length} rows`, () => sortSimulants(simulants, key, dir, sortCtx as any).length === simulants.length);
+}
+check('an empty country sorts last in both directions', () => ['asc', 'desc'].every(dir => {
+  const out = sortSimulants(simulants, 'country', dir as any, sortCtx as any);
+  return !out[0].country_code === false && !out[out.length - 1].country_code;
+}));
 for (const f of filters) check(`filter ${f.property} runs`, () => Array.isArray(filterSimulantsDynamic(simulants, [f], '', ctx)));
 check('search and all filters together run', () => Array.isArray(filterSimulantsDynamic(simulants, filters, 'a', ctx)));
 

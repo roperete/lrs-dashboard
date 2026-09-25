@@ -45,11 +45,11 @@ export function LunarSitePanel({ site, citations = EMPTY_CITATIONS, onClose }: L
       <div className="space-y-6">
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-            <Label help={HELP.date} className="text-xs text-slate-500 uppercase font-bold mb-1">Date</Label>
+            <Label help={HELP.date} className="text-[11px] text-slate-400 font-semibold mb-1">Date</Label>
             <p className="text-lg font-medium text-slate-200">{site.date ?? '—'}{site.date && refs('date')}</p>
           </div>
           <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-            <Label help={HELP.samples} className="text-xs text-slate-500 uppercase font-bold mb-1">Samples</Label>
+            <Label help={HELP.samples} className="text-[11px] text-slate-400 font-semibold mb-1">Samples</Label>
             <p className="text-lg font-medium text-slate-200">{site.samples_returned || '—'}{site.samples_returned && refs('samples_returned')}</p>
           </div>
         </div>
@@ -70,25 +70,25 @@ export function LunarSitePanel({ site, citations = EMPTY_CITATIONS, onClose }: L
             <div className="grid grid-cols-2 gap-3">
               {geo.bulk_density != null && (
                 <div className="bg-slate-800/50 p-3 rounded-xl border border-slate-700/50">
-                  <Label help={HELP.bulk_density} className="text-[10px] text-slate-500 uppercase font-bold mb-1">Bulk Density</Label>
+                  <Label help={HELP.bulk_density} className="text-[11px] text-slate-400 font-semibold mb-1">Bulk Density</Label>
                   <p className="text-sm font-medium text-slate-200">{geo.bulk_density} g/cm³{refs('bulk_density')}</p>
                 </div>
               )}
               {geo.friction_angle != null && (
                 <div className="bg-slate-800/50 p-3 rounded-xl border border-slate-700/50">
-                  <Label help={HELP.friction_angle} className="text-[10px] text-slate-500 uppercase font-bold mb-1">Friction Angle</Label>
+                  <Label help={HELP.friction_angle} className="text-[11px] text-slate-400 font-semibold mb-1">Friction Angle</Label>
                   <p className="text-sm font-medium text-slate-200">{geo.friction_angle}°{refs('friction_angle')}</p>
                 </div>
               )}
               {geo.cohesion != null && (
                 <div className="bg-slate-800/50 p-3 rounded-xl border border-slate-700/50">
-                  <Label help={HELP.cohesion} className="text-[10px] text-slate-500 uppercase font-bold mb-1">Cohesion</Label>
+                  <Label help={HELP.cohesion} className="text-[11px] text-slate-400 font-semibold mb-1">Cohesion</Label>
                   <p className="text-sm font-medium text-slate-200">{geo.cohesion} kPa{refs('cohesion')}</p>
                 </div>
               )}
               {geo.bearing_capacity != null && (
                 <div className="bg-slate-800/50 p-3 rounded-xl border border-slate-700/50">
-                  <Label help={HELP.bearing_capacity} className="text-[10px] text-slate-500 uppercase font-bold mb-1">Bearing Capacity</Label>
+                  <Label help={HELP.bearing_capacity} className="text-[11px] text-slate-400 font-semibold mb-1">Bearing Capacity</Label>
                   <p className="text-sm font-medium text-slate-200">{geo.bearing_capacity} kPa{refs('bearing_capacity')}</p>
                 </div>
               )}
@@ -96,7 +96,7 @@ export function LunarSitePanel({ site, citations = EMPTY_CITATIONS, onClose }: L
           </div>
         )}
         <div className="bg-amber-900/20 p-4 rounded-xl border border-amber-500/20">
-          <Label help={HELP.coordinates} className="text-xs text-amber-500 uppercase font-bold mb-1">Coordinates</Label>
+          <Label help={HELP.coordinates} className="text-[11px] text-amber-400 font-semibold mb-1">Coordinates</Label>
           <p className="text-lg font-medium text-amber-200 font-mono">{site.lat}, {site.lng}{refs('lat', 'lng')}</p>
         </div>
         <LunarSourceList citations={citations} />

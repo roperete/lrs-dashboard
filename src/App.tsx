@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useRef, useCallback, useEffect, lazy, Suspense } from 'react';
 import { AnimatePresence } from 'motion/react';
-import { ChevronRight, Menu } from 'lucide-react';
+
 
 import { useDataContext } from './context/DataContext';
 import { useFilters } from './hooks/useFilters';
@@ -8,12 +8,17 @@ import { useMapState } from './hooks/useMapState';
 import { usePanelState } from './hooks/usePanelState';
 import { clusterByDistance, altitudeToRadius } from './utils/clusterPoints';
 import type { GlobeViewHandle, ClusterPoint } from './components/map/GlobeView';
+import type { Simulant } from './types';
 
+import { ErrorBoundary } from './components/ui/ErrorBoundary';
+import { suggestedLunarMission } from './utils/lunarRef';
 import { LoadingScreen } from './components/controls/LoadingScreen';
 import { LegendWidget } from './components/controls/LegendWidget';
 import { ExportMenu } from './components/controls/ExportMenu';
 import { AppHeader } from './components/layout/AppHeader';
 import { MapToolbar } from './components/layout/MapToolbar';
+import { HelpModal } from './components/layout/HelpModal';
+import { CompareTray } from './components/controls/CompareTray';
 import { Sidebar } from './components/sidebar/Sidebar';
 import { SimulantPanel } from './components/panels/SimulantPanel';
 import { LunarSitePanel } from './components/panels/LunarSitePanel';
@@ -48,7 +53,9 @@ export default function App() {
   } = data;
 
   const globeRef = useRef<GlobeViewHandle>(null);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // The Find pane is open by default where there is room for it (review #5).
+  const [isSidebarOpen, setIsSidebarOpen] = useState(() => window.innerWidth >= 1280);
+  const [helpOpen, setHelpOpen] = useState(false);
   const [isRotating, setIsRotating] = useState(true);
   const isMobile = useIsMobile();
 
@@ -67,9 +74,23 @@ export default function App() {
 
   // Lookup selected entities
   const selectedSimulant = useMemo(() => simulants.find(s => s.simulant_id === panelState.panel1.simulantId) || null, [simulants, panelState.panel1.simulantId]);
-  const selectedSimulant2 = useMemo(() => simulants.find(s => s.simulant_id === panelState.panel2.simulantId) || null, [simulants, panelState.panel2.simulantId]);
+  const compareSimulants = useMemo(() => panelState.compareIds.map(id => simulants.find(s => s.simulant_id === id)).filter((s): s is Simulant => !!s), [simulants, panelState.compareIds]);
   const selectedLunarSite = useMemo(() => lunarSites.find(s => s.id === panelState.selectedLunarSiteId) || null, [lunarSites, panelState.selectedLunarSiteId]);
-  const selectedLunarRef = useMemo(() => lunarReference.find(r => r.mission === panelState.selectedLunarRefMission) || null, [lunarReference, panelState.selectedLunarRefMission]);
+  const [programmes, setProgrammes] = useState<string[]>([]);
+  const displayedLunarSites = useMemo(() => {
+    const q = filterState.searchQuery.trim().toLowerCase();
+    return lunarSites.filter(site => (programmes.length === 0 || programmes.includes(site.type))
+      && (!q || `${site.name} ${site.mission}`.toLowerCase().includes(q)));
+  }, [lunarSites, programmes, filterState.searchQuery]);
+
+  // A detail pane is open on the right (the table narrows and the toolbar moves left of it).
+  const paneOpen = (!!selectedSimulant && panelState.panel1.open) || !!selectedLunarSite;
+
+  // The lunar sample to compare with: the user's pick for this simulant, else the one its producer
+  // names (a suggestion, labelled as such in the panel).
+  const lunarRefPicked = !!selectedSimulant && panelState.lunarRefPick?.simulantId === selectedSimulant.simulant_id;
+  const lunarRefMission = lunarRefPicked ? panelState.lunarRefPick!.mission : suggestedLunarMission(selectedSimulant?.lunar_sample_reference);
+  const selectedLunarRef = useMemo(() => lunarReference.find(r => r.mission === lunarRefMission) || null, [lunarReference, lunarRefMission]);
 
   // Globe altitude state for zoom-reactive clustering
   const [globeAltitude, setGlobeAltitude] = useState(2.5);
@@ -96,7 +117,7 @@ export default function App() {
   // Globe point data — zoom-reactive clustering
   const { singlePoints, clusterPoints } = useMemo(() => {
     if (mapState.planet === 'moon') {
-      const moonPoints = lunarSites.map(s => ({
+      const moonPoints = displayedLunarSites.map(s => ({
         id: s.id, name: s.name, mission: s.mission, date: s.date,
         lat: s.lat, lon: s.lng,
         color: s.type === 'Apollo' ? '#f59e0b' : s.type === 'Luna' ? '#ef4444' : s.type === 'Chang-e' ? '#3b82f6' : '#a855f7',
@@ -106,7 +127,7 @@ export default function App() {
     const radius = altitudeToRadius(mapState.viewMode === 'globe' ? globeAltitude : 0);
     const { singles, clusters } = clusterByDistance(rawEarthPoints, radius);
     return { singlePoints: singles, clusterPoints: clusters };
-  }, [mapState.planet, mapState.viewMode, rawEarthPoints, globeAltitude, lunarSites]);
+  }, [mapState.planet, mapState.viewMode, rawEarthPoints, globeAltitude, displayedLunarSites]);
 
   // Cluster popover state (for 3D globe)
   const [clusterPopover, setClusterPopover] = useState<{
@@ -184,20 +205,32 @@ export default function App() {
     <div className="h-dvh w-screen bg-slate-950 overflow-hidden relative font-sans text-slate-200">
       <AppHeader
         planet={mapState.planet} viewMode={mapState.viewMode}
-        geocodingQuery={mapState.geocodingQuery} sidebarOpen={isSidebarOpen}
+        sidebarOpen={isSidebarOpen}
+        filterCount={filterState.filters.length + (filterState.searchQuery ? 1 : 0)}
+        onToggleSidebar={() => setIsSidebarOpen(o => !o)}
         onPlanetChange={handlePlanetChange}
         onViewModeChange={mapState.setViewMode}
-        onGeocodingQueryChange={mapState.setGeocodingQuery}
-        onGeocode={handleGeocode}
+        onOpenHelp={() => setHelpOpen(true)}
+        exportSlot={mapState.planet === 'earth' ? (
+          <ExportMenu
+            currentSimulant={selectedSimulant}
+            filteredSimulants={displayedSimulants}
+            allSimulants={simulants}
+            compositions={compositions}
+            chemicalCompositions={chemicalCompositions}
+            references={references}
+          />
+        ) : undefined}
       />
 
       {/* Visualization */}
       {mapState.viewMode === 'table' ? (
-        <div className={`absolute inset-0 z-0 pt-24 pb-4 transition-[padding] duration-300 ${isSidebarOpen ? 'pl-[21rem]' : 'pl-4'} pr-4`}>
+        <div className={`absolute inset-x-0 bottom-0 top-14 z-0 pt-4 pb-4 transition-[padding] duration-300 ${isSidebarOpen ? 'sm:pl-[21rem]' : ''} pl-4 ${paneOpen ? 'sm:pr-[466px]' : ''} pr-4 ${panelState.compareIds.length > 0 ? 'pb-20' : ''}`}>
           <div className="h-full bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden">
+            <ErrorBoundary scope="the table" area key={`table-${mapState.planet}`}>
             {mapState.planet === 'moon' ? (
               <LunarSampleTable
-                sites={lunarSites}
+                sites={displayedLunarSites}
                 selectedSiteId={panelState.selectedLunarSiteId}
                 onSelectSite={(id) => panelState.setSelectedLunarSiteId(id)}
                 citationsFor={lunarCitationsFor}
@@ -211,22 +244,20 @@ export default function App() {
                 referencesBySimulant={referencesBySimulant}
                 propertySourcesBySimulant={propertySourcesBySimulant}
                 refNumber={refNumber}
-                onSelectSimulant={(id) => panelState.selectSimulant(id)}
-                onCompareSelected={(id1, id2) => {
-                  panelState.openPanel(1, id1);
-                  panelState.openPanel(2, id2);
-                  panelState.setShowComparison(true);
-                }}
-                onExportSelected={(selected) => {
-                  const ts = new Date().toISOString().slice(0, 10);
-                  exportToCSV(selected, compositions, chemicalCompositions, references, `lrs_selected_${ts}.csv`);
-                }}
+                onSelectSimulant={(id, section) => panelState.selectSimulant(id, section)}
+                compareIds={panelState.compareIds}
+                onToggleCompare={panelState.toggleCompare}
+                onClearFilters={filterState.clearAllFilters}
               />
             )}
+            </ErrorBoundary>
           </div>
         </div>
       ) : (
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-x-0 bottom-0 top-14 z-0">
+          <ErrorBoundary area key={`${mapState.viewMode}-${mapState.planet}`}
+            scope={mapState.viewMode === 'globe' ? 'the 3D globe' : 'the 2D map'}
+            hint={mapState.viewMode === 'globe' ? 'Your browser may not be able to draw 3D graphics (WebGL). The 2D map and the table work without it: switch view at the top.' : undefined}>
           <Suspense fallback={<LoadingScreen />}>
             {mapState.viewMode === 'globe' ? (
               <GlobeView
@@ -245,13 +276,14 @@ export default function App() {
                 planet={mapState.planet}
                 mapCenter={mapState.mapCenter} mapZoom={mapState.mapZoom}
                 filteredSimulants={displayedSimulants} siteBySimulant={siteBySimulant}
-                lunarSites={lunarSites}
+                lunarSites={displayedLunarSites}
                 countries={data.countriesGeoJson}
                 onSimulantClick={handleSimulantClick} onLunarSiteClick={handleLunarSiteClick}
                 onMapClick={handleMapClick}
               />
             )}
           </Suspense>
+          </ErrorBoundary>
         </div>
       )}
 
@@ -288,6 +320,7 @@ export default function App() {
         {isSidebarOpen && (
           <Sidebar
             planet={mapState.planet}
+            viewMode={mapState.viewMode}
             searchQuery={filterState.searchQuery}
             onSearchChange={filterState.setSearchQuery}
             filters={filterState.filters}
@@ -296,11 +329,14 @@ export default function App() {
             onUpdateFilter={filterState.updateFilter}
             onRemoveFilter={filterState.removeFilter}
             clearAllFilters={filterState.clearAllFilters}
+            setFacet={filterState.setFacet}
+            facetCounts={filterState.facetCounts}
+            countWith={filterState.countWith}
             filteredSimulants={displayedSimulants}
-            lunarSites={lunarSites}
+            totalCount={simulants.length}
+            compareIds={panelState.compareIds}
+            onToggleCompare={panelState.toggleCompare}
             selectedSimulantId={panelState.panel1.simulantId}
-            selectedSimulantId2={panelState.panel2.simulantId}
-            selectedLunarSiteId={panelState.selectedLunarSiteId}
             onSelectSimulant={(id) => {
               const site = siteBySimulant.get(id);
               if (site && site.lat !== null && site.lon !== null) {
@@ -310,37 +346,21 @@ export default function App() {
               }
               if (isMobile) setIsSidebarOpen(false);
             }}
-            onSelectCompare={(id) => {
-              if (panelState.panel2.simulantId === id) {
-                panelState.closePanel(2);
-              } else {
-                panelState.openPanel(2, id);
-              }
-            }}
+            lunarSites={displayedLunarSites}
+            allLunarSites={lunarSites}
+            programmes={programmes}
+            onToggleProgramme={(p) => setProgrammes(cur => cur.includes(p) ? cur.filter(x => x !== p) : [...cur, p])}
+            selectedLunarSiteId={panelState.selectedLunarSiteId}
             onSelectLunarSite={(id) => {
               const site = lunarSites.find(s => s.id === id);
               if (site) handleLunarSiteClick(id, site.lat, site.lng);
               if (isMobile) setIsSidebarOpen(false);
             }}
-            onCompareClick={() => panelState.setShowComparison(true)}
             onClose={() => setIsSidebarOpen(false)}
-            totalCount={simulants.length}
           />
         )}
       </AnimatePresence>
 
-      {/* Sidebar toggle / hamburger */}
-      {!isSidebarOpen && (
-        <button onClick={() => setIsSidebarOpen(true)}
-          className="absolute left-4 top-24 z-[50] p-3 bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-xl text-slate-400 hover:text-emerald-400 transition-all">
-          {isMobile ? <Menu size={20} /> : <ChevronRight size={20} />}
-          {(filterState.filters.length > 0 || filterState.searchQuery) && (
-            <span className="absolute -top-1 -right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[10px] font-bold bg-emerald-500 text-white rounded-full">
-              {filterState.filters.length + (filterState.searchQuery ? 1 : 0)}
-            </span>
-          )}
-        </button>
-      )}
 
       {/* Right toolbar (hidden in table mode) */}
       {mapState.viewMode !== 'table' && (
@@ -372,6 +392,10 @@ export default function App() {
           }}
           isRotating={isRotating}
           onToggleRotate={() => setIsRotating(r => !r)}
+          paneOpen={paneOpen}
+          geocodingQuery={mapState.geocodingQuery}
+          onGeocodingQueryChange={mapState.setGeocodingQuery}
+          onGeocode={handleGeocode}
         />
       )}
 
@@ -391,33 +415,35 @@ export default function App() {
             propertySources={propertySourcesBySimulant.get(selectedSimulant.simulant_id)}
             figuresOfMerit={fomsBySimulant.get(selectedSimulant.simulant_id)}
             purchaseInfo={purchaseBySimulant.get(selectedSimulant.simulant_id)}
-            selectedLunarRefMission={panelState.selectedLunarRefMission}
-            onSelectLunarRef={panelState.setSelectedLunarRefMission}
+            selectedLunarRefMission={lunarRefMission}
+            lunarRefSuggested={!lunarRefPicked && !!selectedLunarRef}
+            onSelectLunarRef={(mission) => panelState.setLunarRefPick({ simulantId: selectedSimulant.simulant_id, mission })}
             onOpenCrossComparison={() => panelState.setShowCrossComparison(true)}
-            pinned={panelState.panel1.pinned}
-            onClose={() => panelState.closePanel(1)}
-            onTogglePin={() => panelState.togglePin(1)}
-            onCompare={() => panelState.toggleCompare()}
-            compareActive={panelState.compareMode}
+            onClose={panelState.closePanel}
+            onCompare={() => panelState.toggleCompare(selectedSimulant.simulant_id)}
+            compareActive={panelState.compareIds.includes(selectedSimulant.simulant_id)}
+            focusSection={panelState.focusSection}
           />
         )}
         {selectedLunarSite && (
           <LunarSitePanel site={selectedLunarSite} citations={lunarCitationsFor(selectedLunarSite.id)} onClose={() => panelState.setSelectedLunarSiteId(null)} />
         )}
-        {panelState.showComparison && selectedSimulant && selectedSimulant2 && (
+        {panelState.showComparison && compareSimulants.length >= 2 && (
+          <ErrorBoundary scope="the comparison" compact key="comparison">
           <Suspense fallback={null}>
             <ComparisonPanel
-              simulant1={selectedSimulant}
-              composition1={compositionBySimulant.get(selectedSimulant.simulant_id) || []}
-              chemicalComposition1={chemicalBySimulant.get(selectedSimulant.simulant_id) || []}
-              simulant2={selectedSimulant2}
-              composition2={compositionBySimulant.get(selectedSimulant2.simulant_id) || []}
-              chemicalComposition2={chemicalBySimulant.get(selectedSimulant2.simulant_id) || []}
+              simulants={compareSimulants}
+              compositionBySimulant={compositionBySimulant}
+              chemicalBySimulant={chemicalBySimulant}
+              referencesBySimulant={referencesBySimulant}
+              propertySourcesBySimulant={propertySourcesBySimulant}
               onClose={() => panelState.setShowComparison(false)}
             />
           </Suspense>
+          </ErrorBoundary>
         )}
         {panelState.showCrossComparison && selectedSimulant && selectedLunarRef && (
+          <ErrorBoundary scope="the lunar comparison" compact key="cross-comparison">
           <Suspense fallback={null}>
             <CrossComparisonPanel
               simulant={selectedSimulant}
@@ -429,20 +455,34 @@ export default function App() {
               onClose={() => panelState.setShowCrossComparison(false)}
             />
           </Suspense>
+          </ErrorBoundary>
         )}
       </AnimatePresence>
 
-      {/* Export + Legend */}
-      <div className="absolute bottom-6 right-6 z-[30]">
-        <ExportMenu
-          currentSimulant={selectedSimulant}
-          filteredSimulants={displayedSimulants}
-          allSimulants={simulants}
-          compositions={compositions}
-          chemicalCompositions={chemicalCompositions}
-          references={references}
-        />
-      </div>
+      <AnimatePresence>
+        {!panelState.showComparison && (
+          <CompareTray
+            simulants={compareSimulants}
+            onRemove={panelState.toggleCompare}
+            onCompare={() => panelState.setShowComparison(true)}
+            onExport={() => exportToCSV(compareSimulants, compositions, chemicalCompositions, references, `lrs_compared_${new Date().toISOString().slice(0, 10)}.csv`)}
+            onClear={panelState.clearCompare}
+            paneOpen={paneOpen}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Active filters stay visible when the Find pane is closed (review #5) */}
+      {!isSidebarOpen && mapState.planet === 'earth' && (filterState.filters.length > 0 || filterState.searchQuery) && (
+        <div className="fixed top-16 left-4 z-[40] flex items-center gap-2 px-3 py-1.5 bg-slate-900/95 border border-emerald-500/40 rounded-full text-xs text-slate-200 shadow-lg">
+          <button onClick={() => setIsSidebarOpen(true)} className="hover:text-white">
+            {filterState.filters.length + (filterState.searchQuery ? 1 : 0)} filter{filterState.filters.length + (filterState.searchQuery ? 1 : 0) === 1 ? '' : 's'} · {displayedSimulants.length} of {simulants.length}
+          </button>
+          <button onClick={filterState.clearAllFilters} className="text-emerald-400 hover:text-emerald-300">Clear</button>
+        </div>
+      )}
+
+      {helpOpen && <HelpModal onClose={() => setHelpOpen(false)} />}
 
       {mapState.viewMode !== 'table' && (
         <LegendWidget planet={mapState.planet} sidebarOpen={isSidebarOpen} />

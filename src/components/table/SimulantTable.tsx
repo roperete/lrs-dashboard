@@ -1,17 +1,16 @@
-import React, { useState, useMemo } from 'react';
-import { ChevronUp, ChevronDown, Check, ArrowRightLeft, Download } from 'lucide-react';
+import React, { useState, useMemo, useRef, useCallback } from 'react';
+import { ChevronUp, ChevronDown, Check } from 'lucide-react';
 
 import { cn } from '../../utils/cn';
 import { Tooltip } from '../ui/Tooltip';
 import { RefSup } from '../ui/RefSup';
 import { referenceHoverLabel } from '../../utils/references';
 import { getCountryDisplay } from '../../utils/countryUtils';
+import { sortSimulants, type SortKey, type SortDir } from '../../utils/sortSimulants';
+import type { PaneSection } from '../../hooks/usePanelState';
 import type { Simulant, ChemicalComposition, Composition, Reference, PropertySource } from '../../types';
 
-type SortDir = 'asc' | 'desc';
-type SortKey = 'name' | 'type' | 'country' | 'institution' | 'availability' | 'lunar_sample_reference' | 'year' | 'specific_gravity' | 'bulk_density' | 'd50' | 'friction_angle' | 'cohesion' | 'has_chemistry' | 'has_mineralogy' | 'datasheet' | 'reference';
-
-const DASH = '\u2014';
+const DASH = '—';
 
 /** One-line explanation of each column, shown on hover over the header. */
 const COLUMN_HELP: Record<SortKey, string> = {
@@ -23,21 +22,13 @@ const COLUMN_HELP: Record<SortKey, string> = {
   lunar_sample_reference: 'The lunar material the producer says the simulant replicates, in the producer\'s own words.',
   year: 'Year first produced or released, as recorded. Not yet audited; the sheets do not state it.',
   specific_gravity: 'Grain density relative to water. Cleared wherever the value only repeated the bulk density.',
-  bulk_density: 'Mass per unit volume of the loose material, pore space included, in g/cm\u00b3.',
+  bulk_density: 'Mass per unit volume of the loose material, pore space included, in g/cm³.',
   d50: 'Median particle size in micrometres: half the grains, by mass, are finer than this.',
   friction_angle: 'Internal angle of friction from shear testing, in degrees. Governs slope stability and bearing capacity.',
   cohesion: 'Shear strength at zero normal stress, in kPa. How much the grains hold together.',
-  has_chemistry: 'Oxide chemistry on record and verified against its source.',
-  has_mineralogy: 'Mineral or component composition on record and verified against its source.',
-  datasheet: 'The manufacturer\'s data sheet. Shown only where the composition was verified against it.',
-  reference: 'Publication cited for this simulant.',
-};
-
-/** Coerce a sparse numeric-ish field to a number for sorting, or null if absent/non-numeric. */
-const num = (v: unknown): number | null => {
-  if (v == null || v === '') return null;
-  const n = Number(v);
-  return Number.isNaN(n) ? null : n;
+  has_chemistry: 'Oxide chemistry on record, each value cited. Click the mark to open it in the pane.',
+  has_mineralogy: 'Mineral or component composition on record, each value cited. Click the mark to open it in the pane.',
+  references: 'Documents on record for this simulant, and how many a reader confirmed name it. Click to open them in the pane.',
 };
 
 /** Display a sparse field, falling back to an em-dash when empty. */
@@ -53,22 +44,24 @@ interface SimulantTableProps {
   propertySourcesBySimulant?: Map<string, Map<string, PropertySource>>;
   /** Number of a reference within its simulant's list; see utils/references.ts. */
   refNumber?: (simulantId: string, referenceId: string) => number | undefined;
-  onSelectSimulant: (id: string) => void;
-  onCompareSelected?: (id1: string, id2: string) => void;
-  onExportSelected?: (simulants: Simulant[]) => void;
+  /** Open the simulant's pane, at a section when a cell asks for one. */
+  onSelectSimulant: (id: string, section?: PaneSection) => void;
+  /** The compare tray: a row's checkbox adds or removes it. */
+  compareIds: string[];
+  onToggleCompare: (id: string) => void;
+  onClearFilters?: () => void;
 }
 
-function getFirstReference(id: string, referencesBySimulant: Map<string, Reference[]>): string {
-  const refs = referencesBySimulant.get(id);
-  if (!refs || refs.length === 0) return '';
-  return refs[0].reference_text || '';
-}
-
+/**
+ * The table. The right pane is the one place a simulant's details are shown (review #4): a row
+ * click, or Enter on a focused row, opens it; ↑/↓ move the selection and the pane follows; the
+ * data marks open it at the section they stand for. Checkboxes only feed the compare tray.
+ */
 export function SimulantTable({
   simulants, selectedSimulantId,
   chemicalBySimulant, compositionBySimulant, referencesBySimulant,
   propertySourcesBySimulant, refNumber,
-  onSelectSimulant, onCompareSelected, onExportSelected,
+  onSelectSimulant, compareIds, onToggleCompare, onClearFilters,
 }: SimulantTableProps) {
   /** A scalar cell with its citation, the same mark the right pane shows for the value. */
   const scalarCell = (s: Simulant, field: keyof Simulant) => {
@@ -87,278 +80,126 @@ export function SimulantTable({
   };
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
-  const [checkedIds, setCheckedIds] = useState<Set<string>>(new Set());
-  const [expandedId, setExpandedId] = useState<string | null>(null);
-  const toggleExpand = (id: string) => setExpandedId(prev => (prev === id ? null : id));
-
-  const toggleChecked = (id: string) => {
-    setCheckedIds(prev => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id); else next.add(id);
-      return next;
-    });
-  };
-  const toggleAll = () => {
-    if (checkedIds.size === simulants.length) setCheckedIds(new Set());
-    else setCheckedIds(new Set(simulants.map(s => s.simulant_id)));
-  };
+  const bodyRef = useRef<HTMLTableSectionElement>(null);
 
   const toggleSort = (key: SortKey) => {
-    if (sortKey === key) {
-      setSortDir(d => d === 'asc' ? 'desc' : 'asc');
-    } else {
-      setSortKey(key);
-      setSortDir('asc');
-    }
+    if (sortKey === key) setSortDir(d => d === 'asc' ? 'desc' : 'asc');
+    else { setSortKey(key); setSortDir('asc'); }
   };
 
-  const sorted = useMemo(() => {
-    const arr = [...simulants];
-    const dir = sortDir === 'asc' ? 1 : -1;
+  const sorted = useMemo(
+    () => sortSimulants(simulants, sortKey, sortDir, { chemicalBySimulant, compositionBySimulant, referencesBySimulant }),
+    [simulants, sortKey, sortDir, chemicalBySimulant, compositionBySimulant, referencesBySimulant]);
 
-    arr.sort((a, b) => {
-      let va: string | number | boolean | null;
-      let vb: string | number | boolean | null;
+  const compare = useMemo(() => new Set(compareIds), [compareIds]);
 
-      switch (sortKey) {
-        case 'name': va = a.name.toLowerCase(); vb = b.name.toLowerCase(); break;
-        case 'type': va = (a.type || '').toLowerCase(); vb = (b.type || '').toLowerCase(); break;
-        case 'country': va = getCountryDisplay(a.country_code).toLowerCase(); vb = getCountryDisplay(b.country_code).toLowerCase(); break;
-        case 'institution': va = (a.institution || '').toLowerCase(); vb = (b.institution || '').toLowerCase(); break;
-        case 'availability': va = (a.availability || '').toLowerCase(); vb = (b.availability || '').toLowerCase(); break;
-        case 'lunar_sample_reference': va = (a.lunar_sample_reference || '').toLowerCase(); vb = (b.lunar_sample_reference || '').toLowerCase(); break;
-        case 'year': va = typeof a.release_date === 'number' ? a.release_date : null; vb = typeof b.release_date === 'number' ? b.release_date : null; break;
-        case 'specific_gravity': va = num(a.specific_gravity); vb = num(b.specific_gravity); break;
-        case 'bulk_density': va = num(a.bulk_density); vb = num(b.bulk_density); break;
-        case 'd50': va = num(a.particle_size_d50); vb = num(b.particle_size_d50); break;
-        case 'friction_angle': va = num(a.friction_angle); vb = num(b.friction_angle); break;
-        case 'cohesion': va = num(a.cohesion); vb = num(b.cohesion); break;
-        case 'has_chemistry': va = chemicalBySimulant.has(a.simulant_id) ? 1 : 0; vb = chemicalBySimulant.has(b.simulant_id) ? 1 : 0; break;
-        case 'has_mineralogy': va = compositionBySimulant.has(a.simulant_id) ? 1 : 0; vb = compositionBySimulant.has(b.simulant_id) ? 1 : 0; break;
-        case 'datasheet': va = a.datasheet_url ? a.datasheet_url.toLowerCase() : null; vb = b.datasheet_url ? b.datasheet_url.toLowerCase() : null; break;
-        case 'reference': va = getFirstReference(a.simulant_id, referencesBySimulant).toLowerCase() || null; vb = getFirstReference(b.simulant_id, referencesBySimulant).toLowerCase() || null; break;
-        default: return 0;
-      }
+  /** ↑/↓ move the selection; Enter or Space opens the focused row. */
+  const onRowKey = useCallback((e: React.KeyboardEvent<HTMLTableRowElement>, index: number) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSelectSimulant(sorted[index].simulant_id); return; }
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    e.preventDefault();
+    const next = Math.min(sorted.length - 1, Math.max(0, index + (e.key === 'ArrowDown' ? 1 : -1)));
+    const row = bodyRef.current?.querySelectorAll<HTMLTableRowElement>('tr[data-row]')[next];
+    row?.focus();
+    onSelectSimulant(sorted[next].simulant_id);
+  }, [sorted, onSelectSimulant]);
 
-      if (va == null && vb == null) return 0;
-      if (va == null) return 1;
-      if (vb == null) return -1;
-
-      if (typeof va === 'string' && typeof vb === 'string') {
-        return va.localeCompare(vb) * dir;
-      }
-      return ((va as number) - (vb as number)) * dir;
-    });
-
-    return arr;
-  }, [simulants, sortKey, sortDir, chemicalBySimulant, compositionBySimulant, referencesBySimulant]);
-
-  const SortIcon = ({ col }: { col: SortKey }) => {
-    if (sortKey !== col) return <span className="w-4" />;
-    return sortDir === 'asc' ? <ChevronUp size={14} /> : <ChevronDown size={14} />;
-  };
-
-  const TH = ({ col, label, align = 'left' }: { col: SortKey; label: string; align?: 'left' | 'right' | 'center' }) => (
-    <th
-      onClick={() => toggleSort(col)}
-      className={cn(
-        "py-2.5 px-3 text-xs font-bold text-slate-500 uppercase tracking-wider cursor-pointer select-none hover:text-slate-300 transition-colors whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10",
-        align === 'right' && 'text-right',
-        align === 'center' && 'text-center',
-        sortKey === col && 'text-emerald-400',
-      )}
-    >
+  const headBase = "py-2 px-3 text-xs font-semibold whitespace-nowrap sticky top-0 bg-slate-900 z-20";
+  const TH = ({ col, label, align = 'left', className }: { col: SortKey; label: string; align?: 'left' | 'right' | 'center'; className?: string }) => (
+    <th scope="col" aria-sort={sortKey === col ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}
+      className={cn(headBase, align === 'right' && 'text-right', align === 'center' && 'text-center', className)}>
       <Tooltip text={COLUMN_HELP[col]} align={align === 'right' ? 'right' : align === 'center' ? 'center' : 'left'}>
-        <span className={cn("inline-flex items-center gap-1", align === 'right' && 'justify-end', align === 'center' && 'justify-center')}>
-          {label}<SortIcon col={col} />
-        </span>
+        <button type="button" onClick={() => toggleSort(col)}
+          className={cn("inline-flex items-center gap-1 hover:text-white", sortKey === col ? 'text-emerald-400' : 'text-slate-400')}>
+          {label}
+          {sortKey === col ? (sortDir === 'asc' ? <ChevronUp size={14} /> : <ChevronDown size={14} />) : <span className="w-3.5" />}
+        </button>
       </Tooltip>
     </th>
   );
+  // The checkbox and Name columns stay put while the table scrolls sideways.
+  const stickyBox = "sticky left-0 z-10";
+  const stickyName = "sticky left-10 z-10";
 
   return (
     <div className="h-full overflow-auto scrollbar-thin relative">
-      {checkedIds.size > 0 && (
-        <div className="sticky top-0 z-20 flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border-b border-emerald-500/30 backdrop-blur-sm">
-          <span className="text-xs font-medium text-emerald-400">{checkedIds.size} selected</span>
-          {checkedIds.size === 2 && onCompareSelected && (
-            <button
-              onClick={() => {
-                const ids = Array.from(checkedIds);
-                onCompareSelected(ids[0], ids[1]);
-              }}
-              className="flex items-center gap-1.5 px-2.5 py-1 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/40 rounded-lg text-xs text-blue-300 transition-colors"
-            >
-              <ArrowRightLeft size={12} />Compare
-            </button>
-          )}
-          {onExportSelected && (
-            <button
-              onClick={() => onExportSelected(simulants.filter(s => checkedIds.has(s.simulant_id)))}
-              className="flex items-center gap-1.5 px-2.5 py-1 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 rounded-lg text-xs text-emerald-300 transition-colors"
-            >
-              <Download size={12} />Export Selected
-            </button>
-          )}
-          <button onClick={() => setCheckedIds(new Set())} className="text-xs text-slate-500 hover:text-slate-300 ml-auto">Clear</button>
-        </div>
-      )}
       <table className="w-full text-sm border-collapse">
         <thead>
           <tr className="border-b border-slate-700/50">
-            <th className="py-2.5 px-2 text-center sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10 w-8">
-              <input type="checkbox" checked={checkedIds.size === simulants.length && simulants.length > 0} onChange={toggleAll}
-                className="accent-emerald-500 cursor-pointer" />
-            </th>
-            <TH col="name" label="Name" />
+            <th scope="col" className={cn(headBase, "left-0 z-30 w-10 px-2")}><span className="sr-only">Compare</span></th>
+            <TH col="name" label="Name" className="left-10 z-30" />
             <TH col="type" label="Type" />
             <TH col="country" label="Country" />
             <TH col="institution" label="Institution" />
             <TH col="availability" label="Availability" />
-            <TH col="lunar_sample_reference" label="Lunar Ref" />
+            <TH col="lunar_sample_reference" label="Lunar ref." />
             <TH col="year" label="Year" align="right" />
-            <TH col="specific_gravity" label="Spec. Grav." align="right" />
-            <TH col="bulk_density" label="Bulk Dens. (g/cm³)" align="right" />
+            <TH col="specific_gravity" label="Spec. grav." align="right" />
+            <TH col="bulk_density" label="Bulk dens. (g/cm³)" align="right" />
             <TH col="d50" label="D50 (µm)" align="right" />
             <TH col="friction_angle" label="Friction (°)" align="right" />
             <TH col="cohesion" label="Cohesion (kPa)" align="right" />
-            <TH col="has_chemistry" label="Chem" align="center" />
-            <TH col="has_mineralogy" label="Miner" align="center" />
-            <TH col="datasheet" label="Datasheet" />
-            <TH col="reference" label="Reference" />
+            <TH col="has_chemistry" label="Chem." align="center" />
+            <TH col="has_mineralogy" label="Miner." align="center" />
+            <TH col="references" label="References" align="right" />
           </tr>
         </thead>
-        <tbody>
+        <tbody ref={bodyRef}>
           {sorted.map((s, i) => {
             const isSelected = s.simulant_id === selectedSimulantId;
-            const isChecked = checkedIds.has(s.simulant_id);
-            const ref = getFirstReference(s.simulant_id, referencesBySimulant);
-            const minerals = (compositionBySimulant.get(s.simulant_id) || [])
-              .filter(c => c.component_name && c.component_name !== 'sum')
-              .slice().sort((a, b) => (b.value_pct || 0) - (a.value_pct || 0));
-            const chemicals = (chemicalBySimulant.get(s.simulant_id) || [])
-              .filter(c => c.component_name && c.component_name !== 'sum')
-              .slice().sort((a, b) => (b.value_wt_pct || 0) - (a.value_wt_pct || 0));
+            const inTray = compare.has(s.simulant_id);
             const refs = referencesBySimulant.get(s.simulant_id) || [];
-            const hasDetail = minerals.length > 0 || chemicals.length > 0 || refs.length > 0;
-            const isExpanded = expandedId === s.simulant_id;
+            const named = refs.filter(r => r.names_simulant === 1).length;
+            const rowBg = isSelected ? "bg-emerald-950" : i % 2 === 0 ? "bg-slate-900" : "bg-[#0d1424]";
+            const dataMark = (has: boolean, what: string) => has
+              ? <button type="button" onClick={(e) => { e.stopPropagation(); onSelectSimulant(s.simulant_id, 'composition'); }}
+                  aria-label={`Open ${s.name}'s ${what} in the pane`} className="text-emerald-400 hover:text-emerald-300">
+                  <Check size={16} className="inline" />
+                </button>
+              : <span className="text-slate-600">{DASH}</span>;
             return (
-              <React.Fragment key={s.simulant_id}>
-                <tr
-                  onClick={() => onSelectSimulant(s.simulant_id)}
-                  className={cn(
-                    "cursor-pointer transition-colors border-b border-slate-800/50",
-                    isSelected
-                      ? "bg-emerald-500/15 hover:bg-emerald-500/20"
-                      : isChecked
-                        ? "bg-blue-500/10 hover:bg-blue-500/15"
-                        : i % 2 === 0
-                          ? "bg-slate-900/40 hover:bg-slate-800/60"
-                          : "bg-slate-900/20 hover:bg-slate-800/60",
-                  )}
-                >
-                  <td className="py-2 px-2 text-center">
-                    <input type="checkbox" checked={checkedIds.has(s.simulant_id)}
-                      onChange={(e) => { e.stopPropagation(); toggleChecked(s.simulant_id); }}
-                      onClick={(e) => e.stopPropagation()}
-                      className="accent-emerald-500 cursor-pointer" />
-                  </td>
-                  <td className={cn("py-2 px-3 font-medium whitespace-nowrap", isSelected ? "text-emerald-400" : "text-slate-200")}>{s.name}</td>
-                  <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.type || DASH}</td>
-                  <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{getCountryDisplay(s.country_code)}</td>
-                  <td className="py-2 px-3 text-slate-400 max-w-[200px] truncate">{s.institution || DASH}</td>
-                  <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.availability || DASH}</td>
-                  <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.lunar_sample_reference || DASH}</td>
-                  <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{typeof s.release_date === 'number' ? s.release_date : DASH}</td>
-                  {scalarCell(s, 'specific_gravity')}
-                  {scalarCell(s, 'bulk_density')}
-                  {scalarCell(s, 'particle_size_d50')}
-                  {scalarCell(s, 'friction_angle')}
-                  {scalarCell(s, 'cohesion')}
-                  <td className="py-2 px-3 text-center">
-                    {chemicalBySimulant.has(s.simulant_id)
-                      ? <button onClick={(e) => { e.stopPropagation(); toggleExpand(s.simulant_id); }}
-                          className="text-emerald-400 hover:text-emerald-300 transition-colors" title="Click to view chemical composition">
-                          <Check size={16} className="inline" />
-                        </button>
-                      : <span className="text-slate-600">{DASH}</span>
-                    }
-                  </td>
-                  <td className="py-2 px-3 text-center">
-                    {compositionBySimulant.has(s.simulant_id)
-                      ? <button onClick={(e) => { e.stopPropagation(); toggleExpand(s.simulant_id); }}
-                          className="text-emerald-400 hover:text-emerald-300 transition-colors" title="Click to view mineral composition">
-                          <Check size={16} className="inline" />
-                        </button>
-                      : <span className="text-slate-600">{DASH}</span>
-                    }
-                  </td>
-                  <td className="py-2 px-3 whitespace-nowrap">
-                    {s.datasheet_url
-                      ? <a href={s.datasheet_url} target="_blank" rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="text-blue-400 hover:text-blue-300 underline">Datasheet</a>
-                      : <span className="text-slate-600">{DASH}</span>
-                    }
-                  </td>
-                  <td className="py-2 px-3 text-slate-400 max-w-[300px] truncate cursor-pointer hover:text-slate-200 transition-colors"
-                    title={hasDetail ? 'Click to expand' : undefined}
-                    onClick={(e) => { e.stopPropagation(); if (hasDetail) toggleExpand(s.simulant_id); }}>
-                    {ref || DASH}
-                  </td>
-                </tr>
-                {isExpanded && hasDetail && (
-                  <tr className="bg-slate-800/30">
-                    <td colSpan={17} className="px-6 py-3">
-                      <div className="grid gap-6 md:grid-cols-3">
-                        {minerals.length > 0 && (
-                          <div>
-                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">Mineral Composition</h4>
-                            <ul className="space-y-0.5">
-                              {minerals.map(m => (
-                                <li key={m.composition_id} className="flex justify-between gap-3 text-xs text-slate-300">
-                                  <span>{m.component_name}</span>
-                                  <span className="font-mono text-slate-400">{m.value_pct}%</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                        {chemicals.length > 0 && (
-                          <div>
-                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">Chemical Composition</h4>
-                            <ul className="space-y-0.5">
-                              {chemicals.map(c => (
-                                <li key={c.composition_id} className="flex justify-between gap-3 text-xs text-slate-300">
-                                  <span>{c.component_name}</span>
-                                  <span className="font-mono text-slate-400">{c.value_wt_pct} wt%</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                        {refs.length > 0 && (
-                          <div>
-                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">References</h4>
-                            <div className="space-y-1">
-                              {refs.map((r, idx) => (
-                                <p key={r.reference_id || idx} className="text-xs text-slate-400 leading-relaxed whitespace-normal">{r.reference_text}</p>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    </td>
-                  </tr>
-                )}
-              </React.Fragment>
+              <tr key={s.simulant_id} data-row tabIndex={0} aria-selected={isSelected}
+                onClick={() => onSelectSimulant(s.simulant_id)} onKeyDown={(e) => onRowKey(e, i)}
+                className={cn("group cursor-pointer border-b border-slate-800/50 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-emerald-500",
+                  rowBg, "hover:brightness-125")}>
+                <td className={cn("py-2 px-2 text-center", stickyBox, rowBg)}>
+                  <input type="checkbox" checked={inTray} aria-label={`Add ${s.name} to the comparison`}
+                    onChange={() => onToggleCompare(s.simulant_id)} onClick={(e) => e.stopPropagation()}
+                    className="accent-emerald-500 cursor-pointer" />
+                </td>
+                <td className={cn("py-2 px-3 font-medium whitespace-nowrap", stickyName, rowBg, isSelected ? "text-emerald-400" : "text-slate-200")}>{s.name}</td>
+                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.type || DASH}</td>
+                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{getCountryDisplay(s.country_code) || DASH}</td>
+                <td className="py-2 px-3 text-slate-400 max-w-[200px] truncate">{s.institution || DASH}</td>
+                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.availability || DASH}</td>
+                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.lunar_sample_reference || DASH}</td>
+                <td className="py-2 px-3 text-right text-slate-300 font-mono whitespace-nowrap">{typeof s.release_date === 'number' ? s.release_date : DASH}</td>
+                {scalarCell(s, 'specific_gravity')}
+                {scalarCell(s, 'bulk_density')}
+                {scalarCell(s, 'particle_size_d50')}
+                {scalarCell(s, 'friction_angle')}
+                {scalarCell(s, 'cohesion')}
+                <td className="py-2 px-3 text-center">{dataMark(chemicalBySimulant.has(s.simulant_id), 'chemistry')}</td>
+                <td className="py-2 px-3 text-center">{dataMark(compositionBySimulant.has(s.simulant_id), 'mineralogy')}</td>
+                <td className="py-2 px-3 text-right whitespace-nowrap">
+                  {refs.length > 0
+                    ? <button type="button" onClick={(e) => { e.stopPropagation(); onSelectSimulant(s.simulant_id, 'references'); }}
+                        aria-label={`Open ${s.name}'s references in the pane`} className="text-slate-300 hover:text-white">
+                        {refs.length} <span className="text-slate-500">· {named} named</span>
+                      </button>
+                    : <span className="text-slate-600">{DASH}</span>}
+                </td>
+              </tr>
             );
           })}
         </tbody>
       </table>
       {sorted.length === 0 && (
-        <div className="flex items-center justify-center h-40 text-slate-500 text-sm">
+        <div className="flex flex-col items-center justify-center gap-3 h-40 text-slate-400 text-sm">
           No simulants match the current filters.
+          {onClearFilters && (
+            <button onClick={onClearFilters} className="px-3 py-1.5 rounded-lg border border-slate-600 text-slate-200 hover:bg-slate-800">Clear filters</button>
+          )}
         </div>
       )}
     </div>

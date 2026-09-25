@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { ArrowRightLeft, Moon, FileCheck } from 'lucide-react';
 import { PanelShell } from '../ui/PanelShell';
 import { Tooltip } from '../ui/Tooltip';
@@ -15,19 +15,6 @@ import { referenceNumbers, referenceHoverLabel } from '../../utils/references';
 import { LunarSourceList } from '../ui/LunarRefs';
 import { EMPTY_CITATIONS, type LunarCitations } from '../../utils/lunarCitations';
 import type { Simulant, Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, LunarReference, PhysicalProperties, PurchaseInfo, PropertySource, FigureOfMerit } from '../../types';
-
-function inferLunarRef(ref: string | null | undefined, lunarRefs: LunarReference[]): string | null {
-  if (!ref) return null;
-  const lower = ref.toLowerCase();
-  if (lower.includes('apollo 11') || lower === '10084') return 'Apollo 11';
-  if (lower.includes('apollo 12') || lower === '12070') return 'Apollo 12';
-  if (lower.includes('apollo 14') || lower === '14163') return 'Apollo 14';
-  if (lower.includes('apollo 15') || lower === '15271') return 'Apollo 15';
-  if (lower.includes('apollo 16') || lower === '60501') return 'Apollo 16';
-  if (lower.includes('apollo 17') || lower === '71501') return 'Apollo 17';
-  if (lower.includes("chang'e") || lower.includes('change') || lower.includes('ce5')) return "Chang'e-5";
-  return null;
-}
 
 interface SimulantPanelProps {
   simulant: Simulant;
@@ -46,11 +33,13 @@ interface SimulantPanelProps {
   figuresOfMerit?: FigureOfMerit[];
   purchaseInfo?: PurchaseInfo;
   selectedLunarRefMission: string | null;
+  /** The reference was suggested from the producer's stated lunar sample, not picked by the user. */
+  lunarRefSuggested?: boolean;
   onSelectLunarRef: (mission: string | null) => void;
   onOpenCrossComparison: () => void;
-  pinned?: boolean;
   onClose: () => void;
-  onTogglePin?: () => void;
+  /** Scroll to this section when the pane opens or the request changes. */
+  focusSection?: 'composition' | 'references' | null;
   onCompare?: () => void;
   compareActive?: boolean;
 }
@@ -58,12 +47,19 @@ interface SimulantPanelProps {
 export function SimulantPanel({
   simulant, compositions, chemicalCompositions, references, mineralGroups, extra,
   lunarReferences, lunarCitationsFor, physicalProperties, propertySources, figuresOfMerit = [], purchaseInfo,
-  selectedLunarRefMission, onSelectLunarRef, onOpenCrossComparison,
-  pinned, onClose, onTogglePin, onCompare, compareActive,
+  selectedLunarRefMission, lunarRefSuggested, onSelectLunarRef, onOpenCrossComparison,
+  onClose, onCompare, compareActive, focusSection,
 }: SimulantPanelProps) {
   const lunarRef = lunarReferences.find(r => r.mission === selectedLunarRefMission) || null;
   const lunarCites = lunarRef && lunarCitationsFor ? lunarCitationsFor(lunarRef.sample_id) : EMPTY_CITATIONS;
   const missionsWithChem = lunarReferences.filter(r => r.chemical_composition && Object.keys(r.chemical_composition).length > 0);
+
+  useEffect(() => {
+    if (!focusSection) return;
+    // after the pane's slide-in, so the section is laid out
+    const t = setTimeout(() => document.getElementById(`pane-${focusSection}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 350);
+    return () => clearTimeout(t);
+  }, [focusSection, simulant.simulant_id]);
 
   // Reference numbers are derived here from the reference list, never stored.
   const refNumbers = useMemo(() => referenceNumbers(references), [references]);
@@ -84,22 +80,13 @@ export function SimulantPanel({
     </Tooltip>
   );
 
-  // Auto-infer on first render if no selection yet
-  const inferred = inferLunarRef(simulant.lunar_sample_reference, lunarReferences);
-  if (selectedLunarRefMission === null && inferred) {
-    // Schedule for next tick to avoid setState during render
-    setTimeout(() => onSelectLunarRef(inferred), 0);
-  }
-
   return (
     <PanelShell
       title={simulant.name}
       subtitle={extra?.classification || extra?.replica_of || simulant.type}
       headerNote={existenceNote}
       accentColor={simulant.type?.toLowerCase().includes('highland') ? 'text-cyan-400' : 'text-emerald-400'}
-      pinned={pinned}
       onClose={onClose}
-      onTogglePin={onTogglePin}
       onDownload={() => downloadSimulantCSV(simulant, compositions, chemicalCompositions, references)}
       onCompare={onCompare}
       compareActive={compareActive}
@@ -147,10 +134,14 @@ export function SimulantPanel({
                 <ArrowRightLeft size={12} />Full comparison view
               </button>
             )}
+            {lunarRef && lunarRefSuggested && (
+              <p className="text-xs text-slate-400">Suggested from the lunar sample the producer says this simulant replicates.</p>
+            )}
             {lunarRef && <LunarSourceList citations={lunarCites} prefix="L" title={`Sources for ${lunarRef.mission} ${lunarRef.sample_id}`} />}
           </div>
         )}
 
+        <div id="pane-composition" className="scroll-mt-4" />
         <DataSourceLine simulant={simulant} />
 
         <MineralChart
@@ -172,7 +163,9 @@ export function SimulantPanel({
           references={references}
         />
 
-        <ReferencesSection references={references} simulantName={simulant.name} />
+        <div id="pane-references" className="scroll-mt-4">
+          <ReferencesSection references={references} simulantName={simulant.name} />
+        </div>
       </div>
     </PanelShell>
   );
