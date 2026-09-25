@@ -55,13 +55,19 @@ function cite(side: Side, referenceId: string | null | undefined) {
   return { n: numbers.get(referenceId), source: referenceHoverLabel(side.references.find(r => r.reference_id === referenceId)) };
 }
 
+// One row per component whatever its case or spacing: documents write "Glass-rich basalt" and
+// "Glass-rich Basalt" for the same thing, and two rows would hide that both simulants have it.
+const rowKey = (name: string) => name.trim().replace(/\s+/g, ' ').toLowerCase();
+
 function compositionRows(sides: Side[], pick: (s: Side) => { name: string; value: number; reference_id?: string | null; value_text?: string | null }[]): Row[] {
-  const maps = sides.map(side => new Map(pick(side).map(r => [r.name, r] as const)));
+  const maps = sides.map(side => new Map(pick(side).map(r => [rowKey(r.name), r] as const)));
   const cell = (side: Side, r?: { value: number; reference_id?: string | null; value_text?: string | null }): Cell =>
     r ? { value: r.value, stated: r.value_text, ...cite(side, r.reference_id) } : { value: null };
   const total = (row: Row) => row.cells.reduce((t, c) => t + (c.value ?? 0), 0);
-  return [...new Set(maps.flatMap(m => [...m.keys()]))]
-    .map(name => ({ name, cells: sides.map((side, i) => cell(side, maps[i].get(name))) }))
+  const label = new Map<string, string>();
+  for (const m of maps) for (const [k, r] of m) if (!label.has(k)) label.set(k, r.name.trim());
+  return [...label.keys()]
+    .map(k => ({ name: label.get(k)!, cells: sides.map((side, i) => cell(side, maps[i].get(k))) }))
     .sort((x, y) => total(y) - total(x));
 }
 

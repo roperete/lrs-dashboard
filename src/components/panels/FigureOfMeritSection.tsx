@@ -33,6 +33,18 @@ function scored(f: FigureOfMerit): string {
   return printed;
 }
 
+/** The score, and the scale note on its own line, so a narrow pane does not clip the column. */
+function ScoreCell({ f, children }: { f: FigureOfMerit; children?: React.ReactNode }) {
+  const text = scored(f);
+  const note = text.endsWith(' (scale not stated)') ? 'scale not stated' : null;
+  return (
+    <>
+      <span className="whitespace-nowrap">{note ? text.slice(0, -' (scale not stated)'.length) : text}{children}</span>
+      {note && <span className="block text-[10px] font-sans text-slate-500">{note}</span>}
+    </>
+  );
+}
+
 interface Props {
   foms: FigureOfMerit[];
   /** Number of a reference within this simulant's list; see utils/references.ts. */
@@ -77,10 +89,11 @@ export function FigureOfMeritSection({ foms, refNumber, refLabel }: Props) {
                   <td className="py-1.5 px-3 text-slate-300">
                     <Tooltip text={PROPERTY_HELP[f.property] || PROPERTY_HELP.other} align="left"><span>{f.property_label}</span></Tooltip>
                   </td>
-                  <td className="py-1.5 px-3 text-slate-400 text-xs">{f.reference_sample || '—'}</td>
-                  <td className="py-1.5 px-3 text-right text-slate-200 font-mono whitespace-nowrap">
-                    {scored(f)}
-                    {n != null && <RefSup n={n} location={f.location} quote={f.quote} align="right" source={refLabel?.(f.reference_id)} />}
+                  <td className="py-1.5 px-3 text-slate-400 text-xs [overflow-wrap:anywhere]">{f.reference_sample || '—'}</td>
+                  <td className="py-1.5 px-3 text-right text-slate-200 font-mono align-top">
+                    <ScoreCell f={f}>
+                      {n != null && <RefSup n={n} location={f.location} quote={f.quote} align="right" source={refLabel?.(f.reference_id)} />}
+                    </ScoreCell>
                   </td>
                 </tr>
               );

@@ -82,5 +82,31 @@
  {
   "expect": "[...document.querySelectorAll('a')].some(a => a.textContent.includes('Ask AI about this simulant') && a.href.includes('google.com/search'))",
   "why": "the pane's references end with Ask AI (owner, 2026-09-25)"
+ },
+ {
+  "eval": "(() => { history.pushState({}, '', '?sim=S004'); dispatchEvent(new PopStateEvent('popstate')); return true; })()",
+  "as": "open_BH1"
+ },
+ {
+  "wait": 1500
+ },
+ {
+  "expect": "![...document.querySelectorAll('th')].some(th => th.textContent.trim() === 'Apollo 16') && [...document.querySelectorAll('select option')].every(o => o.value !== 'Apollo 16')",
+  "why": "a lunar sample with no shown values is neither suggested nor listed (BH-1 showed an Apollo 16 column of dashes)"
+ },
+ {
+  "eval": "(() => { history.pushState({}, '', '?sim=S121'); dispatchEvent(new PopStateEvent('popstate')); return true; })()",
+  "as": "open_BH2"
+ },
+ {
+  "wait": 1500
+ },
+ {
+  "click": "Full comparison",
+  "after": 2000
+ },
+ {
+  "expect": "(() => { const t = [...document.querySelectorAll('table')].find(t => t.textContent.includes('Component')); if (!t) return false; const cells = [...t.querySelectorAll('tbody tr')].map(r => r.children[1]).filter(c => c && c.textContent.trim() !== '\u2014'); return cells.length > 0 && cells.every(c => c.querySelector('sup')); })()",
+  "why": "every simulant value in the lunar comparison carries its citation mark"
  }
 ]

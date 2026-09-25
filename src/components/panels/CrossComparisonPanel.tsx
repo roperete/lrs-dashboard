@@ -3,7 +3,9 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { ArrowRightLeft, X, FlaskConical, Activity, BarChart3, TableProperties } from 'lucide-react';
 import { motion } from 'motion/react';
 import { cn } from '../../utils/cn';
-import type { Simulant, ChemicalComposition, Composition, MineralGroup, LunarReference } from '../../types';
+import type { Simulant, ChemicalComposition, Composition, MineralGroup, LunarReference, Reference } from '../../types';
+import { RefSup } from '../ui/RefSup';
+import { referenceNumbers, referenceHoverLabel } from '../../utils/references';
 import { LunarRefs, LunarSourceList } from '../ui/LunarRefs';
 import { EMPTY_CITATIONS, type LunarCitations } from '../../utils/lunarCitations';
 
@@ -17,13 +19,18 @@ interface CrossComparisonPanelProps {
   lunarRef: LunarReference;
   /** Sources of the lunar sample's values, shown as [L1] ... */
   lunarCitations?: LunarCitations;
+  /** The simulant's references, so its values carry the same [n] as in its pane. */
+  references?: Reference[];
   onClose: () => void;
 }
 
 export function CrossComparisonPanel({
-  simulant, chemicalCompositions, compositions, mineralGroups, lunarRef, lunarCitations = EMPTY_CITATIONS, onClose,
+  simulant, chemicalCompositions, compositions, mineralGroups, lunarRef, lunarCitations = EMPTY_CITATIONS, references = [], onClose,
 }: CrossComparisonPanelProps) {
   const [viewMode, setViewMode] = useState<ViewMode>('table');
+  const refNumbers = useMemo(() => referenceNumbers(references), [references]);
+  const simCite = (referenceId?: string | null) => referenceId
+    ? { n: refNumbers.get(referenceId), source: referenceHoverLabel(references.find(r => r.reference_id === referenceId)) } : {};
 
   const chemicalData = useMemo(() => {
     const simulantOxides = chemicalCompositions
@@ -35,6 +42,7 @@ export function CrossComparisonPanel({
     return Array.from(allNames).map(name => ({
       name,
       simulant: simulantOxides.find(c => c.component_name === name)?.value_wt_pct || 0,
+      simRef: simulantOxides.find(c => c.component_name === name)?.reference_id ?? null,
       reference: lunarRef.chemical_composition?.[name] || 0,
     }))
       .filter(d => d.simulant > 0 || d.reference > 0)
@@ -44,13 +52,15 @@ export function CrossComparisonPanel({
   const mineralData = useMemo(() => {
     // NASA mineral groups where the simulant has them; otherwise its own mineral table (most
     // simulants since the audit), so its minerals are not all shown as missing.
-    const groups = mineralGroups.filter(g => g.value_pct > 0).map(g => ({ name: g.group_name, value: g.value_pct }));
+    // (a group is a sum of rows, so it has no single document to cite)
+    const groups = mineralGroups.filter(g => g.value_pct > 0).map(g => ({ name: g.group_name, value: g.value_pct, ref: null as string | null }));
     const own = groups.length > 0 ? groups
-      : compositions.filter(c => c.value_pct > 0).map(c => ({ name: c.component_name, value: c.value_pct }));
+      : compositions.filter(c => c.value_pct > 0).map(c => ({ name: c.component_name, value: c.value_pct, ref: c.reference_id ?? null }));
     const allNames = new Set([...own.map(g => g.name), ...Object.keys(lunarRef.mineral_composition || {})]);
     return Array.from(allNames).map(name => ({
       name,
       simulant: own.find(g => g.name === name)?.value || 0,
+      simRef: own.find(g => g.name === name)?.ref ?? null,
       reference: lunarRef.mineral_composition?.[name] || 0,
     }))
       .filter(d => d.simulant > 0 || d.reference > 0)
@@ -139,6 +149,7 @@ export function CrossComparisonPanel({
                 simulantName={simulant.name}
                 refName={lunarRef.mission}
                 cites={name => lunarCitations.cite(`oxide:${name}`)}
+                simCite={simCite}
               />
               {mineralData.length > 0 && (
                 <DeltaTable
@@ -148,6 +159,7 @@ export function CrossComparisonPanel({
                   simulantName={simulant.name}
                   refName={lunarRef.mission}
                   cites={name => lunarCitations.cite(`mineral:${name}`)}
+                  simCite={simCite}
                 />
               )}
             </>
@@ -192,11 +204,12 @@ function ChartSection({ title, icon, data, simulantName, refName }: {
   );
 }
 
-function DeltaTable({ title, icon, data, simulantName, refName, cites }: {
+function DeltaTable({ title, icon, data, simulantName, refName, cites, simCite }: {
   title: string; icon: React.ReactNode;
-  data: { name: string; simulant: number; reference: number }[];
+  data: { name: string; simulant: number; simRef?: string | null; reference: number }[];
   simulantName: string; refName: string;
   cites: (name: string) => import('../../utils/lunarCitations').LunarCite[];
+  simCite?: (referenceId?: string | null) => { n?: number; source?: string };
 }) {
   return (
     <section>
@@ -220,7 +233,9 @@ function DeltaTable({ title, icon, data, simulantName, refName, cites }: {
               return (
                 <tr key={row.name} className={i % 2 === 0 ? 'bg-slate-800/20' : ''}>
                   <td className="py-2 px-4 text-slate-300 font-medium">{row.name}</td>
-                  <td className="py-2 px-4 text-right font-mono text-slate-200">{row.simulant > 0 ? row.simulant.toFixed(2) : '\u2014'}</td>
+                  <td className="py-2 px-4 text-right font-mono text-slate-200">{row.simulant > 0
+                    ? <>{row.simulant.toFixed(2)}{(() => { const c = simCite?.(row.simRef); return c?.n != null ? <RefSup n={c.n} source={c.source} align="right" /> : null; })()}</>
+                    : '\u2014'}</td>
                   <td className="py-2 px-4 text-right font-mono text-slate-200">{row.reference > 0 ? <>{row.reference.toFixed(2)}<LunarRefs cites={cites(row.name)} prefix="L" align="right" /></> : '\u2014'}</td>
                   <td className={cn("py-2 px-4 text-right font-mono text-xs",
                     diff > 0 ? "text-blue-400" : diff < 0 ? "text-amber-400" : "text-slate-400"

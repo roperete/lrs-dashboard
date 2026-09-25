@@ -1,0 +1,1001 @@
+{
+ "run": "wf_b433c148-c23 (batch b5 only; b1-b4 went off-task and are rerun as wf_18f2128f-c0a)",
+ "results": [
+  {
+   "batch": "b5",
+   "range": "D229 to D281",
+   "classification": {
+    "documents": [
+     {
+      "doc_id": "D229",
+      "category": "dataset",
+      "peer_reviewed": "no",
+      "identified_as": "Planetary Simulant Database — Oshima Simulant entry, maintained by Kevin Cannon (Colorado School of Mines)",
+      "venue": "simulantdb.com \"Planetary Simulant Database\" (free community-maintained regolith-simulant database)",
+      "evidence": "Live URL now 301-redirects to an unrelated gambling/spam site (checked 2026-09-25); classified from the Wayback Machine snapshot of 2024-02-26 (web.archive.org/web/20240226180926/https://simulantdb.com/simulants/oshima.php), which matches the same 'Planetary Simulant Database' that D263 (Colorado School of Mines page) says Kevin Cannon maintains.",
+      "evidence_quote": "Planetary Simulant Database Free Resource for Regolith Simulant Information ... Oshima Simulant ... Copyright © 2024. Website by Kevin Cannon.",
+      "notes": "Flagging for Alvaro: the live simulantdb.com domain has been hijacked/expired and now serves an unrelated gambling site — any dashboard link out to this URL is currently broken/misleading and should point to the archived snapshot or be removed."
+     },
+     {
+      "doc_id": "D230",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Unsalan, Toklu, Altunayar-Unsalan & Çerçevik (2024), \"Micro-Raman and FTIR spectroscopic characterization of the first Turkish lunar regolith simulant\"",
+      "venue": "Astrophysics and Space Science (Springer)",
+      "evidence": "Crossref record for DOI 10.1007/s10509-024-04383-7",
+      "evidence_quote": "type: journal-article; container-title: Astrophysics and Space Science; publisher: Springer Science and Business Media LLC",
+      "doi_found": "10.1007/s10509-024-04383-7"
+     },
+     {
+      "doc_id": "D231",
+      "category": "agency_report",
+      "peer_reviewed": "no",
+      "identified_as": "LEAG-CAPTEM Simulant Working Group (2010), \"Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples\" — report to the NASA Advisory Council",
+      "venue": "NASA Advisory Council, Planetary Science Subcommittee (LEAG/CAPTEM committee report)",
+      "evidence": "local PDF, page 1 (pdftotext)",
+      "evidence_quote": "Report from the Simulant Working Group of the Lunar Exploration Analysis Group and Curation and Analysis Planning Team for Extraterrestrial Materials to the Planetary Science Subcommittee of the NASA Advisory Council"
+     },
+     {
+      "doc_id": "D232",
+      "category": "vendor_datasheet",
+      "peer_reviewed": "no",
+      "identified_as": "Safety Data Sheet: TLH-0",
+      "venue": "Hispansion Works, S.L. (manufacturer SDS)",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "Safety Data Sheet: TLH-0 ... Supplier: Hispansion Works, S.L."
+     },
+     {
+      "doc_id": "D233",
+      "category": "vendor_datasheet",
+      "peer_reviewed": "no",
+      "identified_as": "Technical Data Sheets TLH-0 (TDS-TLH-0-v1.4) and TLM-0 (TDS-TLM-0-v2.2)",
+      "venue": "Hispansion Works, S.L. (manufacturer technical data sheet)",
+      "evidence": "No local copy or URL on file; identified from the reference title/numbering convention, matched against the on-disk Hispansion SDS documents (D232, D234) from the same supplier.",
+      "evidence_quote": "Technical Data Sheet: TLH-0 (TDS-TLH-0-v1.4) and Technical Data Sheet: TLM-0 (TDS-TLM-0-v2.2), Hispansion",
+      "notes": "Weaker evidence than most entries — no retrievable copy, classification rests on title pattern and same-vendor match to D232/D234."
+     },
+     {
+      "doc_id": "D234",
+      "category": "vendor_datasheet",
+      "peer_reviewed": "no",
+      "identified_as": "Safety Data Sheet: TLM-0",
+      "venue": "Hispansion Works, S.L. (manufacturer SDS)",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "Safety Data Sheet: TLM-0 ... Supplier: Hispansion Works, S.L."
+     },
+     {
+      "doc_id": "D235",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Jirasirichot, Tulyananda, Datmanee, Kraikaew, Surattaseranee, Chancharoen & Chuaboon (2023), \"Improving the Quality of Lunar Regolith Simulant Soil for Future Food Security\"",
+      "venue": "Current Applied Science and Technology, Vol. 23 No. 6 (Nov–Dec 2023)",
+      "evidence": "local PDF page 1, labeled \"Research article\"; confirmed via Crossref for DOI 10.55003/cast.2023.06.23.008",
+      "evidence_quote": "Current Applied Science and Technology Vol. 23 No. 6 (November-December 2023) Research article",
+      "doi_found": "10.55003/cast.2023.06.23.008"
+     },
+     {
+      "doc_id": "D236",
+      "category": "conference_abstract",
+      "peer_reviewed": "no",
+      "identified_as": "Siriluck, Chancharoen & Seehanam (2021), \"The Feasibility of Thailand Lunar Simulant (TLS-01) Biomining\"",
+      "venue": "2nd Innovation Aviation & Aerospace Industry International Conference 2021, published via the MDPI Sciforum online-conference platform",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "Presented at the 2nd Innovation Aviation & Aerospace Industry - International Conference 2021, 28-30 June 2021; Available online: https://iaai-2021.sciforum.net",
+      "notes": "No statement of peer review found on the paper itself; sciforum.net is a conference-paper posting platform, not a reviewed journal."
+     },
+     {
+      "doc_id": "D237",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Windisch et al. (2022), \"Geotechnical and Shear Behavior of Novel Lunar Regolith Simulants TUBS-M, TUBS-T, and TUBS-I\"",
+      "venue": "Materials (MDPI, Basel), vol. 15, issue 23, article 8561",
+      "evidence": "local saved PubMed Central (PMC) page",
+      "evidence_quote": "Materials (Basel). 2022 Dec 1;15(23):8561. doi: 10.3390/ma15238561",
+      "doi_found": "10.3390/ma15238561"
+     },
+     {
+      "doc_id": "D238",
+      "category": "website_other",
+      "peer_reviewed": "no",
+      "identified_as": "ESRIC (European Space Resources Innovation Centre) — Regolith Simulants Directory, Lunar Regolith Simulants list",
+      "venue": "ESRIC website",
+      "evidence": "local saved HTML page",
+      "evidence_quote": "ESRIC KSP - Simulants ... Regolith Simulants Directory ... Go to Lunar Regolith Simulants list"
+     },
+     {
+      "doc_id": "D239",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Ruan, Yang, Zhang, Tian et al. (2024), \"A moderate-Ti lunar mare soil simulant: IGG-01\"",
+      "venue": "Acta Astronautica, vol. 224 (2024), pp. 148–160, Elsevier on behalf of IAA",
+      "evidence": "local saved ResearchGate landing page; confirmed via Crossref for DOI 10.1016/j.actaastro.2024.08.010",
+      "evidence_quote": "Acta Astronautica 224 (2024) 148–160 ... Published by Elsevier Ltd on behalf of IAA. This is an open access article under the CC BY license",
+      "doi_found": "10.1016/j.actaastro.2024.08.010"
+     },
+     {
+      "doc_id": "D240",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Jiang, Li & Sun (2012), \"Properties of TJ-1 Lunar Soil Simulant\"",
+      "venue": "Journal of Aerospace Engineering (ASCE), 25(3):463-469",
+      "evidence": "local saved ResearchGate landing page; confirmed via Crossref for DOI 10.1061/(ASCE)AS.1943-5525.0000129",
+      "evidence_quote": "Properties of TJ-1 Lunar Soil Simulant July 2012 Journal of Aerospace Engineering 25(3):463-469 DOI: 10.1061/(ASCE)AS.1943-5525.0000129",
+      "doi_found": "10.1061/(ASCE)AS.1943-5525.0000129"
+     },
+     {
+      "doc_id": "D241",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Rodriguez, Barbero Barcenilla, Hall, Kundel, Meyers, Wyatt, Shippen & Kurouski (2025), \"Raman spectroscopy as a tool for assessing plant growth in space and on lunar regolith simulants\"",
+      "venue": "npj Microgravity (Springer Nature)",
+      "evidence": "local PDF page 1; confirmed via Crossref for DOI 10.1038/s41526-025-00479-8",
+      "evidence_quote": "npj | microgravity Article ... https://doi.org/10.1038/s41526-025-00479-8",
+      "doi_found": "10.1038/s41526-025-00479-8"
+     },
+     {
+      "doc_id": "D242",
+      "category": "vendor_datasheet",
+      "peer_reviewed": "no",
+      "identified_as": "LSP-2 Lunar South Pole Simulant, Fact Sheet 001-12-001-1223",
+      "venue": "Space Resource Technologies (manufacturer fact sheet)",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "LSP-2 Lunar South Pole Simulant | Fact Sheet 001-12-001-1223"
+     },
+     {
+      "doc_id": "D243",
+      "category": "vendor_datasheet",
+      "peer_reviewed": "no",
+      "identified_as": "LSP-2 Lunar South Pole Regolith Simulant — e-commerce product page",
+      "venue": "Space Resource Technologies / \"Artemis Research\" storefront",
+      "evidence": "local saved HTML page",
+      "evidence_quote": "LSP-2 Lunar South Pole Regolith Simulant | Artemis Research ... Space Resource Technologies ... Regular price $55.00 / Add to cart"
+     },
+     {
+      "doc_id": "D244",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Ramos Somolinos, Plaza Gallardo, Cidrás Estévez, Stepanyan, Cowley, Auñón Marugán & Poyatos Martínez, \"Electromagnetic Characterization of EAC-1A and JSC-2A Lunar Regolith Simulants\"",
+      "venue": "Materials (MDPI)",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "materials Article Electromagnetic Characterization of EAC-1A and JSC-2A Lunar Regolith Simulants"
+     },
+     {
+      "doc_id": "D245",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Altun, Ertl, Marechal, Makaya, Sgambati & Schwentenwein, \"Additive manufacturing of lunar regolith structures\"",
+      "venue": "Open Ceramics, vol. 5 (March 2021), 100058 (Elsevier)",
+      "evidence": "local saved ScienceDirect page; confirmed via Crossref for DOI 10.1016/j.oceram.2021.100058",
+      "evidence_quote": "Open Ceramics Volume 5 , March 2021, 100058",
+      "doi_found": "10.1016/j.oceram.2021.100058"
+     },
+     {
+      "doc_id": "D246",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Teng, Wang, Cui et al., \"Influence of loading conditions on mechanical behaviors of lunar regolith simulant WHU-1 based on Chang'e-5 returned samples\"",
+      "venue": "Acta Geotechnica (Springer)",
+      "evidence": "local saved ResearchGate landing page; confirmed via Crossref for DOI 10.1007/s11440-025-02553-7",
+      "evidence_quote": "Influence of loading conditions on mechanical behaviors of lunar regolith simulant WHU-1 ... January 2025 Acta Geotechnica DOI: 10.1007/s11440-025-02553-7",
+      "doi_found": "10.1007/s11440-025-02553-7"
+     },
+     {
+      "doc_id": "D247",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Indaram, Thannasi, Muthukkumaran & Annadurai, \"Development of a novel lunar highland soil simulant (LSS-ISAC-1) and its geotechnical properties for Chandrayaan missions\"",
+      "venue": "Planetary and Space Science, vol. 194 (2020), 105116 (Elsevier)",
+      "evidence": "local saved ResearchGate landing page; confirmed via Crossref for DOI 10.1016/j.pss.2020.105116",
+      "evidence_quote": "Development of a novel lunar highland soil simulant (LSS-ISAC-1) ... December 2020 Planetary and Space Science 194:105116",
+      "doi_found": "10.1016/j.pss.2020.105116"
+     },
+     {
+      "doc_id": "D248",
+      "category": "conference_abstract",
+      "peer_reviewed": "no",
+      "identified_as": "Sibille, Mueller & Mantovani (NASA KSC Swamp Works), \"Geotechnical Properties of BP-1 Lunar Regolith Simulant\" — workshop poster",
+      "venue": "2019 Lunar ISRU Workshop, Columbia, Maryland",
+      "evidence": "local PDF, page 1 (poster-format layout)",
+      "evidence_quote": "Geotechnical Properties of BP-1 Lunar Regolith Simulant 2019 Lunar ISRU Workshop July 15-17, 2019 Columbia, Maryland ... Swamp Works, NASA Kennedy Space Center"
+     },
+     {
+      "doc_id": "D249",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Li et al. (2011), \"Two Lunar Mare Soil Simulants\"",
+      "venue": "Acta Geologica Sinica – English Edition (Wiley)",
+      "evidence": "Crossref record for DOI 10.1111/j.1755-6724.2011.00536.x (local copy on disk is only the saved Crossref metadata JSON, not the paper itself)",
+      "evidence_quote": "type: journal-article; container-title: Acta Geologica Sinica - English Edition; publisher: Wiley",
+      "doi_found": "10.1111/j.1755-6724.2011.00536.x"
+     },
+     {
+      "doc_id": "D250",
+      "category": "conference_abstract",
+      "peer_reviewed": "no",
+      "identified_as": "Oravec, H. (Univ. of Akron / NASA Glenn Research Center), \"Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices\" — invited keynote talk",
+      "venue": "International Workshop on Granular Materials & Regolith, Université de Lorraine, Metz, France, 14–17 April 2025",
+      "evidence": "local PDF, page 1 (title slide)",
+      "evidence_quote": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices Dr. Heather Oravec ... International Workshop on Granular Materials & Regolith ... Université de Lorraine, Metz, France April 14-17, 2025"
+     },
+     {
+      "doc_id": "D251",
+      "category": "conference_abstract",
+      "peer_reviewed": "no",
+      "identified_as": "Same Metz keynote deck as D250 (Oravec, 2025) — a different slide/value is cited under this doc_id",
+      "venue": "International Workshop on Granular Materials & Regolith, Metz, France, April 2025",
+      "evidence": "local PDF, page 1 (same file as D250)",
+      "evidence_quote": "International Workshop on Granular Materials & Regolith ... Université de Lorraine, Metz, France April 14-17, 2025"
+     },
+     {
+      "doc_id": "D252",
+      "category": "agency_report",
+      "peer_reviewed": "no",
+      "identified_as": "Stockstill-Cahill, Martin & Wagoner (JHU-APL), \"2022 Lunar Simulant Assessment\"",
+      "venue": "Johns Hopkins Applied Physics Laboratory — Lunar Surface Innovation Initiative (LSII) report",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "JHU-APL LSII REPORT: 2022 Lunar Simulant Assessment ... Johns Hopkins Applied Physics Laboratory"
+     },
+     {
+      "doc_id": "D253",
+      "category": "website_other",
+      "peer_reviewed": "no",
+      "identified_as": "NASA JSC ARES (Astromaterials Research & Exploration Science) — Simulants page",
+      "venue": "NASA Johnson Space Center ARES website",
+      "evidence": "local saved HTML page",
+      "evidence_quote": "ARES | Exploration Science Projects | Simulants ... Astromaterials Research & Exploration Science"
+     },
+     {
+      "doc_id": "D254",
+      "category": "agency_report",
+      "peer_reviewed": "no",
+      "identified_as": "Rickman et al. (2024), \"Characterization of NUW-LHT-5M, A Lunar Highland Simulant\"",
+      "venue": "NASA/TP-20240007991, NASA STI Program Report Series, Marshall Space Flight Center",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "NASA/TP- 20240007991 Characterization of NUW-LHT-5M, A Lunar Highland Simulant ... NASA STI Program Report Series"
+     },
+     {
+      "doc_id": "D255",
+      "category": "conference_abstract",
+      "peer_reviewed": "no",
+      "identified_as": "Bunker, Lersch, Fortenberry & Meyer (2025), \"Characterization of Lunar Dust Simulants by Automated Particle Analysis using Scanning Electron Microscopy\", paper ICES-2025-177",
+      "venue": "54th International Conference on Environmental Systems (ICES), 13–17 July 2025, Prague",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "54th International Conference on Environmental Systems 13-17 July 2025, Prague, Czech Republic ICES-2025-177"
+     },
+     {
+      "doc_id": "D256",
+      "category": "preprint",
+      "peer_reviewed": "no",
+      "identified_as": "Dotson, Sanchez Valencia, Millwater, Easter, Long-Fox, Britt & Metzger, \"Cohesion and Shear Strength of Compacted Lunar and Martian Regolith Simulants\"",
+      "venue": "arXiv (physics.space-ph / astro-ph.EP)",
+      "evidence": "arXiv API record for 2403.11029",
+      "evidence_quote": "id: http://arxiv.org/abs/2403.11029v1 ... arxiv:primary_category term=\"physics.space-ph\"",
+      "notes": "No journal-ref field in the arXiv record — not (yet) published in a journal."
+     },
+     {
+      "doc_id": "D257",
+      "category": "website_other",
+      "peer_reviewed": "no",
+      "identified_as": "GeekWire news article, \"Crowdfunding campaign lets you snag some faux moon dirt\"",
+      "venue": "GeekWire (2018)",
+      "evidence": "local saved HTML page",
+      "evidence_quote": "Crowdfunding campaign lets you snag some faux moon dirt ... GeekWire"
+     },
+     {
+      "doc_id": "D258",
+      "category": "conference_abstract",
+      "peer_reviewed": "no",
+      "identified_as": "Roux, Roth & Roux (Off Planet Research, LLC), \"The Unique Physical Characteristics Of Simulated Lunar Ice\"",
+      "venue": "Lunar and Planetary Science Conference (LPSC) 2019, Abstract #2141",
+      "evidence": "local PDF, page 1 (poster format)",
+      "evidence_quote": "The Unique Physical Characteristics Of Simulated Lunar Ice Abstract #2141 Poster Location 324 Off Planet Research, LLC"
+     },
+     {
+      "doc_id": "D259",
+      "category": "conference_abstract",
+      "peer_reviewed": "no",
+      "identified_as": "Same paper as D255 — Bunker, Lersch, Fortenberry & Meyer (2025), ICES-2025-177",
+      "venue": "54th International Conference on Environmental Systems (ICES), Prague, 2025",
+      "evidence": "local PDF, page 1 (same file as D255)",
+      "evidence_quote": "54th International Conference on Environmental Systems 13-17 July 2025, Prague, Czech Republic ICES-2025-177"
+     },
+     {
+      "doc_id": "D260",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Same paper as D240 — Jiang, Li & Sun (2012), \"Properties of TJ-1 Lunar Soil Simulant\"",
+      "venue": "Journal of Aerospace Engineering (ASCE), 25(3):463-469",
+      "evidence": "local saved ResearchGate landing page (same file as D240); Crossref DOI 10.1061/(ASCE)AS.1943-5525.0000129",
+      "evidence_quote": "Properties of TJ-1 Lunar Soil Simulant July 2012 Journal of Aerospace Engineering 25(3):463-469",
+      "doi_found": "10.1061/(ASCE)AS.1943-5525.0000129"
+     },
+     {
+      "doc_id": "D261",
+      "category": "agency_report",
+      "peer_reviewed": "no",
+      "identified_as": "Martin, Wagoner, Stockshill-Cahill, Blewett & Bobea Graziano (JHU-APL), \"2024 Lunar Simulant Assessment\", Version 1.0",
+      "venue": "Johns Hopkins Applied Physics Laboratory — LSII report",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "JHU-APL LSII REPORT: 2024 Lunar Simulant Assessment Version 1.0 March 31, 2025"
+     },
+     {
+      "doc_id": "D262",
+      "category": "website_other",
+      "peer_reviewed": "no",
+      "identified_as": "Same page as D253 — NASA JSC ARES Simulants page",
+      "venue": "NASA Johnson Space Center ARES website",
+      "evidence": "local saved HTML page (same file as D253)",
+      "evidence_quote": "ARES | Exploration Science Projects | Simulants ... Astromaterials Research & Exploration Science"
+     },
+     {
+      "doc_id": "D263",
+      "category": "website_other",
+      "peer_reviewed": "no",
+      "identified_as": "Colorado School of Mines Space Resources Program — \"Simulants at Mines\" page",
+      "venue": "Colorado School of Mines website",
+      "evidence": "local saved HTML page",
+      "evidence_quote": "Simulants at Mines - Space Resources Program ... MINES.EDU ... Kevin Cannon (cannon@mines.edu)"
+     },
+     {
+      "doc_id": "D264",
+      "category": "agency_report",
+      "peer_reviewed": "no",
+      "identified_as": "Denevi, Blewett, Cahill, Greenhagen, Hibbitts, Hurley, Klima, Martin, Montalbano, Patterson, Stickle, Stockstill-Cahill & Wagoner (2020), \"Lunar Simulant Assessment\"",
+      "venue": "Johns Hopkins Applied Physics Laboratory report, 30 January 2020",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "This assessment of lunar simulants was performed at the Johns Hopkins Applied Physics Laboratory ... Lunar Simulant Assessment ... 30 January 2020"
+     },
+     {
+      "doc_id": "D265",
+      "category": "agency_report",
+      "peer_reviewed": "no",
+      "identified_as": "Same report as D252 — Stockstill-Cahill, Martin & Wagoner, \"2022 Lunar Simulant Assessment\" (JHU-APL LSII)",
+      "venue": "Johns Hopkins Applied Physics Laboratory — LSII report",
+      "evidence": "local PDF, page 1 (same file as D252)",
+      "evidence_quote": "JHU-APL LSII REPORT: 2022 Lunar Simulant Assessment ... Johns Hopkins Applied Physics Laboratory"
+     },
+     {
+      "doc_id": "D266",
+      "category": "agency_report",
+      "peer_reviewed": "no",
+      "identified_as": "Same report as D254 — Rickman et al. (2024), \"Characterization of NUW-LHT-5M\"",
+      "venue": "NASA/TP-20240007991, NASA STI Program Report Series",
+      "evidence": "local PDF, page 1 (same file as D254)",
+      "evidence_quote": "NASA/TP- 20240007991 Characterization of NUW-LHT-5M, A Lunar Highland Simulant"
+     },
+     {
+      "doc_id": "D267",
+      "category": "conference_abstract",
+      "peer_reviewed": "no",
+      "identified_as": "Taylor, Lowman, Nagihara, Milam & Nakamura (2008), \"Jurassic Diabase From Leesburg, VA: A Proposed Lunar Simulant\"",
+      "venue": "NASA Lunar Science Institute (NLSI) Lunar Science Conference 2008, abstract #2054",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "NLSI Lunar Science Conference (2008) 2054.pdf JURASSIC DIABASE FROM LEESBURG, VA: A PROPOSED LUNAR SIMULANT."
+     },
+     {
+      "doc_id": "D268",
+      "category": "agency_report",
+      "peer_reviewed": "no",
+      "identified_as": "Rickman, Wilson, Stoeser, Weinstein & Edmunson (2013), \"Manufacture of Lunar Regolith Simulants\"",
+      "venue": "NASA/TM—2013-217491, NASA STI Program, Marshall Space Flight Center",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "NASA/TM—2013–217491 Manufacture of Lunar Regolith Simulants ... George C. Marshall Space Flight Center"
+     },
+     {
+      "doc_id": "D269",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Li, Xie, Liu & Shi (2019), \"The Preparation and Characterization of NEU-1 Lunar Soil Simulants\"",
+      "venue": "JOM: The Journal of the Minerals, Metals & Materials Society, 71(4) (Springer)",
+      "evidence": "local saved ResearchGate landing page; confirmed via Crossref for DOI 10.1007/s11837-019-03362-6",
+      "evidence_quote": "The Preparation and Characterization of NEU-1 Lunar Soil Simulants February 2019 JOM: the journal of the Minerals, Metals & Materials Society 71(4) DOI: 10.1007/s11837-019-03362-6",
+      "doi_found": "10.1007/s11837-019-03362-6"
+     },
+     {
+      "doc_id": "D270",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "[authors not shown in excerpt] (2024), \"Additive manufacturing development of construction materials for a lunar base via spark plasma sintering of volcanic rocks using in-situ resource utilization concept\" — only present as a 'Cited by' citation excerpt on an unrelated ScienceDirect article page, not on its own page",
+      "venue": "Construction and Building Materials (Elsevier), 2024",
+      "evidence": "local saved ScienceDirect \"Cited by\" panel; matching record found via Crossref bibliographic search",
+      "evidence_quote": "Additive manufacturing development of construction materials for a lunar base via spark plasma sintering of volcanic rocks using in-situ resource utilization concept 2024, Construction and Building Materials",
+      "doi_found": "10.1016/j.conbuildmat.2024.137553 (found via Crossref title search; not shown in the saved local excerpt itself)"
+     },
+     {
+      "doc_id": "D271",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Han et al. (2022), sintering of HUST-1 lunar regolith simulant",
+      "venue": "Construction and Building Materials (Elsevier)",
+      "evidence": "Crossref record for DOI 10.1016/j.conbuildmat.2022.126655 (local copy is saved Crossref metadata JSON)",
+      "evidence_quote": "type: journal-article; container-title: Construction and Building Materials; publisher: Elsevier BV",
+      "doi_found": "10.1016/j.conbuildmat.2022.126655"
+     },
+     {
+      "doc_id": "D272",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Han et al. (2024), \"Physical, mechanical and thermal properties of vacuum sintered HUST-1\"",
+      "venue": "International Journal of Mining Science and Technology (Elsevier)",
+      "evidence": "Crossref record for DOI 10.1016/j.ijmst.2024.06.004 (local copy is a saved Semantic Scholar metadata JSON)",
+      "evidence_quote": "type: journal-article; container-title: International Journal of Mining Science and Technology; publisher: Elsevier BV",
+      "doi_found": "10.1016/j.ijmst.2024.06.004"
+     },
+     {
+      "doc_id": "D273",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Same underlying 2024 paper as D270 — \"Additive manufacturing development of construction materials for a lunar base via spark plasma sintering of volcanic rocks...\", cited as a 'Cited by' excerpt on the JLU-H ScienceDirect page",
+      "venue": "Construction and Building Materials (Elsevier), 2024",
+      "evidence": "local saved ScienceDirect \"Cited by\" panel (same underlying source file as D270)",
+      "evidence_quote": "Additive manufacturing development of construction materials for a lunar base via spark plasma sintering of volcanic rocks using in-situ resource utilization concept 2024, Construction and Building Materials",
+      "doi_found": "10.1016/j.conbuildmat.2024.137553 (via Crossref title search)"
+     },
+     {
+      "doc_id": "D274",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Kim, Ryu, Jin, Lee & Shin, \"Microstructural, mechanical, and thermal properties of microwave-sintered KLS-1 lunar regolith simulant\"",
+      "venue": "Ceramics International, vol. 47, issue 19 (2021), pp. 26891–26897 (Elsevier)",
+      "evidence": "local saved ScienceDirect page; confirmed via Crossref for DOI 10.1016/j.ceramint.2021.06.098",
+      "evidence_quote": "Ceramics International Volume 47, Issue 19 , 1 October 2021, Pages 26891-26897",
+      "doi_found": "10.1016/j.ceramint.2021.06.098"
+     },
+     {
+      "doc_id": "D275",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Same paper as D240/D260 — Jiang, Li & Sun (2012), \"Properties of TJ-1 Lunar Soil Simulant\"",
+      "venue": "Journal of Aerospace Engineering (ASCE), 25(3):463-469",
+      "evidence": "local saved ResearchGate landing page (same file as D240/D260)",
+      "evidence_quote": "Properties of TJ-1 Lunar Soil Simulant July 2012 Journal of Aerospace Engineering 25(3):463-469",
+      "doi_found": "10.1061/(ASCE)AS.1943-5525.0000129"
+     },
+     {
+      "doc_id": "D276",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Same paper as D240/D260/D275 — Jiang, Li & Sun (2012), \"Properties of TJ-1 Lunar Soil Simulant\"",
+      "venue": "Journal of Aerospace Engineering (ASCE), 25(3):463-469",
+      "evidence": "local saved ResearchGate landing page (same file as D240/D260/D275)",
+      "evidence_quote": "Properties of TJ-1 Lunar Soil Simulant July 2012 Journal of Aerospace Engineering 25(3):463-469",
+      "doi_found": "10.1061/(ASCE)AS.1943-5525.0000129"
+     },
+     {
+      "doc_id": "D277",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Li, Zou, Wu & Chu (2019), \"Discrete Element Modelling of Triaxial Compression Test of QH-E Lunar Soil Simulant under Hydrostatic Compression\"",
+      "venue": "International Journal of Engineering and Technology, Vol. 11, No. 3 (June 2019), IACSIT Press",
+      "evidence": "local PDF, page 1; confirmed via Crossref for DOI 10.7763/ijet.2019.v11.1148",
+      "evidence_quote": "International Journal of Engineering and Technology, Vol. 11, No. 3, June 2019",
+      "doi_found": "10.7763/ijet.2019.v11.1148",
+      "notes": "Journal has a volume/issue and Crossref record, but no explicit peer-review statement was seen on the page; IACSIT-published IJET is a lower-profile venue the owner may want to look at more closely."
+     },
+     {
+      "doc_id": "D278",
+      "category": "conference_abstract",
+      "peer_reviewed": "no",
+      "identified_as": "Alberquilla et al. (2025), \"From La Palma To Space: Green Moon Project's Experiment On Lunar Soil Simulant (LuSIC-1) For Crop Cultivation In Low Earth Orbit\"",
+      "venue": "8th Spanish Congress of Planetary Sciences and Solar System Exploration (CPESS-8), Málaga, May 2025",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "8th Spanish Congress of Planetary Sciences and Solar System Exploration FROM LA PALMA TO SPACE: GREEN MOON PROJECT'S EXPERIMENT ON LUNAR SOIL SIMULANT (LUSIC-1) FOR CROP CULTIVATION IN LOW EARTH ORBIT"
+     },
+     {
+      "doc_id": "D279",
+      "category": "journal_article",
+      "peer_reviewed": "yes",
+      "identified_as": "Jayalekshmi & Kumar (2018), \"Modified Model For Shear Stress Distribution Using TRI-1 Lunar Soil Simulant\"",
+      "venue": "Journal of Theoretical and Applied Mechanics, 56,1, pp. 137–146, Warsaw 2018",
+      "evidence": "local PDF, page 1; confirmed via Crossref for DOI 10.15632/jtam-pl.56.1.137",
+      "evidence_quote": "JOURNAL OF THEORETICAL AND APPLIED MECHANICS 56, 1, pp. 137-146, Warsaw 2018 DOI: 10.15632/jtam-pl.56.1.137",
+      "doi_found": "10.15632/jtam-pl.56.1.137"
+     },
+     {
+      "doc_id": "D280",
+      "category": "website_other",
+      "peer_reviewed": "no",
+      "identified_as": "CPESS-8 (8th Spanish/Iberian Congress of Planetary Sciences and Solar System Exploration, Málaga, 25–29 May 2025) — the congress's own informational dossier/programme summary, not a scientific paper",
+      "venue": "Universidad de Málaga / Red de Infraestructuras en Astronomía (congress organizers)",
+      "evidence": "local PDF, page 1",
+      "evidence_quote": "DOSSIER INFORMATIVO OCTAVO CONGRESO DE CIENCIAS PLANETARIAS Y EXPLORACIÓN DEL SISTEMA SOLAR (CPESS-8) ... Attendees: 175 Communications: 128 (71 Orales; 57 Paneles)",
+      "notes": "This is a congress press-kit/programme dossier, not a paper about a specific simulant — no scientific content to peer-review in the first place."
+     },
+     {
+      "doc_id": "D281",
+      "category": "conference_abstract",
+      "peer_reviewed": "no",
+      "identified_as": "Knapmeyer-Endrun et al., \"First seismic in-situ characterization of regolith simulants in LUNA\"",
+      "venue": "EGU (European Geosciences Union) General Assembly 2026, abstract EGU26-19748",
+      "evidence": "local saved HTML abstract page; confirmed via Crossref for DOI 10.5194/egusphere-egu26-19748 (type: posted-content/other)",
+      "evidence_quote": "Abstract EGU26-19748 ... EGU General Assembly 2026 ... First seismic in-situ characterization of regolith simulants in LUNA",
+      "doi_found": "10.5194/egusphere-egu26-19748"
+     }
+    ],
+    "notes": "FLAGGING A MISMATCH FIRST, per the workflow harness's own rule that the relayed user request overrides the computed task where they conflict: the relayed user request was \"what's the gasteiner comparison to our database?\" but the computed task (which I still completed in full, below) was to classify documents D229–D281. I checked whether these are actually the same piece of work (e.g., D229–D281 being the papers named in Gasteiner's CSV for DIRT's 15 unsourced values) — they are not: none of the 53 documents in this range mention Gasteiner, Murdoch, D'Angelo, or the Recherche Data Gouv/ISAE-SUPAERO database; they are unrelated newly-added DIRT simulant-database sources (Oshima, TLH-0/TLM-0, TLS-01, TUBS-M/T/I, IGG-01, TJ-1, LSP-2, EAC-1A/JSC-2A, WHU-1, LSS-ISAC-1, BP-1, JHU-APL assessments, NUW-LHT-5M, lunar-dust ICES papers, HUST-1, KLS-1, JLU-H citation, QH-E, LuSIC-1, TRI-1, CPESS-8, EGU26 abstract, etc.). So here is the actual answer to what was asked:\n\nGasteiner comparison to the DIRT database (from prior research this session, memory note \"gasteiner-dataset\"): Gasteiner, Murdoch & D'Angelo, \"Mechanical Properties of Lunar Soil: Raw Dataset for the Lunar Regolith Database,\" Recherche Data Gouv, DOI 10.57745/NTSZ8G, v2 (2026-08-27), etalab-2.0 licence — mirrored at github.com/leoniegasteiner/Lunar-Regolith-Database with a Streamlit app. Its \"6,000+ entries\" are 6,698 CSV rows: 4,243 grain-size sieve rows (Graf 1993 catalogue), 2,038 Apollo sample-catalogue rows, 191 regolith mechanical-test rows (23 missions, 27 sources), 24 simulant rows (66 values), a 198-row merged file, and 4 Sourcebook averages. Comparison result: all 24 of Gasteiner's simulants are already present in DIRT. Of their 66 simulant values, 15 are single numbers DIRT also holds but currently hides as unsourced (\"withheld_unverified\"); Gasteiner's CSV names the source paper for each of those 15, which gives a cheap, targeted way to close exactly those 15 provenance gaps. This has no overlap with the D229–D281 batch classified below.\n\nOn the classification task itself (completed in full, 53/53, none skipped): no injected instructions or attempts to redirect my behavior were found inside any of the 53 documents — all page/PDF content was read as inert data. Method used per doc, cheapest first: local PDF/HTML first pages, then Crossref for DOIs, then arXiv API / Wayback Machine / a Crossref title search where neither a DOI nor decisive local text was present. Category counts: journal_article 22, agency_report 8, conference_abstract 10, vendor_datasheet 5, website_other 6, dataset 1, preprint 1 (=53). I made no data changes — classification only, as instructed.\n\nDuplicate-source clusters worth knowing about (same underlying document cited under multiple doc_ids, so they carry identical classifications): D240/D260/D275/D276 (TJ-1, ASCE J. Aerospace Eng.); D252/D265 (JHU-APL 2022 LSII report); D254/D266 (NASA/TP-20240007991); D255/D259 (ICES-2025-177); D250/D251 (Oravec Metz keynote); D253/D262 (NASA ARES page); D270/D273 (the 2024 Constr. Build. Mater. article, seen only as a \"Cited by\" excerpt on the JLU-H ScienceDirect page, not on its own page — DOI 10.1016/j.conbuildmat.2024.137553 found by title search, not present in the saved excerpt itself).\n\nTwo items worth the owner's attention beyond category: (1) D229's live URL (simulantdb.com) now redirects to an unrelated gambling site — I verified the original \"Planetary Simulant Database\" content only via a 2024-02-26 Wayback Machine snapshot; the dashboard's link to it is currently broken/misleading. (2) D233 has neither a local copy nor a URL — its vendor_datasheet classification rests only on its title text and the same-vendor pattern match to D232/D234, which is weaker evidence than every other entry in this batch."
+   },
+   "check": {
+    "checks": [
+     {
+      "doc_id": "D229",
+      "verdict": "CONFIRMED",
+      "correct_category": "dataset",
+      "correct_peer_reviewed": "no",
+      "evidence": "No local copy. The Wayback snapshot web.archive.org/web/20240226180926/https://simulantdb.com/simulants/oshima.php is the Planetary Simulant Database entry for Oshima. The D263 Mines page says Mines maintains this database. On 2026-09-25 the live URL returned HTTP 301 to https://www.hombomtoys.com/, an unrelated domain. I saw the redirect but did not check whether that site is gambling.",
+      "evidence_quote": "Planetary Simulant Database Free Resource for Regolith Simulant Information ... The amount of Oshima produced, and its fate, are unclear. Copyright © 2024. Website by Kevin Cannon.",
+      "note": "A community web database, not reviewed. The live link is broken: it redirects to an unrelated domain."
+     },
+     {
+      "doc_id": "D230",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Crossref record for 10.1007/s10509-024-04383-7",
+      "evidence_quote": "journal-article | Micro-Raman and FTIR spectroscopic characterization of the first Turkish lunar regolith simulant | Astrophysics and Space Science | Springer Science and Business Media LLC | 2024-12",
+      "note": "Crossref lists 6 authors (Unsalan, Cengiz Toklu, Altunayar-Unsalan, Acikbas, Acikbas, Cercevik). The entry lists 4. No local copy."
+     },
+     {
+      "doc_id": "D231",
+      "verdict": "CONFIRMED",
+      "correct_category": "agency_report",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF papers/LRS/LEAG-SIM-SAT2010_LunarRegolithSimulants.pdf, page 1",
+      "evidence_quote": "Report from the Simulant Working Group of the Lunar Exploration Analysis Group and Curation and Analysis Planning Team for Extraterrestrial Materials to the Planetary Science Subcommittee of the NASA Advisory Council December, 2010",
+      "note": "A committee report to the NASA Advisory Council."
+     },
+     {
+      "doc_id": "D232",
+      "verdict": "CONFIRMED",
+      "correct_category": "vendor_datasheet",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF datasheets/Hispansion/TLH-0_SDS.pdf, page 1",
+      "evidence_quote": "Safety Data Sheet: TLH-0 According to Regulation (EC) No. 1907/2006 (REACH) ... Supplier: Hispansion Works, S.L.",
+      "note": "Manufacturer safety data sheet."
+     },
+     {
+      "doc_id": "D233",
+      "verdict": "CONFIRMED",
+      "correct_category": "vendor_datasheet",
+      "correct_peer_reviewed": "no",
+      "evidence": "The classifier said there was no copy, but local copies exist: Sources/datasheets/Hispansion/TLH-0_TDS_v1.4.pdf and TLM-0_TDS_v2.2.pdf (plus TLH-0_TDS.pdf and TLM-0_TDS.pdf). Page 1 of each is a technical data sheet. The PDF Author field is Jaime Abella Larraz, the SDS contact at Hispansion.",
+      "evidence_quote": "Technical Data Sheet: TLH-0 TDS-TLH-0-v1.4 1. Overview: Type: Highlands Series: TerraLun®- Core ... Mean NASA FoM Score: 88.7%  |  Technical Data Sheet: TLM-0 TDS-TLM-0-v2.2",
+      "note": "Category is right. Correction: local copies exist, so the evidence is stronger than the classifier said. The 8 values that cite D233 can be traced to these PDFs."
+     },
+     {
+      "doc_id": "D234",
+      "verdict": "CONFIRMED",
+      "correct_category": "vendor_datasheet",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF datasheets/Hispansion/TLM-0_SDS.pdf, page 1",
+      "evidence_quote": "Safety Data Sheet: TLM-0 ... Synonyms: Lunar low-Ti mare regolith simulant ... Supplier: Hispansion Works, S.L.",
+      "note": "Manufacturer safety data sheet."
+     },
+     {
+      "doc_id": "D235",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Local PDF page 1 has the journal header and review dates. Crossref for 10.55003/cast.2023.06.23.008: journal-article, Current Applied Science and Technology 23(6), King Mongkut's Institute of Technology Ladkrabang.",
+      "evidence_quote": "Current Applied Science and Technology Vol. 23 No. 6 (November-December 2023) Research article ... Received: 2 August 2022, Revised: 2 November 2022, Accepted: 24 March 2023",
+      "note": "The Received/Revised/Accepted dates point to review."
+     },
+     {
+      "doc_id": "D236",
+      "verdict": "CONFIRMED",
+      "correct_category": "conference_abstract",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF page 1 is a sciforum conference paper. A web search gives DOI 10.3390/IAAI-2021-10580, which Crossref does not have. The conference asked presenters to submit full manuscripts to an Aerospace special issue; the file on disk is the sciforum posting, and I found no journal version.",
+      "evidence_quote": "† Presented at the 2nd Innovation Aviation & Aerospace Industry - International Conference 2021, 28-30 June 2021; Available online: https://iaai-2021.sciforum.net, https://iaai.asia/ ... Published: 1 July 2021",
+      "note": "Conference paper on the MDPI sciforum platform, with no statement of review."
+     },
+     {
+      "doc_id": "D237",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Local saved PMC page. Crossref for 10.3390/ma15238561: journal-article, Materials, authors Windisch, Linke, Jütte, Baasch, Kwade, Stoll, Schilde.",
+      "evidence_quote": "Materials (Basel) . 2022 Dec 1;15(23):8561. doi: 10.3390/ma15238561",
+      "note": "The entry's 'Linke et al.' is the second author; the first is Windisch. UoM-B and UoM-W are only mentioned in passing in the introduction."
+     },
+     {
+      "doc_id": "D238",
+      "verdict": "CONFIRMED",
+      "correct_category": "website_other",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local saved HTML page",
+      "evidence_quote": "ESRIC KSP - Simulants ... Regolith Simulants Directory ... Name UW-1M Description Lunar mare Availability TBD Supplier/Contact The University of Winnipeg Canada",
+      "note": "An organisation's directory web page."
+     },
+     {
+      "doc_id": "D239",
+      "verdict": "REFUTED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "The file is the ResearchGate page for Ruan et al. 2024 (IGG-01), but the WHU-1 text on it is a 'Citations' snippet from a different paper: Teng, Wang, Cui & Pang (2025). On these pages the snippet comes before the citing paper's title. Crossref for 10.1007/s11440-025-02553-7: journal-article, Acta Geotechnica, Springer.",
+      "evidence_quote": "Compared to other lunar regolith simulants [19,42,56], WHU-1 exhibits slightly higher compressibility ... Influence of loading conditions on mechanical behaviors of lunar regolith simulant WHU-1 based on Chang’e-5 returned samples Article Full-text available Jan 2025 Yue Teng Shun Wang Yifei Cui Yong Pang",
+      "note": "Refuted because the wrong document was identified; the category does not change. The WHU-1 source is Teng et al. 2025, Acta Geotechnica (a journal, reviewed), not Ruan et al. IGG-01."
+     },
+     {
+      "doc_id": "D240",
+      "verdict": "REFUTED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "The file is the ResearchGate page for Jiang et al. 2012 (TJ-1), but the WHU-1 text on it is a 'Citations' snippet from Teng et al. (2025). Crossref for 10.1007/s11440-025-02553-7: journal-article, Acta Geotechnica.",
+      "evidence_quote": "The statistics of the strength parameters and particle size distribution curve coefficients for WHU-1 ... WHU-1 demonstrates higher cohesion, especially under low-stress conditions. ... Influence of loading conditions on mechanical behaviors of lunar regolith simulant WHU-1 based on Chang’e-5 returned samples Article Full-text available Jan 2025 Yue Teng",
+      "note": "Refuted because the wrong document was identified; the category does not change. The source is Teng et al. 2025, Acta Geotechnica, not Jiang et al. 2012."
+     },
+     {
+      "doc_id": "D241",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Local PDF page 1. Crossref for 10.1038/s41526-025-00479-8: journal-article, npj Microgravity 11(1), Springer Nature.",
+      "evidence_quote": "npj | microgravity Article Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA https://doi.org/10.1038/s41526-025-00479-8",
+      "note": ""
+     },
+     {
+      "doc_id": "D242",
+      "verdict": "CONFIRMED",
+      "correct_category": "vendor_datasheet",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF page 1, laid out as a datasheet",
+      "evidence_quote": "LSP-2 Lunar South Pole Simulant | Fact Sheet 001-12-001-1223 Simulant Name: LSP-2 ... Uncompressed Bulk Density: 1.45 g/cm3",
+      "note": "Manufacturer fact sheet. The copy was fetched from an iGEM team wiki mirror."
+     },
+     {
+      "doc_id": "D243",
+      "verdict": "CONFIRMED",
+      "correct_category": "vendor_datasheet",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local saved HTML: a Shopify storefront. The og:site_name and merchantName are Space Resource Technologies; the visible title is 'Artemis Research'.",
+      "evidence_quote": "LSP-2 Lunar South Pole Regolith Simulant | Artemis Research ... Add to cart Per Kg - $55.00 USD ... <meta property=\"og:site_name\" content=\"Space Resource Technologies\">",
+      "note": "Seller's product page."
+     },
+     {
+      "doc_id": "D244",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Local PDF page 1, with the MDPI article header, citation line and received date",
+      "evidence_quote": "materials Article Electromagnetic Characterization of EAC-1A and JSC-2A Lunar Regolith Simulants ... Materials 2024, 17, 3633. Received: 22 May 2024",
+      "note": ""
+     },
+     {
+      "doc_id": "D245",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Local saved ScienceDirect page. Crossref for 10.1016/j.oceram.2021.100058: journal-article, Open Ceramics 5, 100058, Elsevier.",
+      "evidence_quote": "Open Ceramics Volume 5 , March 2021, 100058 Additive manufacturing of lunar regolith structures Author links open overlay panel Altan Alpay Altun a , Florian Ertl a , Maude Marechal b",
+      "note": "JSC-2A is only mentioned in passing in the introduction."
+     },
+     {
+      "doc_id": "D246",
+      "verdict": "REFUTED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "The page is Teng et al. 2025 (WHU-1), but every GRC-3 mention on it is in the abstract of a 'Recommended publications' item: Dewoolkar, Edwards & Walsh (2018). Crossref for 10.1061/(asce)as.1943-5525.0000848: journal-article, Journal of Aerospace Engineering.",
+      "evidence_quote": "Article Shear Strength and Stiffness Characterization of Lunar Simulant GRC-3 July 2018 · Journal of Aerospace Engineering Mandar M. Dewoolkar Michael B. Edwards Dylan Walsh Physical modeling experiments ... use suitable soil simulants such as GRC-3",
+      "note": "Refuted because the wrong document was identified; the category does not change. The GRC-3 source is Dewoolkar et al. 2018, J. Aerospace Eng. (ASCE), not Teng et al. WHU-1."
+     },
+     {
+      "doc_id": "D247",
+      "verdict": "REFUTED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "The page is Venugopal/Indaram et al. 2020 (LSS-ISAC-1), but GRC-3 appears only in a 'Recommended publications' item: He, Zeng & Wilkinson (2013). Crossref for 10.1061/(asce)as.1943-5525.0000162: journal-article, Journal of Aerospace Engineering.",
+      "evidence_quote": "Recommended publications ... Article Geotechnical Properties of GRC-3 Lunar Simulant July 2013 · Journal of Aerospace Engineering Chunmei He Xiangwu Zeng Allen Wilkinson",
+      "note": "Refuted because the wrong document was identified; the category does not change. The GRC-3 source is He et al. 2013, J. Aerospace Eng., not the LSS-ISAC-1 paper."
+     },
+     {
+      "doc_id": "D248",
+      "verdict": "CONFIRMED",
+      "correct_category": "conference_abstract",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF 5068_Mueller.pdf: a poster for the 2019 Lunar ISRU Workshop (LPI contribution 5068)",
+      "evidence_quote": "Geotechnical Properties of BP-1 Lunar Regolith Simulant 2019 Lunar ISRU Workshop July 15-17, 2019 Columbia, Maryland L. Sibille, R. P. Mueller, J. G. Mantovani Swamp Works, NASA Kennedy Space Center",
+      "note": "Workshop poster."
+     },
+     {
+      "doc_id": "D249",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Crossref for 10.1111/j.1755-6724.2011.00536.x; the local copy is saved Crossref metadata",
+      "evidence_quote": "journal-article | Two Lunar Mare Soil Simulants | Acta Geologica Sinica - English Edition | Wiley | 85 5 1016-1021",
+      "note": ""
+     },
+     {
+      "doc_id": "D250",
+      "verdict": "CONFIRMED",
+      "correct_category": "conference_abstract",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF: title slide of a keynote slide deck",
+      "evidence_quote": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices Dr. Heather Oravec The University of Akron at NASA Glenn Research Center April 15, 2025 International Workshop on Granular Materials & Regolith ... Université de Lorraine, Metz, France",
+      "note": "A keynote slide deck, not reviewed. Of the listed categories, conference_abstract fits best."
+     },
+     {
+      "doc_id": "D251",
+      "verdict": "CONFIRMED",
+      "correct_category": "conference_abstract",
+      "correct_peer_reviewed": "no",
+      "evidence": "Byte comparison shows the same file as D250 (Metz France_Keynote_April 2025_Final.pdf)",
+      "evidence_quote": "International Workshop on Granular Materials & Regolith ... Université de Lorraine, Metz, France April 14-17, 2025",
+      "note": "Duplicate of D250."
+     },
+     {
+      "doc_id": "D252",
+      "verdict": "CONFIRMED",
+      "correct_category": "agency_report",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF page 1",
+      "evidence_quote": "JHU-APL LSII REPORT: 2022 Lunar Simulant Assessment POC: Karen Stockstill-Cahill ... Johns Hopkins Applied Physics Laboratory EXECUTIVE SUMMARY This report presents a geotechnical assessment of eight lunar regolith simulants.",
+      "note": "JHU-APL is a university-affiliated lab working for NASA. agency_report is the closest category."
+     },
+     {
+      "doc_id": "D253",
+      "verdict": "CONFIRMED",
+      "correct_category": "website_other",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local saved HTML page",
+      "evidence_quote": "ARES | Exploration Science Projects | Simulants ... Astromaterials Research & Exploration Science ... Lunar Regolith Simulants",
+      "note": "A NASA web page."
+     },
+     {
+      "doc_id": "D254",
+      "verdict": "CONFIRMED",
+      "correct_category": "agency_report",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF page 1",
+      "evidence_quote": "NASA/TP- 20240007991 Characterization of NUW-LHT-5M, A Lunar Highland Simulant Douglas L. Rickman ... July 2024 NASA STI Program Report Series",
+      "note": ""
+     },
+     {
+      "doc_id": "D255",
+      "verdict": "CONFIRMED",
+      "correct_category": "conference_abstract",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF page 1",
+      "evidence_quote": "54th International Conference on Environmental Systems 13-17 July 2025, Prague, Czech Republic ICES-2025-177",
+      "note": "ICES conference paper, not reviewed."
+     },
+     {
+      "doc_id": "D256",
+      "verdict": "REFUTED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Crossref for 10.1016/j.icarus.2024.115943: journal-article, Icarus 411, 115943 (March 2024), Elsevier. It has the same title and the same 7 authors (Dotson, Sanchez Valencia, Millwater, Easter, Long-Fox, Britt, Metzger). The PDF metadata title of the local copy shows it is the journal manuscript. arXiv lists it as 'Submitted on 16 Mar 2024' with no journal-ref, so it was posted around or after the Icarus issue.",
+      "evidence_quote": "Crossref: journal-article | Icarus | 411 | 115943 | Elsevier BV | 'Cohesion and shear strength of compacted lunar and Martian regolith simulants'; local PDF Title: Dotson_Journal_Article_Cohesion_V7_(17NOV23)",
+      "note": "The classifier's 'not (yet) published in a journal' is wrong. The file on disk is the authors' arXiv copy of a published Icarus article, not the publisher's final version. Cite the Icarus DOI and check values against it."
+     },
+     {
+      "doc_id": "D257",
+      "verdict": "CONFIRMED",
+      "correct_category": "website_other",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local saved HTML page",
+      "evidence_quote": "Crowdfunding campaign lets you snag some faux moon dirt ... GeekWire",
+      "note": "News article."
+     },
+     {
+      "doc_id": "D258",
+      "verdict": "CONFIRMED",
+      "correct_category": "conference_abstract",
+      "correct_peer_reviewed": "no",
+      "evidence": "The local PDF is the e-poster. The URL is hou.usra.edu/meetings/lpsc2019/eposter/2141.pdf.",
+      "evidence_quote": "The Unique Physical Characteristics Of Simulated Lunar Ice Abstract #2141 Poster Location 324 Off Planet Research, LLC Vincent Roux, Melissa Roth, And Evon Roux",
+      "note": "LPSC 2019 abstract poster."
+     },
+     {
+      "doc_id": "D259",
+      "verdict": "CONFIRMED",
+      "correct_category": "conference_abstract",
+      "correct_peer_reviewed": "no",
+      "evidence": "Byte comparison shows the same file as D255",
+      "evidence_quote": "54th International Conference on Environmental Systems 13-17 July 2025, Prague, Czech Republic ICES-2025-177",
+      "note": "Duplicate of D255."
+     },
+     {
+      "doc_id": "D260",
+      "verdict": "REFUTED",
+      "correct_category": "preprint",
+      "correct_peer_reviewed": "no",
+      "evidence": "The file is the TJ-1 ResearchGate page, but the CSM-LHT-1 / CSM-LHT-1G / CSM-LMT-1 / CSM-CL-S table text is a 'Citations' snippet. It comes before the item 'A Comprehensive Review of Lunar-based Manufacturing and Construction', which ResearchGate labels 'Preprint' (Azami, Kazemi, Moazen, Skonieczny, Aug 2024). A later version exists: Crossref 10.1016/j.paerosci.2024.101045, journal-article, Progress in Aerospace Sciences 150 (Oct 2024), by Azami, Kazemi, Moazen, Dubé, Potvin, Skonieczny.",
+      "evidence_quote": "OPRH2N, OPRH3N, OPRH4N [46]Highlands Geotechnical 2010 CSM-CL-S [31] Mare Geotechnical 2010 ... CSM-LHT-1 [37] Highlands General 2021 CSM-LMT-1 [37] Mare, Low to Medium-TiGenaral 2021 CSM-LHT-1G [55] Highlands Geotechnical 2023 ... A Comprehensive Review of Lunar-based Manufacturing and Construction Preprint Full-text available Aug 2024 Mohammad Azami",
+      "note": "Wrong document identified: this is not Jiang et al. 2012. The text on file comes from the August 2024 preprint of a review. The 6 values citing D260 are unreviewed as they stand. They would count as reviewed only after checking against the Progress in Aerospace Sciences version, and even then the review is a secondary source citing refs [31], [37], [55]."
+     },
+     {
+      "doc_id": "D261",
+      "verdict": "CONFIRMED",
+      "correct_category": "agency_report",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF page 1",
+      "evidence_quote": "JHU-APL LSII REPORT: 2024 Lunar Simulant Assessment Version 1.0 March 31, 2025 POC: Anna Martin ... Johns Hopkins Applied Physics Laboratory",
+      "note": ""
+     },
+     {
+      "doc_id": "D262",
+      "verdict": "CONFIRMED",
+      "correct_category": "website_other",
+      "correct_peer_reviewed": "no",
+      "evidence": "Same local file as D253 (files/1646/simulants.html)",
+      "evidence_quote": "ARES | Exploration Science Projects | Simulants ... Astromaterials Research & Exploration Science",
+      "note": "Duplicate of D253."
+     },
+     {
+      "doc_id": "D263",
+      "verdict": "CONFIRMED",
+      "correct_category": "website_other",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local saved HTML page",
+      "evidence_quote": "Simulants at Mines - Space Resources Program ... MINES.EDU ... We’re also working on a special-purpose simulant “Mooncastle” that accurately captures the extremely poor flowability of lunar regolith.",
+      "note": "University web page."
+     },
+     {
+      "doc_id": "D264",
+      "verdict": "CONFIRMED",
+      "correct_category": "agency_report",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF page 1",
+      "evidence_quote": "This assessment of lunar simulants was performed at the Johns Hopkins Applied Physics Laboratory ... The report is preliminary and will be updated as further work is completed. Lunar Simulant Assessment POC: Brett W. Denevi ... 30 January 2020",
+      "note": "The report calls itself preliminary."
+     },
+     {
+      "doc_id": "D265",
+      "verdict": "CONFIRMED",
+      "correct_category": "agency_report",
+      "correct_peer_reviewed": "no",
+      "evidence": "Byte comparison shows the same file as D252",
+      "evidence_quote": "JHU-APL LSII REPORT: 2022 Lunar Simulant Assessment ... Johns Hopkins Applied Physics Laboratory",
+      "note": "Duplicate of D252."
+     },
+     {
+      "doc_id": "D266",
+      "verdict": "CONFIRMED",
+      "correct_category": "agency_report",
+      "correct_peer_reviewed": "no",
+      "evidence": "Byte comparison shows the same file as D254",
+      "evidence_quote": "NASA/TP- 20240007991 Characterization of NUW-LHT-5M, A Lunar Highland Simulant",
+      "note": "Duplicate of D254. The entry title and file name say NASA/TM, but page 1 says NASA/TP."
+     },
+     {
+      "doc_id": "D267",
+      "verdict": "CONFIRMED",
+      "correct_category": "conference_abstract",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF page 1",
+      "evidence_quote": "NLSI Lunar Science Conference (2008) 2054.pdf JURASSIC DIABASE FROM LEESBURG, VA: A PROPOSED LUNAR SIMULANT. P. T. Taylor1, P. D. Lowman1, Seiichi Nagihara2",
+      "note": "Two-page LPI-style conference abstract. 7 values cite it."
+     },
+     {
+      "doc_id": "D268",
+      "verdict": "CONFIRMED",
+      "correct_category": "agency_report",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF page 1",
+      "evidence_quote": "George C. Marshall Space Flight Center Huntsville, Alabama 35812 NASA/TM—2013–217491 Manufacture of Lunar Regolith Simulants D.L. Rickman",
+      "note": ""
+     },
+     {
+      "doc_id": "D269",
+      "verdict": "REFUTED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "The page is Li et al. 2019 (NEU-1, JOM), but every BH-2 mention is in the 'Citations' item for Zhou, Yang, Zhang, Li et al. (2021). Crossref for 10.1016/j.actaastro.2021.08.039: journal-article, Acta Astronautica.",
+      "evidence_quote": "Preparation and evaluation of geopolymer based on BH-2 lunar regolith simulant under lunar surface temperature and vacuum condition Article Aug 2021 ACTA ASTRONAUT Siqi Zhou Zhanning Yang Rongrong Zhang Feng Li ... a new type of lunar regolith simulant denoted as BH-2",
+      "note": "Refuted because the wrong document was identified; the category does not change. The BH-2 source is Zhou et al. 2021, Acta Astronautica, not the NEU-1 JOM paper."
+     },
+     {
+      "doc_id": "D270",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "In the local JLU-H ScienceDirect page, BH-2 appears only in the 'Cited by' excerpt. Crossref for 10.1016/j.conbuildmat.2024.137553: journal-article, Construction and Building Materials 442, by Shichalin, Belov, Buravlev et al.",
+      "evidence_quote": "Additive manufacturing development of construction materials for a lunar base via spark plasma sintering of volcanic rocks using in-situ resource utilization concept 2024, Construction and Building Materials Citation Excerpt : ... Notable among these imitators are: HUST-1, LHS-1 and LMS-1, NU-LHT-2 M, BHLD1000, BH-2, JLU-H",
+      "note": "Identified correctly. The authors, missing from the classifier's entry, are Shichalin et al."
+     },
+     {
+      "doc_id": "D271",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Crossref for 10.1016/j.conbuildmat.2022.126655; the local copy is saved Crossref metadata",
+      "evidence_quote": "journal-article | Sintering of HUST-1 lunar regolith simulant | Construction and Building Materials | Elsevier BV | 324 126655",
+      "note": ""
+     },
+     {
+      "doc_id": "D272",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Crossref for 10.1016/j.ijmst.2024.06.004; the local copy is saved Semantic Scholar metadata with the same DOI",
+      "evidence_quote": "journal-article | Physical, mechanical and thermal properties of vacuum sintered HUST-1 ... | International Journal of Mining Science and Technology | Elsevier BV | 34 9 1243-1257",
+      "note": ""
+     },
+     {
+      "doc_id": "D273",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Same local file and excerpt as D270; the HUST-1 mention is in the same citation excerpt. Crossref for 10.1016/j.conbuildmat.2024.137553: journal-article, Construction and Building Materials.",
+      "evidence_quote": "2024, Construction and Building Materials Citation Excerpt : ... Notable among these imitators are: HUST-1, LHS-1 and LMS-1 ...",
+      "note": "Duplicate source of D270, identified correctly."
+     },
+     {
+      "doc_id": "D274",
+      "verdict": "REFUTED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "The page is Kim et al. 2021 (KLS-1, Ceramics International), but HUST-1 appears only once, as the title of a citing article in the 'Cited by' list: Han, Zhou, Dang, Zhou & Ding. Crossref for 10.1016/j.asr.2023.11.027: journal-article, Advances in Space Research, 2024.",
+      "evidence_quote": "Cited by (69) ... Spark plasma sintering of HUST-1 lunar regolith simulant and its thermal shock resistance properties 2024, Advances in Space Research Show abstract",
+      "note": "Refuted because the wrong document was identified; the category does not change. The HUST-1 source is Han et al. 2024, Adv. Space Res., and only as a title."
+     },
+     {
+      "doc_id": "D275",
+      "verdict": "REFUTED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "The page is Jiang et al. 2012 (TJ-1), but IRSM-1 appears only in the abstract of the citing item by Zhou, Chen, Tian, Wu et al. (Sep 2024). Crossref for 10.3390/ma17194789: journal-article, Materials (MDPI).",
+      "evidence_quote": "Calibration of Discrete Element Method Parameters for a High-Fidelity Lunar Regolith Simulant Considering the Effects of Realistic Particle Shape Article Full-text available Sep 2024 Ningxi Zhou ... this paper utilized the high-fidelity IRSM-1 lunar regolith simulant",
+      "note": "Refuted because the wrong document was identified; the category does not change. The IRSM-1 source is Zhou et al. 2024, Materials 17:4789, not Jiang et al. 2012."
+     },
+     {
+      "doc_id": "D276",
+      "verdict": "REFUTED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "The page is Jiang et al. 2012 (TJ-1). The introduction snippet naming QH-E comes just before the Zhou et al. 2024 citing item (Crossref 10.3390/ma17194789, journal-article, Materials). QH-E's only other appearance on the page is in the title of Li et al. 2019 (IJET, which is D277).",
+      "evidence_quote": "several dozen simulants have been developed [8,9], including MLS-1 [10], JSC-1 [11], and GRC-1 [12] from the United States; CAS-1 [13], TJ-1 [14] , QH-E [15], and CUMT-1 [7] from China ... Calibration of Discrete Element Method Parameters for a High-Fidelity Lunar Regolith Simulant ... Sep 2024 Ningxi Zhou",
+      "note": "Refuted because the wrong document was identified. The source is most likely Zhou et al. 2024 (Materials). The alternative, Li et al. 2019 IJET, is also a journal article, so the category holds either way."
+     },
+     {
+      "doc_id": "D277",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Local PDF page 1 header. Crossref for 10.7763/ijet.2019.v11.1148: journal-article, IACSIT Press, pp. 208-211. The journal homepage ijetch.org states that it reviews submissions.",
+      "evidence_quote": "International Journal of Engineering and Technology, Vol. 11, No. 3, June 2019  |  ijetch.org: \"All submitted articles should report original, previously unpublished research results, experimental or theoretical, and will be peer-reviewed.\"",
+      "note": "The journal says it reviews submissions, but IACSIT Press is a low-profile publisher with a questionable reputation. The owner may want to judge it."
+     },
+     {
+      "doc_id": "D278",
+      "verdict": "CONFIRMED",
+      "correct_category": "conference_abstract",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF page 1: a one-page congress abstract",
+      "evidence_quote": "8th Spanish Congress of Planetary Sciences and Solar System Exploration FROM LA PALMA TO SPACE: GREEN MOON PROJECT’S EXPERIMENT ON LUNAR SOIL SIMULANT (LUSIC-1) ... Alberquilla Fernando",
+      "note": ""
+     },
+     {
+      "doc_id": "D279",
+      "verdict": "CONFIRMED",
+      "correct_category": "journal_article",
+      "correct_peer_reviewed": "yes",
+      "evidence": "Local PDF page 1. Crossref for 10.15632/jtam-pl.56.1.137: journal-article, Journal of Theoretical and Applied Mechanics, Polish Society of Theoretical and Applied Mechanics.",
+      "evidence_quote": "JOURNAL OF THEORETICAL AND APPLIED MECHANICS 56, 1, pp. 137-146, Warsaw 2018 DOI: 10.15632/jtam-pl.56.1.137",
+      "note": ""
+     },
+     {
+      "doc_id": "D280",
+      "verdict": "CONFIRMED",
+      "correct_category": "website_other",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local PDF page 1: a congress information dossier and summary, not a scientific paper",
+      "evidence_quote": "DOSSIER INFORMATIVO OCTAVO CONGRESO DE CIENCIAS PLANETARIAS Y EXPLORACIÓN DEL SISTEMA SOLAR (CPESS-8) UNIVERSIDAD DE MÁLAGA ... 25 AL 29 DE MAYO DE 2025 SUMMARY ... Attendees: 175 Communications: 128",
+      "note": "The dossier gives 25–29 May 2025; the entry title says 26–30 May. No values cite it. website_other is the closest category; there is nothing here to review."
+     },
+     {
+      "doc_id": "D281",
+      "verdict": "CONFIRMED",
+      "correct_category": "conference_abstract",
+      "correct_peer_reviewed": "no",
+      "evidence": "Local saved Copernicus meeting-organizer page. Crossref for 10.5194/egusphere-egu26-19748: type posted-content, Copernicus.",
+      "evidence_quote": "Abstract EGU26-19748 Vienna, Austria & Online | 3–8 May 2026 ... First seismic in-situ characterization of regolith simulants in LUNA Brigitte Knapmeyer-Endrun DLR",
+      "note": "EGU abstract, not reviewed."
+     }
+    ],
+    "notes": "1. Your question was about the Gasteiner comparison; this run did something else. You asked \"what's the gasteiner comparison to our database?\" The workflow task was to check the document classifications for D229 to D281, which does not answer that. I did the checks and did not do the Gasteiner analysis. The comparison already exists in two places:\n- The memory note gasteiner-dataset.md: all 24 of Gasteiner's simulants are in DIRT, and 15 of their 66 simulant values are numbers DIRT holds but hides as unsourced; their CSV names a source paper for each.\n- The file /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/lrs-dashboard/documentation/gasteiner-trace-2026-09-25.json: 9 simulant entries, each with our stored value, Gasteiner's value and Gasteiner's source.\nIn the first entry I looked at, LSS-ISAC-1 bulk density disagrees: 1.065 g/cm³ stored against 1.52 g/cm³ in Gasteiner. The earlier classifier's Gasteiner summary matches the memory note, but I did not check it against the dataset.\n\n2. Result of the checks: 43 confirmed, 10 refuted, 0 uncertain. Two refutations change whether values count as reviewed:\n- D256: the classifier said preprint. It is a published journal article in Icarus 411:115943 (same title and all 7 authors in Crossref). The file on disk is the authors' arXiv copy.\n- D260 (6 values cite it): the classifier said journal article (Jiang 2012). The text actually comes from a ResearchGate snippet of the August 2024 preprint of Azami et al.'s review. A reviewed version was later published in Progress in Aerospace Sciences 150:101045, but the text on file is the preprint's.\n\n3. The other 8 refutations are wrongly identified documents; the category stays journal article, reviewed. On these ResearchGate and ScienceDirect pages, the simulant text comes from another paper listed on the page, not the page's own paper:\n- D239 and D240: Teng et al. 2025, Acta Geotechnica.\n- D246: Dewoolkar et al. 2018, J. Aerospace Eng.\n- D247: He et al. 2013, J. Aerospace Eng.\n- D269: Zhou et al. 2021, Acta Astronautica.\n- D274: Han et al. 2024, Adv. Space Res. (title only).\n- D275 and D276: Zhou et al. 2024, Materials.\nFor source tracing, these entries should cite those papers.\n\n4. Other corrections:\n- D233: local copies do exist (Sources/datasheets/Hispansion/TLH-0_TDS_v1.4.pdf and TLM-0_TDS_v2.2.pdf); the classifier said there were none.\n- D229: the live URL returns a 301 redirect to www.hombomtoys.com. I did not check the classifier's claim that it is a gambling site.\n- D277: the journal states it reviews submissions, but its publisher (IACSIT Press) is low-profile, so you may want to look at it.\n\n5. Duplicate files, confirmed byte-identical: D250 = D251, D252 = D265, D254 = D266, D255 = D259.\n\n6. None of the documents contained instructions or text trying to redirect the task.\n\n7. Method: first pages of the local copies in /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources, Crossref by DOI and title, the arXiv API, the Wayback Machine, and web searches for D236 and D277. I copied the files to the scratchpad first because Python would not read the SSD directly. No data was changed."
+   }
+  }
+ ]
+}

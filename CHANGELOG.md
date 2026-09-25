@@ -5,6 +5,21 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.23 — 2026-09-25 (staging)
+
+Fixes from the second design review (documentation/ui-ux-review-2-2026-09-26.md).
+
+- A lunar sample is suggested and listed for comparison only when it shows at least one cited
+  oxide or mineral. BH-1 showed an Apollo 16 column of dashes while the selector said "No
+  reference comparison" (60501's values are all hidden until a source confirms them).
+- The Figures of Merit table fits the pane: the scale note sits under the score, and long
+  "against" texts wrap. Scores and their marks were cut off.
+- Every simulant value in the lunar comparison carries its [n]; the phone list shows each
+  value's reference number.
+- The comparison shows one row per component whatever its case ("Glass-rich basalt" and
+  "Glass-rich Basalt" were two rows, as were plagioclase, pyroxene and quartz).
+- Crash scenarios for each; each was run against v2.9.22 and fails there.
+
 ## v2.9.22 — 2026-09-25 (staging)
 
 No Wikipedia, and only papers or agency records on the Moon; the loading screen and the Find pane carry the sponsor again; the 2D map shows its pins.

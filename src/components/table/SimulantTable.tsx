@@ -127,8 +127,16 @@ export function SimulantTable({
       <ul className="sm:hidden divide-y divide-slate-800">
         {sorted.map(s => {
           const isSelected = s.simulant_id === selectedSimulantId;
-          const key = [['ρ', s.bulk_density, 'g/cm³'], ['D50', s.particle_size_d50, 'µm'], ['φ', s.friction_angle, '°']]
-            .filter(([, v]) => v != null && v !== '').map(([l, v, u]) => `${l} ${v} ${u}`).join(' · ');
+          // each value with its reference number; plain text here (the row is one button), and
+          // tapping the row opens the pane, where the marks show the document and the quote
+          const key = ([['ρ', 'bulk_density', 'g/cm³'], ['D50', 'particle_size_d50', 'µm'], ['φ', 'friction_angle', '°']] as const)
+            .filter(([, f]) => s[f] != null && s[f] !== '')
+            .map(([l, f, u]) => {
+              const src = propertySourcesBySimulant?.get(s.simulant_id)?.get(f);
+              const n = src ? refNumber?.(s.simulant_id, src.reference_id) : undefined;
+              return <React.Fragment key={f}>{l} {String(s[f])} {u}{n != null && <sup className="ml-0.5 text-[9px] text-amber-400/90">[{n}]</sup>}</React.Fragment>;
+            })
+            .reduce<React.ReactNode[]>((acc, el, i) => (i ? [...acc, ' · ', el] : [el]), []);
           return (
             <li key={s.simulant_id} className={cn("flex items-center gap-3 px-3 py-2.5", isSelected && "bg-emerald-950")}>
               <input type="checkbox" checked={compare.has(s.simulant_id)} onChange={() => onToggleCompare(s.simulant_id)}
@@ -136,7 +144,7 @@ export function SimulantTable({
               <button onClick={() => onSelectSimulant(s.simulant_id)} className="flex-1 min-w-0 text-left">
                 <span className={cn("block text-sm font-medium", isSelected ? "text-emerald-400" : "text-slate-200")}>{s.name}</span>
                 <span className="block text-xs text-slate-400 truncate">{[s.type, getCountryDisplay(s.country_code)].filter(Boolean).join(' · ') || DASH}</span>
-                {key && <span className="block text-xs text-slate-300 font-mono truncate">{key}</span>}
+                {key.length > 0 && <span className="block text-xs text-slate-300 font-mono truncate">{key}</span>}
               </button>
               <span className="text-[11px] text-slate-400 whitespace-nowrap">
                 {chemicalBySimulant.has(s.simulant_id) ? 'Chem ' : ''}{compositionBySimulant.has(s.simulant_id) ? 'Min' : ''}

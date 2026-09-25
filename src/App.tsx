@@ -11,7 +11,7 @@ import type { GlobeViewHandle, ClusterPoint } from './components/map/GlobeView';
 import type { Simulant } from './types';
 
 import { ErrorBoundary } from './components/ui/ErrorBoundary';
-import { suggestedLunarMission } from './utils/lunarRef';
+import { suggestedLunarMission, hasLunarValues } from './utils/lunarRef';
 import { readUrlState, writeUrlState, filtersForUrl, type UrlState } from './hooks/useUrlState';
 import { LoadingScreen } from './components/controls/LoadingScreen';
 import { LegendWidget } from './components/controls/LegendWidget';
@@ -149,7 +149,8 @@ export default function App() {
   // names (a suggestion, labelled as such in the panel).
   const lunarRefPicked = !!selectedSimulant && panelState.lunarRefPick?.simulantId === selectedSimulant.simulant_id;
   const lunarRefMission = lunarRefPicked ? panelState.lunarRefPick!.mission : suggestedLunarMission(selectedSimulant?.lunar_sample_reference);
-  const selectedLunarRef = useMemo(() => lunarReference.find(r => r.mission === lunarRefMission) || null, [lunarReference, lunarRefMission]);
+  const comparableLunar = useMemo(() => lunarReference.filter(hasLunarValues), [lunarReference]);
+  const selectedLunarRef = useMemo(() => comparableLunar.find(r => r.mission === lunarRefMission) || null, [comparableLunar, lunarRefMission]);
 
   // Globe altitude state for zoom-reactive clustering
   const [globeAltitude, setGlobeAltitude] = useState(2.5);
@@ -487,7 +488,7 @@ export default function App() {
             references={referencesBySimulant.get(selectedSimulant.simulant_id) || []}
             mineralGroups={mineralGroupsBySimulant.get(selectedSimulant.simulant_id) || []}
             extra={extraBySimulant.get(selectedSimulant.simulant_id)}
-            lunarReferences={lunarReference}
+            lunarReferences={comparableLunar}
             lunarCitationsFor={lunarCitationsFor}
             physicalProperties={physicalPropsBySimulant.get(selectedSimulant.simulant_id)}
             propertySources={propertySourcesBySimulant.get(selectedSimulant.simulant_id)}
@@ -533,6 +534,7 @@ export default function App() {
               mineralGroups={mineralGroupsBySimulant.get(selectedSimulant.simulant_id) || []}
               lunarRef={selectedLunarRef}
               lunarCitations={lunarCitationsFor(selectedLunarRef.sample_id)}
+              references={referencesBySimulant.get(selectedSimulant.simulant_id) || []}
               onClose={() => panelState.setShowCrossComparison(false)}
             />
           </Suspense>

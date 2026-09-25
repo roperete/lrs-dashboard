@@ -15,3 +15,9 @@ export function suggestedLunarMission(ref: string | null | undefined): string | 
   if (lower.includes("chang'e") || lower.includes('change') || lower.includes('ce5') || lower.includes('ce-5')) return "Chang'e-5";
   return null;
 }
+
+/** A lunar sample can be compared only when it shows at least one cited oxide or mineral: one
+ *  whose values are all hidden (not traced to a source) would give a column of dashes. */
+export function hasLunarValues(r: { chemical_composition?: Record<string, number> | null; mineral_composition?: Record<string, number> | null }): boolean {
+  return Object.keys(r.chemical_composition ?? {}).length > 0 || Object.keys(r.mineral_composition ?? {}).length > 0;
+}

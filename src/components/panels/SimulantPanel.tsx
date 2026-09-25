@@ -52,7 +52,8 @@ export function SimulantPanel({
 }: SimulantPanelProps) {
   const lunarRef = lunarReferences.find(r => r.mission === selectedLunarRefMission) || null;
   const lunarCites = lunarRef && lunarCitationsFor ? lunarCitationsFor(lunarRef.sample_id) : EMPTY_CITATIONS;
-  const missionsWithChem = lunarReferences.filter(r => r.chemical_composition && Object.keys(r.chemical_composition).length > 0);
+  // App passes only samples with shown values (utils/lunarRef hasLunarValues)
+  const missionsWithChem = lunarReferences;
 
   useEffect(() => {
     if (!focusSection) return;
@@ -128,7 +129,7 @@ export function SimulantPanel({
                 <span className="text-xs font-bold text-amber-400">Compare with a lunar sample</span>
               </div>
               <select
-                value={selectedLunarRefMission || ''}
+                value={lunarRef?.mission ?? ''}
                 onChange={(e) => onSelectLunarRef(e.target.value || null)}
                 className="w-full bg-slate-800 border border-slate-700 rounded-lg py-1.5 px-3 text-xs text-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500/50"
               >
