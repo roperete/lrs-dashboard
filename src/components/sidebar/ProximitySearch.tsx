@@ -21,7 +21,7 @@ export function ProximitySearch({
           <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Proximity Search</span>
         </div>
         {proximityCenter && (
-          <button onClick={onClearCenter} className="text-slate-500 hover:text-white"><X size={14} /></button>
+          <button onClick={onClearCenter} className="text-slate-400 hover:text-white"><X size={14} /></button>
         )}
       </div>
       {!proximityCenter ? (
@@ -31,7 +31,7 @@ export function ProximitySearch({
         </button>
       ) : (
         <div className="space-y-2">
-          <div className="flex items-center justify-between text-[10px] text-slate-500">
+          <div className="flex items-center justify-between text-[10px] text-slate-400">
             <span>Radius: {proximityRadius} km</span>
           </div>
           <input type="range" min="100" max="10000" step="100" value={proximityRadius}

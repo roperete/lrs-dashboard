@@ -9,7 +9,7 @@ export function LegendWidget({ planet, sidebarOpen }: LegendWidgetProps) {
   return (
     <div className={`absolute bottom-6 z-[30] pointer-events-none transition-[left] duration-300 ${sidebarOpen ? 'left-[21rem]' : 'left-6'}`}>
       <div className="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-4 rounded-xl pointer-events-auto">
-        <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">
+        <h4 className="text-xs font-semibold text-slate-300 mb-3">
           {planet === 'earth' ? 'Map Legend' : 'Lunar Missions'}
         </h4>
         <div className="space-y-2">
@@ -17,7 +17,8 @@ export function LegendWidget({ planet, sidebarOpen }: LegendWidgetProps) {
             <>
               <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#d4915c] shadow-[0_0_8px_rgba(212,145,92,0.5)]" /><span className="text-xs text-slate-300">Mare Simulant</span></div>
               <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#94a8be] shadow-[0_0_8px_rgba(148,168,190,0.5)]" /><span className="text-xs text-slate-300">Highlands Simulant</span></div>
-              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#9b8e82] shadow-[0_0_8px_rgba(155,142,130,0.4)]" /><span className="text-xs text-slate-300">General Simulant</span></div>
+              <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#9b8e82] shadow-[0_0_8px_rgba(155,142,130,0.4)]" /><span className="text-xs text-slate-300">General, and other types</span></div>
+              <p className="text-[11px] text-slate-400 max-w-[190px] pt-1">Dust, icy, mechanical and speciality simulants use the General colour. A pin is where the producer is, or where its rock comes from.</p>
             </>
           ) : (
             <>

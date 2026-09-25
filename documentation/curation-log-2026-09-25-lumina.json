@@ -1,0 +1,42 @@
+[
+  {
+    "simulant_id": "S161",
+    "field": "particle_size_mean_um",
+    "was": 2400.0,
+    "source": [
+      "RN-S161-1",
+      "Three-dimensional particle shape analysis was carried out by NGI on the Lumina 2000 sample. Figure 2 shows summary plots of the morphological characteristics of the grains. The average particle size is 2.4 mm"
+    ],
+    "why": "2.4 mm exceeds the 0–2000 µm range the same paper gives for the product (Table 1)",
+    "action": "omitted: the documents contradict it"
+  },
+  {
+    "simulant_id": "S159",
+    "field": "particle_morphology",
+    "was": "average sphericity (VisiSize, 2D, Vulcan Facility) = 0.46",
+    "now": "average sphericity 0.46 (VisiSize image analysis)",
+    "quote_was": null,
+    "action": "restated in its quote's own numbers"
+  },
+  {
+    "simulant_id": "S160",
+    "field": "particle_morphology",
+    "was": "average sphericity (VisiSize, 2D, Vulcan Facility) = 0.47",
+    "now": "average sphericity 0.47 (VisiSize image analysis)",
+    "quote_was": null,
+    "action": "restated in its quote's own numbers"
+  },
+  {
+    "simulant_id": "S161",
+    "field": "particle_morphology",
+    "was": "3D µCT morphology (NGI, Lumina2000 sample only): average volume 73 mm3; average volume-to-surface ratio ca. 14; average angularity 0.41; average aspect ratio 2.14; average sphericity 0.55",
+    "now": "average angularity 0.41; average aspect ratio 2.14; average sphericity 0.55 (X-ray µCT, NGI)",
+    "quote_was": "the average volume is 73 mm3, the average volume to surface ratio is ca. 14, while the average angularity is 0.41. The average aspect ratio is 2.14, and the average sphericity is 0.55.",
+    "action": "restated in its quote's own numbers"
+  },
+  {
+    "simulant_id": "S160",
+    "reference_id": "RN-S160-2",
+    "action": "reference added: names the product"
+  }
+]

@@ -1,40 +1,65 @@
-import React from 'react';
-import { X, Pin, Search, Download, ArrowRightLeft } from 'lucide-react';
-import { motion } from 'motion/react';
+import React, { useEffect, useRef, useState } from 'react';
+import { X, Search, Download, ArrowRightLeft } from 'lucide-react';
+import { motion, useDragControls } from 'motion/react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { DragGrip, dragToClose } from './DragToClose';
+import { ErrorBoundary } from './ErrorBoundary';
 
 function cn(...inputs: any[]) { return twMerge(clsx(inputs)); }
+
+/** Wider than a phone: the panel sits on the right; below this it is a bottom sheet. */
+function useIsSideSheet() {
+  const query = '(min-width: 640px)';
+  const [side, setSide] = useState(() => typeof window === 'undefined' || window.matchMedia(query).matches);
+  useEffect(() => {
+    const m = window.matchMedia(query);
+    const on = () => setSide(m.matches);
+    m.addEventListener('change', on);
+    return () => m.removeEventListener('change', on);
+  }, []);
+  return side;
+}
 
 interface PanelShellProps {
   title: string;
   subtitle?: string;
-  pinned?: boolean;
   onClose: () => void;
-  onTogglePin?: () => void;
   onSearchSources?: () => void;
   onDownload?: () => void;
   onCompare?: () => void;
   compareActive?: boolean;
   accentColor?: string;
+  /** One line under the subtitle. */
+  headerNote?: React.ReactNode;
+  /** Changes when the pane shows another simulant or site: it then starts at the top. */
+  scrollKey?: string;
   children: React.ReactNode;
 }
 
 export function PanelShell({
-  title, subtitle, pinned, onClose, onTogglePin, onSearchSources, onDownload,
-  onCompare, compareActive, accentColor = 'text-emerald-400', children,
+  title, subtitle, onClose, onSearchSources, onDownload,
+  onCompare, compareActive, accentColor = 'text-emerald-400', headerNote, scrollKey, children,
 }: PanelShellProps) {
+  const side = useIsSideSheet();
+  const scroller = useRef<HTMLDivElement>(null);
+  useEffect(() => { if (scroller.current) scroller.current.scrollTop = 0; }, [scrollKey]);
+  const drag = useDragControls();
+  const hidden = side ? { x: '100%', y: 0 } : { x: 0, y: '100%' };
   return (
     <motion.div
-      initial={{ x: '100%', y: 0 }} animate={{ x: 0, y: 0 }} exit={{ x: '100%', y: 0 }}
+      initial={hidden} animate={{ x: 0, y: 0 }} exit={hidden}
       transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-      className="fixed right-0 bottom-0 h-[70vh] w-full sm:top-0 sm:bottom-auto sm:h-full sm:w-[450px] bg-slate-900/95 backdrop-blur-xl border-l border-t sm:border-t-0 border-slate-800 z-[1000] overflow-y-auto shadow-2xl rounded-t-2xl sm:rounded-none"
+      {...dragToClose(side ? 'right' : 'down', drag, onClose)}
+      className="fixed right-0 bottom-0 h-[70vh] w-full sm:top-14 sm:bottom-0 sm:h-auto sm:w-[450px] bg-slate-900/95 backdrop-blur-xl border-l border-t sm:border-t-0 border-slate-800 z-[1000] shadow-2xl rounded-t-2xl sm:rounded-none"
     >
-      <div className="p-6">
+      <DragGrip direction={side ? 'right' : 'down'} controls={drag} onClose={onClose} />
+      <div ref={scroller} className="h-full overflow-y-auto overflow-x-hidden p-6">
         <div className="flex justify-between items-start mb-6">
           <div className="flex-1 min-w-0">
             <h2 className={cn("text-2xl font-bold tracking-tight truncate", accentColor)}>{title}</h2>
-            {subtitle && <p className="text-slate-400 font-mono text-sm uppercase tracking-widest">{subtitle}</p>}
+            {subtitle && <p className="text-slate-400 text-sm">{subtitle}</p>}
+            {headerNote}
           </div>
           <div className="flex items-center gap-1 ml-2">
             {onSearchSources && (
@@ -51,16 +76,8 @@ export function PanelShell({
               <button onClick={onCompare}
                 className={cn("p-2 rounded-full transition-colors",
                   compareActive ? "bg-blue-500 text-white" : "hover:bg-slate-800 text-slate-400 hover:text-white")}
-                title="Compare">
+                title={compareActive ? "In the compare tray (click to remove)" : "Add to compare"} aria-label={compareActive ? "Remove from the compare tray" : "Add to compare"} aria-pressed={compareActive}>
                 <ArrowRightLeft size={16} />
-              </button>
-            )}
-            {onTogglePin && (
-              <button onClick={onTogglePin}
-                className={cn("p-2 rounded-full transition-colors",
-                  pinned ? "bg-emerald-500/20 text-emerald-400" : "hover:bg-slate-800 text-slate-400 hover:text-white")}
-                title={pinned ? "Unpin" : "Pin"}>
-                <Pin size={16} />
               </button>
             )}
             <button onClick={onClose} className="p-2 hover:bg-slate-800 rounded-full transition-colors text-slate-400 hover:text-white">
@@ -68,7 +85,8 @@ export function PanelShell({
             </button>
           </div>
         </div>
-        {children}
+        {/* inside the shell, so a failing section leaves the close button working */}
+        <ErrorBoundary scope="this panel" compact key={title}>{children}</ErrorBoundary>
       </div>
     </motion.div>
   );

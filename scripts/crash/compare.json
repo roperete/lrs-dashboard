@@ -1,0 +1,59 @@
+[
+ {
+  "click": "Table"
+ },
+ {
+  "eval": "(() => { const boxes = [...document.querySelectorAll('tbody tr[data-row] input[type=checkbox]')].slice(0, 5); boxes.forEach(b => b.click()); return boxes.length; })()",
+  "as": "ticked5"
+ },
+ {
+  "eval": "document.querySelector('[aria-label=\"Compare tray\"]')?.innerText.includes('Compare 4')",
+  "as": "cappedAt4"
+ },
+ {
+  "eval": "(() => { const b = [...document.querySelectorAll('[aria-label=\"Compare tray\"] button')].find(b => /^Compare/.test(b.innerText.trim())); b?.click(); return !!b; })()",
+  "as": "compareOpened"
+ },
+ {
+  "wait": 1500
+ },
+ {
+  "click": "Chart"
+ },
+ {
+  "wait": 800
+ },
+ {
+  "click": "Table"
+ },
+ {
+  "key": "Escape"
+ },
+ {
+  "click": "Clear"
+ },
+ {
+  "key": "Escape"
+ },
+ {
+  "wait": 600
+ },
+ {
+  "eval": "(() => { history.pushState({}, '', '?view=table&cmp=S028,S036'); dispatchEvent(new PopStateEvent('popstate')); return true; })()",
+  "as": "tray_JSC1A_LHS1"
+ },
+ {
+  "wait": 1200
+ },
+ {
+  "eval": "(() => { const b = [...document.querySelectorAll('[aria-label=\"Compare tray\"] button')].find(b => /^Compare/.test(b.innerText.trim())); b?.click(); return !!b; })()",
+  "as": "compareOpened2"
+ },
+ {
+  "wait": 1800
+ },
+ {
+  "expect": "[...document.querySelectorAll('tr')].filter(tr => /^glass-rich basalt/i.test((tr.children[0]?.textContent || '').trim())).length === 1",
+  "why": "one row per component whatever its case (JSC-1A 'Glass-rich basalt', LHS-1 'Glass-rich Basalt' were two rows)"
+ }
+]

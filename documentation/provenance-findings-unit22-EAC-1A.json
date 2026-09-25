@@ -1,0 +1,598 @@
+{
+ "groups": [
+  {
+   "group_key": "EAC-1A",
+   "extraction": {
+    "group_key": "EAC-1A",
+    "results": [
+     {
+      "simulant_id": "S018",
+      "name": "EAC-1A",
+      "references": [
+       {
+        "reference_id": "R018",
+        "opened": true,
+        "names_simulant": true,
+        "mention_quote": "The grain size distribution of EAC-1A was analysed and compared to the bulk range of the lunar regolith grain size distribution (Fig. 1)13.",
+        "location": "p.2, Results, 'Grain size distribution' (title p.1: 'EAC-1A: A novel large-volume lunar regolith simulant'). Opened from local copy papers/Engelschion_etal_2020_EAC-1A_novel_large-volume_lunar_regolith_simulant_SciRep_10-5473.pdf (byte-identical copies at papers/LRS/Engelschi\u00f8n et al. - 2020 - EAC-1A A novel large-volume lunar regolith simula.pdf and papers/LRS/DIRT project/files/1665/\u2026, md5 2d9bed59b83ae57c93f8fe516254ee12); header carries the same DOI 10.1038/s41598-020-62312-4, so the DOI was not fetched online."
+       },
+       {
+        "reference_id": "R098",
+        "opened": true,
+        "names_simulant": true,
+        "mention_quote": "The cohesion of EAC-1A at a density of 1.95 g/cm3 was estimated to be 0.38 kPa, however, it was not possible to establish the relationship between density and cohesion.",
+        "location": "p.3, Results, 'Cohesion'. Same document as R018 (identical DOI 10.1038/s41598-020-62312-4); opened from the same local copies. R098 is a duplicate reference record of R018."
+       }
+      ],
+      "new_references": [
+       {
+        "temp_id": "NEW1",
+        "title": "Material aspects of sintering of EAC-1A lunar regolith simulant",
+        "authors": "Gin\u00e9s-Palomares, J.-C.; Fateri, M.; Schubert, T.; de Peindray d'Ambelle, L.; Simon, S.; Gluth, G. J. G.; G\u00fcnster, J.; Zocca, A.",
+        "year": 2023,
+        "doi": "10.1038/s41598-023-50391-y",
+        "url": "https://doi.org/10.1038/s41598-023-50391-y",
+        "local_path": "papers/LRS/s41598-023-50391-y.pdf",
+        "kind": "composition",
+        "mention_quote": "The objective of this study is to characterize and investigate the sintering behavior of EAC-1A lunar regolith simulant.",
+        "location": "p.1, Abstract (Scientific Reports 13:23053)"
+       },
+       {
+        "temp_id": "NEW2",
+        "title": "Laser melting manufacturing of large elements of lunar regolith simulant for paving on the Moon",
+        "authors": "Gin\u00e9s-Palomares, J.-C.; Fateri, M.; Kalh\u00f6fer, E.; Schubert, T.; Meyer, L.; Kolsch, N.; Brandi\u0107 Lipi\u0144ska, M.; Davenport, R.; Imhof, B.; Waclavicek, R.; Sperl, M.; Makaya, A.; G\u00fcnster, J.",
+        "year": 2023,
+        "doi": "10.1038/s41598-023-42008-1",
+        "url": "https://doi.org/10.1038/s41598-023-42008-1",
+        "local_path": "papers/LRS/DIRT project/files/1667/Gin\u00e9s-Palomares et al. - 2023 - Laser melting manufacturing of large elements of l.pdf",
+        "kind": "usage",
+        "mention_quote": "Material. The lunar regolith simulant EAC-1A is used in this study. In a study carried out by Engelschi\u00f8n et al.31 the mineral content of EAC-1A was a 55% plagioclase, 25% olivine and 10% pyroxene.",
+        "location": "p.8, Methods, 'Material' (Scientific Reports 13:15593)"
+       },
+       {
+        "temp_id": "NEW3",
+        "title": "Electromagnetic Characterization of EAC-1A and JSC-2A Lunar Regolith Simulants",
+        "authors": "Ramos Somolinos, D.; Plaza Gallardo, B.; Cidr\u00e1s Est\u00e9vez, J.; Stepanyan, N.; Cowley, A.; Au\u00f1\u00f3n Marug\u00e1n, A.; Poyatos Mart\u00ednez, D.",
+        "year": 2024,
+        "doi": "10.3390/ma17153633",
+        "url": "https://doi.org/10.3390/ma17153633",
+        "local_path": "papers/LRS/materials-17-03633.pdf",
+        "kind": "usage",
+        "mention_quote": "Before carrying out the measurements, the density of the materials was also estimated, obtaining a density at atmospheric pressure of 1.72 g/cm3 for the EAC-1A simulant and a value of 1.73 g/cm3 for the JSC-2A simulant.",
+        "location": "p.5 of 15, Section 3 'Results and Discussion' (Materials 2024, 17, 3633)"
+       },
+       {
+        "temp_id": "NEW4",
+        "title": "Fungal Biomining of Lunar Regolith simulant EAC-1A",
+        "authors": "Figueira, J. (supervisors M. Cortes\u00e3o, DLR; P. Tamagnini, University of Porto)",
+        "year": 2022,
+        "doi": "",
+        "url": "",
+        "local_path": "papers/LRS/Figueira - Fungal Biomining of Lunar Regolith simulant EAC-1A.pdf",
+        "kind": "usage",
+        "mention_quote": "Particularly, EAC-1A (Figure 3) is expected to be used at the simulant for the new European Lunar Exploration Laboratory (LUNA), being now built as a joint ESA-DLR project at the European Astronaut Centre (EAC) site in Cologne, Germany.",
+        "location": "p.6 (FCUP page numbering), Introduction; MSc internship report, Faculty of Sciences, University of Porto, dated 30/09/2022. Byte-identical copy at papers/LRS/DIRT project/files/1742/Figueira - Fungal Biomining of Lunar Regolith simulant EAC-1A.pdf (md5 1b77c7b2eb14a34f09827bbc84473ebf). Contains no simulant property values (only leachate metal concentrations)."
+       },
+       {
+        "temp_id": "NEW5",
+        "title": "EAC-1A: A novel large-volume lunar regolith simulant \u2013 Supplemental Information (Mineralogy of EAC-1)",
+        "authors": "Engelschi\u00f8n, V. S.; Eriksson, S. R.; Cowley, A.; Fateri, M.; Meurisse, A.; Kueppers, U.; Sperl, M.",
+        "year": 2020,
+        "doi": "10.1038/s41598-020-62312-4",
+        "url": "https://doi.org/10.1038/s41598-020-62312-4",
+        "local_path": "papers/Engelschion_etal_2020_EAC-1A_SciRep_SupplementaryInformation.pdf",
+        "kind": "composition",
+        "mention_quote": "EAC-1A: A novel large-volume lunar regolith simulant",
+        "location": "p.1, title line. All tables inside are labelled EAC-1 (normative mineralogy from bulk chemistry, Supplemental Table 1; thin-section modal volume % of rock samples OP-1/OR-1, Supplemental Tables 2-3; EDX spot analyses, Tables 4-5), not EAC-1A."
+       }
+      ],
+      "values": [
+       {
+        "field": "bulk_density",
+        "stored": "1.95",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "R018 p.3 'Density' states a different bulk density for EAC-1A: 'The bulk density (density of material at optimal packing) of EAC-1A, JSC-1A, JSC-2A, DNA and NU-LHT-3M was measured, resulting in 1.45, 1.56, 1.44, 1.27 and 1.54 g/cm3 respectively.' The stored 1.95 is the sample density at which the cohesion test was run, not the reported bulk density: R018 p.3 'Cohesion': 'The cohesion of EAC-1A at a density of 1.95 g/cm3 was estimated to be 0.38 kPa'. NEW3 p.5 gives yet another figure: 'a density at atmospheric pressure of 1.72 g/cm3 for the EAC-1A simulant'. Human must decide which to store (1.45 g/cm3 is the value the source calls bulk density)."
+       },
+       {
+        "field": "cohesion",
+        "stored": "0.38",
+        "status": "supported",
+        "reference_id": "R018",
+        "location": "p.3, Results, 'Cohesion'",
+        "quote": "The cohesion of EAC-1A at a density of 1.95 g/cm3 was estimated to be 0.38 kPa, how-ever, it was not possible to establish the relationship between density and cohesion.",
+        "note": "Unit kPa. Measured by lowering a plastic plate into a box of EAC-1A, 8 repeats; the Discussion (p.6) calls these 'preliminary measurements'."
+       },
+       {
+        "field": "density_g_cm3",
+        "stored": "2.9",
+        "status": "supported",
+        "reference_id": "R018",
+        "location": "p.3, Results, 'Density'",
+        "quote": "The absolute density measurements (volume measurement excluding pore space) of EAC-1, JSC-1A, JSC-2A, DNA and NU-LHT-3M resulted in 2.90, 2.92, 2.89, 2.79 and 3.08 g/cm3 respectively.",
+        "note": "Gas-pycnometer absolute (grain) density. The sentence labels the sample 'EAC-1' but the next sentence attributes it to EAC-1A: 'As the results have shown, JSC-1A and EAC-1A have the highest bulk and absolute densities among the measured samples.' Per the paper's convention (p.1) 'EAC-1' denotes the material irrespective of grain size."
+       },
+       {
+        "field": "particle_size_d50",
+        "stored": "11.0",
+        "status": "supported",
+        "reference_id": "R018",
+        "location": "p.2, Results, 'Grain size distribution'",
+        "quote": "The grain sizes in EAC-1A span from 14.6 \u03d5 (clay fraction) to \u22121 \u03d5 (very coarse sand), with a median value of 6.47 \u03d5 (~11 \u00b5m).",
+        "note": "Approximate value ('~11 \u00b5m'), laser diffraction (Beckman Coulter LS 13 320). CONFLICT: NEW1 p.2 measured the as-received EAC-1A at 'D(v,0.1) = 22 \u00b5m, D(v,0.5) = 210 \u00b5m and D(v,0.9) = 535 \u00b5m' \u2014 an order of magnitude larger; batch/method differences, curator should be aware."
+       },
+       {
+        "field": "particle_size_distribution",
+        "stored": "d50=181",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "No opened document states a d50 of 181 \u00b5m for EAC-1A. R018 p.2 gives median ~11 \u00b5m (6.47 \u03d5); NEW1 p.2 gives D(v,0.5) = 210 \u00b5m as received (and 694 / 282 / 49 \u00b5m for the >500, 100-500 and <100 \u00b5m sieve fractions). The only '~180' in R018 is not a d50: 'EAC-1A has a slightly lower weight percent of particles between ~180 \u00b5m and 70 \u00b5m than the lower limit of the bulk Apollo lunar regolith samples'. Also checked Zemeny 2024, Gasteiner 2026, Roth 2025, Slabic 2024, Manick 2018, Denevi 2020, LSIC 2022/2024 assessments, Duri 2022, Flahaut 2023: none pairs EAC-1A with 181. Recommend deleting or replacing with a sourced PSD string."
+       },
+       {
+        "field": "glass_content_percent",
+        "stored": "0.0",
+        "status": "supported",
+        "reference_id": "NEW1",
+        "location": "p.10, Discussion (also Table 1 p.4, row 'Glass': '\u2013' for this work)",
+        "quote": "EAC-1A is fully crystallized and contains plagioclase, which our XRD characterization indicated to be Ca-rich (anorthite yielded a better initial fit of the measured XRD patterns than albite);",
+        "note": "Numeric 0.0 is an interpretation of 'fully crystallized' / 'virtually fully crystalline' (NEW1 p.9: 'in our study the material was found to be virtually fully crystalline'); no document prints '0'. R018 p.5 DSC agrees but labels the sample EAC-1: 'EAC-1, NU-LHT-3M and FJS-1 are fully crystallised materials (Fig. 6)'. CONTRADICTION: NEW1 Table 1 reports Schleppi et al. (J. Mater. Sci. 56, 2021) found 14.4% glass in EAC-1A by XRD ('Glass \u2013 14.4'); NEW1 p.9: 'in their XRD analysis a considerable amount of glass (~ 14%) was found in EAC-1A'."
+       },
+       {
+        "field": "release_date",
+        "stored": "2020",
+        "status": "supported",
+        "reference_id": "R018",
+        "location": "p.1 header and p.7 dates line",
+        "quote": "Received: 30 January 2019; Accepted: 19 February 2020;",
+        "note": "2020 is the publication year of the characterisation paper (header 'Scientific Reports | (2020) 10:5473'); no document states a release date. The material predates the paper: R018 p.6 'Currently, EAC-1A is already taken in use for small-scale, low-TRL experiments undertaken by ESA', and it cites 2019 uses of EAC-1 (refs 36-37). Manick et al. 2018 (papers/Manick_etal_2018_LPSC49_abstract_1411\u2026) lists 'EAC-1 Basanite ESA04-A 17DE01, 17DE02, 17DE03' batches at the ESA curation facility \u2014 for EAC-1, not EAC-1A. Curator may prefer 2018/2019 as first availability."
+       },
+       {
+        "field": "availability",
+        "stored": "Available (Research)",
+        "status": "supported",
+        "reference_id": "NEW1",
+        "location": "p.1, Introduction",
+        "quote": "Recently, the European Astronaut Center (EAC) in Germany, has developed EAC-1A which is a mare regolith simulant for use in the European Lunar Exploration Laboratory (LUNA) as a large-quantity material available for lunar research9.",
+        "note": "Categorical label; wording in sources is 'available for lunar research' (NEW1) and 'EAC-1A was selected as lunar regolith simulant due to its availability in large quantities' (NEW2 p.2). R018 p.6: 'The material is also stored and curated by the ESA Sample Analogue Curation facility at ECSAT, UK38.' No formal ESA availability statement was found."
+       },
+       {
+        "field": "lunar_sample_reference",
+        "stored": "Low-Ti Mare",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "'Low-Ti' is stated by no opened document. Sources say 'mare': NEW1 p.1 'EAC-1A which is a mare regolith simulant'; NEW3 p.6 'both EAC-1A and JSC-2A being mare regolith samples'. R018 p.4 compares it to Apollo 17: 'EAC-1A is most similar to the intermediate compositions of the Apollo 17 samples30,31' and gives 'EAC-1 contains 11.9 wt% MgO and 2.4 wt% TiO2 (Fig. 3)'. Apollo 17 mare soils are the high-Ti type, so 'Low-Ti' conflicts with the stated analogue even though the simulant's own TiO2 is low. Suggest 'Mare (Apollo 17-like)' or plain 'Mare'."
+       },
+       {
+        "field": "institution",
+        "stored": "European Astronaut Centre",
+        "status": "supported",
+        "reference_id": "R018",
+        "location": "p.1, Abstract",
+        "quote": "The focus of this project has been to conduct a physical and chemical characterisation of the fine-grained material to be used in LUNA; the European Astronaut Centre lunar regolith simulant 1 (EAC-1 A).",
+        "note": "Also NEW2 p.2: 'EAC-1A (by ESA's European Astronaut Centre)'."
+       }
+      ],
+      "new_values": [
+       {
+        "field": "oxide:SiO2",
+        "value": "43.7",
+        "reference_id": "R018",
+        "location": "p.4, Results, 'XRF'",
+        "quote": "EAC-1 contains 43.7 wt% SiO2 and 4.2 wt% Na2O + K2O, placing it within the lower range of the basanite field of the total alkali-silica (TAS) diagram."
+       },
+       {
+        "field": "oxide:MgO",
+        "value": "11.9",
+        "reference_id": "R018",
+        "location": "p.4, Results, 'XRF'",
+        "quote": "EAC-1 contains 11.9 wt% MgO and 2.4 wt% TiO2 (Fig. 3)."
+       },
+       {
+        "field": "oxide:TiO2",
+        "value": "2.4",
+        "reference_id": "R018",
+        "location": "p.4, Results, 'XRF'",
+        "quote": "EAC-1 contains 11.9 wt% MgO and 2.4 wt% TiO2 (Fig. 3)."
+       },
+       {
+        "field": "oxide:SiO2",
+        "value": "43.7",
+        "reference_id": "NEW1",
+        "location": "p.5, Results, 'X-ray fluorescence analysis'",
+        "quote": "The concentration of SiO2 in our measurements was very close at 43.7%."
+       },
+       {
+        "field": "oxide:TiO2",
+        "value": "2.1",
+        "reference_id": "NEW1",
+        "location": "p.5, Results, 'X-ray fluorescence analysis'",
+        "quote": "The concentration of TiO2 (2.1%) and the sum of Na2O + K2O (2.8% + 1.0%) was also comparable."
+       },
+       {
+        "field": "oxide:Na2O",
+        "value": "2.8",
+        "reference_id": "NEW1",
+        "location": "p.5, Results, 'X-ray fluorescence analysis'",
+        "quote": "The concentration of TiO2 (2.1%) and the sum of Na2O + K2O (2.8% + 1.0%) was also comparable."
+       },
+       {
+        "field": "oxide:K2O",
+        "value": "1.0",
+        "reference_id": "NEW1",
+        "location": "p.5, Results, 'X-ray fluorescence analysis'",
+        "quote": "The concentration of TiO2 (2.1%) and the sum of Na2O + K2O (2.8% + 1.0%) was also comparable."
+       },
+       {
+        "field": "oxide:MgO",
+        "value": "14.3",
+        "reference_id": "NEW1",
+        "location": "p.5, Results, 'X-ray fluorescence analysis'",
+        "quote": "The small difference in MgO (14.3% in our work, 11.9% in10) may be due to variations between batches."
+       },
+       {
+        "field": "oxide:Al2O3",
+        "value": "12.6",
+        "reference_id": "NEW2",
+        "location": "p.8, Methods, 'Material'",
+        "quote": "The chemical composition of EAC-1A consists of SiO2 (43.7%), Al2O3 (12.6%), Fe2O3 (12%), MgO (11.9%) and CaO (10.8%) according to the same research."
+       },
+       {
+        "field": "oxide:Fe2O3",
+        "value": "12",
+        "reference_id": "NEW2",
+        "location": "p.8, Methods, 'Material'",
+        "quote": "The chemical composition of EAC-1A consists of SiO2 (43.7%), Al2O3 (12.6%), Fe2O3 (12%), MgO (11.9%) and CaO (10.8%) according to the same research."
+       },
+       {
+        "field": "oxide:CaO",
+        "value": "10.8",
+        "reference_id": "NEW2",
+        "location": "p.8, Methods, 'Material'",
+        "quote": "The chemical composition of EAC-1A consists of SiO2 (43.7%), Al2O3 (12.6%), Fe2O3 (12%), MgO (11.9%) and CaO (10.8%) according to the same research."
+       },
+       {
+        "field": "mineral:Plagioclase",
+        "value": "28.3",
+        "reference_id": "NEW1",
+        "location": "p.4, Table 1 'Results of the RQPA of EAC-1A' (Abundance %, this work)",
+        "quote": "Plagioclase              (Ca,Na)(Al,Si)4O8                  28.3            27.2b"
+       },
+       {
+        "field": "mineral:Diopside/augite",
+        "value": "28.4",
+        "reference_id": "NEW1",
+        "location": "p.4, Table 1 'Results of the RQPA of EAC-1A' (Abundance %, this work)",
+        "quote": "Diopside/augite          (Ca,Na)(Mg,Fe,Al,Ti)(Si,Al)2O6     28.4            35.5c"
+       },
+       {
+        "field": "mineral:Forsterite",
+        "value": "29.3",
+        "reference_id": "NEW1",
+        "location": "p.4, Table 1 'Results of the RQPA of EAC-1A' (Abundance %, this work)",
+        "quote": "Forsterite               (Mg,Fe)2SiO4                       29.3            13.3"
+       },
+       {
+        "field": "mineral:Biotite",
+        "value": "11.3",
+        "reference_id": "NEW1",
+        "location": "p.4, Table 1 'Results of the RQPA of EAC-1A' (Abundance %, this work)",
+        "quote": "Biotite                  K(Mg,Fe2+,Al)3(Al,Si)4O10(OH,F)2   11.3"
+       },
+       {
+        "field": "mineral:Analcime",
+        "value": "2.9",
+        "reference_id": "NEW1",
+        "location": "p.4, Table 1 'Results of the RQPA of EAC-1A' (Abundance %, this work)",
+        "quote": "Analcime                 NaAlSi2O6\u00b7H2O                      2.9             \u2013"
+       },
+       {
+        "field": "mineral:Ilmenite",
+        "value": "Minor/trace",
+        "reference_id": "NEW1",
+        "location": "p.4, Table 1 'Results of the RQPA of EAC-1A' (Abundance %, this work)",
+        "quote": "Ilmenite                 FeTiO3                             Minor/trace     2.0e"
+       }
+      ],
+      "unavailable_documents": [],
+      "notes": "(1) R018 and R098 are the same paper (identical DOI 10.1038/s41598-020-62312-4); merge them and set local_path to papers/Engelschion_etal_2020_EAC-1A_novel_large-volume_lunar_regolith_simulant_SciRep_10-5473.pdf (two further byte-identical copies under papers/LRS/). (2) EXACT-PRODUCT CAVEAT: Engelschi\u00f8n 2020 labels grain-size-independent results (XRF chemistry, XRD, thin sections, DSC, absolute density) 'EAC-1' = the K\u00f6nigswinter basanite host material, and only grain-size-dependent physical tests 'EAC-1A' (p.1: 'For non-grainsize dependent tests where samples of the K\u00f6nigswinter basanite rock specimens have been used, these are simply labelled as EAC-1. This does not refer to a specific grain size, but to the material itself.'). The R018 oxide values in new_values therefore carry an 'EAC-1' label in the source; a curator must decide whether host-rock chemistry may be stored for EAC-1A. NEW1 values are measured directly on as-received EAC-1A. (3) NEW2's Al2O3 12.6 / Fe2O3 12 / CaO 10.8 are attributed to Engelschi\u00f8n et al. but do NOT appear in the Engelschi\u00f8n text or figure captions I read (only SiO2, MgO, TiO2, Na2O+K2O are printed; Figs 3-5 are scatter/ternary plots without tables) \u2014 treat as second-hand until the original source of those three numbers is found. (4) bulk_density: the stored 1.95 is a cohesion-test density; the paper's bulk density is 1.45 g/cm3; NEW3 reports 1.72 g/cm3 at atmospheric pressure. Zemeny et al. 2024 (papers/Zemeny_etal_2024_Luna_Analog_Facility_testbeds_EAC-1_FrontSpaceTech_1510635.pdf) reports loose/tapped bulk densities 1.46-1.99 g/cm3 and dry unit weights 1.5-2.2 g/cm3, but for 'EAC-1' (the coarse LUNA testbed material) \u2014 a different product; it names EAC-1A only in its bibliography, so it was not added as a reference. (5) d50: R018 ~11 \u00b5m vs NEW1 210 \u00b5m as received \u2014 order-of-magnitude disagreement between sources; 'd50=181' has no source. (6) Glass: R018 and NEW1 find fully crystalline; Schleppi et al. 2021 (J. Mater. Sci. 56, 12132, not in library) found ~14.4% glass per NEW1 Table 1. (7) 'Low-Ti Mare' is not stated anywhere; sources say 'mare' and 'comparable to Apollo 17'. (8) R018 abstract lists 'static angle of repose' among tests but no angle-of-repose value appears anywhere in the paper text; angle_of_repose cannot be sourced from it. (9) Other EAC-1A values seen but with no matching column: water content ~0.8 wt% (R018 p.2), 1.21% Karl-Fischer (NEW1 p.3), 1.2% (NEW2 p.7), ~1% mass loss on drying (NEW3 p.10); sphericity 0.601 / 0.591 for the 0.2-0.5 / 0.5-1 mm EAC-1 fractions (R018 p.3); melting endotherm ~1160 \u00b0C (NEW1 p.4); relative permittivity \u03b5\u2032 = 3.61 at 9.375 GHz at 1.72 g/cm3 (NEW3 p.8). NEW1 also reports the mineral abundances of Schleppi et al. for EAC-1A (plagioclase+K-feldspar 27.2, pyroxenes 35.5, forsterite 13.3, mica/alteration 7.6, oxides 2.0, glass 14.4 %) and NEW2 repeats Engelschi\u00f8n's thin-section modal estimate '55% plagioclase, 25% olivine and 10% pyroxene' as EAC-1A. (10) The Figueira 2022 thesis names EAC-1A but contains no simulant property data. (11) The group lists 8 of 29 library documents naming EAC-1A; I additionally checked 10 likely candidates (Zemeny 2024, Gasteiner 2026, Roth 2025, Slabic 2024, Manick 2018, Denevi 2020, LSIC 2022 and 2024 assessments, Duri 2022, Flahaut 2023): none names EAC-1A in its body text. No files were modified and nothing was fetched from the web."
+     }
+    ]
+   },
+   "verification": {
+    "group_key": "EAC-1A",
+    "checks": [
+     {
+      "simulant_id": "S018",
+      "reference_checks": [
+       {
+        "reference_id": "R018",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Quote verified verbatim on p.2, Results, 'Grain size distribution' of papers/Engelschion_etal_2020_EAC-1A_novel_large-volume_lunar_regolith_simulant_SciRep_10-5473.pdf. md5 of that file and of the two copies under papers/LRS/ (\u2026/Engelschi\u00f8n et al. - 2020 - \u2026 and \u2026/DIRT project/files/1665/\u2026) all = 2d9bed59b83ae57c93f8fe516254ee12, as claimed. Header DOI 10.1038/s41598-020-62312-4 verified.",
+         "Product-label caveat the extractor also raised is real: p.1 states 'Where the properties of the dusty simulant have been measured, the figures are labelled with \"EAC-1A\". For non-grainsize dependent tests where samples of the K\u00f6nigswinter basanite rock specimens have been used, these are simply labelled as EAC-1.'"
+        ]
+       },
+       {
+        "reference_id": "R098",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Same PDF as R018 (same DOI). Quote verified on p.3, Results, 'Cohesion'; in the PDF the word is line-hyphenated ('how-\\never'), the extractor's reference quote silently dehyphenated it while the value quote kept 'how-ever'. Duplicate record; merge with R018."
+        ]
+       },
+       {
+        "reference_id": "NEW1",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "papers/LRS/s41598-023-50391-y.pdf opened; abstract p.1 reads verbatim 'The objective of this study is to characterize and investigate the sintering behavior of EAC-1A lunar regolith simulant.' (line-broken after 'the'). Title, author list, Scientific Reports 13:23053 and DOI 10.1038/s41598-023-50391-y all verified in the header/footer.",
+         "The paper's full XRF composition of EAC-1A is only in its online Supplementary Table S1 (p.5: 'The chemical composition of EAC-1A is shown in Supplementary Table S1 online'), which is not in the library."
+        ]
+       },
+       {
+        "reference_id": "NEW2",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "papers/LRS/DIRT project/files/1667/Gin\u00e9s-Palomares et al. - 2023 - Laser melting\u2026 opened; p.8 Methods 'Material' reads verbatim as quoted (Scientific Reports 13:15593, DOI 10.1038/s41598-023-42008-1 in footer). Byte-identical second copy at papers/LRS/Gin\u00e9s-Palomares et al. - 2023 - Laser melting manufacturing of large elements of l.pdf (md5 f4fe7405c75770a7004c9756e75dd56c), not mentioned by the extractor."
+        ]
+       },
+       {
+        "reference_id": "NEW3",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "papers/LRS/materials-17-03633.pdf opened; sentence verified verbatim on p.5 of 15, Section 3. Title, authors (incl. A. Cowley, EAC), Materials 2024, 17, 3633 and DOI 10.3390/ma17153633 verified in the title block."
+        ]
+       },
+       {
+        "reference_id": "NEW4",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "papers/LRS/Figueira - Fungal Biomining of Lunar Regolith simulant EAC-1A.pdf opened; sentence verified verbatim on FCUP p.6 ('FCUP 6' is a running header, so the sentence is on p.6). Copy in DIRT project/files/1742 is byte-identical (md5 1b77c7b2eb14a34f09827bbc84473ebf). Supervisors, FCUP and date 30/09/2022 verified.",
+         "Trap the extractor did not flag: the thesis's Table 2 (p.6, 'Elemental Abundance from the sample 71500,5* \u2026 Apollo 17, adapted from Duncan et al., 1974': O 41.0, Si 18.8, Al 5.9, Mg 5.6, Fe 14.2, Ca 7.3, Ti 5.4, Mn 0.2, Na 0.4 wt.%) is Apollo 17 soil data, yet the Methods (2.1) say 'Composition of EAC-1A regolith is described by Engelschi\u00f8n et al. 2020 (see Table 2)'. These numbers must NOT be stored as EAC-1A composition. Otherwise agree: no EAC-1A property values in the thesis."
+        ]
+       },
+       {
+        "reference_id": "NEW5",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "papers/Engelschion_etal_2020_EAC-1A_SciRep_SupplementaryInformation.pdf opened; line 1 is the title 'EAC-1A: A novel large-volume lunar regolith simulant', line 8 'Supplemental Information \u2013 Mineralogy of EAC-1'. All tables are labelled EAC-1 / OP-1 / OR-1 as the extractor says; nothing is stated for EAC-1A.",
+         "Not mentioned by the extractor: Supplemental Table 1 is a normative (computed, not measured) mineralogy for EAC-1 (Plagioclase 29.71, Orthoclase 6.15, Nepheline 5.08, Diopside 23.73, Olivine 13.88, Ilmenite 0.45, Hematite 13.52, Apatite 1.51, Perovskite 3.48, total 97.51 wt%), and Supplemental Figure 5 shows compressive strength and Young's modulus of EAC-1 (graph only, no numbers in text). Neither should be stored for EAC-1A."
+        ]
+       },
+       {
+        "reference_id": "NEW6",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "NEW REFERENCE added by checker (not among the group's documents, found by sweeping every library PDF <25 MB for 'EAC-1A'). Zou, Y.; Wu, H.; Chai, S.; Yang, W.; Ruan, R.; Zhao, Q. (2024). Development and characterization of the PolyU-1 lunar regolith simulant based on Chang'e-5 returned samples. Int. J. Mining Sci. Technol. 34, 1317\u20131326. DOI 10.1016/j.ijmst.2024.08.006. local_path papers/Zou_etal_2024_PolyU-1_lunar_regolith_simulant_Change-5_IJMST_34_1317-1326.pdf (same article, different PDF file: papers/LRS/1-s2.0-S2095268624001150-main.pdf). kind: mention/usage.",
+         "Quote, p.1318 (PDF p.2), Introduction: 'The European Astronaut Centre used basanite to produce a low-Ti mare simulant EAC-1A [21].' ([21] = Engelschi\u00f8n et al. 2020). Secondary characterisation, but it names the exact product and states 'low-Ti mare' \u2014 supports lunar_sample_reference."
+        ]
+       },
+       {
+        "reference_id": "NEW7",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "NEW REFERENCE added by checker. Patzwald, J.; Kleba-Ehrhardt, R.; Schiperski, F.; Griemsmann, T.; Linke, S.; Neumann, T.; Overmeyer, L.; Stoll, E.; Karl, D. (2025). Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1. Acta Astronautica 231, 200\u2013222. DOI 10.1016/j.actaastro.2025.02.030. local_path papers/LRS/1-s2.0-S0094576525001109-main.pdf. kind: mention/review.",
+         "Quote, p.203 (PDF p.4): 'The European Space Agency developed EAC-1 or EAC-1 A, which is made of basanite sourced from Siebengebirge Volcanic Field in K\u00f6nigswinter, Germany. This is used for large-scale applications, such as the European Lunar Exploration Laboratory test facility at the European Astronaut Center of ESA, but is also used as a general-use low-Ti mare simulant [81].' ([81] = Engelschi\u00f8n 2020). Also p.203: 'only basic basaltic mare simulants (TUBS-M, EAC-1(A), DNA-1(A)) \u2026 exist in Europe, which are only partially characterised and available'. Caveat: the paper writes 'EAC-1 or EAC-1 A' / 'EAC-1(A)', i.e. it does not separate the two products. Its own definition, p.201: 'low-Ti (1.5\u20139 wt% TiO2)', under which EAC-1's 2.4 wt% TiO2 (R018 p.4) is low-Ti."
+        ]
+       },
+       {
+        "reference_id": "NEW8",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "NEW REFERENCE added by checker, carries EAC-1A composition values. Kj\u00f8niksen, A.-L.; Pilehvar, S.; Arnhof, M.; Rich, B. (2021). Basalt fibre reinforced geopolymer made from lunar regolith simulant \u2013 Final report. ESA ACT Ariadna study 18-9401, contract 4000125234/18/NL/GLC/as, dated 30 September 2021. local_path papers/LRS/Kj\u00f8niksen et al. - Basalt fibre reinforced geopolymer made from lunar regolith simulant.pdf (byte-identical copy at papers/LRS/DIRT project/files/1798/\u2026, md5 fcc52d49a7b7992fe59ad1e649830634). kind: composition/usage.",
+         "Quote, p.5, 2.1.1: 'investigations in this study were performed using a number of regolith simulants, namely DNA-1 and EAC-1A.' Table 1 (PDF p.6), column 'Lunar regolith simulant EAC-1A (wt. %)', read from a rendered page image: SiO2 37.9\u00b10.1; Al2O3 11.91\u00b10.06; Fe2O3 16.65\u00b10.01; CaO 12.92\u00b10.03; K2O 1.37\u00b10.01; Na2O 3.22\u00b10.02; MgO 8.89\u00b10.02; TiO2 2.58\u00b10.02. The report does not say how these were obtained (no XRF/method statement found), and SiO2 37.9 / Fe2O3 16.65 / MgO 8.89 differ markedly from Engelschi\u00f8n (43.7 / \u2013 / 11.9) and Gin\u00e9s-Palomares 2023 (43.7 / \u2013 / 14.3). Figure 2 gives an EAC-1A particle size distribution curve (graph only). p.5 also says 'regolith simulant contains 75% crystalline phase' without naming which simulant (context is DNA-1) \u2014 do not attribute to EAC-1A."
+        ]
+       },
+       {
+        "reference_id": "NEW9",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "NEW REFERENCE added by checker. Gasteiner, L.; Murdoch, N.; D'Angelo, O. (2026). An Open Database of Lunar Regolith and Simulants Properties. arXiv:2602.03829v2 [astro-ph.EP], 8 Sep 2026. local_path papers/agent-fetched/arXiv_2602.03829_Open_Database_Lunar_Regolith_Simulants_Properties.pdf. kind: geotechnical/usage. NOTE: the library copy papers/LRS/Gasteiner et al. - 2026 - An Open Database of Lunar Regolith and Simulants Properties.pdf (md5 3378febf0009f71ab13e5774555b2c8b) is a different version that never mentions EAC-1A, which is why the extractor found nothing there.",
+         "Quote, p.10, 4.3: 'We also include original data obtained from direct shear testing of the European lunar regolith simulant EAC-1A [34], directly demonstrating how the database can be used to compare properties of a new material with in-situ lunar data and other simulants.' p.11: 'When comparing our results for the EAC-1A simulant, we observe that, like other simulants, it successfully mimics the friction angle and bulk density of true lunar soil in-situ, but tends to exhibit higher cohesion, although lower than that of most other simulants.' EAC-1A appears as labelled points in Figs 5\u20136 (cohesion, friction angle, bulk density) but NO numeric EAC-1A value is printed; the numbers are in ref [34] 'L. Gasteiner, A. Glazyrina, N. Murdoch, O. D'Angelo, IAC-25-A3-IP-151-97770' (not in library) \u2014 a lead for friction_angle/cohesion/bulk_density."
+        ]
+       }
+      ],
+      "value_checks": [
+       {
+        "field": "bulk_density",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Extractor is right that 1.95 is unsupported as a bulk density. R018 p.3 verbatim: 'The bulk density (density of material at optimal packing) of EAC-1A, JSC-1A, JSC-2A, DNA and NU-LHT-3M was measured, resulting in 1.45, 1.56, 1.44, 1.27 and 1.54 g/cm3 respectively.' 1.95 appears only as the cohesion-test density (p.3 'Cohesion'). NEW3 p.5: 1.72 g/cm3 at atmospheric pressure (verified). A sweep of every library PDF <25 MB naming EAC-1A found no other bulk-density figure; the only further source is NEW9 (arXiv Gasteiner 2026), where EAC-1A bulk density is plotted but not printed."
+        ]
+       },
+       {
+        "field": "cohesion",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Verbatim on p.3 (with line-hyphenated 'how-ever'). Also verified: 'measured by lowering a plastic plate into a box filled with EAC-1A. The measurements were repeated 8 times for different densities' (p.3) and 'Based on preliminary measurements, EAC-1A appears to have a lower cohesion than JSC-1A' (p.6). Store the condition 'at 1.95 g/cm3' with the value."
+        ]
+       },
+       {
+        "field": "density_g_cm3",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Quote verbatim, p.3 'Density'. The measured sample is labelled 'EAC-1' in the sentence; the very next sentence ('As the results have shown, JSC-1A and EAC-1A have the highest bulk and absolute densities among the measured samples.') attributes it to EAC-1A, and grain density is grain-size independent, so attribution is acceptable but should be annotated."
+        ]
+       },
+       {
+        "field": "particle_size_d50",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Verbatim p.2: 'with a median value of 6.47 \u03d5 (~11 \u00b5m)'. 6.47 \u03d5 does convert to 11.3 \u00b5m, so the number is internally consistent. Two problems the extractor only half-noted: (a) R018's own Discussion (p.6) says 'the median grain size of EAC-1A is higher than what has been reported the lunar regolith (~70 \u00b5m or ~40\u2013130 \u00b5m range)', which contradicts a median of ~11 \u00b5m \u2014 R018 is internally inconsistent on this value; (b) NEW1 p.2 verified: 'The powder as received had a measured D(v,0.1) = 22 \u00b5m, D(v,0.5) = 210 \u00b5m and D(v,0.9) = 535 \u00b5m.' Store 11 only with the '~' and the method, and flag the conflict."
+        ]
+       },
+       {
+        "field": "particle_size_distribution",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "No document names EAC-1A together with 181 \u00b5m. Checked all 8 group documents plus Zou 2024, Patzwald 2025, Kj\u00f8niksen 2021, arXiv Gasteiner 2026, Zemeny 2024, Li 2022, Romano 2023: the only '181's are journal volume/page numbers. Verified NEW1 alternatives: as-received D(v,0.5) = 210 \u00b5m; sieve fractions D(v,0.5) = 694 / 282 / 49 \u00b5m (p.2). Delete or replace 'd50=181'."
+        ]
+       },
+       {
+        "field": "glass_content_percent",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Quote verified verbatim on NEW1 p.10: 'EAC-1A is fully crystallized and contains plagioclase, which our XRD characterization indicated to be Ca-rich (anorthite yielded a better initial fit of the measured XRD patterns than albite);'. Table 1 p.4 prints '\u2013' for Glass in this work and 14.4 for Schleppi et al.; p.9 verified: 'in their XRD analysis a considerable amount of glass (~ 14%) was found in EAC-1A, while in our study the material was found to be virtually fully crystalline.' R018 p.5 verified: 'EAC-1, NU-LHT-3M and FJS-1 are fully crystallised materials (Fig. 6)'. The numeric 0.0 is an inference from 'fully crystallized'; no document prints 0. Given the published 14.4 % counter-value (Schleppi 2021, not in library), the curator should store 0 with 'fully crystalline (XRD, DSC)' wording and the conflict, or fetch Schleppi 2021."
+        ]
+       },
+       {
+        "field": "release_date",
+        "verdict": "UNCERTAIN",
+        "problems": [
+         "The quote exists verbatim (p.7: 'Received: 30 January 2019; Accepted: 19 February 2020;') and the header reads '(2020) 10:5473', but this is the paper's publication, not a simulant release date; calling the value 'supported' overstates it. The paper itself shows earlier availability: p.6 'Currently, EAC-1A is already taken in use for small-scale, low-TRL experiments undertaken by ESA', ref 36 is Nieke et al. 2019 'Manufacturing Dense Thick Films of Lunar Regolith Simulant EAC-1', and Manick et al. 2018 (papers/Manick_etal_2018_LPSC49_abstract_1411\u2026) lists 'EAC-1 Basanite ESA04-A 17DE01, 17DE02, 17DE03' batches (verified) \u2014 for EAC-1, not EAC-1A. No document states when EAC-1A was first released."
+        ]
+       },
+       {
+        "field": "availability",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "NEW1 p.1 verified verbatim (US spelling 'Center'): '\u2026has developed EAC-1A which is a mare regolith simulant for use in the European Lunar Exploration Laboratory (LUNA) as a large-quantity material available for lunar research9.' NEW2 p.2 verified: 'EAC-1A was selected as lunar regolith simulant due to its availability in large quantities.' R018 p.6 verified (ESA Sample Analogue Curation facility). Categorical label is a curator mapping, not a quoted phrase; NEW7 p.203 hedges: 'only partially characterised and available'."
+        ]
+       },
+       {
+        "field": "lunar_sample_reference",
+        "verdict": "REFUTED",
+        "problems": [
+         "The extractor's 'stated by no opened document' is true only of the 8 group documents; the library does contain support. NEW6 Zou et al. 2024, p.1318: 'The European Astronaut Centre used basanite to produce a low-Ti mare simulant EAC-1A [21].' NEW7 Patzwald et al. 2025, p.203: '\u2026EAC-1 or EAC-1 A \u2026 is also used as a general-use low-Ti mare simulant [81].' Both are secondary statements citing Engelschi\u00f8n 2020, which itself says only 'mare'-type comparisons ('EAC-1A is most similar to the intermediate compositions of the Apollo 17 samples', p.4) and gives TiO2 2.4 wt% (p.4), which is low-Ti under Patzwald's definition (p.201: 'low-Ti (1.5\u20139 wt% TiO2)'). The extractor's point that Apollo 17 mare soils are high-Ti remains valid, so the curator must choose; but 'Low-Ti Mare' can be sourced to NEW6 (exact product name) with NEW7 as second support."
+        ]
+       },
+       {
+        "field": "institution",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Abstract p.1 verified verbatim; the PDF text renders the product as 'EAC-1 A' (with a space) in this sentence. NEW2 p.2 verified: 'EAC-1A (by ESA's European Astronaut Centre)'. NEW3 affiliation line 3: 'European Astronaut Centre, EAC, Linder H\u00f6he, D-51147 Cologne, Germany'."
+        ]
+       }
+      ],
+      "new_value_checks": [
+       {
+        "field": "oxide:SiO2",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "R018 p.4 'XRF' verbatim: 'EAC-1 contains 43.7 wt% SiO2 and 4.2 wt% Na2O + K2O, placing it within the lower range of the basanite field of the total alkali-silica (TAS) diagram.' Sample is labelled EAC-1 (host material; XRF done on 'two representative samples' of unstated grain size). Corroborated for EAC-1A proper by NEW1 p.5 (43.7 %) and repeated for EAC-1A by NEW2 p.8. Kj\u00f8niksen 2021 (NEW8) Table 1 gives a much lower 37.9\u00b10.1 for EAC-1A."
+        ]
+       },
+       {
+        "field": "oxide:MgO",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "R018 p.4 verbatim: 'EAC-1 contains 11.9 wt% MgO and 2.4 wt% TiO2 (Fig. 3).' Labelled EAC-1. Direct EAC-1A measurements differ: NEW1 p.5 14.3 % ('may be due to variations between batches'); NEW8 Table 1 8.89\u00b10.02."
+        ]
+       },
+       {
+        "field": "oxide:TiO2",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "R018 p.4 verbatim, labelled EAC-1. NEW1 p.5 gives 2.1 % and NEW8 Table 1 2.58\u00b10.02 for EAC-1A."
+        ]
+       },
+       {
+        "field": "oxide:SiO2",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "NEW1 p.5 verbatim: 'The concentration of SiO2 in our measurements was very close at 43.7%.' Measured on as-received EAC-1A; full oxide table is in the paper's online Supplementary Table S1 (not in library) \u2014 worth fetching for Al2O3/Fe2O3/CaO."
+        ]
+       },
+       {
+        "field": "oxide:TiO2",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "NEW1 p.5 verbatim: 'The concentration of TiO2 (2.1%) and the sum of Na2O + K2O (2.8% + 1.0%) was also comparable.'"
+        ]
+       },
+       {
+        "field": "oxide:Na2O",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Same NEW1 p.5 sentence; 2.8 %."
+        ]
+       },
+       {
+        "field": "oxide:K2O",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Same NEW1 p.5 sentence; 1.0 %."
+        ]
+       },
+       {
+        "field": "oxide:MgO",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "NEW1 p.5 verbatim: 'The small difference in MgO (14.3% in our work, 11.9% in10) may be due to variations between batches.'"
+        ]
+       },
+       {
+        "field": "oxide:Al2O3",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "NEW2 p.8 verbatim: 'The chemical composition of EAC-1A consists of SiO2 (43.7%), Al2O3 (12.6%), Fe2O3 (12%), MgO (11.9%) and CaO (10.8%) according to the same research.' Second-hand: I read the whole Engelschi\u00f8n 2020 text and its Supplementary Information \u2014 neither prints Al2O3, Fe2O3 or CaO for EAC-1/EAC-1A, so the origin of 12.6 is unknown. NEW8 Table 1 gives Al2O3 11.91\u00b10.06 for EAC-1A."
+        ]
+       },
+       {
+        "field": "oxide:Fe2O3",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Verbatim in NEW2 p.8 as above; second-hand and untraceable to Engelschi\u00f8n. NEW8 Table 1 gives Fe2O3 16.65\u00b10.01 for EAC-1A \u2014 a large discrepancy."
+        ]
+       },
+       {
+        "field": "oxide:CaO",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Verbatim in NEW2 p.8 as above; second-hand and untraceable to Engelschi\u00f8n. NEW8 Table 1 gives CaO 12.92\u00b10.03."
+        ]
+       },
+       {
+        "field": "mineral:Plagioclase",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "NEW1 Table 1 (p.4, 'Results of the RQPA of EAC-1A, compared with the results of Schleppi et al.') row verified: 'Plagioclase (Ca,Na)(Al,Si)4O8 28.3 27.2b'. Column header is 'Abundance (%)' (the extractor's 'this work' is a correct reading of the caption). RQPA excluded ilmenite and the unidentified clay/zeolite phase, so abundances are normalised over the modelled crystalline phases."
+        ]
+       },
+       {
+        "field": "mineral:Diopside/augite",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Row verified: 'Diopside/augite (Ca,Na)(Mg,Fe,Al,Ti)(Si,Al)2O6 28.4 35.5c'."
+        ]
+       },
+       {
+        "field": "mineral:Forsterite",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Row verified: 'Forsterite (Mg,Fe)2SiO4 29.3 13.3'."
+        ]
+       },
+       {
+        "field": "mineral:Biotite",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Row verified: 'Biotite K(Mg,Fe2+,Al)3(Al,Si)4O10(OH,F)2 11.3' (Schleppi's 7.6d is on the following line, combined mica/alteration)."
+        ]
+       },
+       {
+        "field": "mineral:Analcime",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Row verified: 'Analcime NaAlSi2O6\u00b7H2O 2.9 \u2013'."
+        ]
+       },
+       {
+        "field": "mineral:Ilmenite",
+        "verdict": "CONFIRMED",
+        "problems": [
+         "Row verified: 'Ilmenite FeTiO3 Minor/trace 2.0e'. Non-numeric; p.3 text: 'minor amounts of analcime and ilmenite were identified'."
+        ]
+       }
+      ],
+      "notes": "(1) All five extractor references and their quotes check out; R018/R098 are one paper (merge). (2) The extractor's library coverage was incomplete: a full-text sweep of every PDF <25 MB under Sources/papers for 'EAC-1A' found four further documents naming the exact product that the extractor never opened and that matter: Zou et al. 2024 (NEW6, 'low-Ti mare simulant EAC-1A'), Patzwald et al. 2025 (NEW7, 'general-use low-Ti mare simulant', naming 'EAC-1 or EAC-1 A'), Kj\u00f8niksen et al. 2021 ESA ACT report (NEW8, full 8-oxide EAC-1A composition in Table 1 with uncertainties, method unstated, values far from Engelschi\u00f8n's) and the arXiv v2 of Gasteiner et al. 2026 (NEW9, original EAC-1A direct-shear data, graphical only; numbers in IAC-25-A3-IP-151-97770, not in library). Because of NEW6/NEW7 the 'Low-Ti Mare' unsupported verdict is refuted, with the caveat that both are secondary statements. (3) Other library documents naming EAC-1A only in passing or in bibliographies (no values): Li et al. 2022 (\u2026lunar low gravi\u2026, 'large-volume EAC-1A [44]'), Zemeny 2024, Romano 2023, papers/LRS/1-s2.0-S2095268621001002. LSIC 2024 assessment and NASA User's Guide Rev A contain no 'EAC' at all (verified). (4) Product-label problem confirmed: in R018 the XRF/XRD/DSC/absolute-density results are labelled EAC-1 (host rock); only grain-size, bulk-density, cohesion and sphericity results are labelled EAC-1A. NEW1 and NEW8 measured EAC-1A directly, so prefer them for composition where they exist; the three oxide values sourced to NEW2 (Al2O3, Fe2O3, CaO) are second-hand and do not appear in Engelschi\u00f8n's text or supplement. (5) R018 is internally inconsistent on median grain size (~11 \u00b5m on p.2 vs 'higher than \u2026 ~70 \u00b5m' on p.6); NEW1 gives 210 \u00b5m as received \u2014 the stored d50 needs a curator decision, and 'd50=181' has no source anywhere. (6) Figueira 2022 mislabels an Apollo 17 sample table (Table 2) as EAC-1A composition \u2014 do not harvest it. (7) Confirmed extractor side-claims: no angle-of-repose value in R018 despite the abstract; sphericity 0.601/0.591 (EAC-1 fractions, p.3); water ~0.8 wt% (R018 p.2), 1.21 % (NEW1 p.3), 1.2 % (NEW2 p.7); DSC melting ~1160 \u00b0C (NEW1 p.4); \u03b5\u2032 = 3.61 at 9.375 GHz (NEW3 p.8). Not re-checked: NEW3 p.10 '~1 % mass loss'. (8) Method note: the sandbox strips shell variable assignments and silently fails `cd`-prefixed compound commands; all reads were redone with absolute paths and stdout piping. No files were modified in the Sources tree; nothing was fetched from the web."
+     }
+    ]
+   }
+  }
+ ]
+}

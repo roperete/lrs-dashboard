@@ -1,18 +1,48 @@
 import React, { useState, useMemo } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 import { cn } from '../../utils/cn';
+import { Tooltip } from '../ui/Tooltip';
 import type { LunarSite } from '../../types';
+import { LunarRefs } from '../ui/LunarRefs';
+import { EMPTY_CITATIONS, lunarDocumentLabel, type LunarCitations } from '../../utils/lunarCitations';
 
 type SortDir = 'asc' | 'desc';
-type SortKey = 'name' | 'mission' | 'date' | 'type' | 'samples';
+type SortKey = 'name' | 'mission' | 'date' | 'type' | 'samples' | 'density' | 'friction' | 'cohesion' | 'sources';
+
+/** Returned mass in grams, from "21.55 kg" or "101 g"; null when not stated. */
+function grams(v: string | null | undefined): number | null {
+  const m = (v || '').match(/([\d.]+)\s*(kg|g)\b/i);
+  return m ? parseFloat(m[1]) * (m[2].toLowerCase() === 'kg' ? 1000 : 1) : null;
+}
+const PROGRAMME_LABEL: Record<string, string> = { 'Chang-e': "Chang'e" };
+
+/** One-line explanation of each column, shown on hover over the header. */
+const COLUMN_HELP: Record<SortKey, string> = {
+  name: 'Landing site, named after the mission and the region it landed in.',
+  mission: 'The mission that landed there.',
+  type: 'Programme: Apollo (US, crewed), Luna (Soviet, robotic), Chang\'e (China, robotic), or another lander.',
+  date: 'Landing date.',
+  samples: 'Mass of lunar material brought back to Earth. Only crewed and sample-return missions return any.',
+  density: 'Bulk density of the regolith at the site, in g/cm³: mass per volume including the pore space, from in-situ measurements or returned cores.',
+  friction: 'Internal angle of friction of the regolith, in degrees, from in-situ soil-mechanics measurements. Governs slope stability and bearing capacity.',
+  cohesion: 'Shear strength of the regolith at zero normal stress, in kPa: how much the grains hold together.',
+  sources: 'The papers and mission records the site\'s values come from. Click View to see them.',
+};
 
 interface LunarSampleTableProps {
   sites: LunarSite[];
   selectedSiteId: string | null;
   onSelectSite: (id: string) => void;
+  /** Open the site's panel at its source list (the Sources column). */
+  onOpenSources?: (id: string) => void;
+  /** Numbered sources of a site's values (the same numbers as in its panel). */
+  citationsFor?: (siteId: string) => LunarCitations;
 }
 
-export function LunarSampleTable({ sites, selectedSiteId, onSelectSite }: LunarSampleTableProps) {
+export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, onOpenSources, citationsFor = () => EMPTY_CITATIONS }: LunarSampleTableProps) {
+  // a soil column shows only when a source gives a value at some site (none does for friction or cohesion yet)
+  const hasFriction = sites.some(x => x.geotechnical?.friction_angle != null);
+  const hasCohesion = sites.some(x => x.geotechnical?.cohesion != null);
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
 
@@ -22,22 +52,29 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite }: LunarS
   };
 
   const sorted = useMemo(() => {
-    const arr = [...sites];
     const dir = sortDir === 'asc' ? 1 : -1;
-    arr.sort((a, b) => {
-      let va: string, vb: string;
+    const value = (x: LunarSite): string | number | null => {
       switch (sortKey) {
-        case 'name': va = a.name.toLowerCase(); vb = b.name.toLowerCase(); break;
-        case 'mission': va = a.mission.toLowerCase(); vb = b.mission.toLowerCase(); break;
-        case 'date': va = a.date; vb = b.date; break;
-        case 'type': va = a.type.toLowerCase(); vb = b.type.toLowerCase(); break;
-        case 'samples': va = (a.samples_returned || '').toLowerCase(); vb = (b.samples_returned || '').toLowerCase(); break;
-        default: return 0;
+        case 'name': return x.name.toLowerCase();
+        case 'mission': return x.mission.toLowerCase();
+        case 'type': return x.type.toLowerCase();
+        case 'date': { const t = x.date ? Date.parse(x.date) : NaN; return Number.isNaN(t) ? null : t; }
+        case 'samples': return grams(x.samples_returned);
+        case 'density': return x.geotechnical?.bulk_density ?? null;
+        case 'friction': return x.geotechnical?.friction_angle ?? null;
+        case 'cohesion': return x.geotechnical?.cohesion ?? null;
+        case 'sources': return citationsFor(x.id).documents.length || null;
       }
-      return va.localeCompare(vb) * dir;
+    };
+    // empty values last in both directions: a missing value is not the smallest
+    return [...sites].sort((a, b) => {
+      const va = value(a), vb = value(b);
+      if (va == null && vb == null) return 0;
+      if (va == null) return 1;
+      if (vb == null) return -1;
+      return (typeof va === 'string' ? va.localeCompare(vb as string) : (va as number) - (vb as number)) * dir;
     });
-    return arr;
-  }, [sites, sortKey, sortDir]);
+  }, [sites, sortKey, sortDir, citationsFor]);
 
   const SortIcon = ({ col }: { col: SortKey }) => {
     if (sortKey !== col) return <span className="w-4" />;
@@ -48,11 +85,20 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite }: LunarS
     <th
       onClick={() => toggleSort(col)}
       className={cn(
-        "py-2.5 px-3 text-xs font-bold text-slate-500 uppercase tracking-wider cursor-pointer select-none hover:text-slate-300 transition-colors whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10",
+        "py-2.5 px-3 text-xs font-semibold text-slate-400 cursor-pointer select-none hover:text-slate-300 transition-colors whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10",
         sortKey === col && 'text-amber-400',
       )}
     >
-      <span className="inline-flex items-center gap-1">{label}<SortIcon col={col} /></span>
+      <Tooltip text={COLUMN_HELP[col]} align="left">
+        <span className="inline-flex items-center gap-1">{label}<SortIcon col={col} /></span>
+      </Tooltip>
+    </th>
+  );
+
+  /** A header the table does not sort by, with its explanation on hover. */
+  const Plain = ({ help, label }: { help: string; label: string }) => (
+    <th className="py-2.5 px-3 text-xs font-semibold text-slate-400 whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10 text-right">
+      <Tooltip text={help} align="right"><span>{label}</span></Tooltip>
     </th>
   );
 
@@ -72,14 +118,17 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite }: LunarS
             <TH col="type" label="Program" />
             <TH col="date" label="Date" />
             <TH col="samples" label="Samples" />
-            <th className="py-2.5 px-3 text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10 text-right">Density</th>
-            <th className="py-2.5 px-3 text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10 text-right">Friction</th>
-            <th className="py-2.5 px-3 text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap sticky top-0 bg-slate-900/95 backdrop-blur-sm z-10 text-right">Cohesion</th>
+            <TH col="density" label="Density (g/cm³)" />
+            {hasFriction && <TH col="friction" label="Friction (°)" />}
+            {hasCohesion && <TH col="cohesion" label="Cohesion (kPa)" />}
+            <TH col="sources" label="Sources" />
           </tr>
         </thead>
         <tbody>
           {sorted.map((s, i) => {
             const isSelected = s.id === selectedSiteId;
+            const c = citationsFor(s.id);
+            const refs = (field: string) => <LunarRefs cites={c.cite(field)} align="right" />;
             return (
               <tr
                 key={s.id}
@@ -95,19 +144,29 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite }: LunarS
               >
                 <td className={cn("py-2 px-3 font-medium", isSelected ? "text-amber-400" : "text-slate-200")}>{s.name}</td>
                 <td className={cn("py-2 px-3 font-medium whitespace-nowrap", missionColor[s.type] || 'text-purple-400')}>{s.mission}</td>
-                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.type}</td>
-                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.date}</td>
-                <td className="py-2 px-3 text-slate-300 whitespace-nowrap">{s.samples_returned || '\u2014'}</td>
-                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.bulk_density ?? '\u2014'}</td>
-                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.friction_angle != null ? `${s.geotechnical.friction_angle}\u00B0` : '\u2014'}</td>
-                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.cohesion != null ? `${s.geotechnical.cohesion} kPa` : '\u2014'}</td>
+                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{PROGRAMME_LABEL[s.type] ?? s.type}</td>
+                <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.date ? <>{s.date}{refs('date')}</> : '\u2014'}</td>
+                <td className="py-2 px-3 text-slate-300 whitespace-nowrap">{s.samples_returned ? <>{s.samples_returned}{refs('samples_returned')}</> : '\u2014'}</td>
+                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.bulk_density != null ? <>{s.geotechnical.bulk_density}{refs('bulk_density')}</> : '\u2014'}</td>
+                {hasFriction && <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.friction_angle != null ? <>{`${s.geotechnical.friction_angle}\u00B0`}{refs('friction_angle')}</> : '\u2014'}</td>}
+                {hasCohesion && <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.cohesion != null ? <>{`${s.geotechnical.cohesion} kPa`}{refs('cohesion')}</> : '\u2014'}</td>}
+                <td className="py-2 px-3 max-w-[260px]">
+                  {c.documents.length > 0
+                    ? <button type="button" onClick={(e) => { e.stopPropagation(); (onOpenSources ?? onSelectSite)(s.id); }}
+                        aria-label={`View ${s.name}'s ${c.documents.length} sources`} className="group/ref flex items-baseline gap-1.5 text-left text-slate-300 hover:text-white min-w-0">
+                        <span className="shrink-0">{c.documents.length} source{c.documents.length === 1 ? '' : 's'}</span>
+                        <span className="shrink-0 text-xs text-emerald-400 group-hover/ref:underline">View</span>
+                        <span className="truncate text-xs text-slate-500">{lunarDocumentLabel(c.documents[0])}{c.documents.length > 1 ? ' …' : ''}</span>
+                      </button>
+                    : <span className="text-slate-500">{'\u2014'}</span>}
+                </td>
               </tr>
             );
           })}
         </tbody>
       </table>
       {sorted.length === 0 && (
-        <div className="flex items-center justify-center h-40 text-slate-500 text-sm">
+        <div className="flex items-center justify-center h-40 text-slate-400 text-sm">
           No lunar sites found.
         </div>
       )}

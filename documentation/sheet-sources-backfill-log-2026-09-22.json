@@ -1,0 +1,75 @@
+[
+ {
+  "simulant_id": "S036",
+  "field": "specific_gravity",
+  "value": 2.77,
+  "outcome": "unsourced on a verified simulant"
+ },
+ {
+  "simulant_id": "S037",
+  "field": "specific_gravity",
+  "value": 3.0,
+  "outcome": "unsourced on a verified simulant"
+ },
+ {
+  "simulant_id": "S057",
+  "field": "cohesion",
+  "value": "12.0",
+  "outcome": "unsourced on a verified simulant"
+ },
+ {
+  "simulant_id": "S057",
+  "field": "friction_angle",
+  "value": "36.0",
+  "outcome": "unsourced on a verified simulant"
+ },
+ {
+  "simulant_id": "S057",
+  "field": "specific_gravity",
+  "value": 2.79,
+  "outcome": "unsourced on a verified simulant"
+ },
+ {
+  "simulant_id": "S058",
+  "field": "cohesion",
+  "value": "12.0",
+  "outcome": "unsourced on a verified simulant"
+ },
+ {
+  "simulant_id": "S058",
+  "field": "friction_angle",
+  "value": "36.0",
+  "outcome": "unsourced on a verified simulant"
+ },
+ {
+  "simulant_id": "S058",
+  "field": "particle_size_d50",
+  "value": 36.2,
+  "outcome": "unsourced on a verified simulant"
+ },
+ {
+  "simulant_id": "S060",
+  "field": "cohesion",
+  "value": "7.0",
+  "outcome": "unsourced on a verified simulant"
+ },
+ {
+  "simulant_id": "S060",
+  "field": "friction_angle",
+  "value": "40.0",
+  "outcome": "unsourced on a verified simulant"
+ },
+ {
+  "simulant_id": "S060",
+  "field": "particle_size_d50",
+  "value": 36.5,
+  "outcome": "unsourced on a verified simulant"
+ },
+ {
+  "simulant_id": "S095",
+  "field": "density_g_cm3",
+  "reference_id": "DS-S095",
+  "outcome": "source row written",
+  "quote": "Estimated Grain Density: 2.70 g/cm3"
+ }
+]

@@ -1,0 +1,702 @@
+[
+ {
+  "id": "A11",
+  "kind": "site",
+  "name": "Apollo 11 - Sea of Tranquility",
+  "mission": "Apollo 11",
+  "values": [
+   {
+    "field": "lat",
+    "stored": "0.67408",
+    "removed_source": {
+     "document": "Apollo 11 Site",
+     "url": "https://the-moon.us/wiki/Apollo_11_Site",
+     "why_removed": "wiki page",
+     "its_value": "0.67408°N (Davies and Colvin, 2000)",
+     "its_quote": "the precise coordinates at which the Lunar Module landed are: 0.67408°N, 23.47297°E",
+     "its_location": "the-moon.us Apollo 11 Site page"
+    }
+   },
+   {
+    "field": "lng",
+    "stored": "23.47297",
+    "removed_source": {
+     "document": "Apollo 11 Site",
+     "url": "https://the-moon.us/wiki/Apollo_11_Site",
+     "why_removed": "wiki page",
+     "its_value": "23.47297°E (Davies and Colvin, 2000)",
+     "its_quote": "the precise coordinates at which the Lunar Module landed are: 0.67408°N, 23.47297°E",
+     "its_location": "the-moon.us Apollo 11 Site page"
+    }
+   }
+  ]
+ },
+ {
+  "id": "A14",
+  "kind": "site",
+  "name": "Apollo 14 - Fra Mauro",
+  "mission": "Apollo 14",
+  "values": [
+   {
+    "field": "lat",
+    "stored": "-3.6453",
+    "removed_source": {
+     "document": "Apollo 14 Site",
+     "url": "https://the-moon.us/wiki/Apollo_14_Site",
+     "why_removed": "wiki page",
+     "its_value": "3.64530°S (Davies and Colvin, 2000)",
+     "its_quote": "Lat: 3.64530°S, Long: 17.47136°W",
+     "its_location": "the-moon.us Apollo 14 Site page, title line"
+    }
+   },
+   {
+    "field": "lng",
+    "stored": "-17.47136",
+    "removed_source": {
+     "document": "Apollo 14 Site",
+     "url": "https://the-moon.us/wiki/Apollo_14_Site",
+     "why_removed": "wiki page",
+     "its_value": "17.47136°W (Davies and Colvin, 2000)",
+     "its_quote": "Lat: 3.64530°S, Long: 17.47136°W",
+     "its_location": "the-moon.us Apollo 14 Site page, title line"
+    }
+   },
+   {
+    "field": "samples_returned",
+    "stored": "42.3 kg",
+    "removed_source": {
+     "document": "Celebrated Moon Rocks (PSRD) — mission sample-mass table",
+     "url": "http://www.psrd.hawaii.edu/Dec09/Apollo-lunar-samples.html",
+     "why_removed": "outside the Moon line (web)",
+     "its_value": "42.3 kg",
+     "its_quote": "Apollo 14 ... Weight in kilograms: 42.3",
+     "its_location": "PSRD 'Celebrated Moon Rocks' mission-mass table"
+    }
+   },
+   {
+    "field": "description",
+    "stored": "Landed in the Fra Mauro highlands. Collected impact-derived breccias.",
+    "removed_source": {
+     "document": "Trail of Discovery at Fra Mauro (LROC)",
+     "url": "https://lroc.im-ldi.com/images/105",
+     "why_removed": "outside the Moon line (web)",
+     "its_value": null,
+     "its_quote": "Nearly all of the Apollo 14 samples are breccias (or rocks formed from pieces of other rocks, often held together by an impact-melt matrix).",
+     "its_location": "LROC 'Trail of Discovery at Fra Mauro' page"
+    }
+   }
+  ]
+ },
+ {
+  "id": "A12",
+  "kind": "site",
+  "name": "Apollo 12 - Ocean of Storms",
+  "mission": "Apollo 12",
+  "values": [
+   {
+    "field": "lat",
+    "stored": "-3.01239",
+    "removed_source": {
+     "document": "Apollo 12 Site (wiki page, coordinates per Davies and Colvin, 2000)",
+     "url": "https://the-moon.us/wiki/Apollo_12_Site",
+     "why_removed": "wiki page",
+     "its_value": "3.01239°S (Davies and Colvin, 2000)",
+     "its_quote": "Lat: 3.01239°S, Long: 23.42157°W",
+     "its_location": "the-moon.us Apollo 12 Site page, title line"
+    }
+   },
+   {
+    "field": "lng",
+    "stored": "-23.42157",
+    "removed_source": {
+     "document": "Apollo 12 Site (wiki page, coordinates per Davies and Colvin, 2000)",
+     "url": "https://the-moon.us/wiki/Apollo_12_Site",
+     "why_removed": "wiki page",
+     "its_value": "23.42157°W (Davies and Colvin, 2000)",
+     "its_quote": "Lat: 3.01239°S, Long: 23.42157°W",
+     "its_location": "the-moon.us Apollo 12 Site page, title line"
+    }
+   },
+   {
+    "field": "samples_returned",
+    "stored": "34.3 kg",
+    "removed_source": {
+     "document": "Celebrated Moon Rocks (PSRD) — mission sample-mass table",
+     "url": "http://www.psrd.hawaii.edu/Dec09/Apollo-lunar-samples.html",
+     "why_removed": "outside the Moon line (web)",
+     "its_value": "34.3 kg",
+     "its_quote": "Apollo 12 ... Weight in kilograms: 34.3",
+     "its_location": "PSRD 'Celebrated Moon Rocks' mission-mass table"
+    }
+   }
+  ]
+ },
+ {
+  "id": "S1",
+  "kind": "site",
+  "name": "Surveyor 1 - Flamsteed P",
+  "mission": "Surveyor 1",
+  "values": [
+   {
+    "field": "lat",
+    "stored": "-2.474",
+    "removed_source": {
+     "document": "Surveyor 1",
+     "url": "https://en.wikipedia.org/wiki/Surveyor_1",
+     "why_removed": "wiki page",
+     "its_value": "2.474°S",
+     "its_quote": "location = {{Lunar coords and quad cat|2.474|S|43.339|W}}",
+     "its_location": "Infobox, interplanetary lander component: location = Lunar coords 2.474 S 43.339 W"
+    }
+   },
+   {
+    "field": "lng",
+    "stored": "-43.339",
+    "removed_source": {
+     "document": "Surveyor 1",
+     "url": "https://en.wikipedia.org/wiki/Surveyor_1",
+     "why_removed": "wiki page",
+     "its_value": "43.339°W",
+     "its_quote": "location = {{Lunar coords and quad cat|2.474|S|43.339|W}}",
+     "its_location": "Infobox, interplanetary lander component"
+    }
+   },
+   {
+    "field": "description",
+    "stored": "First US soft landing on the Moon. Conducted surface mechanics experiments.",
+    "removed_source": {
+     "document": "Surveyor 1",
+     "url": "https://en.wikipedia.org/wiki/Surveyor_1",
+     "why_removed": "wiki page",
+     "its_value": null,
+     "its_quote": "These spacecraft also acquired data on the radar reflectivity of the lunar surface, the load-bearing strength of the lunar surface, and the temperatures for use in the analysis of the lunar surface temperatures.",
+     "its_location": "Science-instruments section"
+    }
+   }
+  ]
+ },
+ {
+  "id": "S3",
+  "kind": "site",
+  "name": "Surveyor 3 - Oceanus Procellarum",
+  "mission": "Surveyor 3",
+  "values": [
+   {
+    "field": "date",
+    "stored": "April 20, 1967",
+    "removed_source": {
+     "document": "Surveyor 3",
+     "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+     "why_removed": "wiki page",
+     "its_value": "April 20, 1967, 00:04:53 UTC",
+     "its_quote": "arrival_date = April 20, 1967, 00:04:53 UTC",
+     "its_location": "Infobox, interplanetary lander component"
+    }
+   },
+   {
+    "field": "lat",
+    "stored": "-3.01612",
+    "removed_source": {
+     "document": "Surveyor 3",
+     "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+     "why_removed": "wiki page",
+     "its_value": "3.01612°S (Wikipedia); -3.0162 (LROC/Wagner et al. 2017, ME datum)",
+     "its_quote": "location = {{Lunar coords and quad cat|3.01612|S|23.41791|W}}",
+     "its_location": "Infobox, interplanetary lander component"
+    }
+   },
+   {
+    "field": "lng",
+    "stored": "-23.41791",
+    "removed_source": {
+     "document": "Surveyor 3",
+     "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+     "why_removed": "wiki page",
+     "its_value": "23.41791°W (Wikipedia); 336.5820°E = 23.4180°W (LROC/Wagner et al. 2017)",
+     "its_quote": "location = {{Lunar coords and quad cat|3.01612|S|23.41791|W}}",
+     "its_location": "Infobox, interplanetary lander component"
+    }
+   },
+   {
+    "field": "description",
+    "stored": "Equipped with soil mechanics surface sampler. Later visited by Apollo 12.",
+    "removed_source": {
+     "document": "Surveyor 3",
+     "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+     "why_removed": "wiki page",
+     "its_value": null,
+     "its_quote": "Surveyor 3 was visited by Apollo 12 astronauts Pete Conrad and Alan Bean in November 1969, and remains the only probe visited by humans on another world.",
+     "its_location": "Lead section"
+    }
+   }
+  ]
+ },
+ {
+  "id": "CE3",
+  "kind": "site",
+  "name": "Chang'e 3 - Mare Imbrium",
+  "mission": "Chang'e 3",
+  "values": [
+   {
+    "field": "date",
+    "stored": "December 14, 2013",
+    "removed_source": {
+     "document": "Chang'e 3",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_3",
+     "why_removed": "wiki page",
+     "its_value": "2013-12-14, 13:11:07 UTC",
+     "its_quote": "arrival_date = {{start date|df=yes|2013|12|14|13|11|7=Z}}",
+     "its_location": "Infobox, lander component (arrival_date)"
+    }
+   },
+   {
+    "field": "lat",
+    "stored": "44.1214",
+    "removed_source": {
+     "document": "Chang'e 3",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_3",
+     "why_removed": "wiki page",
+     "its_value": "44.1214°N",
+     "its_quote": "location = [[Mare Imbrium]] {{coords|44.1214|N|19.5116|W|globe:moon|...}}",
+     "its_location": "Infobox, lander component (location)"
+    }
+   },
+   {
+    "field": "lng",
+    "stored": "-19.5116",
+    "removed_source": {
+     "document": "Chang'e 3",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_3",
+     "why_removed": "wiki page",
+     "its_value": "19.5116°W",
+     "its_quote": "location = [[Mare Imbrium]] {{coords|44.1214|N|19.5116|W|globe:moon|...}}",
+     "its_location": "Infobox, lander component (location)"
+    }
+   },
+   {
+    "field": "description",
+    "stored": "First Chinese lunar lander. Deployed Yutu rover on the Mare Imbrium.",
+    "removed_source": {
+     "document": "Chang'e 3",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_3",
+     "why_removed": "wiki page",
+     "its_value": null,
+     "its_quote": "The planned landing site was Sinus Iridum, a lava-filled crater 249 km (155 mi) in diameter. The actual landing took place on Mare Imbrium.",
+     "its_location": "Overview section"
+    }
+   },
+   {
+    "field": "bulk_density",
+    "stored": "1.63 g/cm³",
+    "removed_source": {
+     "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+     "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+     "why_removed": "outside the Moon line (compilation)",
+     "its_value": "1.63",
+     "its_quote": "Chang'e 3;44.1189N 340.487E;Mare;2013;Rover;Lunar Penetration Radar;In-Situ;Vacuum ;1.63;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;Zehua Donga, Guangyou Fang, Parameters and structure of lunar regolith in Chang E-3 landing area from lunar penetrating radar (LPR) data, 2016",
+     "its_location": "Row 177 (Chang'e 3)"
+    }
+   }
+  ]
+ },
+ {
+  "id": "CE4",
+  "kind": "site",
+  "name": "Chang'e 4 - Von Karman Crater",
+  "mission": "Chang'e 4",
+  "values": [
+   {
+    "field": "date",
+    "stored": "January 3, 2019",
+    "removed_source": {
+     "document": "Chang'e 4",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_4",
+     "why_removed": "wiki page",
+     "its_value": "3 January 2019, 02:26 UTC",
+     "its_quote": "arrival_date = 3 January 2019, 02:26 UTC",
+     "its_location": "Infobox, interplanetary lander component (arrival_date)"
+    }
+   },
+   {
+    "field": "lat",
+    "stored": "-45.4446",
+    "removed_source": {
+     "document": "Chang'e 4",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_4",
+     "why_removed": "wiki page",
+     "its_value": "45.4446°S",
+     "its_quote": "The selenographic coordinates of the landing site are 177.5991°E, 45.4446°S, at an elevation of -5935 m.",
+     "its_location": "Landing-site section"
+    }
+   },
+   {
+    "field": "lng",
+    "stored": "177.5991",
+    "removed_source": {
+     "document": "Chang'e 4",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_4",
+     "why_removed": "wiki page",
+     "its_value": "177.5991°E",
+     "its_quote": "The selenographic coordinates of the landing site are 177.5991°E, 45.4446°S, at an elevation of -5935 m.",
+     "its_location": "Landing-site section"
+    }
+   },
+   {
+    "field": "description",
+    "stored": "First landing on the lunar far side. Deployed Yutu-2 rover in the South Pole-Aitken basin.",
+    "removed_source": {
+     "document": "Chang'e 4",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_4",
+     "why_removed": "wiki page",
+     "its_value": null,
+     "its_quote": "location = Spatio Tianhe within Von Kármán crater in the South Pole-Aitken Basin. [...] The Yutu-2 rover was deployed about 12 hours after the landing.",
+     "its_location": "Infobox location field; Landing-site section"
+    }
+   }
+  ]
+ },
+ {
+  "id": "CE5",
+  "kind": "site",
+  "name": "Chang'e 5 - Oceanus Procellarum",
+  "mission": "Chang'e 5",
+  "values": [
+   {
+    "field": "date",
+    "stored": "December 1, 2020",
+    "removed_source": {
+     "document": "Chang'e 5",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_5",
+     "why_removed": "wiki page",
+     "its_value": "1 December 2020, 15:11 UTC",
+     "its_quote": "arrival_date = 1 December 2020 15:11 UTC",
+     "its_location": "Infobox, interplanetary lander component (arrival_date)"
+    }
+   },
+   {
+    "field": "samples_returned",
+    "stored": "1.73 kg",
+    "removed_source": {
+     "document": "Chang'e 5",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_5",
+     "why_removed": "wiki page",
+     "its_value": "1731 g (1,731 grams)",
+     "its_quote": "sample_mass = {{cvt|1731|g}} ... title=China's Chang'e-5 retrieves 1,731 grams of moon samples",
+     "its_location": "Infobox (sample_mass) and History section"
+    }
+   },
+   {
+    "field": "description",
+    "stored": "First Chinese sample return mission. Collected young volcanic rocks.",
+    "removed_source": {
+     "document": "Chang'e 5",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_5",
+     "why_removed": "wiki page",
+     "its_value": null,
+     "its_quote": "This area is characterized by some of the youngest mare basalts on the Moon (~1.21 billion years old), with elevated titanium, thorium, and olivine abundances, which have never been sampled by the American or Soviet missions.",
+     "its_location": "Landing-site section"
+    }
+   }
+  ]
+ },
+ {
+  "id": "CE6",
+  "kind": "site",
+  "name": "Chang'e 6 - South Pole-Aitken Basin",
+  "mission": "Chang'e 6",
+  "values": [
+   {
+    "field": "date",
+    "stored": "1 June 2024, 22:23:16 UTC",
+    "removed_source": {
+     "document": "Chang'e 6",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_6",
+     "why_removed": "wiki page",
+     "its_value": "1 June 2024, 22:23:16 UTC",
+     "its_quote": "arrival_date = 1 June 2024 22:23:16 UTC",
+     "its_location": "Infobox, lander component (arrival_date)"
+    }
+   },
+   {
+    "field": "lat",
+    "stored": "-41.6385",
+    "removed_source": {
+     "document": "Chang'e 6",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_6",
+     "why_removed": "wiki page",
+     "its_value": "41.6385°S",
+     "its_quote": "location = Southern mare of Apollo Basin {{Lunar coords|41.6385|S|153.9852|W}}",
+     "its_location": "Infobox, lander component (location)"
+    }
+   },
+   {
+    "field": "lng",
+    "stored": "-153.9852",
+    "removed_source": {
+     "document": "Chang'e 6",
+     "url": "https://en.wikipedia.org/wiki/Chang%27e_6",
+     "why_removed": "wiki page",
+     "its_value": "153.9852°W",
+     "its_quote": "location = Southern mare of Apollo Basin {{Lunar coords|41.6385|S|153.9852|W}}",
+     "its_location": "Infobox, lander component (location)"
+    }
+   }
+  ]
+ },
+ {
+  "id": "CH3",
+  "kind": "site",
+  "name": "Chandrayaan 3 - Shiv Shakti Point",
+  "mission": "Chandrayaan 3",
+  "values": [
+   {
+    "field": "date",
+    "stored": "August 23, 2023",
+    "removed_source": {
+     "document": "Chandrayaan-3",
+     "url": "https://en.wikipedia.org/wiki/Chandrayaan-3",
+     "why_removed": "wiki page",
+     "its_value": "August 23, 2023 (14:34 UTC per R2; 12:33 UTC per R1)",
+     "its_quote": "It entered lunar orbit on 5 August, and touched down near the lunar south pole, at 69°S, on 23 August 2023 at 18:04 IST (12:33 UTC).",
+     "its_location": "Lead section"
+    }
+   },
+   {
+    "field": "description",
+    "stored": "First Indian lunar landing. Pragyan rover explored near the south pole.",
+    "removed_source": {
+     "document": "Chandrayaan-3",
+     "url": "https://en.wikipedia.org/wiki/Chandrayaan-3",
+     "why_removed": "wiki page",
+     "its_value": null,
+     "its_quote": "The mission consists of Vikram, a lunar lander, and Pragyan, a lunar rover, as replacements for the equivalents on Chandrayaan-2... and touched down near the lunar south pole, at 69°S.",
+     "its_location": "Lead section"
+    }
+   }
+  ]
+ },
+ {
+  "id": "10084",
+  "kind": "sample",
+  "name": "10084",
+  "mission": "Apollo 11",
+  "values": [
+   {
+    "field": "type",
+    "stored": "Mare (High-Ti Basalt)",
+    "removed_source": {
+     "document": "Mare Basalt Volcanism - Lunar Petrographic Thin Section Set Study Guide",
+     "url": null,
+     "why_removed": "outside the Moon line (web)",
+     "its_value": "high-Ti mare basalt",
+     "its_quote": "Samples from the Apollo 11 and 17 missions were exclusively from the high-Ti group",
+     "its_location": "main text"
+    }
+   }
+  ]
+ },
+ {
+  "id": "12070",
+  "kind": "sample",
+  "name": "12070",
+  "mission": "Apollo 12",
+  "values": [
+   {
+    "field": "type",
+    "stored": "Mare (Low-Ti Basalt)",
+    "removed_source": {
+     "document": "Mare Basalt Volcanism - Lunar Petrographic Thin Section Set Study Guide",
+     "url": null,
+     "why_removed": "outside the Moon line (web)",
+     "its_value": "low-Ti basalt",
+     "its_quote": "samples from the Apollo 12 and 15 and Luna 16 missions were from the low-Ti group",
+     "its_location": "main text"
+    }
+   }
+  ]
+ },
+ {
+  "id": "L13",
+  "kind": "site",
+  "name": "Luna 13 - Oceanus Procellarum",
+  "mission": "Luna 13",
+  "values": [
+   {
+    "field": "friction_angle",
+    "stored": "32.0 °",
+    "removed_source": {
+     "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+     "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+     "why_removed": "outside the Moon line (compilation)",
+     "its_value": "32 (degrees)",
+     "its_quote": "Luna 13;18.867N 62.050W;Mare;1966;Lander;Penetrometer;In-Situ;Vacuum ;0.8;32;0.49;68;...",
+     "its_location": "row: Mission=Luna 13, Test=Penetrometer"
+    }
+   },
+   {
+    "field": "cohesion",
+    "stored": "0.49 kPa",
+    "removed_source": {
+     "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+     "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+     "why_removed": "outside the Moon line (compilation)",
+     "its_value": "0.49 (kPa)",
+     "its_quote": "Luna 13;18.867N 62.050W;Mare;1966;Lander;Penetrometer;In-Situ;Vacuum ;0.8;32;0.49;68;...",
+     "its_location": "row: Mission=Luna 13, Test=Penetrometer"
+    }
+   },
+   {
+    "field": "bearing_capacity",
+    "stored": "68.0 kPa",
+    "removed_source": {
+     "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+     "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+     "why_removed": "outside the Moon line (compilation)",
+     "its_value": "68 (kPa)",
+     "its_quote": "Luna 13;18.867N 62.050W;Mare;1966;Lander;Penetrometer;In-Situ;Vacuum ;0.8;32;0.49;68;...",
+     "its_location": "row: Mission=Luna 13, Test=Penetrometer"
+    }
+   },
+   {
+    "field": "description",
+    "stored": "Soviet lander with soil mechanics probe. Measured regolith bearing capacity.",
+    "removed_source": {
+     "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+     "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+     "why_removed": "outside the Moon line (compilation)",
+     "its_value": null,
+     "its_quote": "Luna 13;18.867N 62.050W;Mare;1966;Lander;Penetrometer;In-Situ;Vacuum ;0.8;32;0.49;68;...;I. I. Cherkasov, V.V. Shvarev, Soviet investigations of the mechanics of lunar soils, 1973",
+     "its_location": "row: Mission=Luna 13, Test=Penetrometer"
+    }
+   }
+  ]
+ },
+ {
+  "id": "L17",
+  "kind": "site",
+  "name": "Luna 17 - Mare Imbrium",
+  "mission": "Luna 17",
+  "values": [
+   {
+    "field": "friction_angle",
+    "stored": "22.5 °",
+    "removed_source": {
+     "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+     "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+     "why_removed": "outside the Moon line (compilation)",
+     "its_value": "22.5 (degrees) [Cherkasov & Shvarev 1973, Penetrometer]",
+     "its_quote": "Luna 17;38.2376N 35.00163W;Mare;1970;Rover;Penetrometer;In-Situ;Vacuum ;NA;22.5;5;33.34;...;I. I. Cherkasov, V.V. Shvarev, Soviet investigations of the mechanics of lunar soils, 1973",
+     "its_location": "row: Mission=Luna 17, Test=Penetrometer"
+    }
+   },
+   {
+    "field": "cohesion",
+    "stored": "5.0 kPa",
+    "removed_source": {
+     "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+     "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+     "why_removed": "outside the Moon line (compilation)",
+     "its_value": "5 (kPa) [same Cherkasov & Shvarev 1973 Penetrometer row]",
+     "its_quote": "Luna 17;38.2376N 35.00163W;Mare;1970;Rover;Penetrometer;In-Situ;Vacuum ;NA;22.5;5;33.34;...",
+     "its_location": "row: Mission=Luna 17, Test=Penetrometer"
+    }
+   },
+   {
+    "field": "bearing_capacity",
+    "stored": "33.3 kPa",
+    "removed_source": {
+     "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+     "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+     "why_removed": "outside the Moon line (compilation)",
+     "its_value": "33.34 (kPa)",
+     "its_quote": "Luna 17;38.2376N 35.00163W;Mare;1970;Rover;Penetrometer;In-Situ;Vacuum ;NA;22.5;5;33.34;...",
+     "its_location": "row: Mission=Luna 17, Test=Penetrometer"
+    }
+   }
+  ]
+ },
+ {
+  "id": "L21",
+  "kind": "site",
+  "name": "Luna 21 - Le Monnier Crater",
+  "mission": "Luna 21",
+  "values": [
+   {
+    "field": "friction_angle",
+    "stored": "22.5 °",
+    "removed_source": {
+     "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+     "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+     "why_removed": "outside the Moon line (compilation)",
+     "its_value": "22.5 (degrees) [Cherkasov & Shvarev 1977, Rover tracks, 'General values obtained over the path of Lunokhod 2']",
+     "its_quote": "Luna 21;25.9994N 30.4076E;Mare;1973;Rover;Rover tracks;In-Situ;Vacuum ;NA;22.5;5;40;4 -6;NA;0.8;...;I. I. Cherkasov, V. V. Shvarev, New Soviet investigations of lunar soil and its analogs, 1977;...;General values obtained over the path of Lunokhod 2",
+     "its_location": "row: Mission=Luna 21, Test=Rover tracks"
+    }
+   },
+   {
+    "field": "cohesion",
+    "stored": "5.0 kPa",
+    "removed_source": {
+     "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+     "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+     "why_removed": "outside the Moon line (compilation)",
+     "its_value": "5 (kPa) [same row]",
+     "its_quote": "Luna 21;25.9994N 30.4076E;Mare;1973;Rover;Rover tracks;In-Situ;Vacuum ;NA;22.5;5;40;4 -6;NA;0.8;...",
+     "its_location": "row: Mission=Luna 21, Test=Rover tracks"
+    }
+   },
+   {
+    "field": "bearing_capacity",
+    "stored": "40.0 kPa",
+    "removed_source": {
+     "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+     "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+     "why_removed": "outside the Moon line (compilation)",
+     "its_value": "40 (kPa) [same row]",
+     "its_quote": "Luna 21;25.9994N 30.4076E;Mare;1973;Rover;Rover tracks;In-Situ;Vacuum ;NA;22.5;5;40;4 -6;NA;0.8;...",
+     "its_location": "row: Mission=Luna 21, Test=Rover tracks"
+    }
+   }
+  ]
+ },
+ {
+  "id": "A17",
+  "kind": "site",
+  "name": "Apollo 17 - Taurus-Littrow",
+  "mission": "Apollo 17",
+  "values": [
+   {
+    "field": "description",
+    "stored": "Final Apollo mission. Collected orange soil and diverse rock types from a valley.",
+    "removed_source": {
+     "document": "Apollo 17 (NASA Lunar Petrographic Educational Thin Section Set)",
+     "url": "https://curator.jsc.nasa.gov/education/lpetss/apollo17.cfm",
+     "why_removed": "outside the Moon line (web)",
+     "its_value": null,
+     "its_quote": "Figure 7 - Sketch map of the Apollo 17 Taurus-Littrow landing site... One sample is a pristine norite (78235), one sample comes from a landslide off the highlands (72275), two samples are of the dark mantle (74220 and 70181), and another sample is of the mare surface (70017)... The valley floor was covered with mare basalts and a dark mantle. The landslide off the South Massif is a light mantle on top of the valley material.",
+     "its_location": "JSC Curator LPETSS Apollo 17 page, figure 7 caption"
+    }
+   }
+  ]
+ },
+ {
+  "id": "L20",
+  "kind": "site",
+  "name": "Luna 20 - Apollonius Highlands",
+  "mission": "Luna 20",
+  "values": [
+   {
+    "field": "samples_returned",
+    "stored": "55 g",
+    "removed_source": {
+     "document": "NASA Solar System Exploration — Luna 20, In Depth",
+     "url": "https://solarsystem.nasa.gov/missions/luna-20/in-depth/",
+     "why_removed": "outside the Moon line (web)",
+     "its_value": "The 2-ounce (55-gram) soil sample",
+     "its_quote": "The 2-ounce (55-gram) soil sample differed from that collected by Luna 16 in that the majority (50 to 60 percent) of the rock particles in the newer sample were ancient anorthosite (which consists largely of feldspar) rather than the basalt of the earlier one.",
+     "its_location": "'Sample Return' section"
+    }
+   }
+  ]
+ }
+]

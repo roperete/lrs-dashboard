@@ -1,0 +1,132 @@
+{
+ "simulant_id": "S144",
+ "name": "EB-2",
+ "retired_on": "2026-09-24",
+ "reason": "Mars regolith simulant, not lunar. The ISECG Global Exploration Roadmap supplement (Table 9) lists it in the Open University block under the 'Mars' sub-header, and the ESRIC simulants knowledge base under 'Mars Regolith Simulants'. Confirmed by a reader and an independent checker, 2026-09-24. Retired at the owner's decision: Martian simulants are out of scope.",
+ "alias_of": [],
+ "rows": {
+  "property_sources": [
+   {
+    "simulant_id": "S144",
+    "field": "institution",
+    "reference_id": "R166",
+    "location": "Table 9 (\"Simulants\"), p. 63",
+    "quote": "OUEB-1 and EB-2                  Open University   ...   Open University"
+   },
+   {
+    "simulant_id": "S144",
+    "field": "lunar_sample_reference",
+    "reference_id": "R166",
+    "location": "Table 9 (\"Simulants\"), p. 63",
+    "quote": "OUEB-1 and EB-2                  Open University                                                                                               Early basaltic                                  Open University"
+   }
+  ],
+  "purchase_info": [
+   {
+    "simulant_id": "S144",
+    "vendor": null,
+    "url": null,
+    "price_note": "Internal research simulant; not available for commercial sale."
+   }
+  ],
+  "references_": [
+   {
+    "reference_id": "R166",
+    "simulant_id": "S144",
+    "reference_text": null,
+    "reference_type": "report",
+    "title": "In-Situ Resource Utilization Gap Assessment Report",
+    "authors": "International Space Exploration Coordination Group (ISECG)",
+    "year": 2021,
+    "doi": null,
+    "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
+    "names_simulant": 1,
+    "mention_quote": "OUEB-1 and EB-2                  Open University                                                                                               Early basaltic                                  Open University",
+    "local_path": null,
+    "checked_on": "2026-09-24"
+   },
+   {
+    "reference_id": "RN-S144-1",
+    "simulant_id": "S144",
+    "reference_text": "Lunar and Martian regolith simulants (ESRIC knowledge base)",
+    "reference_type": "usage",
+    "title": "Lunar and Martian regolith simulants (ESRIC knowledge base)",
+    "authors": null,
+    "year": null,
+    "doi": null,
+    "url": "http://knowledge.esric.lu/simulants/",
+    "names_simulant": 1,
+    "mention_quote": "Name QUEB-1 and EB-2 Description Early basaltic Availability Currently available Supplier/Contact Open University United Kingdom",
+    "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+    "checked_on": "2026-09-24"
+   }
+  ],
+  "simulant_extra": [
+   {
+    "simulant_id": "S144",
+    "name": "EB-2",
+    "classification": "General Purpose",
+    "application": "General",
+    "replica_of": "Early basaltic",
+    "feedstock": null,
+    "petrographic_class": null,
+    "grain_size_mm": null,
+    "specific_gravity": null,
+    "publicly_available_composition": 0,
+    "reference": "Duri, L. G., et al. (2022). The Potential for Lunar and Martian Regolith Simulants... Front. Astron. Space Sci. 8. https://doi.org/10.3389/fspas.2021.747821"
+   }
+  ],
+  "sites": [
+   {
+    "site_id": "X144",
+    "simulant_id": "S144",
+    "site_name": "The Open University, Milton Keynes",
+    "site_type": "Lab",
+    "country_code": "UK",
+    "lat": 52.0249,
+    "lon": -0.7097
+   }
+  ],
+  "simulants": [
+   {
+    "simulant_id": "S144",
+    "name": "EB-2",
+    "type": "Mare",
+    "country_code": "UK",
+    "institution": "Open University",
+    "availability": "Unavailable",
+    "release_date": null,
+    "tons_produced_mt": null,
+    "notes": null,
+    "specific_gravity": null,
+    "lunar_sample_reference": "Early basaltic",
+    "bulk_density": null,
+    "cohesion": null,
+    "friction_angle": null,
+    "density_g_cm3": null,
+    "particle_size_d50": null,
+    "particle_size_distribution": null,
+    "particle_morphology": null,
+    "particle_ruggedness": null,
+    "glass_content_percent": null,
+    "nasa_fom_score": null,
+    "ti_content_percent": null,
+    "datasheet_url": null,
+    "composition_status": "withheld_unverified",
+    "composition_source_title": null,
+    "composition_source_url": null,
+    "composition_source_kind": null,
+    "composition_needs_review": 1,
+    "ph": null,
+    "angle_of_repose": null,
+    "particle_size_mean_um": null,
+    "bulk_density_range": null,
+    "magnetic_susceptibility": null,
+    "product_grade": null,
+    "datasheet_document_id": null,
+    "datasheet_date": null,
+    "datasheet_notes": null
+   }
+  ]
+ }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "simulant_id": "S025",
+    "field": "site",
+    "was": [
+      "Hudson Resources Inc.",
+      "Lab",
+      "USA",
+      61.2181,
+      -149.9003
+    ],
+    "now": [
+      "White Mountain Anorthosite Project (Qaqortorsuaq), Greenland",
+      "Mine",
+      "Greenland",
+      66.544,
+      -52.3085
+    ],
+    "action": "moved to the place its source states"
+  },
+  {
+    "simulant_id": "S157",
+    "field": "site",
+    "was": [
+      "X157",
+      "Russia",
+      55.7558,
+      37.6173
+    ],
+    "now": null,
+    "action": "removed: no document places FEFU-1 there (the Moscow point was a placeholder)",
+    "documented_places": [
+      "material: Gorely volcano, Kamchatka Krai",
+      "material: Baranovskiy volcano, Primorsky Krai",
+      "authors' address: Far Eastern Federal University, Russky Island, Vladivostok"
+    ]
+  },
+  {
+    "simulant_id": "S159",
+    "field": "type",
+    "was": null,
+    "now": "Highlands",
+    "reference_id": "RN-S159-1",
+    "action": "set from its source"
+  },
+  {
+    "simulant_id": "S160",
+    "field": "type",
+    "was": null,
+    "now": "Highlands",
+    "reference_id": "RN-S160-1",
+    "action": "set from its source"
+  },
+  {
+    "simulant_id": "S161",
+    "field": "type",
+    "was": null,
+    "now": "Highlands",
+    "reference_id": "RN-S161-1",
+    "action": "set from its source"
+  }
+]

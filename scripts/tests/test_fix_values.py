@@ -1,0 +1,273 @@
+"""Repairing values already stored as text, and citations that prove nothing.
+
+The same defect the apply step now refuses was already in the database on 2026-09-23:
+107 values that parse to one number were sitting as text, 22 more were not numbers at all,
+eight mineral rows were feedstock mixing ratios rather than minerals, and five references
+pointed at this project's own registry. The repair converts what can be converted, keeps
+the statement verbatim, removes the rest, and logs every change so none of it is lost.
+
+Run:  python3 -m unittest scripts.tests.test_fix_values
+"""
+
+import sqlite3
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from provenance import ensure_provenance_schema  # noqa: E402
+from fix_values import repair  # noqa: E402
+
+
+def make_db(path: Path) -> sqlite3.Connection:
+    con = sqlite3.connect(path)
+    con.executescript((ROOT / "scripts" / "schema.sql").read_text())
+    ensure_provenance_schema(con)
+    con.executemany("INSERT INTO simulants (simulant_id, name, composition_status, particle_size_d50) VALUES (?,?,?,?)", [
+        ("S1", "LX-M100", "verified", None), ("S2", "DNA-1", "verified", None), ("S3", "BH-1", "withheld_unverified", "38.22 μm"),
+        ("S4", "NAO-1", "verified", "41–61 µm (median; mean 53–81 µm)"), ("S5", "CMU-1", "verified", None)])
+    con.executemany("INSERT INTO references_ (reference_id, simulant_id, title, local_path, names_simulant) VALUES (?,?,?,?,?)", [
+        ("R1", "S1", "Patzwald 2025", "papers/LRS/lx.pdf", 1),
+        ("RN-S1-9", "S1", "Global Registry of Lunar Regolith Simulants (CSV compilation)", "papers/LRS/Sources/Global Registry of Lunar Regolith Simulants.html", 1),
+        ("R3", "S3", "BH-1 paper", None, 1), ("R4", "S4", "NAO-1 paper", None, 1), ("R5", "S5", "CMU-1 paper", None, 1)])
+    con.executemany("INSERT INTO chemical_compositions (composition_id, simulant_id, component_type, component_name, value_wt_pct, reference_id) VALUES (?,?,?,?,?,?)", [
+        ("CH1", "S1", "oxide", "SiO2", "49.96 ± 0.60 wt.-%", "R1"),
+        ("CH2", "S1", "oxide", "TiO2", 2.33, "R1"),
+        ("CH3", "S1", "oxide", "P2O5", "<0.02", "R1")])
+    con.executemany("INSERT INTO mineral_compositions (composition_id, simulant_id, component_type, component_name, value_pct, reference_id) VALUES (?,?,?,?,?,?)", [
+        ("C1", "S1", "mineral", "Plagioclase", "31 wt.-%", "R1"),
+        ("C2", "S2", "mineral", "Plagioclase", "present (checkmark, no wt% reported)", "R1"),
+        ("C3", "S5", "mineral", "Coal", 63.0, "R5"),
+        ("C4", "S5", "mineral", "Limestone", 37.0, "R5")])
+    con.executemany("INSERT INTO property_sources (simulant_id, field, reference_id, location, quote) VALUES (?,?,?,?,?)", [
+        ("S3", "particle_size_d50", "R3", "Table 2", "D50 38.22 μm"),
+        ("S4", "particle_size_d50", "R4", "p.54", "median 41–61 µm")])
+    con.commit()
+    return con
+
+
+class RepairTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.con = make_db(Path(self.tmp.name) / "lrs.sqlite")
+        self.log = repair(self.con, feedstock={("S5", "Coal"), ("S5", "Limestone")})
+
+    def tearDown(self):
+        self.con.close()
+        self.tmp.cleanup()
+
+    def one(self, sql, *a):
+        return self.con.execute(sql, a).fetchall()
+
+    def test_a_stated_number_becomes_a_number_and_keeps_its_statement(self):
+        self.assertEqual(self.one("SELECT value_wt_pct, typeof(value_wt_pct), value_text FROM chemical_compositions WHERE composition_id='CH1'"),
+                         [(49.96, "real", "49.96 ± 0.60 wt.-%")])
+        self.assertEqual(self.one("SELECT value_pct, value_text FROM mineral_compositions WHERE composition_id='C1'"), [(31.0, "31 wt.-%")])
+
+    def test_a_row_already_numeric_is_untouched(self):
+        self.assertEqual(self.one("SELECT value_wt_pct, value_text FROM chemical_compositions WHERE composition_id='CH2'"), [(2.33, None)])
+
+    def test_a_row_that_is_not_a_number_is_removed_and_logged_verbatim(self):
+        self.assertEqual(self.one("SELECT count(*) FROM chemical_compositions WHERE composition_id='CH3'"), [(0,)])
+        self.assertEqual(self.one("SELECT count(*) FROM mineral_compositions WHERE composition_id='C2'"), [(0,)])
+        gone = [e for e in self.log if e["action"] == "removed: not a single number"]
+        self.assertEqual({e["stated"] for e in gone}, {"<0.02", "present (checkmark, no wt% reported)"})
+        self.assertTrue(all(e["reference_id"] for e in gone))
+
+    def test_feedstock_ratios_leave_the_mineral_table(self):
+        self.assertEqual(self.one("SELECT count(*) FROM mineral_compositions WHERE simulant_id='S5'"), [(0,)])
+        self.assertEqual(sum(1 for e in self.log if e["action"] == "removed: feedstock ratio, not a mineral"), 2)
+
+    def test_a_numeric_property_stated_with_its_unit_is_parsed(self):
+        self.assertEqual(self.one("SELECT particle_size_d50, typeof(particle_size_d50) FROM simulants WHERE simulant_id='S3'"), [(38.22, "real")])
+        self.assertEqual(self.one("SELECT count(*) FROM property_sources WHERE simulant_id='S3'"), [(1,)])
+
+    def test_a_range_in_a_numeric_property_is_cleared_with_its_source_row(self):
+        self.assertEqual(self.one("SELECT particle_size_d50 FROM simulants WHERE simulant_id='S4'"), [(None,)])
+        self.assertEqual(self.one("SELECT count(*) FROM property_sources WHERE simulant_id='S4'"), [(0,)])
+        e = [e for e in self.log if e["action"] == "cleared: not a single number" and e["simulant_id"] == "S4"][0]
+        self.assertEqual(e["quote"], "median 41–61 µm")
+
+    def test_registry_citations_are_deleted(self):
+        self.assertEqual(self.one("SELECT count(*) FROM references_ WHERE reference_id='RN-S1-9'"), [(0,)])
+        self.assertEqual(self.one("SELECT count(*) FROM references_ WHERE reference_id='R1'"), [(1,)])
+        self.assertTrue(any(e["action"] == "deleted: the project's own registry is not evidence" for e in self.log))
+
+    def test_idempotent(self):
+        again = repair(self.con, feedstock={("S5", "Coal"), ("S5", "Limestone")})
+        self.assertEqual(again, [])
+
+
+class ColumnUnitRepairTests(unittest.TestCase):
+    """What was already stored with a unit is converted; what cannot be, is cleared and logged."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        con = sqlite3.connect(Path(self.tmp.name) / "lrs.sqlite")
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text())
+        ensure_provenance_schema(con)
+        con.executemany("INSERT INTO simulants (simulant_id, name, bulk_density, cohesion, friction_angle) VALUES (?,?,?,?,?)", [
+            ("S1", "TLH-0", "1.80 g/cm3", "2.896 kPa", "46.12 º"),
+            ("S2", "LX-M100", None, "185.2 Pa (AP-cohesive strength)", None),
+            ("S3", "QH-E", None, "3.1 kPa (low stress level); 18.80 kPa (conventional stress level)", "1.2"),
+        ])
+        con.execute("INSERT INTO references_ (reference_id, simulant_id, title) VALUES ('R3','S3','QH-E paper')")
+        con.execute("INSERT INTO property_sources (simulant_id, field, reference_id, quote) VALUES ('S3','cohesion','R3','3.1 kPa (low); 18.80 kPa')")
+        con.commit()
+        self.con = con
+        self.log = repair(con, feedstock=set())
+
+    def tearDown(self):
+        self.con.close(); self.tmp.cleanup()
+
+    def row(self, sid):
+        return self.con.execute("SELECT bulk_density, cohesion, friction_angle FROM simulants WHERE simulant_id=?", (sid,)).fetchone()
+
+    def test_units_are_stripped_into_the_column_unit(self):
+        bd, c, f = self.row("S1")
+        self.assertAlmostEqual(float(bd), 1.8); self.assertAlmostEqual(float(c), 2.896); self.assertAlmostEqual(float(f), 46.12)
+        self.assertAlmostEqual(float(self.row("S2")[1]), 0.1852)
+
+    def test_a_bare_number_is_left_alone(self):
+        self.assertEqual(self.row("S3")[2], "1.2")
+
+    def test_two_values_are_cleared_with_their_source_row(self):
+        self.assertIsNone(self.row("S3")[1])
+        self.assertEqual(self.con.execute("SELECT count(*) FROM property_sources WHERE simulant_id='S3' AND field='cohesion'").fetchone(), (0,))
+        self.assertTrue(any(e["action"] == "cleared: not a single number" and e["field"] == "cohesion" for e in self.log))
+
+
+class MixedTableRepairTests(unittest.TestCase):
+    """Tables already assembled from several documents keep one analysis; the rest is logged."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        con = sqlite3.connect(Path(self.tmp.name) / "lrs.sqlite")
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text())
+        ensure_provenance_schema(con)
+        con.execute("INSERT INTO simulants (simulant_id, name) VALUES ('S1','NU-LHT-2M')")
+        con.executemany("INSERT INTO references_ (reference_id, simulant_id, title, reference_type) VALUES (?,?,?,?)",
+                        [("RA", "S1", "Slabic 2024 guide", "report"), ("RB", "S1", "Rickman 2024 NUW-LHT-5M", "general")])
+        con.executemany("INSERT INTO chemical_compositions (composition_id, simulant_id, component_type, component_name, value_wt_pct, reference_id) VALUES (?,?,?,?,?,?)",
+                        # RA is NU-LHT-2M's complete analysis as the guide prints it (99.2%); RB grafts on
+                        # another paper's Cr2O3 and total iron.
+                        [("C1", "S1", "oxide", "SiO2", 47.0, "RA"), ("C2", "S1", "oxide", "Al2O3", 24.5, "RA"), ("C3", "S1", "oxide", "FeO", 3.7, "RA"),
+                         ("C6", "S1", "oxide", "CaO", 13.6, "RA"), ("C7", "S1", "oxide", "MgO", 8.4, "RA"), ("C8", "S1", "oxide", "Na2O", 1.5, "RA"),
+                         ("C9", "S1", "oxide", "TiO2", 0.4, "RA"), ("C10", "S1", "oxide", "K2O", 0.1, "RA"),
+                         ("C4", "S1", "oxide", "Cr2O3", 0.1, "RB"), ("C5", "S1", "oxide", "Fe2O3", 4.15, "RB")])
+        con.commit()
+        self.con = con
+        self.log = repair(con, feedstock=set())
+
+    def tearDown(self):
+        self.con.close(); self.tmp.cleanup()
+
+    def test_the_analysis_with_most_rows_is_kept(self):
+        self.assertEqual({r[0] for r in self.con.execute("SELECT reference_id FROM chemical_compositions WHERE simulant_id='S1'")}, {"RA"})
+        self.assertEqual(self.con.execute("SELECT count(*) FROM chemical_compositions WHERE simulant_id='S1'").fetchone(), (8,))
+
+    def test_the_other_documents_rows_are_logged_with_their_values(self):
+        moved = [e for e in self.log if e["action"] == "removed: a second document's analysis"]
+        self.assertEqual({(e["component"], e["stated"], e["reference_id"]) for e in moved}, {("Cr2O3", 0.1, "RB"), ("Fe2O3", 4.15, "RB")})
+
+
+class PiecemealAnalysisTests(unittest.TestCase):
+    """One analysis cited across several documents is not a merge, and must survive.
+
+    Engelschiøn 2020's EAC-1 XRF table is reproduced in later papers, and readers cited each
+    row to whichever paper they found it in: SiO2, MgO, TiO2 to one, Al2O3, Fe2O3, CaO to
+    another — disjoint components, 98.4% together. BH-1's paper omitted iron and its
+    corrigendum supplies it. A graft is different: one document is already a complete
+    analysis and another adds rows on top of it (NU-LHT-2M, 99.2% + 4.4%).
+    """
+
+    def build(self, rows):
+        tmp = tempfile.TemporaryDirectory(); self.addCleanup(tmp.cleanup)
+        con = sqlite3.connect(Path(tmp.name) / "lrs.sqlite"); self.addCleanup(con.close)
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text()); ensure_provenance_schema(con)
+        con.execute("INSERT INTO simulants (simulant_id, name) VALUES ('S1','X')")
+        for rid in {r[2] for r in rows}:
+            con.execute("INSERT INTO references_ (reference_id, simulant_id, title) VALUES (?, 'S1', ?)", (rid, rid))
+        con.executemany("INSERT INTO chemical_compositions (composition_id, simulant_id, component_type, component_name, value_wt_pct, reference_id) "
+                        "VALUES (?, 'S1', 'oxide', ?, ?, ?)", [(f"C{i}", n, v, rid) for i, (n, v, rid) in enumerate(rows)])
+        con.commit()
+        return con, repair(con, feedstock=set())
+
+    def test_disjoint_fragments_of_one_analysis_are_all_kept(self):
+        con, log = self.build([("SiO2", 43.7, "RA"), ("MgO", 11.9, "RA"), ("TiO2", 2.4, "RA"),
+                               ("Al2O3", 12.6, "RB"), ("Fe2O3", 12.0, "RB"), ("CaO", 10.8, "RB"), ("Na2O", 2.9, "RB")])
+        self.assertEqual(con.execute("SELECT count(*) FROM chemical_compositions").fetchone(), (7,))
+        self.assertTrue(any(e["action"] == "kept: one analysis cited across several documents" for e in log))
+
+    def test_a_paper_and_its_corrigendum_are_kept_together(self):
+        con, _ = self.build([("SiO2", 43.3, "RA"), ("Al2O3", 16.5, "RA"), ("CaO", 8.8, "RA"), ("MgO", 3.0, "RA"),
+                             ("Na2O", 3.8, "RA"), ("K2O", 3.3, "RA"), ("TiO2", 2.9, "RA"), ("Fe2O3", 16.7, "RC")])
+        self.assertEqual(con.execute("SELECT count(*) FROM chemical_compositions").fetchone(), (8,))
+
+    def test_of_two_complete_analyses_the_one_nearest_100_is_kept(self):
+        con, _ = self.build([("SiO2", 47.0, "RA"), ("Al2O3", 24.5, "RA"), ("CaO", 25.0, "RA"),
+                             ("SiO2", 46.0, "RB"), ("Al2O3", 30.0, "RB"), ("CaO", 30.0, "RB")])
+        self.assertEqual({r[0] for r in con.execute("SELECT reference_id FROM chemical_compositions")}, {"RA"})
+
+
+class ForeignCitationRepairTests(unittest.TestCase):
+    """A value citing another simulant's reference row is moved to its own row for the same
+    document; with no such row its source is dropped, so the page hides the value."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        con = sqlite3.connect(Path(self.tmp.name) / "lrs.sqlite")
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text()); ensure_provenance_schema(con)
+        con.executemany("INSERT INTO simulants (simulant_id, name, lunar_sample_reference, institution) VALUES (?,?,?,?)",
+                        [("S1", "MLS-1", "High-Ti Mare", "Univ. of Minnesota"), ("S2", "MLS-2", None, "NASA-MSFC and USGS\r")])
+        con.executemany("INSERT INTO references_ (reference_id, simulant_id, title, doi) VALUES (?,?,?,?)", [
+            ("R66", "S2", "Evaluations of lunar regolith simulants", "10.1/x"),
+            ("RN-S1-6", "S1", "Evaluations of lunar regolith simulants [= existing ref]", None),
+            ("R70", "S2", "A paper only MLS-2 lists", None)])
+        con.executemany("INSERT INTO property_sources (simulant_id, field, reference_id, quote) VALUES (?,?,?,?)",
+                        [("S1", "lunar_sample_reference", "R66", "high-Ti basaltic soils"), ("S1", "institution", "R70", "Minnesota")])
+        con.commit()
+        self.con = con
+        self.log = repair(con, feedstock=set())
+
+    def tearDown(self):
+        self.con.close(); self.tmp.cleanup()
+
+    def test_moved_to_its_own_row_for_the_same_document(self):
+        self.assertEqual(self.con.execute("SELECT reference_id FROM property_sources WHERE simulant_id='S1' AND field='lunar_sample_reference'").fetchone(), ("RN-S1-6",))
+
+    def test_dropped_when_it_has_no_row_for_that_document(self):
+        self.assertEqual(self.con.execute("SELECT count(*) FROM property_sources WHERE simulant_id='S1' AND field='institution'").fetchone(), (0,))
+
+    def test_stray_whitespace_is_stripped_from_single_line_fields(self):
+        self.assertEqual(self.con.execute("SELECT institution FROM simulants WHERE simulant_id='S2'").fetchone(), ("NASA-MSFC and USGS",))
+
+
+class DuplicateReferenceMergeTests(unittest.TestCase):
+    """The same document listed twice under one simulant is merged: citations move to the row
+    kept, the other row goes, so the page numbers it once."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        con = sqlite3.connect(Path(self.tmp.name) / "lrs.sqlite")
+        con.executescript((ROOT / "scripts" / "schema.sql").read_text()); ensure_provenance_schema(con)
+        con.execute("INSERT INTO simulants (simulant_id, name, cohesion) VALUES ('S1','CUMT-1','16.9')")
+        con.executemany("INSERT INTO references_ (reference_id, simulant_id, title, doi, names_simulant, year) VALUES (?,?,?,?,?,?)",
+                        [("R013", "S1", "CUMT-1 paper", "10.1016/j.ijmst.2021.09.003", 1, 2022),
+                         ("R108", "S1", "CUMT-1 paper (dup)", "10.1016/j.ijmst.2021.09.003", 1, 0)])
+        con.execute("INSERT INTO property_sources (simulant_id, field, reference_id, quote) VALUES ('S1','cohesion','R108','16.93 kPa')")
+        con.execute("INSERT INTO chemical_compositions (composition_id, simulant_id, component_type, component_name, value_wt_pct, reference_id) VALUES ('C1','S1','oxide','SiO2',47.0,'R108')")
+        con.commit(); self.con = con
+        self.log = repair(con, feedstock=set())
+
+    def tearDown(self):
+        self.con.close(); self.tmp.cleanup()
+
+    def test_one_row_remains_and_everything_cites_it(self):
+        self.assertEqual([r[0] for r in self.con.execute("SELECT reference_id FROM references_")], ["R013"])
+        self.assertEqual(self.con.execute("SELECT reference_id FROM property_sources").fetchone(), ("R013",))
+        self.assertEqual(self.con.execute("SELECT reference_id FROM chemical_compositions").fetchone(), ("R013",))
+        self.assertTrue(any(e["action"] == "merged: the same document listed twice" for e in self.log))

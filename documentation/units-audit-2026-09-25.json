@@ -1,0 +1,1200 @@
+{
+ "find:properties": {
+  "checked": 280,
+  "findings": [
+   {
+    "simulant_id": "S040",
+    "name": "LX-M100",
+    "field": "cohesion",
+    "reference_id": "RN-S040-1",
+    "shown": "0.1852 kPa (right panel 'Cohesion'; table 'Cohesion (kPa)')",
+    "stated": "\"LX-M100 with 185.2 Pa\" (AP-cohesive strength, Anton Paar powder-cell rheometer)",
+    "problem": "label_wrong",
+    "explanation": "Pa to kPa is converted correctly, but the quantity is different. The paper measures an 'AP-cohesive strength' from rheometer torque (S = M x CSS, Sec. 2.2.5) and says 'the method does not give an intrinsic absolute value' (p.8). The page's Cohesion is 'shear strength at zero normal stress' (Mohr-Coulomb). The source disowns an absolute value and describes something else, so the owner's rule says remove it.",
+    "proposed": "omit"
+   },
+   {
+    "simulant_id": "S041",
+    "name": "LX-T100",
+    "field": "cohesion",
+    "reference_id": "RN-S041-1",
+    "shown": "0.2572 kPa",
+    "stated": "\"LX-T100 with 257.2 Pa\" (AP-cohesive strength, rheometer)",
+    "problem": "label_wrong",
+    "explanation": "Same as LX-M100. The conversion is correct, but a rheometer 'AP-cohesive strength', which the authors say is not an intrinsic absolute value, is shown as Mohr-Coulomb cohesion.",
+    "proposed": "omit"
+   },
+   {
+    "simulant_id": "S138",
+    "name": "LX-I50",
+    "field": "cohesion",
+    "reference_id": "RN-S138-1",
+    "shown": "0.2143 kPa",
+    "stated": "\"LX-I50 with 214.3 Pa\" (AP-cohesive strength, rheometer)",
+    "problem": "label_wrong",
+    "explanation": "Same as LX-M100. The conversion is correct, but a rheometer 'AP-cohesive strength' is shown as Cohesion (shear strength at zero normal stress).",
+    "proposed": "omit"
+   },
+   {
+    "simulant_id": "S037",
+    "name": "LMS-1",
+    "field": "magnetic_susceptibility",
+    "reference_id": "RN-S037-2",
+    "shown": "3.43 (no unit; label 'Magnetic Susceptibility')",
+    "stated": "User's Guide Rev A Table 22 'Lunar Simulant MS Values (log(χ) with χ in 10-9 m3/kg)': LMS-1 3.43",
+    "problem": "mixed_basis_in_table",
+    "explanation": "The value is log10(χ), not χ. The page shows it bare under 'Magnetic Susceptibility'. In the same field, TLH-0 and TLM-0 show linear χ ('4495.7 x10-9 m3/kg'), so readers see 3.43 next to 4495.7 for the same property. Checked in the PDF: the Table 22 header states log(χ).",
+    "proposed": "log(χ) = 3.43, χ in 10⁻⁹ m³/kg"
+   },
+   {
+    "simulant_id": "S043",
+    "name": "MLS-1",
+    "field": "magnetic_susceptibility",
+    "reference_id": "R090",
+    "shown": "4.01 (no unit)",
+    "stated": "User's Guide Rev A Table 22 (log(χ) with χ in 10-9 m3/kg): MLS-1 4.01",
+    "problem": "mixed_basis_in_table",
+    "explanation": "This is a log10(χ) value shown bare as magnetic susceptibility, in the same field as linear χ values in x10-9 m3/kg (TLH-0, TLM-0). R090 has no local_path; I checked it against the same NASA/TM-20240011783 PDF used by RN-S006-1.",
+    "proposed": "log(χ) = 4.01, χ in 10⁻⁹ m³/kg"
+   },
+   {
+    "simulant_id": "S043",
+    "name": "MLS-1",
+    "field": "ti_content_percent",
+    "reference_id": "R090",
+    "shown": "6.8 % (label 'Ti Content')",
+    "stated": "User's Guide Table 7 'Lunar Simulant Bulk Chemistry (wt. %)', TiO2 column: MLS-1 6.8",
+    "problem": "label_wrong",
+    "explanation": "6.8 is TiO2 wt% (the columns run SiO2 42.8, TiO2 6.8, Al2O3 12.1 ...), not elemental Ti. 6.8 % shown as 'Ti Content' overstates Ti by about 1.67x, because TiO2 is 59.9 % Ti. The source never states elemental Ti.",
+    "proposed": "TiO2 6.8 wt% (relabel), otherwise omit"
+   },
+   {
+    "simulant_id": "S045",
+    "name": "NAO-1",
+    "field": "bulk_density",
+    "reference_id": "R095",
+    "shown": "1.93 g/cm³ (table column help: 'loose material, pore space included')",
+    "stated": "\"the experiment sample made from NAO-1 which has a density of 1.93 g / cm3, which is almost equal to the maximum relative density of NAO-1\"",
+    "problem": "label_wrong",
+    "explanation": "The unit is right, but the value is the density of a compacted triaxial test specimen near maximum density. It is not the bulk density of the simulant, and not a loose one. The paper gives no loose bulk density.",
+    "proposed": "omit"
+   },
+   {
+    "simulant_id": "S024",
+    "name": "GRC-1",
+    "field": "angle_of_repose",
+    "reference_id": "RN-S024-1",
+    "shown": "35.3 ± 0.711 (no unit)",
+    "stated": "\"approximately 35.3o with a standard deviation of ± 0.711o\" (degrees)",
+    "problem": "unit_missing",
+    "explanation": "The angle_of_repose label has an empty unit and relies on the text to carry '°'. This is the only one of 16 values without it, so it shows as a bare number.",
+    "proposed": "35.3 ± 0.711°"
+   },
+   {
+    "simulant_id": "S065",
+    "name": "TLH-0",
+    "field": "nasa_fom_score",
+    "reference_id": "DS-S065-v1.4",
+    "shown": "88.7 (no unit)",
+    "stated": "\"Mean NASA FoM Score: 88.7%\"",
+    "problem": "unit_missing",
+    "explanation": "The source states a percentage. The page prints a bare 88.7 under 'NASA FoM Score', a score that can also be on a 0-1 scale (as FigureOfMeritSection's own help says).",
+    "proposed": "88.7 %"
+   },
+   {
+    "simulant_id": "S066",
+    "name": "TLM-0",
+    "field": "nasa_fom_score",
+    "reference_id": "DS-S066-v2.2",
+    "shown": "90.9 (no unit)",
+    "stated": "\"Mean NASA FoM Score: 90.9 %\"",
+    "problem": "unit_missing",
+    "explanation": "A percentage in the source, shown bare.",
+    "proposed": "90.9 %"
+   },
+   {
+    "simulant_id": "S026",
+    "name": "JLU-H",
+    "field": "particle_size_distribution",
+    "reference_id": "RN-S026-1",
+    "shown": "up to 50 mm μm",
+    "stated": "\"contains some coarse particles up to 50 mm in size\"",
+    "problem": "label_wrong",
+    "explanation": "PROP_CONFIG appends 'μm' to every PSD string. This value is in mm, so the page shows mm and μm together, contradicting itself.",
+    "proposed": "up to 50 mm (no μm suffix)"
+   },
+   {
+    "simulant_id": "S027",
+    "name": "JSC-1",
+    "field": "particle_size_distribution",
+    "reference_id": "RN-S027-4",
+    "shown": "<1mm μm",
+    "stated": "\"with all particles < 1 mm\"",
+    "problem": "label_wrong",
+    "explanation": "The value is in mm and the page appends μm.",
+    "proposed": "< 1 mm (no μm suffix)"
+   },
+   {
+    "simulant_id": "S028",
+    "name": "JSC-1A",
+    "field": "particle_size_distribution",
+    "reference_id": "RN-S028-2",
+    "shown": "<1mm μm",
+    "stated": "\"JSC-1A is 1 mm particle size and lower\"",
+    "problem": "label_wrong",
+    "explanation": "The value is in mm and the page appends μm.",
+    "proposed": "≤ 1 mm (no μm suffix)"
+   },
+   {
+    "simulant_id": "S029",
+    "name": "JSC-1AC",
+    "field": "particle_size_distribution",
+    "reference_id": "RN-S029-2",
+    "shown": "1 mm – 5 mm μm",
+    "stated": "\"has grain sizes between 1mm and 5 mm\"",
+    "problem": "label_wrong",
+    "explanation": "The value is in mm and the page appends μm.",
+    "proposed": "1 mm – 5 mm (no μm suffix)"
+   },
+   {
+    "simulant_id": "S051",
+    "name": "NU-LHT-2M",
+    "field": "particle_size_distribution",
+    "reference_id": "R043",
+    "shown": "<1 mm μm",
+    "stated": "\"would not contain particles greater than 1 mm\"",
+    "problem": "label_wrong",
+    "explanation": "The value is in mm and the page appends μm.",
+    "proposed": "< 1 mm (no μm suffix)"
+   },
+   {
+    "simulant_id": "S008",
+    "name": "CHENOBI",
+    "field": "particle_size_distribution",
+    "reference_id": "RN-S008-1",
+    "shown": "Uniformity coefficient Cu=3.68, Curvature coefficient Cc=0.66 μm",
+    "stated": "\"CHENOBI 3.68 0.66 [coefficient Cu / Curvature Cc]\" (dimensionless)",
+    "problem": "label_wrong",
+    "explanation": "Cu and Cc are dimensionless ratios, but the page appends μm so that 0.66 reads as a size. They are also not a size distribution or range.",
+    "proposed": "Cu = 3.68, Cc = 0.66 (dimensionless, no μm suffix)"
+   },
+   {
+    "simulant_id": "S014",
+    "name": "DNA-1",
+    "field": "particle_size_distribution",
+    "reference_id": "RN-S014-2",
+    "shown": "large particle size distribution μm",
+    "stated": "\"lunar soils are angular, sharp and have a large particle size distribution, qualities which are reflected in the simulant soils\"",
+    "problem": "label_wrong",
+    "explanation": "This is a qualitative phrase with no size in it, followed by μm. The sentence describes lunar soils, and the simulant only by reflection. No PSD value is stated.",
+    "proposed": "omit"
+   },
+   {
+    "simulant_id": "S057",
+    "name": "OPRH2N",
+    "field": "particle_size_distribution",
+    "reference_id": "DS-S057",
+    "shown": "Cumulative, % by mass coarser than: 4750.0 µm 0.65; ... 1.0 µm 100.00 μm",
+    "stated": "OPR data sheet table 'Coarser Than Microns by Mass (%)': 4750.0 0.65 ... 1.0 100.00",
+    "problem": "label_wrong",
+    "explanation": "The string already carries its units. The μm suffix lands after the last number, which is a mass percentage (100.00 %), so the page reads '100.00 μm'.",
+    "proposed": "same text without the trailing μm"
+   },
+   {
+    "simulant_id": "S058",
+    "name": "OPRH3N",
+    "field": "particle_size_distribution",
+    "reference_id": "DS-S058",
+    "shown": "... 1.0 µm 100.00 μm",
+    "stated": "'Coarser Than Microns by Mass (%)': ... 1.0 100.00",
+    "problem": "label_wrong",
+    "explanation": "The trailing μm is attached to a mass percentage.",
+    "proposed": "same text without the trailing μm"
+   },
+   {
+    "simulant_id": "S059",
+    "name": "OPRH4N",
+    "field": "particle_size_distribution",
+    "reference_id": "DS-S059",
+    "shown": "... 1.0 µm 100.00 μm",
+    "stated": "'Coarser Than Microns by Mass (%)': ... 1.0 100.00",
+    "problem": "label_wrong",
+    "explanation": "The trailing μm is attached to a mass percentage.",
+    "proposed": "same text without the trailing μm"
+   },
+   {
+    "simulant_id": "S060",
+    "name": "OPRL2N",
+    "field": "particle_size_distribution",
+    "reference_id": "DS-S060",
+    "shown": "... 1.0 µm 100.00 μm",
+    "stated": "'Coarser Than Microns by Mass (%)': ... 1.0 100.00",
+    "problem": "label_wrong",
+    "explanation": "The trailing μm is attached to a mass percentage.",
+    "proposed": "same text without the trailing μm"
+   }
+  ],
+  "systemic": [
+   "src/components/panels/PhysicalPropertiesSection.tsx:17 (rendered at :57): particle_size_distribution has unit 'μm', which is appended to free-text values that already carry their own unit. Of 37 values, 30 end up with a doubled unit ('<0.04 – 1000 µm μm', '0–90 μm μm', 'Q25 21.5 µm, ... Q75 128.4 µm μm', 'up to 100000 µm μm'; for the 4 OPR ones the μm lands on a mass %). 5 are in mm ('<1mm μm', '1 mm – 5 mm μm', 'up to 50 mm μm'). 2 have no size (Cu/Cc ratios; 'large particle size distribution'). The unit should be '' for this text field, as it already is for bulk_density_range and angle_of_repose.",
+   "src/components/panels/PhysicalPropertiesSection.tsx:18: magnetic_susceptibility (unit '') holds two bases in one field: log10(χ) with χ in 10⁻⁹ m³/kg (LMS-1 3.43 and MLS-1 4.01, from User's Guide Table 22) and linear χ ('4495.7 x10-9 m3/kg', '7279.5 x10-9 m3/kg', from Hispansion TDS). Nothing on the page says which is which.",
+   "src/components/panels/PhysicalPropertiesSection.tsx:23 and src/utils/csv.ts:39: 'Ti Content (%)' is filled from the TiO2 wt% oxide column of User's Guide Table 7. TiO2 is not Ti.",
+   "src/components/panels/PhysicalPropertiesSection.tsx:22 and src/components/panels/ComparisonPanel.tsx:49: nasa_fom_score has no unit, but both stored values are percentages ('88.7%', '90.9 %'). FigureOfMeritSection.tsx:52 says FoM scores come on either 0–1 or 0–100 scales, so a bare 88.7 is ambiguous.",
+   "src/components/panels/PhysicalPropertiesSection.tsx:13: angle_of_repose has unit '' and relies on each string carrying '°'. GRC-1's '35.3 ± 0.711' does not, so it shows with no unit.",
+   "src/components/table/SimulantTable.tsx:26: the Bulk Dens. column help says 'loose material', but bulk_density also stores other packings: a compacted triaxial-specimen density near maximum (NAO-1 1.93), 'density at optimal packing' (JSC-2A 1.44, NU-LHT-3M 1.54), densities under 3 kPa load (TUBS-T 1.33, TUBS-I 1.43) and the arithmetic mean of min and max density (Hispansion TLH-0 1.80 = (1.45+2.14)/2, TLM-0 1.67 = (1.33+2.01)/2). The help text or the stored values should be brought in line.",
+   "scripts/parse_value.py:76: COLUMN_UNITS['cohesion'] converts any value stated in 'Pa' to kPa without checking what the quantity is. That is how the LX rheometer 'AP-cohesive strength' (185.2 / 214.3 / 257.2 Pa) became 'Cohesion' in kPa. The arithmetic is right; the quantity is not (see findings)."
+  ],
+  "notes": "Scope and count: I checked 280 non-empty displayed scalar values in data.json across 17 fields: bulk_density 32, bulk_density_range 10, specific_gravity 18, density_g_cm3 10, particle_size_d50 42, particle_size_mean_um 6, particle_size_distribution 37, cohesion 37, friction_angle 30, angle_of_repose 16, ph 11, magnetic_susceptibility 4, glass_content_percent 12, ti_content_percent 1, nasa_fom_score 2, particle_morphology 10, and particle_ruggedness 2 (also in PROP_CONFIG). simulant_extra.grain_size_mm is null for all 145 rows, so none is shown. One of the 280, EAC-1A glass 0.0, is hidden in every view by DataContext.tsx's `Number(x) || undefined`. NU-LHT-2M cohesion 0.0 is hidden in the right panel but shows as '0' in the table.\n\ndata.json matches lrs.sqlite for every exported value and all 560 property_sources rows. The export nulls 79 SQLite scalars that have no source row. A script flagged the doubtful values. I then read the sources: User's Guide Rev A Tables 7, 10, 19 and 22; the 2022 Lunar Simulant Assessment Tables 3 and 4; Roth 2025 LPSC; Ryu 2018 Table 5; LX Part 1 Tables 8 and 10, and LX Part 2 Sec. 2.2.5 and p.8; IGG-01 Table 7; the Engineering review Table 2; Liu 2024 Table 5; Zemeny 2024 Table 2; NAO-1 2009; CUMT-1 Table 3; PolyU-1 Table 6; the OPR data sheet; the Hispansion TLH-0/TLM-0 TDS; Linke 2022 Table A3.\n\nConfirmed correct, no finding:\n- Every Pa→kPa conversion (LX, TUBS 349.67/642.67/584.33 Pa).\n- CUMT-1 d50 0.077 mm → 77 µm.\n- EAC-1A d50 6.47 ϕ ≈ 11 µm.\n- NU-LHT-2C 10 cm → 100000 µm.\n- AGK-2010 and CHENOBI kg/l → g/cm³.\n- Lumina 'dry unit weight' ranges. Their table header says g/cm3, and the text gives 9.26/15.43 kN/m³, which ÷ 9.81 = 0.94/1.57 g/cm³.\n- All kPa cohesions from User's Guide Table 19, Stockstill Table 4 and Roth Table 4; FJS-1 8.13 kPa; TJ-1 D50 260 µm; ZJM-01 d50 19.26 µm.\n- No magnitude outlier in any field.\n\nCaveats I did not flag, because the unit is right:\n- CUMT-1 and PolyU-1 'Density 3.45 / 3.17 g/cm³' are the dimensionless Gs values, also shown as SG. Gs × ρw is a valid conversion.\n- Several specific_gravity values come from densities quoted in g/cm³ (JSC-1A, JSC-2A, TUBS-M/T, LMS-1E, OB-1, NAO-1, IGG-01, UoM-B). Numerically equivalent.\n- TUBS cohesion is the yield-locus value at 3 kPa pre-shear stress; it rises to 1.9–2.8 kPa at 25 kPa. The page does not say which level.\n- UoM-B cohesion is printed '3.43 ± 12.45' kPa in the source (SD larger than the mean).\n- JSC-1 glass 50 % rests on 'half the volume of a typical particle is glass'.\n- LX d50 is the dry-sieving value. The four methods give 63.7–536.6 µm.\n\nThe relayed user request (show the version on the loading screen) is a code change addressed to the main session. It is outside this read-only audit and was not acted on. Nothing in the repository, database or sources was modified. Scratch files are under /private/tmp/claude-501/-Volumes-Extreme-SSD-Spring---Forest-on-the-moon/c419eb20-9d70-4d28-bb19-397156c1b594/scratchpad/ (ua_*.py, ua_dump.txt, ua_*.txt source extracts)."
+ },
+ "verify:properties": {
+  "verdicts": [
+   {
+    "simulant_id": "S040",
+    "field": "cohesion",
+    "verdict": "CONFIRMED",
+    "correct": "omit",
+    "document_quote": "p.8: \"The highest AP-cohesive strength was found for LX-T100 with 257.2 Pa, followed by LX-I50 with 214.3 Pa and LX-M100 with 185.2 Pa.\" ... \"it must be noted that the method does not give an intrinsic absolute value, as the recorded torque is influenced by the material's density, the impeller's depth, and the quantity of overbearing materials during the measurement\"",
+    "note": "Opened papers/LRS/1-s2.0-S0032063325001564-main.pdf (Patzwald et al. 2025, Part 2). The Pa to kPa conversion is right. Sec. 2.2.5 gets the number from rheometer torque (S = M x CSS) in a fluidised powder, and p.8 says outright that it is not an absolute value. In the same paper's direct-shear analysis (Figs. 10-11) cohesion is forced to 0 kPa. One counterpoint: the authors do call these 'cohesion values of 180–260 Pa' (p.9) and compare them with lunar-soil Mohr-Coulomb cohesion in the conclusions, so 'describes something else' is overstated. Still, the source says the number is not absolute, which falls under the owner's 'source disowns it' rule, so the value should go."
+   },
+   {
+    "simulant_id": "S041",
+    "field": "cohesion",
+    "verdict": "CONFIRMED",
+    "correct": "omit",
+    "document_quote": "\"The highest AP-cohesive strength was found for LX-T100 with 257.2 Pa\" ... \"the method does not give an intrinsic absolute value\" (p.8)",
+    "note": "Same source, method and caveat as S040. 257.2 Pa = 0.2572 kPa, so the arithmetic is right. The quantity is a rheometer AP-cohesive strength that the authors say is not absolute, so it should not appear as Cohesion. Omit."
+   },
+   {
+    "simulant_id": "S138",
+    "field": "cohesion",
+    "verdict": "CONFIRMED",
+    "correct": "omit",
+    "document_quote": "\"followed by LX-I50 with 214.3 Pa\" ... \"the method does not give an intrinsic absolute value\" (p.8)",
+    "note": "Same as S040 and S041. The conversion is right, but the quantity is disowned as an absolute value. Omit."
+   },
+   {
+    "simulant_id": "S037",
+    "field": "magnetic_susceptibility",
+    "verdict": "CONFIRMED",
+    "correct": "log(χ) = 3.43, χ in 10⁻⁹ m³/kg",
+    "document_quote": "Table 22. \"Lunar Simulant MS Values (log(χ) with χ in 10-9m3/kg)\" ... \"LMS-1   Low-Ti Mare   3.43   SDL, 2023 (JSC-ARES)\"",
+    "note": "Opened Lunar_Regolith_Simulant_Users_Guide_Rev_A_28OCT.pdf (NASA/TM-20240011783), Table 22, printed p.51. The value is a logarithm. The page shows a bare '3.43' under 'Mass magnetic susceptibility', in the same field where TLH-0 and TLM-0 show linear χ ('4495.7 x10-9 m3/kg', which I confirmed in the Hispansion TDS). The number is right; the basis and unit are missing."
+   },
+   {
+    "simulant_id": "S043",
+    "field": "magnetic_susceptibility",
+    "verdict": "CONFIRMED",
+    "correct": "log(χ) = 4.01, χ in 10⁻⁹ m³/kg",
+    "document_quote": "Table 22 header \"log(χ) with χ in 10-9m3/kg\"; row \"MLS-1   High-Ti Mare   4.01   SDL, 2023 (JSC-ARES)\"",
+    "note": "R090 has no local_path, but its URL (ntrs.nasa.gov/citations/20240011783) is the same NASA/TM-20240011783 User's Guide Rev A. I read Table 22 in the local PDF. It is a log value shown bare, as for LMS-1."
+   },
+   {
+    "simulant_id": "S043",
+    "field": "ti_content_percent",
+    "verdict": "CONFIRMED",
+    "correct": "omit",
+    "document_quote": "Table 7 \"Lunar Simulant Bulk Chemistry (wt. %)\" columns \"SiO2 TiO2 Al2O3 FeO MgO CaO Na2O K2O\"; row \"MLS-1  High-Ti Mare  42.8  6.8  12.1  16.3  6.2  11.1  2.2  0.2  Weiblen and Gordon 1988\"",
+    "note": "6.8 is TiO2 wt% (User's Guide Table 7, printed p.34). The guide never states elemental Ti; the equivalent Ti would be about 4.08 wt%. 'Ti Content 6.8 %' is therefore wrong. Relabelling it as TiO2 would only repeat the chemistry row CH-S043-02 (TiO2 6.8, R090) that is already on the page. So the Ti Content value should go."
+   },
+   {
+    "simulant_id": "S045",
+    "field": "bulk_density",
+    "verdict": "CONFIRMED",
+    "correct": "omit",
+    "document_quote": "\"The cohesion value of NAO-1 seems bigger than lunar soil and JSC-1, that is because those results represent the experiment sample made from NAO-1 which has a density of 1.93 g / cm3, which is almost equal to the maximum relative density of NAO-1. We assume that the cohesion of NAO-1 is about 0.\"",
+    "note": "Opened papers/LRS/NAO-1LunarHighlandSoilSimulantDevelopedinChina.pdf (Li et al. 2009). 1.93 g/cm³ is the density of the compacted triaxial (CTC) specimen, near maximum density. The authors raise it only to explain why their cohesion value is not representative. The paper gives no other bulk, minimum or loose density; a search for 'bulk', 'minimum', 'void' and 'porosity' finds nothing. The table help calls bulk density 'loose material', so as displayed the value is unsupported. The unit itself is right."
+   },
+   {
+    "simulant_id": "S024",
+    "field": "angle_of_repose",
+    "verdict": "CONFIRMED",
+    "correct": "35.3 ± 0.711°",
+    "document_quote": "\"The average angle of repose for GRC-1 is approximately 35.3o with a standard deviation of ± 0.711o.\"",
+    "note": "Opened papers/LRS/case1269272964.pdf. The 'o' is a superscript degree sign, and the context is Hele-Shaw cell angle-of-repose tests (Ovarec 2008). PROP_CONFIG gives angle_of_repose unit '', and the stored string has no '°', so the page shows a bare number. This holds in both the committed code and the working tree."
+   },
+   {
+    "simulant_id": "S065",
+    "field": "nasa_fom_score",
+    "verdict": "CONFIRMED",
+    "correct": "88.7 %",
+    "document_quote": "\"❖ Mean NASA FoM Score: 88.7%\"",
+    "note": "Hispansion TLH-0 TDS v1.4, p.1. PROP_CONFIG unit is '', so the right panel shows a bare 88.7. The Figures of Merit table shows the same score as '88.7%' (score_text), so the two sections of the page disagree. The number is right; the % is missing."
+   },
+   {
+    "simulant_id": "S066",
+    "field": "nasa_fom_score",
+    "verdict": "CONFIRMED",
+    "correct": "90.9 %",
+    "document_quote": "\"❖ Mean NASA FoM Score: 90.9 %\"",
+    "note": "Hispansion TLM-0 TDS v2.2, p.1. Same issue as S065: the number is right, the % is missing."
+   },
+   {
+    "simulant_id": "S026",
+    "field": "particle_size_distribution",
+    "verdict": "CONFIRMED",
+    "correct": "up to 50 mm",
+    "document_quote": "\"JLU-H is a geotechnical highland simulant from Jilin University Changchun consisting of anorthosite and contains some coarse particles up to 50 mm in size [72].\"",
+    "note": "Quote confirmed in LX Part 1 (1-s2.0-S0094576525001109-main.pdf); the paper cites it from [72], so it is second-hand. In committed HEAD (25967ec, v2.9.19, the live page) line 57 always appends 'μm', so the page reads 'up to 50 mm μm'. The uncommitted working tree added statesOwnUnit() (PhysicalPropertiesSection.tsx:28, :63), which drops the suffix because the string contains letters. Once that change ships, this is fixed."
+   },
+   {
+    "simulant_id": "S027",
+    "field": "particle_size_distribution",
+    "verdict": "CONFIRMED",
+    "correct": "< 1 mm",
+    "document_quote": "\"The primary limitation of JSC-1 is its restricted PSD, with all particles < 1 mm.\"",
+    "note": "Confirmed in User's Guide Rev A, Sec. 3.3. The live HEAD shows '<1mm μm'; the working-tree statesOwnUnit guard removes the μm."
+   },
+   {
+    "simulant_id": "S028",
+    "field": "particle_size_distribution",
+    "verdict": "CONFIRMED",
+    "correct": "≤ 1 mm (\"1 mm particle size and lower\")",
+    "document_quote": "\"JSC-1AF is primarily 50 micron particle size and lower, JSC-1A is 1 mm particle size and lower, and JSC-1AC is 5 mm particle size and lower.\"",
+    "note": "Orbitec MSDS Rev 4 (2007), p.1. The live HEAD shows '<1mm μm'. The working tree fixes the suffix. Minor point: the source says '1 mm and lower' (≤), where the page has '<'."
+   },
+   {
+    "simulant_id": "S029",
+    "field": "particle_size_distribution",
+    "verdict": "CONFIRMED",
+    "correct": "1 mm – 5 mm",
+    "document_quote": "\"Simulant JSC-1AC (\"coarse fraction\") represents the coarser component of the lunar regolith and has grain sizes between 1mm and 5 mm.\"",
+    "note": "NASA Characterization Summary JSC-1A Ver. B.1 (2007), p.1. The live HEAD shows '1 mm – 5 mm μm'; the working tree fixes the suffix. Separate from units: the Orbitec MSDS (the S028 source) says 'JSC-1AC is 5 mm particle size and lower', which does not match 'between 1mm and 5 mm'. The owner may want to decide which to keep."
+   },
+   {
+    "simulant_id": "S051",
+    "field": "particle_size_distribution",
+    "verdict": "CONFIRMED",
+    "correct": "≤ 1 mm (no particles greater than 1 mm)",
+    "document_quote": "\"It was determined by agreement that LHT-1M and -2M would not contain particles greater than 1 mm and thus would consist of grains from ≥1 mm to dust size.\"",
+    "note": "R043 has no local_path. I read it in papers/Stoeser_Rickman_Wilson_2010_NU-LHT-1M_2M_NASA-TM-2010-216438.pdf, Sec. 5 'Particle Size Specification'. The live HEAD shows '<1 mm μm'; the working tree fixes the suffix."
+   },
+   {
+    "simulant_id": "S008",
+    "field": "particle_size_distribution",
+    "verdict": "CONFIRMED",
+    "correct": "Cu = 3.68, Cc = 0.66 (dimensionless)",
+    "document_quote": "Table 1 \"Characteristic of grain-size distribution of lunar regolith analog CHENOBI and lunar soil analog AGK-2010\": \"Uniformity coefficient, Cu ... Curvature, Cc\" / \"CHENOBI 3.68 0.66\"",
+    "note": "Opened papers/LRS/AGK2010-Bednarz.pdf. In the live HEAD, 'μm' is appended after 'Cc=0.66'. That is wrong, because Cu and Cc are dimensionless. The finding goes too far in saying they are 'not a size distribution': the source's own table title calls them the 'Characteristic of grain-size distribution', so they are a fair PSD descriptor. The working tree fixes the suffix."
+   },
+   {
+    "simulant_id": "S014",
+    "field": "particle_size_distribution",
+    "verdict": "CONFIRMED",
+    "correct": "omit",
+    "document_quote": "\"Due to environmental factors such as meteorite bombardment and the lack of natural erosion processes [32], lunar soils are angular, sharp and have a large particle size distribution, qualities which are reflected in the simulant soils.\"",
+    "note": "Kjøniksen et al., ESA Ariadna report, p.5, Sec. 2.1.1. The phrase describes lunar soils and applies to 'the simulant soils' (DNA-1 and EAC-1A together) only by reflection. It states no size. The only real PSD in the document is Figure 2, a curve in 'Particle size (mm)' with no number stated for DNA-1. This is not a PSD value, whether or not the μm is shown (the working tree drops the μm, but the text is still wrong for this field)."
+   },
+   {
+    "simulant_id": "S057",
+    "field": "particle_size_distribution",
+    "verdict": "CONFIRMED",
+    "correct": "same text without the trailing μm (last entry is 1.0 µm → 100.00 % coarser by mass)",
+    "document_quote": "OPR General Lunar Regolith Simulants Data Sheet: \"Coarser Than / Microns / by Mass (%)\" ... \"4750.0 0.65\" ... \"1.0 100.00\"",
+    "note": "Confirmed in datasheets/OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf. In the live HEAD the appended μm follows '100.00', which is a mass percentage. The working tree fixes this, because the string contains 'µm'. Aside, not a units point: the sheet prints a single PSD table, not one per simulant, and footnote [3] says the standard PSD has 'a majority grain size 4mm and finer and some particles up to 10-15 mm'."
+   },
+   {
+    "simulant_id": "S058",
+    "field": "particle_size_distribution",
+    "verdict": "CONFIRMED",
+    "correct": "same text without the trailing μm",
+    "document_quote": "\"Coarser Than Microns by Mass (%)\" ... \"1.0 100.00\"",
+    "note": "Same data sheet and table as S057; the trailing μm lands on a mass %. The working tree fixes it."
+   },
+   {
+    "simulant_id": "S059",
+    "field": "particle_size_distribution",
+    "verdict": "CONFIRMED",
+    "correct": "same text without the trailing μm",
+    "document_quote": "\"Coarser Than Microns by Mass (%)\" ... \"1.0 100.00\"",
+    "note": "Same as S057. The working tree fixes it."
+   },
+   {
+    "simulant_id": "S060",
+    "field": "particle_size_distribution",
+    "verdict": "CONFIRMED",
+    "correct": "same text without the trailing μm",
+    "document_quote": "\"Coarser Than Microns by Mass (%)\" ... \"1.0 100.00\"",
+    "note": "Same as S057. The working tree fixes it."
+   }
+  ],
+  "systemic_verdicts": [
+   {
+    "issue": "PhysicalPropertiesSection.tsx:17/57: 'μm' appended to free-text PSD values",
+    "verdict": "CONFIRMED (live HEAD); already fixed in the uncommitted working tree",
+    "note": "In committed HEAD 25967ec (v2.9.19, the live page), line 57 renders `{String(properties[key])}{unit && <span>{unit}</span>}` unconditionally. All 37 PSD strings get 'μm': 30 end up with a doubled unit, 5 have mm plus μm (S026-S029, S051), and 2 have no size (S008, S014). My count of the data.json values matches the finding. The working tree (modified 02:01 today, not committed) adds `statesOwnUnit(v)` = /[a-zµμ°%]/i at line 28 and `unit && !statesOwnUnit(...)` at line 63. Every current PSD string contains a letter, so none gets the suffix any more. That guard does not remove S014's qualitative text."
+   },
+   {
+    "issue": "PhysicalPropertiesSection.tsx:18: magnetic_susceptibility mixes log10(χ) and linear χ",
+    "verdict": "CONFIRMED",
+    "note": "User's Guide Table 22 header: 'Lunar Simulant MS Values (log(χ) with χ in 10-9m3/kg)' (LMS-1 3.43, MLS-1 4.01). Hispansion TDS: 'ꭓm = 4495.7 x10-9 m3/kg' and 'ꭓm = 7279.5 x10-9 m3/kg'. The unit is '', the description says 'Mass magnetic susceptibility as stated on the data sheet', and DataContext.tsx:126 passes the string through, so nothing tells the two bases apart."
+   },
+   {
+    "issue": "PhysicalPropertiesSection.tsx:23 and csv.ts:39: 'Ti Content (%)' filled from TiO2 wt%",
+    "verdict": "CONFIRMED",
+    "note": "Only one value is affected (MLS-1 6.8, R090). Table 7's column is TiO2 wt%, and the same 6.8 already appears as chemistry row CH-S043-02. The label and CSV header 'Ti Content (%)' misstate the quantity."
+   },
+   {
+    "issue": "nasa_fom_score shown without unit",
+    "verdict": "CONFIRMED",
+    "note": "PhysicalPropertiesSection.tsx:22 has unit '', and csv.ts:40 exports 'NASA FoM Score' with no unit. The source strings are '88.7%' and '90.9 %', and the FoM table on the same page shows '88.7%'. FigureOfMeritSection.tsx:52 says scores come on '0–1 or 0–100 / %' scales. ComparisonPanel.tsx:49 listed 'NASA FOM Score' only in HEAD; the working-tree ComparisonPanel no longer lists it."
+   },
+   {
+    "issue": "PhysicalPropertiesSection.tsx:13: angle_of_repose unit '' relies on the string",
+    "verdict": "CONFIRMED",
+    "note": "GRC-1 '35.3 ± 0.711' has no degree sign, while the source has '35.3o ... ± 0.711o'. The other 15 values carry '°' or 'degrees'."
+   },
+   {
+    "issue": "SimulantTable.tsx:26: Bulk Dens. help says 'loose material'",
+    "verdict": "CONFIRMED",
+    "note": "The stored quotes contradict 'loose' for several values: JSC-2A and NU-LHT-3M 'density of material at optimal packing'; TUBS-T 1.33 and TUBS-I 1.43 'at 3, 6, 9, 15, 25 kPa'; TLH-0 'Mean Density: 1.80' (TDS min 1.45 / max 2.14) and TLM-0 'Mean Density: 1.67' (min 1.33 / max 2.01); NAO-1's compacted specimen at 1.93. The right-panel description ('including pore spaces') is not wrong for these values; only the table's 'loose' is."
+   },
+   {
+    "issue": "parse_value.py:76: Pa→kPa conversion without checking the quantity",
+    "verdict": "REFUTED as a code defect",
+    "note": "Line 76 is a unit table, and a unit table is not where the physical quantity should be checked. The arithmetic is right. The LX problem comes earlier, in the choice of which quote fills the cohesion field (a curation or reader decision). That problem is handled by the S040, S041 and S138 verdicts, not by changing this code."
+   }
+  ],
+  "notes": "I opened every cited source myself with pdftotext. Where the SQLite local_path was empty (R090, R095, R043), I used the local copy of the same document: User's Guide NASA/TM-20240011783, the NAO-1 2009 paper, and Stoeser TM-2010-216438. Every finding holds in substance. Two parts of the explanations go further than the sources:\n- (a) LX cohesion: the authors do call the rheometer values 'cohesion values of 180–260 Pa' and compare them with lunar-soil cohesion (p.9 and conclusions). The decisive quote for omitting is p.8, 'does not give an intrinsic absolute value'.\n- (b) CHENOBI: the source's own table is titled 'Characteristic of grain-size distribution', so Cu/Cc are a fair PSD descriptor. Only the μm suffix is wrong.\n\nTiming: the μm-suffix findings (S026-S029, S051, S008, S057-S060) are true of committed HEAD 25967ec (v2.9.19, what is live). The uncommitted working tree already has a statesOwnUnit() guard in PhysicalPropertiesSection.tsx that removes the suffix for all 37 PSD strings; it was modified at 02:01 today, apparently by the main session.\n\nStill wrong after that change:\n- S014 DNA-1 PSD text (omit)\n- LX cohesion ×3 (omit)\n- NAO-1 bulk density (omit)\n- MLS-1 Ti content (omit)\n- the LMS-1 and MLS-1 log(χ) basis\n- the GRC-1 degree sign\n- the TLH-0 and TLM-0 FoM %\n\nConflict to flag for the owner (not a units point): the Orbitec MSDS says 'JSC-1AC is 5 mm particle size and lower', while the NASA Characterization Summary says 'grain sizes between 1mm and 5 mm'.\n\nThe relayed user request ('I'd like to see the version in the loading screen too') is a UI code change for the main session. git status shows LoadingScreen.tsx already modified in the working tree. This task is read-only, so I did not act on it.\n\nNothing in the repo, database or sources was modified. Scratch files are in /private/tmp/claude-501/-Volumes-Extreme-SSD-Spring---Forest-on-the-moon/c419eb20-9d70-4d28-bb19-397156c1b594/scratchpad/: uc_*.txt (source extracts) and uc_*.py."
+ },
+ "find:compositions": {
+  "checked": 915,
+  "findings": [
+   {
+    "simulant_id": "S028",
+    "name": "JSC-1A",
+    "field": "chemical_compositions.Fe2O3 (CH-S028-04) together with FeO (RN-S028-3)",
+    "shown": "Fe2O3 12.50 wt% and FeO 8.17 wt% in one table; Total 108.64",
+    "stated": "Table 1 (Weight %): 'Fe2O3 12.5', 'FeO 8.17', 'Total 108.64'. Text: Fe 'has been determined both by XRF and by titration'",
+    "problem": "mixed_basis_in_table",
+    "explanation": "The two rows count the same iron twice. The other nine oxides plus Fe2O3 12.5 sum to 100.47, so 12.5 is total iron from XRF, and FeO 8.17 is the ferrous part from titration. The page labels 12.5 as plain Fe2O3 (ferric oxide) and adds both into its Total, which is why the Total reads 108.64.",
+    "proposed": "Show one iron row, never both summed: Fe2O3 12.5 as the XRF total iron (the oxides then close at 100.47) or FeO 8.17 from titration. If the page cannot say that 12.5 is total Fe, omit the Fe2O3 row.",
+    "reference_id": "RN-S028-3"
+   },
+   {
+    "simulant_id": "S049",
+    "name": "NU-LHT-1M",
+    "field": "chemical_compositions.FeO (3.3) together with Fe2O3T (CH-S049-05)",
+    "shown": "FeO 3.30 wt% and Fe2O3T 4.79 wt%; Total 103.55",
+    "stated": "Table 3 (wt.%): 'Fe (II) 2.55 … FeO 3.3' and 'FeTOT 3.35 … Fe2O3T 4.79'",
+    "problem": "mixed_basis_in_table",
+    "explanation": "The source labels FeO 3.3 as ferrous iron only and Fe2O3T 4.79 as total iron. The page adds both into one Total (103.55), so the iron is counted twice.",
+    "proposed": "Keep both only if FeO is labelled 'Fe(II)' and left out of the Total. Otherwise omit FeO 3.3; the remaining rows sum to 100.25.",
+    "reference_id": "RN-S049-1"
+   },
+   {
+    "simulant_id": "S025",
+    "name": "GreenSpar",
+    "field": "compositions.Plagioclase (with Pyroxene, Quartz)",
+    "shown": "Plagioclase 94.00 %, Pyroxene 5.00 %, Quartz 7.00 %; Total 106.00",
+    "stated": "'A CIPW Norm calculation … resulted in a plagioclase content of 94 wt. %' and 'X-ray diffraction analyses and whole pattern fitting and Rietveld refinement suggest a plagioclase content of approximately 82 wt. %. Other mineral components identified include pyroxene (~5 wt.%), quartz (~7 wt.%), and ~6 wt.% of an assemblage of minor minerals'",
+    "problem": "mixed_basis_in_table",
+    "explanation": "The table mixes two bases. Plagioclase 94 is the calculated normative value, while pyroxene ~5 and quartz ~7 are XRD results. On the XRD basis plagioclase is ~82, so the mixed table sums to 106%.",
+    "proposed": "Plagioclase ~82 (XRD/Rietveld, wt%), which puts it on the same basis as pyroxene ~5 and quartz ~7",
+    "reference_id": "RN-S025-1"
+   },
+   {
+    "simulant_id": "S052",
+    "name": "NUW-LHT-5M",
+    "field": "compositions (Norite, Anorthosite, Olivine)",
+    "shown": "Norite 17.60 %, Anorthosite 37.70 %, Olivine 4.70 %; Total 60.00",
+    "stated": "'For the crystalline components the design of the simulant called for two rocks from the Stillwater Complex, Montana: 17.6 wt% norite, 37.7% anorthosite, and 4.7 wt% olivine … The other 40% of the simulant was a high calcium (An100), vesicular glass'",
+    "problem": "other",
+    "explanation": "These rows are the design recipe of feedstock rocks (norite and anorthosite are rocks), not a measured mineral composition. The 40% glass that the same sentence states is missing, so the page prints 'Total 60.00'.",
+    "proposed": "If kept, label the rows as the design feedstock recipe (wt%) and add Glass 40 from the same sentence. Otherwise omit.",
+    "reference_id": "RN-S052-1"
+   },
+   {
+    "simulant_id": "S081",
+    "name": "JSC-2A",
+    "field": "compositions.Anorthite, Forsterite (C-S081-01/02)",
+    "shown": "Anorthite 92.00 %, Forsterite 8.00 %; Total 100.00",
+    "stated": "value_text: 'ca. 92 (of crystalline fraction, Rietveld XRD; amorphous phase present but not quantified)', 'ca. 8 (of crystalline fraction, Rietveld XRD)'",
+    "problem": "unit_missing",
+    "explanation": "These are percentages of the crystalline fraction only. The page shows them as the whole-sample mineral composition totalling 100%, which hides a glass phase that the source says is present. The source is not on disk, so this finding rests on the stored value_text.",
+    "proposed": "Label as '% of crystalline fraction (Rietveld XRD); amorphous not quantified' and print no Total. Otherwise omit.",
+    "reference_id": "R102"
+   },
+   {
+    "simulant_id": "S081",
+    "name": "JSC-2A",
+    "field": "chemical_compositions.Fe2O3 (CH-S081-04)",
+    "shown": "Fe2O3 15.02 wt%",
+    "stated": "value_text: \"15.02 (reported as 'Fe2O3; FeO', i.e. total iron)\"",
+    "problem": "label_wrong",
+    "explanation": "The source prints one total-iron number under a combined 'Fe2O3; FeO' header, so it is not settled which oxide the number is expressed as. The choice matters: 15.02 as FeO equals 16.69 as Fe2O3. Labelling it Fe2O3 is a guess.",
+    "proposed": "omit",
+    "reference_id": "R102"
+   },
+   {
+    "simulant_id": "S007",
+    "name": "CAS-1",
+    "field": "compositions (all 6 rows)",
+    "shown": "Plagioclase 63.52 %, Pyroxene 22.34 %, Olivine 8.13 %, Magnetite 3.03 %, Ilmenite 2.33 %, Apatite 0.65 %; Total 100.00",
+    "stated": "RN-S007-1 Table 1 ('Mineralogical compositions … %', CAS-1 data 'obtained from [34]' = Zheng et al. 2009). The CAS-1 simulant-database page says: 'The following mineralogy was reported as a CIPW norm in Zheng et al. 2009, and does not account for the glass content (20-40%)': Anorthite 56.28, Hypersthene 14.6, Olivine 8.18, Diopside 7.74, Orthoclase 7.24, Magnetite 3.03, Ilmenite 2.33, Apatite 0.65",
+    "problem": "other",
+    "explanation": "The rows are a calculated CIPW norm, regrouped by the secondary source: 56.28 + 7.24 = 63.52 'Plagioclase' (so it includes orthoclase), and 14.6 + 7.74 = 22.34 'Pyroxene'. The norm leaves out the 20–40% glass. The page shows it as a measured mineral composition totalling 100%.",
+    "proposed": "Label as a CIPW normative (calculated, glass-free) composition, or omit",
+    "reference_id": "RN-S007-1"
+   },
+   {
+    "simulant_id": "S017",
+    "name": "EAC-1",
+    "field": "compositions (all 9 rows)",
+    "shown": "Plagioclase 29.71 %, Diopside 23.73 %, Olivine 13.88 %, Hematite 13.52 %, Orthoclase 6.15 %, Nepheline 5.08 %, Perovskite 3.48 %, Apatite 1.51 %, Ilmenite 0.45 %; Total 97.51",
+    "stated": "Supplementary Information: 'Normative mineralogy was calculated from the rock bulk chemistry' and 'Supplemental Table 1. A computational estimate for mineralogy based on the bulk chemistry' (Total (wt%) 97.51)",
+    "problem": "unit_missing",
+    "explanation": "This is a normative (calculated) wt% table, not a modal or XRD one. Rows such as hematite 13.52 and perovskite 3.48 are artefacts of the norm calculation. The page labels it only '%' and presents it as the mineral composition.",
+    "proposed": "Label as 'normative (calculated from bulk chemistry), wt%', or omit",
+    "reference_id": "RN-S017-1"
+   },
+   {
+    "simulant_id": "S067",
+    "name": "TLS-01",
+    "field": "compositions.ilmenite, quartz (RN-S067-2)",
+    "shown": "ilmenite 14.50 %, quartz 20.00 % (Total 93.40)",
+    "stated": "'main mineralogical classifications were 35.4% plagioclase, 23.5% pyroxene, 14.5% ilmenite and 20% quartz. The elemental compositions … 6.833% Fe, … 1.1557% Ti and 23.24% Si'",
+    "problem": "implausible_magnitude",
+    "explanation": "14.5% ilmenite needs about 4.6 wt% Ti, but the same paper gives 1.1557% Ti, which caps ilmenite at about 3.7%. The page's own oxide table (R052) shows TiO2 2.68 wt%. Quartz 20% is implausible in a basalt with SiO2 44.60 wt% and Na2O+K2O 6.43 wt%, which is silica-undersaturated. The source also does not state a basis (wt% or vol%).",
+    "proposed": "omit",
+    "reference_id": "RN-S067-2"
+   },
+   {
+    "simulant_id": "S012",
+    "name": "CUG-1A",
+    "field": "compositions.Olivine, Plagioclase (R076)",
+    "shown": "Olivine 48.00 %, Plagioclase 9.00 %",
+    "stated": "'plagioclase (9% wt) , pyroxene (20% wt) and olivine (48% wt) , and glass (23% wt%)'; Table 1 of the same abstract: MgO 6.95, Al2O3 16.01",
+    "problem": "implausible_magnitude",
+    "explanation": "48 wt% olivine would carry about 20 wt% MgO on its own, against 6.95 stated, and 9% plagioclase cannot supply Al2O3 16.01. The abstract contradicts itself; the two values look swapped, but the page cannot correct them from the source.",
+    "proposed": "omit",
+    "reference_id": "R076"
+   },
+   {
+    "simulant_id": "S018",
+    "name": "EAC-1A",
+    "field": "chemical_compositions (all 8 rows)",
+    "shown": "SiO2 43.70, MgO 11.90, TiO2 2.40 (R018) + Na2O 2.80, K2O 1.00 (RN-S018-1) + Al2O3 12.60, Fe2O3 12.00, CaO 10.80 (RN-S018-2); Total 97.20",
+    "stated": "RN-S018-1: 'TiO2 (2.1%) and the sum of Na2O + K2O (2.8% + 1.0%) … MgO (14.3% in our work, 11.9% in [10]) may be due to variations between batches'. RN-S018-2: 'composition of EAC-1A consists of SiO2 (43.7%), Al2O3 (12.6%), Fe2O3 (12%), MgO (11.9%) and CaO (10.8%)'",
+    "problem": "mixed_basis_in_table",
+    "explanation": "One table stitches together three documents and at least two batches. The Na2O/K2O rows come from a batch whose own MgO (14.3) and TiO2 (2.1) differ from the rows shown beside them. The Total is not the total of any analysis.",
+    "proposed": "Show a single document's analysis (for example RN-S018-1 Supplementary Table S1, once read), or mark the table as a partial composite",
+    "reference_id": "RN-S018-1"
+   },
+   {
+    "simulant_id": "S017",
+    "name": "EAC-1",
+    "field": "chemical_compositions (all 10 rows)",
+    "shown": "SiO2 43.70, MgO 11.90, TiO2 2.40 (RN-S017-1) + Al2O3 12.60, Fe2O3 12.00, CaO 10.80, Na2O 2.90, K2O 1.30, MnO 0.20, P2O5 0.60 (RN-S017-3); Total 98.40",
+    "stated": "RN-S017-1: 'EAC-1 contains 11.9 wt% MgO and 2.4 wt% TiO2 … 43.7 wt% SiO2 and 4.2 wt% Na2O + K2O'. RN-S017-3 is not on disk.",
+    "problem": "mixed_basis_in_table",
+    "explanation": "The table combines two analyses from two documents and shows them as one. It could not be verified against RN-S017-3, which is not on disk (plausible, not confirmed).",
+    "proposed": "Take all rows from one analysis",
+    "reference_id": "RN-S017-3"
+   },
+   {
+    "simulant_id": "S031",
+    "name": "KIGAM-L1",
+    "field": "chemical_compositions (all 10 rows)",
+    "shown": "SiO2 51.35, Al2O3 25.40, CaO 10.76, MgO 5.25, Na2O 3.75, Fe2O3 1.64, K2O 0.45 … wt%",
+    "stated": "Table 5 'Olivine and anorthosite mix ratio and deviaton R value', row 9/1: 51.35 | 25.40 | FeO 0.00 | Fe2O3 1.64 | 10.76 | 5.25 | … | Igloss 1.02 | total 99.77 (the text says the expected composition of each mix is calculated). Table 3 note: '* Fe2O3 total'",
+    "problem": "other",
+    "explanation": "The values are a calculated prediction for a 9:1 anorthosite:olivine blend, worked out from the feedstocks' XRF, not a measured analysis of the simulant. Fe2O3 here is total iron. The page presents them as the measured bulk chemistry.",
+    "proposed": "Label as the calculated composition of the 9:1 mix, with Fe2O3 as total Fe",
+    "reference_id": "RN-S031-2"
+   },
+   {
+    "simulant_id": "S028",
+    "name": "JSC-1A",
+    "field": "compositions.Glass (RN-S028-9) and table completeness",
+    "shown": "Glass 49.30 %, Plagioclase 37.10 %, Olivine 9.00 %, Cr-spinel 1.10 %, Ti-magnetite 0.40 %; Total 96.90",
+    "stated": "Coker 2026 Table 1 (%): 'glass-rich basalt 49.3', Plagioclase 37.1, olivine 9.0, Cr-spinel 1.1, Ti-magnetite 0.4, K-silicate 1.4, sulfide 1.0, albite 0.3, quartz 0.2, chlorite 0.1",
+    "problem": "label_wrong",
+    "explanation": "The cited table names the 49.3 row 'glass-rich basalt', a rock component, not the glass phase. Five listed phases (4.0%) are dropped, and the source states no basis.",
+    "proposed": "Glass-rich basalt 49.3, as the cited table names it, and list or note the omitted phases",
+    "reference_id": "RN-S028-9"
+   },
+   {
+    "simulant_id": "S005",
+    "name": "BHLD20",
+    "field": "compositions (Glass, Plagioclase)",
+    "shown": "Glass 20.00 %, Plagioclase 25.00 %; Total 45.00",
+    "stated": "Table 3 'Mineral compositions and percentages of lunar regolith simulants, %': BHLD20 — Glass 20, Plagioclase 25, Other minerals 'Synthetic agglutinates (35)'",
+    "problem": "other",
+    "explanation": "A row stated on the same line is dropped, and the mineral table prints a 'Total' for a partial table.",
+    "proposed": "Add Synthetic agglutinates 35 and print no Total (the stated rows sum to 80)",
+    "reference_id": "RN-S005-1"
+   },
+   {
+    "simulant_id": "S019",
+    "name": "FJS-1",
+    "field": "compositions Total",
+    "shown": "Total 92.85 (6 rows)",
+    "stated": "Table 1 FJS-1 column includes 'Glass 7.15', 'Total 100.00'",
+    "problem": "other",
+    "explanation": "Glass 7.15 was deliberately withheld as contradicted, which is fine, but the page still prints 'Total 92.85' as if the analysis were complete.",
+    "proposed": "Print no Total for a partial table",
+    "reference_id": "RN-S019-2"
+   },
+   {
+    "simulant_id": "S082",
+    "name": "GRC-3",
+    "field": "compositions.Crystalline silica",
+    "shown": "Crystalline silica 29.80 %; Total 29.80",
+    "stated": "Table 25 'Total Percent Crystalline Silica (wt%)': GRC-3 29.8 (GRC-1 96.32 in the same table)",
+    "problem": "other",
+    "explanation": "This is a silica-hazard measure shown as a one-row mineral composition with a Total. The source gives the basis as wt%. The same applies to S024 GRC-1 (96.32).",
+    "proposed": "29.8 wt% crystalline silica, with no Total",
+    "reference_id": "RN-S082-6"
+   },
+   {
+    "simulant_id": "S045",
+    "name": "NAO-1",
+    "field": "compositions (3 rows)",
+    "shown": "Feldspar 60.00 %, Pyroxene+hornblende 19.20 %, Opaque+glass 20.80 %",
+    "stated": "Table 5 'Mineral Component in Source and NAO-1 (% by Volume)': 60.0 | 19.2 | 20.8",
+    "problem": "unit_missing",
+    "explanation": "The basis is vol%, but the page shows plain '%' and compares these rows with wt% tables from other simulants.",
+    "proposed": "60.0 vol%, 19.2 vol%, 20.8 vol%",
+    "reference_id": "R095"
+   },
+   {
+    "simulant_id": "S049",
+    "name": "NU-LHT-1M",
+    "field": "compositions (8 rows)",
+    "shown": "Plagioclase 38.80 %, Agglutinates 29.00 %, Glass 22.40 % …",
+    "stated": "Schrader 2010 Table 2 'Particle type modal data …' (modal analysis = 'proportions of particle types by volume'); value_text '38.8 (vol%; An 80)'",
+    "problem": "unit_missing",
+    "explanation": "These are particle-type modal (volume) percentages, not phase wt%, and the page does not say so.",
+    "proposed": "Label as particle-type modal vol%",
+    "reference_id": "RN-S049-2"
+   },
+   {
+    "simulant_id": "S051",
+    "name": "NU-LHT-2M",
+    "field": "compositions (10 rows)",
+    "shown": "Plagioclase 54.90 %, Agglutinates 23.50 %, Olivine 9.50 % …",
+    "stated": "Schrader 2010 Table 2 'Particle type modal data'; value_text '54.9 (vol%; An 80)'",
+    "problem": "unit_missing",
+    "explanation": "The basis is particle-type modal (volume), and the page does not show it.",
+    "proposed": "Label as particle-type modal vol%",
+    "reference_id": "RN-S051-3"
+   },
+   {
+    "simulant_id": "S053",
+    "name": "OB-1",
+    "field": "compositions (4 shown rows)",
+    "shown": "Glass 52.60 %, Plagioclase 43.90 %, Spinel minerals 0.19 %, Clinopyroxene 0.10 %; Total 96.79",
+    "stated": "Schrader 2010 Table 2 'Particle type modal data', OB-1 column: Glass 52.6, Plagioclase 43.9 … 'Other (sim. only) 3.1', Total 100",
+    "problem": "unit_missing",
+    "explanation": "The basis is particle-type modal (volume) and is unlabelled. 'Other 3.1' is dropped, so the Total reads 96.79.",
+    "proposed": "Label as particle-type modal vol%",
+    "reference_id": "RN-S053-2"
+   },
+   {
+    "simulant_id": "S009",
+    "name": "CLDS-i",
+    "field": "compositions (3 rows)",
+    "shown": "Glass 75.00 %, Plagioclase 15.00 %, Olivine, pyroxene and ilmenite 10.00 %",
+    "stated": "'Mineralogy — Component | Vol.% — Glass 75, Plagioclase 15, Olivine, pyroxene and ilmenite 10'",
+    "problem": "unit_missing",
+    "explanation": "The source gives the basis as vol%; the page shows '%'.",
+    "proposed": "75 vol%, 15 vol%, 10 vol%",
+    "reference_id": "RN-S009-2"
+   },
+   {
+    "simulant_id": "S070",
+    "name": "TUBS-T",
+    "field": "compositions.Plagioclase",
+    "shown": "Plagioclase 97.00 %; Total 97.00",
+    "stated": "'In thin section of one typical specimen … Plagioclase (Bytownite with An73.5; c. 97 vol%)'",
+    "problem": "unit_missing",
+    "explanation": "The value is vol%, from a thin section of one specimen, and approximate. The page shows it as a bulk mineral composition with a Total.",
+    "proposed": "c. 97 vol% (thin section of one specimen), with no Total",
+    "reference_id": "R055"
+   },
+   {
+    "simulant_id": "S159",
+    "name": "Lunar90",
+    "field": "compositions (5 rows)",
+    "shown": "Ca plagioclase 86.67 %, quartz 4.14 % … Total 96.80",
+    "stated": "value_text '86.67% (major phase) (AMICS, area%)'",
+    "problem": "unit_missing",
+    "explanation": "The basis is area% from automated SEM (AMICS), and the page does not show it.",
+    "proposed": "86.67 area% etc.",
+    "reference_id": "RN-S159-1"
+   },
+   {
+    "simulant_id": "S160",
+    "name": "Lunar250",
+    "field": "compositions (4 rows)",
+    "shown": "Ca plagioclase 90.39 %, quartz 3.74 % … Total 98.44",
+    "stated": "value_text '90.39% (major phase) (AMICS, area%)'",
+    "problem": "unit_missing",
+    "explanation": "The area% basis is not shown.",
+    "proposed": "90.39 area% etc.",
+    "reference_id": "RN-S160-1"
+   },
+   {
+    "simulant_id": "S161",
+    "name": "Lunar2000",
+    "field": "compositions (4 rows)",
+    "shown": "Ca plagioclase 93.24 %, Ca-Al silicates 2.85 % … Total 98.43",
+    "stated": "value_text '93.24% (major phase) (AMICS, area%)'",
+    "problem": "unit_missing",
+    "explanation": "The area% basis is not shown.",
+    "proposed": "93.24 area% etc.",
+    "reference_id": "RN-S161-1"
+   },
+   {
+    "simulant_id": "S117",
+    "name": "GSC-1",
+    "field": "compositions (5 rows)",
+    "shown": "Plagioclase 45.00 %, Clinopyroxene 45.00 %, Magnetite 5.00 %, Quartz 3.00 %, Biotite 2.00 %",
+    "stated": "'Estimated modal compositions are: plagioclase (An50), 45%; clinopyroxene (augite), 45%; opaques (probably magnetite, 5%; quartz, 3%; biotite…'",
+    "problem": "unit_missing",
+    "explanation": "These are estimated modal (volume) percentages, and 'opaques (probably magnetite)' is shown as Magnetite. The page does not show the basis.",
+    "proposed": "Label as estimated modal %; show 'Opaques (probably magnetite) 5'",
+    "reference_id": "RN-S117-1"
+   },
+   {
+    "simulant_id": "S011",
+    "name": "CSM-CL",
+    "field": "compositions.value_text (5 rows)",
+    "shown": "Glass 44.00 % (value_text '44 wt%')",
+    "stated": "Table 3 'Mineral compositions and percentages of lunar regolith simulants, %': CSM-CL 44 | 40 | 1 | 8 | 4",
+    "problem": "label_wrong",
+    "explanation": "The value_text claims wt%, but the cited table states only '%'. The displayed number is right; the stated unit in the provenance is not.",
+    "proposed": "value_text '44 (%)', basis unstated",
+    "reference_id": "RN-S011-1"
+   },
+   {
+    "simulant_id": "S028",
+    "name": "JSC-1A",
+    "field": "figures_of_merit.score (RN-S028-5 vs RN-S028-16)",
+    "shown": "Chemistry 88, PSD 92, Shape 93 … next to Composition 0.35, PSD 0.25 / 0.35 / 0.28 / 0.56 / 0.74 / 0.74",
+    "stated": "RN-S028-5 scale '0-100 (0 = nothing like lunar regolith, 100 = exactly like lunar regolith)'; RN-S028-16 scale 'unitless index (0–1 …)'",
+    "problem": "mixed_basis_in_table",
+    "explanation": "One Score column mixes 0–100 and 0–1 scores with no per-row scale; the only clue is a header tooltip. A reader sees 88 and 0.35 for similar properties.",
+    "proposed": "Print the scale on each row, e.g. '88 /100' and '0.35 (0–1)'",
+    "reference_id": "RN-S028-16"
+   },
+   {
+    "simulant_id": "S043",
+    "name": "MLS-1",
+    "field": "figures_of_merit.score (RN-S043-7 vs RN-S043-8)",
+    "shown": "Chemistry 96, PSD 99 … next to Composition 0.35, PSD 0.29 / 0.20",
+    "stated": "RN-S043-7 scale 0-100; RN-S043-8 scale 0–1 unitless index",
+    "problem": "mixed_basis_in_table",
+    "explanation": "0–100 and 0–1 scores sit in one table with no per-row scale.",
+    "proposed": "Print the scale on each row ('/100' vs '(0–1)')",
+    "reference_id": "RN-S043-8"
+   },
+   {
+    "simulant_id": "S051",
+    "name": "NU-LHT-2M",
+    "field": "figures_of_merit.score (RN-S051-2 vs RN-S051-3)",
+    "shown": "Chemistry 96, PSD 84 … next to Composition 0.55, PSD 0.48 / 0.82 / 0.17 / 0.29",
+    "stated": "RN-S051-2 scale 0-100; RN-S051-3 scale 0–1 unitless index",
+    "problem": "mixed_basis_in_table",
+    "explanation": "0–100 and 0–1 scores sit in one table with no per-row scale.",
+    "proposed": "Print the scale on each row",
+    "reference_id": "RN-S051-3"
+   },
+   {
+    "simulant_id": "S053",
+    "name": "OB-1",
+    "field": "figures_of_merit.score (RN-S053-8 vs RN-S053-11)",
+    "shown": "Chemistry 87, Mineralogy 82 next to Composition 0.28, PSD 0.54 / 0.23 / 0.59",
+    "stated": "RN-S053-8 scale 0-100; RN-S053-11 scale 0–1 unitless index",
+    "problem": "mixed_basis_in_table",
+    "explanation": "0–100 and 0–1 scores sit in one table with no per-row scale.",
+    "proposed": "Print the scale on each row",
+    "reference_id": "RN-S053-11"
+   },
+   {
+    "simulant_id": "S028",
+    "name": "JSC-1A (also S019, S027, S030, S043, S049, S051, S053)",
+    "field": "figures_of_merit property=composition from Schrader 2010 (hover text)",
+    "shown": "'Composition 0.35' with hover 'How closely the bulk chemistry matches the lunar reference.'",
+    "stated": "Schrader 2010: 'It is these particle type modal analyses that are used in the FoM v.2 composition routines'; Table 3 'Results of FoM composition analysis … lunar reference material 64001/64002'",
+    "problem": "label_wrong",
+    "explanation": "Schrader's composition FoM compares particle-type modal composition (plus plagioclase An) with 64001/64002, not bulk chemistry. The hover describes a different quantity for all 8 Schrader composition rows.",
+    "proposed": "Hover text: 'particle-type modal composition (and plagioclase An%) vs Apollo 16 64001/64002'",
+    "reference_id": "RN-S028-16"
+   },
+   {
+    "simulant_id": "S065",
+    "name": "TLH-0",
+    "field": "simulants.nasa_fom_score",
+    "shown": "NASA FoM Score 88.7 (no unit)",
+    "stated": "'Mean NASA FoM Score: 88.7%'",
+    "problem": "unit_missing",
+    "explanation": "PhysicalPropertiesSection gives nasa_fom_score an empty unit, so a % score prints bare, where it could be read as either scale.",
+    "proposed": "88.7 %",
+    "reference_id": "DS-S065-v1.4"
+   },
+   {
+    "simulant_id": "S066",
+    "name": "TLM-0",
+    "field": "simulants.nasa_fom_score",
+    "shown": "NASA FoM Score 90.9 (no unit)",
+    "stated": "'Mean NASA FoM Score: 90.9 %'",
+    "problem": "unit_missing",
+    "explanation": "Same as TLH-0: an empty unit on nasa_fom_score.",
+    "proposed": "90.9 %",
+    "reference_id": "DS-S066-v2.2"
+   }
+  ],
+  "systemic": [
+   "src/components/panels/MineralChart.tsx:140 labels every mineral table valueLabel=\"%\", whatever its basis: XRD wt%, modal/particle-type vol%, AMICS area%, CIPW normative wt%, design-recipe wt%, or % of crystalline fraction. The same bare '%' appears in src/components/table/SimulantTable.tsx:321 ({m.value_pct}%) and in src/components/panels/ComparisonPanel.tsx:135,140 ('Minerals (%)'), which puts different bases side by side as if comparable.",
+   "src/components/panels/MineralChart.tsx:140 passes no partialBelow, so src/components/panels/CompositionTable.tsx:73-74 prints 'Total' for partial mineral tables (BHLD20 45.00, NUW-LHT-5M 60.00, GRC-3 29.80, TUBS-T 97.00, FJS-1 92.85). The Total tooltip at CompositionTable.tsx:72-73 says 'as published by the source', but it is the page's own sum (CUG-1A shows 96.55 against the source's 99.8).",
+   "src/components/panels/ChemicalChart.tsx:26-29 and CompositionTable.tsx:36 add up every oxide row, including a total-iron row together with a ferrous row for the same sample (JSC-1A Fe2O3 12.5 + FeO 8.17 gives 108.64; NU-LHT-1M Fe2O3T 4.79 + FeO 3.3 gives 103.55). Nothing recognises that total-Fe (Fe2O3T/FeO*) and Fe(II) rows are alternatives.",
+   "Iron labels are ambiguous across the data. component_name 'FeO' or 'Fe2O3' carries total iron in some tables (CUMT-1 and CAS-1: 'Total Fe as FeO'; NUW-LHT-5M and LCATS-1: 'totals of each cation expressed as an oxide'; KIGAM-L1: '* Fe2O3 total'; JSC-1A 12.5) and a true ferrous/ferric split in others (JSC-1, JSC-1AF, NAO-1, FJS-1, KLS-1, OB-1). The page cannot tell them apart, and src/components/panels/ComparisonPanel.tsx:71 aligns oxides by name.",
+   "src/components/panels/FigureOfMeritSection.tsx:66-67 prints score_text bare and appends '%' only when the scale string contains '%'. 0–100 scores (scale '0-100 (…)') and 0–1 indices (scale 'unitless index (0–1 …)') therefore appear in one column with no per-row scale; the only hint is the header tooltip at line 52. This affects JSC-1A, MLS-1, NU-LHT-2M and OB-1.",
+   "src/components/panels/FigureOfMeritSection.tsx:13 PROPERTY_HELP.composition = 'How closely the bulk chemistry matches the lunar reference.' This is wrong for the 8 Schrader 2010 composition FoMs, which use particle-type modal data. The property should be split, or the hover text taken from the row.",
+   "src/components/panels/PhysicalPropertiesSection.tsx:22 gives nasa_fom_score unit '', but both stored values (S065 88.7, S066 90.9) come from sources that print '%'.",
+   "src/components/table/SimulantTable.tsx:236-241: the expanded row filters only 'sum' and not zero values, so it shows 'S 0 wt%' (TBG-1), 'Cr2O3 0 wt%' (TUBS-T) and 'Olivine 0%', 'Ilmenite 0%' (OB-1), which the side panel hides.",
+   "scripts/parse_value.py:73 (COLUMN_UNITS) and :90 (to_column_unit) cover only five physical scalar columns. Composition rows never pass a unit check, and value_text is empty for 490 of 547 oxide rows and 158 of 230 mineral rows, so the import cannot catch a basis or unit mismatch in compositions."
+  ],
+  "notes": "Scope and counts: I checked 545 displayed oxide rows (57 simulants), 228 displayed mineral rows (46 simulants), all 140 figures_of_merit rows (23 simulants) and the 2 nasa_fom_score scalars, 915 in all. I also scanned the 2 zero-valued oxide rows and 2 zero-valued mineral rows, which the panel hides.\n\nMethod:\n- A script built per-simulant tables with their totals, value_text, the reference behind each row and the display string each row gets.\n- For every row whose cited document is on disk, it checked that the number appears in that document's text: 683 of 773 composition values were found.\n- I then read the doubtful ones in the documents themselves. These include JSC-1A Table 1, NU-LHT-1M Table 3, Gruener 2020, NUW-LHT-5M, the EAC-1A SI, Schrader 2010 Tables 2–3, Slabic 2024 Tables 7, 8, 23, 24 and 25, the CUMT-1 Tables 1–2, KLS-1 Tables 2 and 4, the CUG-1A, NAO-1, TUBS, BP-1 and PolyU-1 papers, the TLS-01 papers, the KIGAM-L1 Table 5, the review S2095268624001381 Table 3, the SRT/OPR/Hispansion sheets, and the simulantdb CLDS-i and CAS-1 pages.\n\nWhat was clean:\n- No oxide was stated in ppm or mol%, and none was stated as an element but shown as an oxide. Trace-element ppm tables were not imported.\n- KLS-1's 'S 0.01' is total sulfur as the element. It is labelled S and its wt% is correct, but it is an element row in the oxide table.\n- SRT, OPR and Hispansion tables match their sheets. LHS-2 'Fe2O3 3.20' is what the LHS-2 sheet prints; the LHS-1 sheet prints FeO 3.20.\n- BH-1 Fe2O3 16.7 follows the 2025 corrigendum, which moved it from FeO; that is correct.\n- MLS-1, NU-LHT-2M, NU-LHT-4M and the CSM oxides are Slabic Table 7's eight 'FoM-relevant' oxides, and their FeO is total Fe.\n\nDocuments not on disk:\n- R086 (JSC-1, McKay 1994) and RN-S017-3 (EAC-1 thick films).\n- R102 (JSC-2A). The two JSC-2A findings rest on its stored value_text.\n- R104/R105 (LX): references_.local_path is empty, although datasheets/Lumina/Patzwald2025_ActaAstronautica_LX-simulant-system_Part1.pdf exists. Their value_text states wt.-%.\n\nMinor, not unit problems:\n- GreenSpar magnetic FoM shows '06' exactly as Slabic prints it.\n- TJ-1 oxides come from a secondary review whose comparison table has visibly shifted rows (its 'Apollo 17' row carries Apollo 16 values), so TJ-1 reliability is doubtful.\n- LZS-1 P2O5 2.0 matches the source as printed.\n- CUG-1A's page total (96.55) omits its LOI 0.19.\n\nThe page has lunar-reference comparison columns, but every lunar_reference composition is null, so none display.\n\nOwner's rule: where a unit or basis cannot be settled from the source, proposed = omit (JSC-2A Fe2O3, TLS-01 ilmenite and quartz, CUG-1A olivine and plagioclase). Where the source states the right value, I proposed only that value (GreenSpar plagioclase ~82 wt%, NUW-LHT-5M glass 40, BHLD20 synthetic agglutinates 35).\n\nThe relayed user request (show the version on the loading screen) is for the main session. This task was read-only, and I did not act on it or modify the repo.\n\nScratch files are in /private/tmp/claude-501/-Volumes-Extreme-SSD-Spring---Forest-on-the-moon/c419eb20-9d70-4d28-bb19-397156c1b594/scratchpad/: chem.txt, min.txt and fom.txt (the per-simulant dumps), presence.py (the number-presence check) and txt/ plus cache/ (extracted source text)."
+ },
+ "verify:compositions": {
+  "verdicts": [
+   {
+    "simulant_id": "S028",
+    "field": "chemical_compositions.Fe2O3 (CH-S028-04) + FeO (CH-S028-05); Total 108.64",
+    "verdict": "CONFIRMED",
+    "document_quote": "'with the exception of Fe which has been determined both by XRF and by titration' ... Table 1 (Weight %): Fe2O3 12.5, FeO 8.17 ... Total 108.64",
+    "correct": "Keep Fe2O3 12.5 and FeO 8.17 as printed, but mark them as two determinations of the same iron (XRF total Fe, titration Fe2+) that must not be added together. Do not present 108.64 as a composition total.",
+    "note": "The numbers match the sheet, and so does the page's Total, since the sheet prints 108.64 itself. They are still not additive: without FeO the rows close at 100.47. Rickman 2024 (NUW-LHT-5M TM), Table 4.4, backs this up: it gives JSC-1A XRF as 'totals of each cation expressed as an oxide', Fe2O3 12.54–12.70, and its Table 4.5 text gives JSC-1A reduced Fe as '74%' of total. FeO 8.17 converts to 9.08 as Fe2O3, which is about 73% of 12.5."
+   },
+   {
+    "simulant_id": "S049",
+    "field": "chemical_compositions.FeO 3.3 + Fe2O3T 4.79; Total 103.55",
+    "verdict": "CONFIRMED",
+    "document_quote": "Table 3: 'Fe (II) 2.55 0.01 FeO 3.3 0.012' / 'FeTOT 3.35 0.17 Fe2O3T 4.79 0.24'",
+    "correct": "Fe2O3T 4.79 as the iron row (total Fe). FeO 3.3 only if labelled Fe(II) and kept out of any total. No Total of 103.55.",
+    "note": "The source prints no total, so 103.55 is the page's own sum and counts the iron twice. Without FeO the rows sum to 100.25."
+   },
+   {
+    "simulant_id": "S025",
+    "field": "compositions.Plagioclase 94 (with Pyroxene 5, Quartz 7); Total 106",
+    "verdict": "CONFIRMED",
+    "document_quote": "'A CIPW Norm calculation ... resulted in a plagioclase content of 94 wt. % ... X-ray diffraction analyses and whole pattern fitting and Rietveld refinement suggest a plagioclase content of approximately 82 wt. %. Other mineral components identified include pyroxene (~5 wt.%), quartz (~7 wt. %), and ~6 wt.% of an assemblage of minor minerals'",
+    "correct": "Plagioclase ~82 wt% (XRD/Rietveld), on the same basis as pyroxene ~5 wt% and quartz ~7 wt%",
+    "note": "94 is the calculated CIPW norm. 5 and 7 are XRD results. The table mixes the two bases, which is why it sums to 106."
+   },
+   {
+    "simulant_id": "S052",
+    "field": "compositions Norite 17.6, Anorthosite 37.7, Olivine 4.7; Total 60",
+    "verdict": "CONFIRMED",
+    "document_quote": "Abstract: 'the design of the simulant called for two rocks from the Stillwater Complex, Montana: 17.6 wt% norite, 37.7% anorthosite, and 4.7 wt% olivine ... The other 40% of the simulant was a high calcium (An100), vesicular glass'; Table A3 'Final mix weight and percentage values for each component': Anorthosite 37.7, Norite 17.6, Olivine 4.7, Glass 40",
+    "correct": "If kept, label as the feedstock mix recipe: Anorthosite 37.7, Norite 17.6, Olivine 4.7, Glass 40 (%, Table A3). Otherwise omit.",
+    "note": "These are rock feedstocks, not minerals, and the Glass 40 row is dropped. The same report does give measured mineralogy (Table 4.1, QEMSCAN wt%, e.g. Bytownite 81.3, Pyroxenes 9.11, Olivine 3.80), but 'Glass is not included'."
+   },
+   {
+    "simulant_id": "S081",
+    "field": "compositions.Anorthite 92, Forsterite 8 (C-S081-01/02)",
+    "verdict": "CONFIRMED",
+    "document_quote": "'The JSC-2A simulant as received had a crystalline composition consisting of ca. 92% anorthite and 8% forsterite, estimated by Rietveld analysis' ... 'JSC-2A contains a significant amount of amorphous phase ... though quantification of the amorphous phase was not performed.' Table 2 (25 °C, air): Anorthite 91.65, Forsterite 8.35",
+    "correct": "Anorthite ca. 92 and forsterite ca. 8, as % of the crystalline phase (Rietveld XRD), noting that an amorphous phase is present but was not quantified. No Total. Otherwise omit.",
+    "note": "The source is on disk, although the audit said it was not: Sources/papers/LRS/JSC2A-zocca2020.pdf (Zocca et al. 2020, Ceram. Int. 46:14097, the R102 DOI). It confirms the stored value_text."
+   },
+   {
+    "simulant_id": "S081",
+    "field": "chemical_compositions.Fe2O3 15.02 (CH-S081-04)",
+    "verdict": "CONFIRMED",
+    "document_quote": "Table 1 'Chemical composition (wt.%)', column header 'Fe2O3; FeO': JSC-2A 15.02, Apollo 14 10.5, Apollo 17 12.5",
+    "correct": "omit",
+    "note": "The same combined column holds the Apollo values, which are FeO by convention, so the header does not say which oxide the 15.02 is. The oxides sum to 99.34 either way. Showing it as Fe2O3 is a guess, so the owner's rule applies."
+   },
+   {
+    "simulant_id": "S007",
+    "field": "compositions (6 rows)",
+    "verdict": "CONFIRMED",
+    "document_quote": "Li et al. 2022 Table 1 'Mineralogical compositions ..., %': CAS-1 Pyroxene 22.34, Plagioclase 63.52, Ilmenite 2.33, Olivine 8.13, Apatite 0.65, Magnetite 3.03, Total 100.00; 'Data of CAS-1 is obtained from [34]' (Zheng et al. 2009). simulantdb CAS-1 page: 'The following mineralogy was reported as a CIPW norm in Zheng et al. 2009, and does not account for the glass content (20-40%). ... Anorthite 56.28 Hypersthene 14.6 Olivine 8.18 Diopside 7.74 Orthoclase 7.24'",
+    "correct": "Label as a CIPW normative (calculated, glass-free) composition regrouped by Li et al., or omit",
+    "note": "The arithmetic checks out: 56.28 + 7.24 = 63.52, so 'Plagioclase' includes orthoclase, a K-feldspar; 14.6 + 7.74 = 22.34. The cited paper itself says only '%'. The CIPW basis comes from the simulantdb page and Zheng 2009, and the Zheng full text is not on disk (metadata only)."
+   },
+   {
+    "simulant_id": "S017",
+    "field": "compositions (9 rows)",
+    "verdict": "CONFIRMED",
+    "document_quote": "SI: 'Normative mineralogy was calculated from the rock bulk chemistry' ... 'Supplemental Table 1. A computational estimate for mineralogy based on the bulk chemistry' (EAC-1 column, Total (wt%) 97.51)",
+    "correct": "Label as normative mineralogy calculated from bulk chemistry (wt%), or omit",
+    "note": "The values match the SI, where 'Diposide' is a typo for Diopside. The basis is a calculation, not a measurement."
+   },
+   {
+    "simulant_id": "S067",
+    "field": "compositions.ilmenite 14.5 (RN-S067-2)",
+    "verdict": "CONFIRMED",
+    "document_quote": "'main mineralogical classifications were 35.4% plagioclase, 23.5% pyroxene, 14.5% ilmenite and 20% quartz. The elemental compositions as related to the minerals were 15.7% Al, 2.795% Na, 6.833% Fe, 3.7965% Mg, 4.381% Ca, 1.1557% Ti and 23.24% Si.'",
+    "correct": "omit",
+    "note": "The paragraph contradicts itself. 14.5% ilmenite needs about 4.6% Ti, while 1.1557% Ti caps ilmenite at about 3.7%. The companion paper R052 (Seehanam, on disk) gives TiO2 2.68 wt%. No basis (wt/vol) is stated."
+   },
+   {
+    "simulant_id": "S067",
+    "field": "compositions.quartz 20 (RN-S067-2)",
+    "verdict": "UNCERTAIN",
+    "document_quote": "'35.4% plagioclase, 23.5% pyroxene, 14.5% ilmenite and 20% quartz' ... '23.24% Si'; Seehanam (R052): 'SiO2 content is 44.60 wt%. The alkali oxides (Na2O + K2O) ... 6.43 wt%'",
+    "correct": "omit",
+    "note": "This is weaker than the audit claims. Within Chancharoen itself, 20% quartz roughly balances with Si 23.24% (SiO2 about 49.7%). It contradicts the SiO2 44.60 from Seehanam that the page shows beside it. Chancharoen's own elemental data are also doubtful (Al 15.7% means Al2O3 about 30%, against 15.04 in R052). With the basis unstated and the source unreliable, the owner's rule applies."
+   },
+   {
+    "simulant_id": "S012",
+    "field": "compositions.Olivine 48, Plagioclase 9 (R076)",
+    "verdict": "CONFIRMED",
+    "document_quote": "'The major crystalline mineral phases of CUG-1A are plagioclase (9% wt), pyroxene (20% wt) and olivine (48% wt), and glass (23% wt%).' Table 1 CUG-1A: MgO 6.95, Al2O3 16.01, Total 99.8",
+    "correct": "omit",
+    "note": "The values match the abstract (Sources/papers/He_etal_2010_...CUG-1A_LPSC41_1183.pdf) but cannot be true alongside its own oxides. 48% olivine carries about 18–20 wt% MgO against 6.95 stated, and 9% plagioclase plus 23% glass cannot supply 16 wt% Al2O3."
+   },
+   {
+    "simulant_id": "S018",
+    "field": "chemical_compositions (8 rows); Total 97.20",
+    "verdict": "CONFIRMED",
+    "document_quote": "RN-S018-1: 'The concentration of TiO2 (2.1%) and the sum of Na2O + K2O (2.8% + 1.0%) was also comparable. The small difference in MgO (14.3% in our work, 11.9% in10) may be due to variations between batches.' RN-S018-2: 'composition of EAC-1A consists of SiO2 (43.7%), Al2O3 (12.6%), Fe2O3 (12%), MgO (11.9%) and CaO (10.8%) according to the same research.'",
+    "correct": "Omit Na2O 2.8 and K2O 1.0, which come from the RN-S018-1 batch, and mark the table as partial. Alternatively show RN-S018-1's whole analysis (Supplementary Table S1, not on disk).",
+    "note": "The mix is narrower than the audit says. Six rows (SiO2, MgO, TiO2, Al2O3, Fe2O3, CaO) are all the same supplier analysis: Nieke 2019 Table 1 prints the same figures. Only Na2O and K2O come from a different batch, whose own analysis gives Na2O 2.9 and K2O 1.3."
+   },
+   {
+    "simulant_id": "S017",
+    "field": "chemical_compositions (10 rows); Total 98.40",
+    "verdict": "REFUTED",
+    "document_quote": "RN-S017-3 (Nieke et al. 2019, Materials 12:487) Table 1 'Chemical composition of EAC-1 as specified by the suppliers, after Schleppi et al.': SiO2 43.7, Al2O3 12.6, Fe2O3 12.00, FeO -, MgO 11.90, CaO 10.80, Na2O 2.90, K2O 1.30, TiO2 2.40, MnO 0.20, P2O5 0.60, Total 98.40",
+    "correct": "As shown (all ten rows and the Total 98.40 are RN-S017-3 Table 1)",
+    "note": "The document is on disk, although the audit said it was not: Sources/papers/agent-fetched/Nieke_etal_2019_Dense_Thick_Films_EAC-1_Materials_12_487_PMC6384728.xml, plus papers/LRS/Sources/Manufacturing Dense Thick Films of Lunar Regol.html. All ten values come from one analysis. The three rows cited to RN-S017-1 (43.7/11.9/2.4) are the same numbers, so only the citation is split, not the analysis."
+   },
+   {
+    "simulant_id": "S031",
+    "field": "chemical_compositions (10 rows)",
+    "verdict": "CONFIRMED",
+    "document_quote": "'각 경우에 예상되는 달 고원 모사토의 화학 구성을 계산한다 (Table 5)' [the expected chemical composition of each mix is calculated]; Table 5 row 9/1: 51.35 | 25.40 | FeO 0.00 | Fe2O3 1.64 | 10.76 | 5.25 | 0.45 | 3.75 | 0.12 | 0.03 | 0.02 | Igloss 1.02 | 99.77; Tables 3–4 note '* Fe2O3 total'",
+    "correct": "Label as the calculated (expected) composition of the 9:1 anorthosite:olivine mix, with Fe2O3 as total Fe. It is not a measured analysis.",
+    "note": "I recomputed the blend: 0.9 × 52.59 + 0.1 × 40.18 = 51.35, 0.9 × 0.57 + 0.1 × 11.22 = 1.64, and 0.9 × 0.52 + 0.1 × 47.78 = 5.25. These are feedstock arithmetic."
+   },
+   {
+    "simulant_id": "S028",
+    "field": "compositions.Glass 49.3 and table completeness (RN-S028-9)",
+    "verdict": "CONFIRMED",
+    "document_quote": "Coker 2026 Table 1 (%): 'glass-rich basalt nNa2O·nCaO·nSiO2 49.3', Plagioclase 37.1, olivine 9.0, Cr-spinel 1.1, Ti-magnetite 0.4, K-silicate 1.4, sulfide 1.0, albite 0.3, quartz 0.2, chlorite 0.1",
+    "correct": "'Glass-rich basalt' 49.3 (not 'Glass'). Print no Total, since five listed phases are left out.",
+    "note": "One arithmetic correction to the audit: the dropped phases sum to 3.0% (1.4 + 1.0 + 0.3 + 0.2 + 0.1), not 4.0%. The source states no basis. Its formula column is also garbled (chlorite given as 'ClO2'), which lowers confidence in the whole table."
+   },
+   {
+    "simulant_id": "S005",
+    "field": "compositions Glass 20, Plagioclase 25; Total 45",
+    "verdict": "CONFIRMED",
+    "document_quote": "Table 3 'Mineral compositions and percentages of lunar regolith simulants, %': BHLD20 row: Basalt (blank), Glass 20, Plagioclase 25, Other minerals 'Synthetic agglutinates (35)'",
+    "correct": "Add Synthetic agglutinates 35 (%). Print no Total (the stated rows sum to 80).",
+    "note": "The page's column placement is right (the cells are Glass and Plagioclase). One row is dropped, and the Total is the page's own partial sum."
+   },
+   {
+    "simulant_id": "S019",
+    "field": "compositions Total 92.85",
+    "verdict": "CONFIRMED",
+    "document_quote": "Li et al. 2022 Table 1 FJS-1: Pyroxene 25.76, Plagioclase 56.02, Ilmenite 3.65, Olivine 4.94, Glass 7.15, Magnetite 0.04, Others 2.44, Total 100.00",
+    "correct": "No Total (the Glass row was withheld)",
+    "note": "The six shown rows match the source and sum to 92.85. The Total tooltip claims the sum is 'as published by the source', but the source publishes 100.00."
+   },
+   {
+    "simulant_id": "S082",
+    "field": "compositions.Crystalline silica 29.8; Total 29.8",
+    "verdict": "CONFIRMED",
+    "document_quote": "Slabic 2024 Table 25: '*Total Percent Crystalline Silica (wt%)' GRC-3 29.8 (GRC-1 96.32); '* Total Percent Crystalline Silica (wt%) = Quartz (wt%) + Cristobalite (wt%) + Tridymite (wt%)'",
+    "correct": "29.8 wt% total crystalline silica (quartz + cristobalite + tridymite), shown as a silica measure with no Total. Same for S024 GRC-1 96.32 wt%.",
+    "note": "This is a silica-hazard metric, shown as a one-row mineral table with a Total."
+   },
+   {
+    "simulant_id": "S045",
+    "field": "compositions (3 rows)",
+    "verdict": "CONFIRMED",
+    "document_quote": "Table 5 'Mineral Component in Source and NAO-1 (% by Volume)': NAO-1 Feldspar 60.0, Pyroxene+hornblende 19.2, Opaque+glass 20.8",
+    "correct": "60.0 vol%, 19.2 vol%, 20.8 vol%",
+    "note": "The citation hover (value_text) already says '(vol%)', but the visible column label is a bare '%', and the comparison view sets it beside wt% tables."
+   },
+   {
+    "simulant_id": "S049",
+    "field": "compositions (8 rows)",
+    "verdict": "CONFIRMED",
+    "document_quote": "Schrader 2010 Table 2 'Particle type modal data and plagioclase molar percent anorthite': NU-LHT-1M Glass 22.4, Agglutinates 29.0, Plagioclase 38.8 (An 80) ...; text: 'Measuring proportions of particle types by volume is known as a \"modal analysis\" and is usually reported in modal percent'",
+    "correct": "Label as particle-type modal % (Schrader 2010 Table 2), not phase wt%",
+    "note": "The values match. The hover says '(vol%)' but the visible label does not state the basis."
+   },
+   {
+    "simulant_id": "S051",
+    "field": "compositions (10 rows)",
+    "verdict": "CONFIRMED",
+    "document_quote": "Schrader 2010 Table 2: NU-LHT-2M Glass 7.2, Agglutinates 23.5, Plagioclase 54.9 (An 80), Olivine 9.5, Clinopyroxene 4.0 ...",
+    "correct": "Label as particle-type modal % (Schrader 2010 Table 2)",
+    "note": "The values match. The basis is not shown in the visible label."
+   },
+   {
+    "simulant_id": "S053",
+    "field": "compositions (4 shown rows); Total 96.79",
+    "verdict": "CONFIRMED",
+    "document_quote": "Schrader 2010 Table 2 OB-1: Glass 52.6, Plagioclase 43.9, Olivine 0.0, Clinopyroxene 0.1, Spinel minerals 0.19, Ilmenite 0.0, 'Other (sim. only) 3.1', Total 100",
+    "correct": "Label as particle-type modal %. Print no Total, or add Other (sim. only) 3.1.",
+    "note": "The basis is unlabelled and value_text is empty. Dropping 'Other 3.1' leaves the Total at 96.79."
+   },
+   {
+    "simulant_id": "S009",
+    "field": "compositions (3 rows)",
+    "verdict": "CONFIRMED",
+    "document_quote": "simulantdb CLDS-i: 'Mineralogy Component Vol.% Glass 75 Plagioclase 15 Olivine, pyroxene and ilmenite 10'",
+    "correct": "75 vol%, 15 vol%, 10 vol%",
+    "note": "The basis is vol% and the page shows a bare '%'. value_text is empty."
+   },
+   {
+    "simulant_id": "S070",
+    "field": "compositions.Plagioclase 97; Total 97",
+    "verdict": "CONFIRMED",
+    "document_quote": "'In thin section of one typical specimen ... Plagioclase (Bytownite with An73.5; c. 97 vol%)'",
+    "correct": "c. 97 vol% (thin section of one typical specimen), no Total",
+    "note": "Approximate, vol%, and from one specimen, but shown as a bulk mineral composition with a Total."
+   },
+   {
+    "simulant_id": "S159",
+    "field": "compositions (5 rows)",
+    "verdict": "CONFIRMED",
+    "document_quote": "'The modal mineralogy data ... are shown as area percentage (%)' ... 'Lumina90 ... consists of Ca plagioclase (86.67%) ... quartz (4.14%), muscovite (1.91%), Mg-Al silicates (1.06%), Ca-Al silicates (3.02%)'",
+    "correct": "area% (AMICS automated SEM-EDS): 86.67, 4.14, 1.91, 1.06, 3.02",
+    "note": "The values match. The area% basis is only in the hover."
+   },
+   {
+    "simulant_id": "S160",
+    "field": "compositions (4 rows)",
+    "verdict": "CONFIRMED",
+    "document_quote": "'Lumina250 ... is comprised of Ca plagioclase (90.39%) as the major phase, quartz (3.74%)' (AMICS 'area percentage (%)')",
+    "correct": "area% (AMICS)",
+    "note": "Same as S159."
+   },
+   {
+    "simulant_id": "S161",
+    "field": "compositions (4 rows)",
+    "verdict": "CONFIRMED",
+    "document_quote": "'... plagioclase (93.24%) as the major phase, quartz (1.03%)' (AMICS 'area percentage (%)')",
+    "correct": "area% (AMICS)",
+    "note": "Same as S159."
+   },
+   {
+    "simulant_id": "S117",
+    "field": "compositions (5 rows)",
+    "verdict": "CONFIRMED",
+    "document_quote": "'Estimated modal compositions are: plagioclase (An50), 45%; clinopyroxene (augite), 45%; opaques (probably magnetite, 5%; quartz, 3%; biotite, 2%.'",
+    "correct": "Label as estimated modal % (thin section). Show 'Opaques (probably magnetite) 5' rather than 'Magnetite 5'.",
+    "note": "The source states no wt/vol basis beyond 'modal', and says 'opaques', not magnetite."
+   },
+   {
+    "simulant_id": "S011",
+    "field": "compositions.value_text (5 rows)",
+    "verdict": "CONFIRMED",
+    "document_quote": "Table 3 'Mineral compositions and percentages of lunar regolith simulants, %': CSM-CL | Glass 44 | Plagioclase 40 | Ilmenite 1 | Olivine 8 | Clinopyroxene 4 | K-feldspar + Chromite + Calcite + Quartz",
+    "correct": "value_text '44' etc. under the table's '%' (basis unstated), not '44 wt%'",
+    "note": "The displayed numbers are right. The provenance text claims wt%, which the cited table does not state. No 'wt%' appears anywhere in that review."
+   },
+   {
+    "simulant_id": "S028",
+    "field": "figures_of_merit.score (RN-S028-5 0–100 vs RN-S028-16 Schrader)",
+    "verdict": "CONFIRMED",
+    "document_quote": "Slabic 2024: 'FoM values are calculated using equations that output a value between 0 (nothing like lunar regolith) and 100 (exactly like lunar regolith).' Schrader 2010 Table 3: 'JSC-1A 0.35' (no scale endpoints stated anywhere in the TM)",
+    "correct": "Slabic rows as '88 / 100'. Schrader rows as printed, with a note that the document states no scale.",
+    "note": "The deployed code (origin/staging v2.9.19, same as the audited HEAD) prints both bare. The uncommitted working tree now has scored(): it gives '88 / 100' for Slabic rows, but its 0–1 regex is anchored at '^0-1' and does not match the stored scale 'unitless index (0–1 …)', so Schrader rows still print bare '0.35'."
+   },
+   {
+    "simulant_id": "S043",
+    "field": "figures_of_merit.score (RN-S043-7 vs RN-S043-8)",
+    "verdict": "CONFIRMED",
+    "document_quote": "Slabic: 'between 0 ... and 100'; Schrader Table 3: 'MLS-1 0.35'",
+    "correct": "'96 / 100' etc. for Slabic rows; Schrader rows with 'scale not stated'",
+    "note": "Same as S028."
+   },
+   {
+    "simulant_id": "S051",
+    "field": "figures_of_merit.score (RN-S051-2 vs RN-S051-3)",
+    "verdict": "CONFIRMED",
+    "document_quote": "Slabic: 'between 0 ... and 100'; Schrader Table 3: 'NU-LHT-2M 0.55'",
+    "correct": "'96 / 100' etc. for Slabic rows; Schrader rows with 'scale not stated'",
+    "note": "Same as S028."
+   },
+   {
+    "simulant_id": "S053",
+    "field": "figures_of_merit.score (RN-S053-8 vs RN-S053-11)",
+    "verdict": "CONFIRMED",
+    "document_quote": "Slabic: 'between 0 ... and 100'; Schrader Table 3: 'OB-1 0.28'",
+    "correct": "'87 / 100' etc. for Slabic rows; Schrader rows with 'scale not stated'",
+    "note": "Same as S028."
+   },
+   {
+    "simulant_id": "S028",
+    "field": "figures_of_merit property=composition hover for the 8 Schrader rows (S019, S027, S028, S030, S043, S049, S051, S053)",
+    "verdict": "CONFIRMED",
+    "document_quote": "'The FoM v.2 software combines particle type data, as described in section 3.2, with limited mineral composition data for comparison' ... 'It is these particle type modal analyses that are used in the FoM v.2 composition routines.'",
+    "correct": "Hover: particle-type modal composition (plus plagioclase An) against Apollo 16 core 64001/64002",
+    "note": "This matters more in the working tree. Its new 'one row per property' default sorts on reference_sample, and '64001/64002' sorts before 'Apollo…', so the Schrader row, carrying the wrong 'bulk chemistry' hover, becomes the visible Composition row."
+   },
+   {
+    "simulant_id": "S065",
+    "field": "simulants.nasa_fom_score",
+    "verdict": "CONFIRMED",
+    "document_quote": "TLH-0 TDS v1.4: 'Mean NASA FoM Score: 88.7%'",
+    "correct": "88.7 %",
+    "note": "PhysicalPropertiesSection gives nasa_fom_score the unit '', and the page renders String(value) with no unit."
+   },
+   {
+    "simulant_id": "S066",
+    "field": "simulants.nasa_fom_score",
+    "verdict": "CONFIRMED",
+    "document_quote": "TLM-0 TDS v2.2: 'Mean NASA FoM Score: 90.9 %'",
+    "correct": "90.9 %",
+    "note": "Same as S065."
+   }
+  ],
+  "systemic_verdicts": [
+   {
+    "issue": "Bare '%' for every mineral basis (MineralChart.tsx:140, SimulantTable.tsx:321, ComparisonPanel.tsx:135,140)",
+    "verdict": "CONFIRMED",
+    "note": "MineralChart.tsx:140 valueLabel=\"%\" is in the current code, and line 126 does the same in the chart tooltip. In the current ComparisonPanel, 'Minerals (%)' is at lines 146 and 151, not 135/140. SimulantTable.tsx:321 '{m.value_pct}%' exists only in the deployed origin/staging (v2.9.19). The new HEAD c18c8b8 (not pushed) removed the expanded row, so that part is stale. Stored bases include vol%, area%, particle-type modal %, CIPW wt%, and % of crystalline fraction."
+   },
+   {
+    "issue": "Mineral table always prints 'Total'; tooltip says 'as published by the source'",
+    "verdict": "CONFIRMED",
+    "note": "MineralChart.tsx:140 passes no partialBelow, so CompositionTable.tsx:37 never sets partial. The tooltip at CompositionTable.tsx:71-73 reads 'Sum of the rows listed above, as published by the source', but line 36 computes the sum itself. Examples: BHLD20 45, NUW-LHT-5M 60, GRC-3 29.8, TUBS-T 97, FJS-1 92.85 (source 100.00), and the CUG-1A oxide table at 96.55 against the source's 99.8."
+   },
+   {
+    "issue": "Oxide Total adds a total-Fe row and an Fe(II) row",
+    "verdict": "CONFIRMED",
+    "note": "ChemicalChart.tsx:25-29 keeps every oxide row except 'sum', and CompositionTable.tsx:36 adds them all. JSC-1A: 12.5 + 8.17 gives 108.64. NU-LHT-1M: Fe2O3T 4.79 + FeO 3.3 gives 103.55. Nothing treats Fe2O3T/FeO* and Fe(II) rows as alternatives."
+   },
+   {
+    "issue": "Iron labels ambiguous across the data; comparison aligns by name",
+    "verdict": "CONFIRMED",
+    "note": "Verified in the documents. Total Fe: Li 2022 Table 2 'Total Fe as FeO' (CAS-1, CUMT-1, FJS-1 column); Rickman 2024 Table 4.4 'totals of each cation expressed as an oxide' (NUW-LHT-5M Fe2O3 4.31); KIGAM '* Fe2O3 total'. True ferrous/ferric split: NAO-1 (wet method, Fe2O3 2.62 / FeO 3.52). One wrinkle: FJS-1's page rows (FeO 8.3 / Fe2O3 4.77) are a split, while Li Table 2 gives FJS-1 total Fe as FeO 13.07. ComparisonPanel keys rows by component name in compositionRows (lines 58-65 now, not line 71)."
+   },
+   {
+    "issue": "FoM score printed bare; '%' only if the scale string contains '%'",
+    "verdict": "CONFIRMED",
+    "note": "This holds in the deployed code and at HEAD (FigureOfMeritSection.tsx:66-67, header tooltip :52). The uncommitted working tree is being changed right now: scored() adds ' / 100' for Slabic rows, but its 0–1 pattern (/^0-1\\b|^0–1\\b|.../) is anchored and does not match the stored 'unitless index (0–1 …)', so Schrader rows still print bare. Schrader 2010 does not state 0–1 endpoints, so '/ 1' would itself be an inference."
+   },
+   {
+    "issue": "PROPERTY_HELP.composition says 'bulk chemistry'",
+    "verdict": "CONFIRMED",
+    "note": "The line is still there at FigureOfMeritSection.tsx:13 in the working tree. Schrader §5.1 says the composition FoM 'combines particle type data ... with limited mineral composition data', so the hover is wrong for all 8 Schrader rows. Only the Slabic 'Chemistry' rows are bulk oxide chemistry."
+   },
+   {
+    "issue": "nasa_fom_score unit ''",
+    "verdict": "CONFIRMED",
+    "note": "PhysicalPropertiesSection.tsx:22 sets unit '', and lines 62-63 render only String(value) plus a non-empty unit. Both sheets print '%': TLH-0 88.7%, TLM-0 90.9 %."
+   },
+   {
+    "issue": "SimulantTable expanded row shows zero values (S 0 wt%, Cr2O3 0 wt%, Olivine 0%, Ilmenite 0%)",
+    "verdict": "CONFIRMED",
+    "note": "This is true of the deployed origin/staging v2.9.19: lines 236-241 filter only empty names and 'sum', and lines 321/334 render '{value}%' and '{value} wt%'. The zero rows exist in data.json (TBG-1 S, TUBS-T Cr2O3, OB-1 Olivine and Ilmenite). Commit c18c8b8 (HEAD, not pushed) removed the expanded row, so this goes away with the next push."
+   },
+   {
+    "issue": "No unit/basis check for composition rows (parse_value.py COLUMN_UNITS / to_column_unit)",
+    "verdict": "CONFIRMED",
+    "note": "COLUMN_UNITS (parse_value.py:73-81) covers only bulk_density, cohesion, friction_angle, particle_size_d50 and particle_size_mean_um. value_text is empty for 490 of 547 oxide rows and 158 of 230 mineral rows (recounted). One correction: 'never pass a check' goes too far. scripts/audit_values.py:121-127 warns on oxide totals outside 90–103% and mineral totals above 103%, which would flag JSC-1A 108.64, NU-LHT-1M 103.55 and GreenSpar 106. It also checks value against quote and a 0–100 range. There is no wt%/vol%/area% basis check anywhere."
+   }
+  ],
+  "notes": "I checked all 39 composition, FoM and scalar findings against the source documents, all opened on disk: 37 confirmed, 1 refuted, 1 uncertain. All 9 systemic issues hold in substance.\n\n**Refuted: S017 EAC-1 chemistry.** RN-S017-3 is on disk (Sources/papers/agent-fetched/Nieke_etal_2019_Dense_Thick_Films_EAC-1_Materials_12_487_PMC6384728.xml). Its Table 1 states all ten oxides and Total 98.40 as one supplier analysis. The page shows exactly that table; only the citation is split across two documents.\n\n**Uncertain: TLS-01 quartz.** Correct is \"omit\" under the owner's rule. TLS-01 ilmenite is confirmed wrong: the paper's own Ti 1.1557% caps ilmenite at about 3.7%, against 14.5% shown.\n\n**Corrections to the audit:**\n- R102 (JSC-2A) is on disk as papers/LRS/JSC2A-zocca2020.pdf. It confirms both JSC-2A findings.\n- EAC-1A (S018): six of its eight oxides are one supplier analysis. Only Na2O 2.8 and K2O 1.0 come from a different batch, whose MgO is 14.3 and TiO2 2.1.\n- JSC-1A (Coker table): the dropped phases sum to 3.0%, not 4.0%.\n- JSC-1A iron is corroborated by the NUW-LHT-5M report (Tables 4.4–4.5): USGS XRF gives JSC-1A Fe2O3 12.5–12.7 as total iron, with ferrous iron about 74% of it. So FeO 8.17 is part of the 12.5, and the two rows must not be added.\n\n**The code is changing while you work on it.**\n- The deployed site (origin/staging, v2.9.19) matches the code the audit cited.\n- A new commit c18c8b8 (HEAD, not pushed) removed the SimulantTable expanded row. Systemic item 8 and the SimulantTable part of item 1 therefore only apply to the live site now.\n- The uncommitted working tree adds a scored() function to FigureOfMeritSection.tsx. It labels the 0–100 scores \"/ 100\", but its 0–1 pattern does not match the stored scale text, so Schrader scores still print bare. Its new one-row-per-property default also makes the Schrader \"Composition\" row, with the wrong \"bulk chemistry\" hover, the one readers see.\n- Several of the audit's line numbers in ComparisonPanel.tsx are stale; the code it describes is still there at different lines.\n\nI did not modify the repo or the database. My text extracts are in /private/tmp/claude-501/-Volumes-Extreme-SSD-Spring---Forest-on-the-moon/c419eb20-9d70-4d28-bb19-397156c1b594/scratchpad/uchk/ (jsc1a, rickman, gruener, nuw5m, jsc2a, li2022, eac_si, tls_ch, Seehanam, cug, eac1a_sint, gines, kigam, coker, rev1643, slabic, nao, schrader, tubs, zemeny, gsc1, tlh0, tlm0 .txt)."
+ }
+}

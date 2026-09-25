@@ -1,0 +1,40 @@
+[
+ {
+  "click": "Moon"
+ },
+ {
+  "click": "Table"
+ },
+ {
+  "clickSel": "tbody tr button[aria-label$=\"sources\"]",
+  "after": 1600
+ },
+ {
+  "expect": "(() => { const el = document.getElementById('pane-sources'); if (!el) return false; const b = el.getBoundingClientRect(); return b.top >= 0 && b.top < innerHeight; })()",
+  "why": "the Sources cell opens the site panel at its source list"
+ },
+ {
+  "shot": "moon_sources_column"
+ },
+ {
+  "eval": "(async () => { const heads = [...document.querySelectorAll('thead th')]; for (const h of heads) { h.click(); await new Promise(r => setTimeout(r, 100)); h.click(); await new Promise(r => setTimeout(r, 100)); } return heads.length; })()",
+  "as": "moonSorts"
+ },
+ {
+  "clickSel": "tbody tr",
+  "after": 1200
+ },
+ {
+  "eval": "(() => { let n = 0; for (const b of document.querySelectorAll('[aria-label=\"Missions\"] [role=group] button')) { b.click(); n++; } return n; })()",
+  "as": "programmeChips"
+ },
+ {
+  "click": "Map"
+ },
+ {
+  "click": "Globe"
+ },
+ {
+  "click": "Earth"
+ }
+]

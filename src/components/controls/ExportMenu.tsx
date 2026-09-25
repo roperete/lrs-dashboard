@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Download, ChevronDown } from 'lucide-react';
 import { exportToCSV } from '../../utils/csv';
-import type { Simulant, Composition, ChemicalComposition, Reference } from '../../types';
+import type { Simulant, Composition, ChemicalComposition, Reference, PropertySource, FigureOfMerit } from '../../types';
 
 interface ExportMenuProps {
   currentSimulant: Simulant | null;
@@ -10,11 +10,13 @@ interface ExportMenuProps {
   compositions: Composition[];
   chemicalCompositions: ChemicalComposition[];
   references: Reference[];
+  propertySources?: PropertySource[];
+  figuresOfMerit?: FigureOfMerit[];
 }
 
 export function ExportMenu({
   currentSimulant, filteredSimulants, allSimulants,
-  compositions, chemicalCompositions, references,
+  compositions, chemicalCompositions, references, propertySources, figuresOfMerit,
 }: ExportMenuProps) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -30,20 +32,20 @@ export function ExportMenu({
   const timestamp = new Date().toISOString().slice(0, 10);
 
   const doExport = (simulants: Simulant[], label: string) => {
-    exportToCSV(simulants, compositions, chemicalCompositions, references, `lrs_${label}_${timestamp}.csv`);
+    exportToCSV(simulants, { compositions, chemicalCompositions, references, propertySources, figuresOfMerit }, `lrs_${label}_${timestamp}.csv`);
     setOpen(false);
   };
 
   return (
     <div ref={ref} className="relative">
-      <button onClick={() => setOpen(!open)}
-        className="flex items-center gap-2 px-3 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs text-slate-300 transition-colors">
-        <Download size={14} />
-        <span>Export</span>
+      <button onClick={() => setOpen(!open)} aria-haspopup="menu" aria-expanded={open}
+        className="flex items-center gap-1.5 px-3 h-10 hover:bg-slate-800 rounded-lg text-sm text-slate-300 hover:text-white transition-colors">
+        <Download size={16} />
+        <span className="hidden md:inline">Export</span>
         <ChevronDown size={12} />
       </button>
       {open && (
-        <div className="absolute bottom-full left-0 mb-1 bg-slate-800 border border-slate-700 rounded-lg shadow-xl overflow-hidden min-w-[180px] z-[200]">
+        <div role="menu" className="absolute top-full right-0 mt-1 bg-slate-800 border border-slate-700 rounded-lg shadow-xl overflow-hidden min-w-[180px] z-[200]">
           {currentSimulant && (
             <button onClick={() => doExport([currentSimulant], currentSimulant.name.replace(/[^a-z0-9]/gi, '_'))}
               className="w-full text-left px-3 py-2 text-xs text-slate-300 hover:bg-slate-700 transition-colors">

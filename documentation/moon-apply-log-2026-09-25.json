@@ -1,0 +1,1905 @@
+[
+ {
+  "entity_id": "10084",
+  "field": "mission",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "landing_site",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "coordinates:lat",
+  "outcome": "no source: not a field the page shows",
+  "needs_review": true
+ },
+ {
+  "entity_id": "10084",
+  "field": "coordinates:lng",
+  "outcome": "no source: not a field the page shows",
+  "needs_review": true
+ },
+ {
+  "entity_id": "10084",
+  "field": "type",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "sample_description",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "oxide:SiO2",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "oxide:TiO2",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "oxide:Al2O3",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "oxide:Cr2O3",
+  "outcome": "no source: not_found, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.290 wt% (supports stored 0.3)",
+  "correct_reference": "papers/LRS/LunarSourceBook.pdf, Table 7.16, p.347 (R2)",
+  "problems": [
+   "The reader missed LSB Table 7.16, which states Cr2O3 for sample 10084 directly."
+  ]
+ },
+ {
+  "entity_id": "10084",
+  "field": "oxide:FeO",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "oxide:MnO",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "oxide:MgO",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "oxide:CaO",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "oxide:Na2O",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "oxide:K2O",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "oxide:P2O5",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "10084",
+  "field": "mineral:Plagioclase",
+  "outcome": "corrected to the source",
+  "was": "21.0 (unit not stated)",
+  "now": "1.9 vol% (mineral-fragment plagioclase, 90-1000 micron fraction)"
+ },
+ {
+  "entity_id": "10084",
+  "field": "mineral:Pyroxene",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "10084",
+  "field": "mineral:Olivine",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "10084",
+  "field": "mineral:Ilmenite",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "10084",
+  "field": "mineral:Agglutinates",
+  "outcome": "corrected to the source",
+  "was": "18.0 (unit not stated)",
+  "now": "52 vol% (agglutinate, 90-1000 micron fraction)"
+ },
+ {
+  "entity_id": "10084",
+  "field": "mineral:Glass",
+  "outcome": "corrected to the source",
+  "was": "5.0 (unit not stated)",
+  "now": "6.6 vol% (glass, sum of orange/black+yellow/green+brown+clear+devitrified subtypes)"
+ },
+ {
+  "entity_id": "10084",
+  "field": "mineral:Other",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "10084",
+  "field": "mineral",
+  "outcome": "the table cites more than one document: one analysis per table",
+  "needs_review": true,
+  "documents": [
+   "LD-001",
+   "LD-002"
+  ]
+ },
+ {
+  "entity_id": "12070",
+  "field": "mission",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "12070",
+  "field": "landing_site",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "12070",
+  "field": "coordinates:lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "12070",
+  "field": "coordinates:lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "12070",
+  "field": "type",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "12070",
+  "field": "sample_description",
+  "outcome": "corrected to the source",
+  "was": "Bulk regolith soil from ALSEP site, well-gardened surface soil",
+  "now": "contingency sample, collected in front of the Lunar Module (not the ALSEP site); high maturity per carbon/nitrogen data"
+ },
+ {
+  "entity_id": "12070",
+  "field": "oxide:SiO2",
+  "outcome": "corrected to the source",
+  "was": "46.3 wt%",
+  "now": "45.83 wt% (Compston71, most complete single 12070 analysis)"
+ },
+ {
+  "entity_id": "12070",
+  "field": "oxide:TiO2",
+  "outcome": "corrected to the source",
+  "was": "3.0 wt%",
+  "now": "2.81 wt% (Compston71)"
+ },
+ {
+  "entity_id": "12070",
+  "field": "oxide:Al2O3",
+  "outcome": "corrected to the source",
+  "was": "12.9 wt%",
+  "now": "12.48 wt% (Compston71)"
+ },
+ {
+  "entity_id": "12070",
+  "field": "oxide:Cr2O3",
+  "outcome": "no source: not_found, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.41 wt%",
+  "correct_reference": "papers/lunar/Apollo12_PSR_SP-235.pdf, Table 12-VII, p.205 (pdf p.208)",
+  "problems": [
+   "The reader missed the PSR analysis, which states Cr2O3 for 12070."
+  ]
+ },
+ {
+  "entity_id": "12070",
+  "field": "oxide:FeO",
+  "outcome": "corrected to the source",
+  "was": "15.1 wt%",
+  "now": "16.81 wt% (Compston71)"
+ },
+ {
+  "entity_id": "12070",
+  "field": "oxide:MnO",
+  "outcome": "corrected to the source",
+  "was": "0.22 wt%",
+  "now": "0.23 wt% (Compston71)"
+ },
+ {
+  "entity_id": "12070",
+  "field": "oxide:MgO",
+  "outcome": "corrected to the source",
+  "was": "9.3 wt%",
+  "now": "10.18 wt% (Compston71)"
+ },
+ {
+  "entity_id": "12070",
+  "field": "oxide:CaO",
+  "outcome": "corrected to the source",
+  "was": "10.7 wt%",
+  "now": "10.45 wt% (Compston71)"
+ },
+ {
+  "entity_id": "12070",
+  "field": "oxide:Na2O",
+  "outcome": "corrected to the source",
+  "was": "0.54 wt%",
+  "now": "0.43 wt% (Compston71)"
+ },
+ {
+  "entity_id": "12070",
+  "field": "oxide:K2O",
+  "outcome": "corrected to the source",
+  "was": "0.31 wt%",
+  "now": "0.27 wt% (Compston71)"
+ },
+ {
+  "entity_id": "12070",
+  "field": "oxide:P2O5",
+  "outcome": "corrected to the source",
+  "was": "0.4 wt%",
+  "now": "0.31 wt% (Compston71)"
+ },
+ {
+  "entity_id": "12070",
+  "field": "mineral:Plagioclase",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "18.9% (Frondel et al. 1971) or 12%/7% by size fraction (McKay et al. 1971)",
+  "needs_review": true
+ },
+ {
+  "entity_id": "12070",
+  "field": "mineral:Pyroxene",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "27% / 23% by size fraction (McKay et al. 1971); combined with olivine as 60% in Frondel et al. 1971",
+  "needs_review": true
+ },
+ {
+  "entity_id": "12070",
+  "field": "mineral:Olivine",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "3% / 4% by size fraction (McKay et al. 1971)",
+  "needs_review": true
+ },
+ {
+  "entity_id": "12070",
+  "field": "mineral:Ilmenite",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "12070",
+  "field": "mineral:Agglutinates",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "26% / 45% by size fraction, reported as 'Aggregates' (McKay et al. 1971)",
+  "needs_review": true
+ },
+ {
+  "entity_id": "12070",
+  "field": "mineral:Glass",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "33% / 22% by size fraction (McKay et al. 1971); or 11.9%+5.8%=17.7% (angular+rounded glass, Frondel et al. 1971)",
+  "needs_review": true
+ },
+ {
+  "entity_id": "12070",
+  "field": "mineral:Other",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "14163",
+  "field": "mission",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "14163",
+  "field": "landing_site",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "14163",
+  "field": "coordinates:lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "14163",
+  "field": "coordinates:lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "14163",
+  "field": "type",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "14163",
+  "field": "sample_description",
+  "outcome": "no source: supported, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "Bulk soil sample collected near the LM at the end of EVA-1; KREEP-rich highland reference soil (55-67% high-K KREEP by mixing model)",
+  "correct_reference": "R1 (LSC_14163 p.1-2) and papers/lunar/Apollo14_PSR_SP-272.pdf Table 5-III",
+  "problems": [
+   "Status 'supported' is wrong: the word 'Comprehensive' belongs to sample 14259."
+  ]
+ },
+ {
+  "entity_id": "14163",
+  "field": "oxide:SiO2",
+  "outcome": "corrected to the source",
+  "was": "48.1 wt%",
+  "now": "47.97 wt% (Rose72, most complete single 14163 analysis)"
+ },
+ {
+  "entity_id": "14163",
+  "field": "oxide:TiO2",
+  "outcome": "corrected to the source",
+  "was": "1.7 wt%",
+  "now": "1.77 wt% (Rose72)"
+ },
+ {
+  "entity_id": "14163",
+  "field": "oxide:Al2O3",
+  "outcome": "corrected to the source",
+  "was": "17.4 wt%",
+  "now": "17.57 wt% (Rose72)"
+ },
+ {
+  "entity_id": "14163",
+  "field": "oxide:Cr2O3",
+  "outcome": "no source: not_found, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.200 wt%",
+  "correct_reference": "papers/LRS/LunarSourceBook.pdf, Table 7.16, p.347 (R2)",
+  "problems": [
+   "The reader missed LSB Table 7.16."
+  ]
+ },
+ {
+  "entity_id": "14163",
+  "field": "oxide:FeO",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "10.41 wt% (Rose72), supports stored 10.4",
+  "correct_reference": "R1 (LSC_14163 Table 1a, Rose72)",
+  "problems": [
+   "Status 'differs' contradicts value_in_source, which equals the stored value."
+  ]
+ },
+ {
+  "entity_id": "14163",
+  "field": "oxide:MnO",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.14 wt% (Rose72), supports stored",
+  "correct_reference": "R1 (LSC_14163 Table 1a, Rose72)",
+  "problems": [
+   "Status 'differs' contradicts an identical source value."
+  ]
+ },
+ {
+  "entity_id": "14163",
+  "field": "oxide:MgO",
+  "outcome": "corrected to the source",
+  "was": "9.4 wt%",
+  "now": "9.18 wt% (Rose72)"
+ },
+ {
+  "entity_id": "14163",
+  "field": "oxide:CaO",
+  "outcome": "corrected to the source",
+  "was": "10.7 wt%",
+  "now": "11.15 wt% (Rose72)"
+ },
+ {
+  "entity_id": "14163",
+  "field": "oxide:Na2O",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.7 wt% (Rose72), supports stored",
+  "correct_reference": "R1 (LSC_14163 Table 1a, Rose72)",
+  "problems": [
+   "Status 'differs' contradicts an identical source value."
+  ]
+ },
+ {
+  "entity_id": "14163",
+  "field": "oxide:K2O",
+  "outcome": "corrected to the source",
+  "was": "0.55 wt%",
+  "now": "0.58 wt% (Rose72)"
+ },
+ {
+  "entity_id": "14163",
+  "field": "oxide:P2O5",
+  "outcome": "corrected to the source",
+  "was": "0.51 wt%",
+  "now": "0.52 wt% (Rose72)"
+ },
+ {
+  "entity_id": "14163",
+  "field": "mineral:Plagioclase",
+  "outcome": "corrected to the source",
+  "was": "37.0 (unit not stated)",
+  "now": "5.1% (Simon et al. 1981)"
+ },
+ {
+  "entity_id": "14163",
+  "field": "mineral:Pyroxene",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "4.1 % (modal, Carr and Meyer 1972)",
+  "correct_reference": "R1 (LSC_14163 p.1, 'Modal content of soils 14163. From Carr and Meyer (1972)')",
+  "problems": [
+   "value_in_source is Simon's combined Px+Ol figure mislabelled as pyroxene."
+  ]
+ },
+ {
+  "entity_id": "14163",
+  "field": "mineral:Olivine",
+  "outcome": "no source: not_found, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.4 % (modal, Carr and Meyer 1972)",
+  "correct_reference": "R1 (LSC_14163 p.1, Carr and Meyer 1972 mode)",
+  "problems": [
+   "The reader missed the second modal table on LSC_14163 p.1."
+  ]
+ },
+ {
+  "entity_id": "14163",
+  "field": "mineral:Ilmenite",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "14163",
+  "field": "mineral:Agglutinates",
+  "outcome": "corrected to the source",
+  "was": "20.0 (unit not stated)",
+  "now": "45.7% (Simon et al. 1981)"
+ },
+ {
+  "entity_id": "14163",
+  "field": "mineral:Glass",
+  "outcome": "corrected to the source",
+  "was": "7.0 (unit not stated)",
+  "now": "10% ('Glass other', Simon et al. 1981)"
+ },
+ {
+  "entity_id": "14163",
+  "field": "mineral:Other",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "A11",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A11",
+  "field": "lat",
+  "outcome": "corrected to the source",
+  "was": "0.67409",
+  "now": "0.67408°N (Davies and Colvin, 2000)"
+ },
+ {
+  "entity_id": "A11",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A11",
+  "field": "samples_returned",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "21.5 kg",
+  "correct_reference": "papers/lunar/NASA_Allton2009_LunarSamples_ApolloCollectionTools.pdf (https://www.nasa.gov/wp-content/uploads/2019/04/02_allton_corrected_apollo.pdf)",
+  "problems": [
+   "Status should be 'supported' via the Allton (NASA JSC) document, not 'differs'."
+  ]
+ },
+ {
+  "entity_id": "A11",
+  "field": "bulk_density",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "A11",
+  "field": "friction_angle",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "A11",
+  "field": "cohesion",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "A11",
+  "field": "bearing_capacity",
+  "outcome": "no source: the stated value is not a single number in a known unit",
+  "stated": "ultimate bearing capacity ≈ 9.1-11.5 psi (≈62.8-79.3 kPa) for the LM footpad; a different quantity, static bearing pressure (applied stress), was 0.8-2.1 psi (≈5.5-14.5 kPa)",
+  "needs_review": true
+ },
+ {
+  "entity_id": "A11",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "A12",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A12",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A12",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A12",
+  "field": "samples_returned",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A12",
+  "field": "bulk_density",
+  "outcome": "no source: range_only, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "1.8 ± 0.2 g/cm³",
+  "correct_reference": "R3",
+  "problems": [
+   "The status should be 'differs', not 'range_only'. The primary source states a single in situ value for this site (1.8±0.2 g/cc)."
+  ]
+ },
+ {
+  "entity_id": "A12",
+  "field": "friction_angle",
+  "outcome": "no source: the stated value is not a single number in a known unit",
+  "stated": "35° to 39° (in-situ EVA analysis)",
+  "needs_review": true
+ },
+ {
+  "entity_id": "A12",
+  "field": "cohesion",
+  "outcome": "no source: the stated value is not a single number in a known unit",
+  "stated": "0.35 to 0.70 kPa (3.5×10³ to 7×10³ dyn/cm², in-situ EVA analysis)",
+  "needs_review": true
+ },
+ {
+  "entity_id": "A12",
+  "field": "bearing_capacity",
+  "outcome": "no source: the stated value is not a single number in a known unit",
+  "stated": "no bearing-capacity number is stated; the applied pressure from astronauts/LM footpads was 7×10⁴ to 14×10⁴ dyn/cm² (7-14 kPa), explicitly said to be less than the soil's actual bearing capacity",
+  "needs_review": true
+ },
+ {
+  "entity_id": "A12",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "A14",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A14",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A14",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A14",
+  "field": "samples_returned",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A14",
+  "field": "bulk_density",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "A14",
+  "field": "friction_angle",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "A14",
+  "field": "cohesion",
+  "outcome": "no source: the stated value is not a single number in a known unit",
+  "stated": "<0.03-0.1 kPa at the trench site (Mitchell et al. 1971); explicitly 'unexpectedly low'",
+  "needs_review": true
+ },
+ {
+  "entity_id": "A14",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "A15",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A15",
+  "field": "lat",
+  "outcome": "corrected to the source",
+  "was": "26.13222",
+  "now": "26.13239 N latitude (Lunar Module; LRO-derived, DE 421 mean Earth/polar rotation axis frame)"
+ },
+ {
+  "entity_id": "A15",
+  "field": "lng",
+  "outcome": "corrected to the source",
+  "was": "3.63386",
+  "now": "3.63330 E longitude (Lunar Module; LRO-derived, DE 421 mean Earth/polar rotation axis frame)"
+ },
+ {
+  "entity_id": "A15",
+  "field": "samples_returned",
+  "outcome": "corrected to the source",
+  "was": "77.3 kg",
+  "now": "77.31 kg of rock and soil samples"
+ },
+ {
+  "entity_id": "A15",
+  "field": "bulk_density",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "1.36 to 2.15 g/cm³ (site-wide in situ range; no single site value)",
+  "correct_reference": "R4",
+  "problems": [
+   "Status should be range_only, not differs.",
+   "The station 8 value is location-specific and is not the site value."
+  ]
+ },
+ {
+  "entity_id": "A15",
+  "field": "friction_angle",
+  "outcome": "no source: the stated value is not a single number in a known unit",
+  "stated": "a friction angle of approximately 50° for the soil at station 8",
+  "needs_review": true
+ },
+ {
+  "entity_id": "A15",
+  "field": "cohesion",
+  "outcome": "no source: the stated value is not a single number in a known unit",
+  "stated": "a cohesion of 1 kN/m2 (=1.0 kPa) for the soil at station 8",
+  "needs_review": true
+ },
+ {
+  "entity_id": "A15",
+  "field": "description",
+  "outcome": "source written (3 claims)"
+ },
+ {
+  "entity_id": "A16",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A16",
+  "field": "lat",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "8.9730 S (R1), equal to stored -8.97301 at the source's 4-decimal precision; 8.97301° S is stated exactly in Katzer et al. 2024 Table 1 and in Gasteiner et al.",
+  "correct_reference": "R1",
+  "problems": [
+   "Status should be supported, not differs.",
+   "R2 (LRO) gives -8.9734, which conflicts with R1."
+  ]
+ },
+ {
+  "entity_id": "A16",
+  "field": "lng",
+  "outcome": "corrected to the source",
+  "was": "15.49812",
+  "now": "15.5002 E longitude (Lunar Module; IAU Mean Earth Polar Axis system); 15.5011 in the 2016 LROC-updated table"
+ },
+ {
+  "entity_id": "A16",
+  "field": "samples_returned",
+  "outcome": "corrected to the source",
+  "was": "95.7 kg",
+  "now": "95.71 kg of rock and soil samples"
+ },
+ {
+  "entity_id": "A16",
+  "field": "bulk_density",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "A16",
+  "field": "friction_angle",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "No single site value. R4 Table 8-VII (p.8-22): station 4 46.5°; station 10 49.5° and 50 to 47°; ALSEP drill hole 46.5° (assumed).",
+  "correct_reference": "R4",
+  "problems": [
+   "The reader left out the station 10 values in Table 8-VII.",
+   "Status should be range_only, or several values, not differs."
+  ]
+ },
+ {
+  "entity_id": "A16",
+  "field": "cohesion",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "No single site value. R4 Table 8-VII (p.8-22): station 4 0.60 kN/m²; station 10 0.37 and 0.25 to 0.60 kN/m²; ALSEP 1.3 kN/m² (open drill-hole analysis at 2.18 m depth).",
+  "correct_reference": "R4",
+  "problems": [
+   "The reader left out the other Table 8-VII values.",
+   "Status should be range_only, or several values, not differs."
+  ]
+ },
+ {
+  "entity_id": "A16",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "A17",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A17",
+  "field": "lat",
+  "outcome": "corrected to the source",
+  "was": "20.1908",
+  "now": "20.1911 N latitude (Lunar Module; LRO-derived, DE 421 mean Earth/polar rotation axis frame)"
+ },
+ {
+  "entity_id": "A17",
+  "field": "lng",
+  "outcome": "corrected to the source",
+  "was": "30.77168",
+  "now": "30.7723 E longitude (Lunar Module; LRO-derived, DE 421 mean Earth/polar rotation axis frame)"
+ },
+ {
+  "entity_id": "A17",
+  "field": "samples_returned",
+  "outcome": "corrected to the source",
+  "was": "110.5 kg",
+  "now": "110.52 kg of lunar samples"
+ },
+ {
+  "entity_id": "A17",
+  "field": "bulk_density",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "A17",
+  "field": "friction_angle",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "No single site value. R4 gives several A17 estimates: 35° for 'Soil model B' used in the LRV energy analysis (p.8-18); boulder-track friction angles of 27-49° (Table 8-III, p.8-13); and a drill-hole analysis. Sourcebook Table 9.11 lists Apollo 17 'LRV 35' and 'Drill Core Open Hole 50-30'.",
+  "correct_reference": "R4",
+  "problems": [
+   "The value is a model based on Surveyor data and applied to both A16 and A17, so it is not specific to the A17 site.",
+   "The reader left out the Table 8-III boulder-track values and the drill-hole analysis.",
+   "Status should be range_only, or several values."
+  ]
+ },
+ {
+  "entity_id": "A17",
+  "field": "cohesion",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "No single site value. R4: 0.17 kN/m² adopted for the 'top surficial material' (p.8-18), and 'a soil cohesion exceeding 1.0 kN/m2 is required' at about 2.1 m depth, from the open drill hole (p.8-8). Sourcebook Table 9.11: Apollo 17 LRV 0.17 kPa; drill core open hole 1.1-1.8 kPa.",
+  "correct_reference": "R4",
+  "problems": [
+   "0.17 is an adopted model parameter for surface material, not an A17 measurement.",
+   "The reader left out the drill-hole cohesion (more than 1.0 kN/m2; 1.1-1.8 kPa in the Sourcebook).",
+   "Status should be range_only, or several values."
+  ]
+ },
+ {
+  "entity_id": "A17",
+  "field": "description",
+  "outcome": "source written (3 claims)"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "mission",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "landing_site",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "coordinates",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "type:classification (Mare, Low-Ti/Low-Al/Low-K basalt)",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "type:age (~2.0 Ga)",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "sample_description:Scooped regolith from lunar surface",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "sample_description:youngest known mare basalt (~2.0 Ga)",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "sample_description:low-Ti/low-Al/low-K type",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "oxide:SiO2",
+  "outcome": "no source: supported, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "41.25 wt% (Zong et al. 2022 Table 1, weighted mean of CE5C0400 + CE5C0600 batches; SiO2 by difference)",
+  "correct_reference": "R3",
+  "problems": [
+   "Wrong sample: R1's value is for CE5C0800YJFM002.",
+   "The stored oxide set mixes R1 (XRF, CE5C0800), R3 (ICP-MS) and unsourced values, so it is not one table from one analysis."
+  ]
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "oxide:TiO2",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "oxide:Al2O3",
+  "outcome": "no source: supported, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "11.55 wt% (Zong et al. 2022 Table 1 weighted mean, CE5C0400 + CE5C0600)",
+  "correct_reference": "R3",
+  "problems": [
+   "Wrong sample (CE5C0800YJFM002). It also mixes analyses in one oxide table."
+  ]
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "oxide:Cr2O3",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "oxide:FeO",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "oxide:MnO",
+  "outcome": "no source: supported, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.28 wt% (Zong et al. 2022 Table 1 weighted mean)",
+  "correct_reference": "R3",
+  "problems": [
+   "The reference is about another sample split (CE5C0800YJFM002)."
+  ]
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "oxide:MgO",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "6.52 wt% (Zong et al. 2022 Table 1 weighted mean)",
+  "correct_reference": "R3",
+  "problems": [
+   "value_in_source is for a different sample split (CE5C0800YJFM002)."
+  ]
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "oxide:CaO",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "11.64 wt% (Zong et al. 2022 Table 1 weighted mean)",
+  "correct_reference": "R3",
+  "problems": [
+   "value_in_source is for a different sample split."
+  ]
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "oxide:Na2O",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.46 wt% (Zong et al. 2022 Table 1 weighted mean)",
+  "correct_reference": "R3",
+  "problems": [
+   "value_in_source is for a different sample split, and R3 flags that XRF Na value as divergent."
+  ]
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "oxide:K2O",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.21 wt% (Zong et al. 2022 Table 1 weighted mean)",
+  "correct_reference": "R3",
+  "problems": [
+   "value_in_source is for a different sample split."
+  ]
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "oxide:P2O5",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.27 wt% (Zong et al. 2022 Table 1 weighted mean)",
+  "correct_reference": "R3",
+  "problems": [
+   "value_in_source is for a different sample split."
+  ]
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "mineral:Plagioclase",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "mineral:Pyroxene",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "mineral:Olivine",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "mineral:Fe-Ti_Oxides",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "mineral:Glass",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5C0400",
+  "field": "mineral:Other",
+  "outcome": "corrected to the source",
+  "was": "3.1 (vol%? as displayed, unit not stated)",
+  "now": "3.2% (other mineral phases: Fe sulfide, npFe0, phosphate and silica)"
+ },
+ {
+  "entity_id": "L13",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L13",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L13",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L13",
+  "field": "bulk_density",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L13",
+  "field": "friction_angle",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L13",
+  "field": "cohesion",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L13",
+  "field": "bearing_capacity",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L13",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "L16",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L16",
+  "field": "lat",
+  "outcome": "corrected to the source",
+  "was": "-0.68",
+  "now": "-0.5137 (0.5137° S)"
+ },
+ {
+  "entity_id": "L16",
+  "field": "lng",
+  "outcome": "corrected to the source",
+  "was": "56.3",
+  "now": "56.3638 (E)"
+ },
+ {
+  "entity_id": "L16",
+  "field": "samples_returned",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L16",
+  "field": "bulk_density",
+  "outcome": "corrected to the source",
+  "was": "1.44 g/cm³",
+  "now": "1.2 g/cm3 (Vinogradov 1971, for a 101-g rotary drill sample)"
+ },
+ {
+  "entity_id": "L16",
+  "field": "friction_angle",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "L16",
+  "field": "cohesion",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "L16",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "L17",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L17",
+  "field": "lat",
+  "outcome": "corrected to the source",
+  "was": "38.28",
+  "now": "38.23764 (N)"
+ },
+ {
+  "entity_id": "L17",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L17",
+  "field": "friction_angle",
+  "outcome": "corrected to the source",
+  "was": "34.3 °",
+  "now": "22.5 (degrees) [Cherkasov & Shvarev 1973, Penetrometer]"
+ },
+ {
+  "entity_id": "L17",
+  "field": "cohesion",
+  "outcome": "corrected to the source",
+  "was": "2.25 kPa",
+  "now": "5 (kPa) [same Cherkasov & Shvarev 1973 Penetrometer row]"
+ },
+ {
+  "entity_id": "L17",
+  "field": "bearing_capacity",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L17",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "L20",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L20",
+  "field": "lat",
+  "outcome": "corrected to the source",
+  "was": "3.53",
+  "now": "3.7863 (N)"
+ },
+ {
+  "entity_id": "L20",
+  "field": "lng",
+  "outcome": "corrected to the source",
+  "was": "56.55",
+  "now": "56.6242 (E)"
+ },
+ {
+  "entity_id": "L20",
+  "field": "samples_returned",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L20",
+  "field": "bulk_density",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "L20",
+  "field": "friction_angle",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "L20",
+  "field": "cohesion",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "L20",
+  "field": "description",
+  "outcome": "source written (3 claims)"
+ },
+ {
+  "entity_id": "L21",
+  "field": null,
+  "reference": "NASA NSSDCA Master Catalog — Luna 21/Lunokhod 2",
+  "outcome": "document not confirmed to name this site or sample"
+ },
+ {
+  "entity_id": "L21",
+  "field": "date",
+  "outcome": "no source: supported, checker CONFIRMED"
+ },
+ {
+  "entity_id": "L21",
+  "field": "lat",
+  "outcome": "no source: differs, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "25.9994",
+  "correct_reference": "R7",
+  "problems": [
+   "The stored 25.85 comes from NASA In Depth Luna 21, '25 degrees 51 minutes north latitude' (see missed). The pre-2016 NSSDCA version the reader infers was not verified."
+  ]
+ },
+ {
+  "entity_id": "L21",
+  "field": "lng",
+  "outcome": "no source: differs, checker CONFIRMED"
+ },
+ {
+  "entity_id": "L21",
+  "field": "friction_angle",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L21",
+  "field": "cohesion",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L21",
+  "field": "bearing_capacity",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L21",
+  "field": "description",
+  "outcome": "no source: not every claim is confirmed",
+  "needs_review": true,
+  "unsupported": [
+   "Deployed Lunokhod 2",
+   "Traversed 37 km across the lunar surface"
+  ]
+ },
+ {
+  "entity_id": "L24",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L24",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L24",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L24",
+  "field": "samples_returned",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "L24",
+  "field": "bulk_density",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "L24",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "S1",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "S1",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "S1",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "S1",
+  "field": "bulk_density",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "S1",
+  "field": "friction_angle",
+  "outcome": "no source: the stated value is not a single number in a known unit",
+  "stated": "between 30° and 40°",
+  "needs_review": true
+ },
+ {
+  "entity_id": "S1",
+  "field": "cohesion",
+  "outcome": "no source: the stated value is not a single number in a known unit",
+  "stated": "1.3 to 4 X 10(3) dynes/cm2 (0.02 to 0.05 psi)",
+  "needs_review": true
+ },
+ {
+  "entity_id": "S1",
+  "field": "bearing_capacity",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "S1",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "S3",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "S3",
+  "field": "lat",
+  "outcome": "corrected to the source",
+  "was": "-3.0155",
+  "now": "3.01612°S (Wikipedia); -3.0162 (LROC/Wagner et al. 2017, ME datum)"
+ },
+ {
+  "entity_id": "S3",
+  "field": "lng",
+  "outcome": "corrected to the source",
+  "was": "-23.4219",
+  "now": "23.41791°W (Wikipedia); 336.5820°E = 23.4180°W (LROC/Wagner et al. 2017)"
+ },
+ {
+  "entity_id": "S3",
+  "field": "bulk_density",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "S3",
+  "field": "friction_angle",
+  "outcome": "no source: the stated value is not a single number in a known unit",
+  "stated": "about 39° (at the paper's preferred density of 1.5 g/cm3); 42° (33°) tabulated only at an assumed density of 1.0 g/cm3",
+  "needs_review": true
+ },
+ {
+  "entity_id": "S3",
+  "field": "cohesion",
+  "outcome": "no source: the stated value is not a single number in a known unit",
+  "stated": "about 1.4 X 10(3) dynes/cm2 (≈0.14 kPa) at density 1.5 g/cm3; 9x10^2 dynes/cm2 (≈0.09 kPa) at density 1.0 g/cm3",
+  "needs_review": true
+ },
+ {
+  "entity_id": "S3",
+  "field": "bearing_capacity",
+  "outcome": "no source: supported, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "20–60 kPa (range only; 2 × 10⁵ to 6 × 10⁵ dynes/cm², increasing with bearing size)",
+  "correct_reference": "Sources/papers/lunar/JPL_TR32-1177_Surveyor3_MissionReport_PartII_1967_EXCERPT_pdfp1-2-10-13-113-114.pdf",
+  "problems": [
+   "The value belongs to another mission's site (Surveyor 1).",
+   "The Jaffe et al. 1968 JGR abstract gives a single value of 3×10⁵ dyn/cm² (30 kPa), not 40 kPa."
+  ]
+ },
+ {
+  "entity_id": "S3",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "CE3",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE3",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE3",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE3",
+  "field": "bulk_density",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE3",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "CE4",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE4",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE4",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE4",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "CE5",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5",
+  "field": "samples_returned",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "CE6",
+  "field": "date",
+  "outcome": "corrected to the source",
+  "was": "June 2, 2024",
+  "now": "1 June 2024, 22:23:16 UTC"
+ },
+ {
+  "entity_id": "CE6",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE6",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE6",
+  "field": "samples_returned",
+  "outcome": "corrected to the source",
+  "was": "1.93 kg",
+  "now": "1935.3 g"
+ },
+ {
+  "entity_id": "CE6",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "CH3",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CH3",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CH3",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CH3",
+  "field": "bulk_density",
+  "outcome": "corrected to the source",
+  "was": "1.3 g/cm³",
+  "now": "1940 ± 10 kg m⁻³ (=1.94 g/cm3)"
+ },
+ {
+  "entity_id": "CH3",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "15271",
+  "field": null,
+  "reference": "Lunar Sourcebook: A User's Guide to the Moon",
+  "outcome": "document not confirmed to name this site or sample"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mission",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "15271",
+  "field": "landing_site",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "15271",
+  "field": "coordinates",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "15271",
+  "field": "type",
+  "outcome": "corrected to the source",
+  "was": "Mare/Highland boundary (Low-Ti Basalt with Highland component)",
+  "now": "mixture of mare material, highland material and green glass; ~28-34% mare basalt, ~25% KREEP, ~25% LKFM, ~4-15% green glass (Walker & Papike 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "sample_description",
+  "outcome": "corrected to the source",
+  "was": "Reference regolith soil from station 2 near Hadley Rille, mare-highland mixed soil",
+  "now": "Reference Soil ... collected at station 6, on the lower slope of the Apennine Front"
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:SiO2",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "46.0-46.73 wt% (LSPET 1971=46.7; Duncan et al. 1975=46.62; Laul & Papike 1981=46.0; Maxwell et al. 1972=46.73)",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:TiO2",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:Al2O3",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "16.19-16.6 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:Cr2O3",
+  "outcome": "no source: not_found, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.38 wt% (LSPET XRF, A15 PSR Table 6-IV); Papike et al. 1982 bulk gives 0.35 wt% (Sourcebook Table 7.16). Use whichever analysis is chosen for the whole oxide table.",
+  "correct_reference": "Sources/papers/lunar/A15_PSR_SP289_full.pdf (Table 6-IV, p.6-17, PDF p.199); alt: R2 Table 7.16 (book p.347)",
+  "problems": [
+   "not_found is wrong: two documents state Cr2O3 wt% for 15271.",
+   "A15 PSR Table 6-IV, column '15271 (6)', gives Cr2O3 .38.",
+   "Sourcebook Table 7.16 '15271,27 Bulk' gives Cr2O3 0.350. Sibille et al. Table 7 repeats 0.35 for 15271."
+  ]
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:FeO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "11.9-12.8 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:MnO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.155-0.17 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:MgO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "10.48-10.8 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:CaO",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:Na2O",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.41-0.53 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:K2O",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "15271",
+  "field": "oxide:P2O5",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.21-0.222 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Plagioclase",
+  "outcome": "corrected to the source",
+  "was": "27.0 (vol%? as displayed, unit not stated)",
+  "now": "7 (modal %, Basu 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Pyroxene",
+  "outcome": "corrected to the source",
+  "was": "41.0 (vol%? as displayed, unit not stated)",
+  "now": "11.4 (modal %, Basu 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Olivine",
+  "outcome": "corrected to the source",
+  "was": "8.0 (vol%? as displayed, unit not stated)",
+  "now": "1.8 (modal %, Basu 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Ilmenite",
+  "outcome": "corrected to the source",
+  "was": "2.0 (vol%? as displayed, unit not stated)",
+  "now": "0.2 (modal %, Basu 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Agglutinates",
+  "outcome": "corrected to the source",
+  "was": "15.0 (vol%? as displayed, unit not stated)",
+  "now": "42.2 (modal %, Basu 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Glass",
+  "outcome": "corrected to the source",
+  "was": "5.0 (vol%? as displayed, unit not stated)",
+  "now": "14.1 ('Glass other', Basu 1981)"
+ },
+ {
+  "entity_id": "15271",
+  "field": "mineral:Other",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mission",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "60501",
+  "field": "landing_site",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "60501",
+  "field": "coordinates",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "type",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "60501",
+  "field": "sample_description",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:SiO2",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:TiO2",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.59-0.63 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:Al2O3",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:Cr2O3",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:FeO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "5.15-6.05 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:MnO",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:MgO",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:CaO",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:Na2O",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:K2O",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.1-0.13 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "60501",
+  "field": "oxide:P2O5",
+  "outcome": "no source: supported, checker REFUTED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Plagioclase",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Pyroxene",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Olivine",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Ilmenite",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Agglutinates",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Glass",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "60501",
+  "field": "mineral:Other",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mission",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "71501",
+  "field": "landing_site",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "71501",
+  "field": "coordinates",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "type",
+  "outcome": "corrected to the source",
+  "was": "Mare/Highland boundary (High-Ti Basalt with Highland component)",
+  "now": "similar to other mare soils at Apollo 17; composed mostly of basalt fragments"
+ },
+ {
+  "entity_id": "71501",
+  "field": "sample_description",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:SiO2",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:TiO2",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "8.4-9.52 wt% (LSPET 1973=9.52; Laul et al. 1974=8.5; Brunfelt et al. 1974=8.4)",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:Al2O3",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "11.13-11.9 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:Cr2O3",
+  "outcome": "no source: not_found, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.46 wt%",
+  "correct_reference": "Sources/papers/lunar/A17_PSR_SP330_full.pdf (Table 7-VI, p.7-22, PDF p.208)",
+  "problems": [
+   "not_found is wrong. A17 PSR Table 7-VI (XRF by Rhodes, Rodgers & Bansal) gives Cr2O3 .46 wt% for 71501,3. This is the same LSPET analysis as the LSC Table 1 'LSPET73' column (SiO2 39.82, TiO2 9.52)."
+  ]
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:FeO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "17.0-17.8 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:MnO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.222-0.25 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:MgO",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "8.95-9.51 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:CaO",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:Na2O",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:K2O",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "0.07-0.085 wt%",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "oxide:P2O5",
+  "outcome": "corrected to the source",
+  "was": "0.12 wt%",
+  "now": "0.06 wt% (LSPET 1973, only documented analysis)"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Plagioclase",
+  "outcome": "corrected to the source",
+  "was": "32.0 (vol%? as displayed, unit not stated)",
+  "now": "5 (vol%, 90-150 µm fraction; Heiken & McKay 1974)"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Pyroxene",
+  "outcome": "corrected to the source",
+  "was": "31.0 (vol%? as displayed, unit not stated)",
+  "now": "17.9 (vol%, 90-150 µm; Heiken & McKay 1974)"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Olivine",
+  "outcome": "no source: differs, checker REFUTED"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Ilmenite",
+  "outcome": "corrected to the source",
+  "was": "7.0 (vol%? as displayed, unit not stated)",
+  "now": "8 (vol%, 90-150 µm; Heiken & McKay 1974)"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Agglutinates",
+  "outcome": "corrected to the source",
+  "was": "16.0 (vol%? as displayed, unit not stated)",
+  "now": "35 (vol%, 90-150 µm; Heiken & McKay 1974)"
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Glass",
+  "outcome": "no source: the stated value is not a single number",
+  "stated": "2.2 ('Glass other') and 1.3 ('Orange glass') - two separate glass categories, 90-150 µm; Heiken & McKay 1974",
+  "needs_review": true
+ },
+ {
+  "entity_id": "71501",
+  "field": "mineral:Other",
+  "outcome": "no source: not_found, checker CONFIRMED"
+ }
+]

@@ -1,6 +1,8 @@
-import React, { createContext, useContext, useMemo } from 'react';
+import React, { createContext, useContext, useMemo, useCallback } from 'react';
 import { useData, type DataState } from '../hooks/useData';
-import type { Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, Site, MineralSourcing, PurchaseInfo, PhysicalProperties } from '../types';
+import { referenceNumber } from '../utils/references';
+import { lunarCitations, SITE_FIELD_ORDER, SAMPLE_FIELD_ORDER, type LunarCitations } from '../utils/lunarCitations';
+import type { Composition, ChemicalComposition, Reference, MineralGroup, SimulantExtra, Site, MineralSourcing, PurchaseInfo, PhysicalProperties, PropertySource, FigureOfMerit } from '../types';
 
 interface DataContextValue extends DataState {
   compositionBySimulant: Map<string, Composition[]>;
@@ -12,6 +14,15 @@ interface DataContextValue extends DataState {
   mineralSourcingByMineral: Map<string, MineralSourcing>;
   purchaseBySimulant: Map<string, PurchaseInfo>;
   physicalPropsBySimulant: Map<string, PhysicalProperties>;
+  /** simulant_id -> field -> where that scalar was read from. */
+  propertySourcesBySimulant: Map<string, Map<string, PropertySource>>;
+  /** simulant_id -> its Figures of Merit. */
+  fomsBySimulant: Map<string, FigureOfMerit[]>;
+  /** 1-based number of a reference within its simulant's list, in reference_id order.
+   *  Derived from the reference list on each call, never stored. */
+  refNumber: (simulantId: string, referenceId: string | null | undefined) => number | undefined;
+  /** Numbered sources of a lunar site's or sample's values. */
+  lunarCitationsFor: (entityId: string) => LunarCitations;
 }
 
 const DataCtx = createContext<DataContextValue | null>(null);
@@ -58,13 +69,46 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     return m;
   }, [data.purchaseInfo]);
 
+  const propertySourcesBySimulant = useMemo(() => {
+    const m = new Map<string, Map<string, PropertySource>>();
+    for (const p of data.propertySources) {
+      let fields = m.get(p.simulant_id);
+      if (!fields) {
+        fields = new Map<string, PropertySource>();
+        m.set(p.simulant_id, fields);
+      }
+      fields.set(p.field, p);
+    }
+    return m;
+  }, [data.propertySources]);
+
+  const fomsBySimulant = useMemo(() => buildGroupMap(data.figuresOfMerit), [data.figuresOfMerit]);
+
+  const refNumber = useCallback(
+    (simulantId: string, referenceId: string | null | undefined) =>
+      referenceNumber(referencesBySimulant.get(simulantId) ?? [], referenceId),
+    [referencesBySimulant]);
+
+  const lunarCitationMap = useMemo(() => {
+    const m = new Map<string, LunarCitations>();
+    for (const s of data.lunarSites) m.set(s.id, lunarCitations(s.id, data.lunarSources, data.lunarDocuments, SITE_FIELD_ORDER));
+    for (const r of data.lunarReference) m.set(r.sample_id, lunarCitations(r.sample_id, data.lunarSources, data.lunarDocuments, SAMPLE_FIELD_ORDER));
+    return m;
+  }, [data.lunarSites, data.lunarReference, data.lunarSources, data.lunarDocuments]);
+
+  const lunarCitationsFor = useCallback(
+    (entityId: string) => lunarCitationMap.get(entityId) ?? lunarCitations(entityId, [], []),
+    [lunarCitationMap]);
+
   const physicalPropsBySimulant = useMemo(() => {
     const m = new Map<string, PhysicalProperties>();
     for (const sim of data.simulants) {
       const props: PhysicalProperties = {};
       if (sim.bulk_density != null) props.bulk_density = Number(sim.bulk_density) || undefined;
-      if (sim.cohesion != null) props.cohesion = parseFloat(String(sim.cohesion)) || undefined;
-      if (sim.friction_angle != null) props.friction_angle = parseFloat(String(sim.friction_angle)) || undefined;
+      // Number(), not parseFloat(): a value stored with its unit must fail closed. parseFloat("185.2 Pa")
+      // is 185.2, which the panel would label kPa.
+      if (sim.cohesion != null) props.cohesion = Number(sim.cohesion) || undefined;
+      if (sim.friction_angle != null) props.friction_angle = Number(sim.friction_angle) || undefined;
       if (sim.specific_gravity != null) props.specific_gravity = Number(sim.specific_gravity) || undefined;
       if (sim.density_g_cm3 != null) props.density_g_cm3 = Number(sim.density_g_cm3) || undefined;
       if (sim.particle_size_d50 != null) props.particle_size_d50 = Number(sim.particle_size_d50) || undefined;
@@ -74,6 +118,12 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
       if (sim.glass_content_percent != null) props.glass_content_percent = Number(sim.glass_content_percent) || undefined;
       if (sim.nasa_fom_score != null) props.nasa_fom_score = Number(sim.nasa_fom_score) || undefined;
       if (sim.ti_content_percent != null) props.ti_content_percent = Number(sim.ti_content_percent) || undefined;
+      // Stated on the manufacturer data sheet (2026-09-22 fill)
+      if (sim.ph != null) props.ph = Number(sim.ph) || undefined;
+      if (sim.angle_of_repose != null) props.angle_of_repose = String(sim.angle_of_repose);
+      if (sim.particle_size_mean_um != null) props.particle_size_mean_um = Number(sim.particle_size_mean_um) || undefined;
+      if (sim.bulk_density_range != null) props.bulk_density_range = String(sim.bulk_density_range);
+      if (sim.magnetic_susceptibility != null) props.magnetic_susceptibility = String(sim.magnetic_susceptibility);
       // Merge grain_size_mm from extra data
       const extra = data.simulantExtra.find(e => e.simulant_id === sim.simulant_id);
       if (extra?.grain_size_mm != null) props.grain_size_mm = extra.grain_size_mm;
@@ -93,7 +143,11 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     mineralSourcingByMineral,
     purchaseBySimulant,
     physicalPropsBySimulant,
-  }), [data, compositionBySimulant, chemicalBySimulant, referencesBySimulant, mineralGroupsBySimulant, extraBySimulant, siteBySimulant, mineralSourcingByMineral, purchaseBySimulant, physicalPropsBySimulant]);
+    propertySourcesBySimulant,
+    fomsBySimulant,
+    refNumber,
+    lunarCitationsFor,
+  }), [data, compositionBySimulant, chemicalBySimulant, referencesBySimulant, mineralGroupsBySimulant, extraBySimulant, siteBySimulant, mineralSourcingByMineral, purchaseBySimulant, physicalPropsBySimulant, propertySourcesBySimulant, fomsBySimulant, refNumber, lunarCitationsFor]);
 
   return <DataCtx.Provider value={value}>{children}</DataCtx.Provider>;
 }

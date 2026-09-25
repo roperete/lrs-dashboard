@@ -1,0 +1,80 @@
+[
+ {
+  "table": "references_",
+  "simulant_id": "S007",
+  "reference_id": "R096",
+  "now": "R008",
+  "doi": "10.1016/j.asr.2008.07.006",
+  "action": "merged: the same document listed twice"
+ },
+ {
+  "table": "references_",
+  "simulant_id": "S013",
+  "reference_id": "R013",
+  "now": "R108",
+  "doi": "10.1016/j.ijmst.2021.09.003",
+  "action": "merged: the same document listed twice"
+ },
+ {
+  "table": "references_",
+  "simulant_id": "S018",
+  "reference_id": "R098",
+  "now": "R018",
+  "doi": "10.1038/s41598-020-62312-4",
+  "action": "merged: the same document listed twice"
+ },
+ {
+  "table": "references_",
+  "simulant_id": "S075",
+  "reference_id": "R097",
+  "now": "R072",
+  "doi": "10.1007/s11440-025-02553-7",
+  "action": "merged: the same document listed twice"
+ },
+ {
+  "table": "references_",
+  "simulant_id": "S120",
+  "reference_id": "R078",
+  "now": "R103",
+  "doi": "10.1016/j.ijmst.2024.08.006",
+  "action": "merged: the same document listed twice"
+ },
+ {
+  "table": "references_",
+  "reference_id": "RN-S043-6",
+  "action": "reader's note removed from the citation"
+ },
+ {
+  "table": "references_",
+  "reference_id": "RN-S110-1",
+  "action": "reader's note removed from the citation"
+ },
+ {
+  "table": "chemical_compositions",
+  "simulant_id": "S004",
+  "references": [
+   "R003",
+   "RN-S004-1"
+  ],
+  "action": "kept: one analysis cited across several documents"
+ },
+ {
+  "table": "chemical_compositions",
+  "simulant_id": "S017",
+  "references": [
+   "RN-S017-1",
+   "RN-S017-3"
+  ],
+  "action": "kept: one analysis cited across several documents"
+ },
+ {
+  "table": "chemical_compositions",
+  "simulant_id": "S018",
+  "references": [
+   "R018",
+   "RN-S018-1",
+   "RN-S018-2"
+  ],
+  "action": "kept: one analysis cited across several documents"
+ }
+]

@@ -33,7 +33,7 @@ export function PurchaseSection({ availability, purchaseInfo }: PurchaseSectionP
             {purchaseInfo.vendor && (
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-[10px] text-slate-500 uppercase font-bold">Vendor</p>
+                  <p className="text-[10px] text-slate-400 uppercase font-bold">Vendor</p>
                   <p className="text-sm text-slate-200">{purchaseInfo.vendor}</p>
                 </div>
                 {purchaseInfo.url && (
@@ -53,7 +53,7 @@ export function PurchaseSection({ availability, purchaseInfo }: PurchaseSectionP
         )}
 
         {!purchaseInfo && (availability === 'Available' || availability === 'Available (Research)') && (
-          <p className="text-xs text-slate-500 italic">Purchase details not yet cataloged.</p>
+          <p className="text-xs text-slate-400 italic">Purchase details not yet cataloged.</p>
         )}
       </div>
     </div>

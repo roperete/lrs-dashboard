@@ -1,0 +1,19 @@
+[
+ {
+  "reference_id": "RN-S043-2",
+  "now": "https://www.nasa.gov/wp-content/uploads/2019/04/batiste.pdf",
+  "action": "link added (the reader saved the document from here)"
+ },
+ {
+  "reference_id": "RN-S043-6",
+  "was": "Evaluations of lunar regolith simulants [= existing reference R066, currently linked only to S044/MLS-2]",
+  "now": "Evaluations of lunar regolith simulants",
+  "action": "reader's note removed from the title"
+ },
+ {
+  "reference_id": "RN-S110-1",
+  "was": "Evaluations of lunar regolith simulants [= existing reference R066]",
+  "now": "Evaluations of lunar regolith simulants",
+  "action": "reader's note removed from the title"
+ }
+]

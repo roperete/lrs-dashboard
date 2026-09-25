@@ -1,0 +1,253 @@
+{
+ "groups": [
+  {
+   "group_key": "COUNTRY:GERMANY",
+   "extraction": {
+    "group_key": "COUNTRY:GERMANY",
+    "results": [
+     {
+      "simulant_id": "S068",
+      "name": "TUBS-H",
+      "references": [
+       {
+        "reference_id": "R053",
+        "opened": true,
+        "names_simulant": false,
+        "mention_quote": "",
+        "location": "Entire 9-page PDF searched with pdftotext (local copy: papers/Linke_etal_2020_TUBS-M_TUBS-T_modular_Regolith_Simulant_System_PlanetSpaceSci_180_104747.pdf, title 'TUBS-M and TUBS-T based modular Regolith Simulant System for the support of lunar ISRU activities'). Tokens found: TUBS-M x40, TUBS-T x37, 'TUBS-H' x0. Naming scheme p3: 'site, T for terrae/highland landing site'; p4: 'T marks typical terrae areas, M stands for maria regions'."
+       }
+      ],
+      "new_references": [
+       {
+        "temp_id": "NEW1",
+        "title": "ESRIC KSP - Simulants (Regolith Simulants Directory, Lunar Regolith Simulants list)",
+        "authors": "ESRIC - European Space Resources Innovation Centre (Knowledge Sharing Platform)",
+        "kind": "general",
+        "url": "http://knowledge.esric.lu/simulants/",
+        "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+        "mention_quote": "Name TUBS-H Description Low Ti Mare (general) Availability Currently available Supplier/Contact Technische Universit\u00e4t Braunschweig Germany",
+        "location": "Lunar Regolith Simulants list, entry 'TUBS-H' (immediately after entry 'TUBS-T Description Highlands (general)' and before 'UOM-Black'); SingleFile save of http://knowledge.esric.lu/simulants/ dated 2025-03-03. Note: the list contains no TUBS-M entry."
+       },
+       {
+        "temp_id": "NEW2",
+        "title": "A moderate-Ti lunar mare soil simulant: IGG-01",
+        "authors": "Renhao Ruan, Wei Yang, Di Zhang, Heng-Ci Tian, Bin Yu",
+        "year": 2024,
+        "doi": "10.1016/j.actaastro.2024.08.010",
+        "kind": "general",
+        "url": "https://www.researchgate.net/publication/383026053_A_moderate-Ti_lunar_mare_soil_simulant_IGG-01",
+        "local_path": "papers/LRS/DIRT project/files/1757/383026053_A_moderate-Ti_lunar_mare_soil_simulant_IGG-01.html",
+        "mention_quote": "Another approach involves a exible preparation method where basalt is supplemented with minerals or sintered glass to achieve specic objectives (e.g., TUBS-M and TUBS-H [ 29 ]). Following a similar strategy to produce TUBS-M and TUBS-H, we formulated the IGG-01 lunar soil simulant",
+        "location": "Section 2.2 'Production of IGG-01', first paragraph, full text as reproduced on the ResearchGate page (Acta Astronautica 224; 'fl'/'fi' ligatures dropped by the HTML text extraction). Its reference [29] is Linke et al. 2020, doi 10.1016/j.pss.2019.104747. The same paper's Table 1 ('List of lunar mare soil simulants developed until Sep/30/2023') instead lists 'TUBS-M Germany 2018 Basalt Mare general use [ 29 ] TUBS-T Germany 2018 Anorthosite Highland' - no TUBS-H."
+       }
+      ],
+      "values": [
+       {
+        "field": "availability",
+        "stored": "Available (Research)",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "NEW1, Lunar Regolith Simulants list, entry 'TUBS-H' (field 'Availability')",
+        "quote": "",
+        "note": "No document states 'Available (Research)'. The only document naming TUBS-H with an availability field is the ESRIC KSP page (NEW1): 'Name TUBS-H Description Low Ti Mare (general) Availability Currently available Supplier/Contact Technische Universit\u00e4t Braunschweig Germany' - i.e. 'Currently available', with no '(Research)' qualifier; a curator may accept this as partial support for 'available'. R053 (Linke et al. 2020) speaks of availability only for TUBS-M/TUBS-T, p7: 'Large quantity production in the scale of several hundred kilograms of TUBS-M and TUBS-T will be started in 2019 and will be available for the space engineering and lunar science community.' - sibling products, not TUBS-H."
+       },
+       {
+        "field": "institution",
+        "stored": "ESA",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "NEW1 entry 'TUBS-H' (field 'Supplier/Contact'); R053 p1 author affiliations",
+        "quote": "",
+        "note": "Contradicted by both documents. NEW1 (ESRIC) lists 'Supplier/Contact Technische Universit\u00e4t Braunschweig Germany' for TUBS-H (and for TUBS-T); 'ESA Italy' on that page is the supplier of the neighbouring entries DNA-1 and EAC-1a, a likely source of the mis-attribution. R053 p1 affiliations: 'a Institute of Space Systems, TU Braunschweig, Hermann-Blenk-Stra\u00dfe 23, 38108, Brauschweig, Germany' and 'b Institute for Particle Technology, TU Braunschweig, Volkmaroder Stra\u00dfe 5, 38104, Braunschweig, Germany' (plus ETH Zurich and Geological Survey of Norway). The only ESA mention in R053 (p4) concerns EAC-1: 'On the European side, ESA has developed a mare-type simulant for geotechnical investigations. This simulant, called EAC-1 (European Astronaut Center 1), is intended for the LUNA-analogue'. Correct institution is TU Braunschweig (Technische Universit\u00e4t Braunschweig), Germany."
+       }
+      ],
+      "new_values": [],
+      "unavailable_documents": [
+       "http://knowledge.esric.lu/simulants/ (live ESRIC page: HTTP 404 on 2026-09-22 over HTTP; HTTPS fails with a certificate-name mismatch; only the 2025-03-03 SingleFile save papers/LRS/DIRT project/files/1735/simulants.html is available)"
+      ],
+      "notes": "1) TUBS-H appears NOT to exist as a product under this name. The listed primary reference R053 (Linke et al. 2020, Planet. Space Sci. 180, 104747) defines only TUBS-M (basaltic maria) and TUBS-T (anorthositic terrae) and never uses 'TUBS-H'. A follow-up open-access paper surfaced by web search and fetched this session (Linke et al. 2022, 'Geotechnical and Shear Behavior of Novel Lunar Regolith Simulants TUBS-M, TUBS-T, and TUBS-I', Materials 15, 8561, doi 10.3390/ma15238561; saved to /Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/agent-fetched/Linke_etal_2022_Geotechnical_Shear_Behavior_TUBS-M_TUBS-T_TUBS-I_Materials_15_8561_PMC9737658.html) names TUBS-M x66, TUBS-T x63, TUBS-I x23 and no TUBS-H; it is not listed as a new reference because it does not name the product. 2) The two documents that do write 'TUBS-H' disagree on what it denotes: the ESRIC KSP page (NEW1) lists 'TUBS-H: Low Ti Mare (general)' next to 'TUBS-T: Highlands (general)' and has no TUBS-M entry, so its TUBS-H is evidently the mare simulant TUBS-M; the IGG-01 paper (NEW2) writes 'TUBS-M and TUBS-H [29]' while its own Table 1 lists TUBS-M and TUBS-T under the same reference [29], so its TUBS-H is evidently TUBS-T (highland). Both are misnamings of the TUBS-M/TUBS-T pair; the curator should consider retiring S068 or recording it as an alias/typo pointing to TUBS-M (per ESRIC) and TUBS-T (per IGG-01), not as a distinct product. 3) The third library hit, papers/LRS/DIRT project/files/1712/330911730_The_Preparation_and_Characterization_of_NEU-1_Lunar_Soil_Simulants.html (ResearchGate 'Request PDF' page for Zheng et al. 2019 NEU-1, doi 10.1007/s11837-019-03362-6), contains 'TUBS-H' only inside a ResearchGate citation snippet reproducing the IGG-01 sentence ('...(e.g., TUBS-M and TUBS-H [29]). ... A moderate-Ti lunar mare soil simulant: IGG-01 Article Full-text available Aug 2024 ACTA ASTRONAUT'); its other TUBS mention, 'EAC-1 [25] or TUBS-M/T [26] in Germany', is a snippet of Just et al. 2020 (UoM-B/UoM-W). The NEU-1 paper itself does not name TUBS-H, so it is deliberately not reported as a new reference. 4) R053 has a local copy at Sources/papers/Linke_etal_2020_TUBS-M_TUBS-T_modular_Regolith_Simulant_System_PlanetSpaceSci_180_104747.pdf although the group file gives local_path null; please link it. 5) Descriptive attribute stated by NEW1 for TUBS-H, not entered as new_values because no matching scalar column name is known: 'Description Low Ti Mare (general)'. 6) Both stored scalars (availability 'Available (Research)', institution 'ESA') are unsupported; institution is contradicted (TU Braunschweig). No oxides, minerals or other scalars are stored, and no document states any composition or geotechnical value for a product named TUBS-H."
+     }
+    ]
+   },
+   "verification": null
+  },
+  {
+   "group_key": "COUNTRY:POLAND",
+   "extraction": {
+    "group_key": "COUNTRY:POLAND",
+    "results": [
+     {
+      "simulant_id": "S001",
+      "name": "AGK-2010",
+      "references": [
+       {
+        "reference_id": "R107",
+        "opened": true,
+        "names_simulant": true,
+        "mention_quote": "As a result the first Polish lunar soil analog AGK-2010 was produced.",
+        "location": "p. 551, English abstract (title on p. 551 reads 'RESEARCH OF FORMED LUNAR REGHOLIT ANALOG AGK-2010'; 'DOI 10.2478/amsc-2013-0037' printed on p. 551). Opened via the local copy papers/LRS/AGK2010-Bednarz.pdf (byte-identical, MD5 055d48c382a40a77d7f4591ed934f6e8, to papers/LRS/Bednarz et al. - 2013 - Research of formed lunar regholit analog AGK-2010.pdf and papers/LRS/DIRT project/files/1820/Bednarz et al. - 2013 - Research of formed lunar regholit analog AGK-2010.pdf). https://doi.org/10.2478/amsc-2013-0037 redirects (302) to http://journals.pan.pl/dlibra/publication/107504/edition/93179/content, a metadata page for 'Research of Formed Lunar Regholit Analog AGK-2010', Archives of Mining Sciences, 2013, No 2, authors Bednarz, Rziczniak [sic], Gonet, Seweryn."
+       }
+      ],
+      "new_references": [
+       {
+        "temp_id": "NEW1",
+        "title": "ESRIC KSP - Simulants (knowledge.esric.lu simulant registry page)",
+        "authors": "ESRIC KSP (knowledge.esric.lu)",
+        "year": 2025,
+        "kind": "general",
+        "url": "http://knowledge.esric.lu/simulants/",
+        "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+        "location": "Simulant card 'AGK-2010' (Description / Supplier-Contact table); page saved with SingleFile on 2025-03-03",
+        "mention_quote": "Name AGK-2010 Description Geotehnical Availability Currently available / Supplier/Contact Polish Academy of Sciences Poland"
+       },
+       {
+        "temp_id": "NEW2",
+        "title": "In-Situ Resource Utilization Gap Assessment Report",
+        "authors": "International Space Exploration Coordination Group (ISECG), ISRU Gap Assessment Team",
+        "year": 2021,
+        "kind": "report",
+        "url": "",
+        "local_path": "papers/LRS/Sources/In-Situ Resource Utilization Gap Assessment Re.html",
+        "location": "Lunar regolith simulants table (simulants by agency/country), report pp. 63-64 (between the 'Page 62' and 'Page 65' footers); report dated 4/21/2021",
+        "mention_quote": "AGK-2010 Polish Lunar Simulant/AGH University of Technology Geotehnical"
+       },
+       {
+        "temp_id": "NEW3",
+        "title": "Space Research Centre, Polish Academy of Sciences - Annual Report 2010",
+        "authors": "Space Research Centre, Polish Academy of Sciences (SRC PAS / CBK PAN); section signed K. Seweryn",
+        "year": 2010,
+        "kind": "report",
+        "url": "",
+        "local_path": "papers/LRS/Sources/Raport CBK 2010.html",
+        "location": "Section 'Advanced Penetrators and Hammering Sampling Devices for Planetary Body Exploration', sub-section 'Mole penetrator KRET for lunar exploration' (signed K. Seweryn)",
+        "mention_quote": "During the summer and autumn of 2010, the successful tests were performed in a 5-meter test-bed filled with quartz sand as well as lunar regolith analogue AGK-2010. AGK-2010 is a new analogue of the Moon's regolith and it is based on the particle size distribution of CHENOBI lunar highlands physical regolith simulant and has the same mechanical properties."
+       },
+       {
+        "temp_id": "NEW4",
+        "title": "Centrum Bada\u0144 Kosmicznych PAN / Space Research Centre PAS - Annual Reports 2022",
+        "authors": "Space Research Centre, Polish Academy of Sciences (CBK PAN)",
+        "year": 2022,
+        "kind": "usage",
+        "url": "",
+        "local_path": "papers/LRS/Sources/Annual Reports 2022 - Centrum Bada\u0144 Kosmicznyc.html",
+        "location": "Section 'Soil experiments (UWM)' following 'Packmoon upgrade (CBK)', near page label 115",
+        "mention_quote": "The labs also ran a testing campaign focused on the determination of the physical and mechanical properties of lunar analogues (JSC-1A and AGK2010)."
+       },
+       {
+        "temp_id": "NEW5",
+        "title": "Detection of Lunar Regolith Acquired by Excavator Using Radiofrequency (RF) Sensors",
+        "authors": "Kurek, K.; Seweryn, K.; Tkacz, A.; Just, G.",
+        "year": 2025,
+        "kind": "usage",
+        "doi": "10.3390/s25030751",
+        "url": "https://doi.org/10.3390/s25030751",
+        "local_path": "papers/LRS/Sources/Detection of Lunar Regolith Acquired by Excava.html",
+        "location": "Section 1 Introduction (paragraph citing [17]-[19]); RF-sensor calibration section ('During the tests and measurements presented in the following sections, the AGK2010 simulant was used.'); reference list entry 19. Sensors 2025, 25, 751.",
+        "mention_quote": "(ii) the AGK2010 simulant (developed by CBK PAN and AGH) has very similar properties [19]."
+       },
+       {
+        "temp_id": "NEW6",
+        "title": "Concept and preliminary structural analysis of a crater-covering dome for future lunar habitats",
+        "authors": "Mrozek, M.; Mrozek, D.; Smolana, M.; Anguilano, L.",
+        "year": 2025,
+        "kind": "general",
+        "doi": "10.1038/s41598-025-07901-x",
+        "url": "https://doi.org/10.1038/s41598-025-07901-x",
+        "local_path": "papers/LRS/Sources/Concept and preliminary structural analysis of.html",
+        "location": "Introduction, sentence listing simulants omitted from the NASA list (superscript ref 38); reference list entry 38 'Bednarz, S., Rzyczniak, M., Gonet, A. & Seweryn, K. Research of formed lunar Regholit analog agk-2010. Arch. Min. Sci. 58, 551-556'. Sci Rep 2025 Jul 9;15:24744 (PMC copy PMC12241417 saved as 'Concept and preliminary structural analysis of(1).html').",
+        "mention_quote": "...the NAO-1 National Astronomical Observatories simulant37, and the Lunar Regolith Analogue AKG-201038."
+       },
+       {
+        "temp_id": "NEW7",
+        "title": "Lunar regolith sampling using PACKMOON device and its potential application for Moon exploration and utilization (conference abstract #1640 with slides)",
+        "authors": "Seweryn, K.; Pasko, P. (Space Research Centre of the Polish Academy of Sciences, CBK PAN); Visentin, G. (ESA/ESTEC)",
+        "kind": "usage",
+        "url": "",
+        "local_path": "papers/LRS/Sources/Abstract #1640.html",
+        "location": "Abstract text; slide 'Tests Results' table (Material / Strikes / Time [s] / Mass [g]) with rows 'AGK2010 (Lunar regolith anloague) 3 24 218', 'AGK2010 3 24 267.9', 'AGK2010 4 32 276.5'. Conference and year are not stated in the saved file.",
+        "mention_quote": "Results of the tests that were conducted with highly compacted lunar regolith (Chenobi and AGK2010) have shown its reliable operation."
+       }
+      ],
+      "values": [
+       {
+        "field": "bulk_density",
+        "stored": "1.295",
+        "status": "supported",
+        "reference_id": "R107",
+        "location": "p. 554, Section 2 'Physical properties'",
+        "quote": "\u03c1o = 1.295 kg/l \u2013 for lunar soil analog AGK-2010, (standard deviation s = 0.0097 kg/l).",
+        "note": "Unit is kg/l (numerically equal to g/cm3). Determined per PN-EN 1097-3 (2000) (loose bulk density of aggregate). Same page: 'The value of bulk density for soil AGK-2010 is lower than for lunar regolith analog CHENOBI only by about 1.45%.' (CHENOBI 1.314 kg/l)."
+       },
+       {
+        "field": "cohesion",
+        "stored": "3.85",
+        "status": "supported",
+        "reference_id": "R107",
+        "location": "p. 555, Table 2 'Mechanical properties of lunar regolith analogs CHENOBI and lunar soil analog AGK-2010 (Bednarz, 2009, 2011)', row AGK-2010 (also Fig. 3 caption, p. 555)",
+        "quote": "AGK-2010    \u03c4f = 0.77\u03c3 + 3.85    0.999    3.85    37.67",
+        "note": "Table 2 columns: Soil | Trend line equation | Determination coefficient R2 | Cohesion cs, kPa | Inner friction angle \u03a6s, \u00b0. Unit kPa. Fig. 3 caption repeats: 'Fig. 3. Shear strength of lunar soil analog AGK-2010: (Bednarz, 2009, 2011): cohesion cs = 3.85 kPa; inner friction angle \u03a6s = 37.67\u00b0'. Determined by direct shear tests per PN-B04481:1988 (p. 554, Section 3)."
+       },
+       {
+        "field": "friction_angle",
+        "stored": "37.67",
+        "status": "supported",
+        "reference_id": "R107",
+        "location": "p. 555, Table 2, row AGK-2010, column 'Inner friction angle \u03a6s, \u00b0' (also Fig. 3 caption, p. 555)",
+        "quote": "AGK-2010    \u03c4f = 0.77\u03c3 + 3.85    0.999    3.85    37.67",
+        "note": "Degrees. Fig. 3 caption: 'cohesion cs = 3.85 kPa; inner friction angle \u03a6s = 37.67\u00b0'. Shear tests per PN-B04481:1988."
+       },
+       {
+        "field": "release_date",
+        "stored": "2013",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "No opened document states a release date for AGK-2010. 2013 is only the publication year of R107 (header p. 551: 'Arch. Min. Sci., Vol. 58 (2013), No 2, p. 551\u2013556'; p. 556: 'Received: 10 July 2012'). The simulant existed and was in use earlier: NEW3 (SRC PAS Annual Report 2010) states 'During the summer and autumn of 2010, the successful tests were performed in a 5-meter test-bed filled with quartz sand as well as lunar regolith analogue AGK-2010. AGK-2010 is a new analogue of the Moon's regolith'; R107 p. 556 cites the unpublished AGH report 'Bednarz S., Gonet A., Rzyczniak M., W\u00f3jcikowski M., Artymiuk J., 2009. Raport. Wyznaczanie analog\u00f3w materia\u0142u ksi\u0119\u017cycowego...' and the patent application 'Zg\u0142oszenie projektu wynalazczego Nr P397651 z moc\u0105 od 30.12.2011'; R107 p. 556 conclusion 4: 'The Polish lunar soil analog AGK-2010 (patent application of 2011)'. The stored 2013 matches the 'Release Date' column of the internal CSV export papers/LRS/Sources/Global Registry of Lunar Regolith Simulants.html, not a primary source. Curator to choose 2010 (first documented use, NEW3) or keep 2013 as 'year of first publication'."
+       },
+       {
+        "field": "availability",
+        "stored": "Unavailable",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "No opened document states that AGK-2010 is unavailable. Contradicted by NEW1 (ESRIC KSP page, saved 2025-03-03): 'Name AGK-2010 Description Geotehnical Availability Currently available / Supplier/Contact Polish Academy of Sciences Poland'. The internal export 'Global Registry of Lunar Regolith Simulants.html' gives Stage 'Unknown' (not 'Unavailable'); the internal CSV 'Database - LRS Constituents - LRS types (2).cs.html' gives 'Available'. Usage continues at CBK PAN: NEW4 (2022 test campaign on AGK2010) and NEW5 (2025, 'the AGK2010 simulant was used'). No document describes commercial sale; R107 p. 555 Section 4 only says its unit cost 'was many times lower than the price of 1 kg of lunar regolith analog CHENOBI'."
+       },
+       {
+        "field": "lunar_sample_reference",
+        "stored": "General",
+        "status": "unsupported",
+        "reference_id": "",
+        "location": "",
+        "quote": "",
+        "note": "No opened document states a lunar sample reference of 'General'. R107 p. 552 (Introduction): 'The soil CHENOBI and JSC produced as in the U.S.A. as analogs of lunar soil collected by Apollo 17 was used as references (Rybus, 2009; Sibille et al., 2006).' and 'The results of analyses of reference lunar regolith analog CHENOBI sample and the Polish lunar soil analog AGK-2010 were compared.' NEW3: 'based on the particle size distribution of CHENOBI lunar highlands physical regolith simulant and has the same mechanical properties.' So the design target is the CHENOBI simulant (highlands per NEW3; described as Apollo 17-based in R107), not a lunar sample. The stored 'General' matches the 'Replica of' column of the internal export 'Global Registry of Lunar Regolith Simulants.html'."
+       },
+       {
+        "field": "institution",
+        "stored": "AGH University of Technology",
+        "status": "supported",
+        "reference_id": "NEW2",
+        "location": "ISECG ISRU Gap Assessment Report (2021), lunar regolith simulants table, report pp. 63-64 (between 'Page 62' and 'Page 65' footers)",
+        "quote": "AGK-2010 Polish Lunar Simulant/AGH University of Technology Geotehnical",
+        "note": "The exact stored string appears only in NEW2 (and in the internal 'Global Registry' export). The developer's own paper R107 gives the full name: p. 552 Introduction 'The first Polish lunar soil analog, labeled AGK-2010, was designed at the Department of Drilling and Geoengineering, Faculty of Drilling, Oil and Gas, AGH University of Science and Technology in Krak\u00f3w (AGH-UST) in co-operation with the Space Research Centre, Polish Academy of Sciences in Warsaw (SRC PAS).' Recommend correcting to 'AGH University of Science and Technology, Krak\u00f3w' and recording SRC PAS / CBK PAN as co-developer (NEW1 lists supplier 'Polish Academy of Sciences'; NEW5: 'developed by CBK PAN and AGH')."
+       }
+      ],
+      "new_values": [
+       {
+        "field": "particle_size_distribution",
+        "value": "Uniformity coefficient Cu = 3.54; curvature coefficient Cc = 0.72 (PN-EN ISO 14688-2); classified as single-fraction clayey sand (siSa); sieve analysis per PN-EN 933-1; grain-size curve in Fig. 1 (10-10000 \u00b5m axis)",
+        "reference_id": "R107",
+        "location": "p. 553, Table 1 'Characteristic of grain-size distribution of lunar regolith analog CHENOBI and lunar soil analog AGK-2010 (Bednarz et al., 2009, 2011)', row AGK-2010 (columns: Soil | Uniformity coefficient, Cu | Curvature, Cc); classification sentence directly below Table 1",
+        "quote": "AGK-2010    3.54    0.72"
+       }
+      ],
+      "unavailable_documents": [],
+      "notes": "(1) R107 IDENTITY: the listed reference has no local_path in the DB, but the library holds three byte-identical copies of the paper (papers/LRS/AGK2010-Bednarz.pdf; papers/LRS/Bednarz et al. - 2013 - Research of formed lunar regholit analog AGK-2010.pdf; papers/LRS/DIRT project/files/1820/... ; Zotero key bednarz_research_2013 in papers/LRS/DIRT project/DIRT project.bib). The DB title says 'regolith' but the paper's printed title is 'RESEARCH OF FORMED LUNAR REGHOLIT ANALOG AGK-2010' (sic); the PAN landing page for the DOI also spells the second author 'Rziczniak' while the PDF has 'RZYCZNIAK'. Suggest setting R107.local_path to papers/LRS/AGK2010-Bednarz.pdf. (2) NUMERIC VALUES: bulk_density, cohesion and friction_angle are all stated for AGK-2010 in R107 (p. 554 Section 2; p. 555 Table 2/Fig. 3) and match exactly; note that Table 2 and Figs. 2-3 are attributed to '(Bednarz, 2009, 2011)', i.e. the unpublished 2009 AGH report and the 2011 patent application, so R107 is the earliest published source. Bulk density is in kg/l (= g/cm3); density_g_cm3 is empty in the DB and would duplicate bulk_density if filled. (3) TEXT FIELDS: institution 'AGH University of Technology', release_date '2013', lunar_sample_reference 'General', type 'General', notes 'Geotechnical analog' and simulant_extra.reference all reproduce, field for field, the AGK-2010 row of the internal CSV export papers/LRS/Sources/Global Registry of Lunar Regolith Simulants.html ('\"AGK-2010\",\"General\",\"Poland\",\"Geotechnical\",\"Geotechnical\",\"AGH University of Technology\",\"Unknown\",\"2013\",\"General\",\"Geotechnical analog\",...'). That export is the project's own earlier data, not a source, so I did NOT list it (nor papers/LRS/Sources/Database - LRS Constituents - LRS types (2).cs.html, Database - LRS Constituents.pdf.html, LRS Dashboard - The Spring Institute.html, or DIRT project.bib) under new_references even though they name the product. Note the export says Stage 'Unknown' whereas the DB stores availability 'Unavailable'. (4) TYPE: stored type 'General' is not in my value list but is contradicted by every external document: NEW1 'Description Geotehnical', NEW2 'Geotehnical', internal CSV 'Geotechnical Simulant'; R107 characterises only grain size, bulk density, colour, shear strength, cohesion and friction angle. Suggest type = Geotechnical. NEW1 and NEW2 share the same misspelling 'Geotehnical', suggesting the ESRIC entry was copied from the ISECG table. (5) COMPOSITION: R107 gives no chemical or mineral composition (p. 554: 'The authors used a selection of raw minerals for making lunar soil analog AGK-2010. As a result they obtained a multicomponent soil of grey-light grey color'; p. 555: 'components appearing in Polish geological conditions and/or components produced by home raw mineral producers'). composition_status 'not_extracted' and publicly_available_composition = 0 are consistent with all opened documents; the recipe may be in patent application P397651 (30.12.2011), which is not in the library. No D50, specific gravity, pH or angle of repose is stated in any opened document (Fig. 1 shows the grain-size curve graphically only). (6) OTHER MENTIONS WITHOUT DATA: NEW6 (Mrozek et al. 2025) misspells it 'AKG-2010' in the body text and only cites R107; NEW7 (PACKMOON abstract) reports device test results (strikes/time/mass) on AGK2010, not simulant properties; NEW4 (CBK PAN Annual Report 2022) reports a 2022 campaign to determine physical and mechanical properties of AGK2010 at UWM - a possible source of newer geotechnical data not present in the library. (7) COVERAGE: a full-text sweep of all 206 PDFs under Sources for 'AGK-2010/AGK2010/Bednarz' found only the three copies of R107; the HTML/text sweep found the seven external documents listed as NEW1-NEW7 plus the internal exports above. The doi.org landing page for R107 is metadata-only (no full text); the local PDF is the full text."
+     }
+    ]
+   },
+   "verification": null
+  }
+ ]
+}

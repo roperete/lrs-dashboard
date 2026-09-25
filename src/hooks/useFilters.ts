@@ -11,7 +11,12 @@ export const FILTER_PROPERTIES: FilterPropertyMeta[] = [
   { property: 'chemical', label: 'Chemical Oxide', type: 'categorical' },
   { property: 'has_chemistry', label: 'Has Chemistry Data', type: 'boolean' },
   { property: 'has_mineralogy', label: 'Has Mineralogy Data', type: 'boolean' },
+  { property: 'has_geotechnical', label: 'Has Geotechnical Data', type: 'boolean' },
   { property: 'year', label: 'Year', type: 'range' },
+  { property: 'bulk_density', label: 'Bulk density (g/cm³)', type: 'range' },
+  { property: 'd50', label: 'D50 (µm)', type: 'range' },
+  { property: 'friction_angle', label: 'Friction angle (°)', type: 'range' },
+  { property: 'cohesion', label: 'Cohesion (kPa)', type: 'range' },
   { property: 'reference', label: 'Reference', type: 'text' },
   { property: 'lunar_ref', label: 'Lunar Sample Ref', type: 'categorical' },
 ];
@@ -52,6 +57,33 @@ export function useFilters(
     setFilters(prev => prev.filter(f => f.id !== id));
   }, []);
 
+  /** Set one property's values in a click (the Find pane's chips and ranges): creates, updates
+   *  or, with no values, removes that property's filter. */
+  const setFacet = useCallback((property: FilterProperty, values: string[]) => {
+    setFilters(prev => {
+      const rest = prev.filter(f => f.property !== property);
+      if (values.length === 0 || values.every(v => v === '')) return rest;
+      const existing = prev.find(f => f.property === property);
+      return [...rest, { id: existing?.id ?? String(nextId++), property, values }];
+    });
+  }, []);
+
+  /** How many simulants each value of a property would give, counting under every other active
+   *  filter but not that property's own, so a chip's number is what clicking it adds. */
+  const facetCounts = useCallback((property: FilterProperty, valueOf: (s: Simulant) => string[]) => {
+    const others = filters.filter(f => f.property !== property);
+    const base = filterSimulantsDynamic(simulants, others, searchQuery, filterCtx);
+    const counts = new Map<string, number>();
+    for (const s of base) for (const v of valueOf(s)) counts.set(v, (counts.get(v) ?? 0) + 1);
+    return counts;
+  }, [filters, simulants, searchQuery, filterCtx]);
+
+  /** How many simulants a chip would leave: the other filters plus this property set to values. */
+  const countWith = useCallback((property: FilterProperty, values: string[]) => {
+    const others = filters.filter(f => f.property !== property);
+    return filterSimulantsDynamic(simulants, [...others, { id: 'probe', property, values }], searchQuery, filterCtx).length;
+  }, [filters, simulants, searchQuery, filterCtx]);
+
   const clearAllFilters = useCallback(() => {
     setFilters([]);
     setSearchQuery('');
@@ -59,7 +91,8 @@ export function useFilters(
 
   // Derive available options for categorical filters
   const filterOptions = useMemo(() => {
-    const types = [...new Set(simulants.map(s => s.type))].sort();
+    // Empty values are left out of the options: "" is not a type a user can pick.
+    const types = [...new Set(simulants.map(s => s.type).filter(Boolean))].sort();
     const countries = [...new Set(simulants.map(s => s.country_code))].filter(Boolean).sort();
     const rawInstitutions = [...new Set(simulants.map(s => s.institution).filter(Boolean))].sort();
     const hasNASA = rawInstitutions.some(i => i.toLowerCase().includes('nasa'));
@@ -82,7 +115,7 @@ export function useFilters(
   }, [simulants, compositions, mineralGroups, chemicalCompositions]);
 
   return {
-    filters, filteredSimulants, searchQuery,
+    filters, filteredSimulants, searchQuery, setFacet, facetCounts, countWith,
     addFilter, updateFilter, removeFilter, clearAllFilters, setSearchQuery,
     filterOptions,
   };

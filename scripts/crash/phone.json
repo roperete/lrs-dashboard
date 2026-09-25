@@ -1,0 +1,39 @@
+[
+ {
+  "viewport": [
+   390,
+   844,
+   true
+  ]
+ },
+ {
+  "click": "Table"
+ },
+ {
+  "wait": 800
+ },
+ {
+  "expect": "(() => { const spans = [...document.querySelectorAll('ul.sm\\\\:hidden li .font-mono')]; return spans.length > 0 && spans.every(s => s.querySelectorAll('sup').length === s.textContent.split(' \u00b7 ').length); })()",
+  "why": "on a phone every value in the list carries its reference number"
+ },
+ {
+  "clickSel": "tbody tr[data-row] td:nth-child(2)",
+  "after": 1200
+ },
+ {
+  "click": "Globe"
+ },
+ {
+  "click": "Moon"
+ },
+ {
+  "click": "Earth"
+ },
+ {
+  "viewport": [
+   1440,
+   900,
+   false
+  ]
+ }
+]

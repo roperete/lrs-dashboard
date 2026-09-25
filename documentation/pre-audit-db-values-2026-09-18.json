@@ -1,0 +1,5809 @@
+{
+ "S004": {
+  "simulant_id": "S004",
+  "name": "BH-1",
+  "institution": "Beihang University",
+  "type": "Highlands",
+  "release_date": "2021",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Apollo 16",
+  "physical": {},
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 43.3
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 16.5
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 8.8
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.9
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 16.7
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 3.0
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.3
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 3.8
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 3.3
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.7
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 99.3,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R003",
+    "type": "composition",
+    "text": "Zhou, S., Lu, C., Zhu, X., & Li, F. (2021). Preparation and characterization of high-strength geopolymer based on BH-1 lunar soil simulant with low alkali content. Engineering, 7, 1631-1645. https://doi.org/10.1016/j.eng.2020.10.016",
+    "url": "https://doi.org/10.1016/j.eng.2020.10.016",
+    "doi": "10.1016/j.eng.2020.10.016"
+   },
+   {
+    "id": "R004",
+    "type": "usage",
+    "text": "Zhou, S., Yang, Z., Zhang, R., Zhu, X., & Li, F. (2021). Preparation and evaluation of geopolymer based on BH-2 lunar regolith simulant under lunar surface temperature and vacuum condition. Acta Astronautica, 189, 90-98. https://doi.org/10.1016/j.actaastro.2021.08.039",
+    "url": "https://doi.org/10.1016/j.actaastro.2021.08.039",
+    "doi": "10.1016/j.actaastro.2021.08.039"
+   }
+  ],
+  "extra_reference": "Zhou, S., et al. (2021). Preparation and characterization of high-strength geopolymer based on BH-1 lunar soil simulant... Engineering 7(11), 1631\u20131645. https://doi.org/10.1016/j.eng.2020.10.016",
+  "feedstock": "Volcanic scoria cones"
+ },
+ "S005": {
+  "simulant_id": "S005",
+  "name": "BHLD20",
+  "institution": null,
+  "type": "Dust Simulant",
+  "release_date": "2017",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Dust",
+  "physical": {},
+  "oxides_in_db": [],
+  "minerals_in_db": [
+   {
+    "name": "Plagioclase",
+    "pct": 25.0
+   },
+   {
+    "name": "Volcanic Glass",
+    "pct": 20.0
+   }
+  ],
+  "oxide_sum": 0,
+  "mineral_sum": 45.0,
+  "references_in_db": [
+   {
+    "id": "R005",
+    "type": "usage",
+    "text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "url": "https://doi.org/10.3389/fspas.2021.747821",
+    "doi": "10.3389/fspas.2021.747821"
+   }
+  ],
+  "extra_reference": "Sun, H., et al. (2017). Developing a new controllable lunar dust simulant: BHLD20. Planet. Space Sci. 141, 17\u201324. https://doi.org/10.1016/j.pss.2017.04.010",
+  "feedstock": null
+ },
+ "S006": {
+  "simulant_id": "S006",
+  "name": "BP-1",
+  "institution": "NASA KSC",
+  "type": "Mare",
+  "release_date": "2010",
+  "availability": "Available",
+  "lunar_sample_reference": "Low-Ti Mare",
+  "physical": {
+   "bulk_density": "1.65",
+   "specific_gravity": 1.43,
+   "particle_size_d50": 88.4,
+   "cohesion": "1.0",
+   "friction_angle": "45.0"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.2
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.1
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 16.7
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 5.9
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 6.5
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 9.2
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.3
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 3.5
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.52
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.21
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Magnetite",
+    "pct": 3.0
+   },
+   {
+    "name": "Hematite",
+    "pct": 2.0
+   },
+   {
+    "name": "Calcite",
+    "pct": 2.7
+   },
+   {
+    "name": "Olivine",
+    "pct": 6.2
+   },
+   {
+    "name": "Augite",
+    "pct": 23.7
+   },
+   {
+    "name": "Quartz",
+    "pct": 1.7
+   },
+   {
+    "name": "Labradorite",
+    "pct": 60.7
+   }
+  ],
+  "oxide_sum": 93.13,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R006",
+    "type": "composition",
+    "text": "Suescun-Florez, E., Roslyakov, S., Iskander, M., & Baamer, M. (2015). Geotechnical properties of BP-1 lunar regolith simulant. Journal of Aerospace Engineering, 28.",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R082",
+    "type": "composition",
+    "text": "D.B. Stoeser, D.L. Rickman, Preliminary Geological Findings on the BP-1 Simulant, 2010 https://ntrs.nasa.gov/api/citations/20100036344/downloads/20100036344.pdf",
+    "url": "https://ntrs.nasa.gov/api/citations/20100036344/downloads/20100036344.pdf",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Suescun-Florez, E., et al. (2015). Geotechnical properties of BP-1 lunar regolith simulant. J. Aerosp. Eng. 28(5), 04014124. https://doi.org/10.1061/(ASCE)AS.1943-5525.0000462",
+  "feedstock": "Basalt from Black Point lava flow, Arizona"
+ },
+ "S007": {
+  "simulant_id": "S007",
+  "name": "CAS-1",
+  "institution": "Chinese Academy of Sciences",
+  "type": "Mare",
+  "release_date": "2009",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Apollo 14",
+  "physical": {
+   "cohesion": "1.0",
+   "friction_angle": "33.3"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 49.24
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.91
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 15.8
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 11.47
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 8.72
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.52
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 7.25
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 3.08
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.3
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.52
+   },
+   {
+    "name": "Sum",
+    "wt_pct": 99.46
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Ilmenite",
+    "pct": 2.33
+   },
+   {
+    "name": "Magnetite",
+    "pct": 3.03
+   },
+   {
+    "name": "Apatite",
+    "pct": 0.65
+   },
+   {
+    "name": "Olivine",
+    "pct": 8.13
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 22.34
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 63.52
+   }
+  ],
+  "oxide_sum": 98.81,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R007",
+    "type": "usage",
+    "text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "url": "https://doi.org/10.3389/fspas.2021.747821",
+    "doi": "10.3389/fspas.2021.747821"
+   },
+   {
+    "id": "R008",
+    "type": "composition",
+    "text": "Zheng, Y., Wang, S., Ouyang, Z., Zou, Y., Liu, J., Li, C., Li, X., & Feng, J. (2009). CAS-1 lunar soil simulant. Advances in Space Research, 43, 448-454. https://doi.org/10.1016/j.asr.2008.07.006",
+    "url": "https://doi.org/10.1016/j.asr.2008.07.006",
+    "doi": "10.1016/j.asr.2008.07.006"
+   },
+   {
+    "id": "R096",
+    "type": "geotechnical",
+    "text": "Yongchun Zheng, Shijie Wang, CAS-1 lunar soil simulant, 2009 https://doi.org/10.1016/j.asr.2008.07.006",
+    "url": "https://doi.org/10.1016/j.asr.2008.07.006",
+    "doi": "10.1016/j.asr.2008.07.006"
+   }
+  ],
+  "extra_reference": "Zheng, Y., et al. (2009). CAS-1 lunar soil simulant. Adv. Space Res. 43(3), 448\u2013454. https://doi.org/10.1016/j.asr.2008.07.006",
+  "feedstock": "Low-Ti basaltic scoria"
+ },
+ "S009": {
+  "simulant_id": "S009",
+  "name": "CLDS-i",
+  "institution": "Chinese Academy of Sciences",
+  "type": "Dust Simulant",
+  "release_date": "2017",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Dust",
+  "physical": {},
+  "oxides_in_db": [],
+  "minerals_in_db": [
+   {
+    "name": "Olivine + pyroxene + ilmenite",
+    "pct": 10.0
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 15.0
+   },
+   {
+    "name": "Volcanic Glass",
+    "pct": 75.0
+   }
+  ],
+  "oxide_sum": 0,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R009",
+    "type": "usage",
+    "text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "url": "https://doi.org/10.3389/fspas.2021.747821",
+    "doi": "10.3389/fspas.2021.747821"
+   }
+  ],
+  "extra_reference": "Tang, H., et al. (2017). A lunar dust simulant: CLDS-i. Adv. Space Res. 59(4), 1156\u20131160. https://doi.org/10.1016/j.asr.2016.11.023",
+  "feedstock": "Basaltic scoria"
+ },
+ "S012": {
+  "simulant_id": "S012",
+  "name": "CUG-1A",
+  "institution": "China University of Geosciences",
+  "type": "Mare",
+  "release_date": "2010",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Mare",
+  "physical": {
+   "bulk_density": "1.45",
+   "cohesion": "5.0",
+   "friction_angle": "21.0"
+  },
+  "oxides_in_db": [],
+  "minerals_in_db": [
+   {
+    "name": "Olivine",
+    "pct": 48.0
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 20.0
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 9.0
+   },
+   {
+    "name": "Glass",
+    "pct": 23.0
+   }
+  ],
+  "oxide_sum": 0,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R012",
+    "type": "usage",
+    "text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "url": "https://doi.org/10.3389/fspas.2021.747821",
+    "doi": "10.3389/fspas.2021.747821"
+   },
+   {
+    "id": "R076",
+    "type": "composition,geotechnical",
+    "text": "X.X. He, L. Xiao, LUNAR REGOLITH SIMULANT CUG-1A, 2010 https://ui.adsabs.harvard.edu/abs/2010LPI....41.1183H",
+    "url": "https://ui.adsabs.harvard.edu/abs/2010LPI....41.1183H",
+    "doi": null
+   }
+  ],
+  "extra_reference": "He, X.X., et al. (2010). Lunar regolith simulant CUG-1A. 41st LPSC, Abst. 1533, 1183.",
+  "feedstock": null
+ },
+ "S013": {
+  "simulant_id": "S013",
+  "name": "CUMT-1",
+  "institution": "China Univ. of Mining and Tech",
+  "type": "Mare",
+  "release_date": "2022",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Apollo 14/15",
+  "physical": {
+   "bulk_density": "1.47",
+   "specific_gravity": 3.45,
+   "density_g_cm3": 3.45,
+   "particle_size_d50": 77.0,
+   "cohesion": "15.79",
+   "friction_angle": "51.26"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 42.68
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.31
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 15.2
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 26.76
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 3.44
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.03
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 5.62
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 3.23
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.13
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 1.5
+   },
+   {
+    "name": "Cr2O3",
+    "wt_pct": 0.36
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Ilmenite",
+    "pct": 1.65
+   },
+   {
+    "name": "Magnetite",
+    "pct": 30.53
+   },
+   {
+    "name": "Hematite",
+    "pct": 1.03
+   },
+   {
+    "name": "Olivine",
+    "pct": 1.66
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 19.48
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 41.02
+   },
+   {
+    "name": "Undifferentiated",
+    "pct": 3.31
+   },
+   {
+    "name": "Glass",
+    "pct": 1.32
+   }
+  ],
+  "oxide_sum": 98.76,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R013",
+    "type": "composition",
+    "text": "Li, R., Zhou, G., Yan, K., Chen, J., Chen, D., Cai, S., & Mo, P.-Q. (2022). Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation. International Journal of Mining Science and Technology, 32, 1-15. https://doi.org/10.1016/j.ijmst.2021.09.003",
+    "url": "https://doi.org/10.1016/j.ijmst.2021.09.003",
+    "doi": "10.1016/j.ijmst.2021.09.003"
+   },
+   {
+    "id": "R108",
+    "type": null,
+    "text": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+    "url": null,
+    "doi": "10.1016/j.ijmst.2021.09.003"
+   }
+  ],
+  "extra_reference": "Li, R., et al. (2022). Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation. Int. J. Min. Sci. Technol. 32, 1\u201315. https://doi.org/10.1016/j.ijmst.2021.09.003",
+  "feedstock": "Basaltic volcanic scoria, ferroferric oxide, ammonium bicarbonate"
+ },
+ "S014": {
+  "simulant_id": "S014",
+  "name": "DNA-1",
+  "institution": "Monolite / ESA",
+  "type": "Mare",
+  "release_date": "2014",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Low-Ti Mare",
+  "physical": {
+   "particle_size_distribution": "large particle size distribution"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 41.9
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.31
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 16.02
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 14.6
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 6.34
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 12.9
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.66
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 2.53
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.21
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.34
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Basaltic Ash",
+    "pct": 100.0
+   }
+  ],
+  "oxide_sum": 98.81,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R014",
+    "type": "usage",
+    "text": "Cesaretti, G., Dini, E., De Kestelier, X., Colla, V., & Pambaguian, L. (2014). Building components for an outpost on the lunar soil by means of a novel 3D printing technology. Acta Astronautica.",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Cesaretti, G., et al. (2014). Building components for an outpost on the Lunar soil... Acta Astronaut. 93, 430\u2013450. https://doi.org/10.1016/j.actaastro.2013.07.034",
+  "feedstock": "Basalt from Lake Bolsena"
+ },
+ "S015": {
+  "simulant_id": "S015",
+  "name": "DNA-1A",
+  "institution": "Monolite / ESA",
+  "type": "Mare",
+  "release_date": "2019",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Low-Ti Mare",
+  "physical": {
+   "specific_gravity": 2.7
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 51.87
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.8
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 19.21
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 8.3
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 2.84
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 5.41
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 5.76
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 4.22
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.22
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 1.39
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Basaltic Ash",
+    "pct": 100.0
+   }
+  ],
+  "oxide_sum": 100.02,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R015",
+    "type": "usage",
+    "text": "Sandeep, C. S., Senetakis, K., Cheung, D. K. H., Choi, C. E., Wang, Y., Coop, M. R., & Ng, C. W. W. (2019). Micromechanical behavior of DNA-IA lunar regolith simulant in comparison to Ottawa sand. Journal of Geophysical Research: Solid Earth.",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R100",
+    "type": "development",
+    "text": "Cesaretti, G., Dini, E., De Kestelier, X., Colla, V., & Pambaguian, L. (2014). Building components for an outpost on the Lunar soil by means of a novel 3D printing technology. Acta Astronautica, 93, 430-450. https://doi.org/10.1016/j.actaastro.2013.07.034",
+    "url": "https://doi.org/10.1016/j.actaastro.2013.07.034",
+    "doi": "10.1016/j.actaastro.2013.07.034"
+   },
+   {
+    "id": "R101",
+    "type": "composition",
+    "text": "Marzulli, V., & Cafaro, F. (2019). Geotechnical properties of uncompacted DNA-1A lunar simulant. Journal of Aerospace Engineering, 32(2). https://doi.org/10.1061/(ASCE)AS.1943-5525.0000983",
+    "url": "https://doi.org/10.1061/(ASCE",
+    "doi": "10.1061/(ASCE"
+   }
+  ],
+  "extra_reference": "Sandeep, C.S., et al. (2019). Micromechanical behavior of DNA-1A lunar regolith simulant... J. Geophys. Res. Solid Earth 124, 8077-8100. https://doi.org/10.1029/2019JB017589",
+  "feedstock": "Basalt from Lake Bolsena"
+ },
+ "S016": {
+  "simulant_id": "S016",
+  "name": "DUST-Y",
+  "institution": "Space Resource Technologies",
+  "type": "Highlands",
+  "release_date": "2019",
+  "availability": "Available",
+  "lunar_sample_reference": "Apollo",
+  "physical": {},
+  "oxides_in_db": [],
+  "minerals_in_db": [
+   {
+    "name": "Ilmenite",
+    "pct": 0.1
+   },
+   {
+    "name": "Olivine",
+    "pct": 0.2
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 0.4
+   },
+   {
+    "name": "Glass",
+    "pct": 9.0
+   }
+  ],
+  "oxide_sum": 0,
+  "mineral_sum": 9.7,
+  "references_in_db": [
+   {
+    "id": "R016",
+    "type": "usage",
+    "text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "url": "https://doi.org/10.3389/fspas.2021.747821",
+    "doi": "10.3389/fspas.2021.747821"
+   }
+  ],
+  "extra_reference": "Britt, D. T., Cannon, K. M. (2019). Mineralogically Accurate Simulants for Lunar ISRU. LPI Contribution.",
+  "feedstock": null
+ },
+ "S017": {
+  "simulant_id": "S017",
+  "name": "EAC-1",
+  "institution": "European Astronaut Centre",
+  "type": "Mare",
+  "release_date": "2017",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Low-Ti Mare",
+  "physical": {
+   "bulk_density": "1.45",
+   "cohesion": "0.38"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 42.0
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.7
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 10.0
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 14.0
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 13.0
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 11.0
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.3
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.76
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 12.0
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.2
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.6
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Olivine",
+    "pct": 25.0
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 10.0
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 65.0
+   }
+  ],
+  "oxide_sum": 108.56,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R017",
+    "type": "usage",
+    "text": "Manick, K., Gill, S., Mason, L., & Crowther, S. (2018). Fundamental properties characterisation of lunar regolith simulants at the ESA Sample Analogue Curation Facility. In 49th Lunar and Planetary Science Conference.",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Engelschi\u00f8n, V.S., et al. (2020). EAC-1A: A novel large-volume lunar regolith simulant. Sci. Rep. 10, 5473. https://doi.org/10.1038/s41598-020-62312-4",
+  "feedstock": "Eifel region basanite"
+ },
+ "S018": {
+  "simulant_id": "S018",
+  "name": "EAC-1A",
+  "institution": "European Astronaut Centre",
+  "type": "Mare",
+  "release_date": "2020",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Low-Ti Mare",
+  "physical": {
+   "bulk_density": "1.95",
+   "specific_gravity": 1.45,
+   "density_g_cm3": 2.9,
+   "particle_size_d50": 11.0,
+   "particle_size_distribution": "d50=181",
+   "cohesion": "0.38",
+   "glass_content_percent": 0.0
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 42.0
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.7
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 10.0
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 14.0
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 13.0
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 11.0
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.3
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.76
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Plagioclase",
+    "pct": 65.0
+   },
+   {
+    "name": "Olivine",
+    "pct": 25.0
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 10.0
+   },
+   {
+    "name": "Diopside",
+    "pct": null
+   },
+   {
+    "name": "Forsterite",
+    "pct": null
+   },
+   {
+    "name": "Biotite",
+    "pct": null
+   },
+   {
+    "name": "Analcime",
+    "pct": null
+   }
+  ],
+  "oxide_sum": 95.76,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R018",
+    "type": "composition",
+    "text": "Engelschion, V. S., Eriksson, S. R., Cowley, A., Fateri, M., Meurisse, A., Kueppers, U., & Sperl, M. (2020). EAC-1A: A novel large-volume lunar regolith simulant. Scientific Reports, 10. https://doi.org/10.1038/s41598-020-62312-4",
+    "url": "https://doi.org/10.1038/s41598-020-62312-4",
+    "doi": "10.1038/s41598-020-62312-4"
+   },
+   {
+    "id": "R098",
+    "type": "geotechnical",
+    "text": "V.S. Engelschion, S.R. Eriksson, EAC-1A: A novel large-volume lunar regolith simulant, 2020 https://doi.org/10.1038/s41598-020-62312-4",
+    "url": "https://doi.org/10.1038/s41598-020-62312-4",
+    "doi": "10.1038/s41598-020-62312-4"
+   }
+  ],
+  "extra_reference": "Engelschi\u00f8n, V.S., et al. (2020). EAC-1A: A novel large-volume lunar regolith simulant. Sci. Rep. 10, 5473. https://doi.org/10.1038/s41598-020-62312-4",
+  "feedstock": "Eifel region basanite"
+ },
+ "S019": {
+  "simulant_id": "S019",
+  "name": "FJS-1",
+  "institution": "JAXA / Shimizu Corporation",
+  "type": "Mare",
+  "release_date": "1998",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Apollo 14",
+  "physical": {
+   "bulk_density": "1.065",
+   "cohesion": "8.13",
+   "friction_angle": "39.4",
+   "glass_content_percent": 7.15
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 49.14
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.91
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 16.23
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 13.07
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 3.84
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.44
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 9.13
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.75
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 1.01
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.43
+   },
+   {
+    "name": "Sum",
+    "wt_pct": 98.14
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Ilmenite",
+    "pct": 3.65
+   },
+   {
+    "name": "Magnetite",
+    "pct": 0.04
+   },
+   {
+    "name": "Olivine",
+    "pct": 4.94
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 25.76
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 56.02
+   },
+   {
+    "name": "Undifferentiated",
+    "pct": 2.44
+   },
+   {
+    "name": "Glass",
+    "pct": 7.15
+   }
+  ],
+  "oxide_sum": 97.95,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R019",
+    "type": "usage",
+    "text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "url": "https://doi.org/10.3389/fspas.2021.747821",
+    "doi": "10.3389/fspas.2021.747821"
+   },
+   {
+    "id": "R079",
+    "type": "composition,geotechnical",
+    "text": "Maki Syou, Jing Han, Magnetism of Simulated Lunar Regolith of FJS-1, 2014 http://www.bmfsa.org/archive/journal-E/19-2/e2014-19-2-sl01.pdf",
+    "url": "http://www.bmfsa.org/archive/journal-E/19-2/e2014-19-2-sl01.pdf",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Kanamori, H., et al. (1998). Properties of lunar soil simulant manufactured in Japan. Space 98, 462-468. https://doi.org/10.1061/40339(206)53",
+  "feedstock": "Crushed Mt. Fuji basaltic lava"
+ },
+ "S025": {
+  "simulant_id": "S025",
+  "name": "GreenSpar",
+  "institution": "Hudson Resources",
+  "type": "Highlands",
+  "release_date": "2020",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Highlands",
+  "physical": {
+   "specific_gravity": 0.95,
+   "particle_size_d50": 78.0
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 51.0
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.0
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 30.6
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 0.4
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 0.2
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 14.7
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.5
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.2
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 99.6,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R058",
+    "type": "usage",
+    "text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Gruener, J.E., et al. (2020). Greenland \u2018white mountain\u2019 anorthosite: A new lunar polar regolith simulant component. 51st LPSC, Abst. 2326.",
+  "feedstock": "Anorthosite from Greenland"
+ },
+ "S027": {
+  "simulant_id": "S027",
+  "name": "JSC-1",
+  "institution": "NASA / Orbitec",
+  "type": "Mare",
+  "release_date": "1994",
+  "availability": "Production stopped",
+  "lunar_sample_reference": "Apollo 14",
+  "physical": {
+   "bulk_density": "1.065",
+   "specific_gravity": 2.92,
+   "particle_size_distribution": "<1mm",
+   "cohesion": "1.0",
+   "friction_angle": "45.0",
+   "glass_content_percent": 50.0
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.7
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 15.0
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 7.4
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Ilmenite",
+    "pct": 0.1
+   },
+   {
+    "name": "Ti-magnetite",
+    "pct": 0.4
+   },
+   {
+    "name": "Cr-spinel",
+    "pct": 1.1
+   },
+   {
+    "name": "Apatite",
+    "pct": 0.1
+   },
+   {
+    "name": "Sulfide",
+    "pct": 1.0
+   },
+   {
+    "name": "Olivine",
+    "pct": 9.0
+   },
+   {
+    "name": "Clinopyroxene",
+    "pct": 0.1
+   },
+   {
+    "name": "Quartz",
+    "pct": 0.2
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 37.1
+   },
+   {
+    "name": "Albite",
+    "pct": 0.3
+   },
+   {
+    "name": "K-feldspar",
+    "pct": 1.4
+   },
+   {
+    "name": "Smectite",
+    "pct": 0.1
+   },
+   {
+    "name": "Glass",
+    "pct": 49.3
+   }
+  ],
+  "oxide_sum": 70.1,
+  "mineral_sum": 100.2,
+  "references_in_db": [
+   {
+    "id": "R025",
+    "type": "usage",
+    "text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "url": "https://doi.org/10.3389/fspas.2021.747821",
+    "doi": "10.3389/fspas.2021.747821"
+   },
+   {
+    "id": "R086",
+    "type": "composition,geotechnical",
+    "text": "D.S. McKay, J.L. Carter, JSC-1: A NEW LUNAR SOIL SIMULANT, 1994 https://www.lpi.usra.edu/lunar/strategies/jsc_lunar_simulant.pdf?q=jsc",
+    "url": "https://www.lpi.usra.edu/lunar/strategies/jsc_lunar_simulant.pdf?q=jsc",
+    "doi": null
+   }
+  ],
+  "extra_reference": "McKay, D.S., et al. (1994). JSC-1: A new lunar soil simulant. Engineering, Construction, and Operations in Space IV 2, 857-866.",
+  "feedstock": "Basaltic ash from Merriam Crater, Arizona"
+ },
+ "S028": {
+  "simulant_id": "S028",
+  "name": "JSC-1A",
+  "institution": "NASA / Orbitec",
+  "type": "Mare",
+  "release_date": "2005",
+  "availability": "Production stopped",
+  "lunar_sample_reference": "Apollo 14",
+  "physical": {
+   "bulk_density": "1.63",
+   "specific_gravity": 2.92,
+   "particle_size_d50": 129.1,
+   "particle_size_distribution": "<1mm",
+   "cohesion": "1.9",
+   "friction_angle": "45.85"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.71
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.59
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 15.02
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 7.35
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 3.44
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 9.01
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 10.42
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.7
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.82
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.18
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.66
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 0.71
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Glass",
+    "pct": 49.3
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 37.1
+   },
+   {
+    "name": "Albite",
+    "pct": 0.3
+   },
+   {
+    "name": "Olivine",
+    "pct": 9.0
+   },
+   {
+    "name": "Clinopyroxene",
+    "pct": 0.1
+   },
+   {
+    "name": "Cr-spinel",
+    "pct": 1.1
+   },
+   {
+    "name": "Ti-magnetite",
+    "pct": 0.4
+   },
+   {
+    "name": "Ilmenite",
+    "pct": 0.1
+   },
+   {
+    "name": "K-silicate",
+    "pct": 1.4
+   },
+   {
+    "name": "Sulfide",
+    "pct": 1.0
+   },
+   {
+    "name": "Quartz",
+    "pct": 0.2
+   },
+   {
+    "name": "Chlorite",
+    "pct": 0.1
+   },
+   {
+    "name": "Apatite",
+    "pct": 0.1
+   }
+  ],
+  "oxide_sum": 98.9,
+  "mineral_sum": 100.2,
+  "references_in_db": [
+   {
+    "id": "R026",
+    "type": "usage",
+    "text": "Taylor, L. A., Pieters, C. M., & Britt, D. (2005). JSC-1 as the lunar soil simulant of choice. Meteoritics and Planetary Science.",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R087",
+    "type": "composition",
+    "text": "K.A. Alshibli, A. Hasan, Strength Properties of JSC-1A Lunar Regolith Simulant, 2009 https://doi.org/10.1061/(ASCE)GT.1943-5606.0000068",
+    "url": "https://doi.org/10.1061/(ASCE",
+    "doi": "10.1061/(ASCE"
+   }
+  ],
+  "extra_reference": "Schrader, C.M., et al. (2010). Lunar Regolith Simulant User's Guide. NASA/TM-2010-216446.",
+  "feedstock": "Basaltic ash from Merriam Crater, Arizona"
+ },
+ "S029": {
+  "simulant_id": "S029",
+  "name": "JSC-1AC",
+  "institution": "NASA / Orbitec",
+  "type": "Mare",
+  "release_date": "2005",
+  "availability": "Production stopped",
+  "lunar_sample_reference": "Apollo 14",
+  "physical": {},
+  "oxides_in_db": [],
+  "minerals_in_db": [
+   {
+    "name": "Ilmenite",
+    "pct": 0.1
+   },
+   {
+    "name": "Ti-magnetite",
+    "pct": 0.4
+   },
+   {
+    "name": "Cr-spinel",
+    "pct": 1.1
+   },
+   {
+    "name": "Apatite",
+    "pct": 0.1
+   },
+   {
+    "name": "Sulfide",
+    "pct": 1.0
+   },
+   {
+    "name": "Olivine",
+    "pct": 9.0
+   },
+   {
+    "name": "Clinopyroxene",
+    "pct": 0.1
+   },
+   {
+    "name": "Quartz",
+    "pct": 0.2
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 37.1
+   },
+   {
+    "name": "Albite",
+    "pct": 0.3
+   },
+   {
+    "name": "K-feldspar",
+    "pct": 1.4
+   },
+   {
+    "name": "Smectite",
+    "pct": 0.1
+   },
+   {
+    "name": "Glass",
+    "pct": 49.3
+   }
+  ],
+  "oxide_sum": 0,
+  "mineral_sum": 100.2,
+  "references_in_db": [
+   {
+    "id": "R027",
+    "type": "usage",
+    "text": "Wang, K., Zhang, Y., & Liu, J. (2022). Lunar regolith simulants for space exploration: A review. Biogeotechnics.",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Schrader, C.M., et al. (2010). Lunar Regolith Simulant User's Guide. NASA/TM-2010-216446.",
+  "feedstock": "Basaltic ash from Merriam Crater, Arizona"
+ },
+ "S030": {
+  "simulant_id": "S030",
+  "name": "JSC-1AF",
+  "institution": "NASA / Orbitec",
+  "type": "Mare",
+  "release_date": "2005",
+  "availability": "Production stopped",
+  "lunar_sample_reference": "Apollo 14",
+  "physical": {
+   "particle_size_distribution": "average 27 \u03bcm"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.93
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.74
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 17.6
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 10.37
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 9.24
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 11.19
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Ilmenite",
+    "pct": 0.1
+   },
+   {
+    "name": "Ti-magnetite",
+    "pct": 0.4
+   },
+   {
+    "name": "Cr-spinel",
+    "pct": 1.1
+   },
+   {
+    "name": "Apatite",
+    "pct": 0.1
+   },
+   {
+    "name": "Sulfide",
+    "pct": 1.0
+   },
+   {
+    "name": "Olivine",
+    "pct": 9.0
+   },
+   {
+    "name": "Clinopyroxene",
+    "pct": 0.1
+   },
+   {
+    "name": "Quartz",
+    "pct": 0.2
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 37.1
+   },
+   {
+    "name": "Albite",
+    "pct": 0.3
+   },
+   {
+    "name": "K-feldspar",
+    "pct": 1.4
+   },
+   {
+    "name": "Smectite",
+    "pct": 0.1
+   },
+   {
+    "name": "Glass",
+    "pct": 49.3
+   }
+  ],
+  "oxide_sum": 98.07,
+  "mineral_sum": 100.2,
+  "references_in_db": [
+   {
+    "id": "R028",
+    "type": "usage",
+    "text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "url": "https://doi.org/10.3389/fspas.2021.747821",
+    "doi": "10.3389/fspas.2021.747821"
+   }
+  ],
+  "extra_reference": "Schrader, C.M., et al. (2010). Lunar Regolith Simulant User's Guide. NASA/TM-2010-216446.",
+  "feedstock": "Basaltic ash from Merriam Crater, Arizona"
+ },
+ "S032": {
+  "simulant_id": "S032",
+  "name": "KLS-1",
+  "institution": "Korea Institute of Civil Engineering and Building Technology",
+  "type": "Mare",
+  "release_date": "2018",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Apollo 14",
+  "physical": {
+   "specific_gravity": 1.99,
+   "density_g_cm3": 3.07,
+   "particle_size_d50": 44.1,
+   "cohesion": "1.85",
+   "friction_angle": "44.91"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 48.0
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 15.3
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 8.4
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.67
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 6.64
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 4.75
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.17
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 9.64
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 3.42
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 1.52
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.33
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "SiO2",
+    "pct": 48.0
+   },
+   {
+    "name": "TiO2",
+    "pct": 1.67
+   },
+   {
+    "name": "Al2O3",
+    "pct": 15.3
+   },
+   {
+    "name": "FeO",
+    "pct": 4.75
+   },
+   {
+    "name": "MgO",
+    "pct": 9.64
+   },
+   {
+    "name": "CaO",
+    "pct": 8.38
+   },
+   {
+    "name": "Na2O",
+    "pct": 1.67
+   },
+   {
+    "name": "K2O",
+    "pct": 3.42
+   },
+   {
+    "name": "P2O5",
+    "pct": 0.33
+   },
+   {
+    "name": "MnO",
+    "pct": 0.17
+   }
+  ],
+  "oxide_sum": 99.84,
+  "mineral_sum": 93.33,
+  "references_in_db": [
+   {
+    "id": "R029",
+    "type": "composition",
+    "text": "Kim, Y. J., Ryu, B. H., Jin, H., Lee, J., & Shin, H. S. (2021). Microstructural, mechanical, and thermal properties of microwave-sintered KLS-1 lunar regolith simulant. Ceramics International, 47, 26891-26897.",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R081",
+    "type": "composition",
+    "text": "Ryu Byung-Hyun, Wang Cheng-Can, Development of a Korean Lunar Simulant(KLS-1) and its Possible Further Recommendations, 2018 https://doi.org/10.1061/(ASCE)AS.1943-5525.0000798",
+    "url": "https://doi.org/10.1061/(ASCE",
+    "doi": "10.1061/(ASCE"
+   }
+  ],
+  "extra_reference": "Ryu, B.-H., et al. (2018). Development and Geotechnical Engineering Properties of KLS-1 Lunar Simulant. J. Aerosp. Eng. 31(1). https://doi.org/10.1061/(ASCE)AS.1943-5525.0000798",
+  "feedstock": "Cheorwon basalt"
+ },
+ "S036": {
+  "simulant_id": "S036",
+  "name": "LHS-1",
+  "institution": "Space Resource Technologies",
+  "type": "Highlands",
+  "release_date": "2020",
+  "availability": "Available",
+  "lunar_sample_reference": "Apollo 16",
+  "physical": {
+   "bulk_density": "0.81",
+   "specific_gravity": 2.77,
+   "particle_size_d50": 10.22,
+   "cohesion": "0.205",
+   "friction_angle": "28.62"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 49.12
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.63
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 26.29
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 3.2
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.06
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 2.86
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 13.52
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.55
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.34
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.17
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 0.41
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Anorthosite",
+    "pct": 74.4
+   },
+   {
+    "name": "Basaltic Glass",
+    "pct": 24.7
+   },
+   {
+    "name": "Ilmenite",
+    "pct": 0.4
+   },
+   {
+    "name": "Bronzite",
+    "pct": 0.3
+   },
+   {
+    "name": "Olivine",
+    "pct": 0.2
+   }
+  ],
+  "oxide_sum": 98.74,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R033",
+    "type": "usage",
+    "text": "Long-Fox, J., Landsman, Z., Easter, P., Millwater, C., & Britt, D. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Advances in Space Research, 71(12), 5400-5412.",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R084",
+    "type": "composition",
+    "text": "Yin Kexin, Cheng Zhichao, Shear properties of LHS-1 and LMS-1 Lunar regolith simulants, 2023 https://doi.org/10.1016/j.pss.2022.105630",
+    "url": "https://doi.org/10.1016/j.pss.2022.105630",
+    "doi": "10.1016/j.pss.2022.105630"
+   }
+  ],
+  "extra_reference": "Long-Fox, J.M., et al. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Adv. Space Res. 71, 5400\u20135412. https://doi.org/10.1016/j.asr.2023.02.034",
+  "feedstock": "Anorthosite, Glass-rich basalt"
+ },
+ "S037": {
+  "simulant_id": "S037",
+  "name": "LMS-1",
+  "institution": "Space Resource Technologies",
+  "type": "Mare",
+  "release_date": "2020",
+  "availability": "Available",
+  "lunar_sample_reference": "Average lunar maria",
+  "physical": {
+   "bulk_density": "1.65",
+   "specific_gravity": 3.0,
+   "particle_size_d50": 138.86,
+   "cohesion": "0.393",
+   "friction_angle": "34.84",
+   "nasa_fom_score": 1.5
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 42.81
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 4.62
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 14.13
+   },
+   {
+    "name": "Cr2O3",
+    "wt_pct": 0.21
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 7.87
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 18.89
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.15
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 5.94
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 4.92
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.57
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.23
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 0.56
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Pyroxene",
+    "pct": 32.8
+   },
+   {
+    "name": "Olivine",
+    "pct": 11.1
+   },
+   {
+    "name": "Basaltic Glass",
+    "pct": 24.5
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 19.8
+   },
+   {
+    "name": "Basalt",
+    "pct": 7.5
+   },
+   {
+    "name": "Ilmenite",
+    "pct": 4.3
+   },
+   {
+    "name": "Bronzite",
+    "pct": 32.8
+   },
+   {
+    "name": "Glass-rich Basalt",
+    "pct": 32.0
+   },
+   {
+    "name": "Anorthosite",
+    "pct": 19.8
+   }
+  ],
+  "oxide_sum": 100.34,
+  "mineral_sum": 184.6,
+  "references_in_db": [
+   {
+    "id": "R034",
+    "type": "usage",
+    "text": "Long-Fox, J., Landsman, Z., Easter, P., Millwater, C., & Britt, D. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Advances in Space Research, 71(12), 5400-5412.",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R085",
+    "type": "composition",
+    "text": "Yin Kexin, Cheng Zhichao, Shear properties of LHS-1 and LMS-1 Lunar regolith simulants, 2023 https://doi.org/10.1016/j.pss.2022.105630",
+    "url": "https://doi.org/10.1016/j.pss.2022.105630",
+    "doi": "10.1016/j.pss.2022.105630"
+   }
+  ],
+  "extra_reference": "Long-Fox, J.M., et al. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Adv. Space Res. 71, 5400\u20135412. https://doi.org/10.1016/j.asr.2023.02.034",
+  "feedstock": "Pyroxene, Glass-rich basalt, Anorthosite, Olivine"
+ },
+ "S040": {
+  "simulant_id": "S040",
+  "name": "LX-M100",
+  "institution": "TU Berlin",
+  "type": "Mare",
+  "release_date": "2025",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Mare",
+  "physical": {
+   "bulk_density": "1.33",
+   "density_g_cm3": 2.86,
+   "particle_size_d50": 63.7,
+   "particle_size_distribution": "<45-2000 \u00b5m",
+   "friction_angle": "46.2"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 49.96
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.33
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 13.98
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 10.23
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.2
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 8.18
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 7.88
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 3.41
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 1.85
+   },
+   {
+    "name": "Cr2O3",
+    "wt_pct": 0.04
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.56
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Magnetite",
+    "pct": 5.0
+   },
+   {
+    "name": "Olivine",
+    "pct": 15.0
+   },
+   {
+    "name": "Augite",
+    "pct": 24.0
+   },
+   {
+    "name": "Zeolite",
+    "pct": 1.0
+   },
+   {
+    "name": "Analcime",
+    "pct": 3.0
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 31.0
+   },
+   {
+    "name": "Anorthoclase",
+    "pct": 17.0
+   }
+  ],
+  "oxide_sum": 98.62,
+  "mineral_sum": 96.0,
+  "references_in_db": [
+   {
+    "id": "R063",
+    "type": "usage",
+    "text": "Patzwald, J., Kleba-Ehrhardt, R., Schiperski, F., Griemsmann, T., Linke, S., Neumann, T., Overmeyer, L., Stoll, E., & Karl, D. (2025). Properties of novel LX lunar regolith simulant system - The base simulants: Part 1. Acta Astronautica, 231, 200-222.",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R104",
+    "type": null,
+    "text": "Properties of novel LX lunar regolith simulant system \u2014 Part 1",
+    "url": null,
+    "doi": "10.1016/j.actaastro.2025.02.030"
+   }
+  ],
+  "extra_reference": "Patzwald, J., et al. (2025). Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1. Acta Astronautica 231, 200\u2013222. https://doi.org/10.1016/j.actaastro.2025.02.030",
+  "feedstock": "Basalt"
+ },
+ "S041": {
+  "simulant_id": "S041",
+  "name": "LX-T100",
+  "institution": "TU Berlin",
+  "type": "Highlands",
+  "release_date": "2025",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Highlands",
+  "physical": {
+   "bulk_density": "1.35",
+   "density_g_cm3": 2.73,
+   "particle_size_d50": 73.5,
+   "particle_size_distribution": "<45-2000 \u00b5m",
+   "friction_angle": "46.2"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 49.76
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.09
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 31.39
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 0.57
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 0.22
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 15.21
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.34
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.15
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.01
+   },
+   {
+    "name": "Cr2O3",
+    "wt_pct": 0.01
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.01
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 0.66
+   },
+   {
+    "name": "Sum",
+    "wt_pct": 100.05
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Quartz",
+    "pct": 3.0
+   },
+   {
+    "name": "Labradorite",
+    "pct": 53.0
+   },
+   {
+    "name": "Bytownite",
+    "pct": 40.0
+   },
+   {
+    "name": "Clinochlore",
+    "pct": 2.0
+   },
+   {
+    "name": "Biotite",
+    "pct": 2.0
+   }
+  ],
+  "oxide_sum": 99.76,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R064",
+    "type": "usage",
+    "text": "Patzwald, J., Kleba-Ehrhardt, R., Schiperski, F., Griemsmann, T., Linke, S., Neumann, T., Overmeyer, L., Stoll, E., & Karl, D. (2025). Properties of novel LX lunar regolith simulant system - The base simulants: Part 1. Acta Astronautica, 231, 200-222.",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R105",
+    "type": null,
+    "text": "Properties of novel LX lunar regolith simulant system \u2014 Part 1",
+    "url": null,
+    "doi": "10.1016/j.actaastro.2025.02.030"
+   }
+  ],
+  "extra_reference": "Patzwald, J., et al. (2025). Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1. Acta Astronautica 231, 200\u2013222. https://doi.org/10.1016/j.actaastro.2025.02.030",
+  "feedstock": "Anorthosite"
+ },
+ "S043": {
+  "simulant_id": "S043",
+  "name": "MLS-1",
+  "institution": "Univ. of Minnesota",
+  "type": "Mare",
+  "release_date": "1990",
+  "availability": "Production stopped",
+  "lunar_sample_reference": "Apollo 11",
+  "physical": {
+   "bulk_density": "1.84",
+   "specific_gravity": 1.59,
+   "particle_size_d50": 197.6,
+   "particle_size_distribution": "ground into a Particle Size Distribution (PSD) to resemble lunar soil",
+   "cohesion": "0.8",
+   "friction_angle": "51.85",
+   "ti_content_percent": 6.8
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 43.9
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 13.7
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 6.3
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 16.3
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 6.2
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 11.1
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.2
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.2
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Plagioclase",
+    "pct": 46.0
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 33.0
+   },
+   {
+    "name": "Glass",
+    "pct": 14.0
+   }
+  ],
+  "oxide_sum": 99.9,
+  "mineral_sum": 93.0,
+  "references_in_db": [
+   {
+    "id": "R038",
+    "type": "usage",
+    "text": "Weiblen, P., & Gordon, K. (1988). Characteristics of a simulant for lunar surface materials. In Second Conference on Lunar Bases and Space Activities of the 21st Century (p. 254).",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R090",
+    "type": "composition,geotechnical",
+    "text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "url": "https://ntrs.nasa.gov/citations/20240011783",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Weiblen, P.W., Murawa, M.J., Reid, K.J. (1990). Preparation of simulants for lunar surface materials. ASCE, 98\u2013106.",
+  "feedstock": "Basalt hornfels"
+ },
+ "S045": {
+  "simulant_id": "S045",
+  "name": "NAO-1",
+  "institution": "National Astronomical Observatories",
+  "type": "Highlands",
+  "release_date": "2008",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Highlands",
+  "physical": {
+   "bulk_density": "1.93",
+   "specific_gravity": 2.92,
+   "cohesion": "95.3",
+   "friction_angle": "46.57"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 43.83
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 25.79
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 15.12
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.77
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 2.62
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 3.52
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.09
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 4.93
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 1.41
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.47
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.08
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Pyroxene + Hornblende",
+    "pct": 19.2
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 60.0
+   },
+   {
+    "name": "Opaque + Glass",
+    "pct": 20.8
+   }
+  ],
+  "oxide_sum": 98.63,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R039",
+    "type": "usage",
+    "text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "url": "https://doi.org/10.3389/fspas.2021.747821",
+    "doi": "10.3389/fspas.2021.747821"
+   },
+   {
+    "id": "R095",
+    "type": "composition",
+    "text": "Yongquan Li, Jianzhong Liu, NAO-1: Lunar Highland Soil Simulant Developed in China, 2009 https://doi.org/10.1061/(ASCE)0893-1321(2009)22:1(53)",
+    "url": "https://doi.org/10.1061/(ASCE",
+    "doi": "10.1061/(ASCE"
+   }
+  ],
+  "extra_reference": "Li, Y., et al. (2009). NAO-1: Lunar highland soil simulant developed in China. J. Aerosp. Eng. 22(1), 53\u201357. https://doi.org/10.1061/(ASCE)0893-1321(2009)22:1(53)",
+  "feedstock": "Gabbro from Tibet"
+ },
+ "S047": {
+  "simulant_id": "S047",
+  "name": "NU-LHT",
+  "institution": "NASA-MSFC and USGS\r",
+  "type": "Highlands",
+  "release_date": "2007",
+  "availability": "Limited Stock",
+  "lunar_sample_reference": "Apollo 16",
+  "physical": {
+   "glass_content_percent": 40.0
+  },
+  "oxides_in_db": [],
+  "minerals_in_db": [
+   {
+    "name": "Magnetite",
+    "pct": 0.7
+   },
+   {
+    "name": "Glass",
+    "pct": 19.7
+   }
+  ],
+  "oxide_sum": 0,
+  "mineral_sum": 20.4,
+  "references_in_db": [
+   {
+    "id": "R041",
+    "type": "usage",
+    "text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "url": "https://doi.org/10.3389/fspas.2021.747821",
+    "doi": "10.3389/fspas.2021.747821"
+   }
+  ],
+  "extra_reference": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The Potential for Lunar and Martian Regolith Simulants to Sustain Plant Growth: A Multidisciplinary Overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+  "feedstock": "Compound feedstock (multiple components): Stillwater mine\n(MT), norite,\nanorthosite; Twin\nSisters dunite"
+ },
+ "S049": {
+  "simulant_id": "S049",
+  "name": "NU-LHT-1M",
+  "institution": "NASA / USGS",
+  "type": "Highlands",
+  "release_date": "2007",
+  "availability": "Limited Stock",
+  "lunar_sample_reference": "Apollo 16",
+  "physical": {
+   "particle_size_distribution": "<1000 \u00b5m",
+   "glass_content_percent": 40.0
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.62
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.33
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 24.4
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 3.3
+   },
+   {
+    "name": "Fe2O3T",
+    "wt_pct": 4.79
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 8.5
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 13.1
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 1.43
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.08
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Plagioclase",
+    "pct": 54.0
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 13.0
+   },
+   {
+    "name": "Olivine",
+    "pct": 5.0
+   },
+   {
+    "name": "Glass",
+    "pct": 10.0
+   },
+   {
+    "name": "Agglutinate",
+    "pct": 29.0
+   },
+   {
+    "name": "Orthopyroxene",
+    "pct": null
+   },
+   {
+    "name": "Clinopyroxene",
+    "pct": null
+   },
+   {
+    "name": "Ilmenite",
+    "pct": null
+   },
+   {
+    "name": "Chromite",
+    "pct": null
+   },
+   {
+    "name": "Albite",
+    "pct": null
+   },
+   {
+    "name": "Quartz",
+    "pct": null
+   },
+   {
+    "name": "Amphibole",
+    "pct": null
+   },
+   {
+    "name": "Talc",
+    "pct": null
+   },
+   {
+    "name": "Carbonate",
+    "pct": null
+   }
+  ],
+  "oxide_sum": 103.55,
+  "mineral_sum": 111.0,
+  "references_in_db": [
+   {
+    "id": "R042",
+    "type": "usage",
+    "text": "Stoeser, D., Rickman, D., & Wilson, S. (2011). Design and specifications for the highland regolith prototype simulants NU-LHT-1M and -2M (NASA/TM-2010-216438, pp. 1-13).",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Stoeser, D.B., et al. (2010). Design and Specifications for the Highland Regolith Prototype Simulants NU-LHT-1M and -2M. NASA/TM-2010-216438.",
+  "feedstock": "Stillwater anorthosite, pseudo-agglutinates, glass"
+ },
+ "S051": {
+  "simulant_id": "S051",
+  "name": "NU-LHT-2M",
+  "institution": "NASA / USGS",
+  "type": "Highlands",
+  "release_date": "2008",
+  "availability": "Limited Stock",
+  "lunar_sample_reference": "Apollo 16",
+  "physical": {
+   "bulk_density": "1.715",
+   "specific_gravity": 2.9319,
+   "particle_size_d50": 125.7,
+   "friction_angle": "39.54",
+   "glass_content_percent": 40.0
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 45.3
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 23.7
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 14.2
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.4
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 3.7
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 8.4
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 1.5
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.1
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.09
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Plagioclase",
+    "pct": 54.9
+   },
+   {
+    "name": "Agglutinates",
+    "pct": 29.0
+   },
+   {
+    "name": "Glass",
+    "pct": 7.2
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 4.2
+   },
+   {
+    "name": "Olivine",
+    "pct": 9.5
+   },
+   {
+    "name": "Ilmenite",
+    "pct": 0.2
+   },
+   {
+    "name": "Albite",
+    "pct": null
+   },
+   {
+    "name": "Anorthite",
+    "pct": null
+   },
+   {
+    "name": "Apatite",
+    "pct": null
+   },
+   {
+    "name": "Chromite",
+    "pct": null
+   },
+   {
+    "name": "Clino hypersthene",
+    "pct": null
+   },
+   {
+    "name": "Clinopyroxene",
+    "pct": null
+   },
+   {
+    "name": "Diopside",
+    "pct": null
+   },
+   {
+    "name": "Orthopyroxene",
+    "pct": null
+   },
+   {
+    "name": "Pyrite",
+    "pct": null
+   },
+   {
+    "name": "Quartz",
+    "pct": null
+   }
+  ],
+  "oxide_sum": 97.39,
+  "mineral_sum": 105.0,
+  "references_in_db": [
+   {
+    "id": "R043",
+    "type": "usage",
+    "text": "Stoeser, D., Rickman, D., & Wilson, S. (2011). Design and specifications for the highland regolith prototype simulants NU-LHT-1M and -2M (NASA/TM-2010-216438, pp. 1-13).",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Zeng, X., et al. (2010). Geotechnical properties of NT-LHT-2M lunar highland simulant. J. Aerosp. Eng. 23 (4) 213\u2013218. https://doi.org/10.1061/(ASCE)AS.1943-5525.0000026",
+  "feedstock": "Stillwater anorthosite, pseudo-agglutinates, glass"
+ },
+ "S052": {
+  "simulant_id": "S052",
+  "name": "NUW-LHT-5M",
+  "institution": "NASA / Washington Mills",
+  "type": "Highlands",
+  "release_date": "2024",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Apollo 16",
+  "physical": {
+   "glass_content_percent": 40.0
+  },
+  "oxides_in_db": [],
+  "minerals_in_db": [
+   {
+    "name": "Crystalline",
+    "pct": 60.0
+   },
+   {
+    "name": "Glass",
+    "pct": 40.0
+   }
+  ],
+  "oxide_sum": 0,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R059",
+    "type": "usage",
+    "text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Rickman, D.L., et al. (2024). Characterization of NUW-LHT-5m, A Lunar Highland Simulant. Technical Publication (20240007991).",
+  "feedstock": "Stillwater anorthosite and norite, synthetic glass"
+ },
+ "S053": {
+  "simulant_id": "S053",
+  "name": "OB-1",
+  "institution": "Deltion / EVC / NORCAT",
+  "type": "Highlands",
+  "release_date": "2007",
+  "availability": "Limited Stock",
+  "lunar_sample_reference": "Apollo 16",
+  "physical": {
+   "glass_content_percent": 42.0
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 49.7
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.5
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 16.8
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 11.8
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 5.8
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 9.7
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.5
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.7
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Magnetite",
+    "pct": 0.3
+   },
+   {
+    "name": "Olivine",
+    "pct": 0.04
+   },
+   {
+    "name": "Clinopyroxene",
+    "pct": 0.1
+   },
+   {
+    "name": "Quartz",
+    "pct": 0.3
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 43.3
+   },
+   {
+    "name": "Smectite",
+    "pct": 0.5
+   },
+   {
+    "name": "Saponite",
+    "pct": 0.5
+   },
+   {
+    "name": "Undifferentiated",
+    "pct": 1.9
+   },
+   {
+    "name": "Plagioclase Glass",
+    "pct": 2.1
+   },
+   {
+    "name": "Glass",
+    "pct": 53.0
+   }
+  ],
+  "oxide_sum": 98.5,
+  "mineral_sum": 102.04,
+  "references_in_db": [
+   {
+    "id": "R044",
+    "type": "composition",
+    "text": "Battler, M. M., & Spray, J. G. (2009). The Shawmere anorthosite and OB-1 as lunar highland regolith simulants. Planetary and Space Science, 57(14-15), 2128-2131. https://doi.org/10.1016/j.pss.2009.09.003",
+    "url": "https://doi.org/10.1016/j.pss.2009.09.003",
+    "doi": "10.1016/j.pss.2009.09.003"
+   },
+   {
+    "id": "R045",
+    "type": "usage",
+    "text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+    "url": "https://doi.org/10.3389/fspas.2021.747821",
+    "doi": "10.3389/fspas.2021.747821"
+   }
+  ],
+  "extra_reference": "Battler, M.M., Spray, J.G. (2009). The Shawmere anorthosite and OB-1 as lunar highland regolith simulants. Planet. Space Sci. 57, 2128-2131. https://doi.org/10.1016/j.pss.2009.09.003",
+  "feedstock": "Shawmere Anorthosite, Olivine slag glass"
+ },
+ "S054": {
+  "simulant_id": "S054",
+  "name": "OB-1A",
+  "institution": "Deltion",
+  "type": "Highlands",
+  "release_date": "2008",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Apollo 16",
+  "physical": {
+   "bulk_density": "1.57",
+   "specific_gravity": 1.51,
+   "particle_size_d50": 138.5,
+   "cohesion": "15.0",
+   "friction_angle": "35.0",
+   "glass_content_percent": 40.0
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 48.3
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 16.3
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 11.0
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.5
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 11.8
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 5.8
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.5
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.7
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Plagioclase",
+    "pct": 46.2
+   },
+   {
+    "name": "Glass",
+    "pct": 45.5
+   },
+   {
+    "name": "Olivine",
+    "pct": 5.6
+   }
+  ],
+  "oxide_sum": 97.9,
+  "mineral_sum": 97.3,
+  "references_in_db": [
+   {
+    "id": "R060",
+    "type": "usage",
+    "text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R092",
+    "type": "composition,geotechnical",
+    "text": "ARES | Exploration Science Projects | Lunar Regolith Simulants | OB-1, 2010 https://ares.jsc.nasa.gov/projects/simulants/ob-1.html",
+    "url": "https://ares.jsc.nasa.gov/projects/simulants/ob-1.html",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Schrader, C.M., et al. (2010). Lunar Regolith Simulant User's Guide. NASA/TM-2010-216446.",
+  "feedstock": "Shawmere Anorthosite, Olivine slag glass"
+ },
+ "S058": {
+  "simulant_id": "S058",
+  "name": "OPRH3N",
+  "institution": "Off Planet Research",
+  "type": "Highlands",
+  "release_date": "2010",
+  "availability": "Available",
+  "lunar_sample_reference": "Farside lunar highlands",
+  "physical": {
+   "bulk_density": "1.41",
+   "particle_size_d50": 36.2,
+   "cohesion": "12.0",
+   "friction_angle": "36.0"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 46.0
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.5
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 25.4
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 4.7
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 2.2
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 16.9
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.3
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.0
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 100.0,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R061",
+    "type": "usage",
+    "text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R093",
+    "type": "composition,geotechnical",
+    "text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "url": "https://ntrs.nasa.gov/citations/20240011783",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Martin, A., & Wagoner, C. (2022). JHU-APL LSII REPORT: 2022 Lunar Simulant Assessment.",
+  "feedstock": "Anorthosite, Basaltic cinder"
+ },
+ "S060": {
+  "simulant_id": "S060",
+  "name": "OPRL2N",
+  "institution": "Off Planet Research",
+  "type": "Mare",
+  "release_date": "2010",
+  "availability": "Available",
+  "lunar_sample_reference": "High-Ti Mare",
+  "physical": {
+   "bulk_density": "1.43",
+   "specific_gravity": 1.31,
+   "particle_size_d50": 36.5,
+   "cohesion": "7.0",
+   "friction_angle": "40.0"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 46.2
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 5.5
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 16.6
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 12.9
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 2.7
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 12.9
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 3.2
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.0
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 100.0,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R062",
+    "type": "usage",
+    "text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R094",
+    "type": "composition,geotechnical",
+    "text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "url": "https://ntrs.nasa.gov/citations/20240011783",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Martin, A., & Wagoner, C. (2022). JHU-APL LSII REPORT: 2022 Lunar Simulant Assessment.",
+  "feedstock": "Basaltic cinder, Anorthosite"
+ },
+ "S063": {
+  "simulant_id": "S063",
+  "name": "TBG-1",
+  "institution": "Turkish Space Agency",
+  "type": "General",
+  "release_date": "2022.0",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "General",
+  "physical": {},
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 49.73
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.042
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 16.043
+   },
+   {
+    "name": "Cr2O3",
+    "wt_pct": 0.084
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 8.85
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.183
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 8.874
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 9.124
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 3.296
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.65
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.18
+   },
+   {
+    "name": "S",
+    "wt_pct": 0.649
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 0.932
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 99.71,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R048",
+    "type": "usage",
+    "text": "Toklu, Y. C., Calis Acikbas, N., Acikbas, G., Erdem Cercevik, A., & Akpinar, P. (2022). Turkish lunar regolith simulant TBG-1. Earth Space, 956-965.",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Toklu, Y.C., Akpinar, P. (2022). Lunar soils, simulants and lunar construction materials: An overview. Adv. Space Res. 70, 762-779. https://doi.org/10.1016/j.asr.2022.05.017",
+  "feedstock": "Terrestrial regolith"
+ },
+ "S064": {
+  "simulant_id": "S064",
+  "name": "TJ-1",
+  "institution": "Tongji University",
+  "type": "Mare",
+  "release_date": "2012",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Apollo 14",
+  "physical": {
+   "bulk_density": "1.55",
+   "specific_gravity": 2.9,
+   "cohesion": "1.0",
+   "friction_angle": "45.0"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.7
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.29
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 16.2
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 10.75
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 5.04
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 8.21
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.0
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 4.92
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.58
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.15
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 97.84,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R049",
+    "type": "composition",
+    "text": "Jiang, M. J., Li, L. Q., & Sun, Y. G. (2012). Properties of TJ-1 lunar soil simulant. Journal of Aerospace Engineering, 25(3), 463-469.",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Jiang, M., et al. (2012). Properties of TJ-1 lunar soil simulant. J. Aerosp. Eng. 25(3), 463\u2013469. https://doi.org/10.1061/(ASCE)AS.1943-5525.0000129",
+  "feedstock": "Volcanic ash"
+ },
+ "S065": {
+  "simulant_id": "S065",
+  "name": "TLH-0",
+  "institution": "Hispansion",
+  "type": "Highlands",
+  "release_date": null,
+  "availability": "Available",
+  "lunar_sample_reference": "Apollo 16",
+  "physical": {
+   "bulk_density": "1.67",
+   "specific_gravity": 1.67,
+   "density_g_cm3": 1.67,
+   "particle_size_d50": 137.6,
+   "cohesion": "2.369",
+   "friction_angle": "45.342",
+   "glass_content_percent": 19.2,
+   "nasa_fom_score": 91.7,
+   "ti_content_percent": 0.82
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 46.43
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.82
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 25.06
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 6.78
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 5.09
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 14.13
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 0.0
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.67
+   },
+   {
+    "name": "SrO",
+    "wt_pct": 0.25
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.14
+   },
+   {
+    "name": "Cr2O3",
+    "wt_pct": 0.11
+   },
+   {
+    "name": "NiO",
+    "wt_pct": 0.01
+   },
+   {
+    "name": "ZnO",
+    "wt_pct": 0.19
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Anorthite",
+    "pct": 57.0
+   },
+   {
+    "name": "Augite",
+    "pct": 5.7
+   },
+   {
+    "name": "Forsterite",
+    "pct": 1.8
+   },
+   {
+    "name": "Lizardite",
+    "pct": 6.5
+   },
+   {
+    "name": "Analcime",
+    "pct": 2.6
+   },
+   {
+    "name": "Smectite",
+    "pct": 0.5
+   },
+   {
+    "name": "Illite",
+    "pct": 1.0
+   },
+   {
+    "name": "Quartz",
+    "pct": 1.2
+   },
+   {
+    "name": "Hornblende",
+    "pct": 2.1
+   },
+   {
+    "name": "Glass",
+    "pct": 19.2
+   }
+  ],
+  "oxide_sum": 99.68,
+  "mineral_sum": 97.6,
+  "references_in_db": [
+   {
+    "id": "R050",
+    "type": "usage",
+    "text": "Hispansion. (n.d.). Retrieved from https://www.hispansion.io",
+    "url": "https://www.hispansion.io",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Hispansion. Technical Data Sheet: TLH-0 (TDS-TLH-0-v1.1).",
+  "feedstock": "Anorthosite, Basalt, Altered Peridotite"
+ },
+ "S066": {
+  "simulant_id": "S066",
+  "name": "TLM-0",
+  "institution": "Hispansion",
+  "type": "Mare",
+  "release_date": null,
+  "availability": "Available",
+  "lunar_sample_reference": "Apollo 12/15",
+  "physical": {
+   "bulk_density": "1.52",
+   "specific_gravity": 1.52,
+   "density_g_cm3": 1.52,
+   "particle_size_d50": 48.4,
+   "cohesion": "13.299",
+   "friction_angle": "34.617",
+   "glass_content_percent": 31.4,
+   "nasa_fom_score": 81.8,
+   "ti_content_percent": 0.82
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.33
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.72
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 14.38
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 12.44
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 12.38
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 8.38
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 0.0
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 1.28
+   },
+   {
+    "name": "SrO",
+    "wt_pct": 0.25
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.14
+   },
+   {
+    "name": "Cr2O3",
+    "wt_pct": 0.11
+   },
+   {
+    "name": "NiO",
+    "wt_pct": 0.01
+   },
+   {
+    "name": "ZnO",
+    "wt_pct": 0.19
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Anorthite",
+    "pct": 35.2
+   },
+   {
+    "name": "Augite",
+    "pct": 17.2
+   },
+   {
+    "name": "Enstatite",
+    "pct": 1.9
+   },
+   {
+    "name": "Forsterite",
+    "pct": 2.1
+   },
+   {
+    "name": "Lizardite",
+    "pct": 5.7
+   },
+   {
+    "name": "Analcime",
+    "pct": 3.8
+   },
+   {
+    "name": "Smectite",
+    "pct": 1.2
+   },
+   {
+    "name": "Illite",
+    "pct": 0.6
+   },
+   {
+    "name": "Quartz",
+    "pct": 0.6
+   },
+   {
+    "name": "Hornblende",
+    "pct": 0.3
+   },
+   {
+    "name": "Glass",
+    "pct": 31.4
+   }
+  ],
+  "oxide_sum": 98.61,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R051",
+    "type": "usage",
+    "text": "Hispansion. (n.d.). Retrieved from https://www.hispansion.io",
+    "url": "https://www.hispansion.io",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Hispansion. Technical Data Sheet: TLM-0 (TDS-TLM-0-v1.1).",
+  "feedstock": "Basalt, Anorthosite, Altered Peridotite"
+ },
+ "S067": {
+  "simulant_id": "S067",
+  "name": "TLS-01",
+  "institution": "Space Zab Company",
+  "type": "Mare",
+  "release_date": "2021",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Mare",
+  "physical": {
+   "cohesion": "4.9",
+   "friction_angle": "42.2"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 49.71
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 29.66
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 8.79
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 6.29
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 6.13
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 3.77
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.93
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Plagioclase",
+    "pct": 35.4
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 23.5
+   },
+   {
+    "name": "Ilmenite",
+    "pct": 14.5
+   },
+   {
+    "name": "Quartz",
+    "pct": 20.0
+   }
+  ],
+  "oxide_sum": 106.28,
+  "mineral_sum": 93.4,
+  "references_in_db": [
+   {
+    "id": "R052",
+    "type": "composition",
+    "text": "Seehanam, S., Santironnarong, S., Meesuay, W., Soralump, S., Thowiwat, W., Jitklongsub, S., & Chancharoen, W. (2021). Development and mechanical properties of the first Thailand lunar simulant (TLS-01). In Proceedings of the 2nd Innovation Aviation & Aerospace Industry - International Conference 2021.",
+    "url": null,
+    "doi": null
+   },
+   {
+    "id": "R080",
+    "type": "composition",
+    "text": "Chancharoen Wares, Seehanam Saran, Development and Mechanical properties of the first Thailand lunar regolith simulant (TLS-01), 2021 https://doi.org/10.3390/IAAI-2021-10583",
+    "url": "https://doi.org/10.3390/IAAI-2021-10583",
+    "doi": "10.3390/IAAI-2021-10583"
+   }
+  ],
+  "extra_reference": "Seehanam, S., et al. (2021). Development and Mechanical properties of the first Thailand lunar simulant (TLS-01). sciforum.",
+  "feedstock": "Trad province basalt"
+ },
+ "S069": {
+  "simulant_id": "S069",
+  "name": "TUBS-M",
+  "institution": "TU Braunschweig",
+  "type": "Mare",
+  "release_date": "2020",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Mare",
+  "physical": {
+   "bulk_density": "1.41",
+   "specific_gravity": 2.96,
+   "particle_size_d50": 76.7,
+   "particle_size_distribution": "x_50 = 76.7 to 96.0 \u00b5m",
+   "cohesion": "0.35"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 48.61
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.29
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 13.28
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 10.14
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 8.73
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 8.31
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 3.67
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 1.71
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.18
+   },
+   {
+    "name": "Cr2O3",
+    "wt_pct": 0.04
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 96.96,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R054",
+    "type": "composition",
+    "text": "Linke, S., Windisch, L., Kueter, N., Wanvik, J. E., Voss, A., Stoll, E., Schilde, C., & Kwade, A. (2020). TUBS-M and TUBS-T based modular regolith simulant system for the support of lunar ISRU activities. Planetary and Space Science, 180, 104747. https://doi.org/10.1016/j.pss.2019.104747",
+    "url": "https://doi.org/10.1016/j.pss.2019.104747",
+    "doi": "10.1016/j.pss.2019.104747"
+   }
+  ],
+  "extra_reference": "Linke, S., et al. (2020). TUBS-M and TUBS-T based modular Regolith Simulant System... Planet. Space Sci. 180, 104747. https://doi.org/10.1016/j.pss.2019.104747",
+  "feedstock": "Basalt"
+ },
+ "S070": {
+  "simulant_id": "S070",
+  "name": "TUBS-T",
+  "institution": "TU Braunschweig",
+  "type": "Highlands",
+  "release_date": "2020",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Highlands",
+  "physical": {
+   "bulk_density": "1.33",
+   "specific_gravity": 2.71,
+   "particle_size_d50": 96.0,
+   "cohesion": "0.643"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 48.71
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.12
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 30.33
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 1.05
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 0.57
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 14.57
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 3.05
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.22
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.015
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 98.63,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R055",
+    "type": "composition",
+    "text": "Linke, S., Windisch, L., Kueter, N., Wanvik, J. E., Voss, A., Stoll, E., Schilde, C., & Kwade, A. (2020). TUBS-M and TUBS-T based modular regolith simulant system for the support of lunar ISRU activities. Planetary and Space Science, 180, 104747. https://doi.org/10.1016/j.pss.2019.104747",
+    "url": "https://doi.org/10.1016/j.pss.2019.104747",
+    "doi": "10.1016/j.pss.2019.104747"
+   }
+  ],
+  "extra_reference": "Linke, S., et al. (2020). TUBS-M and TUBS-T based modular Regolith Simulant System... Planet. Space Sci. 180, 104747. https://doi.org/10.1016/j.pss.2019.104747",
+  "feedstock": "Anorthosite"
+ },
+ "S076": {
+  "simulant_id": "S076",
+  "name": "LMS-2",
+  "institution": "Space Resource Technologies",
+  "type": "Mare",
+  "release_date": "2025",
+  "availability": "Available",
+  "lunar_sample_reference": "Average lunar maria",
+  "physical": {
+   "bulk_density": "1.67",
+   "specific_gravity": 1.67,
+   "particle_size_d50": 160.0
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 48.22
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.7
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 12.4
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 8.79
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.06
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 15.97
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 7.65
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 1.73
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.42
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.23
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 0.56
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Bronzite",
+    "pct": 32.8
+   },
+   {
+    "name": "Glass-rich Basalt",
+    "pct": 32.0
+   },
+   {
+    "name": "Anorthosite",
+    "pct": 19.8
+   },
+   {
+    "name": "Olivine",
+    "pct": 11.1
+   },
+   {
+    "name": "Ilmenite",
+    "pct": 4.3
+   }
+  ],
+  "oxide_sum": 98.17,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R115",
+    "type": "report",
+    "text": "2024 Lunar Simulant Assessment",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Space Resource Technologies. LMS-2 Lunar Mare Simulant Fact Sheet 001-14-001-1225.",
+  "feedstock": "{\"Bronzite\": 32.8, \"Glass-rich Basalt\": 32.0, \"Anorthosite\": 19.8, \"Olivine\": 11.1, \"Ilmenite\": 4.3}"
+ },
+ "S077": {
+  "simulant_id": "S077",
+  "name": "LHS-2",
+  "institution": "Space Resource Technologies",
+  "type": "Highlands",
+  "release_date": "2025",
+  "availability": "Available",
+  "lunar_sample_reference": "Average lunar highlands",
+  "physical": {
+   "bulk_density": "1.43",
+   "specific_gravity": 1.43,
+   "particle_size_d50": 100.0,
+   "cohesion": "0.365",
+   "friction_angle": "30.5"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 49.12
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.63
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 26.29
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 3.2
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.06
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 2.86
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 13.52
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.55
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.34
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.17
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 0.41
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Anorthosite",
+    "pct": 74.4
+   },
+   {
+    "name": "Glass-rich Basalt",
+    "pct": 24.7
+   },
+   {
+    "name": "Ilmenite",
+    "pct": 0.4
+   },
+   {
+    "name": "Bronzite",
+    "pct": 0.3
+   },
+   {
+    "name": "Olivine",
+    "pct": 0.2
+   }
+  ],
+  "oxide_sum": 98.74,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R116",
+    "type": "general",
+    "text": "Physicochemical properties of lunar regolith simulant for in situ oxygen production",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Space Resource Technologies. LHS-2 Lunar Highlands Simulant Fact Sheet 001-11-001-1225.",
+  "feedstock": null
+ },
+ "S078": {
+  "simulant_id": "S078",
+  "name": "LHS-2E",
+  "institution": "Space Resource Technologies",
+  "type": "Highlands",
+  "release_date": "2025",
+  "availability": "Available",
+  "lunar_sample_reference": "Average lunar highlands",
+  "physical": {
+   "bulk_density": "1.43",
+   "specific_gravity": 1.43,
+   "particle_size_d50": 68.0,
+   "cohesion": "0.356",
+   "friction_angle": "30.5"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.1
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.46
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 26.35
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 3.44
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.05
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 1.28
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 17.47
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.36
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.51
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.96
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Anorthosite",
+    "pct": 75.0
+   },
+   {
+    "name": "Glass-rich Basalt",
+    "pct": 25.0
+   }
+  ],
+  "oxide_sum": 99.98,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R117",
+    "type": "general",
+    "text": "LHS-2E Lunar Highlands Simulant Fact Sheet",
+    "url": "https://exolithsimulants.com",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Space Resource Technologies. LHS-2E Lunar Highlands Simulant Fact Sheet 001-13-001-1225.",
+  "feedstock": null
+ },
+ "S079": {
+  "simulant_id": "S079",
+  "name": "LSP-2",
+  "institution": "Space Resource Technologies",
+  "type": "Highlands",
+  "release_date": "2025",
+  "availability": "Available",
+  "lunar_sample_reference": "Lunar South Pole",
+  "physical": {
+   "bulk_density": "1.47",
+   "specific_gravity": 1.47,
+   "particle_size_d50": 79.8,
+   "cohesion": "0.324",
+   "friction_angle": "31.7",
+   "glass_content_percent": 10.0
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.13
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.16
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 27.96
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 1.24
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.02
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 0.71
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 17.5
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 4.02
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.42
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.83
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Anorthosite",
+    "pct": 90.0
+   },
+   {
+    "name": "Glass-rich Basalt",
+    "pct": 10.0
+   }
+  ],
+  "oxide_sum": 99.99,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R118",
+    "type": "general",
+    "text": "Physicochemical properties of lunar regolith simulant for in situ oxygen production",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Space Resource Technologies. LSP-2 Lunar South Pole Simulant Fact Sheet 001-12-001-1225.",
+  "feedstock": "{\"Anorthosite\": 90.0, \"Glass-rich Basalt\": 10.0}"
+ },
+ "S081": {
+  "simulant_id": "S081",
+  "name": "JSC-2A",
+  "institution": "NASA / Zybek",
+  "type": "Mare",
+  "release_date": null,
+  "availability": "Production stopped",
+  "lunar_sample_reference": "Apollo 14",
+  "physical": {
+   "particle_size_d50": 45.0,
+   "particle_size_distribution": "2.3-102 \u00b5m"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 43.38
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 18.3
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.32
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 15.02
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.22
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 11.47
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 3.82
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.98
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 3.14
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.69
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Anorthite",
+    "pct": 91.65
+   },
+   {
+    "name": "Forsterite",
+    "pct": 8.35
+   }
+  ],
+  "oxide_sum": 99.34,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R102",
+    "type": null,
+    "text": "Investigation of the sintering and melting of JSC-2A lunar regolith simulant",
+    "url": null,
+    "doi": "10.1016/j.ceramint.2020.02.212"
+   }
+  ],
+  "extra_reference": "Zocca, A., et al. (2020). Investigation of the sintering and melting of JSC-2A lunar regolith simulant. Ceram Int 46, 14097\u201314104. https://doi.org/10.1016/j.ceramint.2020.02.212",
+  "feedstock": "Basaltic ash"
+ },
+ "S089": {
+  "simulant_id": "S089",
+  "name": "NU-LHT-4M",
+  "institution": "NASA / USGS",
+  "type": "Highlands",
+  "release_date": "2020",
+  "availability": "Limited Stock",
+  "lunar_sample_reference": "Apollo 16",
+  "physical": {
+   "bulk_density": "1.56",
+   "particle_size_d50": 106.7,
+   "cohesion": "8.0",
+   "friction_angle": "38.0"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.2
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.4
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 23.5
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 4.3
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 8.7
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 12.8
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 1.5
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.2
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 98.6,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R091",
+    "type": "composition,geotechnical",
+    "text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "url": "https://ntrs.nasa.gov/citations/20240011783",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Stockstill-Cahill, K., et al. (2022). JHU-APL LSII REPORT: 2022 Lunar Simulant Assessment. Johns Hopkins APL.",
+  "feedstock": "Stillwater Anorthosite, Norite, Pseudo-agglutinates"
+ },
+ "S091": {
+  "simulant_id": "S091",
+  "name": "LHS-1D",
+  "institution": "Space Resource Technologies",
+  "type": "Highlands",
+  "release_date": "2021",
+  "availability": "Available",
+  "lunar_sample_reference": "Apollo 16",
+  "physical": {
+   "bulk_density": "0.81",
+   "particle_size_d50": 10.22,
+   "cohesion": "0.205",
+   "friction_angle": "28.62"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 49.12
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.63
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 26.29
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 3.2
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.06
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 2.86
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 13.52
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.55
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.34
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.17
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 0.41
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Anorthosite",
+    "pct": 74.4
+   },
+   {
+    "name": "Glass-rich Basalt",
+    "pct": 24.7
+   },
+   {
+    "name": "Ilmenite",
+    "pct": 0.4
+   },
+   {
+    "name": "Bronzite",
+    "pct": 0.3
+   },
+   {
+    "name": "Olivine",
+    "pct": 0.2
+   }
+  ],
+  "oxide_sum": 98.74,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R126",
+    "type": "general",
+    "text": "Characterization of Lunar Dust Simulants by Automated Particle Analysis using Scanning Electron Microscopy",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Space Resource Technologies. LHS-1D Dust Simulant Fact Sheet. https://exolithsimulants.com/",
+  "feedstock": "Anorthosite, Glass-rich basalt"
+ },
+ "S092": {
+  "simulant_id": "S092",
+  "name": "LHS-1E",
+  "institution": "Space Resource Technologies",
+  "type": "Highlands",
+  "release_date": "2025",
+  "availability": "Available",
+  "lunar_sample_reference": "Average lunar highlands",
+  "physical": {
+   "bulk_density": "1.37",
+   "specific_gravity": 1.37,
+   "particle_size_d50": 80.86,
+   "particle_size_distribution": "0.04 - 1000 \u00b5m",
+   "cohesion": "0.311",
+   "friction_angle": "31.49"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.1
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.46
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 26.35
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 3.44
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.05
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 1.28
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 17.47
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.36
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.51
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.96
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Anorthosite",
+    "pct": 75.0
+   },
+   {
+    "name": "Glass-rich Basalt",
+    "pct": 25.0
+   }
+  ],
+  "oxide_sum": 99.98,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R127",
+    "type": "general",
+    "text": "LHS-1E Lunar Highlands Simulant Fact Sheet",
+    "url": "https://exolithsimulants.com",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Space Resource Technologies. LHS-1E Lunar Highlands Simulant Fact Sheet 003-09-001-1225.",
+  "feedstock": "{\"Anorthosite\": 75.0, \"Glass-rich basalt\": 25.0}"
+ },
+ "S093": {
+  "simulant_id": "S093",
+  "name": "LHS-1-25A",
+  "institution": "Space Resource Technologies",
+  "type": "Highlands",
+  "release_date": null,
+  "availability": "Available",
+  "lunar_sample_reference": "Apollo 16",
+  "physical": {
+   "bulk_density": "1.3",
+   "particle_size_d50": 42.0,
+   "glass_content_percent": 25.0
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 48.0
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.7
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 26.3
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 3.6
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.04
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 1.8
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 16.9
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 0.7
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.6
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.9
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Anorthosite",
+    "pct": 55.8
+   },
+   {
+    "name": "Agglutinates",
+    "pct": 25.0
+   },
+   {
+    "name": "Glass-rich Basalt",
+    "pct": 18.5
+   },
+   {
+    "name": "Ilmenite",
+    "pct": 0.3
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 0.23
+   },
+   {
+    "name": "Olivine",
+    "pct": 0.15
+   }
+  ],
+  "oxide_sum": 99.54,
+  "mineral_sum": 99.98,
+  "references_in_db": [
+   {
+    "id": "R128",
+    "type": "conference",
+    "text": "ESA Planetary Dust Contamination Workshop 2025",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Space Resource Technologies website. https://exolithsimulants.com/",
+  "feedstock": "Anorthosite, Glass-rich basalt, Agglutinates"
+ },
+ "S094": {
+  "simulant_id": "S094",
+  "name": "LMS-1D",
+  "institution": "Space Resource Technologies",
+  "type": "Mare",
+  "release_date": "2021",
+  "availability": "Available",
+  "lunar_sample_reference": "Average lunar maria",
+  "physical": {
+   "bulk_density": "0.89",
+   "particle_size_d50": 6.0,
+   "cohesion": "0.172",
+   "friction_angle": "21.8"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.42
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.68
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 14.02
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 8.74
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.18
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 14.91
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 8.26
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 1.72
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.39
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.2
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 0.48
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Bronzite",
+    "pct": 32.8
+   },
+   {
+    "name": "Glass-rich Basalt",
+    "pct": 32.0
+   },
+   {
+    "name": "Anorthosite",
+    "pct": 19.8
+   },
+   {
+    "name": "Olivine",
+    "pct": 11.1
+   },
+   {
+    "name": "Ilmenite",
+    "pct": 4.3
+   }
+  ],
+  "oxide_sum": 98.52,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R129",
+    "type": "general",
+    "text": "Additive Manufacturing of Lunar Regolith-Stainless Steel Composite Structures",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Space Resource Technologies. LMS-1D Dust Simulant Fact Sheet. https://exolithsimulants.com/",
+  "feedstock": "Pyroxene, Glass-rich basalt, Anorthosite, Olivine"
+ },
+ "S095": {
+  "simulant_id": "S095",
+  "name": "LMS-1E",
+  "institution": "Space Resource Technologies",
+  "type": "Mare",
+  "release_date": "2025",
+  "availability": "Available",
+  "lunar_sample_reference": "Average lunar maria",
+  "physical": {
+   "bulk_density": "1.42",
+   "specific_gravity": 1.42,
+   "density_g_cm3": 2.7,
+   "particle_size_d50": 220.0,
+   "particle_size_distribution": "0.04 - 1000 \u00b5m",
+   "cohesion": "0.324",
+   "friction_angle": "31.7"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.71
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 15.02
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 10.79
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.59
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.19
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 9.39
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 9.9
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.7
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.82
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.66
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 98.77,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R130",
+    "type": "general",
+    "text": "LMS-1E Lunar Mare Simulant Fact Sheet",
+    "url": "https://exolithsimulants.com",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Space Resource Technologies. LMS-1E Lunar Mare Simulant Fact Sheet 001-23-001-1225.",
+  "feedstock": null
+ },
+ "S100": {
+  "simulant_id": "S100",
+  "name": "OPRH4W30",
+  "institution": "Off Planet Research",
+  "type": "Highlands",
+  "release_date": "2010",
+  "availability": "Available",
+  "lunar_sample_reference": "Highlands",
+  "physical": {
+   "particle_size_d50": 46.9
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 48.1
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.2
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 30.3
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 1.7
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 1.1
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 15.2
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.3
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.1
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 99.0,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R132",
+    "type": "general",
+    "text": "Lunar Regolith Simulant User's Guide Revision A",
+    "url": "https://ntrs.nasa.gov/citations/20240013614",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Slabic, A., et al. (2024). Lunar Regolith Simulant User's Guide Revision A. NASA/TM-20240011783.",
+  "feedstock": "Anorthosite, Basaltic cinder, Agglutinates"
+ },
+ "S103": {
+  "simulant_id": "S103",
+  "name": "CSM-LHT-1",
+  "institution": "Colorado School of Mines",
+  "type": "Highlands",
+  "release_date": "2021",
+  "availability": "Available",
+  "lunar_sample_reference": "Apollo 14 soils",
+  "physical": {
+   "bulk_density": "1.7",
+   "specific_gravity": 1.5,
+   "particle_size_d50": 122.3,
+   "cohesion": "12.0",
+   "friction_angle": "32.0"
+  },
+  "oxides_in_db": [
+   {
+    "name": "Al2O3",
+    "wt_pct": 22.9
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 15.9
+   },
+   {
+    "name": "SiO2",
+    "wt_pct": 48.0
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.9
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 5.7
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 1.9
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.6
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.0
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Plagioclase",
+    "pct": 100.0
+   }
+  ],
+  "oxide_sum": 99.9,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R088",
+    "type": "composition,geotechnical",
+    "text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "url": "https://ntrs.nasa.gov/citations/20240011783",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Martin, A., & Wagoner, C. (2022). JHU-APL LSII REPORT: 2022 Lunar Simulant Assessment.",
+  "feedstock": "Anorthosite, Basaltic cinder"
+ },
+ "S105": {
+  "simulant_id": "S105",
+  "name": "CSM-LMT-1",
+  "institution": "Colorado School of Mines",
+  "type": "Mare",
+  "release_date": "2021",
+  "availability": "Available",
+  "lunar_sample_reference": "Low-to-moderate-Ti Mare",
+  "physical": {
+   "bulk_density": "1.63",
+   "particle_size_d50": 140.5,
+   "cohesion": "12.0",
+   "friction_angle": "36.0"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 46.9
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 5.1
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 15.1
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 14.0
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 4.1
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 12.2
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.7
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.0
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 100.1,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R089",
+    "type": "composition,geotechnical",
+    "text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+    "url": "https://ntrs.nasa.gov/citations/20240011783",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Martin, A., & Wagoner, C. (2022). JHU-APL LSII REPORT: 2022 Lunar Simulant Assessment.",
+  "feedstock": "Basaltic cinder"
+ },
+ "S108": {
+  "simulant_id": "S108",
+  "name": "LMA-1",
+  "institution": "Outward Technologies",
+  "type": "Mare",
+  "release_date": "2020",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Apollo mare",
+  "physical": {},
+  "oxides_in_db": [],
+  "minerals_in_db": [
+   {
+    "name": "Plagioclase",
+    "pct": 76.0
+   },
+   {
+    "name": "Pyroxene",
+    "pct": 24.0
+   }
+  ],
+  "oxide_sum": 0,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R137",
+    "type": "report",
+    "text": "2024 Lunar Simulant Assessment",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Denevi, B. W., et al. (2020). The spectral properties of lunar agglutinates. 51st LPSC, Abst. 2326.",
+  "feedstock": "Plagioclase, Pyroxene"
+ },
+ "S109": {
+  "simulant_id": "S109",
+  "name": "LHA-1",
+  "institution": "Outward Technologies",
+  "type": "Highlands",
+  "release_date": "2020",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Apollo highland",
+  "physical": {},
+  "oxides_in_db": [],
+  "minerals_in_db": [
+   {
+    "name": "Plagioclase",
+    "pct": 100.0
+   }
+  ],
+  "oxide_sum": 0,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R138",
+    "type": "report",
+    "text": "2024 Lunar Simulant Assessment",
+    "url": null,
+    "doi": null
+   }
+  ],
+  "extra_reference": "Denevi, B. W., et al. (2020). The spectral properties of lunar agglutinates. 51st LPSC, Abst. 2326.",
+  "feedstock": "Plagioclase"
+ },
+ "S117": {
+  "simulant_id": "S117",
+  "name": "GSC-1",
+  "institution": "Goddard Space Center",
+  "type": "Mare",
+  "release_date": "2008",
+  "availability": "Production stopped",
+  "lunar_sample_reference": "Low-Ti Mare",
+  "physical": {},
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 45.6
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.7
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 12.3
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.2
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 8.2
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 10.6
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 14.6
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.9
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.7
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 2.0
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 99.8,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R144",
+    "type": "review",
+    "text": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+    "url": "https://doi.org/10.1016/j.bgtech.2025.100212",
+    "doi": "10.1016/j.bgtech.2025.100212"
+   }
+  ],
+  "extra_reference": "Duri, L. G., et al. (2022). The Potential for Lunar and Martian Regolith Simulants... Front. Astron. Space Sci. 8. https://doi.org/10.3389/fspas.2021.747821",
+  "feedstock": null
+ },
+ "S120": {
+  "simulant_id": "S120",
+  "name": "PolyU-1",
+  "institution": "Hong Kong Polytechnic University",
+  "type": "Mare",
+  "release_date": "2024",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Chang'e-5",
+  "physical": {
+   "bulk_density": "1.22",
+   "specific_gravity": 3.17,
+   "density_g_cm3": 3.17,
+   "particle_size_d50": 40.4,
+   "particle_size_distribution": "4.84-432.27 \u00b5m",
+   "cohesion": "6.75",
+   "friction_angle": "38.0"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 41.34
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 23.16
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 10.77
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 11.14
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 5.06
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 6.59
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 0.53
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.08
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.26
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.29
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Pyroxene",
+    "pct": 41.7
+   },
+   {
+    "name": "Plagioclase",
+    "pct": 32.4
+   },
+   {
+    "name": "Olivine",
+    "pct": 9.1
+   },
+   {
+    "name": "Ilmenite",
+    "pct": 6.2
+   },
+   {
+    "name": "Glass",
+    "pct": 5.0
+   },
+   {
+    "name": "Quartz",
+    "pct": 2.1
+   },
+   {
+    "name": "Hematite",
+    "pct": 3.4
+   },
+   {
+    "name": "Anorthite",
+    "pct": null
+   }
+  ],
+  "oxide_sum": 99.22,
+  "mineral_sum": 99.9,
+  "references_in_db": [
+   {
+    "id": "R078",
+    "type": "composition",
+    "text": "Zou Yuan, Wu Huangyu, Development and characterization of the PolyU-1 lunar regolith simulant based on Chang e-5 returned samples, 2024 https://doi.org/10.1016/j.ijmst.2024.08.006",
+    "url": "https://doi.org/10.1016/j.ijmst.2024.08.006",
+    "doi": "10.1016/j.ijmst.2024.08.006"
+   },
+   {
+    "id": "R103",
+    "type": null,
+    "text": "Development and characterization of the PolyU-1 lunar regolith simulant based on Chang'e-5 returned samples",
+    "url": null,
+    "doi": "10.1016/j.ijmst.2024.08.006"
+   }
+  ],
+  "extra_reference": "Zou, Y., et al. (2024). Development and characterization of the PolyU-1 lunar regolith simulant based on Chang\u2019e-5 returned samples. Int. J. Min. Sci. Technol. 34, 1317\u20131326. https://doi.org/10.1016/j.ijmst.2024.08.006",
+  "feedstock": "Basalt, Hedenbergite, Anorthite, Forsterite, Ilmenite, China tektite"
+ },
+ "S121": {
+  "simulant_id": "S121",
+  "name": "BH-2",
+  "institution": "Beihang University",
+  "type": "Highlands",
+  "release_date": "2021",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Apollo 17",
+  "physical": {
+   "bulk_density": "1.72",
+   "cohesion": "6.477",
+   "friction_angle": "33.92"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 43.3
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 16.5
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 8.8
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.68
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 12.26
+   },
+   {
+    "name": "FeOT",
+    "wt_pct": 7.92
+   },
+   {
+    "name": "Na2O+K2O",
+    "wt_pct": 6.43
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 97.89,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R147",
+    "type": "review",
+    "text": "A Review on Geopolymer Technology for Lunar Base Construction",
+    "url": "https://doi.org/10.3390/ma15134516",
+    "doi": "10.3390/ma15134516"
+   }
+  ],
+  "extra_reference": "Zhou, S., et al. (2021). Preparation and evaluation of geopolymer based on BH-2 lunar regolith simulant... Acta Astronaut. 189, 90\u201398. https://doi.org/10.1016/j.actaastro.2021.08.039",
+  "feedstock": "Volcanic scoria cones"
+ },
+ "S122": {
+  "simulant_id": "S122",
+  "name": "TJ-2",
+  "institution": "Tongji University",
+  "type": "Mare",
+  "release_date": "2010",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Mare",
+  "physical": {
+   "specific_gravity": 2.7
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.7
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.29
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 16.2
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 10.75
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 5.04
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 8.21
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.0
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 4.92
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.58
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.15
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 8.3
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 106.14,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R148",
+    "type": "composition",
+    "text": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+    "url": "https://doi.org/10.1016/j.actaastro.2025.02.030",
+    "doi": "10.1016/j.actaastro.2025.02.030"
+   }
+  ],
+  "extra_reference": "Jiang, M., et al. (2010). A new lunar soil simulant in China. Earth and Space 2010. https://doi.org/10.1061/41096(366)347",
+  "feedstock": "Volcanic ash, Silicon carbide"
+ },
+ "S131": {
+  "simulant_id": "S131",
+  "name": "LBD",
+  "institution": null,
+  "type": "General",
+  "release_date": null,
+  "availability": "Unavailable",
+  "lunar_sample_reference": "General",
+  "physical": {
+   "bulk_density": "1.67",
+   "particle_size_d50": 137.6,
+   "cohesion": "2.369",
+   "friction_angle": "45.342"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 46.43
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.82
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 25.06
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 6.78
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 5.09
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 14.13
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": null
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.67
+   },
+   {
+    "name": "SrO",
+    "wt_pct": 0.25
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.14
+   },
+   {
+    "name": "Cr2O3",
+    "wt_pct": 0.11
+   },
+   {
+    "name": "NiO",
+    "wt_pct": 0.01
+   },
+   {
+    "name": "ZnO",
+    "wt_pct": 0.19
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Anorthite",
+    "pct": 57.0
+   },
+   {
+    "name": "Augite",
+    "pct": 5.7
+   },
+   {
+    "name": "Forsterite",
+    "pct": 1.8
+   },
+   {
+    "name": "Lizardite",
+    "pct": 6.5
+   },
+   {
+    "name": "Analcime",
+    "pct": 2.6
+   },
+   {
+    "name": "Smectite",
+    "pct": 0.5
+   },
+   {
+    "name": "Illite",
+    "pct": 1.0
+   },
+   {
+    "name": "Quartz",
+    "pct": 1.2
+   },
+   {
+    "name": "Hornblende",
+    "pct": 2.1
+   },
+   {
+    "name": "Amorphous/Glass",
+    "pct": 19.2
+   }
+  ],
+  "oxide_sum": 99.68,
+  "mineral_sum": 97.6,
+  "references_in_db": [
+   {
+    "id": "R157",
+    "type": "review",
+    "text": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+    "url": "https://doi.org/10.1016/j.bgtech.2025.100212",
+    "doi": "10.1016/j.bgtech.2025.100212"
+   }
+  ],
+  "extra_reference": "Chen, Y., et al. (2025). An overview on lunar regolith simulants solidification methods...",
+  "feedstock": null
+ },
+ "S132": {
+  "simulant_id": "S132",
+  "name": "TYII-0",
+  "institution": null,
+  "type": "General",
+  "release_date": null,
+  "availability": "Unavailable",
+  "lunar_sample_reference": "General",
+  "physical": {
+   "bulk_density": "1.52",
+   "particle_size_d50": 48.4,
+   "cohesion": "13.299",
+   "friction_angle": "34.617"
+  },
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.33
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.72
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 14.38
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 12.44
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 12.38
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 8.38
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": null
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 1.28
+   },
+   {
+    "name": "SrO",
+    "wt_pct": 0.25
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.14
+   },
+   {
+    "name": "Cr2O3",
+    "wt_pct": 0.11
+   },
+   {
+    "name": "NiO",
+    "wt_pct": 0.01
+   },
+   {
+    "name": "ZnO",
+    "wt_pct": 0.19
+   }
+  ],
+  "minerals_in_db": [
+   {
+    "name": "Anorthite",
+    "pct": 35.2
+   },
+   {
+    "name": "Augite",
+    "pct": 17.2
+   },
+   {
+    "name": "Enstatite",
+    "pct": 1.9
+   },
+   {
+    "name": "Forsterite",
+    "pct": 2.1
+   },
+   {
+    "name": "Lizardite",
+    "pct": 5.7
+   },
+   {
+    "name": "Analcime",
+    "pct": 3.8
+   },
+   {
+    "name": "Smectite",
+    "pct": 1.2
+   },
+   {
+    "name": "Illite",
+    "pct": 0.6
+   },
+   {
+    "name": "Quartz",
+    "pct": 0.6
+   },
+   {
+    "name": "Hornblende",
+    "pct": 0.3
+   },
+   {
+    "name": "Amorphous/Glass",
+    "pct": 31.4
+   }
+  ],
+  "oxide_sum": 98.61,
+  "mineral_sum": 100.0,
+  "references_in_db": [
+   {
+    "id": "R158",
+    "type": "review",
+    "text": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+    "url": "https://doi.org/10.1016/j.bgtech.2025.100212",
+    "doi": "10.1016/j.bgtech.2025.100212"
+   }
+  ],
+  "extra_reference": "Chen, Y., et al. (2025). An overview on lunar regolith simulants solidification methods...",
+  "feedstock": null
+ },
+ "S144": {
+  "simulant_id": "S144",
+  "name": "EB-2",
+  "institution": "Open University",
+  "type": "Mare",
+  "release_date": null,
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Early basaltic",
+  "physical": {},
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 49.12
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.63
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 26.29
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 3.2
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.06
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 2.86
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 13.52
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.55
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.34
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.17
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 0.41
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 98.74,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R166",
+    "type": "report",
+    "text": "In-Situ Resource Utilization Gap Assessment Report",
+    "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Duri, L. G., et al. (2022). The Potential for Lunar and Martian Regolith Simulants... Front. Astron. Space Sci. 8. https://doi.org/10.3389/fspas.2021.747821",
+  "feedstock": null
+ },
+ "S145": {
+  "simulant_id": "S145",
+  "name": "OUHR-1",
+  "institution": "Open University",
+  "type": "Specialty",
+  "release_date": null,
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Haematite rich",
+  "physical": {},
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.1
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.46
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 26.35
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 3.44
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.05
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 1.28
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 17.47
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.36
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.51
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.96
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 99.98,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R167",
+    "type": "report",
+    "text": "In-Situ Resource Utilization Gap Assessment Report",
+    "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Duri, L. G., et al. (2022). The Potential for Lunar and Martian Regolith Simulants... Front. Astron. Space Sci. 8. https://doi.org/10.3389/fspas.2021.747821",
+  "feedstock": null
+ },
+ "S146": {
+  "simulant_id": "S146",
+  "name": "HR-2",
+  "institution": "Open University",
+  "type": "Specialty",
+  "release_date": null,
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Haematite rich",
+  "physical": {},
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 49.12
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.63
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 26.29
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 3.2
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.06
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 2.86
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 13.52
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.55
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.34
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.17
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 0.41
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 98.74,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R168",
+    "type": "report",
+    "text": "In-Situ Resource Utilization Gap Assessment Report",
+    "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Duri, L. G., et al. (2022). The Potential for Lunar and Martian Regolith Simulants... Front. Astron. Space Sci. 8. https://doi.org/10.3389/fspas.2021.747821",
+  "feedstock": null
+ },
+ "S149": {
+  "simulant_id": "S149",
+  "name": "ES-1",
+  "institution": "Open University",
+  "type": "Engineering",
+  "release_date": "2014",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Engineering Soil",
+  "physical": {},
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.71
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 1.59
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 15.02
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 10.79
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.19
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 9.39
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 9.9
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.7
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.82
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.66
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 98.77,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R169",
+    "type": "report",
+    "text": "In-Situ Resource Utilization Gap Assessment Report",
+    "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Duri, L. G., et al. (2022). The Potential for Lunar and Martian Regolith Simulants... Front. Astron. Space Sci. 8. https://doi.org/10.3389/fspas.2021.747821",
+  "feedstock": null
+ },
+ "S150": {
+  "simulant_id": "S150",
+  "name": "ES-2",
+  "institution": "Open University",
+  "type": "Engineering",
+  "release_date": "2014",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Engineering Soil",
+  "physical": {},
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 48.22
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.7
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 12.4
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 8.79
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.06
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 15.97
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 7.65
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 1.73
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.42
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.23
+   },
+   {
+    "name": "LOI",
+    "wt_pct": 0.56
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 98.17,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R170",
+    "type": "report",
+    "text": "In-Situ Resource Utilization Gap Assessment Report",
+    "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Duri, L. G., et al. (2022). The Potential for Lunar and Martian Regolith Simulants... Front. Astron. Space Sci. 8. https://doi.org/10.3389/fspas.2021.747821",
+  "feedstock": "Silverbond D6 DD fine quartz sand"
+ },
+ "S151": {
+  "simulant_id": "S151",
+  "name": "ES-3",
+  "institution": "Open University",
+  "type": "Engineering",
+  "release_date": "2014",
+  "availability": "Unavailable",
+  "lunar_sample_reference": "Engineering Soil",
+  "physical": {},
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 47.13
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 0.16
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 27.96
+   },
+   {
+    "name": "FeO",
+    "wt_pct": 1.24
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.02
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 0.71
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 17.5
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 4.02
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.42
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 0.83
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 99.99,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R171",
+    "type": "report",
+    "text": "In-Situ Resource Utilization Gap Assessment Report",
+    "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISRU-Gap-Assessment-Report-2021.pdf",
+    "doi": null
+   }
+  ],
+  "extra_reference": "Duri, L. G., et al. (2022). The Potential for Lunar and Martian Regolith Simulants... Front. Astron. Space Sci. 8. https://doi.org/10.3389/fspas.2021.747821",
+  "feedstock": "OMR Dry"
+ },
+ "S153": {
+  "simulant_id": "S153",
+  "name": "LZS-1",
+  "institution": "Instituto de Geociencias (IGEO, CSIC-UCM)",
+  "type": "Mare",
+  "release_date": "2022",
+  "availability": "Available (Research)",
+  "lunar_sample_reference": "Apollo 14 (14163)",
+  "physical": {},
+  "oxides_in_db": [
+   {
+    "name": "SiO2",
+    "wt_pct": 45.6
+   },
+   {
+    "name": "TiO2",
+    "wt_pct": 2.7
+   },
+   {
+    "name": "Al2O3",
+    "wt_pct": 12.3
+   },
+   {
+    "name": "MnO",
+    "wt_pct": 0.2
+   },
+   {
+    "name": "MgO",
+    "wt_pct": 8.2
+   },
+   {
+    "name": "CaO",
+    "wt_pct": 10.6
+   },
+   {
+    "name": "Fe2O3",
+    "wt_pct": 14.6
+   },
+   {
+    "name": "Na2O",
+    "wt_pct": 2.9
+   },
+   {
+    "name": "K2O",
+    "wt_pct": 0.7
+   },
+   {
+    "name": "P2O5",
+    "wt_pct": 2.0
+   }
+  ],
+  "minerals_in_db": [],
+  "oxide_sum": 99.8,
+  "mineral_sum": 0,
+  "references_in_db": [
+   {
+    "id": "R099",
+    "type": "composition",
+    "text": "Alberquilla, F., Mart\u00ednez-Fr\u00edas, J., Garc\u00eda-Baonza, V., & Lunar, R. (2022). LZS-1, Lanzarote (Canary Island, Spain) lunar (Apollo 14) basaltic soil simulant. Scientific Reports, 12, 16470. https://doi.org/10.1038/s41598-022-20960-8",
+    "url": "https://doi.org/10.1038/s41598-022-20960-8",
+    "doi": "10.1038/s41598-022-20960-8"
+   }
+  ],
+  "extra_reference": "Alberquilla, F., Mart\u00ednez-Fr\u00edas, J., Garc\u00eda-Baonza, V., & Lunar, R. (2022). LZS-1, Lanzarote (Canary Island, Spain) lunar (Apollo 14) basaltic soil simulant. Scientific Reports, 12, 16470. https://doi.org/10.1038/s41598-022-20960-8",
+  "feedstock": "Tao quarry basalt, Lanzarote, Canary Islands"
+ }
+}

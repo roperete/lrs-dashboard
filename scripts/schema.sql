@@ -25,7 +25,25 @@ CREATE TABLE IF NOT EXISTS simulants (
   particle_ruggedness       TEXT,
   glass_content_percent     REAL,
   nasa_fom_score            REAL,
-  ti_content_percent        REAL
+  ti_content_percent        REAL,
+  datasheet_url             TEXT, -- manufacturer/spec datasheet, distinct from academic references
+  -- Provenance of the composition data (see scripts/reconcile.py):
+  --   verified | withheld_unverified | not_published | not_extracted
+  composition_status        TEXT,
+  composition_source_title  TEXT,
+  composition_source_url    TEXT,
+  composition_source_kind   TEXT,  -- manufacturer_datasheet | primary_paper | agency_report
+  composition_needs_review  INTEGER,
+  -- Stated on the manufacturer data sheet (scripts/datasheet_fill.py, 2026-09-22)
+  ph                        REAL,
+  angle_of_repose           TEXT,  -- as stated, with the sample mass used
+  particle_size_mean_um     REAL,
+  bulk_density_range        TEXT,  -- min-max or loose-settled, as stated
+  magnetic_susceptibility   TEXT,  -- mass susceptibility, as stated
+  product_grade             TEXT,  -- the sheet's own "Simulant Type" / series wording
+  datasheet_document_id     TEXT,  -- document / batch code printed on the sheet
+  datasheet_date            TEXT,  -- revision date of the sheet used
+  datasheet_notes           TEXT   -- methods, labs and caveats printed on the sheet
 );
 
 CREATE TABLE IF NOT EXISTS simulant_extra (
@@ -57,7 +75,9 @@ CREATE TABLE IF NOT EXISTS chemical_compositions (
   simulant_id    TEXT REFERENCES simulants(simulant_id),
   component_type TEXT,
   component_name TEXT,
-  value_wt_pct   REAL
+  value_wt_pct   REAL,
+  reference_id   TEXT REFERENCES references_(reference_id), -- the document this row was read from
+  value_text     TEXT            -- the value as stated, when it says more than the number
 );
 
 CREATE TABLE IF NOT EXISTS mineral_compositions (
@@ -65,7 +85,20 @@ CREATE TABLE IF NOT EXISTS mineral_compositions (
   simulant_id    TEXT REFERENCES simulants(simulant_id),
   component_type TEXT,
   component_name TEXT,
-  value_pct      REAL
+  value_pct      REAL,
+  reference_id   TEXT REFERENCES references_(reference_id), -- the document this row was read from
+  value_text     TEXT            -- the value as stated, when it says more than the number
+);
+
+-- Provenance of scalar values on simulants: one row per (simulant, field).
+-- A scalar with no row here is unsourced and is not exported for display.
+CREATE TABLE IF NOT EXISTS property_sources (
+  simulant_id   TEXT NOT NULL REFERENCES simulants(simulant_id),
+  field         TEXT NOT NULL,   -- column name on simulants, e.g. cohesion, ph, bulk_density
+  reference_id  TEXT NOT NULL REFERENCES references_(reference_id),
+  location      TEXT,            -- page, table or figure as the reader found it
+  quote         TEXT,            -- the line stating the value
+  PRIMARY KEY (simulant_id, field)
 );
 
 CREATE TABLE IF NOT EXISTS mineral_groups (
@@ -79,12 +112,17 @@ CREATE TABLE IF NOT EXISTS references_ (
   reference_id   TEXT PRIMARY KEY,
   simulant_id    TEXT REFERENCES simulants(simulant_id),
   reference_text TEXT,
-  reference_type TEXT,
+  reference_type TEXT,           -- datasheet | composition | geotechnical | usage | review | report | general
   title          TEXT,
   authors        TEXT,
   year           INTEGER,
   doi            TEXT,
-  url            TEXT
+  url            TEXT,
+  -- Per-value provenance (2026-09-22): the reference list is the registry of documents
+  names_simulant INTEGER,        -- 1 confirmed to name this exact simulant, 0 checked and absent, NULL unchecked
+  mention_quote  TEXT,           -- the sentence naming the simulant
+  local_path     TEXT,           -- copy under DIRT/Sources used for verification; never displayed
+  checked_on     TEXT            -- ISO date of last verification
 );
 
 CREATE TABLE IF NOT EXISTS purchase_info (
@@ -126,4 +164,65 @@ CREATE TABLE IF NOT EXISTS mineral_sourcing (
   further_reading          TEXT,
   european_sources         TEXT,
   european_locations_detail TEXT
+);
+
+-- Figures of Merit: one score per (simulant, property, lunar reference), each cited (2026-09-25).
+-- An FoM compares a simulant with a lunar reference material property by property; a single
+-- column would lose what it measures and against what.
+CREATE TABLE IF NOT EXISTS figures_of_merit (
+  fom_id           TEXT PRIMARY KEY,
+  simulant_id      TEXT NOT NULL REFERENCES simulants(simulant_id),
+  property         TEXT NOT NULL,   -- composition | mineralogy | particle_size | shape | density | overall | other
+  property_label   TEXT NOT NULL,   -- as the document names it
+  reference_sample TEXT,            -- the lunar material it is scored against, as stated
+  score            REAL NOT NULL,
+  scale            TEXT,            -- 0-1, 0-100, % ... as the document uses
+  score_text       TEXT,            -- the score as printed
+  reference_id     TEXT NOT NULL REFERENCES references_(reference_id),
+  location         TEXT,
+  quote            TEXT
+);
+
+-- The Moon section (2026-09-25): landing sites, their documents and per-value sources.
+CREATE TABLE IF NOT EXISTS lunar_sites (
+  site_id          TEXT PRIMARY KEY,
+  name             TEXT NOT NULL,
+  mission          TEXT NOT NULL,
+  programme        TEXT NOT NULL,   -- Apollo | Luna | Chang-e | Other
+  date             TEXT,
+  lat              REAL,
+  lng              REAL,
+  samples_returned TEXT,
+  description      TEXT,
+  bulk_density     REAL,            -- g/cm3
+  friction_angle   REAL,            -- degrees
+  cohesion         REAL,            -- kPa
+  bearing_capacity REAL             -- kPa
+);
+CREATE TABLE IF NOT EXISTS lunar_documents (
+  document_id TEXT PRIMARY KEY,     -- LD-001 ...
+  title       TEXT NOT NULL,
+  authors     TEXT,
+  year        TEXT,
+  doi         TEXT,
+  url         TEXT,
+  local_path  TEXT,                 -- relative to DIRT/Sources
+  kind        TEXT,
+  checked_on  TEXT
+);
+CREATE TABLE IF NOT EXISTS lunar_mentions (
+  entity_id     TEXT NOT NULL,      -- site_id or sample_id
+  document_id   TEXT NOT NULL REFERENCES lunar_documents(document_id),
+  mention_quote TEXT NOT NULL,
+  location      TEXT,
+  PRIMARY KEY (entity_id, document_id)
+);
+CREATE TABLE IF NOT EXISTS lunar_sources (
+  entity_id   TEXT NOT NULL,
+  field       TEXT NOT NULL,        -- column, "oxide:SiO2", "mineral:Plagioclase", "description"
+  document_id TEXT NOT NULL REFERENCES lunar_documents(document_id),
+  location    TEXT,
+  quote       TEXT NOT NULL,
+  value_text  TEXT,                 -- the value as the document states it
+  PRIMARY KEY (entity_id, field, document_id)
 );

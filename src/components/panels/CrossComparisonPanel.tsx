@@ -3,7 +3,11 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { ArrowRightLeft, X, FlaskConical, Activity, BarChart3, TableProperties } from 'lucide-react';
 import { motion } from 'motion/react';
 import { cn } from '../../utils/cn';
-import type { Simulant, ChemicalComposition, Composition, MineralGroup, LunarReference } from '../../types';
+import type { Simulant, ChemicalComposition, Composition, MineralGroup, LunarReference, Reference } from '../../types';
+import { RefSup } from '../ui/RefSup';
+import { referenceNumbers, referenceHoverLabel } from '../../utils/references';
+import { LunarRefs, LunarSourceList } from '../ui/LunarRefs';
+import { EMPTY_CITATIONS, type LunarCitations } from '../../utils/lunarCitations';
 
 type ViewMode = 'chart' | 'table';
 
@@ -13,13 +17,20 @@ interface CrossComparisonPanelProps {
   compositions: Composition[];
   mineralGroups: MineralGroup[];
   lunarRef: LunarReference;
+  /** Sources of the lunar sample's values, shown as [L1] ... */
+  lunarCitations?: LunarCitations;
+  /** The simulant's references, so its values carry the same [n] as in its pane. */
+  references?: Reference[];
   onClose: () => void;
 }
 
 export function CrossComparisonPanel({
-  simulant, chemicalCompositions, compositions, mineralGroups, lunarRef, onClose,
+  simulant, chemicalCompositions, compositions, mineralGroups, lunarRef, lunarCitations = EMPTY_CITATIONS, references = [], onClose,
 }: CrossComparisonPanelProps) {
   const [viewMode, setViewMode] = useState<ViewMode>('table');
+  const refNumbers = useMemo(() => referenceNumbers(references), [references]);
+  const simCite = (referenceId?: string | null) => referenceId
+    ? { n: refNumbers.get(referenceId), source: referenceHoverLabel(references.find(r => r.reference_id === referenceId)) } : {};
 
   const chemicalData = useMemo(() => {
     const simulantOxides = chemicalCompositions
@@ -31,6 +42,7 @@ export function CrossComparisonPanel({
     return Array.from(allNames).map(name => ({
       name,
       simulant: simulantOxides.find(c => c.component_name === name)?.value_wt_pct || 0,
+      simRef: simulantOxides.find(c => c.component_name === name)?.reference_id ?? null,
       reference: lunarRef.chemical_composition?.[name] || 0,
     }))
       .filter(d => d.simulant > 0 || d.reference > 0)
@@ -38,19 +50,22 @@ export function CrossComparisonPanel({
   }, [chemicalCompositions, lunarRef]);
 
   const mineralData = useMemo(() => {
-    const groups = mineralGroups.filter(g => g.value_pct > 0);
-    const allNames = new Set([
-      ...groups.map(g => g.group_name),
-      ...Object.keys(lunarRef.mineral_composition || {}),
-    ]);
+    // NASA mineral groups where the simulant has them; otherwise its own mineral table (most
+    // simulants since the audit), so its minerals are not all shown as missing.
+    // (a group is a sum of rows, so it has no single document to cite)
+    const groups = mineralGroups.filter(g => g.value_pct > 0).map(g => ({ name: g.group_name, value: g.value_pct, ref: null as string | null }));
+    const own = groups.length > 0 ? groups
+      : compositions.filter(c => c.value_pct > 0).map(c => ({ name: c.component_name, value: c.value_pct, ref: c.reference_id ?? null }));
+    const allNames = new Set([...own.map(g => g.name), ...Object.keys(lunarRef.mineral_composition || {})]);
     return Array.from(allNames).map(name => ({
       name,
-      simulant: groups.find(g => g.group_name === name)?.value_pct || 0,
+      simulant: own.find(g => g.name === name)?.value || 0,
+      simRef: own.find(g => g.name === name)?.ref ?? null,
       reference: lunarRef.mineral_composition?.[name] || 0,
     }))
       .filter(d => d.simulant > 0 || d.reference > 0)
       .sort((a, b) => (b.simulant + b.reference) - (a.simulant + a.reference));
-  }, [mineralGroups, lunarRef]);
+  }, [mineralGroups, compositions, lunarRef]);
 
   return (
     <motion.div
@@ -64,7 +79,7 @@ export function CrossComparisonPanel({
           <div className="flex items-center gap-4">
             <ArrowRightLeft className="text-amber-400" size={28} />
             <div>
-              <h2 className="text-2xl font-bold text-white">Cross-Comparison</h2>
+              <h2 className="text-2xl font-bold text-white">Compared with a lunar sample</h2>
               <p className="text-slate-400 text-sm">
                 <span className="text-blue-400 font-semibold">{simulant.name}</span>
                 <span className="mx-2">vs</span>
@@ -96,9 +111,9 @@ export function CrossComparisonPanel({
         </div>
 
         {/* Metadata row */}
-        <div className="flex gap-4 mb-6 text-xs text-slate-500">
-          <span>Landing site: <span className="text-slate-300">{lunarRef.landing_site}</span></span>
-          <span>Type: <span className="text-slate-300">{lunarRef.type}</span></span>
+        <div className="flex gap-4 mb-6 text-xs text-slate-400">
+          {lunarRef.landing_site && <span>Landing site: <span className="text-slate-300">{lunarRef.landing_site}<LunarRefs cites={lunarCitations.cite('landing_site')} prefix="L" /></span></span>}
+          {lunarRef.type && <span>Type: <span className="text-slate-300">{lunarRef.type}<LunarRefs cites={lunarCitations.cite('type')} prefix="L" /></span></span>}
           {simulant.lunar_sample_reference && (
             <span>Simulant reference: <span className="text-slate-300">{simulant.lunar_sample_reference}</span></span>
           )}
@@ -133,6 +148,8 @@ export function CrossComparisonPanel({
                 data={chemicalData}
                 simulantName={simulant.name}
                 refName={lunarRef.mission}
+                cites={name => lunarCitations.cite(`oxide:${name}`)}
+                simCite={simCite}
               />
               {mineralData.length > 0 && (
                 <DeltaTable
@@ -141,10 +158,15 @@ export function CrossComparisonPanel({
                   data={mineralData}
                   simulantName={simulant.name}
                   refName={lunarRef.mission}
+                  cites={name => lunarCitations.cite(`mineral:${name}`)}
+                  simCite={simCite}
                 />
               )}
             </>
           )}
+        </div>
+        <div className="mt-6">
+          <LunarSourceList citations={lunarCitations} prefix="L" title={`Sources for ${lunarRef.mission} ${lunarRef.sample_id}`} />
         </div>
       </div>
     </motion.div>
@@ -182,10 +204,12 @@ function ChartSection({ title, icon, data, simulantName, refName }: {
   );
 }
 
-function DeltaTable({ title, icon, data, simulantName, refName }: {
+function DeltaTable({ title, icon, data, simulantName, refName, cites, simCite }: {
   title: string; icon: React.ReactNode;
-  data: { name: string; simulant: number; reference: number }[];
+  data: { name: string; simulant: number; simRef?: string | null; reference: number }[];
   simulantName: string; refName: string;
+  cites: (name: string) => import('../../utils/lunarCitations').LunarCite[];
+  simCite?: (referenceId?: string | null) => { n?: number; source?: string };
 }) {
   return (
     <section>
@@ -197,10 +221,10 @@ function DeltaTable({ title, icon, data, simulantName, refName }: {
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-slate-700/50">
-              <th className="py-2.5 px-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Component</th>
-              <th className="py-2.5 px-4 text-right text-xs font-bold text-blue-400 uppercase tracking-wider truncate max-w-[120px]">{simulantName}</th>
-              <th className="py-2.5 px-4 text-right text-xs font-bold text-amber-400 uppercase tracking-wider truncate max-w-[120px]">{refName}</th>
-              <th className="py-2.5 px-4 text-right text-xs font-bold text-slate-500 uppercase tracking-wider">{'\u0394'}</th>
+              <th className="py-2.5 px-4 text-left text-xs font-semibold text-slate-400">Component</th>
+              <th className="py-2.5 px-4 text-right text-xs font-semibold text-blue-400 truncate max-w-[120px]">{simulantName}</th>
+              <th className="py-2.5 px-4 text-right text-xs font-semibold text-amber-400 truncate max-w-[120px]">{refName}</th>
+              <th className="py-2.5 px-4 text-right text-xs font-semibold text-slate-400">{'\u0394'}</th>
             </tr>
           </thead>
           <tbody>
@@ -209,12 +233,14 @@ function DeltaTable({ title, icon, data, simulantName, refName }: {
               return (
                 <tr key={row.name} className={i % 2 === 0 ? 'bg-slate-800/20' : ''}>
                   <td className="py-2 px-4 text-slate-300 font-medium">{row.name}</td>
-                  <td className="py-2 px-4 text-right font-mono text-slate-200">{row.simulant > 0 ? row.simulant.toFixed(2) : '\u2014'}</td>
-                  <td className="py-2 px-4 text-right font-mono text-slate-200">{row.reference > 0 ? row.reference.toFixed(2) : '\u2014'}</td>
+                  <td className="py-2 px-4 text-right font-mono text-slate-200">{row.simulant > 0
+                    ? <>{row.simulant.toFixed(2)}{(() => { const c = simCite?.(row.simRef); return c?.n != null ? <RefSup n={c.n} source={c.source} align="right" /> : null; })()}</>
+                    : '\u2014'}</td>
+                  <td className="py-2 px-4 text-right font-mono text-slate-200">{row.reference > 0 ? <>{row.reference.toFixed(2)}<LunarRefs cites={cites(row.name)} prefix="L" align="right" /></> : '\u2014'}</td>
                   <td className={cn("py-2 px-4 text-right font-mono text-xs",
-                    diff > 0 ? "text-blue-400" : diff < 0 ? "text-amber-400" : "text-slate-500"
+                    diff > 0 ? "text-blue-400" : diff < 0 ? "text-amber-400" : "text-slate-400"
                   )}>
-                    {row.simulant > 0 && row.reference > 0 ? `+${Math.abs(diff).toFixed(2)}` : '\u2014'}
+                    {row.simulant > 0 && row.reference > 0 ? `${diff > 0 ? '+' : diff < 0 ? '\u2212' : ''}${Math.abs(diff).toFixed(2)}` : '\u2014'}
                   </td>
                 </tr>
               );
@@ -222,7 +248,7 @@ function DeltaTable({ title, icon, data, simulantName, refName }: {
           </tbody>
         </table>
         {data.length === 0 && (
-          <div className="flex items-center justify-center h-20 text-slate-500 text-sm">No data available</div>
+          <div className="flex items-center justify-center h-20 text-slate-400 text-sm">No data available</div>
         )}
       </div>
     </section>

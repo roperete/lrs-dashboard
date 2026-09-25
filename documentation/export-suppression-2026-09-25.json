@@ -1,0 +1,1137 @@
+{
+  "generated": "2026-09-25",
+  "rule": "A scalar on simulants is exported only when property_sources has a row for (simulant_id, field). These values remain in lrs.sqlite and are written as null in public/data/data.json.",
+  "count": 69,
+  "by_field": {
+    "bulk_density": 17,
+    "friction_angle": 15,
+    "cohesion": 10,
+    "particle_size_distribution": 7,
+    "particle_morphology": 5,
+    "specific_gravity": 5,
+    "particle_size_d50": 5,
+    "glass_content_percent": 3,
+    "density_g_cm3": 1,
+    "particle_ruggedness": 1
+  },
+  "by_simulant": {
+    "S131": 5,
+    "S132": 5,
+    "S051": 4,
+    "S121": 4,
+    "S028": 3,
+    "S043": 3,
+    "S064": 3,
+    "S067": 3,
+    "S075": 3,
+    "S138": 3,
+    "S013": 2,
+    "S017": 2,
+    "S032": 2,
+    "S038": 2,
+    "S081": 2,
+    "S082": 2,
+    "S097": 2,
+    "S122": 2,
+    "S003": 1,
+    "S006": 1,
+    "S008": 1,
+    "S018": 1,
+    "S019": 1,
+    "S027": 1,
+    "S037": 1,
+    "S040": 1,
+    "S041": 1,
+    "S047": 1,
+    "S049": 1,
+    "S054": 1,
+    "S069": 1,
+    "S089": 1,
+    "S103": 1,
+    "S105": 1,
+    "S120": 1
+  },
+  "suppressed": [
+    {
+      "simulant_id": "S003",
+      "name": "ALS",
+      "field": "friction_angle",
+      "value": "12.0"
+    },
+    {
+      "simulant_id": "S006",
+      "name": "BP-1",
+      "field": "bulk_density",
+      "value": "1.65"
+    },
+    {
+      "simulant_id": "S008",
+      "name": "CHENOBI",
+      "field": "particle_morphology",
+      "value": "very high particle angularity"
+    },
+    {
+      "simulant_id": "S013",
+      "name": "CUMT-1",
+      "field": "cohesion",
+      "value": "15.79"
+    },
+    {
+      "simulant_id": "S013",
+      "name": "CUMT-1",
+      "field": "friction_angle",
+      "value": "51.26"
+    },
+    {
+      "simulant_id": "S017",
+      "name": "EAC-1",
+      "field": "bulk_density",
+      "value": "1.45"
+    },
+    {
+      "simulant_id": "S017",
+      "name": "EAC-1",
+      "field": "cohesion",
+      "value": "0.38"
+    },
+    {
+      "simulant_id": "S018",
+      "name": "EAC-1A",
+      "field": "particle_size_distribution",
+      "value": "d50=181"
+    },
+    {
+      "simulant_id": "S019",
+      "name": "FJS-1",
+      "field": "bulk_density",
+      "value": "1.065"
+    },
+    {
+      "simulant_id": "S027",
+      "name": "JSC-1",
+      "field": "specific_gravity",
+      "value": 2.92
+    },
+    {
+      "simulant_id": "S028",
+      "name": "JSC-1A",
+      "field": "bulk_density",
+      "value": "1.63"
+    },
+    {
+      "simulant_id": "S028",
+      "name": "JSC-1A",
+      "field": "cohesion",
+      "value": "1.9"
+    },
+    {
+      "simulant_id": "S028",
+      "name": "JSC-1A",
+      "field": "friction_angle",
+      "value": "45.85"
+    },
+    {
+      "simulant_id": "S032",
+      "name": "KLS-1",
+      "field": "density_g_cm3",
+      "value": 3.07
+    },
+    {
+      "simulant_id": "S032",
+      "name": "KLS-1",
+      "field": "particle_size_d50",
+      "value": 44.1
+    },
+    {
+      "simulant_id": "S037",
+      "name": "LMS-1",
+      "field": "specific_gravity",
+      "value": 3.0
+    },
+    {
+      "simulant_id": "S038",
+      "name": "LSS-ISAC-1",
+      "field": "cohesion",
+      "value": "0.343"
+    },
+    {
+      "simulant_id": "S038",
+      "name": "LSS-ISAC-1",
+      "field": "friction_angle",
+      "value": "36.34"
+    },
+    {
+      "simulant_id": "S040",
+      "name": "LX-M100",
+      "field": "friction_angle",
+      "value": "46.2"
+    },
+    {
+      "simulant_id": "S041",
+      "name": "LX-T100",
+      "field": "friction_angle",
+      "value": "46.2"
+    },
+    {
+      "simulant_id": "S043",
+      "name": "MLS-1",
+      "field": "bulk_density",
+      "value": "1.84"
+    },
+    {
+      "simulant_id": "S043",
+      "name": "MLS-1",
+      "field": "friction_angle",
+      "value": "51.85"
+    },
+    {
+      "simulant_id": "S043",
+      "name": "MLS-1",
+      "field": "particle_size_distribution",
+      "value": "ground into a Particle Size Distribution (PSD) to resemble lunar soil"
+    },
+    {
+      "simulant_id": "S047",
+      "name": "NU-LHT",
+      "field": "glass_content_percent",
+      "value": 40.0
+    },
+    {
+      "simulant_id": "S049",
+      "name": "NU-LHT-1M",
+      "field": "glass_content_percent",
+      "value": 40.0
+    },
+    {
+      "simulant_id": "S051",
+      "name": "NU-LHT-2M",
+      "field": "bulk_density",
+      "value": "1.715"
+    },
+    {
+      "simulant_id": "S051",
+      "name": "NU-LHT-2M",
+      "field": "friction_angle",
+      "value": "39.54"
+    },
+    {
+      "simulant_id": "S051",
+      "name": "NU-LHT-2M",
+      "field": "specific_gravity",
+      "value": 2.9319
+    },
+    {
+      "simulant_id": "S051",
+      "name": "NU-LHT-2M",
+      "field": "glass_content_percent",
+      "value": 40.0
+    },
+    {
+      "simulant_id": "S054",
+      "name": "OB-1A",
+      "field": "bulk_density",
+      "value": "1.57"
+    },
+    {
+      "simulant_id": "S064",
+      "name": "TJ-1",
+      "field": "bulk_density",
+      "value": "1.55"
+    },
+    {
+      "simulant_id": "S064",
+      "name": "TJ-1",
+      "field": "cohesion",
+      "value": "1.0"
+    },
+    {
+      "simulant_id": "S064",
+      "name": "TJ-1",
+      "field": "specific_gravity",
+      "value": 2.9
+    },
+    {
+      "simulant_id": "S067",
+      "name": "TLS-01",
+      "field": "cohesion",
+      "value": "4.9"
+    },
+    {
+      "simulant_id": "S067",
+      "name": "TLS-01",
+      "field": "friction_angle",
+      "value": "42.2"
+    },
+    {
+      "simulant_id": "S067",
+      "name": "TLS-01",
+      "field": "particle_ruggedness",
+      "value": "evenly distributed, uncluttered"
+    },
+    {
+      "simulant_id": "S069",
+      "name": "TUBS-M",
+      "field": "particle_size_distribution",
+      "value": "x_50 = 76.7 to 96.0 µm"
+    },
+    {
+      "simulant_id": "S075",
+      "name": "WHU-1",
+      "field": "bulk_density",
+      "value": "1.65"
+    },
+    {
+      "simulant_id": "S075",
+      "name": "WHU-1",
+      "field": "cohesion",
+      "value": "9.9"
+    },
+    {
+      "simulant_id": "S075",
+      "name": "WHU-1",
+      "field": "friction_angle",
+      "value": "40.57"
+    },
+    {
+      "simulant_id": "S081",
+      "name": "JSC-2A",
+      "field": "particle_size_d50",
+      "value": 45.0
+    },
+    {
+      "simulant_id": "S081",
+      "name": "JSC-2A",
+      "field": "particle_size_distribution",
+      "value": "2.3-102 µm"
+    },
+    {
+      "simulant_id": "S082",
+      "name": "GRC-3",
+      "field": "bulk_density",
+      "value": "1.73"
+    },
+    {
+      "simulant_id": "S082",
+      "name": "GRC-3",
+      "field": "friction_angle",
+      "value": "42.8"
+    },
+    {
+      "simulant_id": "S089",
+      "name": "NU-LHT-4M",
+      "field": "bulk_density",
+      "value": "1.56"
+    },
+    {
+      "simulant_id": "S097",
+      "name": "FROST-Y",
+      "field": "bulk_density",
+      "value": "0.89"
+    },
+    {
+      "simulant_id": "S097",
+      "name": "FROST-Y",
+      "field": "particle_size_distribution",
+      "value": "<1000 µm"
+    },
+    {
+      "simulant_id": "S103",
+      "name": "CSM-LHT-1",
+      "field": "bulk_density",
+      "value": "1.7"
+    },
+    {
+      "simulant_id": "S105",
+      "name": "CSM-LMT-1",
+      "field": "bulk_density",
+      "value": "1.63"
+    },
+    {
+      "simulant_id": "S120",
+      "name": "PolyU-1",
+      "field": "particle_size_distribution",
+      "value": "4.84-432.27 µm"
+    },
+    {
+      "simulant_id": "S121",
+      "name": "BH-2",
+      "field": "bulk_density",
+      "value": "1.72"
+    },
+    {
+      "simulant_id": "S121",
+      "name": "BH-2",
+      "field": "cohesion",
+      "value": "6.477"
+    },
+    {
+      "simulant_id": "S121",
+      "name": "BH-2",
+      "field": "friction_angle",
+      "value": "33.92"
+    },
+    {
+      "simulant_id": "S121",
+      "name": "BH-2",
+      "field": "particle_morphology",
+      "value": "polygonal and bar-shaped"
+    },
+    {
+      "simulant_id": "S122",
+      "name": "TJ-2",
+      "field": "specific_gravity",
+      "value": 2.7
+    },
+    {
+      "simulant_id": "S122",
+      "name": "TJ-2",
+      "field": "particle_morphology",
+      "value": "subprismoidal with subangular to angular shape"
+    },
+    {
+      "simulant_id": "S131",
+      "name": "LBD",
+      "field": "bulk_density",
+      "value": "1.67"
+    },
+    {
+      "simulant_id": "S131",
+      "name": "LBD",
+      "field": "cohesion",
+      "value": "2.369"
+    },
+    {
+      "simulant_id": "S131",
+      "name": "LBD",
+      "field": "friction_angle",
+      "value": "45.342"
+    },
+    {
+      "simulant_id": "S131",
+      "name": "LBD",
+      "field": "particle_size_d50",
+      "value": 137.6
+    },
+    {
+      "simulant_id": "S131",
+      "name": "LBD",
+      "field": "particle_morphology",
+      "value": "subangular"
+    },
+    {
+      "simulant_id": "S132",
+      "name": "TYII-0",
+      "field": "bulk_density",
+      "value": "1.52"
+    },
+    {
+      "simulant_id": "S132",
+      "name": "TYII-0",
+      "field": "cohesion",
+      "value": "13.299"
+    },
+    {
+      "simulant_id": "S132",
+      "name": "TYII-0",
+      "field": "friction_angle",
+      "value": "34.617"
+    },
+    {
+      "simulant_id": "S132",
+      "name": "TYII-0",
+      "field": "particle_size_d50",
+      "value": 48.4
+    },
+    {
+      "simulant_id": "S132",
+      "name": "TYII-0",
+      "field": "particle_morphology",
+      "value": "subangular"
+    },
+    {
+      "simulant_id": "S138",
+      "name": "LX-I50",
+      "field": "friction_angle",
+      "value": "46.2"
+    },
+    {
+      "simulant_id": "S138",
+      "name": "LX-I50",
+      "field": "particle_size_d50",
+      "value": 70.0
+    },
+    {
+      "simulant_id": "S138",
+      "name": "LX-I50",
+      "field": "particle_size_distribution",
+      "value": "<45-2000 µm"
+    }
+  ],
+  "moon_rule": "A value of a lunar site or reference sample is exported only when lunar_sources has a row for (entity_id, field); a site without both coordinates sourced is left off the map.",
+  "moon_count": 129,
+  "moon_suppressed": [
+    {
+      "entity_id": "A11",
+      "field": "samples_returned",
+      "value": "21.5 kg"
+    },
+    {
+      "entity_id": "A11",
+      "field": "bulk_density",
+      "value": 1.61
+    },
+    {
+      "entity_id": "A11",
+      "field": "friction_angle",
+      "value": 40.7
+    },
+    {
+      "entity_id": "A11",
+      "field": "cohesion",
+      "value": 1.06
+    },
+    {
+      "entity_id": "A11",
+      "field": "bearing_capacity",
+      "value": 10.0
+    },
+    {
+      "entity_id": "A12",
+      "field": "bulk_density",
+      "value": 1.65
+    },
+    {
+      "entity_id": "A12",
+      "field": "friction_angle",
+      "value": 31.8
+    },
+    {
+      "entity_id": "A12",
+      "field": "cohesion",
+      "value": 1.04
+    },
+    {
+      "entity_id": "A12",
+      "field": "bearing_capacity",
+      "value": 8.5
+    },
+    {
+      "entity_id": "A14",
+      "field": "bulk_density",
+      "value": 1.54
+    },
+    {
+      "entity_id": "A14",
+      "field": "friction_angle",
+      "value": 39.0
+    },
+    {
+      "entity_id": "A14",
+      "field": "cohesion",
+      "value": 0.18
+    },
+    {
+      "entity_id": "A15",
+      "field": "bulk_density",
+      "value": 1.7
+    },
+    {
+      "entity_id": "A15",
+      "field": "friction_angle",
+      "value": 48.1
+    },
+    {
+      "entity_id": "A15",
+      "field": "cohesion",
+      "value": 0.77
+    },
+    {
+      "entity_id": "A16",
+      "field": "bulk_density",
+      "value": 1.68
+    },
+    {
+      "entity_id": "A16",
+      "field": "friction_angle",
+      "value": 47.5
+    },
+    {
+      "entity_id": "A16",
+      "field": "cohesion",
+      "value": 0.77
+    },
+    {
+      "entity_id": "A17",
+      "field": "bulk_density",
+      "value": 1.81
+    },
+    {
+      "entity_id": "A17",
+      "field": "friction_angle",
+      "value": 36.7
+    },
+    {
+      "entity_id": "A17",
+      "field": "cohesion",
+      "value": 0.6
+    },
+    {
+      "entity_id": "CE3",
+      "field": "bulk_density",
+      "value": 1.63
+    },
+    {
+      "entity_id": "L13",
+      "field": "friction_angle",
+      "value": 32.0
+    },
+    {
+      "entity_id": "L13",
+      "field": "cohesion",
+      "value": 0.49
+    },
+    {
+      "entity_id": "L13",
+      "field": "bearing_capacity",
+      "value": 68.0
+    },
+    {
+      "entity_id": "L16",
+      "field": "friction_angle",
+      "value": 26.7
+    },
+    {
+      "entity_id": "L16",
+      "field": "cohesion",
+      "value": 3.81
+    },
+    {
+      "entity_id": "L17",
+      "field": "friction_angle",
+      "value": 22.5
+    },
+    {
+      "entity_id": "L17",
+      "field": "cohesion",
+      "value": 5.0
+    },
+    {
+      "entity_id": "L17",
+      "field": "bearing_capacity",
+      "value": 33.3
+    },
+    {
+      "entity_id": "L20",
+      "field": "samples_returned",
+      "value": "55 g"
+    },
+    {
+      "entity_id": "L20",
+      "field": "bulk_density",
+      "value": 1.31
+    },
+    {
+      "entity_id": "L20",
+      "field": "friction_angle",
+      "value": 24.4
+    },
+    {
+      "entity_id": "L20",
+      "field": "cohesion",
+      "value": 4.66
+    },
+    {
+      "entity_id": "L21",
+      "field": "date",
+      "value": "January 15, 1973"
+    },
+    {
+      "entity_id": "L21",
+      "field": "description",
+      "value": "Deployed Lunokhod 2. Traversed 37 km across the lunar surface."
+    },
+    {
+      "entity_id": "L21",
+      "field": "friction_angle",
+      "value": 22.5
+    },
+    {
+      "entity_id": "L21",
+      "field": "cohesion",
+      "value": 5.0
+    },
+    {
+      "entity_id": "L21",
+      "field": "bearing_capacity",
+      "value": 40.0
+    },
+    {
+      "entity_id": "L24",
+      "field": "bulk_density",
+      "value": 1.85
+    },
+    {
+      "entity_id": "S1",
+      "field": "friction_angle",
+      "value": 41.7
+    },
+    {
+      "entity_id": "S1",
+      "field": "cohesion",
+      "value": 4.52
+    },
+    {
+      "entity_id": "S3",
+      "field": "friction_angle",
+      "value": 42.0
+    },
+    {
+      "entity_id": "S3",
+      "field": "cohesion",
+      "value": 0.47
+    },
+    {
+      "entity_id": "S3",
+      "field": "bearing_capacity",
+      "value": 40.0
+    },
+    {
+      "entity_id": "10084",
+      "field": "coordinates",
+      "value": {
+        "lat": 0.6875,
+        "lon": 23.4333
+      }
+    },
+    {
+      "entity_id": "10084",
+      "field": "type",
+      "value": "Mare (High-Ti Basalt)"
+    },
+    {
+      "entity_id": "10084",
+      "field": "oxide:Cr2O3",
+      "value": 0.3
+    },
+    {
+      "entity_id": "10084",
+      "field": "mineral:Pyroxene",
+      "value": 36.0
+    },
+    {
+      "entity_id": "10084",
+      "field": "mineral:Olivine",
+      "value": 2.0
+    },
+    {
+      "entity_id": "10084",
+      "field": "mineral:Ilmenite",
+      "value": 15.0
+    },
+    {
+      "entity_id": "10084",
+      "field": "mineral:Other",
+      "value": 3.0
+    },
+    {
+      "entity_id": "12070",
+      "field": "coordinates",
+      "value": {
+        "lat": -3.0128,
+        "lon": -23.4219
+      }
+    },
+    {
+      "entity_id": "12070",
+      "field": "type",
+      "value": "Mare (Low-Ti Basalt)"
+    },
+    {
+      "entity_id": "12070",
+      "field": "oxide:Cr2O3",
+      "value": 0.34
+    },
+    {
+      "entity_id": "12070",
+      "field": "mineral:Plagioclase",
+      "value": 23.0
+    },
+    {
+      "entity_id": "12070",
+      "field": "mineral:Pyroxene",
+      "value": 46.0
+    },
+    {
+      "entity_id": "12070",
+      "field": "mineral:Olivine",
+      "value": 6.0
+    },
+    {
+      "entity_id": "12070",
+      "field": "mineral:Ilmenite",
+      "value": 4.0
+    },
+    {
+      "entity_id": "12070",
+      "field": "mineral:Agglutinates",
+      "value": 14.0
+    },
+    {
+      "entity_id": "12070",
+      "field": "mineral:Glass",
+      "value": 5.0
+    },
+    {
+      "entity_id": "12070",
+      "field": "mineral:Other",
+      "value": 2.0
+    },
+    {
+      "entity_id": "14163",
+      "field": "coordinates",
+      "value": {
+        "lat": -3.6453,
+        "lon": -17.4714
+      }
+    },
+    {
+      "entity_id": "14163",
+      "field": "sample_description",
+      "value": "Comprehensive regolith soil from Fra Mauro formation, KREEP-rich highland material"
+    },
+    {
+      "entity_id": "14163",
+      "field": "oxide:Cr2O3",
+      "value": 0.23
+    },
+    {
+      "entity_id": "14163",
+      "field": "oxide:FeO",
+      "value": 10.4
+    },
+    {
+      "entity_id": "14163",
+      "field": "oxide:MnO",
+      "value": 0.14
+    },
+    {
+      "entity_id": "14163",
+      "field": "oxide:Na2O",
+      "value": 0.7
+    },
+    {
+      "entity_id": "14163",
+      "field": "mineral:Pyroxene",
+      "value": 27.0
+    },
+    {
+      "entity_id": "14163",
+      "field": "mineral:Olivine",
+      "value": 5.0
+    },
+    {
+      "entity_id": "14163",
+      "field": "mineral:Ilmenite",
+      "value": 1.0
+    },
+    {
+      "entity_id": "14163",
+      "field": "mineral:Other",
+      "value": 3.0
+    },
+    {
+      "entity_id": "15271",
+      "field": "coordinates",
+      "value": {
+        "lat": 26.1322,
+        "lon": 3.6339
+      }
+    },
+    {
+      "entity_id": "15271",
+      "field": "oxide:SiO2",
+      "value": 46.8
+    },
+    {
+      "entity_id": "15271",
+      "field": "oxide:TiO2",
+      "value": 1.4
+    },
+    {
+      "entity_id": "15271",
+      "field": "oxide:Al2O3",
+      "value": 14.6
+    },
+    {
+      "entity_id": "15271",
+      "field": "oxide:Cr2O3",
+      "value": 0.37
+    },
+    {
+      "entity_id": "15271",
+      "field": "oxide:FeO",
+      "value": 14.3
+    },
+    {
+      "entity_id": "15271",
+      "field": "oxide:MnO",
+      "value": 0.19
+    },
+    {
+      "entity_id": "15271",
+      "field": "oxide:MgO",
+      "value": 11.5
+    },
+    {
+      "entity_id": "15271",
+      "field": "oxide:CaO",
+      "value": 10.8
+    },
+    {
+      "entity_id": "15271",
+      "field": "oxide:Na2O",
+      "value": 0.39
+    },
+    {
+      "entity_id": "15271",
+      "field": "oxide:P2O5",
+      "value": 0.18
+    },
+    {
+      "entity_id": "15271",
+      "field": "mineral:Other",
+      "value": 2.0
+    },
+    {
+      "entity_id": "60501",
+      "field": "coordinates",
+      "value": {
+        "lat": -8.9734,
+        "lon": 15.5011
+      }
+    },
+    {
+      "entity_id": "60501",
+      "field": "oxide:SiO2",
+      "value": 45.0
+    },
+    {
+      "entity_id": "60501",
+      "field": "oxide:TiO2",
+      "value": 0.54
+    },
+    {
+      "entity_id": "60501",
+      "field": "oxide:Al2O3",
+      "value": 27.3
+    },
+    {
+      "entity_id": "60501",
+      "field": "oxide:Cr2O3",
+      "value": 0.1
+    },
+    {
+      "entity_id": "60501",
+      "field": "oxide:FeO",
+      "value": 5.1
+    },
+    {
+      "entity_id": "60501",
+      "field": "oxide:MnO",
+      "value": 0.07
+    },
+    {
+      "entity_id": "60501",
+      "field": "oxide:MgO",
+      "value": 5.7
+    },
+    {
+      "entity_id": "60501",
+      "field": "oxide:CaO",
+      "value": 15.7
+    },
+    {
+      "entity_id": "60501",
+      "field": "oxide:Na2O",
+      "value": 0.46
+    },
+    {
+      "entity_id": "60501",
+      "field": "oxide:K2O",
+      "value": 0.17
+    },
+    {
+      "entity_id": "60501",
+      "field": "oxide:P2O5",
+      "value": 0.11
+    },
+    {
+      "entity_id": "60501",
+      "field": "mineral:Plagioclase",
+      "value": 60.0
+    },
+    {
+      "entity_id": "60501",
+      "field": "mineral:Pyroxene",
+      "value": 13.0
+    },
+    {
+      "entity_id": "60501",
+      "field": "mineral:Olivine",
+      "value": 3.0
+    },
+    {
+      "entity_id": "60501",
+      "field": "mineral:Ilmenite",
+      "value": 0.5
+    },
+    {
+      "entity_id": "60501",
+      "field": "mineral:Agglutinates",
+      "value": 17.0
+    },
+    {
+      "entity_id": "60501",
+      "field": "mineral:Glass",
+      "value": 4.0
+    },
+    {
+      "entity_id": "60501",
+      "field": "mineral:Other",
+      "value": 2.5
+    },
+    {
+      "entity_id": "71501",
+      "field": "coordinates",
+      "value": {
+        "lat": 20.1908,
+        "lon": 30.7717
+      }
+    },
+    {
+      "entity_id": "71501",
+      "field": "sample_description",
+      "value": "Bulk regolith soil from station 1A near Steno Crater, mare-highland mixed regolith"
+    },
+    {
+      "entity_id": "71501",
+      "field": "oxide:SiO2",
+      "value": 43.2
+    },
+    {
+      "entity_id": "71501",
+      "field": "oxide:TiO2",
+      "value": 4.2
+    },
+    {
+      "entity_id": "71501",
+      "field": "oxide:Al2O3",
+      "value": 17.1
+    },
+    {
+      "entity_id": "71501",
+      "field": "oxide:Cr2O3",
+      "value": 0.33
+    },
+    {
+      "entity_id": "71501",
+      "field": "oxide:FeO",
+      "value": 12.2
+    },
+    {
+      "entity_id": "71501",
+      "field": "oxide:MnO",
+      "value": 0.17
+    },
+    {
+      "entity_id": "71501",
+      "field": "oxide:MgO",
+      "value": 10.4
+    },
+    {
+      "entity_id": "71501",
+      "field": "oxide:CaO",
+      "value": 11.8
+    },
+    {
+      "entity_id": "71501",
+      "field": "oxide:Na2O",
+      "value": 0.4
+    },
+    {
+      "entity_id": "71501",
+      "field": "oxide:K2O",
+      "value": 0.13
+    },
+    {
+      "entity_id": "71501",
+      "field": "mineral:Olivine",
+      "value": 5.0
+    },
+    {
+      "entity_id": "71501",
+      "field": "mineral:Glass",
+      "value": 6.0
+    },
+    {
+      "entity_id": "71501",
+      "field": "mineral:Other",
+      "value": 3.0
+    },
+    {
+      "entity_id": "CE5C0400",
+      "field": "type",
+      "value": "Mare (Young Low-Ti Basalt, ~2.0 Ga)"
+    },
+    {
+      "entity_id": "CE5C0400",
+      "field": "sample_description",
+      "value": "Scooped regolith from lunar surface, youngest known mare basalt (~2.0 Ga), low-Ti/low-Al/low-K type"
+    },
+    {
+      "entity_id": "CE5C0400",
+      "field": "oxide:SiO2",
+      "value": 42.2
+    },
+    {
+      "entity_id": "CE5C0400",
+      "field": "oxide:Al2O3",
+      "value": 10.8
+    },
+    {
+      "entity_id": "CE5C0400",
+      "field": "oxide:Cr2O3",
+      "value": 0.49
+    },
+    {
+      "entity_id": "CE5C0400",
+      "field": "oxide:MnO",
+      "value": 0.28
+    },
+    {
+      "entity_id": "CE5C0400",
+      "field": "oxide:MgO",
+      "value": 6.3
+    },
+    {
+      "entity_id": "CE5C0400",
+      "field": "oxide:CaO",
+      "value": 10.3
+    },
+    {
+      "entity_id": "CE5C0400",
+      "field": "oxide:Na2O",
+      "value": 0.33
+    },
+    {
+      "entity_id": "CE5C0400",
+      "field": "oxide:K2O",
+      "value": 0.08
+    },
+    {
+      "entity_id": "CE5C0400",
+      "field": "oxide:P2O5",
+      "value": 0.12
+    }
+  ]
+}

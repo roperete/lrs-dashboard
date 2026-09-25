@@ -1,0 +1,478 @@
+[
+ {
+  "simulant_id": "S159",
+  "name": "Lunar90",
+  "outcome": "record created"
+ },
+ {
+  "simulant_id": "S159",
+  "reference_id": "RN-S159-1",
+  "outcome": "reference created"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "institution",
+  "value": "Lumina Sustainable Materials Ltd.",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "institution",
+  "value": "Lumina Sustainable Materials Ltd. (https://www.luminamaterials.com/about-us; Batch of 2023)",
+  "outcome": "not applied: a second value for the field (the first, from a table, is kept)"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "lunar_sample_reference",
+  "value": "Highlands",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "particle_size_distribution",
+  "value": "0–90 μm",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "particle_size_distribution",
+  "value": "fine silt fraction to coarse silt",
+  "outcome": "not applied: a second value for the field (the first, from a table, is kept)"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "bulk_density",
+  "value": "loose 0.89 g/cm3; tapped 1.18 g/cm3",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "bulk_density_range",
+  "value": "0.94–1.57 (g/cm3, min-max dry unit weight, density-equivalent)",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "bulk_density_range",
+  "value": "9.26 and 15.43 kN/m3 (min and max dry unit weight, un-converted)",
+  "outcome": "not applied: a second value for the field (the first, from a table, is kept)"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "particle_morphology",
+  "value": "average sphericity (VisiSize, 2D, Vulcan Facility) = 0.46",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "mineral:trace phases (AMICS, no % given)",
+  "value": "K feldspar, Na plagioclase, Na-Ca plagioclase, biotite, chlorite, clinopyroxene and amphibole, Mg silicates, volcanic glass, titanite, apatite, calcite, pyrite, Ti oxides and ilmenite",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "mineral:anorthite (Mineralogic SEM-EDS, petrolab, wt%)",
+  "value": "87.4–89.9 wt% (stated jointly for 'the samples', i.e. all three Lumina products)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "mineral:andesine (Mineralogic SEM-EDS, petrolab, wt%)",
+  "value": "less than 0.4 wt% (joint, trace)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "mineral:anorthoclase (Mineralogic SEM-EDS, petrolab, wt%)",
+  "value": "up to 0.1 wt% (joint, trace)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "mineral:clinozoisite (Mineralogic SEM-EDS, petrolab, wt%)",
+  "value": "3.1–5.8 wt% (joint)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "mineral:additional minor/trace phases (Mineralogic SEM-EDS, petrolab, no % given)",
+  "value": "mica group minerals, clay minerals, carbonates, basaltic glass, sulphides, augite, accessory phases, iron oxides, and enstatite (joint)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "mineral:plagioclase (XRD, identified as bytownite An85)",
+  "value": "comprises the bulk of the mineralogy (no wt% given); joint statement for all Lumina samples",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "oxide:SiO2",
+  "value": "48.4-49.8 wt% (joint range stated for 'the Lumina samples')",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "oxide:TiO2",
+  "value": "0.05–0.1 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "oxide:MgO",
+  "value": "0.1–0.4 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "oxide:Al2O3",
+  "value": "30-31.2 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "oxide:CaO",
+  "value": "14.9–15.5 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "field": "oxide:Na2O",
+  "value": "2.3–2.5 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S159",
+  "outcome": "not merged: a second mineral analysis (Mineralogic SEM-EDS, petrolab, wt%)",
+  "rows": [
+   [
+    "quartz",
+    3.1
+   ]
+  ]
+ },
+ {
+  "simulant_id": "S159",
+  "outcome": "mineral table added",
+  "rows": 5
+ },
+ {
+  "simulant_id": "S160",
+  "name": "Lunar250",
+  "outcome": "record created"
+ },
+ {
+  "simulant_id": "S160",
+  "reference_id": "RN-S160-1",
+  "outcome": "reference created"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "institution",
+  "value": "Lumina Sustainable Materials Ltd.",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "lunar_sample_reference",
+  "value": "Highlands",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "lunar_sample_reference",
+  "outcome": "not applied: not confirmed by the checker"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "particle_size_distribution",
+  "value": "0–250 μm",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "particle_size_distribution",
+  "value": "fine silt to medium sand",
+  "outcome": "not applied: a second value for the field (the first, from a table, is kept)"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "bulk_density",
+  "value": "loose 1.14 g/cm3; tapped 1.45 g/cm3",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "bulk_density_range",
+  "value": "1.21–1.9 (g/cm3, min-max dry unit weight, density-equivalent)",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "bulk_density_range",
+  "value": "11.87 and 18.67 kN/m3 (min and max dry unit weight, un-converted)",
+  "outcome": "not applied: a second value for the field (the first, from a table, is kept)"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "particle_morphology",
+  "value": "average sphericity (VisiSize, 2D, Vulcan Facility) = 0.47",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "mineral:trace phases (AMICS, no % given)",
+  "value": "K feldspar, Na plagioclase, Na-Ca plagioclase, biotite, chlorite, Mg-Al silicates, clinopyroxene and amphibole, volcanic glass, titanite and calcite",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "mineral:anorthite (Mineralogic SEM-EDS, petrolab, wt%)",
+  "value": "87.4–89.9 wt% (joint, all three Lumina products)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "mineral:andesine (Mineralogic SEM-EDS, petrolab, wt%)",
+  "value": "less than 0.4 wt% (joint, trace)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "mineral:anorthoclase (Mineralogic SEM-EDS, petrolab, wt%)",
+  "value": "up to 0.1 wt% (joint, trace)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "mineral:clinozoisite (Mineralogic SEM-EDS, petrolab, wt%)",
+  "value": "3.1–5.8 wt% (joint)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "mineral:additional minor/trace phases (Mineralogic SEM-EDS, petrolab, no % given)",
+  "value": "mica group minerals, clay minerals, carbonates, basaltic glass, sulphides, augite, accessory phases, iron oxides, and enstatite (joint)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "mineral:plagioclase (XRD, identified as bytownite An85)",
+  "value": "comprises the bulk of the mineralogy (no wt% given); joint statement",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "oxide:SiO2",
+  "value": "48.4-49.8 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "oxide:TiO2",
+  "value": "0.05–0.1 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "oxide:MgO",
+  "value": "0.1–0.4 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "oxide:Al2O3",
+  "value": "30-31.2 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "oxide:CaO",
+  "value": "14.9–15.5 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "field": "oxide:Na2O",
+  "value": "2.3–2.5 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S160",
+  "outcome": "not merged: a second mineral analysis (Mineralogic SEM-EDS, petrolab, wt%)",
+  "rows": [
+   [
+    "quartz",
+    5.3
+   ]
+  ]
+ },
+ {
+  "simulant_id": "S160",
+  "outcome": "mineral table added",
+  "rows": 4
+ },
+ {
+  "simulant_id": "S161",
+  "name": "Lunar2000",
+  "outcome": "record created"
+ },
+ {
+  "simulant_id": "S161",
+  "reference_id": "RN-S161-1",
+  "outcome": "reference created"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "institution",
+  "value": "Lumina Sustainable Materials Ltd.",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "lunar_sample_reference",
+  "value": "Highlands",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "particle_size_distribution",
+  "value": "0–2000 μm",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "particle_size_distribution",
+  "value": "coarse sand to fine gravel",
+  "outcome": "not applied: a second value for the field (the first, from a table, is kept)"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "particle_size_mean_um",
+  "value": 2400.0,
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "bulk_density",
+  "value": "loose 1.42 g/cm3; tapped 1.62 g/cm3",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "bulk_density_range",
+  "value": "1.33–1.79 (g/cm3, min-max dry unit weight, density-equivalent)",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "bulk_density_range",
+  "value": "13.10 and 17.63 kN/m3 (min and max dry unit weight, un-converted)",
+  "outcome": "not applied: a second value for the field (the first, from a table, is kept)"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "particle_morphology",
+  "value": "3D µCT morphology (NGI, Lumina2000 sample only): average volume 73 mm3; average volume-to-surface ratio ca. 14; average angularity 0.41; average aspect ratio 2.14; average sphericity 0.55",
+  "outcome": "value added with source"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "particle_morphology",
+  "value": "average sphericity (VisiSize, 2D, Vulcan Facility) = 0.51 (different method/value from the 0.55 µCT sphericity above)",
+  "outcome": "not applied: a second value for the field (the first, from a table, is kept)"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "mineral:trace phases (AMICS, no % given)",
+  "value": "K feldspar, Na plagioclase, Na-Ca plagioclase, biotite, chlorite, Mg-Al silicates, clinopyroxene, amphibole, volcanic glass, titanite and calcite",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "mineral:anorthite (Mineralogic SEM-EDS, petrolab, wt%)",
+  "value": "87.4–89.9 wt% (joint, all three Lumina products)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "mineral:andesine (Mineralogic SEM-EDS, petrolab, wt%)",
+  "value": "less than 0.4 wt% (joint, trace)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "mineral:anorthoclase (Mineralogic SEM-EDS, petrolab, wt%)",
+  "value": "up to 0.1 wt% (joint, trace)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "mineral:clinozoisite (Mineralogic SEM-EDS, petrolab, wt%)",
+  "value": "3.1–5.8 wt% (joint)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "mineral:additional minor/trace phases (Mineralogic SEM-EDS, petrolab, no % given)",
+  "value": "mica group minerals, clay minerals, carbonates, basaltic glass, sulphides, augite, accessory phases, iron oxides, and enstatite (joint)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "mineral:plagioclase (XRD, identified as bytownite An85)",
+  "value": "comprises the bulk of the mineralogy (no wt% given); joint statement",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "oxide:SiO2",
+  "value": "48.4-49.8 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "oxide:TiO2",
+  "value": "0.05–0.1 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "oxide:MgO",
+  "value": "0.1–0.4 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "oxide:Al2O3",
+  "value": "30-31.2 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "oxide:CaO",
+  "value": "14.9–15.5 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "field": "oxide:Na2O",
+  "value": "2.3–2.5 wt% (joint range)",
+  "outcome": "not applied: not a single number"
+ },
+ {
+  "simulant_id": "S161",
+  "outcome": "not merged: a second mineral analysis (Mineralogic SEM-EDS, petrolab, wt%)",
+  "rows": [
+   [
+    "quartz",
+    1.0
+   ]
+  ]
+ },
+ {
+  "simulant_id": "S161",
+  "outcome": "mineral table added",
+  "rows": 4
+ }
+]

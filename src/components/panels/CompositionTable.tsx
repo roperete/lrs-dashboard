@@ -1,30 +1,58 @@
 import React from 'react';
+import { RefSup } from '../ui/RefSup';
+import { LunarRefs } from '../ui/LunarRefs';
+import type { LunarCite } from '../../utils/lunarCitations';
 
 interface TableRow {
   name: string;
   value: number;
+  /** The lunar reference sample's value for the same component. */
   refValue?: number;
+  /** Where the lunar sample's value was read, shown as [L1] ... */
+  refValueCites?: LunarCite[];
+  /** Number of the document this row was read from, within the simulant's References list.
+   *  Shown on the row itself, even when every row cites the same document: a reader
+   *  checking one value should not have to look elsewhere for its source. */
+  refNumber?: number;
+  /** Hover text for that citation: the value as stated. */
+  refTooltip?: string;
+  /** The document it cites, the first line of the hover. */
+  refSource?: string;
 }
 
 interface CompositionTableProps {
   data: TableRow[];
   valueLabel: string;
   refLabel?: string;
+  /** Decimal places shown. Manufacturer sheets report oxides to two decimals; rounding
+   *  to one hid 0.06 as 0.1 and made the total disagree with the rows. Default 2. */
+  decimals?: number;
+  /** Below this sum the table is a partial analysis — only the components a source states —
+   *  and a "Total" would read as a failed analysis (NEU-1B's lone TiO2 row "totalled" 6.50%). */
+  partialBelow?: number;
+  /** A total is shown only when the rows sum to at least this (a complete analysis); below it
+   *  the rows are a partial or normalised table and a "Total" would mislead. */
+  completeFrom?: number;
+  /** Why no total is shown, when the caller knows (two iron rows, for instance). */
+  noTotalReason?: string;
 }
 
-export function CompositionTable({ data, valueLabel, refLabel }: CompositionTableProps) {
+export function CompositionTable({ data, valueLabel, refLabel, decimals = 2, partialBelow, completeFrom, noTotalReason }: CompositionTableProps) {
   const total = data.reduce((sum, d) => sum + d.value, 0);
-  const refTotal = refLabel ? data.reduce((sum, d) => sum + (d.refValue || 0), 0) : undefined;
+  const partial = !!noTotalReason || (partialBelow !== undefined && total < partialBelow) || (completeFrom !== undefined && total < completeFrom);
+  // No total for the lunar column: it would add only the rows this simulant has (Apollo 14's
+  // minerals "totalled" 49.00), which reads as the sample's own total.
+  const fmt = (v: number) => v.toFixed(decimals);
 
   return (
     <div className="bg-slate-800/30 rounded-xl border border-slate-700/30 overflow-hidden">
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-slate-700/50">
-            <th className="text-left py-2 px-3 text-xs font-bold text-slate-500 uppercase">Name</th>
-            <th className="text-right py-2 px-3 text-xs font-bold text-slate-500 uppercase">{valueLabel}</th>
+            <th className="text-left py-2 px-3 text-xs font-semibold text-slate-400">Name</th>
+            <th className="text-right py-2 px-3 text-xs font-semibold text-slate-400">{valueLabel}</th>
             {refLabel && (
-              <th className="text-right py-2 px-3 text-xs font-bold text-amber-500/70 uppercase">{refLabel}</th>
+              <th className="text-right py-2 px-3 text-xs font-semibold text-amber-400/80">{refLabel}</th>
             )}
           </tr>
         </thead>
@@ -32,20 +60,27 @@ export function CompositionTable({ data, valueLabel, refLabel }: CompositionTabl
           {data.map((row, i) => (
             <tr key={row.name} className={i % 2 === 0 ? 'bg-slate-800/20' : ''}>
               <td className="py-1.5 px-3 text-slate-300">{row.name}</td>
-              <td className="py-1.5 px-3 text-right text-slate-200 font-mono">{row.value.toFixed(1)}</td>
+              <td className="py-1.5 px-3 text-right text-slate-200 font-mono">
+                {fmt(row.value)}
+                {row.refNumber != null && (
+                  <RefSup n={row.refNumber} fallback={row.refTooltip} source={row.refSource} align="right" />
+                )}
+              </td>
               {refLabel && (
                 <td className="py-1.5 px-3 text-right text-amber-400/70 font-mono">
-                  {row.refValue !== undefined ? row.refValue.toFixed(1) : '-'}
+                  {row.refValue !== undefined ? <>{fmt(row.refValue)}{row.refValueCites && <LunarRefs cites={row.refValueCites} prefix="L" align="right" />}</> : '\u2014'}
                 </td>
               )}
             </tr>
           ))}
           <tr className="border-t border-slate-700/50 font-bold">
-            <td className="py-2 px-3 text-slate-400">Total</td>
-            <td className="py-2 px-3 text-right text-slate-200 font-mono">{total.toFixed(1)}</td>
+            <td className="py-2 px-3 text-slate-400" title={noTotalReason || (partial
+              ? 'The source states only these components, or a table that does not add up to 100, so there is no total to show.'
+              : 'Sum of the rows listed above')}>{noTotalReason ? 'No total' : partial ? 'Partial table' : 'Total'}</td>
+            <td className="py-2 px-3 text-right text-slate-400 font-mono">{partial ? '—' : <span className="text-slate-200">{fmt(total)}</span>}</td>
             {refLabel && (
               <td className="py-2 px-3 text-right text-amber-400/70 font-mono">
-                {refTotal !== undefined ? refTotal.toFixed(1) : '-'}
+                {'\u2014'}
               </td>
             )}
           </tr>

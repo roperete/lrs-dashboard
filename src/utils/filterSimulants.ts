@@ -21,10 +21,12 @@ export function filterSimulantsDynamic(
   return simulants.filter(s => {
     // Search query
     if (searchQuery) {
+      // Any of these can be empty on a record (Lunar90/250/2000 have no type or country yet);
+      // an empty field simply does not match.
       const q = searchQuery.toLowerCase();
-      const match = s.name.toLowerCase().includes(q) ||
-        s.country_code.toLowerCase().includes(q) ||
-        s.type.toLowerCase().includes(q) ||
+      const match = (s.name || '').toLowerCase().includes(q) ||
+        (s.country_code || '').toLowerCase().includes(q) ||
+        (s.type || '').toLowerCase().includes(q) ||
         (s.institution || '').toLowerCase().includes(q);
       if (!match) return false;
     }
@@ -103,6 +105,28 @@ export function filterSimulantsDynamic(
           break;
         }
 
+        case 'has_geotechnical': {
+          const has = [s.bulk_density, s.friction_angle, s.cohesion].some(v => v != null && v !== '');
+          if (has !== (f.values[0] === 'yes')) return false;
+          break;
+        }
+
+        case 'bulk_density':
+        case 'd50':
+        case 'friction_angle':
+        case 'cohesion': {
+          // a simulant with no value for the property is left out once a range is set
+          const raw = f.property === 'd50' ? s.particle_size_d50 : s[f.property];
+          const x = raw == null || raw === '' ? null : Number(raw);
+          const min = f.values[0] ? parseFloat(f.values[0]) : null;
+          const max = f.values[1] ? parseFloat(f.values[1]) : null;
+          if (min == null && max == null) break;
+          if (x == null || Number.isNaN(x)) return false;
+          if (min != null && x < min) return false;
+          if (max != null && x > max) return false;
+          break;
+        }
+
         case 'year': {
           const year = typeof s.release_date === 'number' ? s.release_date : null;
           const min = f.values[0] ? parseInt(f.values[0]) : null;
@@ -118,7 +142,8 @@ export function filterSimulantsDynamic(
           if (!q) break;
           const refs = ctx.referencesBySimulant.get(s.simulant_id);
           if (!refs || refs.length === 0) return false;
-          const match = refs.some(r => r.reference_text.toLowerCase().includes(q));
+          // 61 references have a title but no citation text: search both, and the authors
+          const match = refs.some(r => [r.reference_text, r.title, r.authors].some(t => (t || '').toLowerCase().includes(q)));
           if (!match) return false;
           break;
         }

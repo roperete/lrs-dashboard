@@ -1,0 +1,295 @@
+[
+ {
+  "entity_id": "A11",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A11",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A12",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A12",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A12",
+  "field": "samples_returned",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A14",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A14",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A14",
+  "field": "samples_returned",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "A14",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "A17",
+  "field": "description",
+  "outcome": "source written (4 claims)"
+ },
+ {
+  "entity_id": "10084",
+  "field": "type",
+  "outcome": "no source: differs, checker UNCERTAIN"
+ },
+ {
+  "entity_id": "10084",
+  "field": "mineral",
+  "outcome": "the table cites more than one document: one analysis per table",
+  "needs_review": true,
+  "documents": [
+   "LD-001",
+   "LD-002"
+  ]
+ },
+ {
+  "entity_id": "12070",
+  "field": "type",
+  "outcome": "no source: differs, checker UNCERTAIN"
+ },
+ {
+  "entity_id": "S1",
+  "field": "lat",
+  "outcome": "corrected to the source",
+  "was": "-2.474",
+  "now": "-2.4745"
+ },
+ {
+  "entity_id": "S1",
+  "field": "lng",
+  "outcome": "corrected to the source",
+  "was": "-43.339",
+  "now": "316.6602"
+ },
+ {
+  "entity_id": "S1",
+  "field": "description",
+  "outcome": "no source: not every claim is confirmed",
+  "needs_review": true,
+  "unsupported": [
+   "conducted surface mechanics experiments"
+  ]
+ },
+ {
+  "entity_id": "S3",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "S3",
+  "field": "lat",
+  "outcome": "corrected to the source",
+  "was": "-3.01612",
+  "now": "-3.0162"
+ },
+ {
+  "entity_id": "S3",
+  "field": "lng",
+  "outcome": "corrected to the source",
+  "was": "-23.41791",
+  "now": "336.5820"
+ },
+ {
+  "entity_id": "S3",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "CE3",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE3",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE3",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE3",
+  "field": "bulk_density",
+  "outcome": "no source: range_only, checker CONFIRMED"
+ },
+ {
+  "entity_id": "CE3",
+  "field": "description",
+  "outcome": "source written (3 claims)"
+ },
+ {
+  "entity_id": "CE4",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE4",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE4",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE4",
+  "field": "description",
+  "outcome": "source written (3 claims)"
+ },
+ {
+  "entity_id": "CE5",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5",
+  "field": "samples_returned",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE5",
+  "field": "description",
+  "outcome": "source written (2 claims)"
+ },
+ {
+  "entity_id": "CE6",
+  "field": "date",
+  "outcome": "corrected to the source",
+  "was": "1 June 2024, 22:23:16 UTC",
+  "now": "06:24 on June 2, 2024 (Beijing time)"
+ },
+ {
+  "entity_id": "CE6",
+  "field": "lat",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CE6",
+  "field": "lng",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CH3",
+  "field": "date",
+  "outcome": "source written"
+ },
+ {
+  "entity_id": "CH3",
+  "field": "description",
+  "outcome": "no source: not every claim is confirmed",
+  "needs_review": true,
+  "unsupported": [
+   "First Indian lunar landing"
+  ]
+ },
+ {
+  "entity_id": "L13",
+  "field": "friction_angle",
+  "outcome": "no source: not_found, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "32°",
+  "correct_reference": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/Malenkov_2016_FrontMechEng11-60_Lunokhod1Chassis_Luna13Soil_wayback20221219.txt",
+  "problems": [
+   "An allowed document states the value, so the status should be supported (32°) with Malenkov 2016 as the reference."
+  ]
+ },
+ {
+  "entity_id": "L13",
+  "field": "cohesion",
+  "outcome": "no source: not_found, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "0.5 kPa",
+  "correct_reference": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/Malenkov_2016_FrontMechEng11-60_Lunokhod1Chassis_Luna13Soil_wayback20221219.txt",
+  "problems": [
+   "The not_found status is wrong: an open peer-reviewed article gives Luna 13 cohesion."
+  ]
+ },
+ {
+  "entity_id": "L13",
+  "field": "bearing_capacity",
+  "outcome": "no source: not_found, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "44 kPa",
+  "correct_reference": "/Volumes/Extreme SSD/Spring - Forest on the moon/DIRT/Sources/papers/lunar/Malenkov_2016_FrontMechEng11-60_Lunokhod1Chassis_Luna13Soil_wayback20221219.txt",
+  "problems": [
+   "The not_found status is wrong: an allowed document gives a Luna 13 bearing value, and it differs from the stored value (44 vs 68 kPa)."
+  ]
+ },
+ {
+  "entity_id": "L13",
+  "field": "description",
+  "outcome": "source written (3 claims)"
+ },
+ {
+  "entity_id": "L17",
+  "field": null,
+  "reference": "Soil mechanics results of Luna 16 and Lunokhod 1: A preliminary report",
+  "outcome": "document not confirmed to name this site or sample"
+ },
+ {
+  "entity_id": "L17",
+  "field": "friction_angle",
+  "outcome": "no source: range_only, checker REFUTED",
+  "needs_review": true,
+  "correct_value": "42°",
+  "correct_reference": "R3",
+  "problems": [
+   "The document states a single value for this site, so the status should be differs (42°), not range_only."
+  ]
+ },
+ {
+  "entity_id": "L17",
+  "field": "cohesion",
+  "outcome": "no source: range_only, checker REFUTED"
+ },
+ {
+  "entity_id": "L17",
+  "field": "bearing_capacity",
+  "outcome": "no source: supported, checker REFUTED"
+ },
+ {
+  "entity_id": "L21",
+  "field": "friction_angle",
+  "outcome": "no source: range_only, checker REFUTED"
+ },
+ {
+  "entity_id": "L21",
+  "field": "cohesion",
+  "outcome": "no source: range_only, checker REFUTED"
+ },
+ {
+  "entity_id": "L21",
+  "field": "bearing_capacity",
+  "outcome": "no source: range_only, checker REFUTED"
+ },
+ {
+  "entity_id": "L20",
+  "field": "samples_returned",
+  "outcome": "no source: differs, checker UNCERTAIN"
+ }
+]

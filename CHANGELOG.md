@@ -1,0 +1,540 @@
+# Changelog
+
+Every push carries a new version. `python3 scripts/bump_version.py --body "..."` writes both
+the sidebar label and the section below it; `scripts/push_staging.sh` refuses to push while the
+sidebar still shows the version already deployed. Data changes are logged per field under
+`documentation/`.
+
+## v2.9.25 — 2026-09-25 (staging)
+
+The database is live. The public address, roperete.github.io/lrs-dashboard, serves the app instead of the maintenance page, with the same content as this staging release (v2.9.24). The page now has a description for search results and link previews.
+
+## v2.9.24 — 2026-09-25 (staging)
+
+Ready for users: the Moon's 19 sites back with papers behind them, the Gasteiner checks applied and credited, and the page cleared of review wording.
+
+**Moon**
+- The tracing run found the paper or agency record behind the values that had come from wikis and web pages: all 19 sites are on the map again, with 180 values cited to 44 documents (Davies & Colvin 2000 for the Apollo landers, LROC and Wagner et al. 2017, Chang'e and Chandrayaan-3 papers, the Surveyor mission reports).
+- Surveyor 1 and 3 longitudes are stored from −180 to 180 (the LROC table gives 0 to 360 °E); the Chang'e 6 date is given in UTC like the others (the paper states Beijing time).
+- Descriptions keep only confirmed claims: Surveyor 1 no longer "conducted surface mechanics experiments", which its mission report contradicts.
+- Friction and cohesion columns appear only when a site has a value (none does yet).
+
+**Simulants** (the values Gasteiner et al. list, read in the papers they name)
+- EAC-1A's bulk density is 1.45 g/cm³, as its paper states; the 1.95 was a compacted test specimen.
+- PolyU-1 gains its angle of repose (38.9°) and density range (1.22–1.83 g/cm³).
+- Nine values the papers do not state were cleared (none was shown): a density that belongs to TLS-01, OPRH2N's values under OPRH3N, midpoints and ends of ranges. Five stay hidden where the paper could not be opened.
+
+**Credits**
+- The Lunar Regolith Database (Gasteiner, Murdoch & D'Angelo 2026, Recherche Data Gouv, version of 27 August 2026, Licence Ouverte 2.0) is credited as its licence asks: in Help → Sources and credits, under each simulant's About, in every CSV export, in data.json and in CREDITS.md.
+
+**For users**
+- Only references confirmed to name the simulant are listed (27 unchecked ones are no longer shown; no value cited them).
+- The References column reads "7 sources · View"; the Moon table likewise.
+- Review wording is gone: "named in N documents", "confirmed by a reader", "verified against source", "flagged for a second human check", internal IDs. A simulant without a composition shows one short note and no lunar comparison.
+- References show authors and year, and a View link, or Find it (Google Scholar) when no link is known.
+- The globe turns by default (not with reduced motion) and pauses while a simulant or site is open.
+- The About list is two columns again; a pane opens at the top for each new simulant.
+- A page left open across a new release reloads itself instead of failing to open a view.
+
+## v2.9.23 — 2026-09-25 (staging)
+
+Fixes from the second design review (documentation/ui-ux-review-2-2026-09-26.md).
+
+- A lunar sample is suggested and listed for comparison only when it shows at least one cited
+  oxide or mineral. BH-1 showed an Apollo 16 column of dashes while the selector said "No
+  reference comparison" (60501's values are all hidden until a source confirms them).
+- The Figures of Merit table fits the pane: the scale note sits under the score, and long
+  "against" texts wrap. Scores and their marks were cut off.
+- Every simulant value in the lunar comparison carries its [n]; the phone list shows each
+  value's reference number.
+- The comparison shows one row per component whatever its case ("Glass-rich basalt" and
+  "Glass-rich Basalt" were two rows, as were plagioclase, pyroxene and quartz).
+- Crash scenarios for each; each was run against v2.9.22 and fails there.
+
+## v2.9.22 — 2026-09-25 (staging)
+
+No Wikipedia, and only papers or agency records on the Moon; the loading screen and the Find pane carry the sponsor again; the 2D map shows its pins.
+
+**Sources** (owner, 2026-09-25: "please dont reference wikipedia. If the data is not peer-reviewed, dont include it")
+- Wikipedia and other wikis are gone as sources: 13 Moon documents and the 31 values they carried, 3 simulant references (none carried a value), and the Wikipedia links in the mineral-sourcing list. The apply steps now refuse a wiki page, and the export never publishes one (scripts/source_policy.py).
+- The Moon keeps peer-reviewed papers, the flying agency's own records (mission and technical reports, the Lunar Sample Compendium, the NSSDCA catalogue, LROC coordinate tables) and the Lunar Sourcebook. Web articles, educational pages and compilations (PSRD, NASA education pages, the Gasteiner CSV) are gone: 18 more values.
+- The Moon now shows 11 of its 19 sites: Apollo 11, 12 and 14, Chang'e 3, 4 and 6, and Surveyor 1 and 3 had their coordinates only from wikis. Agents are tracing each removed value to the paper behind it, and the sites return as their values are confirmed.
+
+**Interface**
+- The loading screen shows the database, its version, and its sponsor (CNES) and developer (The Spring Institute), and stays up until the first view is drawn (at least 1.5 s, at most 12 s), instead of an empty "Loading the view…". Switching to a view that is still loading shows the same, inside the view.
+- The Find pane ends with "Send us feedback" (comments, suggestions, or a new simulant you have made) and the two logos.
+- "Ask AI about this simulant" is back under the references, with a note that its answers are not checked by the database.
+- The 2D Earth map shows its pins at the default zoom again. Since v2.9.19 a window wider than the map made Leaflet's visible bounds run to longitudes like −3857°, so every pin counted as off screen until one zoomed in.
+
+**Process**
+- Crash scenarios check that the loading screen clears, that the Find pane has the feedback link and the logos, that the map has pins at its default zoom, and that Ask AI is there. The scenario runner waits for the loading screen instead of a fixed time.
+- The projection check covers points off the map.
+
+## v2.9.21 — 2026-09-25 (staging)
+
+Fixes to the tables, and the last three lunar samples checked.
+
+**Interface**
+- Hovering one citation mark shows only its own tooltip; a row with several marks opened all of
+  them.
+- The Moon table has a **Sources** column again: how many documents a site's values are cited
+  to, and the first one. Clicking opens the site at its source list.
+- The References column says what is missing: "7 · 1 unchecked" means seven documents on file,
+  one that no reader has yet confirmed names the simulant. A plain number means all are
+  confirmed.
+
+**Moon**
+- 15271, 60501 and 71501 checked against the Lunar Sample Compendium. 15271 and 71501 show their
+  modal mineralogy as the compendium gives it (Basu 1981; Heiken & McKay 1974, 90–150 µm), and
+  15271's station is corrected to station 6. The stored oxides were the Lunar Sourcebook's
+  mission-average soils, not these samples; the compendium gives each as a range of analyses,
+  so they are not shown. 193 values are now cited to 47 documents.
+
+**Process**
+- The crash scenarios check that one hover opens one tooltip, and that the Sources cell opens
+  the site's sources. The type check (`npm run lint`) is clean.
+
+## v2.9.20 — 2026-09-25 (staging)
+
+The design review, applied; the Moon section cited value by value; a units check of every value.
+
+**Interface** (design review, documentation/ui-ux-review-2026-09-25.md)
+- A fixed top bar holds the view switch, Export, Feedback and Help, so an open pane never covers
+  them. The version shows there and on the loading screen.
+- The left pane is **Find**: search, one-click chips with counts (type, availability, which data a
+  simulant has), ranges for bulk density, D50, friction angle and cohesion, more filters, and a
+  one-line results list. On the Moon it is **Missions**, with programme chips. A chip under the
+  bar keeps active filters visible when the pane is closed.
+- The table opens a simulant only in the right pane (row click, Enter, ↑/↓); the chemistry,
+  mineralogy and reference cells open the pane at that section. Name stays in view when the
+  table scrolls sideways. On phones the table is a list.
+- One **compare tray** collects simulants from the pane, the table and the list; compare two to
+  four. Differences have a sign, and a value no source gives shows "—", not 0.00. Every compared
+  value carries its citation.
+- Citation marks are buttons: hover, focus or tap shows the document, the page and the quote;
+  clicking jumps to the reference. The pane has jump links (Properties, Composition, FoM,
+  Purchase, About, References), a compact About list, and Figures of Merit with their scale.
+- Links can be shared: the address holds the view, the simulant, the compare tray and the filters.
+- Export writes every value with its reference number, location and quote, and the reference list.
+- The lunar sample is suggested for each simulant, not carried over from the previous one.
+- No uppercase on units or names (µm had become ΜM), DOIs with brackets link correctly, higher
+  text contrast, Escape closes the top panel, no forced splash, the globe no longer spins.
+- A failure in one part (the 3D globe without WebGL, say) shows a message there instead of
+  blanking the page.
+
+**Data**
+- Units check of 280 property values and 915 composition rows (two finders, two checkers,
+  documentation/units-audit-2026-09-25.json). Omitted: three rheometer strengths shown as
+  cohesion, TiO2 shown as Ti, a compacted test specimen shown as bulk density, implausible
+  mineral rows, oxide rows from another batch. Restated as the document states them: log χ with
+  its unit, GreenSpar's plagioclase (XRD 82 wt%, not a CIPW norm), "glass-rich basalt",
+  "opaques (probably magnetite)". Each mineral table now says its basis (vol%, area%, modal,
+  normative); a table is totalled only when complete, and never with two iron rows.
+- Map sites corrected to their sources: GreenSpar at the White Mountain mine in Greenland; FEFU-1
+  removed from the map (no document places it; the Moscow point was a placeholder).
+- Lunar90, Lunar250 and Lunar2000 are Highlands; Lunar250 has a second reference.
+
+**Moon**
+- The 19 landing sites now live in the database, and every value shown on the Moon — in the site
+  panel, the Moon table and the lunar comparisons — carries its citation ([n], or [L n] beside a
+  simulant). 170 values are cited to 44 documents (NSSDCA, mission reports, the Lunar
+  Sourcebook, LROC coordinates, sample compendia); 47 were corrected to what their document
+  states (coordinates to LRO-derived values, returned masses to the curated figures). Values no
+  document states as one number — most Apollo soil values, which the sources give as ranges or
+  per station — are no longer shown. Each read by one agent and checked by another.
+- 4 of the 7 lunar reference samples show cited compositions; 15271, 60501 and 71501 wait
+  for their checker (session limit) and are hidden until then.
+
+**Process**
+- Scenario tests drive the built app in headless Chrome (scripts/ui_scenario.mjs, scripts/crash/):
+  every view, search and filter, every sort, panes, comparisons, the phone layout.
+
+## v2.9.19 — 2026-09-25 (staging)
+
+Two more crash fixes; the 2D Earth map in Equal Earth; drag to close the side panels; the document's name on every citation hover.
+
+**Interface**
+- Sorting the table by Country, or typing in the Reference filter, blanked the page, like the
+  search did in v2.9.17: the three Lumina simulants have no country yet, and 61 references
+  have a title but no citation text. Both now allow empty fields; the Reference filter also
+  searches titles and authors, so those references can be found.
+- The 2D Earth map uses the Equal Earth projection, endorsed by the UN General Assembly on
+  4 September 2026 (resolution A/80/L.104) in place of Mercator, which enlarges land towards
+  the poles. Map tiles exist only in Mercator, so the base map is now drawn: ocean, country
+  outlines and a 30° graticule. Coordinates are unchanged; only how they are drawn.
+- Hovering a citation mark [n] now shows first which document it is (author, year, title),
+  then the page and the quote. Before, nothing on the hover said which reference [n] was.
+- The right panel and the left panel each have a grip on their inner edge: drag it towards the
+  panel's own edge to close it (down on phones). A short drag springs back.
+- The lunar comparison table printed "+" for every difference; it now shows the sign.
+
+**Process**
+- `check:projection` tests the map projection against the published Equal Earth formulas, north-up
+  and east-right, round trips and equal area, and that all 146 simulant sites stay in their
+  country outline; `check:filters` now covers the Reference filter and the Country sort.
+
+## v2.9.18 — 2026-09-25 (staging)
+
+Hotfix: searching in the left panel no longer blanks the page.
+
+**Interface**
+- Typing in the left panel's search box crashed the whole page on the first letter. The three
+  Lumina simulants added in v2.9.17 have no type or country yet, and the search read those
+  fields without allowing them to be empty. An empty field now simply does not match.
+
+**Process**
+- `scripts/check_filters.tsx` runs the search and every filter over the real data file, so an
+  empty field cannot break them unnoticed.
+
+## v2.9.17 — 2026-09-25 (staging)
+
+Figures of Merit, each traced to the table that prints it; three Lumina highland simulants.
+
+**Data**
+- 138 Figures of Merit for 23 simulants: Slabic et al. 2024 (*Lunar Regolith Simulant User's
+  Guide, Revision A*, 83 scores on 0–100), Schrader et al. 2010 (39 scores on 0–1) and the
+  Hispansion TLH-0 and TLM-0 data sheets (16). Each score is stored with what it measures
+  (chemistry, mineralogy, particle size, shape…), the lunar reference it is compared with,
+  its scale, and the table cell it was read from. Every score was confirmed by a second
+  agent against the page.
+- Not stored: two scores for "OB-1(A*)", which may be a variant of OB-1 (owner's decision
+  pending); APL 2020's supplier colour ratings, which are not product scores.
+- New simulants S159 Lunar90, S160 Lunar250 and S161 Lunar2000 (Lumina Sustainable Materials
+  Ltd.), from Zémeny et al. 2024, *Front. Space Technol.*: supplier, highland label, size
+  range, min–max dry density, sphericity and mineral table, each cited.
+- Lunar2000's reported mean particle size (2.4 mm) is left out: the same paper gives the
+  product as 0–2000 µm.
+
+**Interface**
+- The simulant panel has a Figures of Merit section: score, scale, property and lunar
+  reference, each with its superscript.
+
+**Process**
+- The audit reads the quotes behind simulants added from a paper, and a re-run of the
+  Figures of Merit step keeps a complete log. Final pass: 0 errors over 1337 values.
+
+## v2.9.16 — 2026-09-24 (staging)
+
+A third general check (reference hygiene); hover explanations and an honest source line in the Moon section.
+
+**Data**
+- Five simulants listed the same paper twice under two numbers (CAS-1, CUMT-1, EAC-1A,
+  WHU-1, PolyU-1); each is now listed once, with every citation moved to the entry kept.
+- 18 references a reader confirmed do not name the product are no longer listed under it
+  (kept in the database as the record of that check).
+- Readers' working notes removed from two reference titles; MLS-1's Batiste & Sture workshop
+  presentation now links to NASA's copy, which is the same file the reader verified.
+
+**Interface**
+- The Moon table's columns and the landing-site panel's labels explain themselves on hover.
+- The landing-site panel no longer says its soil values come from "Gasteiner et al. 2025": the
+  values are compiled from that database, but only about half occur in its paper, and none has
+  yet been checked against the mission reports. The panel now says so.
+
+**Process**
+- The audit also checks each simulant's reference list: duplicates, references confirmed not
+  to name the product, empty entries, impossible years, working notes, and one label spelled
+  several ways. Final pass: 0 errors over 1309 values.
+
+## v2.9.15 — 2026-09-24 (staging)
+
+Owner's decisions on the audit applied; a second, wider check fixed dead links and unsourced grain sizes.
+
+**Data**
+- At the owner's decision — "an empty value rather than a wrong one" — NAO-1's cohesion (which
+  its own paper calls an artefact) and FEFU-1's 0.8 µm particle size (a sintering study's
+  powder) are omitted, and NEU-1B is labelled High-Ti Mare, as its primary paper states.
+- **30 dead links fixed.** Space Resource Technologies and Off Planet Research moved their
+  product pages; the ESRIC knowledge base no longer exists and its catalogue is linked at an
+  archived copy; a vendor site that no longer resolves is unlinked; TLS-01's reference cited
+  a DOI that was never registered.
+- **27 grain sizes no longer shown.** They came from the Gasteiner compilation without a
+  source and bypassed the rule that hides an unsourced value.
+- MLS-1's lunar analogue cited another simulant's reference row and showed no superscript;
+  it now cites its own.
+
+**Process**
+- The audit now also checks lunar-analogue labels and institutions against their quotes,
+  component names, citations belonging to another simulant, one figure copied onto many
+  products, values shown with no source, the Apollo comparison data, map positions, and every
+  link on the page. Final pass: 0 errors over 1309 values.
+- The apply step refuses a citation of another simulant's reference.
+
+## v2.9.14 — 2026-09-24 (staging)
+
+Every value on the page audited against its own quote; composition tables that mixed analyses repaired.
+
+**Data**
+- `scripts/audit_values.py` tests all 1310 displayed values — 546 properties, 547 oxide rows,
+  217 mineral rows across 145 simulants — against their own quote (allowing only the unit
+  conversions the pipeline makes), physical plausibility, composition totals, the simulant's
+  other values, and their citation. The first pass found 24 errors; three passes and the
+  source documents resolved all but three judgement calls, listed for the owner.
+- **Nine composition tables mixed analyses from different documents.** EAC-1's mineral table
+  was two complete analyses stacked (194.5%); NU-LHT-1M, -2M and -4M carried Cr2O3, MnO, P2O5
+  and total iron grafted on from another paper; GSC-1 added a review's pyroxene to the primary
+  paper's full analysis. Grafts onto a complete analysis are removed and logged. One analysis
+  cited piecemeal — EAC-1's XRF table reproduced across later papers, BH-1's paper and its
+  corrigendum — is kept whole.
+- PolyU-1's "Pyroxene 41.7" is removed: it is the sum of the hedenbergite and augite rows
+  listed with it. TLS-01's 1.065 g/cm³ leaves the particle-density column, which no rock that
+  light can belong in.
+- JSC-1A (108.6%) and NU-LHT-1M (103.5%) reproduce sources that give iron twice; their rows say so.
+
+**Interface**
+- A partial oxide analysis — only the components a source states — shows "Partial analysis"
+  instead of a total (NEU-1B's single TiO2 row had "totalled" 6.50%).
+
+**Process**
+- A row from a second document is never merged into a table another document already fills.
+- The audit runs after every apply.
+
+## v2.9.13 — 2026-09-24 (staging)
+
+Hispansion data sheets restored, on their current versions; physical values stored with their unit repaired.
+
+**Data**
+- TLH-0 and TLM-0 link to Hispansion's public data sheets again. The link had been empty since
+  v2.9.4: the sheets used then were supplied privately, so only a local copy existed and no
+  public address. The manufacturer has since published newer sheets, TDS-TLH-0-v1.4 and
+  TDS-TLM-0-v2.2, with different chemistry — iron as FeO, and sodium measured where v1.1 gave it
+  as below detection. A reader and an independent checker confirmed all 72 values; the page now
+  shows those and cites the new sheets. The v1.1 sheets remain as superseded references.
+- **Units inside stored values.** Bulk density, cohesion and friction angle are text columns
+  that the page reads as numbers in g/cm³, kPa and °. Sixteen values carried their unit,
+  so they were hidden — TLH-0 and TLM-0's new bulk density among them — or read in the wrong
+  unit: the LX simulants' cohesion, stated in pascals, was shown in kilopascals, a thousand
+  times too large. 18 values are converted; 4 that state two values at once are cleared and
+  listed for a human.
+
+**Process**
+- Values in these three columns are converted into the column's unit wherever they are written,
+  and `verify_data.py` fails if one reaches the page as anything but a bare number.
+- The page reads cohesion and friction angle with `Number()`, as it already read bulk density,
+  so a unit slip hides a value instead of showing it in the wrong unit.
+- `scripts/supersede_sheet.py` moves a simulant to a newer version of its data sheet: whole
+  composition tables are replaced, never merged, and only values two readers agreed on are taken.
+
+## v2.9.12 — 2026-09-24 (staging)
+
+Wave 3, the last of the provenance run: every simulant has now been read.
+
+**Data**
+- The remaining 20 simulants read by a reader and an independent checker. With wave 3,
+  **all 145 simulants are named in a reference confirmed to name them** — the first test
+  passes in full. References checked against their document: 679 of 708. Verified
+  compositions 60 → 64; physical values with a source 505 → 549; every one of the 801
+  composition rows cites its document.
+- The readers confirmed all twenty are lunar products; none needed the new scope rule.
+- GRC-1 and GRC-3's crystalline-silica rows renamed from `crystalline_silica` for display.
+
+**Open**
+- Descriptive fields — availability, release year, lunar analogue, institution, type — are
+  shown whether or not a document states them. See the owner-decisions file for the counts
+  and the options.
+
+## v2.9.11 — 2026-09-24 (staging)
+
+Martian simulants retired at the owner's decision: the database covers lunar simulants only.
+
+**Data**
+- Ten records retired: the Open University's OUSR-1, SR-2 (sulfur-rich), OUEB-1, EB-2 (early
+  basaltic), OUHR-1 and HR-2, and ESA's engineering soils ES-1 to ES-4. Each was placed under
+  Mars by both its reader and an independent checker, on the same two sources: the "Mars"
+  sub-header of ISECG Table 9, and the "Mars Regolith Simulants" section of the ESRIC
+  knowledge base. They had entered from listings that mix lunar and Martian products.
+- 145 simulants remain. The deleted rows are archived under `documentation/retired/` and each
+  decision is in `documentation/retired-simulants.md`; TUBS-H, retired on 2026-09-22, is
+  confirmed gone from the page.
+- `documentation/data-policy.md` records the scope rule. A paper studying lunar and Martian
+  simulants together is not evidence that a lunar product is Martian.
+
+## v2.9.10 — 2026-09-24 (staging)
+
+Wave 2 of the provenance run (65 simulants).
+
+**Data**
+- 65 simulants read by a reader and an independent checker; written only where both agreed.
+  Verified compositions 49 → 60; physical values with a source 392 → 515; simulants named in a
+  confirmed reference 84 → 137 of 155, none failing; references checked against their
+  document 402 → 614 of 661.
+- The integrity check caught eleven values citing references that did not exist: two readers
+  named their new documents "S117-N1" rather than "NEW1", and only the latter form was
+  translated. The rows were re-linked to the right references.
+- CUG-1A's mineralogy, printed as "9% wt", now parses; ranges such as TLS-01A's "60–75" are
+  kept out of the table and listed for a human.
+
+**Process**
+- A reader's temporary id is translated in whatever form it takes; a value citing an id that
+  names no reference is refused.
+- Re-applying a run restores a missing source row for a value already stored, so a run can be
+  repaired by deleting its bad rows and applying it again.
+
+Decisions for the owner — three records that may not be lunar simulants, four probable
+duplicates, and a rule for rock components in the mineral table: `documentation/owner-decisions-2026-09-22.md`, wave 2.
+
+## v2.9.9 — 2026-09-23 (staging)
+
+Wave 1 of the provenance run (45 simulants), and a repair of values that never reached the page.
+
+**Data**
+- 45 simulants read by a reader and an independent checker. Written only where both agreed:
+  162 source rows for stored values, 242 values the documents state that the database lacked,
+  144 documents confirmed to name their product. Verified compositions 31 → 49; sourced
+  physical values 227 → 392; simulants named in a confirmed reference 43 → 84.
+- **Values stored as text are repaired.** Readers quote values as printed, and a string such
+  as "22.4 (vol%)" in a numeric column stayed text — the page dropped the row without a word,
+  so LX-M100, DNA-1A and others showed as verified above empty tables, some since v2.9.5. 107
+  such values are now numbers, the statement kept verbatim; 22 that are not single numbers
+  (ranges, detection limits, "present") are removed and logged.
+- Eight mineral rows that were feedstock mixing ratios, and five citations of the project's
+  own registry spreadsheet, are removed. DNA-1, Mooncastle and CMU-1 revert from verified:
+  their sources give only qualitative mineralogy or a recipe.
+
+**Interface**
+- Hovering a composition row's citation shows the value as the document states it — its
+  basis (vol% or wt%), uncertainty or "ca." — ahead of the source.
+
+**Process**
+- Values are parsed at write time; a non-number is kept out of the table and shown to a human.
+- `verify_data.py` now fails if any number reaches the bundle as text, or if a reference
+  cites the project's own registry. It found 134 such errors in the previous bundle.
+- Reader rules: never cite the registry; cite NotebookLM captures by their original; feedstock
+  ratios are not mineral composition.
+
+Decisions for the owner: `documentation/owner-decisions-2026-09-22.md`, wave 1 section.
+
+## v2.9.8 — 2026-09-23 (staging)
+
+Runs sized to fit the weekly budget, and a guard that stops at 80%.
+
+**Process**
+- A full pass at 12 documents per group on Opus would need roughly 62 weekly points against
+  the 22 left before the 80% stop. Reading is what costs — 120M cache-read tokens in one
+  afternoon — so `build_groups.py --max-docs 6` halves the documents offered (225 slots,
+  down from 360) and the extraction pass runs on Sonnet. The adversarial check stays on
+  Opus: deciding whether a quote really supports a value for this exact product is what the
+  audit rests on.
+- `scripts/usage_guard.py` reads the weekly figure the `/usage` panel shows and answers in
+  two modes — a pre-flight gate that refuses what it cannot confirm, and a monitor that
+  reports "cannot tell" rather than killing a run in flight over a stale cache.
+- `already_read()` now requires both stages of a run. Only claims two readers agreed on are
+  written, so an extraction whose checker died wrote nothing; counting it as read had
+  silently dropped AGK-2010 and the four ES products from the queue.
+
+Queue: 44 groups, 130 simulants. No change to what the page displays.
+
+## v2.9.7 — 2026-09-23 (staging)
+
+The library index was hiding documents from the readers.
+
+**Data**
+- A product name of four characters or fewer mentioned once in a document was discarded,
+  to suppress false positives such as "ALS" or "OB-1" occurring as ordinary abbreviations.
+  That silently threw away 75 document-simulant pairs, among them the only sentence in the
+  library naming TJ-2 ("In addition, a variant TJ-2 exists in which silicon..."), and left
+  six products recorded as named in no document at all.
+- Single mentions of short names are now kept separately as weak matches and offered to a
+  reader after the confident ones, with the instruction to read the sentence and decide
+  whether it is really about that product. Judging a mention is a reader's job, not a
+  threshold's.
+- Rebuilt with the 28 documents agents fetched since: simulants named in no library
+  document fall from 19 to 9 (OPRH2W, OPRH3W, OPRL2W, OPRFLCROSS1, LSS-2, LSS-3, TYII-1,
+  TYII-2, SCC-2). Every group now has at least one document to open.
+
+**Process**
+- `build_groups.py --skip-read` leaves out simulants a reader-checker pair has already been
+  through, and groups are ranked by what they still have to establish rather than how much
+  data they already hold.
+
+No change to what the page displays.
+
+## v2.9.6 — 2026-09-23 (staging)
+
+Housekeeping: the version now changes on every push.
+
+**Process**
+- `scripts/bump_version.py` writes the sidebar label and opens this section in one step;
+  `scripts/push_staging.sh` refuses to push while the sidebar still shows the version that
+  is already on origin/staging, or while a version has no section here.
+- v2.9.5 covered four separate pushes (the citation superscripts and the render check,
+  TUBS-H's retirement, the batch-2 provenance run, and EAC-1A), which is what this is
+  meant to prevent; they are described in that section and in the commit history.
+
+## v2.9.5 — 2026-09-22 (staging)
+
+Per-value provenance. Every value on the page now cites the document it was read from,
+and a value with no such document is not shown. See
+[documentation/data-policy.md](documentation/data-policy.md) and the status report
+`documentation/provenance-status-<date>.md`.
+
+**Data**
+- New `property_sources` table: one row per (simulant, field) giving the reference,
+  the page or table, and the line that states the value. `reference_id` on every
+  composition row. References carry `names_simulant`, `mention_quote`, `checked_on`.
+- The export nulls any physical property without a source row: 181 values across 54
+  simulants are hidden (kept in the database) until a reader locates them in a document.
+  The 118 values on the 18 sheet-verified simulants are cited to their data sheets.
+- Manufacturer sheets are reference rows (`DS-<id>`), so a sheet-stated value is numbered
+  like any other citation.
+- Reference repairs: 88 of 89 DOIs resolve (R001, R081 corrected; R112 retitled).
+- TUBS-H (S068) retired: not a distinct product; the cited paper describes TUBS-M and
+  TUBS-T. Rows archived under `documentation/retired/`; see `documentation/retired-simulants.md`.
+
+**Interface**
+- References are numbered per simulant; a `[n]` superscript after every physical value,
+  every composition row, and every scalar in the main table, with the location and the
+  quoted line on hover. References confirmed to name the simulant are marked; the panel
+  header says in how many documents on file the simulant is named.
+- `scripts/render_smoke.tsx` (`npm run check:render`) renders the real components with the
+  real bundle and fails if any displayed value lacks its mark.
+
+**Verification**
+- Agent pipeline: one reader per simulant opens every cited document and quotes what
+  supports each value; an independent checker tries to refute each claim; only agreed
+  claims are written (`scripts/apply_provenance.py`). Runs are one simulant at a time so a
+  session limit loses at most the unit in progress.
+
+## v2.9.4 — 2026-09-22 (staging)
+
+The composition audit. See [documentation/data-policy.md](documentation/data-policy.md)
+for the rule and [documentation/composition-audit-2026-09-21.md](documentation/composition-audit-2026-09-21.md)
+for the result.
+
+**Data**
+- Every simulant carries a `composition_status`: `verified` (18), `withheld_unverified` (52),
+  `not_published` (1), `not_extracted` (85). Composition rows exist only for verified simulants.
+- 430 oxide values and 223 mineral values removed as unconfirmed. The 18 verified simulants
+  were read from manufacturer sheets or the NASA simulant guide and confirmed by a second read.
+- LHS-1 no longer carries LHS-1D's physical properties; LMS-1 matches its own fact sheet;
+  OPRL2N and OPRH3N use the manufacturer's data sheet rather than the 2021 assessment chemistry;
+  OPRH2N and OPRH4N gained compositions; 16 specific gravities that were bulk densities cleared.
+- New sheet-stated fields: pH, angle of repose, mean particle size, bulk-density range,
+  magnetic susceptibility, product grade, document number, revision date, methods and caveats.
+- Composition source links point at the original public documents; the per-table JSON files
+  that were serving pre-audit data are removed (the app loads `data.json` only).
+
+**Interface**
+- Each simulant shows its provenance: a source line with the document, revision and methods
+  for verified ones, and an honest notice for the other three states.
+- Composition tables show two decimals, as the sheets do.
+- The mineral Groups view is disabled where no grouped breakdown is published.
+- Datasheet links appear only on verified simulants.
+
+**Deploy**
+- The maintenance step now lives in both `main` and `staging` workflows. Deploys triggered
+  from `staging` had been rebuilding the public root without it since 2026-06-25.
+
+**Tooling**
+- `scripts/scorecard.py`, `scripts/reconcile.py`, `scripts/datasheet_fill.py`, with 68 unit
+  tests; `scripts/verify_data.py` reads the same bundle the app does.
+
+## v2.9.3 — 2026-06-25 (staging)
+- Physical properties, composition detail and datasheet column in the Table view; physical
+  properties in CSV export.
+
+## v2.9.1 — 2026-05-25
+- Globe auto-rotates on load; sidebar closed by default; simulant list expanded by default.
+
+## v2.9.0 — 2026-03-25
+- SQLite becomes the source of truth; `data.json` exported from it.

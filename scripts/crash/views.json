@@ -1,0 +1,56 @@
+[
+ {
+  "expect": "!!document.querySelector('button[aria-label=\"Stop Rotation\"]')",
+  "why": "the globe rotates by default (owner, 2026-09-25)"
+ },
+ {
+  "expect": "!document.querySelector('.fixed.inset-0[role=status]')",
+  "why": "the loading screen has cleared once the first view is drawn (at most 12 s)"
+ },
+ {
+  "expect": "[...document.querySelectorAll('a')].some(a => a.textContent.includes('Send us feedback')) && [...document.querySelectorAll('img')].some(i => (i.alt || '').startsWith('CNES') && i.naturalWidth > 0)",
+  "why": "the Find pane ends with the feedback link and the CNES logo (owner, 2026-09-25)"
+ },
+ {
+  "click": "Map",
+  "after": 2500
+ },
+ {
+  "expect": "document.querySelectorAll('.leaflet-marker-icon').length > 0",
+  "why": "the 2D Earth map shows its pins at the default zoom (v2.9.19-21 showed none until zoomed in)"
+ },
+ {
+  "click": "Map"
+ },
+ {
+  "click": "Table"
+ },
+ {
+  "click": "Globe"
+ },
+ {
+  "click": "Moon"
+ },
+ {
+  "click": "Map"
+ },
+ {
+  "click": "Table"
+ },
+ {
+  "click": "Globe"
+ },
+ {
+  "click": "Earth"
+ },
+ {
+  "click": "Help"
+ },
+ {
+  "key": "Escape"
+ },
+ {
+  "expect": "!document.querySelector('[aria-label=\"Quick guide\"]')",
+  "why": "Escape closed Help"
+ }
+]

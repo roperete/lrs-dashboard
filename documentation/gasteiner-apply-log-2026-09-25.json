@@ -1,0 +1,290 @@
+[
+ {
+  "simulant_id": "S038",
+  "reference_id": "R075",
+  "outcome": "flagged: reference claim not confirmed",
+  "needs_review": true,
+  "problems": [
+   "Not opened by the reader or by me. OpenAlex reports is_oa=false, oa_status=closed, any_repository_has_fulltext=false. ScienceDirect (pii S001910352100186X) returns a captcha page with HTTP 403. ADS returns a human-verification page. Crossref and Semantic Scholar carry no abstract, because Elsevier withholds it.",
+   "The title in mention_quote comes from metadata, not from the document. It matches Crossref and OpenAlex, and also reference [80] of RN-S038-1: 'A lunar soil simulant (LSS-ISAC-1) for the lunar exploration programme of the Indian Space Research Organisation, Icarus 366 (2021) 114511'. Calling it a journal article (Icarus 366, 114511) is correct, but no document text confirms it names the simulant."
+  ],
+  "field": null
+ },
+ {
+  "simulant_id": "S038",
+  "reference_id": "RN-S038-1",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S038",
+  "reference_id": "RN-S038-2",
+  "outcome": "flagged: reference claim not confirmed",
+  "needs_review": true,
+  "problems": [
+   "Not opened. OpenAlex says closed, with no repository full text, and academia.edu returns 403 to me as well. Crossref lists it as a journal article in Advances in Space Research, and the S2 abstract names LSS-ISAC-1, but only in metadata. That abstract says the paper reports cohesion stress, angle of internal friction and bulk density, but gives no numbers."
+  ],
+  "field": null
+ },
+ {
+  "simulant_id": "S038",
+  "reference_id": "RN-S038-3",
+  "outcome": "flagged: reference claim not confirmed",
+  "needs_review": true,
+  "problems": [
+   "Not opened. OpenAlex says closed, with no repository full text, and ScienceDirect is behind the bot wall. The venue, Planetary and Space Science 209, 105354 (2021), is confirmed by the reference list of the on-file arXiv 2403.11029. The S2 abstract names LSS-ISAC-1 and gives no numbers."
+  ],
+  "field": null
+ },
+ {
+  "simulant_id": "S038",
+  "field": "bulk_density",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S038",
+  "field": "friction_angle",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "Cannot confirm or refute: the source is not openable.",
+   "document_states is empty because no document was read, so there is nothing to check against."
+  ]
+ },
+ {
+  "simulant_id": "S038",
+  "field": "cohesion",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "Cannot confirm or refute: the source is not openable."
+  ]
+ },
+ {
+  "simulant_id": "S012",
+  "reference_id": "R076",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S012",
+  "field": "bulk_density",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S012",
+  "field": "friction_angle",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S012",
+  "field": "cohesion",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S018",
+  "reference_id": "R018",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S018",
+  "field": "bulk_density",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "reference_id": "RN-S120-1",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S120",
+  "reference_id": "RN-S120-2",
+  "outcome": "flagged: reference claim not confirmed",
+  "needs_review": true,
+  "problems": [
+   "The saved file is a ScienceDirect 'Article preview' landing page with abstract, introduction and section snippets, not the article. PolyU-1 appears only in the site's 'Cited by (20)' widget.",
+   "The JLU-H article (Planetary and Space Science vol. 221, 15 October 2022, 105562) came out before PolyU-1 (2024) and cannot name it. The name on the page is ScienceDirect's content, not the authors'.",
+   "If kept, the category is website_other (a publisher landing page), not journal_article. As a reference naming PolyU-1 it adds nothing."
+  ],
+  "field": null
+ },
+ {
+  "simulant_id": "S120",
+  "field": "friction_angle",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "cohesion",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "angle_of_repose",
+  "reference_id": "R103",
+  "outcome": "new value inserted with source",
+  "value": "38.9\u00b0",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S120",
+  "field": "bulk_density_range",
+  "reference_id": "R103",
+  "outcome": "new value inserted with source",
+  "value": "1.22\u20131.83 g/cm\u00b3",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S075",
+  "reference_id": "R072",
+  "outcome": "document unavailable; reference left unchecked",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S075",
+  "reference_id": "RN-S075-1",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S075",
+  "reference_id": "RN-S075-2",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S075",
+  "field": "friction_angle",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "No document_states, location or quote, because the full text cannot be opened. Resolve this through Springer access or by asking the corresponding author (shun.wang@whu.edu.cn, which I verified on the preview's page 1)."
+  ]
+ },
+ {
+  "simulant_id": "S075",
+  "field": "cohesion",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "No document_states or quote. The value is untraceable, not contradicted."
+  ]
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "R086",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "reference_id": "RN-S027-1",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S027",
+  "field": "bulk_density",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "R087",
+  "outcome": "flagged: reference claim not confirmed",
+  "needs_review": true,
+  "problems": [
+   "I could not open the full text. Unpaywall oa_status is 'closed', Semantic Scholar openAccessPdf is 'CLOSED', the ASCE PDF URL returns 403 and ResearchGate returns 403. The mention_quote matches the OpenAlex abstract verbatim, and the title names JSC-1A. journal_article is correct: J. Geotech. Geoenviron. Eng. 135(5):673-679."
+  ],
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-4",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "reference_id": "RN-S028-5",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S028",
+  "field": "bulk_density",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The status 'unsupported' was assigned without opening the named document; only the abstract was read.",
+   "The reader missed an on-file, peer-reviewed JSC-1A bulk density (Engelschion 2020, p. 3: 1.56 g/cm\u00b3) that contradicts the stored 1.63."
+  ]
+ },
+ {
+  "simulant_id": "S058",
+  "reference_id": "RN-S058-6",
+  "outcome": "new reference row created",
+  "title": "JHU-APL LSII Report: 2022 Lunar Simulant Assessment",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S058",
+  "reference_id": "RN-S058-5",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S058",
+  "reference_id": "RN-S058-4",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S058",
+  "reference_id": "DS-S058",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S058",
+  "field": "friction_angle",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S058",
+  "field": "cohesion",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S045",
+  "field": "cohesion",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ }
+]

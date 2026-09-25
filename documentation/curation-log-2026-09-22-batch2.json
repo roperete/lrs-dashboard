@@ -1,0 +1,26 @@
+[
+ {
+  "rows": 10,
+  "sql": "UPDATE references_ SET authors='Slabic, A. et al.' WHERE title LIKE 'Lunar Regolith Simulant User%s Guide%Revision A%' AND authors IS NOT NULL AND authors!='Slabic, A. et al.'",
+  "params": [],
+  "why": "verifier (S047): extractor's author list does not match the title page"
+ },
+ {
+  "rows": 6,
+  "sql": "UPDATE references_ SET title=REPLACE(title,'NASA/TM-20240007991','NASA/TP-20240007991'), reference_text=REPLACE(reference_text,'NASA/TM-20240007991','NASA/TP-20240007991') WHERE title LIKE '%NASA/TM-20240007991%'",
+  "params": [],
+  "why": "verifier (S047): the NUW-LHT-5M characterization is a Technical Publication"
+ },
+ {
+  "rows": 1,
+  "sql": "UPDATE references_ SET reference_type='review' WHERE simulant_id='S007' AND title LIKE 'Preparation and characterization of a specialized lunar regolith simulant%' AND reference_type!='review'",
+  "params": [],
+  "why": "extractor and verifier (S007): CAS-1 values in the CUMT-1 paper reproduce Zheng et al. 2009"
+ },
+ {
+  "rows": 1,
+  "sql": "UPDATE references_ SET reference_type='general' WHERE simulant_id='S009' AND title LIKE 'Planetary Simulant Database: CLDS-i%' AND reference_type!='general'",
+  "params": [],
+  "why": "extractor (S009): simulantdb transcribes Tang et al. 2017, which is not in the library"
+ }
+]

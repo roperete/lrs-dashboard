@@ -22,6 +22,23 @@ export interface Simulant {
   glass_content_percent?: number | null;
   nasa_fom_score?: number | null;
   ti_content_percent?: number | null;
+  datasheet_url?: string | null;  // manufacturer/spec datasheet, distinct from academic references
+  // Provenance of the composition data (set by scripts/reconcile.py)
+  composition_status?: string | null;        // verified | withheld_unverified | not_published | not_extracted
+  composition_source_title?: string | null;
+  composition_source_url?: string | null;
+  composition_source_kind?: string | null;   // manufacturer_datasheet | primary_paper | agency_report
+  composition_needs_review?: number | null;
+  // Stated on the manufacturer data sheet (filled by scripts/datasheet_fill.py, 2026-09-22)
+  ph?: number | null;
+  angle_of_repose?: string | null;
+  particle_size_mean_um?: number | null;
+  bulk_density_range?: string | null;
+  magnetic_susceptibility?: string | null;
+  product_grade?: string | null;           // the sheet's own "Simulant Type" / series wording
+  datasheet_document_id?: string | null;   // document or batch code printed on the sheet
+  datasheet_date?: string | null;          // revision date of the sheet used
+  datasheet_notes?: string | null;         // methods, labs and caveats printed on the sheet
 }
 
 export interface Site {
@@ -40,6 +57,8 @@ export interface Composition {
   component_type: string;
   component_name: string;
   value_pct: number;
+  reference_id?: string | null;  // the document this row was read from (references_.reference_id)
+  value_text?: string | null;    // the value as the document states it, when it says more than the number ("22.4 (vol%)")
 }
 
 export interface ChemicalComposition {
@@ -48,6 +67,8 @@ export interface ChemicalComposition {
   component_type: string;
   component_name: string;
   value_wt_pct: number;
+  reference_id?: string | null;  // the document this row was read from (references_.reference_id)
+  value_text?: string | null;    // the value as the document states it, when it says more than the number ("2.33 ± 0.03 wt.-%")
 }
 
 export interface Reference {
@@ -60,6 +81,35 @@ export interface Reference {
   year?: number;
   doi?: string;
   url?: string;
+  // Per-value provenance (2026-09-22). The export drops local_path, the verification
+  // copy's location on the maintainer's disk, so it is deliberately absent here.
+  names_simulant?: number | null;  // 1 confirmed to name this exact simulant, 0 checked and absent, null unchecked
+  mention_quote?: string | null;   // the sentence naming the simulant
+  checked_on?: string | null;      // ISO date of the last verification
+}
+
+/** A Figure of Merit: one cited score per (simulant, property, lunar reference). */
+export interface FigureOfMerit {
+  fom_id: string;
+  simulant_id: string;
+  property: string;               // composition | mineralogy | particle_size | shape | density | overall | other
+  property_label: string;         // as the document names it
+  reference_sample: string | null;
+  score: number;
+  scale: string | null;
+  score_text: string | null;
+  reference_id: string;
+  location: string | null;
+  quote: string | null;
+}
+
+/** Where a scalar on `simulants` was read from: one row per (simulant, field). */
+export interface PropertySource {
+  simulant_id: string;
+  field: string;            // column name on simulants, e.g. cohesion, ph, bulk_density
+  reference_id: string;
+  location: string | null;  // page, table or figure as the reader found it
+  quote: string | null;     // the line stating the value
 }
 
 export interface MineralGroup {
@@ -83,16 +133,39 @@ export interface SimulantExtra {
   reference: string | null;
 }
 
+/** A lunar reference sample. Every field but the number and mission is null when no
+ *  document stating it is on record (lunarSources); compositions keep only sourced rows. */
 export interface LunarReference {
   mission: string;
-  landing_site: string;
-  coordinates: { lat: number; lon: number };
-  type: string;
   sample_id: string;
-  sample_description: string;
-  chemical_composition: Record<string, number>;
-  mineral_composition?: Record<string, number>;
-  sources: string[];
+  landing_site: string | null;
+  coordinates: { lat: number; lon: number } | null;
+  type: string | null;
+  sample_description: string | null;
+  chemical_composition: Record<string, number> | null;
+  mineral_composition: Record<string, number> | null;
+}
+
+/** A document about a lunar site or sample (the simulants' references are per simulant). */
+export interface LunarDocument {
+  document_id: string;
+  title: string;
+  authors?: string | null;
+  year?: string | null;
+  doi?: string | null;
+  url?: string | null;
+  kind?: string | null;
+}
+
+/** The source of one value of a lunar site or sample: field is a column name,
+ *  "oxide:SiO2", "mineral:Plagioclase" or "description". */
+export interface LunarSource {
+  entity_id: string;
+  field: string;
+  document_id: string;
+  location: string | null;
+  quote: string;
+  value_text: string | null;
 }
 
 export interface MineralSourcing {
@@ -135,17 +208,22 @@ export interface PhysicalProperties {
   nasa_fom_score?: number;
   ti_content_percent?: number;
   grain_size_mm?: number | string;
+  ph?: number;
+  angle_of_repose?: string;
+  particle_size_mean_um?: number;
+  bulk_density_range?: string;
+  magnetic_susceptibility?: string;
 }
 
 export interface LunarSite {
   id: string;
   name: string;
   mission: string;
-  date: string;
+  date: string | null;
   lat: number;
   lng: number;
-  samples_returned?: string;
-  description: string;
+  samples_returned?: string | null;
+  description: string | null;
   type: 'Apollo' | 'Luna' | 'Chang-e' | 'Other';
   geotechnical?: {
     bulk_density?: number;
@@ -183,8 +261,8 @@ export type FilterPropertyType = 'categorical' | 'boolean' | 'range' | 'text';
 export type FilterProperty =
   | 'type' | 'country' | 'institution' | 'availability'
   | 'mineral' | 'chemical'
-  | 'has_chemistry' | 'has_mineralogy'
-  | 'year'
+  | 'has_chemistry' | 'has_mineralogy' | 'has_geotechnical'
+  | 'year' | 'bulk_density' | 'd50' | 'friction_angle' | 'cohesion'
   | 'reference' | 'lunar_ref';
 
 export interface DynamicFilter {
@@ -201,6 +279,5 @@ export interface FilterPropertyMeta {
 
 export interface PanelState {
   open: boolean;
-  pinned: boolean;
   simulantId: string | null;
 }

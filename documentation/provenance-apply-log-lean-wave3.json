@@ -1,0 +1,1861 @@
+[
+ {
+  "simulant_id": "S073",
+  "reference_id": "NEW1",
+  "outcome": "flagged: proposed new reference not confirmed",
+  "needs_review": true,
+  "problems": [
+   "The quote is verbatim, but the page does not name UW-1H. The raw HTML reads 'font-bold>UW-11<' (hex 55 57 2d 31 31, i.e. digit-one digit-one). Under the EXACT PRODUCT rule it cannot be accepted as naming this product.",
+   "It is very likely a transcription typo. More importantly, ESRIC is not an independent source: its Lunar list repeats ISECG Table 9 row by row in the same order (OB-1, Chenobi, OB-1A, UW-1M, UW-11, DNA-1, EAC-1a, TUBS-T, ...) with the same Type strings. Its 'Availability' texts are the ISECG colour-key phrases (OB-1 and Chenobi = 'Previously produced, no/limited stockpiles exist', matching their red cells in ISECG). So even if a curator accepts UW-11 as UW-1H, it adds no evidence beyond R113.",
+   "Location detail: there is no 'Canada section' heading. 'Canada' is the last word of each card's Supplier/Contact field."
+  ],
+  "title": "ESRIC Regolith Simulants Directory - Lunar Regolith Simulants list",
+  "field": null
+ },
+ {
+  "simulant_id": "S073",
+  "reference_id": "R113",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S073",
+  "field": "availability",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The note contains a false statement about the document. On PDF p.63 at 200 and 400 dpi, the UW-1H (and UW-1M) Supply Confidence cells are white/unshaded and hold blue 'TBD' text. In the Canada block only OB-1 and Chenobi are shaded red. ESRIC also shows this split: OB-1 and Chenobi 'Previously produced, no/limited stockpiles exist', while UW-1M and UW-11 read 'Availability TBD'. There is no conflict between shading and text, and the red-legend category has no support for this product.",
+   "The 'TBD' quote at the cited cell is correct, and no document prints 'Unavailable' for UW-1H.",
+   "The extractor missed one passage in the same report that a curator might read as indirect support. It is in the CSA/NRCan - Canada paragraph, printed Page 60 (PDF p.60): 'A number of simulants listed in the table have been developed and utilized over the years. At this point, none of these have been maintained due to the availability and demand.' It covers all Canadian table entries, UW-1H included, but says 'not maintained', not 'unavailable', and the product's own cell says TBD. A human should choose between 'TBD' and 'Unavailable'."
+  ]
+ },
+ {
+  "simulant_id": "S073",
+  "field": "lunar_sample_reference",
+  "reference_id": "R113",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S073",
+  "field": "institution",
+  "outcome": "withheld: refuted by verification",
+  "problems": [
+   "It is cited to NEW1, which names 'UW-11', not UW-1H, so as cited it fails the EXACT PRODUCT rule.",
+   "The value is supported by R113 instead. Table 9, PDF p.63, UW-1H row, Contact Info/Comments column: 'CSA / Univ. Winnipeg'. Re-cite institution to R113 with that quote. The document credits CSA jointly, and 'Univ.' is abbreviated."
+  ],
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S074",
+  "reference_id": "RN-S074-1",
+  "outcome": "new reference row created",
+  "title": "ESRIC Regolith Simulants Directory - Lunar Regolith Simulants list",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S074",
+  "reference_id": "R114",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S074",
+  "field": "availability",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The note is false on the key point. The UW-1M Supply Confidence cell on ISECG PDF p.63 is white/unshaded with blue 'TBD' text (rendered at 400 dpi); only OB-1 and Chenobi are red. There is no contradiction between shading and text, and no support for the red-legend category 'Previously produced, no/limited stockpiles exist'. ESRIC also reads 'Availability TBD' for UW-1M, while it gives that red-category phrase only to OB-1 and Chenobi.",
+   "The 'TBD' quote is correct, and no document prints 'Unavailable' for UW-1M.",
+   "Missed passage: ISECG printed Page 60 (PDF p.60), CSA/NRCan - Canada: 'At this point, none of these have been maintained due to the availability and demand.' It applies to the Canadian simulants in the table, so it is general rather than product-specific. It says 'not maintained', not 'unavailable'. A human should choose between 'TBD' and 'Unavailable'."
+  ]
+ },
+ {
+  "simulant_id": "S074",
+  "field": "lunar_sample_reference",
+  "reference_id": "R114",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S074",
+  "field": "institution",
+  "reference_id": "RN-S074-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S001",
+  "reference_id": "RN-S001-1",
+  "outcome": "new reference row created",
+  "title": "ESRIC KSP - Simulants (Regolith Simulants Directory)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S001",
+  "reference_id": "RN-S001-2",
+  "outcome": "new reference row created",
+  "title": "ISECG ISRU Technology Gap Assessment Report",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S001",
+  "reference_id": "R107",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S001",
+  "field": "bulk_density",
+  "reference_id": "R107",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S001",
+  "field": "cohesion",
+  "reference_id": "R107",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S001",
+  "field": "friction_angle",
+  "reference_id": "R107",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S001",
+  "field": "release_date",
+  "outcome": "withheld: refuted by verification",
+  "problems": [
+   "The quote 'Arch. Min. Sci., Vol. 58 (2013), No 2, p. 551\u2013556' does exist, but it is the journal issue date. It does not state when AGK-2010 was released, so it does not support the stored value. The status should be 'unsupported', not 'supported'.",
+   "Other evidence contradicts 2013. The SRC PAS (CBK PAN) Annual Report 2010, which I fetched, says on printed p.49 (PDF p.49): 'During the summer and autumn of 2010, the successful tests were performed in a 5-meter test-bed filled with quartz sand as well as lunar regolith analogue AGK-2010.' R107 itself dates the patent application to 2011 ('The Polish lunar soil analog AGK-2010 (patent application of 2011)', printed p.556) and was 'Received: 10 July 2012'. So the product existed and was in use by 2010. The value 2013 is only the year of publication."
+  ],
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S001",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S001",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S001",
+  "field": "institution",
+  "reference_id": "RN-S001-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "reference_id": "RN-S065-1",
+  "outcome": "new reference row created",
+  "title": "Safety Data Sheet: TLH-0 (SDS-TLH-0)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S065",
+  "reference_id": "RN-S065-2",
+  "outcome": "new reference row created",
+  "title": "Lunar regolith simulant - Wikipedia",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S065",
+  "reference_id": "DS-S065",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S065",
+  "reference_id": "R050",
+  "outcome": "reference does NOT name the simulant; kept, marked 0",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S065",
+  "field": "bulk_density",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "cohesion",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "friction_angle",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "particle_size_d50",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "particle_size_distribution",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "particle_morphology",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "glass_content_percent",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "nasa_fom_score",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "particle_size_mean_um",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "bulk_density_range",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "magnetic_susceptibility",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "availability",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "lunar_sample_reference",
+  "reference_id": "DS-S065",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "institution",
+  "reference_id": "RN-S065-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "particle_size_d10",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S065",
+  "field": "particle_size_d90",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "reference_id": "RN-S066-1",
+  "outcome": "new reference row created",
+  "title": "Safety Data Sheet: TLM-0 (SDS-TLM-0)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S066",
+  "reference_id": "RN-S066-2",
+  "outcome": "new reference row created",
+  "title": "Lunar regolith simulant - Wikipedia",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S066",
+  "reference_id": "DS-S066",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S066",
+  "reference_id": "R051",
+  "outcome": "reference does NOT name the simulant; kept, marked 0",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S066",
+  "field": "bulk_density",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "cohesion",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "friction_angle",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "particle_size_d50",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "particle_size_distribution",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "particle_morphology",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "glass_content_percent",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "nasa_fom_score",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "particle_size_mean_um",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "bulk_density_range",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "magnetic_susceptibility",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "availability",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "lunar_sample_reference",
+  "reference_id": "DS-S066",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "institution",
+  "reference_id": "RN-S066-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "particle_size_d10",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S066",
+  "field": "particle_size_d90",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S158",
+  "reference_id": "RN-S158-1",
+  "outcome": "new reference row created",
+  "title": "CPESS 8 (8th Spanish/Iberian Congress of Planetary Sciences and Solar System Exploration, M\u00e1laga, 26-30 May 2025) \u2014 Final programme / RIA meeting report",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S158",
+  "reference_id": "R073",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S158",
+  "reference_id": "R074",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S158",
+  "field": "release_date",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S158",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S158",
+  "field": "lunar_sample_reference",
+  "reference_id": "R073",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S158",
+  "field": "institution",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The quoted fragments are real. The title contains 'LuSIC-1 (LUNAR SIMULANT IBeA-CARABELA)' and affiliation 1 on p.1 is '1 University of the Basque Country (UPV/EHU), Barrio Sarriena s/n, Leioa, Spain, 48940.' But R073 never prints 'IBeA Research Group'. The stored value is inferred from the acronym inside the product name.",
+   "The name itself ('IBeA-Carabela') points to a joint product. R073 lists affiliation 2 as 'Carabela Space Technologies, Madrid, Spain' for the first author, and affiliation 3 as 'Polytechnic university of Madrid (UPM), School of Civil Engineering'. The stored institution leaves out Carabela Space Technologies, so it may be incomplete.",
+   "The PaLMALab abstract (papers/agent-fetched/CPESS-8_2025_Alberquilla_PT_PaLMALab_abstract.pdf, p.1) does say 'PaLMALab (Palma Lunar Martian Analogue Laboratory) is a project led by the IBeA group at the University of the Basque Country (UPV-EHU)'. It does not name LuSIC-1, so it cannot support this product's institution field. A human should decide how to word it, e.g. 'IBeA group, UPV/EHU; Carabela Space Technologies'."
+  ]
+ },
+ {
+  "simulant_id": "S038",
+  "reference_id": "RN-S038-1",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S038",
+  "reference_id": "RN-S038-2",
+  "outcome": "new reference row created",
+  "title": "Study on geomechanical properties of lunar soil simulant (LSS-ISAC-1) for chandrayaan mission",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S038",
+  "reference_id": "RN-S038-3",
+  "outcome": "new reference row created",
+  "title": "Assessment of shear strength and compressibility characteristics of a newly developed lunar highland soil simulant (LSS-ISAC-1) for Chandrayaan lander and rover missions",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S038",
+  "reference_id": "RN-S038-4",
+  "outcome": "new reference row created",
+  "title": "Study on low gravity effect on bearing capacity and slope stability of a new lunar highland soil simulant (LSS-ISAC-1) for futuristic moon habitation",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S038",
+  "reference_id": "RN-S038-5",
+  "outcome": "new reference row created",
+  "title": "Assessment of dynamic properties of a new lunar highland soil simulant (LSS-ISAC-1) developed for Chandrayaan missions",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S038",
+  "reference_id": "RN-S038-6",
+  "outcome": "new reference row created",
+  "title": "Dynamic Characterization of Lunar Soil Simulant (LSS-ISAC-1) for Moonquake Analysis",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S038",
+  "reference_id": "R035",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S038",
+  "reference_id": "R075",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S038",
+  "field": "bulk_density",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S038",
+  "field": "cohesion",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S038",
+  "field": "friction_angle",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S038",
+  "field": "release_date",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The quote 'December 2020' exists in the R035 ResearchGate header, but it is the journal publication date of R035, not a statement of when the simulant was released.",
+   "It conflicts with a statement the extractor missed. On the R035 page, ResearchGate's citing-context excerpt for NEW3 (Prabu et al. 2021) reads 'ISRO has jointly developed a new lunar highland soil simulant in 2011-2012, which was named LSS-ISAC-1'. R075's abstract also ties production to the Chandrayaan-2 test facility (LTTF).",
+   "The review tables do list 2020: the TJ-1 page gives 'LSS-ISAC-1 [54] Highlands Geotechnical, Rover mobility 2020' and IGG-01 gives 'LSS-ISAC-1 India 2020 Anorthosite Highland geotechnical'. Both are confirmed in the local captures. 2020 is therefore defensible as the year of first publication but not as the year of development. A human should decide which the field means."
+  ]
+ },
+ {
+  "simulant_id": "S038",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S038",
+  "field": "lunar_sample_reference",
+  "reference_id": "R035",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S038",
+  "field": "institution",
+  "reference_id": "RN-S038-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S039",
+  "reference_id": "RN-S039-1",
+  "outcome": "new reference row created",
+  "title": "ESA Planetary Dust Contamination Workshop 2025 (4-5 June 2025): Contribution List \u00b7 Indico at ESA/ESTEC \u2014 Contribution 11: 'LuNOR: Nordic-Origin Industrial Lunar Simulant for Enhanced Fidelity, Consistency & Sustainability in Dust Contamination Research'",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S039",
+  "reference_id": "RN-S039-2",
+  "outcome": "new reference row created",
+  "title": "About \u2014 SolSys Mining",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S039",
+  "reference_id": "R036",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S039",
+  "field": "availability",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The extractor's reason is wrong: an opened document does state availability. NEW1, Contribution 11 abstract: 'presenting LuNOR, a European lunar simulant\u2014available in both mare and highlands variants, with dedicated dust simulant formulations forthcoming in 2026.' This supports 'Available'.",
+   "The '(Research)' qualifier is not stated anywhere. Related wording: the full NEW1 abstract says 'Proof-of-concept batches have already been developed under Norwegian Space Agency funding'. R036 p.4 says 'The simulant material characterized in this study is an early prototype'. R036 Acknowledgments say 'The LuNOR protype lunar dust simulant was provided by...'.",
+   "R036 p.4 somewhat contradicts NEW1: 'LuNOR is currently updating and refining the constituents used for the highlands variant as well as finding proper constituents for a mare simulant.'",
+   "data-schema.md allows only 'Available', 'Limited Stock', 'Production stopped' and 'Unknown'. 'Available (Research)' is not an allowed value. A curator should decide between 'Available' citing NEW1 and flagging the value, not leave it as fully unsupported."
+  ]
+ },
+ {
+  "simulant_id": "S039",
+  "field": "institution",
+  "reference_id": "R036",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S157",
+  "reference_id": "RN-S157-1",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S157",
+  "reference_id": "R175",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S157",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S157",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S157",
+  "field": "particle_size_mean_um",
+  "reference_id": "RN-S157-1",
+  "outcome": "new value inserted with source",
+  "value": "0.8",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "reference_id": "RN-S024-1",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S024",
+  "reference_id": "RN-S024-2",
+  "outcome": "new reference row created",
+  "title": "Lunar Simulant Assessment",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S024",
+  "reference_id": "RN-S024-3",
+  "outcome": "new reference row created",
+  "title": "A moderate-Ti lunar mare soil simulant IGG-01 (saved ResearchGate page)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S024",
+  "reference_id": "RN-S024-4",
+  "outcome": "new reference row created",
+  "title": "Properties of TJ-1 Lunar Soil Simulant (saved ResearchGate page)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S024",
+  "reference_id": "RN-S024-5",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide, Revision A (NASA/TM-20240011783)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S024",
+  "reference_id": "RN-S024-6",
+  "outcome": "new reference row created",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Samples (LEAG-CAPTEM SIM-SAT report)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S024",
+  "reference_id": "RN-S024-7",
+  "outcome": "new reference row created",
+  "title": "Simulants \u2014 ARES, NASA Johnson Space Center (curation page)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S024",
+  "reference_id": "RN-S024-8",
+  "outcome": "new reference row created",
+  "title": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S024",
+  "reference_id": "R023",
+  "outcome": "flagged: reference claim not confirmed",
+  "needs_review": true,
+  "problems": [
+   "I could not open it either. Crossref (api.crossref.org) and Semantic Scholar both return metadata only: status CLOSED, abstract elided by the publisher. OpenAlex reports no open-access copy.",
+   "Crossref gives the title 'Design and characterization of GRC-1: A soil for lunar terramechanics testing in Earth-ambient conditions', J. Terramechanics 47(6):361-377, issued 2010-12. So the title names GRC-1, but the body text could not be checked.",
+   "Indirect link: Li et al. 2022 Table 5 note says GRC-1 compression-index data 'are obtained from [42]', and [42] is Oravec, Zeng & Asnani (R023)."
+  ],
+  "field": null
+ },
+ {
+  "simulant_id": "S024",
+  "field": "release_date",
+  "reference_id": "RN-S024-3",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "availability",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The quote is verbatim, but it is on printed p.91 (PDF p.105), not p.90. It is also a May 2010 statement.",
+   "Newer evidence points to limited stock rather than 'Available'. The ESRIC KSP Regolith Simulants Directory (papers/LRS/DIRT project/files/1735/simulants.html, Lunar list) says: 'Name GRC-1 and GRC-3 Description Terra mechanics testing Availability Previously produced, some stockpiles exist, can be reproduced if needed Supplier/Contact NASA United States'.",
+   "Oravec's April 2025 keynote (papers/LRS/Metz France_Keynote_April 2025_Final.pdf, slide 42) says: 'Currently houses simulants GRC-1, GRC-3 and Fillite (Mars).' So NASA GRC holds stock, but it is not shown to be a commercial product. 'Limited Stock' may fit better."
+  ]
+ },
+ {
+  "simulant_id": "S024",
+  "field": "lunar_sample_reference",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The quote is verbatim, on printed p.90. It says only that GRC-1 is low-fidelity. The word 'General' is printed nowhere, and no document names a lunar sample that GRC-1 targets. This is curator interpretation, not a stated value."
+  ]
+ },
+ {
+  "simulant_id": "S024",
+  "field": "institution",
+  "reference_id": "RN-S024-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "specific_gravity",
+  "reference_id": "RN-S024-1",
+  "outcome": "new value inserted with source",
+  "value": "2.583 \u00b1 0.004",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "compression_index",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "recompression_index",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "angle_of_repose",
+  "reference_id": "RN-S024-1",
+  "outcome": "new value inserted with source",
+  "value": "35.3 \u00b1 0.711",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "coefficient_of_uniformity",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "coefficient_of_curvature",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "max_density",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "min_density",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "max_porosity",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "min_porosity",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "max_void_ratio",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "min_void_ratio",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "uscs_classification",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S024",
+  "field": "mineral:crystalline_silica",
+  "reference_id": "RN-S024-5",
+  "outcome": "new value inserted with source",
+  "value": "96.32",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "reference_id": "RN-S082-1",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S082",
+  "reference_id": "RN-S082-2",
+  "outcome": "new reference row created",
+  "title": "Influence of loading conditions on mechanical behaviors of lunar regolith simulant WH (saved ResearchGate page)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S082",
+  "reference_id": "RN-S082-3",
+  "outcome": "new reference row created",
+  "title": "Development of a novel lunar highland soil simulant LSS-ISAC-1 and its geotechnical properties (saved ResearchGate page)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S082",
+  "reference_id": "RN-S082-4",
+  "outcome": "new reference row created",
+  "title": "Development and characterization of the PolyU-1 lunar regolith simulant based on Chang'e-5 returned samples",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S082",
+  "reference_id": "RN-S082-5",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Properties of BP-1 Lunar Regolith Simulant (2019 Lunar ISRU Workshop slides)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S082",
+  "reference_id": "RN-S082-6",
+  "outcome": "new reference row created",
+  "title": "Lunar Regolith Simulant User's Guide, Revision A (NASA/TM-20240011783)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S082",
+  "reference_id": "RN-S082-7",
+  "outcome": "new reference row created",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Samples (LEAG-CAPTEM SIM-SAT report)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S082",
+  "reference_id": "RN-S082-8",
+  "outcome": "new reference row created",
+  "title": "Simulants \u2014 ARES, NASA Johnson Space Center (curation page)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S082",
+  "reference_id": "R083",
+  "outcome": "flagged: reference claim not confirmed",
+  "needs_review": true,
+  "problems": [
+   "I could not open it either. Semantic Scholar says status CLOSED with the abstract elided by the publisher, and Crossref has no abstract.",
+   "Crossref gives the title 'Geotechnical Properties of GRC-3 Lunar Simulant', J. Aerosp. Eng. 26(3):528-534, issued 2013-07. The title names GRC-3.",
+   "The stored citation leaves out the third author, Wilkinson. Denevi 2020 lists it as 'He, C., Zeng, X., Wilkinson, A., 2013'.",
+   "Indirect check: Gerdts et al. 2025 (NASA/TM-20250006761, fetched) cites 'He 2013' for GRC-3 min/max densities of 1520 and 1939 kg/m3 and a friction angle of 47.8 deg at 1839 kg/m3. These match the dissertation (NEW1)."
+  ],
+  "field": null
+ },
+ {
+  "simulant_id": "S082",
+  "field": "bulk_density",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The Table 5.4 row is verbatim, but the table is on printed p.182 (PDF p.196), not p.181.",
+   "1734 kg/m3 is the average bulk density of one of three triaxial specimen sets (1627, 1734, 1839). It is a test condition, not a stated bulk density of the product. The value 1.73 exists only after the extractor's unit conversion.",
+   "The stored pair (1.73 with friction angle 42.8) does not match this row, which pairs 1734 with 42.0. The stored value's real origin, probably R083, is still unverified."
+  ]
+ },
+ {
+  "simulant_id": "S082",
+  "field": "friction_angle",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "specific_gravity",
+  "reference_id": "RN-S082-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "release_date",
+  "outcome": "withheld: refuted by verification",
+  "problems": [
+   "The quote gives the publication date of R083 ('July 2013 \u00b7 Journal of Aerospace Engineering'), not the date GRC-3 was released.",
+   "GRC-3 existed by 2010. He's CWRU dissertation, dated May 2010, describes its development (Ch.5, p.164). LEAG-SIM-SAT (December 2010) lists GRC-3 in Appendix 4 and says GRC 'created and produced GRC-1 and 3'. IGG-01 Table 1 dates 'GRC-1/3' to 2010."
+  ],
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "availability",
+  "outcome": "withheld: refuted by verification",
+  "problems": [
+   "The quote (printed pp.165-166) says GRC-3 'can be produced in large quantities', which is about producibility, not availability. The conclusions on p.205 say the same ('can be easily reproduced').",
+   "The ESRIC directory (files/1735/simulants.html) says 'GRC-1 and GRC-3 ... Availability Previously produced, some stockpiles exist, can be reproduced if needed'. Oravec's 2025 keynote slide 42 says GRC 'Currently houses simulants GRC-1, GRC-3'. The evidence points to 'Limited Stock' held by NASA, not a product for sale.",
+   "Covia manufactures GRC-3b (NASA/TM-20250006761), but that is a different product label."
+  ],
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "lunar_sample_reference",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The quote is verbatim, but it is on printed p.165 (PDF p.179), not p.164.",
+   "'General' is not printed. A better quote, also on p.165: 'The first task of this project is to create a soil mixture that has a particle size distribution similar to that of the average of lunar regolith.' That targets the average lunar regolith particle size distribution (Carter et al. 2004 band), not a specific sample. Curator judgment."
+  ]
+ },
+ {
+  "simulant_id": "S082",
+  "field": "institution",
+  "reference_id": "RN-S082-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "mineral:crystalline_silica",
+  "reference_id": "RN-S082-6",
+  "outcome": "new value inserted with source",
+  "value": "29.8",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "liquid_limit",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "plastic_limit",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "plasticity_index",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "uscs_classification",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "max_density",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "min_density",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "max_porosity",
+  "outcome": "flagged: new value not confirmed",
+  "needs_review": true,
+  "problems": [
+   "The text is verbatim (printed p.180, repeated in the conclusions on p.205), but the source has the labels swapped. By its own eq. 5.3, n = 1 - 1939/2633 = 0.264 is the MINIMUM porosity, and n = 1 - 1520/2633 = 0.423 is the maximum. Storing max_porosity = 0.264 would put a physically inverted value in the database. The curator must decide."
+  ]
+ },
+ {
+  "simulant_id": "S082",
+  "field": "min_porosity",
+  "outcome": "flagged: new value not confirmed",
+  "needs_review": true,
+  "problems": [
+   "Same label swap: 0.423 is actually the maximum porosity (1 - 1520/2633)."
+  ]
+ },
+ {
+  "simulant_id": "S082",
+  "field": "max_void_ratio",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S082",
+  "field": "min_void_ratio",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S002",
+  "reference_id": "RN-S002-1",
+  "outcome": "new reference row created",
+  "title": "A Novel Method of Measuring Seismic Velocity in Off-Earth Conditions: Implications for Future Research",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S002",
+  "reference_id": "RN-S002-2",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S002",
+  "reference_id": "RN-S002-3",
+  "outcome": "new reference row created",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S002",
+  "reference_id": "RN-S002-4",
+  "outcome": "new reference row created",
+  "title": "Production of a set of lunar regolith simulants based on Apollo and Chinese samples",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S002",
+  "reference_id": "RN-S002-5",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S002",
+  "reference_id": "R001",
+  "outcome": "document unavailable; reference left unchecked",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S002",
+  "field": "release_date",
+  "reference_id": "RN-S002-3",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S002",
+  "field": "lunar_sample_reference",
+  "reference_id": "RN-S002-3",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S002",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S002",
+  "field": "institution",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S071",
+  "reference_id": "RN-S071-1",
+  "outcome": "new reference row created",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S071",
+  "reference_id": "RN-S071-2",
+  "outcome": "new reference row created",
+  "title": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S071",
+  "reference_id": "RN-S071-3",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S071",
+  "reference_id": "RN-S071-4",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Shear Behavior of TUBS-M, TUBS-T and TUBS-I Lunar Regolith Simulants",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S071",
+  "reference_id": "RN-S071-5",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S071",
+  "reference_id": "R056",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S071",
+  "field": "release_date",
+  "reference_id": "R056",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S071",
+  "field": "availability",
+  "reference_id": "R056",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S071",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S071",
+  "field": "institution",
+  "reference_id": "RN-S071-3",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S071",
+  "field": "particle_size_d50",
+  "outcome": "flagged: new value not confirmed",
+  "needs_review": true,
+  "problems": [
+   "'50.50' is verbatim in the UoM-B column of IGG-01 Table 7. However, the producer's own characterisation gives a different number: Just 2021 thesis p.102, 'The average mean particle sizes, D50 , were found to be 57 \u00b5m and 62 \u00b5m, respectively' (UoM-B, UoM-W).",
+   "IGG-01's D10/D30/D60 (11.94/33.47/72.69) match thesis Table 5.6 exactly, but 50.50 appears nowhere in the thesis.",
+   "Do not store 50.50 as the UoM-B D50 without a curator decision. Prefer '57 (\u00b5m)' from the primary manuscript (thesis p.102), or show both."
+  ]
+ },
+ {
+  "simulant_id": "S071",
+  "field": "specific_gravity",
+  "reference_id": "RN-S071-1",
+  "outcome": "new value inserted with source",
+  "value": "3.52",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S071",
+  "field": "bulk_density_range",
+  "reference_id": "RN-S071-1",
+  "outcome": "new value inserted with source",
+  "value": "1.37 \u2013 1.97 (g/cm\u00b3, min\u2013max)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S071",
+  "field": "friction_angle",
+  "reference_id": "RN-S071-1",
+  "outcome": "new value inserted with source",
+  "value": "34.76 \u00b1 6.79 (\u00b0)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S071",
+  "field": "cohesion",
+  "reference_id": "RN-S071-1",
+  "outcome": "new value inserted with source",
+  "value": "3.43 \u00b1 12.45 (kPa)",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S072",
+  "reference_id": "RN-S072-1",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S072",
+  "reference_id": "RN-S072-2",
+  "outcome": "new reference row created",
+  "title": "Geotechnical Shear Behavior of TUBS-M, TUBS-T and TUBS-I Lunar Regolith Simulants",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S072",
+  "reference_id": "RN-S072-3",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S072",
+  "reference_id": "RN-S072-4",
+  "outcome": "new reference row created",
+  "title": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S072",
+  "reference_id": "R057",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S072",
+  "field": "release_date",
+  "reference_id": "R057",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S072",
+  "field": "availability",
+  "reference_id": "R057",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S072",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S072",
+  "field": "institution",
+  "reference_id": "RN-S072-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S046",
+  "reference_id": "RN-S046-1",
+  "outcome": "new reference row created",
+  "title": "Preparation and Characterization of High-Strength Geopolymer Based on BH-1 Lunar Soil Simulant with Low Alkali Content",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S046",
+  "reference_id": "RN-S046-2",
+  "outcome": "new reference row created",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S046",
+  "reference_id": "RN-S046-3",
+  "outcome": "new reference row created",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S046",
+  "reference_id": "R040",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S046",
+  "field": "release_date",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The quote is verbatim (JSON-LD: \"datePublished\":\"2019-02-06\",\"headline\":\"The Preparation and Characterization of NEU-1 Lunar Soil Simulants\"). However, it is the paper's publication date, not a statement of when the product was released.",
+   "The only document that gives a year for NEU-1 as a product is IGG-01 Table 1, and it says 2017 ('NEU-1 China 2017 Basalt ...').",
+   "The same ResearchGate page (1712) shows a citing paper, 'Lunar Soil Simulant Electrolysis Using Inert Anode for Al-Si Alloy and Oxygen Production', J Electrochem Soc, dated Jan 2017 (Liu, Shi, Hu, Wang). Its snippet says: 'Recently, we prepared a new lunar soil simulant named NEU-1(Northeastern University Lunar Simulant 1)'. Its abstract begins 'NEU-1, a new lunar soil simulant mined from the Longgang Volcano Group...'. So NEU-1 was in use by 2017, and 2019 is at best the year it was formally characterised."
+  ]
+ },
+ {
+  "simulant_id": "S046",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S046",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S046",
+  "field": "institution",
+  "reference_id": "RN-S046-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "reference_id": "RN-S123-1",
+  "outcome": "new reference row created",
+  "title": "The preparation and characterization of NEU-1 lunar soil simulants",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S123",
+  "reference_id": "RN-S123-2",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S123",
+  "reference_id": "RN-S123-3",
+  "outcome": "new reference row created",
+  "title": "Properties and Characteristics of Regolith-Based Materials for Extraterrestrial Construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S123",
+  "reference_id": "RN-S123-4",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S123",
+  "reference_id": "R149",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S123",
+  "field": "release_date",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The quote is verbatim, but it is the paper's datePublished metadata (2019-02-06), not a statement of release date. The JOM 2019 paper is the earliest library document that names 'NEU-1a' by that name. However, IGG-01 Table 1 dates the NEU-1 series (High & Low-Ti) to 2017, and a J Electrochem Soc paper dated Jan 2017 (shown on the 1712 page) already used 'NEU-1'."
+  ]
+ },
+ {
+  "simulant_id": "S123",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "lunar_sample_reference",
+  "reference_id": "RN-S123-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "institution",
+  "reference_id": "RN-S123-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "oxide:SiO2",
+  "reference_id": "RN-S123-3",
+  "outcome": "new value inserted with source",
+  "value": "44.92",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "oxide:TiO2",
+  "reference_id": "RN-S123-3",
+  "outcome": "new value inserted with source",
+  "value": "2.870",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "oxide:Al2O3",
+  "reference_id": "RN-S123-3",
+  "outcome": "new value inserted with source",
+  "value": "17.23",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "oxide:FeO",
+  "reference_id": "RN-S123-3",
+  "outcome": "new value inserted with source",
+  "value": "13.09",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "oxide:MnO",
+  "reference_id": "RN-S123-3",
+  "outcome": "new value inserted with source",
+  "value": "0.34",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "oxide:MgO",
+  "reference_id": "RN-S123-3",
+  "outcome": "new value inserted with source",
+  "value": "4.37",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "oxide:CaO",
+  "reference_id": "RN-S123-3",
+  "outcome": "new value inserted with source",
+  "value": "9.44",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "oxide:Na2O",
+  "reference_id": "RN-S123-3",
+  "outcome": "new value inserted with source",
+  "value": "3.790",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "oxide:K2O",
+  "reference_id": "RN-S123-3",
+  "outcome": "new value inserted with source",
+  "value": "3.01",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "oxide:P2O5",
+  "reference_id": "RN-S123-3",
+  "outcome": "new value inserted with source",
+  "value": "0.54",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "particle_size_d50",
+  "reference_id": "RN-S123-3",
+  "outcome": "new value inserted with source",
+  "value": "177.6",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "glass_transition_temperature",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "crystallization_temperature",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S123",
+  "field": "melting_temperature",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S124",
+  "reference_id": "RN-S124-1",
+  "outcome": "new reference row created",
+  "title": "The preparation and characterization of NEU-1 lunar soil simulants",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S124",
+  "reference_id": "RN-S124-2",
+  "outcome": "new reference row created",
+  "title": "Properties of novel LX lunar regolith simulant system \u2014 The base simulants: Part 1",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S124",
+  "reference_id": "RN-S124-3",
+  "outcome": "new reference row created",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S124",
+  "reference_id": "R150",
+  "outcome": "reference names the simulant",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S124",
+  "field": "release_date",
+  "outcome": "flagged: verifier could not confirm",
+  "needs_review": true,
+  "problems": [
+   "The quote is the paper's datePublished metadata (2019-02-06), not a product release statement. IGG-01 Table 1 dates the NEU-1 series (High & Low-Ti) to 2017, and a J Electrochem Soc paper dated Jan 2017 already used 'NEU-1'."
+  ]
+ },
+ {
+  "simulant_id": "S124",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S124",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S124",
+  "field": "institution",
+  "reference_id": "RN-S124-2",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S124",
+  "field": "oxide:TiO2",
+  "reference_id": "RN-S124-1",
+  "outcome": "new value inserted with source",
+  "value": "6.5%",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S124",
+  "field": "crystallization_temperature",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S124",
+  "field": "melting_temperature",
+  "outcome": "ignored: not a known scalar field",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S055",
+  "reference_id": "RN-S055-1",
+  "outcome": "new reference row created",
+  "title": "Simulants \u2014 ESRIC Knowledge Base",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S055",
+  "reference_id": "RN-S055-2",
+  "outcome": "new reference row created",
+  "title": "ISECG ISRU Technology Gap Assessment Report",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S055",
+  "reference_id": "NEW3",
+  "outcome": "flagged: proposed new reference not confirmed",
+  "needs_review": true,
+  "problems": [
+   "I rendered papers/LRS/Offplanet.pdf (image-only, 'Products and Services' printout dated 2026-01-15) and found the quote verbatim on p.2 under 'Specialized Simulants:': 'Agglutinates can be made from any base simulant'. The same page also says 'We also provide custom simulants and agglutinates.' However the document never uses the product name 'OPR Agglutinate'. It describes a generic agglutinate offering, so I cannot confirm it names this exact catalogue entry. The same wording is on the live page https://www.offplanetresearch.com/products-and-services (fetched today, saved as papers/agent-fetched/OffPlanetResearch_products-and-services_2026-09-24.html)."
+  ],
+  "title": "Products and Services \u2014 Off Planet Research",
+  "field": null
+ },
+ {
+  "simulant_id": "S055",
+  "reference_id": "R068",
+  "outcome": "reference does NOT name the simulant; kept, marked 0",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S055",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S055",
+  "field": "institution",
+  "reference_id": "RN-S055-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S056",
+  "reference_id": "RN-S056-1",
+  "outcome": "new reference row created",
+  "title": "Lunar Simulant Assessment",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S056",
+  "reference_id": "RN-S056-2",
+  "outcome": "new reference row created",
+  "title": "2022 Lunar Simulant Assessment",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S056",
+  "reference_id": "RN-S056-3",
+  "outcome": "new reference row created",
+  "title": "Simulants (ARES Exploration Science Projects)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S056",
+  "reference_id": "RN-S056-4",
+  "outcome": "new reference row created",
+  "title": "Off Planet Research, LLC \u2014 LSIC/JHU-APL presentation",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S056",
+  "reference_id": "RN-S056-5",
+  "outcome": "new reference row created",
+  "title": "A Comprehensive Review of Lunar-based Manufacturing and Construction (embedded excerpt appearing on the ResearchGate page for 'Properties of TJ-1 Lunar Soil Simulant')",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S056",
+  "reference_id": "RN-S056-6",
+  "outcome": "new reference row created",
+  "title": "OPRFLCROSS2 \u2014 Off Planet Research (product page)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S056",
+  "reference_id": "R069",
+  "outcome": "reference does NOT name the simulant; kept, marked 0",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S056",
+  "field": "release_date",
+  "outcome": "withheld: refuted by verification",
+  "problems": [
+   "The claim that release_date is unsupported is wrong: the extractor misread the NEW8 table. Azami et al. 2024 Table 3 has columns 'Simulant Type Reported usage Year', and the OPRFLCROSS2 row reads 'OPRFLCROSS2 [51] Polar Volatile Ice simulant 2019' (ResearchGate copy, NEW8) and 'OPRFLCROSS2 [55] Polar Volatile Ice simulant 2019' (published version, doi:10.1016/j.paerosci.2024.101045). This supports the stored '2019'. The '2017' is KLS-1's year. It is a secondary review source, and its cited ref [55] (the LPSC 2019 poster) names OPRFLCROSS1, not OPRFLCROSS2. Circumstantial evidence (Wayback CDX): offplanetresearch.com/oprflcross1 returned 404 on 2019-06-12, and /oprflcross2 was first captured on 2019-07-18."
+  ],
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S056",
+  "field": "availability",
+  "outcome": "withheld: refuted by verification",
+  "problems": [
+   "There is support the extractor missed. OPR's own current Products and Services listing names OPRFLCROSS2 as an offered product. papers/LRS/Offplanet.pdf (printout dated 2026-01-15, rendered): p.1 under 'Lunar Simulants' says 'Please Contact Us (/contact-us) for Quote.', and p.2 under 'Specialized Simulants:' lists 'OPRFLCROSS2 Lunar icy regolith simulant'. The live page fetched today (saved as papers/agent-fetched/OffPlanetResearch_products-and-services_2026-09-24.html) reads 'Specialized Lunar Simulants: ... OPRFLCROSS2 Lunar icy regolith simulant'. The extractor's statement that OPR's current site no longer names OPRFLCROSS2 is true only of /simulants. Also supporting: Stockstill-Cahill 2022, PDF p.24, 'The icy simulant can be produced and experimented upon at the Off Planet Research facility or at the clients facilities depending upon the composition requested.' Caveat: no source prints the literal word 'available'; this is a current producer listing, sold on request."
+  ],
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S056",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S056",
+  "field": "institution",
+  "reference_id": "RN-S056-1",
+  "outcome": "source row written",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S102",
+  "reference_id": "RN-S102-1",
+  "outcome": "new reference row created",
+  "title": "Crowdfunding campaign lets you snag simulated moon dirt \u2014 but handle with care",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S102",
+  "reference_id": "RN-S102-2",
+  "outcome": "new reference row created",
+  "title": "The Unique Physical Characteristics Of Simulated Lunar Ice (LPSC 2019, abstract #2141)",
+  "needs_review": false,
+  "field": null
+ },
+ {
+  "simulant_id": "S102",
+  "reference_id": "NEW12",
+  "outcome": "flagged: proposed new reference not confirmed",
+  "needs_review": true,
+  "problems": [
+   "This is not a reference for OPRFLCROSS1. The LEAG 2019 poster (byte-identical to the live URL, MD5 2dc6f653...) uses only the unnumbered name 'OPRFLCROSS' and describes 'Two versions of these icy simulants', so the exact product cannot be confirmed. The mention_quote is also not verbatim. The poster says 'formed by cryogenic vapor deposition of the nine components observed in the LCROSS impact plume [1] into OPRH2N lunar Highland regolith simulant' (and elsewhere 'nine ice components'); 'nine ice gases' does not appear. The Figure 9 caption used in the value check is genuine."
+  ],
+  "title": "Testing NIRVSS with OPRFLCROSS Lunar Icy Regolith Simulants (LEAG 2019, abstract #5028)",
+  "field": null
+ },
+ {
+  "simulant_id": "S102",
+  "reference_id": "R133",
+  "outcome": "flagged: reference claim not confirmed",
+  "needs_review": true,
+  "problems": [
+   "The claim that the OPR website does not name OPRFLCROSS1 is false on two counts. (1) The extractor's own saved copy papers/agent-fetched/OffPlanetResearch_simulants_2026-09-24.html, and the live /simulants page I fetched today, contain the image caption (data-description attribute, so not visible text) 'OPRFLCROSS1 lunar ice simulant frozen in one of our lunar Highland regolith simulants.' The extractor's tag-stripping removed it. (2) The site had a dedicated product page. Wayback Machine capture 20190208192913 of https://www.offplanetresearch.com/oprflcross1 (saved as papers/agent-fetched/OffPlanetResearch_OPRFLCROSS1_productpage_WaybackMachine_20190208.html) reads 'OPRFLCROSS1 DATA SHEET' and 'OPRFLCROSS1 is a lunar ice simulant based on the LCROSS mission results as reported in \"Detection of Water in the LCROSS Ejecta Plume\" Anthony Colaprete, et al. Science 330, 463 (2010)'. The live /oprflcross1 URL does return 404 today, and Wayback records a 404 there from 2019-06-12."
+  ],
+  "field": null
+ },
+ {
+  "simulant_id": "S102",
+  "field": "release_date",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S102",
+  "field": "availability",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S102",
+  "field": "lunar_sample_reference",
+  "outcome": "withheld: unsupported by any cited document",
+  "needs_review": false
+ },
+ {
+  "simulant_id": "S102",
+  "field": "institution",
+  "reference_id": "RN-S102-2",
+  "outcome": "source row written",
+  "needs_review": false
+ }
+]

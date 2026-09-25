@@ -1,63 +1,50 @@
 import { useState, useCallback } from 'react';
 import type { PanelState } from '../types';
 
-const defaultPanel: PanelState = { open: false, pinned: false, simulantId: null };
+const defaultPanel: PanelState = { open: false, simulantId: null };
+
+/** A pane section a click can open at: the table's Chem/Miner and References cells use them. */
+export type PaneSection = 'composition' | 'references';
+
+/** At most this many simulants in the compare tray. */
+export const MAX_COMPARE = 4;
 
 export function usePanelState() {
   const [panel1, setPanel1] = useState<PanelState>(defaultPanel);
-  const [panel2, setPanel2] = useState<PanelState>(defaultPanel);
-  const [compareMode, setCompareMode] = useState(false);
+  const [focusSection, setFocusSection] = useState<PaneSection | null>(null);
+  // The compare tray: the pane's "Add to compare", the table's and the list's checkboxes all
+  // add here, and the tray opens the comparison (review #6: one mechanism instead of three).
+  const [compareIds, setCompareIds] = useState<string[]>([]);
   const [selectedLunarSiteId, setSelectedLunarSiteId] = useState<string | null>(null);
   const [showComparison, setShowComparison] = useState(false);
-  const [selectedLunarRefMission, setSelectedLunarRefMission] = useState<string | null>(null);
+  // The lunar sample the user picked, and for which simulant: a pick applies to that simulant
+  // only, so the next one opens with its own suggestion instead of the previous choice.
+  const [lunarRefPick, setLunarRefPick] = useState<{ simulantId: string; mission: string | null } | null>(null);
   const [showCrossComparison, setShowCrossComparison] = useState(false);
 
-  const openPanel = useCallback((panelNum: 1 | 2, simulantId: string) => {
-    const setter = panelNum === 1 ? setPanel1 : setPanel2;
-    setter(prev => ({ ...prev, open: true, simulantId }));
+  const selectSimulant = useCallback((simulantId: string, section: PaneSection | null = null) => {
+    setPanel1({ open: true, simulantId });
+    setFocusSection(section);
   }, []);
 
-  const closePanel = useCallback((panelNum: 1 | 2) => {
-    const setter = panelNum === 1 ? setPanel1 : setPanel2;
-    setter(defaultPanel);
-    if (panelNum === 1) {
-      setCompareMode(false);
-      setPanel2(defaultPanel);
-    }
+  const closePanel = useCallback(() => {
+    setPanel1(defaultPanel);
+    setFocusSection(null);
   }, []);
 
-  const minimizeUnpinned = useCallback(() => {
-    setPanel1(prev => prev.pinned ? prev : { ...prev, open: false });
-    setPanel2(prev => prev.pinned ? prev : { ...prev, open: false });
+  const toggleCompare = useCallback((simulantId: string) => {
+    setCompareIds(prev => prev.includes(simulantId) ? prev.filter(id => id !== simulantId)
+      : prev.length >= MAX_COMPARE ? prev : [...prev, simulantId]);
   }, []);
 
-  const togglePin = useCallback((panelNum: 1 | 2) => {
-    const setter = panelNum === 1 ? setPanel1 : setPanel2;
-    setter(prev => ({ ...prev, pinned: !prev.pinned }));
-  }, []);
-
-  const toggleCompare = useCallback(() => {
-    setCompareMode(prev => {
-      if (prev) setPanel2(defaultPanel);
-      return !prev;
-    });
-  }, []);
-
-  const selectSimulant = useCallback((simulantId: string) => {
-    if (compareMode && panel1.open && !panel2.simulantId) {
-      openPanel(2, simulantId);
-    } else {
-      openPanel(1, simulantId);
-    }
-  }, [compareMode, panel1.open, panel2.simulantId, openPanel]);
+  const clearCompare = useCallback(() => { setCompareIds([]); setShowComparison(false); }, []);
 
   return {
-    panel1, panel2, compareMode, showComparison,
-    selectedLunarSiteId, selectedLunarRefMission, showCrossComparison,
-    openPanel, closePanel, minimizeUnpinned, togglePin, toggleCompare,
-    selectSimulant,
+    panel1, focusSection, compareIds, showComparison,
+    selectedLunarSiteId, lunarRefPick, showCrossComparison,
+    selectSimulant, closePanel, toggleCompare, clearCompare, setCompareIds,
     setSelectedLunarSiteId,
     setShowComparison,
-    setSelectedLunarRefMission, setShowCrossComparison,
+    setLunarRefPick, setShowCrossComparison,
   };
 }

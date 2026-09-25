@@ -21,6 +21,8 @@ interface GlobeViewProps {
   onClusterClick: (cluster: ClusterPoint, event: MouseEvent) => void;
   onAltitudeChange?: (altitude: number) => void;
   autoRotate?: boolean;
+  /** Called once the globe's texture has loaded and the globe is on screen. */
+  onReady?: () => void;
 }
 
 function createClusterBadge(d: ClusterPoint, onClick: (d: ClusterPoint, e: MouseEvent) => void, onDblClick: (d: ClusterPoint) => void): HTMLElement {
@@ -66,7 +68,7 @@ function createClusterBadge(d: ClusterPoint, onClick: (d: ClusterPoint, e: Mouse
 }
 
 export const GlobeView = forwardRef<GlobeViewHandle, GlobeViewProps>(
-  ({ planet, earthTexture, singlePoints, clusterPoints, onPointClick, onClusterClick, onAltitudeChange, autoRotate = true }, ref) => {
+  ({ planet, earthTexture, singlePoints, clusterPoints, onPointClick, onClusterClick, onAltitudeChange, autoRotate = true, onReady }, ref) => {
     const globeRef = useRef<GlobeMethods>(null);
     const lastAltRef = useRef(0);
     const [dims, setDims] = useState({ width: window.innerWidth, height: window.innerHeight });
@@ -124,6 +126,7 @@ export const GlobeView = forwardRef<GlobeViewHandle, GlobeViewProps>(
     return (
       <Globe
         ref={globeRef}
+        onGlobeReady={onReady}
         width={dims.width}
         height={dims.height}
         globeImageUrl={planet === 'moon'
