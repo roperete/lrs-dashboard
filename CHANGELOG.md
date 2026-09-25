@@ -5,6 +5,10 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.25 — 2026-09-25 (staging)
+
+The database is live. The public address, roperete.github.io/lrs-dashboard, serves the app instead of the maintenance page, with the same content as this staging release (v2.9.24). The page now has a description for search results and link previews.
+
 ## v2.9.24 — 2026-09-25 (staging)
 
 Ready for users: the Moon's 19 sites back with papers behind them, the Gasteiner checks applied and credited, and the page cleared of review wording.
