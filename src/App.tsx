@@ -61,9 +61,22 @@ export default function App() {
   const [isRotating, setIsRotating] = useState(false);
   const isMobile = useIsMobile();
 
-  // Ensure splash screen shows for at least 2 seconds
+  // The branded loading screen stays up until the first view is drawn (the globe's texture
+  // takes seconds to arrive), for at least 1.5 s so the sponsor is seen, and at most 12 s.
+  const [firstViewDrawn, setFirstViewDrawn] = useState(false);
+  const [splashMinDone, setSplashMinDone] = useState(false);
+  const [splashTimedOut, setSplashTimedOut] = useState(false);
+  useEffect(() => {
+    const min = setTimeout(() => setSplashMinDone(true), 1500);
+    const max = setTimeout(() => setSplashTimedOut(true), 12000);
+    return () => { clearTimeout(min); clearTimeout(max); };
+  }, []);
+  const markViewDrawn = useCallback(() => setFirstViewDrawn(true), []);
+  const showSplash = loading || !(splashMinDone && (firstViewDrawn || splashTimedOut));
 
   const mapState = useMapState();
+  // the table needs nothing drawn: it counts as ready as soon as the data is there
+  useEffect(() => { if (!loading && mapState.viewMode === 'table') markViewDrawn(); }, [loading, mapState.viewMode, markViewDrawn]);
   const panelState = usePanelState();
   const filterState = useFilters(simulants, compositions, chemicalCompositions, mineralGroups, chemicalBySimulant, compositionBySimulant, referencesBySimulant);
 
@@ -245,10 +258,20 @@ export default function App() {
   }, [mapState]);
 
 
-  if (loading) return <LoadingScreen />;
+  const viewName = mapState.viewMode === 'table' ? 'the table'
+    : mapState.viewMode === 'map' ? 'the map' : mapState.planet === 'moon' ? 'the Moon' : 'the globe';
+  // First child of the root in both returns, so the screen is not remounted when the data arrives.
+  const splash = (
+    <AnimatePresence>
+      {showSplash && <LoadingScreen key="splash" status={loading ? 'Loading the database…' : `Drawing ${viewName}…`} />}
+    </AnimatePresence>
+  );
+
+  if (loading) return <div className="h-dvh w-screen bg-slate-950 overflow-hidden relative">{splash}</div>;
 
   return (
-    <div className="h-dvh w-screen bg-slate-950 overflow-hidden relative font-sans text-slate-200">
+    <div className="h-dvh w-screen bg-slate-950 overflow-hidden relative font-sans text-slate-200" aria-busy={showSplash}>
+      {splash}
       <AppHeader
         planet={mapState.planet} viewMode={mapState.viewMode}
         sidebarOpen={isSidebarOpen}
@@ -307,10 +330,10 @@ export default function App() {
         </div>
       ) : (
         <div className="absolute inset-x-0 bottom-0 top-14 z-0">
-          <ErrorBoundary area key={`${mapState.viewMode}-${mapState.planet}`}
+          <ErrorBoundary area key={`${mapState.viewMode}-${mapState.planet}`} onError={markViewDrawn}
             scope={mapState.viewMode === 'globe' ? 'the 3D globe' : 'the 2D map'}
             hint={mapState.viewMode === 'globe' ? 'Your browser may not be able to draw 3D graphics (WebGL). The 2D map and the table work without it: switch view at the top.' : undefined}>
-          <Suspense fallback={<div className="flex h-full items-center justify-center text-sm text-slate-400" role="status">Loading the view…</div>}>
+          <Suspense fallback={<LoadingScreen mode="area" status={`Loading ${viewName}…`} />}>
             {mapState.viewMode === 'globe' ? (
               <GlobeView
                 ref={globeRef}
@@ -322,6 +345,7 @@ export default function App() {
                 }}
                 onAltitudeChange={handleAltitudeChange}
                 autoRotate={isRotating}
+                onReady={markViewDrawn}
               />
             ) : (
               <LeafletMap
@@ -332,6 +356,7 @@ export default function App() {
                 countries={data.countriesGeoJson}
                 onSimulantClick={handleSimulantClick} onLunarSiteClick={handleLunarSiteClick}
                 onMapClick={handleMapClick}
+                onReady={markViewDrawn}
               />
             )}
           </Suspense>

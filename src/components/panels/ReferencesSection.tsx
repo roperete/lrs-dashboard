@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BookOpen, ExternalLink, Search, CircleCheck, TriangleAlert } from 'lucide-react';
+import { BookOpen, ExternalLink, Search, CircleCheck, TriangleAlert, Sparkles } from 'lucide-react';
 import { Tooltip } from '../ui/Tooltip';
 import { orderReferences } from '../../utils/references';
 import type { Reference } from '../../types';
@@ -196,6 +196,19 @@ export function ReferencesSection({ references, simulantName }: ReferencesSectio
             <div>
               <p className="text-sm font-medium text-emerald-400">Find Citing Sources</p>
               <p className="text-[10px] text-slate-400">Search Google Scholar for papers citing {simulantName}</p>
+            </div>
+          </a>
+          <a
+            href={`https://www.google.com/search?q=${encodeURIComponent(simulantName + ' lunar regolith simulant published studies experiments applications site:scholar.google.com OR site:researchgate.net OR site:sciencedirect.com')}&udm=50`}
+            target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-3 p-3 bg-purple-500/5 hover:bg-purple-500/10 border border-purple-500/20 rounded-xl transition-all group"
+          >
+            <div className="p-2 bg-purple-500/10 rounded-lg group-hover:bg-purple-500/20 transition-colors">
+              <Sparkles size={16} className="text-purple-400" />
+            </div>
+            <div>
+              <p className="text-sm font-medium text-purple-400">Ask AI about this simulant</p>
+              <p className="text-[10px] text-slate-400">AI search for published studies using {simulantName}. Its answers are not checked by this database.</p>
             </div>
           </a>
         </div>

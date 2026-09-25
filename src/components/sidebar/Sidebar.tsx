@@ -4,6 +4,7 @@ import { motion, useDragControls } from 'motion/react';
 import { DragGrip, dragToClose } from '../ui/DragToClose';
 import { DynamicFilterPanel } from './DynamicFilterPanel';
 import { APP_VERSION } from '../../version';
+import { Credits, FeedbackLink } from '../brand/Credits';
 import { cn } from '../../utils/cn';
 import { getCountryDisplay } from '../../utils/countryUtils';
 import type { Simulant, LunarSite, DynamicFilter, FilterProperty } from '../../types';
@@ -250,7 +251,12 @@ export function Sidebar(props: SidebarProps) {
         </div>
       )}
 
-      <div className="mt-auto px-4 py-2 border-t border-slate-800 text-[11px] text-slate-400">{APP_VERSION}</div>
+      {/* the way to reach the team, and who funds and builds the database */}
+      <div className="mt-auto shrink-0 space-y-1.5 border-t border-slate-800 px-4 pt-2.5 pb-1.5">
+        <FeedbackLink />
+        <Credits variant="pane" />
+        <p className="text-center text-[11px] text-slate-400">{APP_VERSION}</p>
+      </div>
     </motion.div>
   );
 }

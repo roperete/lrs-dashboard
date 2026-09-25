@@ -1,0 +1,5944 @@
+[
+ {
+  "doc_id": "D001",
+  "title": "LHS-1 Lunar Highlands Simulant | Fact Sheet (Space Resource Technologies / SRT), doc 003-01-001-1225",
+  "authors": null,
+  "year": 2025,
+  "doi": null,
+  "url": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-1-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reference_text": "LHS-1 Lunar Highlands Simulant | Fact Sheet (Space Resource Technologies / SRT), doc 003-01-001-1225",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/SRT/LHS-1_spec_Dec2025.pdf",
+  "reference_ids": [
+   "DS-S036"
+  ],
+  "simulants": [
+   "LHS-1"
+  ],
+  "values_citing": 24
+ },
+ {
+  "doc_id": "D002",
+  "title": "LMS-1 Lunar Mare Simulant | Fact Sheet (Space Resource Technologies / SRT)",
+  "authors": null,
+  "year": 2025,
+  "doi": null,
+  "url": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LMS-1-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081546",
+  "reference_text": "LMS-1 Lunar Mare Simulant | Fact Sheet (Space Resource Technologies / SRT)",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/SRT/LMS-1_spec_Dec2025.pdf",
+  "reference_ids": [
+   "DS-S037"
+  ],
+  "simulants": [
+   "LMS-1"
+  ],
+  "values_citing": 24
+ },
+ {
+  "doc_id": "D003",
+  "title": "Off Planet Research General Lunar Regolith Simulants Data Sheet",
+  "authors": null,
+  "year": 2024,
+  "doi": null,
+  "url": "https://www.offplanetresearch.com/s/OPR-General-Lunar-Regolith-Simulants-Data-Sheet-yek3.pdf",
+  "reference_text": "Off Planet Research General Lunar Regolith Simulants Data Sheet",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/OPR/OPR_General_Lunar_Simulants_Data_Sheet.pdf",
+  "reference_ids": [
+   "DS-S057",
+   "DS-S058",
+   "DS-S059",
+   "DS-S060"
+  ],
+  "simulants": [
+   "OPRH2N",
+   "OPRH3N",
+   "OPRH4N",
+   "OPRL2N"
+  ],
+  "values_citing": 79
+ },
+ {
+  "doc_id": "D004",
+  "title": "Hispansion Technical Data Sheet TDS-TLH-0-v1.1 (11 Nov 2025), supplied by the manufacturer; TerraLun Core product page linked — superseded by v1.4",
+  "authors": null,
+  "year": 2025,
+  "doi": null,
+  "url": "https://www.hispansion.io/product-services/regolith-simulants/core-simulant",
+  "reference_text": "Hispansion Technical Data Sheet TDS-TLH-0-v1.1 (11 Nov 2025), supplied by the manufacturer; TerraLun Core product page linked",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/Hispansion/TLH-0_TDS.pdf",
+  "reference_ids": [
+   "DS-S065"
+  ],
+  "simulants": [
+   "TLH-0"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D005",
+  "title": "Hispansion Technical Data Sheet TDS-TLH-0-v1.4 (public, 2026-09)",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "https://www.hispansion.io/_files/ugd/7ec058_f262ea9a2f464969ac624014685410a8.pdf",
+  "reference_text": "Hispansion Technical Data Sheet TDS-TLH-0-v1.4 (public, 2026-09)",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/Hispansion/TLH-0_TDS_v1.4.pdf",
+  "reference_ids": [
+   "DS-S065-v1.4"
+  ],
+  "simulants": [
+   "TLH-0"
+  ],
+  "values_citing": 33
+ },
+ {
+  "doc_id": "D006",
+  "title": "Hispansion Technical Data Sheet TDS-TLM-0-v1.1 (11 Nov 2025), supplied by the manufacturer; TerraLun Core product page linked — superseded by v2.2",
+  "authors": null,
+  "year": 2025,
+  "doi": null,
+  "url": "https://www.hispansion.io/product-services/regolith-simulants/core-simulant",
+  "reference_text": "Hispansion Technical Data Sheet TDS-TLM-0-v1.1 (11 Nov 2025), supplied by the manufacturer; TerraLun Core product page linked",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/Hispansion/TLM-0_TDS.pdf",
+  "reference_ids": [
+   "DS-S066"
+  ],
+  "simulants": [
+   "TLM-0"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D007",
+  "title": "Hispansion Technical Data Sheet TDS-TLM-0-v2.2 (public, 2026-09)",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "https://www.hispansion.io/_files/ugd/7ec058_2325e24163f047bb9020ad858b3b6123.pdf",
+  "reference_text": "Hispansion Technical Data Sheet TDS-TLM-0-v2.2 (public, 2026-09)",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/Hispansion/TLM-0_TDS_v2.2.pdf",
+  "reference_ids": [
+   "DS-S066-v2.2"
+  ],
+  "simulants": [
+   "TLM-0"
+  ],
+  "values_citing": 41
+ },
+ {
+  "doc_id": "D008",
+  "title": "LMS-2 Lunar Mare Simulant | Fact Sheet (Space Resource Technologies), document 001-14-001-1225",
+  "authors": null,
+  "year": 2025,
+  "doi": null,
+  "url": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LMS-2-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reference_text": "LMS-2 Lunar Mare Simulant | Fact Sheet (Space Resource Technologies), document 001-14-001-1225",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/SRT/LMS-2_spec_Dec2025.pdf",
+  "reference_ids": [
+   "DS-S076"
+  ],
+  "simulants": [
+   "LMS-2"
+  ],
+  "values_citing": 22
+ },
+ {
+  "doc_id": "D009",
+  "title": "LHS-2 Lunar Highlands Simulant | Fact Sheet (Space Resource Technologies), document 001-11-001-1225",
+  "authors": null,
+  "year": 2025,
+  "doi": null,
+  "url": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-2-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reference_text": "LHS-2 Lunar Highlands Simulant | Fact Sheet (Space Resource Technologies), document 001-11-001-1225",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/SRT/LHS-2_spec_Dec2025.pdf",
+  "reference_ids": [
+   "DS-S077"
+  ],
+  "simulants": [
+   "LHS-2"
+  ],
+  "values_citing": 24
+ },
+ {
+  "doc_id": "D010",
+  "title": "LHS-2E Lunar Highlands Simulant | Fact Sheet (Space Resource Technologies), document 001-13-001-1225",
+  "authors": null,
+  "year": 2025,
+  "doi": null,
+  "url": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-2E-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reference_text": "LHS-2E Lunar Highlands Simulant | Fact Sheet (Space Resource Technologies), document 001-13-001-1225",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/SRT/LHS-2E_spec_Dec2025.pdf",
+  "reference_ids": [
+   "DS-S078"
+  ],
+  "simulants": [
+   "LHS-2E"
+  ],
+  "values_citing": 20
+ },
+ {
+  "doc_id": "D011",
+  "title": "LSP-2 Lunar South Pole Simulant | Fact Sheet (Space Resource Technologies), document 001-12-001-1225",
+  "authors": null,
+  "year": 2025,
+  "doi": null,
+  "url": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LSP-2-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081545",
+  "reference_text": "LSP-2 Lunar South Pole Simulant | Fact Sheet (Space Resource Technologies), document 001-12-001-1225",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/SRT/LSP-2_spec_Dec2025.pdf",
+  "reference_ids": [
+   "DS-S079"
+  ],
+  "simulants": [
+   "LSP-2"
+  ],
+  "values_citing": 20
+ },
+ {
+  "doc_id": "D012",
+  "title": "LHS-1D Dust Simulant | Fact Sheet (Space Resource Technologies / SRT), doc 003-03-001-1225",
+  "authors": null,
+  "year": 2025,
+  "doi": null,
+  "url": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-1D-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081546",
+  "reference_text": "LHS-1D Dust Simulant | Fact Sheet (Space Resource Technologies / SRT), doc 003-03-001-1225",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/SRT/LHS-1D_spec_Dec2025.pdf",
+  "reference_ids": [
+   "DS-S091"
+  ],
+  "simulants": [
+   "LHS-1D"
+  ],
+  "values_citing": 25
+ },
+ {
+  "doc_id": "D013",
+  "title": "LHS-1E Lunar Highlands Simulant | Fact Sheet (Space Resource Technologies / SRT), doc 003-09-001-1225",
+  "authors": null,
+  "year": 2025,
+  "doi": null,
+  "url": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-1E-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081546",
+  "reference_text": "LHS-1E Lunar Highlands Simulant | Fact Sheet (Space Resource Technologies / SRT), doc 003-09-001-1225",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/SRT/LHS-1E_spec_Dec2025.pdf",
+  "reference_ids": [
+   "DS-S092"
+  ],
+  "simulants": [
+   "LHS-1E"
+  ],
+  "values_citing": 20
+ },
+ {
+  "doc_id": "D014",
+  "title": "Lunar Highlands 25% Agglutinate Simulant | Fact Sheet (Space Resource Technologies / Exolith), April 2023",
+  "authors": null,
+  "year": 2023,
+  "doi": null,
+  "url": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LHS-1-25A_Spec_Sheet.pptx.pdf?v=1761053856",
+  "reference_text": "Lunar Highlands 25% Agglutinate Simulant | Fact Sheet (Space Resource Technologies / Exolith), April 2023",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/SRT/LHS-1-25A_spec.pdf",
+  "reference_ids": [
+   "DS-S093"
+  ],
+  "simulants": [
+   "LHS-1-25A"
+  ],
+  "values_citing": 22
+ },
+ {
+  "doc_id": "D015",
+  "title": "LMS-1D Dust Simulant | Fact Sheet (Space Resource Technologies / SRT)",
+  "authors": null,
+  "year": 2025,
+  "doi": null,
+  "url": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LMS-1D-SPEC-SHEET-DEC2025.pptx_a39cf2a4-4f51-4714-b6ad-421e25e0f295.pdf?v=1765990108",
+  "reference_text": "LMS-1D Dust Simulant | Fact Sheet (Space Resource Technologies / SRT)",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/SRT/LMS-1D_spec_Dec2025.pdf",
+  "reference_ids": [
+   "DS-S094"
+  ],
+  "simulants": [
+   "LMS-1D"
+  ],
+  "values_citing": 25
+ },
+ {
+  "doc_id": "D016",
+  "title": "LMS-1E Lunar Mare Simulant | Fact Sheet (Space Resource Technologies / SRT)",
+  "authors": null,
+  "year": 2025,
+  "doi": null,
+  "url": "https://cdn.shopify.com/s/files/1/0398/9268/0862/files/LMS-1E-SPEC-SHEET-DEC2025.pptx.pdf?v=1764081546",
+  "reference_text": "LMS-1E Lunar Mare Simulant | Fact Sheet (Space Resource Technologies / SRT)",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/SRT/LMS-1E_spec_Dec2025.pdf",
+  "reference_ids": [
+   "DS-S095"
+  ],
+  "simulants": [
+   "LMS-1E"
+  ],
+  "values_citing": 19
+ },
+ {
+  "doc_id": "D017",
+  "title": "Slabic, A., Gruener, J.E., Kovtun, R.N., Rickman, D.L., Sibille, L., Oravec, H.A., Edmunson, J. & Keprta, S. (2024). Lunar Regolith Simulant User's Guide: Revision A. NASA/TM-20240011783, NASA Johnson Space Center. Table 7 (bulk chemistry) and Table 5 (modal mineralogy).",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "https://ntrs.nasa.gov/api/citations/20240011783/downloads/Lunar_Regolith_Simulant_Users_Guide_Rev_A_28OCT.pdf",
+  "reference_text": "Slabic, A., Gruener, J.E., Kovtun, R.N., Rickman, D.L., Sibille, L., Oravec, H.A., Edmunson, J. & Keprta, S. (2024). Lunar Regolith Simulant User's Guide: Revision A. NASA/TM-20240011783, NASA Johnson Space Center. Table 7 (bulk chemistry) and Table 5 (modal mineralogy).",
+  "reference_type": "report",
+  "local_path": "papers/Slabic_etal_2024_Lunar_Regolith_Simulant_Users_Guide_RevA_NASA-TM-20240011783.pdf",
+  "reference_ids": [
+   "DS-S100"
+  ],
+  "simulants": [
+   "OPRH4W30"
+  ],
+  "values_citing": 12
+ },
+ {
+  "doc_id": "D018",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1061/(ASCE)AS.1943-5525.0000428",
+  "url": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0000428",
+  "reference_text": "Bonanno, A., & Bernold, L. (2015). Exploratory review of sintered lunar soil based on the results of the thermal analysis of a lunar soil simulant. Journal of Aerospace Engineering, 28, 04014114. https://doi.org/10.1061/(ASCE)AS.1943-5525.000042",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R001"
+  ],
+  "simulants": [
+   "ALRS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D019",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Desai, C. S. (1991). Development and mechanical properties of structural materials from lunar simulant. In NASA Space Engineering Research Center for Utilization of Local Planetary Resources.",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R002"
+  ],
+  "simulants": [
+   "ALS"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D020",
+  "title": "Preparation and Characterization of High-Strength Geopolymer Based on BH-1 Lunar Soil Simulant with Low Alkali Content",
+  "authors": "Siqi Zhou, Chenghong Lu, Xingyi Zhu, Feng Li",
+  "year": 2021,
+  "doi": "10.1016/j.eng.2020.10.016",
+  "url": "https://doi.org/10.1016/j.eng.2020.10.016",
+  "reference_text": "Zhou, S., Lu, C., Zhu, X., & Li, F. (2021). Preparation and characterization of high-strength geopolymer based on BH-1 lunar soil simulant with low alkali content. Engineering, 7, 1631-1645. https://doi.org/10.1016/j.eng.2020.10.016",
+  "reference_type": "composition",
+  "local_path": "papers/Zhou_etal_2021_BH-1_lunar_soil_simulant_geopolymer_Engineering_7_1631-1645.pdf",
+  "reference_ids": [
+   "R003",
+   "RN-S014-5",
+   "RN-S046-1"
+  ],
+  "simulants": [
+   "BH-1",
+   "DNA-1",
+   "NEU-1"
+  ],
+  "values_citing": 14
+ },
+ {
+  "doc_id": "D021",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1016/j.actaastro.2021.08.039",
+  "url": "https://doi.org/10.1016/j.actaastro.2021.08.039",
+  "reference_text": "Zhou, S., Yang, Z., Zhang, R., Zhu, X., & Li, F. (2021). Preparation and evaluation of geopolymer based on BH-2 lunar regolith simulant under lunar surface temperature and vacuum condition. Acta Astronautica, 189, 90-98. https://doi.org/10.1016/j.actaastro.2021.08.039",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R004"
+  ],
+  "simulants": [
+   "BH-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D022",
+  "title": "The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview (Frontiers in Astronomy and Space Sciences 8, 747821)",
+  "authors": "Duri, Caporale, Rouphael, Vingiani, Palladino, De Pascale, Adamo",
+  "year": 2022,
+  "doi": "10.3389/fspas.2021.747821",
+  "url": "https://doi.org/10.3389/fspas.2021.747821",
+  "reference_text": "Duri, L. G., Caporale, A. G., Rouphael, Y., Vingiani, S., Palladino, M., De Pascale, S., & Adamo, P. (2022). The potential for lunar and martian regolith simulants to sustain plant growth: A multidisciplinary overview. Frontiers in Astronomy and Space Sciences, 8. https://doi.org/10.3389/fspas.2021.747821",
+  "reference_type": "usage",
+  "local_path": "papers/Duri_etal_2022_Regolith_Simulants_Plant_Growth_Review_FrontAstronSpaceSci_8_747821.pdf",
+  "reference_ids": [
+   "R005",
+   "R007",
+   "R009",
+   "R012",
+   "R016",
+   "R019",
+   "R020",
+   "R021",
+   "R025",
+   "R028",
+   "R031",
+   "R039",
+   "R041",
+   "R045",
+   "R046",
+   "R176",
+   "RN-S029-7",
+   "RN-S048-5",
+   "RN-S049-10",
+   "RN-S050-7",
+   "RN-S051-10",
+   "RN-S062-1",
+   "RN-S081-8",
+   "RN-S099-1",
+   "RN-S101-2"
+  ],
+  "simulants": [
+   "BHLD20",
+   "CAS-1",
+   "CLDS-i",
+   "CUG-1A",
+   "DUST-Y",
+   "FJS-1",
+   "FJS-2",
+   "FJS-3",
+   "JSC-1",
+   "JSC-1AF",
+   "Kohyama Simulant",
+   "NAO-1",
+   "NU-LHT",
+   "OB-1",
+   "OPRH2N",
+   "OPRH2W",
+   "JSC-1AC",
+   "NU-LHT-1D",
+   "NU-LHT-1M",
+   "NU-LHT-2C",
+   "NU-LHT-2M",
+   "Oshima Simulant",
+   "JSC-2A",
+   "OPRH3W",
+   "OPRL2W"
+  ],
+  "values_citing": 4
+ },
+ {
+  "doc_id": "D023",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Suescun-Florez, E., Roslyakov, S., Iskander, M., & Baamer, M. (2015). Geotechnical properties of BP-1 lunar regolith simulant. Journal of Aerospace Engineering, 28.",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R006"
+  ],
+  "simulants": [
+   "BP-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D024",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1016/j.asr.2008.07.006",
+  "url": "https://doi.org/10.1016/j.asr.2008.07.006",
+  "reference_text": "Zheng, Y., Wang, S., Ouyang, Z., Zou, Y., Liu, J., Li, C., Li, X., & Feng, J. (2009). CAS-1 lunar soil simulant. Advances in Space Research, 43, 448-454. https://doi.org/10.1016/j.asr.2008.07.006",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R008",
+   "R010"
+  ],
+  "simulants": [
+   "CAS-1",
+   "CLRS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D025",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "van Susante, P. J., & Dreyer, C. B. (2010). Lunar and planetary excavation prototype development and testing at the Colorado School of Mines. In Earth and Space 2010: Engineering, Science, Construction, and Operations in Challenging Environments (pp. 1191-1200).",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R011"
+  ],
+  "simulants": [
+   "CSM-CL"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D026",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Cesaretti, G., Dini, E., De Kestelier, X., Colla, V., & Pambaguian, L. (2014). Building components for an outpost on the lunar soil by means of a novel 3D printing technology. Acta Astronautica.",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R014"
+  ],
+  "simulants": [
+   "DNA-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D027",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Sandeep, C. S., Senetakis, K., Cheung, D. K. H., Choi, C. E., Wang, Y., Coop, M. R., & Ng, C. W. W. (2019). Micromechanical behavior of DNA-IA lunar regolith simulant in comparison to Ottawa sand. Journal of Geophysical Research: Solid Earth.",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R015"
+  ],
+  "simulants": [
+   "DNA-1A"
+  ],
+  "values_citing": 13
+ },
+ {
+  "doc_id": "D028",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Manick, K., Gill, S., Mason, L., & Crowther, S. (2018). Fundamental properties characterisation of lunar regolith simulants at the ESA Sample Analogue Curation Facility. In 49th Lunar and Planetary Science Conference.",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R017"
+  ],
+  "simulants": [
+   "EAC-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D029",
+  "title": "EAC-1A: A novel large-volume lunar regolith simulant",
+  "authors": "Engelschiøn, V.S., Eriksson, S.R., Stensvold, A., et al.",
+  "year": 2020,
+  "doi": "10.1038/s41598-020-62312-4",
+  "url": "https://doi.org/10.1038/s41598-020-62312-4",
+  "reference_text": "Engelschion, V. S., Eriksson, S. R., Cowley, A., Fateri, M., Meurisse, A., Kueppers, U., & Sperl, M. (2020). EAC-1A: A novel large-volume lunar regolith simulant. Scientific Reports, 10. https://doi.org/10.1038/s41598-020-62312-4",
+  "reference_type": "composition",
+  "local_path": "papers/Engelschion_etal_2020_EAC-1A_novel_large-volume_lunar_regolith_simulant_SciRep_10-5473.pdf",
+  "reference_ids": [
+   "R018",
+   "R124",
+   "RN-S007-7",
+   "RN-S017-1"
+  ],
+  "simulants": [
+   "EAC-1A",
+   "NU-LHT-3M",
+   "CAS-1",
+   "EAC-1"
+  ],
+  "values_citing": 21
+ },
+ {
+  "doc_id": "D030",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Taylor, P. T., Lowman, P., Nagihara, S., Milam, M., & Nakamura, Y. (2008). Jurassic diabase from Leesburg, VA: A proposed lunar simulant. In NLSI Lunar Science Conference (p. 2054).",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R022"
+  ],
+  "simulants": [
+   "GCA-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D031",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1016/j.jterra.2010.04.006",
+  "url": "https://doi.org/10.1016/j.jterra.2010.04.006",
+  "reference_text": "Oravec, H. A., Zeng, X., & Asnani, V. M. (2010). Design and characterization of GRC-1: A soil for lunar terramechanics testing in Earth-ambient conditions. Journal of Terramechanics, 47, 361-377. https://doi.org/10.1016/j.jterra.2010.04.006",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R023"
+  ],
+  "simulants": [
+   "GRC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D032",
+  "title": "JLU-H: A novel lunar highland regolith simulant for use in large-scale engineering experiments (ScienceDirect abstract/snippet page)",
+  "authors": "Sun X., Zhang R., Li X., Zou M., Wang C., Chen L.",
+  "year": 2022,
+  "doi": "10.1016/j.pss.2022.105562",
+  "url": "https://doi.org/10.1016/j.pss.2022.105562",
+  "reference_text": "Sun, X., Zhang, R., Li, X., Zou, M., Wang, C., & Chen, L. (2022). JLU-H: A novel lunar highland regolith simulant for use in large-scale engineering experiments. Planetary and Space Science, 221, 105562. https://doi.org/10.1016/j.pss.2022.105562",
+  "reference_type": "composition",
+  "local_path": "papers/LRS/DIRT project/files/1756/S0032063322001489.html",
+  "reference_ids": [
+   "R024",
+   "RN-S045-7",
+   "RN-S120-2"
+  ],
+  "simulants": [
+   "JLU-H",
+   "NAO-1",
+   "PolyU-1"
+  ],
+  "values_citing": 3
+ },
+ {
+  "doc_id": "D033",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Taylor, L. A., Pieters, C. M., & Britt, D. (2005). JSC-1 as the lunar soil simulant of choice. Meteoritics and Planetary Science.",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R026"
+  ],
+  "simulants": [
+   "JSC-1A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D034",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Wang, K., Zhang, Y., & Liu, J. (2022). Lunar regolith simulants for space exploration: A review. Biogeotechnics.",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R027"
+  ],
+  "simulants": [
+   "JSC-1AC"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D035",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Kim, Y. J., Ryu, B. H., Jin, H., Lee, J., & Shin, H. S. (2021). Microstructural, mechanical, and thermal properties of microwave-sintered KLS-1 lunar regolith simulant. Ceramics International, 47, 26891-26897.",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R029"
+  ],
+  "simulants": [
+   "KLS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D036",
+  "title": "Development of KAU Mechanical Lunar Simulants and Drop Test of Lunar Landing Gears",
+  "authors": "Seok-Ho Yoo, Hyun-Duk Kim, Jae Hyuk Lim, Jung-Sun Park",
+  "year": 2014,
+  "doi": "10.5139/JKSAS.2014.42.12.1037",
+  "url": "https://doi.org/10.5139/JKSAS.2014.42.12.1037",
+  "reference_text": "Yoo, S.-H., Kim, H.-D., Lim, J. H., & Park, J.-S. (2014). Development of KAU mechanical lunar simulants and drop test of lunar landing gears. Journal of the Korean Society for Aeronautical & Space Sciences, 42, 1037-1044. https://doi.org/10.5139/JKSAS.2014.42.12.1037",
+  "reference_type": "usage",
+  "local_path": "papers/agent-fetched/Yoo_Kim_Lim_Park_2014_Development_of_KAU_Mechanical_Lunar_Simulants_KAUMLS_JKSAS.pdf",
+  "reference_ids": [
+   "R030",
+   "RN-S154-1"
+  ],
+  "simulants": [
+   "KOHLS-1",
+   "KAUMLS"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D037",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Hooper, D. M., Ximenes, S. W., Wells, R., Necsoiu, M., & Patrick, E. L. (2020). Introduction of LCATS-1, a geotechnical lunar regolith simulant for multi-purpose utilization. In 51st Annual Lunar and Planetary Science Conference (p. 2548).",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R032"
+  ],
+  "simulants": [
+   "LCATS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D038",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Long-Fox, J., Landsman, Z., Easter, P., Millwater, C., & Britt, D. (2023). Geomechanical properties of lunar regolith simulants LHS-1 and LMS-1. Advances in Space Research, 71(12), 5400-5412.",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R033",
+   "R034"
+  ],
+  "simulants": [
+   "LHS-1",
+   "LMS-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D039",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1016/j.pss.2020.105116",
+  "url": "https://doi.org/10.1016/j.pss.2020.105116",
+  "reference_text": "Venugopal, I., Prabu, T., Muthukkumaran, K., & Annadurai, M. (2020). Development of a novel lunar highland soil simulant (LSS-ISAC-1) and its geotechnical properties for Chandrayaan missions. Planetary and Space Science, 194, 105116. https://doi.org/10.1016/j.pss.2020.105116",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R035"
+  ],
+  "simulants": [
+   "LSS-ISAC-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D040",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Bunker, K. L., & Lersch, T. L. (n.d.). Characterization of lunar dust simulants by automated particle analysis using scanning electron microscopy.",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R036"
+  ],
+  "simulants": [
+   "LuNOR"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D041",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "http://www.lpi.usra.edu/leag/reports/SIM_SATReport2010.pdf",
+  "reference_text": "LEAG-CAPTEM SWG. (2010). Status of lunar regolith simulants and demand for Apollo samples [Report]. http://www.lpi.usra.edu/leag/reports/SIM_SATReport2010.pdf",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R037"
+  ],
+  "simulants": [
+   "MKS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D042",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Weiblen, P., & Gordon, K. (1988). Characteristics of a simulant for lunar surface materials. In Second Conference on Lunar Bases and Space Activities of the 21st Century (p. 254).",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R038"
+  ],
+  "simulants": [
+   "MLS-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D043",
+  "title": "The preparation and characterization of NEU-1 lunar soil simulants",
+  "authors": "Li C, Xie K, Liu A, Shi Z",
+  "year": 2019,
+  "doi": "10.1007/s11837-019-03362-6",
+  "url": "https://doi.org/10.1007/s11837-019-03362-6",
+  "reference_text": "Li, C., Xie, K., Liu, A., & Shi, Z. (2019). The preparation and characterization of NEU-1 lunar soil simulants. JOM, 71, 1471-1476. https://doi.org/10.1007/s11837-019-03362-6",
+  "reference_type": "composition",
+  "local_path": "papers/LRS/DIRT project/files/1712/330911730_The_Preparation_and_Characterization_of_NEU-1_Lunar_Soil_Simulants.html",
+  "reference_ids": [
+   "R040",
+   "RN-S123-1",
+   "RN-S124-1"
+  ],
+  "simulants": [
+   "NEU-1",
+   "NEU-1A",
+   "NEU-1B"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D044",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Stoeser, D., Rickman, D., & Wilson, S. (2011). Design and specifications for the highland regolith prototype simulants NU-LHT-1M and -2M (NASA/TM-2010-216438, pp. 1-13).",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R042",
+   "R043"
+  ],
+  "simulants": [
+   "NU-LHT-1M",
+   "NU-LHT-2M"
+  ],
+  "values_citing": 4
+ },
+ {
+  "doc_id": "D045",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1016/j.pss.2009.09.003",
+  "url": "https://doi.org/10.1016/j.pss.2009.09.003",
+  "reference_text": "Battler, M. M., & Spray, J. G. (2009). The Shawmere anorthosite and OB-1 as lunar highland regolith simulants. Planetary and Space Science, 57(14-15), 2128-2131. https://doi.org/10.1016/j.pss.2009.09.003",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R044"
+  ],
+  "simulants": [
+   "OB-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D046",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Sueyoshi, K., Watanabe, T., Nakano, Y., Kanamori, H., Aoki, S., Miyahara, A., & Matsui, K. (2008). Reaction mechanism of various types of lunar soil simulants by hydrogen reduction. In Earth & Space 2008: Engineering, Science, Construction, and Operations in Challenging Environments (pp. 1-8).",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R047"
+  ],
+  "simulants": [
+   "Oshima Simulant"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D047",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Toklu, Y. C., Calis Acikbas, N., Acikbas, G., Erdem Cercevik, A., & Akpinar, P. (2022). Turkish lunar regolith simulant TBG-1. Earth Space, 956-965.",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R048"
+  ],
+  "simulants": [
+   "TBG-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D048",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Jiang, M. J., Li, L. Q., & Sun, Y. G. (2012). Properties of TJ-1 lunar soil simulant. Journal of Aerospace Engineering, 25(3), 463-469.",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R049"
+  ],
+  "simulants": [
+   "TJ-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D049",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "https://www.hispansion.io",
+  "reference_text": "Hispansion. (n.d.). Retrieved from https://www.hispansion.io",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R050",
+   "R051"
+  ],
+  "simulants": [
+   "TLH-0",
+   "TLM-0"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D050",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Seehanam, S., Santironnarong, S., Meesuay, W., Soralump, S., Thowiwat, W., Jitklongsub, S., & Chancharoen, W. (2021). Development and mechanical properties of the first Thailand lunar simulant (TLS-01). In Proceedings of the 2nd Innovation Aviation & Aerospace Industry - International Conference 2021.",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R052",
+   "R184"
+  ],
+  "simulants": [
+   "TLS-01",
+   "TLS-01A"
+  ],
+  "values_citing": 10
+ },
+ {
+  "doc_id": "D051",
+  "title": "TUBS-M and TUBS-T based modular Regolith Simulant System for the support of lunar ISRU activities",
+  "authors": "Linke et al.",
+  "year": 2020,
+  "doi": "10.1016/j.pss.2019.104747",
+  "url": "https://doi.org/10.1016/j.pss.2019.104747",
+  "reference_text": "Linke, S., Windisch, L., Kueter, N., Wanvik, J. E., Voss, A., Stoll, E., Schilde, C., & Kwade, A. (2020). TUBS-M and TUBS-T based modular regolith simulant system for the support of lunar ISRU activities. Planetary and Space Science, 180, 104747. https://doi.org/10.1016/j.pss.2019.104747",
+  "reference_type": "composition",
+  "local_path": "papers/Linke_etal_2020_TUBS-M_TUBS-T_modular_Regolith_Simulant_System_PlanetSpaceSci_180_104747.pdf",
+  "reference_ids": [
+   "R054",
+   "R055",
+   "RN-S007-6",
+   "RN-S010-3",
+   "RN-S034-1",
+   "RN-S084-2"
+  ],
+  "simulants": [
+   "TUBS-M",
+   "TUBS-T",
+   "CAS-1",
+   "CLRS-1",
+   "Kohyama Simulant",
+   "CLRS-2"
+  ],
+  "values_citing": 32
+ },
+ {
+  "doc_id": "D052",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1016/j.actaastro.2020.04.025",
+  "url": "https://doi.org/10.1016/j.actaastro.2020.04.025",
+  "reference_text": "Just, G. H., Joy, K. H., Roy, M. J., & Smith, K. L. (2020). Geotechnical characterisation of two new low-fidelity lunar regolith analogues (UoM-B and UoM-W) for use in large-scale engineering experiments. Acta Astronautica, 173, 414-424. https://doi.org/10.1016/j.actaastro.2020.04.025",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R056",
+   "R057"
+  ],
+  "simulants": [
+   "UoM-B",
+   "UoM-W"
+  ],
+  "values_citing": 4
+ },
+ {
+  "doc_id": "D053",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Slabic, A., Rickman, D. L., Brisset, J., & Mueller, R. P. (2024). Lunar regolith simulant user's guide revision A (NASA/TM-20240011783). NASA.",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R058",
+   "R059",
+   "R060",
+   "R061",
+   "R062",
+   "R067",
+   "R068",
+   "R069",
+   "R070",
+   "R071",
+   "R177",
+   "R178"
+  ],
+  "simulants": [
+   "GreenSpar",
+   "NUW-LHT-5M",
+   "OB-1A",
+   "OPRH3N",
+   "OPRL2N",
+   "NU-LHT-2C",
+   "OPR Agglutinate",
+   "OPRFLCROSS2",
+   "OPRH4N",
+   "OPRL2NT",
+   "OPRH3W",
+   "OPRL2W"
+  ],
+  "values_citing": 9
+ },
+ {
+  "doc_id": "D054",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Patzwald, J., Kleba-Ehrhardt, R., Schiperski, F., Griemsmann, T., Linke, S., Neumann, T., Overmeyer, L., Stoll, E., & Karl, D. (2025). Properties of novel LX lunar regolith simulant system - The base simulants: Part 1. Acta Astronautica, 231, 200-222.",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R063",
+   "R064"
+  ],
+  "simulants": [
+   "LX-M100",
+   "LX-T100"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D055",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Rickman, D. L., Wilson, S. A., Stoeser, D. B., Weinstein, M. A., & Edmunson, J. E. (2013). Manufacture of lunar regolith simulants (NASA/TM-2013-217491). NASA.",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R065"
+  ],
+  "simulants": [
+   "CHENOBI"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D056",
+  "title": "Evaluations of Lunar Regolith Simulants (author's accepted manuscript)",
+  "authors": "Lawrence A. Taylor, Carle M. Pieters, Daniel Britt",
+  "year": 2016,
+  "doi": "10.1016/j.pss.2016.04.005",
+  "url": "https://doi.org/10.1016/j.pss.2016.04.005",
+  "reference_text": "Taylor, L. A., Pieters, C. M., & Britt, D. (2016). Evaluations of lunar regolith simulants. Planetary and Space Science, 126, 1-7. https://doi.org/10.1016/j.pss.2016.04.005",
+  "reference_type": "usage",
+  "local_path": "papers/LRS/DIRT project/files/1761/Taylor et al. - 2016 - Evaluations of lunar regolith simulants.pdf",
+  "reference_ids": [
+   "R066",
+   "RN-S007-5",
+   "RN-S010-2",
+   "RN-S023-4",
+   "RN-S033-3",
+   "RN-S064-4",
+   "RN-S084-1",
+   "RN-S122-2",
+   "RN-S125-2"
+  ],
+  "simulants": [
+   "MLS-2",
+   "CAS-1",
+   "CLRS-1",
+   "GCA-1",
+   "KOHLS-1",
+   "TJ-1",
+   "CLRS-2",
+   "TJ-2",
+   "CUG-1"
+  ],
+  "values_citing": 9
+ },
+ {
+  "doc_id": "D057",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1007/s11440-025-02553-7",
+  "url": "https://doi.org/10.1007/s11440-025-02553-7",
+  "reference_text": "Teng, Y., Wang, S., Cui, Y., & Pang, Y. (2025). Influence of loading conditions on mechanical behaviors of lunar regolith simulant WHU-1 based on Chang'e-5 returned samples. Acta Geotechnica. https://doi.org/10.1007/s11440-025-02553-7",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R072"
+  ],
+  "simulants": [
+   "WHU-1"
+  ],
+  "values_citing": 3
+ },
+ {
+  "doc_id": "D058",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "https://ui.adsabs.harvard.edu/abs/2025psss.confE.126A/abstract",
+  "reference_text": "Alberquilla, F., et al. (2025). LUSIC-1 (Lunar Simulant IBeA-Carabela): A Novel Methodology for Developing Apollo 17 Lunar Soil Simulants. Proc. VIII Iberian Congress on Planetary Sciences. https://ui.adsabs.harvard.edu/abs/2025psss.confE.126A/abstract",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R073"
+  ],
+  "simulants": [
+   "LuSIC-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D059",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "https://ui.adsabs.harvard.edu/abs/2025psss.confE..59A/abstract",
+  "reference_text": "Alberquilla, F., et al. (2025). From La Palma to Space: Green Moon Project's Experiment on Lunar Soil Simulant (LUSIC-1) for Crop Cultivation in Low Earth Orbit. Proc. VIII Iberian Congress on Planetary Sciences. https://ui.adsabs.harvard.edu/abs/2025psss.confE..59A/abstract",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R074"
+  ],
+  "simulants": [
+   "LuSIC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D060",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1016/j.icarus.2021.114511",
+  "url": "https://doi.org/10.1016/j.icarus.2021.114511",
+  "reference_text": "S. Anbazhagan, I. Venugopal, A lunar soil simulant (LSS-ISAC-1) for the lunar exploration programme of the Indian Space Research Organisation, 2021 https://doi.org/10.1016/j.icarus.2021.114511",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R075"
+  ],
+  "simulants": [
+   "LSS-ISAC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D061",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "https://ui.adsabs.harvard.edu/abs/2010LPI....41.1183H",
+  "reference_text": "X.X. He, L. Xiao, LUNAR REGOLITH SIMULANT CUG-1A, 2010 https://ui.adsabs.harvard.edu/abs/2010LPI....41.1183H",
+  "reference_type": "composition,geotechnical",
+  "local_path": null,
+  "reference_ids": [
+   "R076"
+  ],
+  "simulants": [
+   "CUG-1A"
+  ],
+  "values_citing": 15
+ },
+ {
+  "doc_id": "D062",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01",
+  "authors": "Ruan, R., Yang, W., Zhang, D., Yu, B., et al.",
+  "year": 2024,
+  "doi": "10.1016/j.actaastro.2024.08.010",
+  "url": "https://doi.org/10.1016/j.actaastro.2024.08.010",
+  "reference_text": "Ruan Renhao, Yang Wei, A moderate-Ti lunar mare soil simulant: IGG-01, 2024 https://doi.org/10.1016/j.actaastro.2024.08.010",
+  "reference_type": "composition,geotechnical",
+  "local_path": "papers/LRS/DIRT project/files/1757/383026053_A_moderate-Ti_lunar_mare_soil_simulant_IGG-01.html",
+  "reference_ids": [
+   "R077",
+   "RN-S002-3",
+   "RN-S007-11",
+   "RN-S010-9",
+   "RN-S012-1",
+   "RN-S017-4",
+   "RN-S023-2",
+   "RN-S034-4",
+   "RN-S046-3",
+   "RN-S057-3",
+   "RN-S058-3",
+   "RN-S062-4",
+   "RN-S063-3",
+   "RN-S064-3",
+   "RN-S071-1",
+   "RN-S084-6",
+   "RN-S098-1",
+   "RN-S122-1"
+  ],
+  "simulants": [
+   "IGG-01",
+   "ALRS-1",
+   "CAS-1",
+   "CLRS-1",
+   "CUG-1A",
+   "EAC-1",
+   "GCA-1",
+   "Kohyama Simulant",
+   "NEU-1",
+   "OPRH2N",
+   "OPRH3N",
+   "Oshima Simulant",
+   "TBG-1",
+   "TJ-1",
+   "UoM-B",
+   "CLRS-2",
+   "OPRH2W",
+   "TJ-2"
+  ],
+  "values_citing": 28
+ },
+ {
+  "doc_id": "D063",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "http://www.bmfsa.org/archive/journal-E/19-2/e2014-19-2-sl01.pdf",
+  "reference_text": "Maki Syou, Jing Han, Magnetism of Simulated Lunar Regolith of FJS-1, 2014 http://www.bmfsa.org/archive/journal-E/19-2/e2014-19-2-sl01.pdf",
+  "reference_type": "composition,geotechnical",
+  "local_path": null,
+  "reference_ids": [
+   "R079"
+  ],
+  "simulants": [
+   "FJS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D064",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "https://iaai-2021.sciforum.net",
+  "reference_text": "Chancharoen Wares, Seehanam Saran, Development and Mechanical properties of the first Thailand lunar regolith simulant (TLS-01), 2021 Presented at the 2nd Innovation Aviation & Aerospace Industry International Conference (IAAI 2021), 28-30 June 2021.",
+  "reference_type": "composition",
+  "local_path": "papers/LRS/manuscript.pdf",
+  "reference_ids": [
+   "R080"
+  ],
+  "simulants": [
+   "TLS-01"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D065",
+  "title": "Development and Geotechnical Engineering Properties of KLS-1 Lunar Simulant",
+  "authors": "Ryu, B.-H.; Wang, C.-C.; Chang, I.",
+  "year": 2018,
+  "doi": "10.1061/(ASCE)AS.1943-5525.0000798",
+  "url": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0000798",
+  "reference_text": "Ryu Byung-Hyun, Wang Cheng-Can, Development of a Korean Lunar Simulant(KLS-1) and its Possible Further Recommendations, 2018 https://doi.org/10.1061/(ASCE)AS.1943-5525.0000798",
+  "reference_type": "composition",
+  "local_path": "papers/agent-fetched/Ryu_Wang_Chang_2018_Development_and_Geotechnical_Engineering_Properties_of_KLS-1_Lunar_Simulant_JAerospEng_31-1_04017083.pdf",
+  "reference_ids": [
+   "R081",
+   "RN-S019-1",
+   "RN-S042-5"
+  ],
+  "simulants": [
+   "KLS-1",
+   "FJS-1",
+   "MKS-1"
+  ],
+  "values_citing": 40
+ },
+ {
+  "doc_id": "D066",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "https://ntrs.nasa.gov/api/citations/20100036344/downloads/20100036344.pdf",
+  "reference_text": "D.B. Stoeser, D.L. Rickman, Preliminary Geological Findings on the BP-1 Simulant, 2010 https://ntrs.nasa.gov/api/citations/20100036344/downloads/20100036344.pdf",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R082"
+  ],
+  "simulants": [
+   "BP-1"
+  ],
+  "values_citing": 7
+ },
+ {
+  "doc_id": "D067",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1061/(ASCE)AS.1943-5525.0000162",
+  "url": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0000162",
+  "reference_text": "He Chunmei, Zeng Xiangwu, Geotechnical Properties of GRC-3 Lunar Simulant, 2013 https://doi.org/10.1061/(ASCE)AS.1943-5525.0000162",
+  "reference_type": "composition,geotechnical",
+  "local_path": null,
+  "reference_ids": [
+   "R083"
+  ],
+  "simulants": [
+   "GRC-3"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D068",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1016/j.pss.2022.105630",
+  "url": "https://doi.org/10.1016/j.pss.2022.105630",
+  "reference_text": "Yin Kexin, Cheng Zhichao, Shear properties of LHS-1 and LMS-1 Lunar regolith simulants, 2023 https://doi.org/10.1016/j.pss.2022.105630",
+  "reference_type": "geotechnical",
+  "local_path": null,
+  "reference_ids": [
+   "R084",
+   "R085"
+  ],
+  "simulants": [
+   "LHS-1",
+   "LMS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D069",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "https://www.lpi.usra.edu/lunar/strategies/jsc_lunar_simulant.pdf?q=jsc",
+  "reference_text": "D.S. McKay, J.L. Carter, JSC-1: A NEW LUNAR SOIL SIMULANT, 1994 https://www.lpi.usra.edu/lunar/strategies/jsc_lunar_simulant.pdf?q=jsc",
+  "reference_type": "composition,geotechnical",
+  "local_path": null,
+  "reference_ids": [
+   "R086"
+  ],
+  "simulants": [
+   "JSC-1"
+  ],
+  "values_citing": 18
+ },
+ {
+  "doc_id": "D070",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1061/(ASCE)GT.1943-5606.0000068",
+  "url": "https://doi.org/10.1061/(ASCE)GT.1943-5606.0000068",
+  "reference_text": "K.A. Alshibli, A. Hasan, Strength Properties of JSC-1A Lunar Regolith Simulant, 2009 https://doi.org/10.1061/(ASCE)GT.1943-5606.0000068",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R087"
+  ],
+  "simulants": [
+   "JSC-1A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D071",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "https://ntrs.nasa.gov/citations/20240011783",
+  "reference_text": "A. Slabic, J.E. Gruener, Lunar Regolith Simulant User's Guide: Revision A, 2024 https://ntrs.nasa.gov/citations/20240011783",
+  "reference_type": "composition,geotechnical",
+  "local_path": null,
+  "reference_ids": [
+   "R088",
+   "R089",
+   "R090",
+   "R091",
+   "R093",
+   "R094"
+  ],
+  "simulants": [
+   "CSM-LHT-1",
+   "CSM-LMT-1",
+   "MLS-1",
+   "NU-LHT-4M",
+   "OPRH3N",
+   "OPRL2N"
+  ],
+  "values_citing": 47
+ },
+ {
+  "doc_id": "D072",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "https://ares.jsc.nasa.gov/projects/simulants/ob-1.html",
+  "reference_text": "ARES | Exploration Science Projects | Lunar Regolith Simulants | OB-1, 2010 https://ares.jsc.nasa.gov/projects/simulants/ob-1.html",
+  "reference_type": "composition,geotechnical",
+  "local_path": null,
+  "reference_ids": [
+   "R092"
+  ],
+  "simulants": [
+   "OB-1A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D073",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1061/(ASCE)0893-1321(2009)22:1(53)",
+  "url": "https://doi.org/10.1061/(ASCE)0893-1321(2009)22:1(53)",
+  "reference_text": "Yongquan Li, Jianzhong Liu, NAO-1: Lunar Highland Soil Simulant Developed in China, 2009 https://doi.org/10.1061/(ASCE)0893-1321(2009)22:1(53)",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R095"
+  ],
+  "simulants": [
+   "NAO-1"
+  ],
+  "values_citing": 19
+ },
+ {
+  "doc_id": "D074",
+  "title": "LZS-1, Lanzarote (Canary Island, Spain) lunar (Apollo 14) basaltic soil simulant",
+  "authors": "Fernando Alberquilla, Jesús Martínez-Frías, Valentín García-Baonza, Rosario Lunar",
+  "year": 2022,
+  "doi": "10.1038/s41598-022-20960-8",
+  "url": "https://doi.org/10.1038/s41598-022-20960-8",
+  "reference_text": "Alberquilla, F., Martínez-Frías, J., García-Baonza, V., & Lunar, R. (2022). LZS-1, Lanzarote (Canary Island, Spain) lunar (Apollo 14) basaltic soil simulant. Scientific Reports, 12, 16470. https://doi.org/10.1038/s41598-022-20960-8",
+  "reference_type": "composition",
+  "local_path": "papers/Alberquilla_etal_2022_LZS-1_Lanzarote_Apollo14_basaltic_soil_simulant_SciRep_12_16470.pdf",
+  "reference_ids": [
+   "R099",
+   "RN-S007-3",
+   "RN-S042-1"
+  ],
+  "simulants": [
+   "LZS-1",
+   "CAS-1",
+   "MKS-1"
+  ],
+  "values_citing": 14
+ },
+ {
+  "doc_id": "D075",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1016/j.actaastro.2013.07.034",
+  "url": "https://doi.org/10.1016/j.actaastro.2013.07.034",
+  "reference_text": "Cesaretti, G., Dini, E., De Kestelier, X., Colla, V., & Pambaguian, L. (2014). Building components for an outpost on the Lunar soil by means of a novel 3D printing technology. Acta Astronautica, 93, 430-450. https://doi.org/10.1016/j.actaastro.2013.07.034",
+  "reference_type": "development",
+  "local_path": null,
+  "reference_ids": [
+   "R100"
+  ],
+  "simulants": [
+   "DNA-1A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D076",
+  "title": null,
+  "authors": null,
+  "year": null,
+  "doi": "10.1061/(ASCE)AS.1943-5525.0000983",
+  "url": "https://doi.org/10.1061/(ASCE)AS.1943-5525.0000983",
+  "reference_text": "Marzulli, V., & Cafaro, F. (2019). Geotechnical properties of uncompacted DNA-1A lunar simulant. Journal of Aerospace Engineering, 32(2). https://doi.org/10.1061/(ASCE)AS.1943-5525.0000983",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "R101"
+  ],
+  "simulants": [
+   "DNA-1A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D077",
+  "title": "Investigation of the sintering and melting of JSC-2A lunar regolith simulant",
+  "authors": "Zocca, A., Fateri, M., Al-Sabbagh, D., Günster, J.",
+  "year": 2020,
+  "doi": "10.1016/j.ceramint.2020.02.212",
+  "url": null,
+  "reference_text": "Investigation of the sintering and melting of JSC-2A lunar regolith simulant (Ceramics International 46 (2020) 14097–14104)",
+  "reference_type": null,
+  "local_path": "papers/LRS/JSC2A-zocca2020.pdf",
+  "reference_ids": [
+   "R102",
+   "RN-S028-10"
+  ],
+  "simulants": [
+   "JSC-2A",
+   "JSC-1A"
+  ],
+  "values_citing": 12
+ },
+ {
+  "doc_id": "D078",
+  "title": "Development and characterization of the PolyU-1 lunar regolith simulant based on Chang'e-5 returned samples",
+  "authors": "Zou, Y., Wu, H., Chai, S., Yang, W., Ruan, R., Zhao, Q.",
+  "year": 2024,
+  "doi": "10.1016/j.ijmst.2024.08.006",
+  "url": "https://doi.org/10.1016/j.ijmst.2024.08.006",
+  "reference_text": "Development and characterization of the PolyU-1 lunar regolith simulant based on Chang'e-5 returned samples",
+  "reference_type": null,
+  "local_path": "papers/LRS/1-s2.0-S2095268624001150-main.pdf",
+  "reference_ids": [
+   "R103",
+   "RN-S013-1",
+   "RN-S026-3",
+   "RN-S064-2"
+  ],
+  "simulants": [
+   "PolyU-1",
+   "CUMT-1",
+   "JLU-H",
+   "TJ-1"
+  ],
+  "values_citing": 15
+ },
+ {
+  "doc_id": "D079",
+  "title": "Properties of novel LX lunar regolith simulant system — Part 1",
+  "authors": "Patzwald, J., Kleba-Ehrhardt, R., et al.",
+  "year": 2025,
+  "doi": "10.1016/j.actaastro.2025.02.030",
+  "url": "https://doi.org/10.1016/j.actaastro.2025.02.030",
+  "reference_text": "Properties of novel LX lunar regolith simulant system — The base simulants: Part 1",
+  "reference_type": null,
+  "local_path": "papers/LRS/1-s2.0-S0094576525001109-main.pdf",
+  "reference_ids": [
+   "R104",
+   "R105",
+   "R106",
+   "R148",
+   "R151",
+   "RN-S007-4",
+   "RN-S009-3",
+   "RN-S010-5",
+   "RN-S019-6",
+   "RN-S021-4",
+   "RN-S022-4",
+   "RN-S057-4",
+   "RN-S059-2",
+   "RN-S060-7",
+   "RN-S061-6",
+   "RN-S064-6",
+   "RN-S071-3",
+   "RN-S072-1",
+   "RN-S084-4",
+   "RN-S098-2",
+   "RN-S099-2",
+   "RN-S101-1",
+   "RN-S112-1",
+   "RN-S123-2",
+   "RN-S124-2"
+  ],
+  "simulants": [
+   "LX-M100",
+   "LX-T100",
+   "LX-I50",
+   "TJ-2",
+   "CUG-1",
+   "CAS-1",
+   "CLDS-i",
+   "CLRS-1",
+   "FJS-1",
+   "FJS-2",
+   "FJS-3",
+   "OPRH2N",
+   "OPRH4N",
+   "OPRL2N",
+   "OPRL2NT",
+   "TJ-1",
+   "UoM-B",
+   "UoM-W",
+   "CLRS-2",
+   "OPRH2W",
+   "OPRH3W",
+   "OPRL2W",
+   "LSS-1",
+   "NEU-1A",
+   "NEU-1B"
+  ],
+  "values_citing": 73
+ },
+ {
+  "doc_id": "D080",
+  "title": "Research of formed lunar regolith analog AGK-2010",
+  "authors": "Bednarz, S., et al.",
+  "year": 2013,
+  "doi": "10.2478/amsc-2013-0037",
+  "url": null,
+  "reference_text": null,
+  "reference_type": null,
+  "local_path": null,
+  "reference_ids": [
+   "R107"
+  ],
+  "simulants": [
+   "AGK-2010"
+  ],
+  "values_citing": 3
+ },
+ {
+  "doc_id": "D081",
+  "title": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+  "authors": "Li, R., Zhou, G., et al.",
+  "year": 2022,
+  "doi": "10.1016/j.ijmst.2021.09.003",
+  "url": "https://doi.org/10.1016/j.ijmst.2021.09.003",
+  "reference_text": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+  "reference_type": null,
+  "local_path": "papers/LRS/Li et al. - 2022 - Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravi.pdf",
+  "reference_ids": [
+   "R108",
+   "R119",
+   "R140",
+   "R149",
+   "R150",
+   "R156",
+   "RN-S007-1",
+   "RN-S010-4",
+   "RN-S019-2",
+   "RN-S045-10",
+   "RN-S064-1",
+   "RN-S071-2",
+   "RN-S072-4",
+   "RN-S084-3"
+  ],
+  "simulants": [
+   "CUMT-1",
+   "NAO-2",
+   "MLS-1A",
+   "NEU-1A",
+   "NEU-1B",
+   "IRSM-1",
+   "CAS-1",
+   "CLRS-1",
+   "FJS-1",
+   "NAO-1",
+   "TJ-1",
+   "UoM-B",
+   "UoM-W",
+   "CLRS-2"
+  ],
+  "values_citing": 51
+ },
+ {
+  "doc_id": "D082",
+  "title": "Development of icy regolith simulant for lunar permanently shadowed regions",
+  "authors": "Slumba, K., Sargeant, H.M., Britt, D.T.",
+  "year": 2024,
+  "doi": "10.1016/j.asr.2024.01.014",
+  "url": null,
+  "reference_text": null,
+  "reference_type": null,
+  "local_path": null,
+  "reference_ids": [
+   "R109"
+  ],
+  "simulants": [
+   "FROST-Y"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D083",
+  "title": "In-Situ Resource Utilization Gap Assessment Report",
+  "authors": "International Space Exploration Coordination Group (ISECG)",
+  "year": 2021,
+  "doi": null,
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
+  "reference_text": "In-Situ Resource Utilization Gap Assessment Report",
+  "reference_type": "report",
+  "local_path": "papers/agent-fetched/ISECG_2021_ISRU_Technology_Gap_Assessment_Report_Apr2021.pdf",
+  "reference_ids": [
+   "R110",
+   "R111",
+   "R113",
+   "R114",
+   "RN-S021-1",
+   "RN-S022-1",
+   "RN-S034-2",
+   "RN-S062-2"
+  ],
+  "simulants": [
+   "FJS-1g",
+   "KIGAM-L1",
+   "UW-1H",
+   "UW-1M",
+   "FJS-2",
+   "FJS-3",
+   "Kohyama Simulant",
+   "Oshima Simulant"
+  ],
+  "values_citing": 6
+ },
+ {
+  "doc_id": "D084",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (Report of the LEAG Simulant Working Group, 2010)",
+  "authors": "Stoeser, D.B., Wilson, S., Rickman, D.L.",
+  "year": 2010,
+  "doi": null,
+  "url": "https://www.lpi.usra.edu/leag/reports/SIM_SATReport2010.pdf",
+  "reference_text": null,
+  "reference_type": "general",
+  "local_path": "papers/LRS/LEAG-SIM-SAT2010_LunarRegolithSimulants.pdf",
+  "reference_ids": [
+   "R112"
+  ],
+  "simulants": [
+   "NU-LHT-1D"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D085",
+  "title": "2024 Lunar Simulant Assessment",
+  "authors": "Martin, A., Wagoner, C., Stockstill-Cahill, K., Blewett, D., Bobea Graziano, M.",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "2024 Lunar Simulant Assessment",
+  "reference_type": "report",
+  "local_path": "papers/LRS/2024_Lunar_Simulant_Assessment_Report.pdf",
+  "reference_ids": [
+   "R115",
+   "R131",
+   "R137",
+   "R138",
+   "RN-S054-4"
+  ],
+  "simulants": [
+   "LMS-2",
+   "LHD-1D",
+   "LMA-1",
+   "LHA-1",
+   "OB-1A"
+  ],
+  "values_citing": 4
+ },
+ {
+  "doc_id": "D086",
+  "title": "Physicochemical properties of lunar regolith simulant for in situ oxygen production",
+  "authors": "De Guzman, A.A., Varghese, A.M., Shalloudi, S.A., Kosca, L., Polychronopoulou, K., Gacesa, M.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": null,
+  "reference_type": "general",
+  "local_path": null,
+  "reference_ids": [
+   "R116",
+   "R118"
+  ],
+  "simulants": [
+   "LHS-2",
+   "LSP-2"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D087",
+  "title": "LHS-2E Lunar Highlands Simulant Fact Sheet",
+  "authors": "Exolith Lab, University of Central Florida",
+  "year": 2025,
+  "doi": null,
+  "url": "https://exolithsimulants.com",
+  "reference_text": null,
+  "reference_type": "general",
+  "local_path": null,
+  "reference_ids": [
+   "R117"
+  ],
+  "simulants": [
+   "LHS-2E"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D088",
+  "title": "A Comprehensive Review of Lunar-based Manufacturing and Construction",
+  "authors": "Azami, M., Kazemi, Z., Moazen, S., Dube, M., Potvin, M.-J., Skonieczny, K.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": null,
+  "reference_type": "review",
+  "local_path": null,
+  "reference_ids": [
+   "R120"
+  ],
+  "simulants": [
+   "CLRS-2"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D089",
+  "title": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "authors": "Chen, Y., Tian, A., Min, G., Fukuda, D., Kawasaki, S.",
+  "year": 2025,
+  "doi": "10.1016/j.bgtech.2025.100212",
+  "url": "https://doi.org/10.1016/j.bgtech.2025.100212",
+  "reference_text": "An overview on lunar regolith simulants solidification methods: integrating chemical, physical, and MICP strategies for extraterrestrial construction",
+  "reference_type": "review",
+  "local_path": "papers/LRS/DIRT project/files/1793/S294992912500052X.html",
+  "reference_ids": [
+   "R121",
+   "R144",
+   "R146",
+   "R152",
+   "R153",
+   "R154",
+   "R155",
+   "R157",
+   "R158",
+   "R159",
+   "R160",
+   "R162",
+   "R173",
+   "R174",
+   "R175",
+   "R181",
+   "R182",
+   "R183",
+   "RN-S002-5",
+   "RN-S004-6",
+   "RN-S005-3",
+   "RN-S007-10",
+   "RN-S009-5",
+   "RN-S010-11",
+   "RN-S013-5",
+   "RN-S023-5",
+   "RN-S026-5",
+   "RN-S028-15",
+   "RN-S029-8",
+   "RN-S033-5",
+   "RN-S045-5",
+   "RN-S063-5",
+   "RN-S064-8",
+   "RN-S079-2",
+   "RN-S080-1",
+   "RN-S081-5",
+   "RN-S084-8",
+   "RN-S108-3",
+   "RN-S109-3",
+   "RN-S112-3",
+   "RN-S120-1",
+   "RN-S121-4",
+   "RN-S122-4",
+   "RN-S123-4",
+   "RN-S124-3",
+   "RN-S125-3",
+   "RN-S130-3"
+  ],
+  "simulants": [
+   "JSC-2",
+   "GSC-1",
+   "CMU-1",
+   "HUST-1",
+   "HIT-LRS-1",
+   "CQU-1",
+   "NJU-1",
+   "LBD",
+   "TYII-0",
+   "ZJM-01",
+   "QH-E",
+   "SCC-1",
+   "KAUMLS",
+   "TRI-1",
+   "FEFU-1",
+   "TYII-1",
+   "TYII-2",
+   "SCC-2",
+   "ALRS-1",
+   "BH-1",
+   "BHLD20",
+   "CAS-1",
+   "CLDS-i",
+   "CLRS-1",
+   "CUMT-1",
+   "GCA-1",
+   "JLU-H",
+   "JSC-1A",
+   "JSC-1AC",
+   "KOHLS-1",
+   "NAO-1",
+   "TBG-1",
+   "TJ-1",
+   "LSP-2",
+   "IGG-01",
+   "JSC-2A",
+   "CLRS-2",
+   "LMA-1",
+   "LHA-1",
+   "LSS-1",
+   "PolyU-1",
+   "BH-2",
+   "TJ-2",
+   "NEU-1A",
+   "NEU-1B",
+   "CUG-1",
+   "IRSM-1"
+  ],
+  "values_citing": 10
+ },
+ {
+  "doc_id": "D090",
+  "title": "Lunar Regolith Simulant User's Guide Revision A",
+  "authors": "Slabic, A. et al.",
+  "year": 2024,
+  "doi": null,
+  "url": "https://ntrs.nasa.gov/citations/20240013614",
+  "reference_text": "Lunar Regolith Simulant User's Guide, Revision A",
+  "reference_type": "general",
+  "local_path": "papers/Slabic_etal_2024_Lunar_Regolith_Simulant_Users_Guide_RevA_NASA-TM-20240011783.pdf",
+  "reference_ids": [
+   "R122",
+   "R123",
+   "R132",
+   "R134",
+   "RN-S006-1",
+   "RN-S088-3"
+  ],
+  "simulants": [
+   "NU-LHT-2E",
+   "NU-LHT-2EG",
+   "OPRH4W30",
+   "CSM-LHT-1G",
+   "BP-1",
+   "NU-LHT-3M"
+  ],
+  "values_citing": 22
+ },
+ {
+  "doc_id": "D091",
+  "title": "Lunar Simulants Assessment",
+  "authors": "Johns Hopkins Applied Physics Laboratory / LSII",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": null,
+  "reference_type": "report",
+  "local_path": null,
+  "reference_ids": [
+   "R125",
+   "R136"
+  ],
+  "simulants": [
+   "NU-LHT-5M",
+   "Mooncastle"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D092",
+  "title": "Characterization of Lunar Dust Simulants by Automated Particle Analysis using Scanning Electron Microscopy",
+  "authors": "Bunker, K.L., Lersch, T.L., Fortenberry, C., Meyer, M.E.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": null,
+  "reference_type": "general",
+  "local_path": null,
+  "reference_ids": [
+   "R126"
+  ],
+  "simulants": [
+   "LHS-1D"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D093",
+  "title": "LHS-1E Lunar Highlands Simulant Fact Sheet",
+  "authors": "Exolith Lab, University of Central Florida",
+  "year": 2025,
+  "doi": null,
+  "url": "https://exolithsimulants.com",
+  "reference_text": null,
+  "reference_type": "general",
+  "local_path": null,
+  "reference_ids": [
+   "R127"
+  ],
+  "simulants": [
+   "LHS-1E"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D094",
+  "title": "ESA Planetary Dust Contamination Workshop 2025",
+  "authors": "European Space Agency",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": null,
+  "reference_type": "conference",
+  "local_path": null,
+  "reference_ids": [
+   "R128"
+  ],
+  "simulants": [
+   "LHS-1-25A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D095",
+  "title": "Additive Manufacturing of Lunar Regolith-Stainless Steel Composite Structures",
+  "authors": "Green, S.",
+  "year": 2023,
+  "doi": null,
+  "url": null,
+  "reference_text": null,
+  "reference_type": "general",
+  "local_path": null,
+  "reference_ids": [
+   "R129"
+  ],
+  "simulants": [
+   "LMS-1D"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D096",
+  "title": "LMS-1E Lunar Mare Simulant Fact Sheet",
+  "authors": "Exolith Lab, University of Central Florida",
+  "year": 2025,
+  "doi": null,
+  "url": "https://exolithsimulants.com",
+  "reference_text": null,
+  "reference_type": "general",
+  "local_path": null,
+  "reference_ids": [
+   "R130"
+  ],
+  "simulants": [
+   "LMS-1E"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D097",
+  "title": "Off Planet Research lunar simulant product listings",
+  "authors": "Off Planet Research",
+  "year": null,
+  "doi": null,
+  "url": "https://www.offplanetresearch.com",
+  "reference_text": null,
+  "reference_type": "general",
+  "local_path": null,
+  "reference_ids": [
+   "R133",
+   "R145"
+  ],
+  "simulants": [
+   "OPRFLCROSS1",
+   "Maryland-Sanders"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D098",
+  "title": "Lunar and planetary excavation prototype development and testing at the Colorado School of Mines",
+  "authors": "van Susante, P.J., Dreyer, C.B.",
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "van Susante, P. J., & Dreyer, C. B. (2010). Lunar and planetary excavation prototype development and testing at the Colorado School of Mines. In Earth and Space 2010: Engineering, Science, Construction, and Operations in Challenging Environments (pp. 1191-1200).",
+  "reference_type": "usage",
+  "local_path": null,
+  "reference_ids": [
+   "R135"
+  ],
+  "simulants": [
+   "CSM-CL-S"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D099",
+  "title": "Geotechnical and Shear Behavior of Novel Lunar Regolith Simulants TUBS-M, TUBS-T, and TUBS-I",
+  "authors": "Toklu, Y.C., Akpinar, M.V., Aminzadegan, S.",
+  "year": 2022,
+  "doi": "10.3390/ma15238561",
+  "url": "https://doi.org/10.3390/ma15238561",
+  "reference_text": "Geotechnical and Shear Behavior of Novel Lunar Regolith Simulants TUBS-M, TUBS-T, and TUBS-I",
+  "reference_type": "general",
+  "local_path": "papers/agent-fetched/Linke_etal_2022_Geotechnical_Shear_Behavior_TUBS-M_TUBS-T_TUBS-I_Materials_15_8561_PMC9737658.html",
+  "reference_ids": [
+   "R139",
+   "R161",
+   "RN-S069-1",
+   "RN-S070-1"
+  ],
+  "simulants": [
+   "MLS-1P",
+   "TUBS-I",
+   "TUBS-M",
+   "TUBS-T"
+  ],
+  "values_citing": 9
+ },
+ {
+  "doc_id": "D100",
+  "title": "Lunar Regolith Simulant Materials: Recommendations for Standardization, Production, and Usage",
+  "authors": "Sibille, L., Carpenter, P., Schlagheck, R., French, R.A.",
+  "year": 2006,
+  "doi": null,
+  "url": "https://ntrs.nasa.gov/citations/20060051776",
+  "reference_text": null,
+  "reference_type": "report",
+  "local_path": null,
+  "reference_ids": [
+   "R141",
+   "R142",
+   "R143",
+   "R179",
+   "R180"
+  ],
+  "simulants": [
+   "LSS-1",
+   "LSS-4",
+   "LSS-5",
+   "LSS-2",
+   "LSS-3"
+  ],
+  "values_citing": 15
+ },
+ {
+  "doc_id": "D101",
+  "title": "A Review on Geopolymer Technology for Lunar Base Construction",
+  "authors": null,
+  "year": 2022,
+  "doi": "10.3390/ma15134516",
+  "url": "https://doi.org/10.3390/ma15134516",
+  "reference_text": null,
+  "reference_type": "review",
+  "local_path": null,
+  "reference_ids": [
+   "R147"
+  ],
+  "simulants": [
+   "BH-2"
+  ],
+  "values_citing": 5
+ },
+ {
+  "doc_id": "D102",
+  "title": "ESRIC KSP - Simulants (Regolith Simulants Directory)",
+  "authors": "",
+  "year": null,
+  "doi": null,
+  "url": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "reference_text": "ESRIC KSP - Simulants (Regolith Simulants Directory)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+  "reference_ids": [
+   "RN-S001-1"
+  ],
+  "simulants": [
+   "AGK-2010"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D103",
+  "title": "ISECG ISRU Technology Gap Assessment Report",
+  "authors": "International Space Exploration Coordination Group (ISECG)",
+  "year": 2021,
+  "doi": null,
+  "url": "https://www.globalspaceexploration.org/wordpress/wp-content/uploads/2021/04/ISECG-ISRU-Technology-Gap-Assessment-Report-Apr-2021.pdf",
+  "reference_text": "ISECG ISRU Technology Gap Assessment Report",
+  "reference_type": "report",
+  "local_path": "papers/agent-fetched/ISECG_2021_ISRU_Technology_Gap_Assessment_Report_Apr2021.pdf",
+  "reference_ids": [
+   "RN-S001-2",
+   "RN-S032-2",
+   "RN-S055-2"
+  ],
+  "simulants": [
+   "AGK-2010",
+   "KLS-1",
+   "OPR Agglutinate"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D104",
+  "title": "A Novel Method of Measuring Seismic Velocity in Off-Earth Conditions: Implications for Future Research",
+  "authors": "Dello-Iacovo, M., Anderson, R.C., Saydam, S.",
+  "year": 2017,
+  "doi": null,
+  "url": "https://www.hou.usra.edu/meetings/lpsc2017/pdf/1702.pdf",
+  "reference_text": "A Novel Method of Measuring Seismic Velocity in Off-Earth Conditions: Implications for Future Research",
+  "reference_type": "geotechnical",
+  "local_path": "papers/agent-fetched/LPSC2017_1702_Seismic_velocity_off-Earth_ALRS-1_UNSW.pdf",
+  "reference_ids": [
+   "RN-S002-1"
+  ],
+  "simulants": [
+   "ALRS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D105",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "authors": "Liu, B., Sun, P., Yao, W., Li, T., Xu, W.",
+  "year": 2024,
+  "doi": "10.1016/j.ijmst.2024.09.005",
+  "url": "https://doi.org/10.1016/j.ijmst.2024.09.005",
+  "reference_text": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "reference_type": "review",
+  "local_path": "papers/LRS/DIRT project/files/1643/S2095268624001381.html",
+  "reference_ids": [
+   "RN-S002-2",
+   "RN-S004-4",
+   "RN-S005-1",
+   "RN-S007-9",
+   "RN-S009-4",
+   "RN-S010-10",
+   "RN-S012-2",
+   "RN-S013-4",
+   "RN-S014-3",
+   "RN-S022-5",
+   "RN-S026-4",
+   "RN-S033-4",
+   "RN-S045-4",
+   "RN-S046-2",
+   "RN-S063-4",
+   "RN-S084-7",
+   "RN-S112-2",
+   "RN-S117-4",
+   "RN-S118-1",
+   "RN-S121-2",
+   "RN-S126-1",
+   "RN-S127-1",
+   "RN-S128-1",
+   "RN-S130-1",
+   "RN-S131-1",
+   "RN-S132-1",
+   "RN-S133-1",
+   "RN-S134-1",
+   "RN-S135-1",
+   "RN-S154-2",
+   "RN-S155-1",
+   "RN-S156-1",
+   "RN-S157-1"
+  ],
+  "simulants": [
+   "ALRS-1",
+   "BH-1",
+   "BHLD20",
+   "CAS-1",
+   "CLDS-i",
+   "CLRS-1",
+   "CUG-1A",
+   "CUMT-1",
+   "DNA-1",
+   "FJS-3",
+   "JLU-H",
+   "KOHLS-1",
+   "NAO-1",
+   "NEU-1",
+   "TBG-1",
+   "CLRS-2",
+   "LSS-1",
+   "GSC-1",
+   "Maryland-Sanders",
+   "BH-2",
+   "HUST-1",
+   "HIT-LRS-1",
+   "CQU-1",
+   "IRSM-1",
+   "LBD",
+   "TYII-0",
+   "TYII-1",
+   "TYII-2",
+   "ZJM-01",
+   "KAUMLS",
+   "TRI-1",
+   "TLS-01A",
+   "FEFU-1"
+  ],
+  "values_citing": 6
+ },
+ {
+  "doc_id": "D106",
+  "title": "Production of a set of lunar regolith simulants based on Apollo and Chinese samples",
+  "authors": "Toklu, Y.C., Açıkbaş, N.Ç., Açıkbaş, G., Çerçevik, A.E., Akpinar, P.",
+  "year": 2023,
+  "doi": "10.1016/j.asr.2023.03.035",
+  "url": null,
+  "reference_text": "Production of a set of lunar regolith simulants based on Apollo and Chinese samples",
+  "reference_type": "review",
+  "local_path": "papers/LRS/Toklu et al. - 2023 - Production of a set of lunar regolith simulants based on Apollo and Chinese samples.pdf",
+  "reference_ids": [
+   "RN-S002-4",
+   "RN-S063-1"
+  ],
+  "simulants": [
+   "ALRS-1",
+   "TBG-1"
+  ],
+  "values_citing": 13
+ },
+ {
+  "doc_id": "D107",
+  "title": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity environment simulation (CUMT-1)",
+  "authors": "Li, R., Zhou, G., Yan, K. et al.",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity environment simulation (CUMT-1)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/1-s2.0-S2095268621001002-main.pdf",
+  "reference_ids": [
+   "RN-S003-1"
+  ],
+  "simulants": [
+   "ALS"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D108",
+  "title": "Appendix 4: List of Lunar Regolith/Soil/Dust Simulants (LEAG Simulants Special Action Team)",
+  "authors": null,
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "Appendix 4: List of Lunar Regolith/Soil/Dust Simulants (LEAG Simulants Special Action Team)",
+  "reference_type": "review",
+  "local_path": "papers/LRS/LEAG-SIM-SAT2010_LunarRegolithSimulants.pdf",
+  "reference_ids": [
+   "RN-S003-2"
+  ],
+  "simulants": [
+   "ALS"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D109",
+  "title": "Evaluations of lunar regolith simulants",
+  "authors": "Taylor, L.A. et al.",
+  "year": 2016,
+  "doi": null,
+  "url": null,
+  "reference_text": "Evaluations of lunar regolith simulants",
+  "reference_type": "review",
+  "local_path": "papers/LRS/Taylor et al. - 2016 - Evaluations of lunar regolith simulants.pdf",
+  "reference_ids": [
+   "RN-S003-3",
+   "RN-S011-7",
+   "RN-S027-9",
+   "RN-S028-14",
+   "RN-S030-8",
+   "RN-S043-6",
+   "RN-S110-1"
+  ],
+  "simulants": [
+   "ALS",
+   "CSM-CL",
+   "JSC-1",
+   "JSC-1A",
+   "JSC-1AF",
+   "MLS-1",
+   "MLS-1P"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D110",
+  "title": "A moderate-Ti lunar mare soil simulant IGG-01",
+  "authors": "Ruan, R.; Yang, W.; Zhang, D.; Tian, H.-C.; Zhao, Q.; Zou, Y.; Yu, B.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "A moderate-Ti lunar mare soil simulant IGG-01",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1757/383026053_A_moderate-Ti_lunar_mare_soil_simulant_IGG-01.html",
+  "reference_ids": [
+   "RN-S003-4",
+   "RN-S004-5",
+   "RN-S011-6",
+   "RN-S033-2",
+   "RN-S035-2",
+   "RN-S043-5",
+   "RN-S044-2",
+   "RN-S121-3"
+  ],
+  "simulants": [
+   "ALS",
+   "BH-1",
+   "CSM-CL",
+   "KOHLS-1",
+   "LCATS-1",
+   "MLS-1",
+   "MLS-2",
+   "BH-2"
+  ],
+  "values_citing": 4
+ },
+ {
+  "doc_id": "D111",
+  "title": "Corrigendum to \"Preparation and Characterization of High-Strength Geopolymer Based on BH-1 Lunar Soil Simulant with Low Alkali Content\" [Engineering 7(11) (2021) 1631-1645]",
+  "authors": "Zhou, S., Lu, C., Zhu, X., & Li, F.",
+  "year": 2025,
+  "doi": "10.1016/j.eng.2025.08.017",
+  "url": "https://doi.org/10.1016/j.eng.2025.08.017",
+  "reference_text": "Corrigendum to \"Preparation and Characterization of High-Strength Geopolymer Based on BH-1 Lunar Soil Simulant with Low Alkali Content\" [Engineering 7(11) (2021) 1631-1645]",
+  "reference_type": "composition",
+  "local_path": "papers/Zhou_etal_2025_Corrigendum_BH-1_geopolymer_Engineering_54_388-389.pdf",
+  "reference_ids": [
+   "RN-S004-1"
+  ],
+  "simulants": [
+   "BH-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D112",
+  "title": "Development and characterization of the PolyU-1 lunar regolith simulant based on Chang'e-5 returned samples",
+  "authors": "Zou, Y. et al.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Development and characterization of the PolyU-1 lunar regolith simulant based on Chang'e-5 returned samples",
+  "reference_type": "general",
+  "local_path": "papers/Zou_etal_2024_PolyU-1_lunar_regolith_simulant_Change-5_IJMST_34_1317-1326.pdf",
+  "reference_ids": [
+   "RN-S004-2",
+   "RN-S082-4"
+  ],
+  "simulants": [
+   "BH-1",
+   "GRC-3"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D113",
+  "title": "ResearchGate publication page: \"The Preparation and Characterization of NEU-1 Lunar Soil Simulants\" (related-works panel includes the BH-1 paper's own abstract and author/affiliation metadata)",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "ResearchGate publication page: \"The Preparation and Characterization of NEU-1 Lunar Soil Simulants\" (related-works panel includes the BH-1 paper's own abstract and author/affiliation metadata)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1712/330911730_The_Preparation_and_Characterization_of_NEU-1_Lunar_Soil_Simulants.html",
+  "reference_ids": [
+   "RN-S004-3"
+  ],
+  "simulants": [
+   "BH-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D114",
+  "title": "The Preparation and Characterization of NEU-1 Lunar Soil Simulants",
+  "authors": null,
+  "year": 2019,
+  "doi": null,
+  "url": null,
+  "reference_text": "The Preparation and Characterization of NEU-1 Lunar Soil Simulants",
+  "reference_type": "composition",
+  "local_path": "papers/LRS/DIRT project/files/1712/330911730_The_Preparation_and_Characterization_of_NEU-1_Lunar_Soil_Simulants.html",
+  "reference_ids": [
+   "RN-S005-2"
+  ],
+  "simulants": [
+   "BHLD20"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D115",
+  "title": "Lunar Regolith Simulants | BP-1 (ARES / Exploration Science Projects)",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Regolith Simulants | BP-1 (ARES / Exploration Science Projects)",
+  "reference_type": "datasheet",
+  "local_path": "papers/LRS/Sources/Lunar Regolith Simulants _ BP-1 - ARES _ Explo.html",
+  "reference_ids": [
+   "RN-S006-2"
+  ],
+  "simulants": [
+   "BP-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D116",
+  "title": "Geotechnical Properties of BP-1 Lunar Regolith Simulant (2019 Lunar ISRU Workshop)",
+  "authors": "Sibille, L., Mueller, R.P., Mantovani, J.G.",
+  "year": 2019,
+  "doi": null,
+  "url": null,
+  "reference_text": "Geotechnical Properties of BP-1 Lunar Regolith Simulant (2019 Lunar ISRU Workshop)",
+  "reference_type": "report",
+  "local_path": "papers/LRS/5068_Mueller.pdf",
+  "reference_ids": [
+   "RN-S006-3"
+  ],
+  "simulants": [
+   "BP-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D117",
+  "title": "Planetary Simulant Database: CLRS-1/2 Chinese Lunar Regolith Simulant",
+  "authors": "Kevin Cannon (site author)",
+  "year": 2022,
+  "doi": null,
+  "url": "https://simulantdb.com/simulants/clrs1.php",
+  "reference_text": "Planetary Simulant Database: CLRS-1/2 Chinese Lunar Regolith Simulant",
+  "reference_type": "general",
+  "local_path": "papers/agent-fetched/simulantdb_clrs1_2026-09-22.html",
+  "reference_ids": [
+   "RN-S007-13",
+   "RN-S010-6",
+   "RN-S084-5"
+  ],
+  "simulants": [
+   "CAS-1",
+   "CLRS-1",
+   "CLRS-2"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D118",
+  "title": "Planetary Simulant Database: CLDS-i Lunar Dust Simulant",
+  "authors": "Kevin Cannon (site author)",
+  "year": 2022,
+  "doi": null,
+  "url": "https://simulantdb.com/simulants/cldsi.php",
+  "reference_text": "Planetary Simulant Database: CLDS-i Lunar Dust Simulant",
+  "reference_type": "general",
+  "local_path": "papers/agent-fetched/simulantdb_cldsi_2026-09-22.html",
+  "reference_ids": [
+   "RN-S007-14",
+   "RN-S009-2",
+   "RN-S010-7"
+  ],
+  "simulants": [
+   "CAS-1",
+   "CLDS-i",
+   "CLRS-1"
+  ],
+  "values_citing": 12
+ },
+ {
+  "doc_id": "D119",
+  "title": "Planetary Simulant Database: CAS-1 Chinese Academy of Sciences",
+  "authors": "Kevin Cannon (site author)",
+  "year": 2022,
+  "doi": null,
+  "url": "https://simulantdb.com/simulants/cas1.php",
+  "reference_text": "Planetary Simulant Database: CAS-1 Chinese Academy of Sciences",
+  "reference_type": "datasheet",
+  "local_path": "papers/agent-fetched/simulantdb_cas1_2026-09-22.html",
+  "reference_ids": [
+   "RN-S007-2"
+  ],
+  "simulants": [
+   "CAS-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D120",
+  "title": "A Comprehensive Review of Lunar-based Manufacturing and Construction",
+  "authors": "Mohammad Azami, Zahra Kazemi, Sare Moazen, Martine Dubé, Marie-Josée Potvin, Krzysztof Skonieczny",
+  "year": 2024,
+  "doi": "10.1016/j.paerosci.2024.101045",
+  "url": "https://arxiv.org/pdf/2408.05823",
+  "reference_text": "A Comprehensive Review of Lunar-based Manufacturing and Construction",
+  "reference_type": "review",
+  "local_path": "papers/LRS/Sources/A Comprehensive Review of Lunar-based Manufact.html",
+  "reference_ids": [
+   "RN-S007-8",
+   "RN-S010-1"
+  ],
+  "simulants": [
+   "CAS-1",
+   "CLRS-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D121",
+  "title": "Research of formed lunar regolith analog AGK-2010 (English/Polish)",
+  "authors": "Bednarz, J. et al.",
+  "year": 2013,
+  "doi": null,
+  "url": null,
+  "reference_text": "Research of formed lunar regolith analog AGK-2010 (English/Polish)",
+  "reference_type": "geotechnical",
+  "local_path": "papers/LRS/AGK2010-Bednarz.pdf",
+  "reference_ids": [
+   "RN-S008-1"
+  ],
+  "simulants": [
+   "CHENOBI"
+  ],
+  "values_citing": 4
+ },
+ {
+  "doc_id": "D122",
+  "title": "ASCE 2021 Short Course slides (updated)",
+  "authors": "Gruener, J.",
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "ASCE 2021 Short Course slides (updated)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/Gruener_UPDATED_ASCE2021_Short Course.pdf",
+  "reference_ids": [
+   "RN-S008-10"
+  ],
+  "simulants": [
+   "CHENOBI"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D123",
+  "title": "Lunar Regolith Simulant User's Guide — C.M. Schrader (BAE Systems); D.L. Rickman, C.A. McLemore, and J.C. Fikes (NASA/MSFC), September 2010, NASA/TM—2010–216446",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Regolith Simulant User's Guide — C.M. Schrader (BAE Systems); D.L. Rickman, C.A. McLemore, and J.C. Fikes (NASA/MSFC), September 2010, NASA/TM—2010–216446",
+  "reference_type": "report",
+  "local_path": "papers/Schrader_etal_2010_Lunar_Regolith_Simulant_Users_Guide_NASA-TM-2010-216446.pdf",
+  "reference_ids": [
+   "RN-S008-11",
+   "RN-S019-7",
+   "RN-S027-13",
+   "RN-S028-16",
+   "RN-S030-10",
+   "RN-S043-8",
+   "RN-S053-11"
+  ],
+  "simulants": [
+   "CHENOBI",
+   "FJS-1",
+   "JSC-1",
+   "JSC-1A",
+   "JSC-1AF",
+   "MLS-1",
+   "OB-1"
+  ],
+  "values_citing": 26
+ },
+ {
+  "doc_id": "D124",
+  "title": "Lunar Regolith Simulant User's Guide (LEAG-SIM-SAT 2010 workshop compendium)",
+  "authors": "NASA MSFC",
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Regolith Simulant User's Guide (LEAG-SIM-SAT 2010 workshop compendium)",
+  "reference_type": "review",
+  "local_path": "papers/LRS/LEAG-SIM-SAT2010_LunarRegolithSimulants.pdf",
+  "reference_ids": [
+   "RN-S008-2",
+   "RN-S053-3"
+  ],
+  "simulants": [
+   "CHENOBI",
+   "OB-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D125",
+  "title": "Lunar Regolith Simulant User's Guide, NASA/TM-2010-216446",
+  "authors": "Schrader, C.M., Rickman, D.L., McLemore, C.A., Fikes, J.C.",
+  "year": 2010,
+  "doi": null,
+  "url": "https://ntrs.nasa.gov/search.jsp?R=20100038451",
+  "reference_text": "Lunar Regolith Simulant User's Guide, NASA/TM-2010-216446",
+  "reference_type": "composition",
+  "local_path": "papers/LRS/SchraderEtAl_NASA-TM-2010-216446.pdf",
+  "reference_ids": [
+   "RN-S008-3",
+   "RN-S027-11",
+   "RN-S028-13",
+   "RN-S030-7",
+   "RN-S047-6",
+   "RN-S048-1",
+   "RN-S049-2",
+   "RN-S050-1",
+   "RN-S051-3",
+   "RN-S053-2"
+  ],
+  "simulants": [
+   "CHENOBI",
+   "JSC-1",
+   "JSC-1A",
+   "JSC-1AF",
+   "NU-LHT",
+   "NU-LHT-1D",
+   "NU-LHT-1M",
+   "NU-LHT-2C",
+   "NU-LHT-2M",
+   "OB-1"
+  ],
+  "values_citing": 38
+ },
+ {
+  "doc_id": "D126",
+  "title": "ARES | Exploration Science Projects | Lunar Regolith Simulants | OB-1 (page also covers Chenobi)",
+  "authors": "NASA JSC ARES",
+  "year": null,
+  "doi": null,
+  "url": "https://ares.jsc.nasa.gov/projects/simulants/ob-1.html",
+  "reference_text": "ARES | Exploration Science Projects | Lunar Regolith Simulants | OB-1 (page also covers Chenobi)",
+  "reference_type": "datasheet",
+  "local_path": "papers/NASA_ARES_OB-1_page.html",
+  "reference_ids": [
+   "RN-S008-4"
+  ],
+  "simulants": [
+   "CHENOBI"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D127",
+  "title": "2022 Lunar Simulant Assessment",
+  "authors": "Stockstill-Cahill, K. et al.",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "2022 Lunar Simulant Assessment",
+  "reference_type": "report",
+  "local_path": "papers/LRS/Stockstill-Cahill et al. - 2022 Lunar Simulant Assessment.pdf",
+  "reference_ids": [
+   "RN-S008-5",
+   "RN-S011-4",
+   "RN-S037-1",
+   "RN-S053-5",
+   "RN-S054-1",
+   "RN-S056-2",
+   "RN-S057-1",
+   "RN-S060-1",
+   "RN-S061-1",
+   "RN-S103-1",
+   "RN-S105-1"
+  ],
+  "simulants": [
+   "CHENOBI",
+   "CSM-CL",
+   "LMS-1",
+   "OB-1",
+   "OB-1A",
+   "OPRFLCROSS2",
+   "OPRH2N",
+   "OPRL2N",
+   "OPRL2NT",
+   "CSM-LHT-1",
+   "CSM-LMT-1"
+  ],
+  "values_citing": 12
+ },
+ {
+  "doc_id": "D128",
+  "title": "Greenland White Mountain Anorthosite (GreenSpar), LPSC 51 #2867",
+  "authors": "Gruener, J. et al.",
+  "year": 2020,
+  "doi": null,
+  "url": null,
+  "reference_text": "Greenland White Mountain Anorthosite (GreenSpar), LPSC 51 #2867",
+  "reference_type": "general",
+  "local_path": "papers/Gruener_etal_2020_Greenland_White_Mountain_Anorthosite_GreenSpar_LPSC51_2867.pdf",
+  "reference_ids": [
+   "RN-S008-6",
+   "RN-S053-10"
+  ],
+  "simulants": [
+   "CHENOBI",
+   "OB-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D129",
+  "title": "Lunar Simulants encyclopedia entry (NTRS 20180006611)",
+  "authors": "Jacobs, T. (compiler)",
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Simulants encyclopedia entry (NTRS 20180006611)",
+  "reference_type": "general",
+  "local_path": "papers/agent-fetched/NTRS_20180006611_Lunar_Simulants_encyclopedia_entry_Jacobs.pdf",
+  "reference_ids": [
+   "RN-S008-7",
+   "RN-S053-9"
+  ],
+  "simulants": [
+   "CHENOBI",
+   "OB-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D130",
+  "title": "ESRIC Regolith Simulants Directory",
+  "authors": "European Space Resources Innovation Centre",
+  "year": null,
+  "doi": null,
+  "url": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "reference_text": "ESRIC Regolith Simulants Directory",
+  "reference_type": "datasheet",
+  "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+  "reference_ids": [
+   "RN-S008-8",
+   "RN-S053-6",
+   "RN-S054-2"
+  ],
+  "simulants": [
+   "CHENOBI",
+   "OB-1",
+   "OB-1A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D131",
+  "title": "ISRU Technology Gap Assessment Report",
+  "authors": "ISECG",
+  "year": 2021,
+  "doi": null,
+  "url": null,
+  "reference_text": "ISRU Technology Gap Assessment Report",
+  "reference_type": "report",
+  "local_path": "papers/agent-fetched/ISECG_2021_ISRU_Technology_Gap_Assessment_Report_Apr2021.pdf",
+  "reference_ids": [
+   "RN-S008-9",
+   "RN-S053-7",
+   "RN-S054-3"
+  ],
+  "simulants": [
+   "CHENOBI",
+   "OB-1",
+   "OB-1A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D132",
+  "title": "一种模拟月尘的制备方法 (Method for preparing simulated lunar dust), Chinese patent application CN 107876754 A",
+  "authors": "于雯, 唐红, 李雄耀, 王世杰, 冯俊明, 张森森, 莫冰, 李瑞, 金宏, 刘连银; applicant 中国科学院地球化学研究所 (Institute of Geochemistry, Chinese Academy of Sciences)",
+  "year": 2018,
+  "doi": null,
+  "url": null,
+  "reference_text": "一种模拟月尘的制备方法 (Method for preparing simulated lunar dust), Chinese patent application CN 107876754 A",
+  "reference_type": "general",
+  "local_path": "papers/Yu_Tang_Li_etal_CN107876754A_Method_for_preparing_simulated_lunar_dust_CLDS-i_IGCAS_2018.pdf",
+  "reference_ids": [
+   "RN-S009-1",
+   "RN-S010-8"
+  ],
+  "simulants": [
+   "CLDS-i",
+   "CLRS-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D133",
+  "title": "A lunar dust simulant: CLDS-i",
+  "authors": "Hong Tang, Xiongyao Li, Sensen Zhang, Shijie Wang, Jianzhong Liu, Shijie Li, Yang Li, Yanxue Wu",
+  "year": 2017,
+  "doi": "10.1016/j.asr.2016.11.023",
+  "url": "https://doi.org/10.1016/j.asr.2016.11.023",
+  "reference_text": "A lunar dust simulant: CLDS-i",
+  "reference_type": "composition",
+  "local_path": "papers/agent-fetched/Crossref_metadata_Tang_2017_CLDS-i_ASR_59_1156.json",
+  "reference_ids": [
+   "RN-S009-7"
+  ],
+  "simulants": [
+   "CLDS-i"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D134",
+  "title": "Material aspects of sintering of EAC-1A lunar regolith simulant",
+  "authors": "Juan-Carlos Ginés-Palomares, Miranda Fateri, Tim Schubert, Lilou de Peindray d'Ambelle, Sebastian Simon, Gregor J. G. Gluth, Jens Günster, Andrea Zocca",
+  "year": 2023,
+  "doi": "10.1038/s41598-023-50391-y",
+  "url": "https://doi.org/10.1038/s41598-023-50391-y",
+  "reference_text": "Material aspects of sintering of EAC-1A lunar regolith simulant",
+  "reference_type": "usage",
+  "local_path": "papers/LRS/s41598-023-50391-y.pdf",
+  "reference_ids": [
+   "RN-S010-12",
+   "RN-S018-1",
+   "RN-S027-12",
+   "RN-S081-7",
+   "RN-S084-9",
+   "RN-S085-1"
+  ],
+  "simulants": [
+   "CLRS-1",
+   "EAC-1A",
+   "JSC-1",
+   "JSC-2A",
+   "CLRS-2",
+   "JSC-2"
+  ],
+  "values_citing": 9
+ },
+ {
+  "doc_id": "D135",
+  "title": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "authors": "Liu, B.; Sun, P.; Yao, W.; Li, T.; Xu, W. (2024)",
+  "year": 2024,
+  "doi": null,
+  "url": "https://www.sciencedirect.com/science/article/pii/S2095268624001381",
+  "reference_text": "Research progress on the adaptability of lunar regolith simulant-based composites and lunar base construction methods",
+  "reference_type": "composition",
+  "local_path": "papers/LRS/DIRT project/files/1643/S2095268624001381.html",
+  "reference_ids": [
+   "RN-S011-1",
+   "RN-S071-5",
+   "RN-S072-3",
+   "RN-S107-2",
+   "RN-S119-1",
+   "RN-S153-1"
+  ],
+  "simulants": [
+   "CSM-CL",
+   "UoM-B",
+   "UoM-W",
+   "Mooncastle",
+   "CMU-1",
+   "LZS-1"
+  ],
+  "values_citing": 5
+ },
+ {
+  "doc_id": "D136",
+  "title": "The Potential for Lunar and Martian Regolith Simulants to Sustain Plant Growth (review table)",
+  "authors": "Duri, L.G.; Caporale, A.G.; Rouphael, Y.; et al. (2022)",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "The Potential for Lunar and Martian Regolith Simulants to Sustain Plant Growth (review table)",
+  "reference_type": "review",
+  "local_path": "papers/Duri_etal_2022_Regolith_Simulants_Plant_Growth_Review_FrontAstronSpaceSci_8_747821.pdf",
+  "reference_ids": [
+   "RN-S011-2"
+  ],
+  "simulants": [
+   "CSM-CL"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D137",
+  "title": "1-s2.0-S2095268621001002-main.pdf (in-text mention)",
+  "authors": "unidentified in extract",
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "1-s2.0-S2095268621001002-main.pdf (in-text mention)",
+  "reference_type": "usage",
+  "local_path": "papers/LRS/1-s2.0-S2095268621001002-main.pdf",
+  "reference_ids": [
+   "RN-S011-3"
+  ],
+  "simulants": [
+   "CSM-CL"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D138",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples",
+  "authors": "LEAG Simulant Working Group & CAPTEM, report to NASA Advisory Council PSS",
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples",
+  "reference_type": "report",
+  "local_path": "papers/LRS/LEAG-SIM-SAT2010_LunarRegolithSimulants.pdf",
+  "reference_ids": [
+   "RN-S011-5",
+   "RN-S023-6",
+   "RN-S033-1",
+   "RN-S125-1"
+  ],
+  "simulants": [
+   "CSM-CL",
+   "GCA-1",
+   "KOHLS-1",
+   "CUG-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D139",
+  "title": "An Open Database of Lunar Regolith and Simulants Properties",
+  "authors": "Gasteiner, L. et al.",
+  "year": 2026,
+  "doi": null,
+  "url": null,
+  "reference_text": "An Open Database of Lunar Regolith and Simulants Properties",
+  "reference_type": "general",
+  "local_path": "papers/LRS/Gasteiner et al. - 2026 - An Open Database of Lunar Regolith and Simulants Properties.pdf",
+  "reference_ids": [
+   "RN-S012-3"
+  ],
+  "simulants": [
+   "CUG-1A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D140",
+  "title": "Properties of novel LX lunar regolith simulant system — The base simulants: Part 1",
+  "authors": "Patzwald J., Kleba-Ehrhardt R., Schiperski F., Griemsmann T., Linke S., Neumann T., Overmeyer L., Stoll E., Karl D.",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "Properties of novel LX lunar regolith simulant system — The base simulants: Part 1",
+  "reference_type": "review",
+  "local_path": "papers/LRS/1-s2.0-S0094576525001109-main.pdf",
+  "reference_ids": [
+   "RN-S013-2",
+   "RN-S026-1",
+   "RN-S035-3",
+   "RN-S036-3",
+   "RN-S038-1",
+   "RN-S043-4",
+   "RN-S044-1",
+   "RN-S045-1",
+   "RN-S077-1",
+   "RN-S078-1",
+   "RN-S088-1",
+   "RN-S092-1",
+   "RN-S093-3",
+   "RN-S103-2",
+   "RN-S105-2"
+  ],
+  "simulants": [
+   "CUMT-1",
+   "JLU-H",
+   "LCATS-1",
+   "LHS-1",
+   "LSS-ISAC-1",
+   "MLS-1",
+   "MLS-2",
+   "NAO-1",
+   "LHS-2",
+   "LHS-2E",
+   "NU-LHT-3M",
+   "LHS-1E",
+   "LHS-1-25A",
+   "CSM-LHT-1",
+   "CSM-LMT-1"
+  ],
+  "values_citing": 15
+ },
+ {
+  "doc_id": "D141",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01 (Acta Astronautica 224 (2024) 148–160) - text embedded in saved ResearchGate page",
+  "authors": "Ruan R. et al.",
+  "year": 2024,
+  "doi": null,
+  "url": "https://www.researchgate.net/publication/383026053_A_moderate-Ti_lunar_mare_soil_simulant_IGG-01",
+  "reference_text": "A moderate-Ti lunar mare soil simulant: IGG-01 (Acta Astronautica 224 (2024) 148–160) - text embedded in saved ResearchGate page",
+  "reference_type": "review",
+  "local_path": "papers/LRS/DIRT project/files/1757/383026053_A_moderate-Ti_lunar_mare_soil_simulant_IGG-01.html",
+  "reference_ids": [
+   "RN-S013-3",
+   "RN-S026-2",
+   "RN-S045-6"
+  ],
+  "simulants": [
+   "CUMT-1",
+   "JLU-H",
+   "NAO-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D142",
+  "title": "Properties of TJ-1 Lunar Soil Simulant - saved ResearchGate page (aggregates snippets of citing articles)",
+  "authors": "ResearchGate (snippets from Lin et al. 2024 Adv Space Res and others)",
+  "year": 2025,
+  "doi": null,
+  "url": "https://www.researchgate.net/publication/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant",
+  "reference_text": "Properties of TJ-1 Lunar Soil Simulant - saved ResearchGate page (aggregates snippets of citing articles)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1765/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html",
+  "reference_ids": [
+   "RN-S013-6",
+   "RN-S045-8"
+  ],
+  "simulants": [
+   "CUMT-1",
+   "NAO-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D143",
+  "title": "3D Printing Technology for a Moon Outpost Exploiting Lunar Soil (IAC-10-D3.3.5)",
+  "authors": "F. Ceccanti, E. Dini, X. De Kestelier, V. Colla, L. Pambaguian",
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "3D Printing Technology for a Moon Outpost Exploiting Lunar Soil (IAC-10-D3.3.5)",
+  "reference_type": "composition",
+  "local_path": "papers/Ceccanti_etal_2010_3D_printing_moon_outpost_D-NA-1_simulant_IAC-10-D3.3.5_ESA-ESMAT.pdf",
+  "reference_ids": [
+   "RN-S014-1"
+  ],
+  "simulants": [
+   "DNA-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D144",
+  "title": "Basalt fibre reinforced geopolymer made from lunar regolith simulant (ESA Ariadna Final Report 18-9401)",
+  "authors": "Anna-Lena Kjøniksen, Shima Pilehvar, Marlies Arnhof, Belinda Rich",
+  "year": 2021,
+  "doi": null,
+  "url": null,
+  "reference_text": "Basalt fibre reinforced geopolymer made from lunar regolith simulant (ESA Ariadna Final Report 18-9401)",
+  "reference_type": "composition",
+  "local_path": "papers/LRS/DIRT project/files/1798/Kjøniksen et al. - Basalt fibre reinforced geopolymer made from lunar regolith simulant.pdf",
+  "reference_ids": [
+   "RN-S014-2"
+  ],
+  "simulants": [
+   "DNA-1"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D145",
+  "title": "Properties and Characteristics of Regolith-Based Materials for Extraterrestrial Construction",
+  "authors": "Cheng Zhou, Yuyue Gao, Yan Zhou, Wei She, Yusheng Shi, Lieyun Ding, Changwen Miao",
+  "year": 2024,
+  "doi": "10.1016/j.eng.2023.11.019",
+  "url": "https://doi.org/10.1016/j.eng.2023.11.019",
+  "reference_text": "Properties and Characteristics of Regolith-Based Materials for Extraterrestrial Construction",
+  "reference_type": "review",
+  "local_path": "papers/LRS/DIRT project/files/1741/S2095809924000511.html",
+  "reference_ids": [
+   "RN-S014-4",
+   "RN-S045-3",
+   "RN-S064-7",
+   "RN-S081-3",
+   "RN-S123-3",
+   "RN-S126-4"
+  ],
+  "simulants": [
+   "DNA-1",
+   "NAO-1",
+   "TJ-1",
+   "JSC-2A",
+   "NEU-1A",
+   "HUST-1"
+  ],
+  "values_citing": 13
+ },
+ {
+  "doc_id": "D146",
+  "title": "Micromechanical Behavior of DNA-1A Lunar Regolith Simulant in Comparison to Ottawa Sand",
+  "authors": "C. S. Sandeep, V. Marzulli, F. Cafaro, K. Senetakis, T. Pöschel",
+  "year": 2019,
+  "doi": "10.1029/2019JB017589",
+  "url": null,
+  "reference_text": "Micromechanical Behavior of DNA-1A Lunar Regolith Simulant in Comparison to Ottawa Sand",
+  "reference_type": "composition",
+  "local_path": "papers/Sandeep_etal_2019_Micromechanical_Behavior_DNA-1A_Lunar_Regolith_Simulant_JGR_Solid_Earth_124_8077-8100.pdf",
+  "reference_ids": [
+   "RN-S014-6"
+  ],
+  "simulants": [
+   "DNA-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D147",
+  "title": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+  "authors": "(Li et al.)",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "Preparation and characterization of a specialized lunar regolith simulant for use in lunar low gravity simulation",
+  "reference_type": "general",
+  "local_path": "papers/LRS/1-s2.0-S2095268621001002-main.pdf",
+  "reference_ids": [
+   "RN-S015-1",
+   "RN-S024-8"
+  ],
+  "simulants": [
+   "DNA-1A",
+   "GRC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D148",
+  "title": "Mineralogically Accurate Simulants for Lunar ISRU, and Strategic Regolith Processing",
+  "authors": "Cannon, K.M.; Britt, D.T.",
+  "year": 2019,
+  "doi": null,
+  "url": null,
+  "reference_text": "Mineralogically Accurate Simulants for Lunar ISRU, and Strategic Regolith Processing",
+  "reference_type": "general",
+  "local_path": "papers/LRS/Cannon and Britt - 2019 - Mineralogically Accurate Simulants for Lunar ISRU,.pdf",
+  "reference_ids": [
+   "RN-S016-1",
+   "RN-S097-1"
+  ],
+  "simulants": [
+   "DUST-Y",
+   "FROST-Y"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D149",
+  "title": "Lunar Simulant Assessment",
+  "authors": "Denevi, B.W. et al.",
+  "year": 2020,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Simulant Assessment",
+  "reference_type": "report",
+  "local_path": "papers/Denevi_etal_2020_Lunar_Simulant_Assessment_JHUAPL_LSIC.pdf",
+  "reference_ids": [
+   "RN-S016-2",
+   "RN-S024-2",
+   "RN-S036-1",
+   "RN-S056-1",
+   "RN-S058-1",
+   "RN-S060-2",
+   "RN-S061-2",
+   "RN-S091-3",
+   "RN-S093-2"
+  ],
+  "simulants": [
+   "DUST-Y",
+   "GRC-1",
+   "LHS-1",
+   "OPRFLCROSS2",
+   "OPRH3N",
+   "OPRL2N",
+   "OPRL2NT",
+   "LHS-1D",
+   "LHS-1-25A"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D150",
+  "title": "The Luna Analog Facility testbeds (ESA, EAC): contemporary characterization work of highland (lunar) and mare (EAC-1) lunar regolith simulants",
+  "authors": "Zemeny, A., Sardisco, L., Quinteros, S., Mikesell, T.D., Pirrie, D., Rose, L., Cowley, A., Manick, K.",
+  "year": 2024,
+  "doi": "10.3389/frspt.2024.1510635",
+  "url": "https://doi.org/10.3389/frspt.2024.1510635",
+  "reference_text": "The Luna Analog Facility testbeds (ESA, EAC): contemporary characterization work of highland (lunar) and mare (EAC-1) lunar regolith simulants",
+  "reference_type": "review",
+  "local_path": "papers/Zemeny_etal_2024_Luna_Analog_Facility_testbeds_EAC-1_FrontSpaceTech_1510635.pdf",
+  "reference_ids": [
+   "RN-S017-2",
+   "RN-S159-1",
+   "RN-S160-1",
+   "RN-S161-1"
+  ],
+  "simulants": [
+   "EAC-1",
+   "Lunar90",
+   "Lunar250",
+   "Lunar2000"
+  ],
+  "values_citing": 31
+ },
+ {
+  "doc_id": "D151",
+  "title": "Manufacturing Dense Thick Films of Lunar Regolith Simulant EAC-1 at Room Temperature",
+  "authors": "Nieke, P., Kita, J., Häming, M., Moos, R.",
+  "year": 2019,
+  "doi": "10.3390/ma12030487",
+  "url": "https://doi.org/10.3390/ma12030487",
+  "reference_text": "Manufacturing Dense Thick Films of Lunar Regolith Simulant EAC-1 at Room Temperature",
+  "reference_type": "datasheet",
+  "local_path": null,
+  "reference_ids": [
+   "RN-S017-3"
+  ],
+  "simulants": [
+   "EAC-1"
+  ],
+  "values_citing": 7
+ },
+ {
+  "doc_id": "D152",
+  "title": "Laser melting manufacturing of large elements of lunar regolith simulant for paving on the Moon",
+  "authors": "Ginés-Palomares, J.-C.; Fateri, M.; Kalhöfer, E.; Schubert, T.; Meyer, L.; Kolsch, N.; Brandić Lipińska, M.; Davenport, R.; Imhof, B.; Waclavicek, R.; Sperl, M.; Makaya, A.; Günster, J.",
+  "year": 2023,
+  "doi": "10.1038/s41598-023-42008-1",
+  "url": "https://doi.org/10.1038/s41598-023-42008-1",
+  "reference_text": "Laser melting manufacturing of large elements of lunar regolith simulant for paving on the Moon",
+  "reference_type": "usage",
+  "local_path": "papers/LRS/DIRT project/files/1667/Ginés-Palomares et al. - 2023 - Laser melting manufacturing of large elements of l.pdf",
+  "reference_ids": [
+   "RN-S018-2"
+  ],
+  "simulants": [
+   "EAC-1A"
+  ],
+  "values_citing": 3
+ },
+ {
+  "doc_id": "D153",
+  "title": "Electromagnetic Characterization of EAC-1A and JSC-2A Lunar Regolith Simulants",
+  "authors": "Ramos Somolinos, D.; Plaza Gallardo, B.; Cidrás Estévez, J.; Stepanyan, N.; Cowley, A.; Auñón Marugán, A.; Poyatos Martínez, D.",
+  "year": 2024,
+  "doi": "10.3390/ma17153633",
+  "url": "https://doi.org/10.3390/ma17153633",
+  "reference_text": "Electromagnetic Characterization of EAC-1A and JSC-2A Lunar Regolith Simulants",
+  "reference_type": "usage",
+  "local_path": "papers/LRS/materials-17-03633.pdf",
+  "reference_ids": [
+   "RN-S018-3"
+  ],
+  "simulants": [
+   "EAC-1A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D154",
+  "title": "Fungal Biomining of Lunar Regolith simulant EAC-1A",
+  "authors": "Figueira, J. (supervisors M. Cortesão, DLR; P. Tamagnini, University of Porto)",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "Fungal Biomining of Lunar Regolith simulant EAC-1A",
+  "reference_type": "usage",
+  "local_path": "papers/LRS/Figueira - Fungal Biomining of Lunar Regolith simulant EAC-1A.pdf",
+  "reference_ids": [
+   "RN-S018-4"
+  ],
+  "simulants": [
+   "EAC-1A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D155",
+  "title": "Lunar Regolith Simulant User's Guide (Document No. Simulant-Doc-007, DRAFT v.2.2)",
+  "authors": "NASA Marshall Space Flight Center / Dust Project (LEAG-SIM-SAT)",
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Regolith Simulant User's Guide (Document No. Simulant-Doc-007, DRAFT v.2.2)",
+  "reference_type": "report",
+  "local_path": "papers/LRS/LEAG-SIM-SAT2010_LunarRegolithSimulants.pdf",
+  "reference_ids": [
+   "RN-S019-3"
+  ],
+  "simulants": [
+   "FJS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D156",
+  "title": "Properties of TJ-1 Lunar Soil Simulant (ResearchGate page with excerpted citing sentences)",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Properties of TJ-1 Lunar Soil Simulant (ResearchGate page with excerpted citing sentences)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1765/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html",
+  "reference_ids": [
+   "RN-S019-4"
+  ],
+  "simulants": [
+   "FJS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D157",
+  "title": "Lunar Simulants (encyclopedia entry)",
+  "authors": "Jacobs Technologies, Inc.",
+  "year": 2018,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Simulants (encyclopedia entry)",
+  "reference_type": "review",
+  "local_path": "papers/agent-fetched/NTRS_20180006611_Lunar_Simulants_encyclopedia_entry_Jacobs.pdf",
+  "reference_ids": [
+   "RN-S019-5",
+   "RN-S021-3",
+   "RN-S022-3"
+  ],
+  "simulants": [
+   "FJS-1",
+   "FJS-2",
+   "FJS-3"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D158",
+  "title": "ESRIC Regolith Simulants Directory (simulants.html)",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "ESRIC Regolith Simulants Directory (simulants.html)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+  "reference_ids": [
+   "RN-S020-1",
+   "RN-S021-2",
+   "RN-S022-2"
+  ],
+  "simulants": [
+   "FJS-1g",
+   "FJS-2",
+   "FJS-3"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D159",
+  "title": "Lunar Regolith Simulants (ARES Simulants page)",
+  "authors": "NASA JSC Astromaterials Research and Exploration Science (ARES)",
+  "year": null,
+  "doi": null,
+  "url": "https://ares.jsc.nasa.gov/projects/simulants/",
+  "reference_text": "Lunar Regolith Simulants (ARES Simulants page)",
+  "reference_type": "usage",
+  "local_path": "papers/LRS/DIRT project/files/1646/simulants.html",
+  "reference_ids": [
+   "RN-S023-1",
+   "RN-S117-2"
+  ],
+  "simulants": [
+   "GCA-1",
+   "GSC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D160",
+  "title": "Properties of TJ-1 Lunar Soil Simulant (ResearchGate page) — GCA-1 mention occurs in an embedded 'Citations' abstract excerpt from an unidentified third paper (on IRSM-1 DEM calibration), not from the TJ-1 article body itself",
+  "authors": "host article: Mingjing Jiang, Liqing Li, Yugang Sun (2012); citing-paper authors not identified from the excerpt",
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Properties of TJ-1 Lunar Soil Simulant (ResearchGate page) — GCA-1 mention occurs in an embedded 'Citations' abstract excerpt from an unidentified third paper (on IRSM-1 DEM calibration), not from the TJ-1 article body itself",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1765/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html",
+  "reference_ids": [
+   "RN-S023-3"
+  ],
+  "simulants": [
+   "GCA-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D161",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation)",
+  "authors": "He, Chunmei (advisor: Zeng, Xiangwu)",
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation)",
+  "reference_type": "geotechnical",
+  "local_path": "papers/LRS/case1269272964.pdf",
+  "reference_ids": [
+   "RN-S024-1",
+   "RN-S042-4",
+   "RN-S043-1",
+   "RN-S082-1"
+  ],
+  "simulants": [
+   "GRC-1",
+   "MKS-1",
+   "MLS-1",
+   "GRC-3"
+  ],
+  "values_citing": 7
+ },
+ {
+  "doc_id": "D162",
+  "title": "A moderate-Ti lunar mare soil simulant IGG-01 (saved ResearchGate page)",
+  "authors": "Ruan, R. et al.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "A moderate-Ti lunar mare soil simulant IGG-01 (saved ResearchGate page)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1757/383026053_A_moderate-Ti_lunar_mare_soil_simulant_IGG-01.html",
+  "reference_ids": [
+   "RN-S024-3"
+  ],
+  "simulants": [
+   "GRC-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D163",
+  "title": "Properties of TJ-1 Lunar Soil Simulant (saved ResearchGate page)",
+  "authors": "Jiang, M., Li, L., Sun, Y.",
+  "year": 2012,
+  "doi": null,
+  "url": null,
+  "reference_text": "Properties of TJ-1 Lunar Soil Simulant (saved ResearchGate page)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1765/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html",
+  "reference_ids": [
+   "RN-S024-4"
+  ],
+  "simulants": [
+   "GRC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D164",
+  "title": "Lunar Regolith Simulant User's Guide, Revision A (NASA/TM-20240011783)",
+  "authors": "Slabic, Ane (Jacobs Technology / NASA JSC)",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Regolith Simulant User's Guide, Revision A (NASA/TM-20240011783)",
+  "reference_type": "report",
+  "local_path": "papers/Slabic_etal_2024_Lunar_Regolith_Simulant_Users_Guide_RevA_NASA-TM-20240011783.pdf",
+  "reference_ids": [
+   "RN-S024-5",
+   "RN-S027-4",
+   "RN-S028-5",
+   "RN-S030-3",
+   "RN-S037-2",
+   "RN-S047-2",
+   "RN-S049-3",
+   "RN-S051-2",
+   "RN-S053-8",
+   "RN-S082-6"
+  ],
+  "simulants": [
+   "GRC-1",
+   "JSC-1",
+   "JSC-1A",
+   "JSC-1AF",
+   "LMS-1",
+   "NU-LHT",
+   "NU-LHT-1M",
+   "NU-LHT-2M",
+   "OB-1",
+   "GRC-3"
+  ],
+  "values_citing": 41
+ },
+ {
+  "doc_id": "D165",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Samples (LEAG-CAPTEM SIM-SAT report)",
+  "authors": "LEAG-CAPTEM Simulant Development Team",
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "Status of Lunar Regolith Simulants and Demand for Apollo Samples (LEAG-CAPTEM SIM-SAT report)",
+  "reference_type": "report",
+  "local_path": "papers/LRS/LEAG-SIM-SAT2010_LunarRegolithSimulants.pdf",
+  "reference_ids": [
+   "RN-S024-6",
+   "RN-S082-7"
+  ],
+  "simulants": [
+   "GRC-1",
+   "GRC-3"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D166",
+  "title": "Simulants — ARES, NASA Johnson Space Center (curation page)",
+  "authors": "NASA Astromaterials Research & Exploration Science (ARES)",
+  "year": 2017,
+  "doi": null,
+  "url": "https://ares.jsc.nasa.gov/projects/simulants/",
+  "reference_text": "Simulants — ARES, NASA Johnson Space Center (curation page)",
+  "reference_type": "usage",
+  "local_path": "papers/LRS/DIRT project/files/1646/simulants.html",
+  "reference_ids": [
+   "RN-S024-7",
+   "RN-S082-8"
+  ],
+  "simulants": [
+   "GRC-1",
+   "GRC-3"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D167",
+  "title": "Greenland 'White Mountain' Anorthosite: A New Lunar Polar Regolith Simulant Component",
+  "authors": "Gruener, J.E., Deitrick, S.R., Tu, V.M., Clark, J.V., Ming, D.W., Cambon, J.",
+  "year": 2020,
+  "doi": null,
+  "url": null,
+  "reference_text": "Greenland 'White Mountain' Anorthosite: A New Lunar Polar Regolith Simulant Component",
+  "reference_type": "composition",
+  "local_path": "papers/Gruener_etal_2020_Greenland_White_Mountain_Anorthosite_GreenSpar_LPSC51_2867.pdf",
+  "reference_ids": [
+   "RN-S025-1"
+  ],
+  "simulants": [
+   "GreenSpar"
+  ],
+  "values_citing": 15
+ },
+ {
+  "doc_id": "D168",
+  "title": "Characterization of NUW-LHT-5M (comparison table incl. GreenSpar)",
+  "authors": "Rickman, D.L. et al.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Characterization of NUW-LHT-5M (comparison table incl. GreenSpar)",
+  "reference_type": "composition",
+  "local_path": "papers/Rickman_etal_2024_Characterization_of_NUW-LHT-5M_NASA-TM-20240007991.pdf",
+  "reference_ids": [
+   "RN-S025-2"
+  ],
+  "simulants": [
+   "GreenSpar"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D169",
+  "title": "Slabic, A., et al. 2024. Lunar Regolith Simulant User's Guide, Revision A (NASA/TM-20240011783)",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Slabic, A., et al. 2024. Lunar Regolith Simulant User's Guide, Revision A (NASA/TM-20240011783)",
+  "reference_type": "report",
+  "local_path": "papers/Slabic_etal_2024_Lunar_Regolith_Simulant_Users_Guide_RevA_NASA-TM-20240011783.pdf",
+  "reference_ids": [
+   "RN-S025-3",
+   "RN-S036-4",
+   "RN-S043-7",
+   "RN-S054-5",
+   "RN-S058-5",
+   "RN-S060-8",
+   "RN-S089-6",
+   "RN-S103-5",
+   "RN-S105-5"
+  ],
+  "simulants": [
+   "GreenSpar",
+   "LHS-1",
+   "MLS-1",
+   "OB-1A",
+   "OPRH3N",
+   "OPRL2N",
+   "NU-LHT-4M",
+   "CSM-LHT-1",
+   "CSM-LMT-1"
+  ],
+  "values_citing": 53
+ },
+ {
+  "doc_id": "D170",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University)",
+  "authors": "Chunmei He",
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University)",
+  "reference_type": "geotechnical",
+  "local_path": "papers/LRS/case1269272964.pdf",
+  "reference_ids": [
+   "RN-S027-1",
+   "RN-S028-4",
+   "RN-S029-4",
+   "RN-S030-4",
+   "RN-S047-5",
+   "RN-S048-2",
+   "RN-S049-6",
+   "RN-S050-3"
+  ],
+  "simulants": [
+   "JSC-1",
+   "JSC-1A",
+   "JSC-1AC",
+   "JSC-1AF",
+   "NU-LHT",
+   "NU-LHT-1D",
+   "NU-LHT-1M",
+   "NU-LHT-2C"
+  ],
+  "values_citing": 7
+ },
+ {
+  "doc_id": "D171",
+  "title": "Characterization Summary of JSC-1A Bulk Lunar Mare Regolith Simulant, Version B.1 (Draft, 6/28/2007)",
+  "authors": "NASA MSFC / Orbitec (contacts D. Rickman, C. McLemore, J. Fikes)",
+  "year": 2007,
+  "doi": null,
+  "url": null,
+  "reference_text": "Characterization Summary of JSC-1A Bulk Lunar Mare Regolith Simulant, Version B.1 (Draft, 6/28/2007)",
+  "reference_type": "datasheet",
+  "local_path": "papers/NASA_Characterization_Summary_JSC-1A_Bulk_Lunar_Mare_Regolith_Simulant_VerB1_2007.pdf",
+  "reference_ids": [
+   "RN-S027-10",
+   "RN-S028-3",
+   "RN-S029-2",
+   "RN-S030-5"
+  ],
+  "simulants": [
+   "JSC-1",
+   "JSC-1A",
+   "JSC-1AC",
+   "JSC-1AF"
+  ],
+  "values_citing": 12
+ },
+ {
+  "doc_id": "D172",
+  "title": "ARES | Exploration Science Projects | Lunar Regolith Simulants | JSC-1/1A (NASA JSC web page, last modified 2.1.2021)",
+  "authors": "NASA ARES Simulant Development Laboratory",
+  "year": 2021,
+  "doi": null,
+  "url": null,
+  "reference_text": "ARES | Exploration Science Projects | Lunar Regolith Simulants | JSC-1/1A (NASA JSC web page, last modified 2.1.2021)",
+  "reference_type": "datasheet",
+  "local_path": "papers/NASA_ARES_JSC-1_1A_page.html",
+  "reference_ids": [
+   "RN-S027-2",
+   "RN-S028-6"
+  ],
+  "simulants": [
+   "JSC-1",
+   "JSC-1A"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D173",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (LEAG-CAPTEM Simulant Working Group report)",
+  "authors": "LEAG-CAPTEM Simulant Working Group",
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (LEAG-CAPTEM Simulant Working Group report)",
+  "reference_type": "review",
+  "local_path": "papers/LRS/LEAG-SIM-SAT2010_LunarRegolithSimulants.pdf",
+  "reference_ids": [
+   "RN-S027-3",
+   "RN-S028-12",
+   "RN-S030-6"
+  ],
+  "simulants": [
+   "JSC-1",
+   "JSC-1A",
+   "JSC-1AF"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D174",
+  "title": "JSC-1 as the Lunar Soil Simulant of Choice (68th Annual Meteoritical Society Meeting, abstract 5180)",
+  "authors": "Lawrence A. Taylor, Eddy Hill, Yang Liu, James M.D. Day",
+  "year": 2005,
+  "doi": null,
+  "url": "https://www.lpi.usra.edu/meetings/metsoc2005/pdf/5180.pdf",
+  "reference_text": "JSC-1 as the Lunar Soil Simulant of Choice (68th Annual Meteoritical Society Meeting, abstract 5180)",
+  "reference_type": "general",
+  "local_path": "papers/agent-fetched/Taylor_Hill_Liu_Day_2005_JSC-1_as_the_Lunar_Soil_Simulant_of_Choice_MetSoc68_5180.pdf",
+  "reference_ids": [
+   "RN-S027-5"
+  ],
+  "simulants": [
+   "JSC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D175",
+  "title": "LZS-1, Lanzarote (Canary Island, Spain) lunar (Apollo 14) basaltic soil simulant",
+  "authors": "Alberquilla et al.",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "LZS-1, Lanzarote (Canary Island, Spain) lunar (Apollo 14) basaltic soil simulant",
+  "reference_type": "composition",
+  "local_path": "papers/Alberquilla_etal_2022_LZS-1_Lanzarote_Apollo14_basaltic_soil_simulant_SciRep_12_16470.pdf",
+  "reference_ids": [
+   "RN-S027-6"
+  ],
+  "simulants": [
+   "JSC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D176",
+  "title": "Properties of novel LX lunar regolith simulant system — The base simulants: Part 1 (Acta Astronautica 231, 200–222)",
+  "authors": "Patzwald, Kleba-Ehrhardt, Schiperski, Griemsmann, Linke, Neumann, Overmeyer, Stoll, Karl",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "Properties of novel LX lunar regolith simulant system — The base simulants: Part 1 (Acta Astronautica 231, 200–222)",
+  "reference_type": "review",
+  "local_path": "papers/LRS/1-s2.0-S0094576525001109-main.pdf",
+  "reference_ids": [
+   "RN-S027-7",
+   "RN-S028-11",
+   "RN-S029-6",
+   "RN-S030-9",
+   "RN-S047-8",
+   "RN-S048-4",
+   "RN-S049-8",
+   "RN-S050-5",
+   "RN-S051-8",
+   "RN-S081-6"
+  ],
+  "simulants": [
+   "JSC-1",
+   "JSC-1A",
+   "JSC-1AC",
+   "JSC-1AF",
+   "NU-LHT",
+   "NU-LHT-1D",
+   "NU-LHT-1M",
+   "NU-LHT-2C",
+   "NU-LHT-2M",
+   "JSC-2A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D177",
+  "title": "Characterization of NUW-LHT-5M (NASA/TP-20240007991)",
+  "authors": "Rickman et al.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Characterization of NUW-LHT-5M (NASA/TP-20240007991)",
+  "reference_type": "general",
+  "local_path": "papers/Rickman_etal_2024_Characterization_of_NUW-LHT-5M_NASA-TM-20240007991.pdf",
+  "reference_ids": [
+   "RN-S027-8",
+   "RN-S028-7",
+   "RN-S029-5"
+  ],
+  "simulants": [
+   "JSC-1",
+   "JSC-1A",
+   "JSC-1AC"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D178",
+  "title": "EAC-1A: A novel large-volume lunar regolith simulant (Scientific Reports 10:5473)",
+  "authors": "Engelschiøn et al.",
+  "year": 2020,
+  "doi": null,
+  "url": null,
+  "reference_text": "EAC-1A: A novel large-volume lunar regolith simulant (Scientific Reports 10:5473)",
+  "reference_type": "geotechnical",
+  "local_path": "papers/Engelschion_etal_2020_EAC-1A_novel_large-volume_lunar_regolith_simulant_SciRep_10-5473.pdf",
+  "reference_ids": [
+   "RN-S028-1",
+   "RN-S081-2"
+  ],
+  "simulants": [
+   "JSC-1A",
+   "JSC-2A"
+  ],
+  "values_citing": 4
+ },
+ {
+  "doc_id": "D179",
+  "title": "Material Safety Data Sheet: JSC-1AF, JSC-1A, JSC-1AC Lunar Mare Regolith Simulant (Rev. 4, November 7, 2007; Issue Date September 23, 2005)",
+  "authors": "Orbital Technologies Corporation (Orbitec)",
+  "year": 2007,
+  "doi": null,
+  "url": null,
+  "reference_text": "Material Safety Data Sheet: JSC-1AF, JSC-1A, JSC-1AC Lunar Mare Regolith Simulant (Rev. 4, November 7, 2007; Issue Date September 23, 2005)",
+  "reference_type": "datasheet",
+  "local_path": "papers/Orbitec_JSC-1AF_JSC-1A_JSC-1AC_MSDS_Rev4_2007-11-07.pdf",
+  "reference_ids": [
+   "RN-S028-2",
+   "RN-S029-1",
+   "RN-S030-2"
+  ],
+  "simulants": [
+   "JSC-1A",
+   "JSC-1AC",
+   "JSC-1AF"
+  ],
+  "values_citing": 5
+ },
+ {
+  "doc_id": "D180",
+  "title": "Plants grown in Apollo lunar regolith present stress-associated transcriptomes that inform prospects for lunar exploration",
+  "authors": "Paul et al.",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "Plants grown in Apollo lunar regolith present stress-associated transcriptomes that inform prospects for lunar exploration",
+  "reference_type": "usage",
+  "local_path": "papers/LRS/Paul et al. - 2022 - Plants grown in Apollo lunar regolith present stre.pdf",
+  "reference_ids": [
+   "RN-S028-8"
+  ],
+  "simulants": [
+   "JSC-1A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D181",
+  "title": "Lunar and Martian Regolith Simulants Desorb and Weather after Exposure to Bioregenerative Life Support System Effluent (ACS Earth and Space Chemistry)",
+  "authors": "Coker et al.",
+  "year": 2026,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar and Martian Regolith Simulants Desorb and Weather after Exposure to Bioregenerative Life Support System Effluent (ACS Earth and Space Chemistry)",
+  "reference_type": "composition",
+  "local_path": "papers/LRS/Coker et al. - 2026 - Lunar and Martian Regolith Simulants Desorb and Weather after Exposure to Bioregenerative Life Suppo.pdf",
+  "reference_ids": [
+   "RN-S028-9"
+  ],
+  "simulants": [
+   "JSC-1A"
+  ],
+  "values_citing": 5
+ },
+ {
+  "doc_id": "D182",
+  "title": "Characterization Summary of JSC-1AF Lunar Mare Regolith Simulant, Version 1.6.2 (December 12, 2006)",
+  "authors": "NASA MSFC / Orbitec (contact Charles Owens)",
+  "year": 2006,
+  "doi": null,
+  "url": null,
+  "reference_text": "Characterization Summary of JSC-1AF Lunar Mare Regolith Simulant, Version 1.6.2 (December 12, 2006)",
+  "reference_type": "datasheet",
+  "local_path": "papers/NASA_JSC_Characterization_Summary_JSC-1AF_Lunar_Regolith_Simulant.pdf",
+  "reference_ids": [
+   "RN-S029-3",
+   "RN-S030-1"
+  ],
+  "simulants": [
+   "JSC-1AC",
+   "JSC-1AF"
+  ],
+  "values_citing": 14
+ },
+ {
+  "doc_id": "D183",
+  "title": "Microstructural, mechanical, and thermal properties of microwave-sintered KLS-1 lunar regolith simulant (Ceramics International)",
+  "authors": "Kim et al.",
+  "year": 2021,
+  "doi": "10.1016/j.ceramint.2021.06.098",
+  "url": null,
+  "reference_text": "Microstructural, mechanical, and thermal properties of microwave-sintered KLS-1 lunar regolith simulant (Ceramics International)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/Kim et al. - 2021 - Microstructural, mechanical, and thermal properties of microwave-sintered KLS-1 lunar regolith simul.pdf",
+  "reference_ids": [
+   "RN-S029-9"
+  ],
+  "simulants": [
+   "JSC-1AC"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D184",
+  "title": "Simulants (lunar regolith simulants knowledge portal)",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "reference_text": "Simulants (lunar regolith simulants knowledge portal)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+  "reference_ids": [
+   "RN-S031-1",
+   "RN-S032-1"
+  ],
+  "simulants": [
+   "KIGAM-L1",
+   "KLS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D185",
+  "title": "Development of Korean Lunar Highland Soil Simulant (KIGAM-L1)",
+  "authors": "Tae-Yun Kang, Eojin Kim, Kyeong Ja Kim",
+  "year": 2024,
+  "doi": "10.52912/jsta.2024.4.2.121",
+  "url": "https://www.jstna.org/archive/view_article?pid=jsta-4-2-121",
+  "reference_text": "Development of Korean Lunar Highland Soil Simulant (KIGAM-L1)",
+  "reference_type": "composition",
+  "local_path": "papers/agent-fetched/Kang_Kim_Kim_2024_Development_of_Korean_Lunar_Highland_Soil_Simulant_KIGAM-L1_JSTA.html",
+  "reference_ids": [
+   "RN-S031-2"
+  ],
+  "simulants": [
+   "KIGAM-L1"
+  ],
+  "values_citing": 10
+ },
+ {
+  "doc_id": "D186",
+  "title": "Properties of TJ-1 Lunar Soil Simulant",
+  "authors": null,
+  "year": 2012,
+  "doi": "10.1061/(ASCE)AS.1943-5525.0000129",
+  "url": null,
+  "reference_text": "Properties of TJ-1 Lunar Soil Simulant",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1765/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html",
+  "reference_ids": [
+   "RN-S033-6"
+  ],
+  "simulants": [
+   "KOHLS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D187",
+  "title": "Planetary Simulant Database — Kohyama Simulant page",
+  "authors": "Cannon, K. (site author)",
+  "year": 2022,
+  "doi": null,
+  "url": "https://simulantdb.com/simulants/kohyama.php",
+  "reference_text": "Planetary Simulant Database — Kohyama Simulant page",
+  "reference_type": "datasheet",
+  "local_path": null,
+  "reference_ids": [
+   "RN-S034-3"
+  ],
+  "simulants": [
+   "Kohyama Simulant"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D188",
+  "title": "Characterization of NUW-LHT-5M (comparison table incl. LCATS-1)",
+  "authors": "Rickman, D.L. et al.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Characterization of NUW-LHT-5M (comparison table incl. LCATS-1)",
+  "reference_type": "composition",
+  "local_path": "papers/Rickman_etal_2024_Characterization_of_NUW-LHT-5M_NASA-TM-20240007991.pdf",
+  "reference_ids": [
+   "RN-S035-1"
+  ],
+  "simulants": [
+   "LCATS-1"
+  ],
+  "values_citing": 11
+ },
+ {
+  "doc_id": "D189",
+  "title": "Direct Shear Measurements of Lunar Regolith Simulants LHS-1, LHS-1D, LMS-1, and LMS-1D",
+  "authors": "Millwater, C., Long-Fox, J., Landsman, Z., Metke, A., Britt, D.",
+  "year": 2022,
+  "doi": null,
+  "url": "https://www.hou.usra.edu/meetings/lpsc2022/pdf/2038.pdf",
+  "reference_text": "Direct Shear Measurements of Lunar Regolith Simulants LHS-1, LHS-1D, LMS-1, and LMS-1D",
+  "reference_type": "geotechnical",
+  "local_path": "papers/agent-fetched/Millwater_etal_2022_LPSC53_2038_Direct_Shear_LHS-1_LHS-1D_LMS-1_LMS-1D.pdf",
+  "reference_ids": [
+   "RN-S036-2",
+   "RN-S091-1"
+  ],
+  "simulants": [
+   "LHS-1",
+   "LHS-1D"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D190",
+  "title": "Direct Shear Measurements of Lunar Regolith Simulants LHS-1, LHS-1D, LMS-1, and LMS-1D (53rd LPSC abstract #2038)",
+  "authors": "Millwater, C., Long-Fox, J., et al.",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "Direct Shear Measurements of Lunar Regolith Simulants LHS-1, LHS-1D, LMS-1, and LMS-1D (53rd LPSC abstract #2038)",
+  "reference_type": "geotechnical",
+  "local_path": "papers/agent-fetched/Millwater_etal_2022_LPSC53_2038_Direct_Shear_LHS-1_LHS-1D_LMS-1_LMS-1D.pdf",
+  "reference_ids": [
+   "RN-S037-3",
+   "RN-S094-1"
+  ],
+  "simulants": [
+   "LMS-1",
+   "LMS-1D"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D191",
+  "title": "Cohesion and Shear Strength of Compacted Lunar and Martian Regolith Simulants (arXiv:2403.11029)",
+  "authors": "Dotson, B., Sanchez Valencia, D., Millwater, C., Easter, P., Long-Fox, J., Britt, D., Metzger, P.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Cohesion and Shear Strength of Compacted Lunar and Martian Regolith Simulants (arXiv:2403.11029)",
+  "reference_type": "geotechnical",
+  "local_path": "papers/agent-fetched/arXiv_2403.11029_Cohesion_Shear_Strength_Compacted_Lunar_Martian_Simulants.pdf",
+  "reference_ids": [
+   "RN-S037-4",
+   "RN-S094-2"
+  ],
+  "simulants": [
+   "LMS-1",
+   "LMS-1D"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D192",
+  "title": "Properties of novel LX lunar regolith simulant system — The base simulants: Part 1 (Acta Astronautica 231)",
+  "authors": "Patzwald, J. et al.",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "Properties of novel LX lunar regolith simulant system — The base simulants: Part 1 (Acta Astronautica 231)",
+  "reference_type": "review",
+  "local_path": "papers/LRS/1-s2.0-S0094576525001109-main.pdf",
+  "reference_ids": [
+   "RN-S037-5",
+   "RN-S076-1",
+   "RN-S094-3"
+  ],
+  "simulants": [
+   "LMS-1",
+   "LMS-2",
+   "LMS-1D"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D193",
+  "title": "Lunar Simulant Assessment (JHU-APL LSIC, preliminary)",
+  "authors": "Denevi, B.W. et al.",
+  "year": 2020,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Simulant Assessment (JHU-APL LSIC, preliminary)",
+  "reference_type": "report",
+  "local_path": "papers/Denevi_etal_2020_Lunar_Simulant_Assessment_JHUAPL_LSIC.pdf",
+  "reference_ids": [
+   "RN-S037-6"
+  ],
+  "simulants": [
+   "LMS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D194",
+  "title": "Study on geomechanical properties of lunar soil simulant (LSS-ISAC-1) for chandrayaan mission",
+  "authors": "Venugopal, I., Muthukkumaran, K., Annadurai, M., Prabu, T., Anbazhagan, S.",
+  "year": 2020,
+  "doi": "10.1016/j.asr.2020.08.021",
+  "url": null,
+  "reference_text": "Study on geomechanical properties of lunar soil simulant (LSS-ISAC-1) for chandrayaan mission",
+  "reference_type": "geotechnical",
+  "local_path": null,
+  "reference_ids": [
+   "RN-S038-2"
+  ],
+  "simulants": [
+   "LSS-ISAC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D195",
+  "title": "Assessment of shear strength and compressibility characteristics of a newly developed lunar highland soil simulant (LSS-ISAC-1) for Chandrayaan lander and rover missions",
+  "authors": "Prabu, T., Muthukkumaran, K., Venugopal, I., Anbazhagan, S.",
+  "year": 2021,
+  "doi": "10.1016/j.pss.2021.105354",
+  "url": null,
+  "reference_text": "Assessment of shear strength and compressibility characteristics of a newly developed lunar highland soil simulant (LSS-ISAC-1) for Chandrayaan lander and rover missions",
+  "reference_type": "geotechnical",
+  "local_path": null,
+  "reference_ids": [
+   "RN-S038-3"
+  ],
+  "simulants": [
+   "LSS-ISAC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D196",
+  "title": "Study on low gravity effect on bearing capacity and slope stability of a new lunar highland soil simulant (LSS-ISAC-1) for futuristic moon habitation",
+  "authors": "Venugopal, I. (Indaram), Thannasi, P. (Prabu), Muthukkumaran, K.",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "Study on low gravity effect on bearing capacity and slope stability of a new lunar highland soil simulant (LSS-ISAC-1) for futuristic moon habitation",
+  "reference_type": "geotechnical",
+  "local_path": null,
+  "reference_ids": [
+   "RN-S038-4"
+  ],
+  "simulants": [
+   "LSS-ISAC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D197",
+  "title": "Assessment of dynamic properties of a new lunar highland soil simulant (LSS-ISAC-1) developed for Chandrayaan missions",
+  "authors": "Thannasi, P. (Prabu), Muthukkumaran, K., Indaram, V. (Venugopal)",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "Assessment of dynamic properties of a new lunar highland soil simulant (LSS-ISAC-1) developed for Chandrayaan missions",
+  "reference_type": "geotechnical",
+  "local_path": null,
+  "reference_ids": [
+   "RN-S038-5"
+  ],
+  "simulants": [
+   "LSS-ISAC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D198",
+  "title": "Dynamic Characterization of Lunar Soil Simulant (LSS-ISAC-1) for Moonquake Analysis",
+  "authors": "Muthukkumaran, K., Thannasi, P. (Prabu), Indaram, V. (Venugopal)",
+  "year": 2021,
+  "doi": null,
+  "url": null,
+  "reference_text": "Dynamic Characterization of Lunar Soil Simulant (LSS-ISAC-1) for Moonquake Analysis",
+  "reference_type": "geotechnical",
+  "local_path": null,
+  "reference_ids": [
+   "RN-S038-6"
+  ],
+  "simulants": [
+   "LSS-ISAC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D199",
+  "title": "ESA Planetary Dust Contamination Workshop 2025 (4-5 June 2025): Contribution List · Indico at ESA/ESTEC — Contribution 11: 'LuNOR: Nordic-Origin Industrial Lunar Simulant for Enhanced Fidelity, Consistency & Sustainability in Dust Contamination Research'",
+  "authors": "Øystein Risan Borgersen (SolSys Mining AS)",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "ESA Planetary Dust Contamination Workshop 2025 (4-5 June 2025): Contribution List · Indico at ESA/ESTEC — Contribution 11: 'LuNOR: Nordic-Origin Industrial Lunar Simulant for Enhanced Fidelity, Consistency & Sustainability in Dust Contamination Research'",
+  "reference_type": "general",
+  "local_path": "papers/agent-fetched/ESA_Planetary_Dust_Contamination_Workshop_2025_Indico_546_contributions_2026-09-22.html",
+  "reference_ids": [
+   "RN-S039-1"
+  ],
+  "simulants": [
+   "LuNOR"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D200",
+  "title": "About — SolSys Mining",
+  "authors": "SolSys Mining",
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "About — SolSys Mining",
+  "reference_type": "general",
+  "local_path": "papers/agent-fetched/SolSysMining_website_about_2026-09-22.html",
+  "reference_ids": [
+   "RN-S039-2"
+  ],
+  "simulants": [
+   "LuNOR"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D201",
+  "title": "Properties of novel LX lunar regolith simulant system — the base simulants: Part 2",
+  "authors": "Patzwald, J., Kleba-Ehrhardt, R., Griemsmann, T., Nowaczyk, N., Linke, S., Overmeyer, L., Stoll, E., Karl, D.",
+  "year": 2025,
+  "doi": "10.1016/j.pss.2025.106189",
+  "url": null,
+  "reference_text": "Properties of novel LX lunar regolith simulant system — the base simulants: Part 2",
+  "reference_type": "geotechnical",
+  "local_path": "papers/LRS/1-s2.0-S0032063325001564-main.pdf",
+  "reference_ids": [
+   "RN-S040-1",
+   "RN-S041-1",
+   "RN-S138-1"
+  ],
+  "simulants": [
+   "LX-M100",
+   "LX-T100",
+   "LX-I50"
+  ],
+  "values_citing": 3
+ },
+ {
+  "doc_id": "D202",
+  "title": "NAO-1: Lunar Highland Soil Simulant Developed in China",
+  "authors": "Li, Y., Liu, J., Yue, Z.",
+  "year": 2009,
+  "doi": null,
+  "url": null,
+  "reference_text": "NAO-1: Lunar Highland Soil Simulant Developed in China",
+  "reference_type": "general",
+  "local_path": "papers/Li_Liu_Yue_2009_NAO-1_Lunar_Highland_Soil_Simulant_Developed_in_China_JAerospEng_22-1_53-57.pdf",
+  "reference_ids": [
+   "RN-S042-2"
+  ],
+  "simulants": [
+   "MKS-1"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D203",
+  "title": "Properties of TJ-1 Lunar Soil Simulant (ResearchGate page, embedded citing-paper excerpt)",
+  "authors": "unclear (snippet cites 'Jiang et al, 2011')",
+  "year": 2012,
+  "doi": null,
+  "url": null,
+  "reference_text": "Properties of TJ-1 Lunar Soil Simulant (ResearchGate page, embedded citing-paper excerpt)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1765/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html",
+  "reference_ids": [
+   "RN-S042-3"
+  ],
+  "simulants": [
+   "MKS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D204",
+  "title": "Minnesota Lunar Regolith MLS-1 (workshop presentation)",
+  "authors": "Batiste, S.; Sture, S.",
+  "year": 2005,
+  "doi": null,
+  "url": "https://www.nasa.gov/wp-content/uploads/2019/04/batiste.pdf",
+  "reference_text": "Minnesota Lunar Regolith MLS-1 (workshop presentation)",
+  "reference_type": "geotechnical",
+  "local_path": "papers/agent-fetched/Batiste_Sture_MLS-1_Minnesota_Lunar_Regolith_NASA_presentation.pdf",
+  "reference_ids": [
+   "RN-S043-2"
+  ],
+  "simulants": [
+   "MLS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D205",
+  "title": "Lunar Regolith Simulant Materials: Recommendations for Standardization, Production, and Usage (NASA/TP-2006-214605)",
+  "authors": "Sibille, L.; Carpenter, P.; Schlagheck, R.; French, R.A.",
+  "year": 2006,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Regolith Simulant Materials: Recommendations for Standardization, Production, and Usage (NASA/TP-2006-214605)",
+  "reference_type": "composition",
+  "local_path": "papers/LRS/Sibille et al. - Lunar Regolith Simulant Materials Recommendations.pdf",
+  "reference_ids": [
+   "RN-S043-3"
+  ],
+  "simulants": [
+   "MLS-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D206",
+  "title": "MSFC Lunar Regolith/Soil/Dust Simulant Needs Survey Report (incl. LEAG-SIM-SAT2010 material), Appendix 4",
+  "authors": "NASA MSFC",
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "MSFC Lunar Regolith/Soil/Dust Simulant Needs Survey Report (incl. LEAG-SIM-SAT2010 material), Appendix 4",
+  "reference_type": "report",
+  "local_path": "papers/LRS/LEAG-SIM-SAT2010_LunarRegolithSimulants.pdf",
+  "reference_ids": [
+   "RN-S044-3",
+   "RN-S110-2"
+  ],
+  "simulants": [
+   "MLS-2",
+   "MLS-1P"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D207",
+  "title": "TUBS-M and TUBS-T based modular Regolith Simulant System for the support of lunar ISRU activities",
+  "authors": "Linke, S. et al.",
+  "year": 2020,
+  "doi": null,
+  "url": null,
+  "reference_text": "TUBS-M and TUBS-T based modular Regolith Simulant System for the support of lunar ISRU activities",
+  "reference_type": "general",
+  "local_path": "papers/Linke_etal_2020_TUBS-M_TUBS-T_modular_Regolith_Simulant_System_PlanetSpaceSci_180_104747.pdf",
+  "reference_ids": [
+   "RN-S044-4",
+   "RN-S045-2",
+   "RN-S110-3"
+  ],
+  "simulants": [
+   "MLS-2",
+   "NAO-1",
+   "MLS-1P"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D208",
+  "title": "Development of a novel lunar highland soil simulant (LSS-ISAC-1) and its geotechnical properties for Chandrayaan missions - saved ResearchGate page",
+  "authors": "Venugopal I. et al. (ResearchGate page snippets)",
+  "year": 2020,
+  "doi": null,
+  "url": "https://www.researchgate.net/publication/346193942_Development_of_a_novel_lunar_highland_soil_simulant_LSS-ISAC-1_and_its_geotechnical_properties_for_Chandrayaan_missions",
+  "reference_text": "Development of a novel lunar highland soil simulant (LSS-ISAC-1) and its geotechnical properties for Chandrayaan missions - saved ResearchGate page",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1711/346193942_Development_of_a_novel_lunar_highland_soil_simulant_LSS-ISAC-1_and_its_geotechnical_p.html",
+  "reference_ids": [
+   "RN-S045-9"
+  ],
+  "simulants": [
+   "NAO-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D209",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (Report of the LEAG Simulant Working Group)",
+  "authors": "LEAG Simulant Working Group (Lunar Exploration Analysis Group)",
+  "year": 2010,
+  "doi": null,
+  "url": "https://www.lpi.usra.edu/leag/reports/SIM_SATReport2010.pdf",
+  "reference_text": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (Report of the LEAG Simulant Working Group)",
+  "reference_type": "report",
+  "local_path": "papers/LRS/LEAG-SIM-SAT2010_LunarRegolithSimulants.pdf",
+  "reference_ids": [
+   "RN-S047-1",
+   "RN-S049-5",
+   "RN-S050-2",
+   "RN-S051-6"
+  ],
+  "simulants": [
+   "NU-LHT",
+   "NU-LHT-1M",
+   "NU-LHT-2C",
+   "NU-LHT-2M"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D210",
+  "title": "Characterization of NUW-LHT-5M, A Lunar Highlands Simulant (NASA/TP-20240007991)",
+  "authors": "Rickman, D. L. et al.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Characterization of NUW-LHT-5M, A Lunar Highlands Simulant (NASA/TP-20240007991)",
+  "reference_type": "report",
+  "local_path": "papers/Rickman_etal_2024_Characterization_of_NUW-LHT-5M_NASA-TM-20240007991.pdf",
+  "reference_ids": [
+   "RN-S047-3",
+   "RN-S049-4",
+   "RN-S051-5"
+  ],
+  "simulants": [
+   "NU-LHT",
+   "NU-LHT-1M",
+   "NU-LHT-2M"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D211",
+  "title": "Manufacture of Lunar Regolith Simulants (NASA/TM-2013-217491)",
+  "authors": "Rickman, D. L.; Wilson, S. A.; Stoeser, D. B.; Weinstein, M. A.; Edmunson, J. E.",
+  "year": 2013,
+  "doi": null,
+  "url": null,
+  "reference_text": "Manufacture of Lunar Regolith Simulants (NASA/TM-2013-217491)",
+  "reference_type": "report",
+  "local_path": "papers/LRS/Rickman et al. - Manufacture of Lunar Regolith Simulants.pdf",
+  "reference_ids": [
+   "RN-S047-4",
+   "RN-S049-1",
+   "RN-S051-4"
+  ],
+  "simulants": [
+   "NU-LHT",
+   "NU-LHT-1M",
+   "NU-LHT-2M"
+  ],
+  "values_citing": 9
+ },
+ {
+  "doc_id": "D212",
+  "title": "JHU-APL LSII Report: 2022 Lunar Simulant Assessment",
+  "authors": "Stockstill-Cahill, K.; Martin, A.; Wagoner, C.",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "JHU-APL LSII Report: 2022 Lunar Simulant Assessment",
+  "reference_type": "report",
+  "local_path": "papers/LRS/2022 Lunar Simulants Assessment Final.pdf",
+  "reference_ids": [
+   "RN-S047-7",
+   "RN-S048-3",
+   "RN-S049-7",
+   "RN-S050-4",
+   "RN-S051-7"
+  ],
+  "simulants": [
+   "NU-LHT",
+   "NU-LHT-1D",
+   "NU-LHT-1M",
+   "NU-LHT-2C",
+   "NU-LHT-2M"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D213",
+  "title": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices (keynote, International Workshop on Granular Materials & Regolith, Metz)",
+  "authors": "Oravec, H. (University of Akron at NASA Glenn Research Center)",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices (keynote, International Workshop on Granular Materials & Regolith, Metz)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/Metz France_Keynote_April 2025_Final.pdf",
+  "reference_ids": [
+   "RN-S047-9"
+  ],
+  "simulants": [
+   "NU-LHT"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D214",
+  "title": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices (keynote, Metz)",
+  "authors": "Oravec, H.",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices (keynote, Metz)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/Metz France_Keynote_April 2025_Final.pdf",
+  "reference_ids": [
+   "RN-S049-9",
+   "RN-S050-6",
+   "RN-S051-9"
+  ],
+  "simulants": [
+   "NU-LHT-1M",
+   "NU-LHT-2C",
+   "NU-LHT-2M"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D215",
+  "title": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University, May 2010)",
+  "authors": "He, Chunmei (advisor Xiangwu Zeng)",
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "Geotechnical Characterization of Lunar Regolith Simulants (PhD dissertation, Case Western Reserve University, May 2010)",
+  "reference_type": "geotechnical",
+  "local_path": "papers/LRS/case1269272964.pdf",
+  "reference_ids": [
+   "RN-S051-1"
+  ],
+  "simulants": [
+   "NU-LHT-2M"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D216",
+  "title": "Characterization of NUW-LHT-5M",
+  "authors": "Rickman, D.L. et al.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Characterization of NUW-LHT-5M",
+  "reference_type": "composition",
+  "local_path": "papers/Rickman_etal_2024_Characterization_of_NUW-LHT-5M_NASA-TM-20240007991.pdf",
+  "reference_ids": [
+   "RN-S052-1"
+  ],
+  "simulants": [
+   "NUW-LHT-5M"
+  ],
+  "values_citing": 17
+ },
+ {
+  "doc_id": "D217",
+  "title": "2024 Lunar Simulant Assessment Report",
+  "authors": null,
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "2024 Lunar Simulant Assessment Report",
+  "reference_type": "report",
+  "local_path": "papers/LRS/2024_Lunar_Simulant_Assessment_Report.pdf",
+  "reference_ids": [
+   "RN-S052-2",
+   "RN-S089-5"
+  ],
+  "simulants": [
+   "NUW-LHT-5M",
+   "NU-LHT-4M"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D218",
+  "title": "ARES | Exploration Science Projects | Lunar Regolith Simulants | OB-1",
+  "authors": "NASA JSC ARES",
+  "year": null,
+  "doi": null,
+  "url": "https://ares.jsc.nasa.gov/projects/simulants/ob-1.html",
+  "reference_text": "ARES | Exploration Science Projects | Lunar Regolith Simulants | OB-1",
+  "reference_type": "datasheet",
+  "local_path": "papers/NASA_ARES_OB-1_page.html",
+  "reference_ids": [
+   "RN-S053-1"
+  ],
+  "simulants": [
+   "OB-1"
+  ],
+  "values_citing": 4
+ },
+ {
+  "doc_id": "D219",
+  "title": "Development and Geotechnical Engineering Properties of KLS-1 Lunar Simulant",
+  "authors": "Ryu, B.-H., Wang, C.-C., Chang, I.",
+  "year": 2018,
+  "doi": null,
+  "url": null,
+  "reference_text": "Development and Geotechnical Engineering Properties of KLS-1 Lunar Simulant",
+  "reference_type": "composition",
+  "local_path": "papers/agent-fetched/Ryu_Wang_Chang_2018_Development_and_Geotechnical_Engineering_Properties_of_KLS-1_Lunar_Simulant_JAerospEng_31-1_04017083.pdf",
+  "reference_ids": [
+   "RN-S053-4"
+  ],
+  "simulants": [
+   "OB-1"
+  ],
+  "values_citing": 12
+ },
+ {
+  "doc_id": "D220",
+  "title": "Simulants — ESRIC Knowledge Base",
+  "authors": "ESRIC (European Space Resources Innovation Centre)",
+  "year": null,
+  "doi": null,
+  "url": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "reference_text": "Simulants — ESRIC Knowledge Base",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+  "reference_ids": [
+   "RN-S055-1"
+  ],
+  "simulants": [
+   "OPR Agglutinate"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D221",
+  "title": "Simulants (ARES Exploration Science Projects)",
+  "authors": "NASA ARES, Johnson Space Center",
+  "year": null,
+  "doi": null,
+  "url": "https://ares.jsc.nasa.gov/projects/simulants/",
+  "reference_text": "Simulants (ARES Exploration Science Projects)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1646/simulants.html",
+  "reference_ids": [
+   "RN-S056-3",
+   "RN-S060-4",
+   "RN-S061-3"
+  ],
+  "simulants": [
+   "OPRFLCROSS2",
+   "OPRL2N",
+   "OPRL2NT"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D222",
+  "title": "Off Planet Research, LLC — LSIC/JHU-APL presentation",
+  "authors": "Off Planet Research, LLC",
+  "year": 2020,
+  "doi": null,
+  "url": "https://lsic.jhuapl.edu/uploadedDocs/focus-files/507-DM%20Presentation%20by%20Off%20Planet%20Research%20-%202020%2009%20September.pdf",
+  "reference_text": "Off Planet Research, LLC — LSIC/JHU-APL presentation",
+  "reference_type": "general",
+  "local_path": "papers/agent-fetched/OffPlanetResearch_2020_LSIC-JHUAPL_Presentation_507-DM.pdf",
+  "reference_ids": [
+   "RN-S056-4"
+  ],
+  "simulants": [
+   "OPRFLCROSS2"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D223",
+  "title": "A Comprehensive Review of Lunar-based Manufacturing and Construction (embedded excerpt appearing on the ResearchGate page for 'Properties of TJ-1 Lunar Soil Simulant')",
+  "authors": "Azami, M., Kazemi, Z., Moazen, S., Skonieczny, K.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "A Comprehensive Review of Lunar-based Manufacturing and Construction (embedded excerpt appearing on the ResearchGate page for 'Properties of TJ-1 Lunar Soil Simulant')",
+  "reference_type": "review",
+  "local_path": "papers/LRS/DIRT project/files/1765/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html",
+  "reference_ids": [
+   "RN-S056-5"
+  ],
+  "simulants": [
+   "OPRFLCROSS2"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D224",
+  "title": "OPRFLCROSS2 — Off Planet Research (product page)",
+  "authors": "Off Planet Research, LLC",
+  "year": null,
+  "doi": null,
+  "url": "https://www.offplanetresearch.com/oprflcross2",
+  "reference_text": "OPRFLCROSS2 — Off Planet Research (product page)",
+  "reference_type": "datasheet",
+  "local_path": "papers/agent-fetched/OffPlanetResearch_OPRFLCROSS2_productpage_2026-09-24.html",
+  "reference_ids": [
+   "RN-S056-6"
+  ],
+  "simulants": [
+   "OPRFLCROSS2"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D225",
+  "title": "ARES | Exploration Science Projects | Simulants (NASA JSC ARES simulant catalog, saved 2025-02-03)",
+  "authors": "NASA Johnson Space Center, ARES Division",
+  "year": 2025,
+  "doi": null,
+  "url": "https://ares.jsc.nasa.gov/projects/simulants/",
+  "reference_text": "ARES | Exploration Science Projects | Simulants (NASA JSC ARES simulant catalog, saved 2025-02-03)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1646/simulants.html",
+  "reference_ids": [
+   "RN-S057-2",
+   "RN-S058-2",
+   "RN-S059-3"
+  ],
+  "simulants": [
+   "OPRH2N",
+   "OPRH3N",
+   "OPRH4N"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D226",
+  "title": "Mechanical Properties of Lunar Regolith Simulants",
+  "authors": "Roth, M.C.; Roux, V.G.; Roux, E.L.",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "Mechanical Properties of Lunar Regolith Simulants",
+  "reference_type": "geotechnical",
+  "local_path": "papers/Roth_Roux_Roux_2025_Mechanical_Properties_of_Lunar_Regolith_Simulants_LPSC56_2695.pdf",
+  "reference_ids": [
+   "RN-S058-4",
+   "RN-S059-1",
+   "RN-S060-3",
+   "RN-S100-1"
+  ],
+  "simulants": [
+   "OPRH3N",
+   "OPRH4N",
+   "OPRL2N",
+   "OPRH4W30"
+  ],
+  "values_citing": 5
+ },
+ {
+  "doc_id": "D227",
+  "title": "Simulants database (ESRIC knowledge base)",
+  "authors": "European Space Resources Innovation Centre (ESRIC)",
+  "year": null,
+  "doi": null,
+  "url": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "reference_text": "Simulants database (ESRIC knowledge base)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+  "reference_ids": [
+   "RN-S060-5",
+   "RN-S061-4"
+  ],
+  "simulants": [
+   "OPRL2N",
+   "OPRL2NT"
+  ],
+  "values_citing": 4
+ },
+ {
+  "doc_id": "D228",
+  "title": "Products and Services (Off Planet Research website, printed to PDF)",
+  "authors": "Off Planet Research, LLC",
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Products and Services (Off Planet Research website, printed to PDF)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/Offplanet.pdf",
+  "reference_ids": [
+   "RN-S060-6",
+   "RN-S061-5"
+  ],
+  "simulants": [
+   "OPRL2N",
+   "OPRL2NT"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D229",
+  "title": "Planetary Simulant Database — Oshima Simulant page",
+  "authors": "Cannon, K. (site author)",
+  "year": 2022,
+  "doi": null,
+  "url": "https://simulantdb.com/simulants/oshima.php",
+  "reference_text": "Planetary Simulant Database — Oshima Simulant page",
+  "reference_type": "datasheet",
+  "local_path": null,
+  "reference_ids": [
+   "RN-S062-3"
+  ],
+  "simulants": [
+   "Oshima Simulant"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D230",
+  "title": "Micro-Raman and FTIR spectroscopic characterization of the first Turkish lunar regolith simulant",
+  "authors": "Ozan Unsalan, Y. Cengiz Toklu, Cisem Altunayar-Unsalan, Ali Erdem Çerçevik",
+  "year": 2024,
+  "doi": "10.1007/s10509-024-04383-7",
+  "url": "https://link.springer.com/article/10.1007/s10509-024-04383-7",
+  "reference_text": "Micro-Raman and FTIR spectroscopic characterization of the first Turkish lunar regolith simulant",
+  "reference_type": "composition",
+  "local_path": null,
+  "reference_ids": [
+   "RN-S063-2"
+  ],
+  "simulants": [
+   "TBG-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D231",
+  "title": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (Report of the LEAG/CAPTEM Simulant Working Group to the NASA Advisory Council)",
+  "authors": "LEAG/CAPTEM Simulant Working Group",
+  "year": 2010,
+  "doi": null,
+  "url": null,
+  "reference_text": "Status of Lunar Regolith Simulants and Demand for Apollo Lunar Samples (Report of the LEAG/CAPTEM Simulant Working Group to the NASA Advisory Council)",
+  "reference_type": "report",
+  "local_path": "papers/LRS/LEAG-SIM-SAT2010_LunarRegolithSimulants.pdf",
+  "reference_ids": [
+   "RN-S064-5",
+   "RN-S122-3"
+  ],
+  "simulants": [
+   "TJ-1",
+   "TJ-2"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D232",
+  "title": "Safety Data Sheet: TLH-0 (SDS-TLH-0)",
+  "authors": "Hispansion Works, S.L. (Jaime Abella Larraz)",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "Safety Data Sheet: TLH-0 (SDS-TLH-0)",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/Hispansion/TLH-0_SDS.pdf",
+  "reference_ids": [
+   "RN-S065-1"
+  ],
+  "simulants": [
+   "TLH-0"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D233",
+  "title": "Technical Data Sheet: TLH-0 (TDS-TLH-0-v1.4) and Technical Data Sheet: TLM-0 (TDS-TLM-0-v2.2), Hispansion",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Technical Data Sheet: TLH-0 (TDS-TLH-0-v1.4) and Technical Data Sheet: TLM-0 (TDS-TLM-0-v2.2), Hispansion",
+  "reference_type": "report",
+  "local_path": null,
+  "reference_ids": [
+   "RN-S065-3"
+  ],
+  "simulants": [
+   "TLH-0"
+  ],
+  "values_citing": 8
+ },
+ {
+  "doc_id": "D234",
+  "title": "Safety Data Sheet: TLM-0 (SDS-TLM-0)",
+  "authors": "Hispansion Works, S.L. (Jaime Abella Larraz)",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "Safety Data Sheet: TLM-0 (SDS-TLM-0)",
+  "reference_type": "datasheet",
+  "local_path": "datasheets/Hispansion/TLM-0_SDS.pdf",
+  "reference_ids": [
+   "RN-S066-1"
+  ],
+  "simulants": [
+   "TLM-0"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D235",
+  "title": "Improving the Quality of Lunar Regolith Simulant Soil for Future Food Security",
+  "authors": "Jirasirichot, T.; Tulyananda, T.; Datmanee, P.; Kraikaew, K.; Surattaseranee, W.; Chancharoen, W.; Chuaboon, W.",
+  "year": 2023,
+  "doi": "10.55003/cast.2023.06.23.008",
+  "url": null,
+  "reference_text": "Improving the Quality of Lunar Regolith Simulant Soil for Future Food Security",
+  "reference_type": "composition",
+  "local_path": "papers/LRS/Jirasirichot et al. - 2023 - Improving the Quality of Lunar Regolith Simulant Soil for Future Food Security.pdf",
+  "reference_ids": [
+   "RN-S067-1"
+  ],
+  "simulants": [
+   "TLS-01"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D236",
+  "title": "The Feasibility of Thailand Lunar Simulant (TLS-01) Biomining",
+  "authors": "Siriluck, S.; Chancharoen, W.; Seehanam, S.",
+  "year": 2021,
+  "doi": null,
+  "url": null,
+  "reference_text": "The Feasibility of Thailand Lunar Simulant (TLS-01) Biomining",
+  "reference_type": "composition",
+  "local_path": "papers/LRS/Chancharoen et al. - 2021 - The Feasibility of Thailand Lunar Simulant(TLS-01) Biomining.pdf",
+  "reference_ids": [
+   "RN-S067-2"
+  ],
+  "simulants": [
+   "TLS-01"
+  ],
+  "values_citing": 3
+ },
+ {
+  "doc_id": "D237",
+  "title": "Geotechnical Shear Behavior of TUBS-M, TUBS-T and TUBS-I Lunar Regolith Simulants",
+  "authors": "Linke et al.",
+  "year": 2022,
+  "doi": null,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9737658/",
+  "reference_text": "Geotechnical Shear Behavior of TUBS-M, TUBS-T and TUBS-I Lunar Regolith Simulants",
+  "reference_type": "review",
+  "local_path": "papers/agent-fetched/Linke_etal_2022_Geotechnical_Shear_Behavior_TUBS-M_TUBS-T_TUBS-I_Materials_15_8561_PMC9737658.html",
+  "reference_ids": [
+   "RN-S071-4",
+   "RN-S072-2"
+  ],
+  "simulants": [
+   "UoM-B",
+   "UoM-W"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D238",
+  "title": "ESRIC Regolith Simulants Directory - Lunar Regolith Simulants list",
+  "authors": "ESRIC (European Space Resources Innovation Centre)",
+  "year": null,
+  "doi": null,
+  "url": "http://web.archive.org/web/20250925225326/http://knowledge.esric.lu/simulants/",
+  "reference_text": "ESRIC Regolith Simulants Directory - Lunar Regolith Simulants list",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1735/simulants.html",
+  "reference_ids": [
+   "RN-S074-1"
+  ],
+  "simulants": [
+   "UW-1M"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D239",
+  "title": "A moderate-Ti lunar mare soil simulant: IGG-01 - saved ResearchGate page (aggregates snippets of citing articles, incl. Teng et al. 2025)",
+  "authors": "ResearchGate (snippets of Teng, Wang, Cui, Pang 2025)",
+  "year": 2025,
+  "doi": null,
+  "url": "https://www.researchgate.net/publication/383026053_A_moderate-Ti_lunar_mare_soil_simulant_IGG-01",
+  "reference_text": "A moderate-Ti lunar mare soil simulant: IGG-01 - saved ResearchGate page (aggregates snippets of citing articles, incl. Teng et al. 2025)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1757/383026053_A_moderate-Ti_lunar_mare_soil_simulant_IGG-01.html",
+  "reference_ids": [
+   "RN-S075-1"
+  ],
+  "simulants": [
+   "WHU-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D240",
+  "title": "Properties of TJ-1 Lunar Soil Simulant - saved ResearchGate page (aggregates snippets of citing articles, incl. Teng et al. 2025)",
+  "authors": "ResearchGate (snippets of Teng, Wang, Cui, Pang 2025)",
+  "year": 2025,
+  "doi": null,
+  "url": "https://www.researchgate.net/publication/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant",
+  "reference_text": "Properties of TJ-1 Lunar Soil Simulant - saved ResearchGate page (aggregates snippets of citing articles, incl. Teng et al. 2025)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1765/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html",
+  "reference_ids": [
+   "RN-S075-2"
+  ],
+  "simulants": [
+   "WHU-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D241",
+  "title": "Raman spectroscopy as a tool for assessing plant growth in space and on lunar regolith simulants",
+  "authors": "Rodriguez, A.; Barbero Barcenilla, B.; Hall, E.; Kundel, I.; Meyers, A.; Wyatt, S.; Shippen, D.; Kurouski, D.",
+  "year": 2025,
+  "doi": "10.1038/s41526-025-00479-8",
+  "url": null,
+  "reference_text": "Raman spectroscopy as a tool for assessing plant growth in space and on lunar regolith simulants",
+  "reference_type": "usage",
+  "local_path": "papers/LRS/Rodriguez et al. - 2025 - Raman spectroscopy as a tool for assessing plant growth in space and on lunar regolith simulants.pdf",
+  "reference_ids": [
+   "RN-S079-1"
+  ],
+  "simulants": [
+   "LSP-2"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D242",
+  "title": "LSP-2 Lunar South Pole Simulant | Fact Sheet 001-12-001-1223",
+  "authors": "Space Resource Technologies",
+  "year": 2023,
+  "doi": null,
+  "url": "https://static.igem.wiki/teams/5108/pdf/lsp-2-spec-sheet-dec2023-pptx.pdf",
+  "reference_text": "LSP-2 Lunar South Pole Simulant | Fact Sheet 001-12-001-1223",
+  "reference_type": "datasheet",
+  "local_path": "papers/agent-fetched/SRT_LSP-2_spec_Dec2023_001-12-001-1223.pdf",
+  "reference_ids": [
+   "RN-S079-3"
+  ],
+  "simulants": [
+   "LSP-2"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D243",
+  "title": "Lunar South Pole Regolith Simulant (LSP-2) product page",
+  "authors": "Space Resource Technologies",
+  "year": 2026,
+  "doi": null,
+  "url": "https://spaceresourcetech.com/products/lunar-south-pole-simulant-lsp-2",
+  "reference_text": "Lunar South Pole Regolith Simulant (LSP-2) product page",
+  "reference_type": "general",
+  "local_path": "papers/agent-fetched/spaceresourcetech_LSP-2_product_page_2026-09-24.html",
+  "reference_ids": [
+   "RN-S079-4"
+  ],
+  "simulants": [
+   "LSP-2"
+  ],
+  "values_citing": 2
+ },
+ {
+  "doc_id": "D244",
+  "title": "Electromagnetic Characterization of EAC-1A and JSC-2A Lunar Regolith Simulants (Materials 17, 3633)",
+  "authors": "Ramos Somolinos, Plaza Gallardo, Cidrás Estévez, Stepanyan, Cowley, Auñón Marugán, Poyatos Martínez",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Electromagnetic Characterization of EAC-1A and JSC-2A Lunar Regolith Simulants (Materials 17, 3633)",
+  "reference_type": "usage",
+  "local_path": "papers/LRS/materials-17-03633.pdf",
+  "reference_ids": [
+   "RN-S081-1"
+  ],
+  "simulants": [
+   "JSC-2A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D245",
+  "title": "Additive manufacturing of lunar regolith structures (Open Ceramics)",
+  "authors": "not extracted from saved page",
+  "year": 2021,
+  "doi": "10.1016/j.oceram.2021.100058",
+  "url": null,
+  "reference_text": "Additive manufacturing of lunar regolith structures (Open Ceramics)",
+  "reference_type": "usage",
+  "local_path": "papers/LRS/DIRT project/files/1668/S2666539521000043.html",
+  "reference_ids": [
+   "RN-S081-4"
+  ],
+  "simulants": [
+   "JSC-2A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D246",
+  "title": "Influence of loading conditions on mechanical behaviors of lunar regolith simulant WH (saved ResearchGate page)",
+  "authors": "unspecified (page primarily about a 'WH' simulant paper)",
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Influence of loading conditions on mechanical behaviors of lunar regolith simulant WH (saved ResearchGate page)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1763/388423686_Influence_of_loading_conditions_on_mechanical_behaviors_of_lunar_regolith_simulant_WH.html",
+  "reference_ids": [
+   "RN-S082-2"
+  ],
+  "simulants": [
+   "GRC-3"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D247",
+  "title": "Development of a novel lunar highland soil simulant LSS-ISAC-1 and its geotechnical properties (saved ResearchGate page)",
+  "authors": "unspecified (page primarily about LSS-ISAC-1)",
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Development of a novel lunar highland soil simulant LSS-ISAC-1 and its geotechnical properties (saved ResearchGate page)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1711/346193942_Development_of_a_novel_lunar_highland_soil_simulant_LSS-ISAC-1_and_its_geotechnical_p.html",
+  "reference_ids": [
+   "RN-S082-3"
+  ],
+  "simulants": [
+   "GRC-3"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D248",
+  "title": "Geotechnical Properties of BP-1 Lunar Regolith Simulant (2019 Lunar ISRU Workshop slides)",
+  "authors": "Sibille, L., Mueller, R.P., Mantovani, J.G. (NASA KSC Swamp Works)",
+  "year": 2019,
+  "doi": null,
+  "url": null,
+  "reference_text": "Geotechnical Properties of BP-1 Lunar Regolith Simulant (2019 Lunar ISRU Workshop slides)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/5068_Mueller.pdf",
+  "reference_ids": [
+   "RN-S082-5"
+  ],
+  "simulants": [
+   "GRC-3"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D249",
+  "title": "Two Lunar Mare Soil Simulants",
+  "authors": "Yongquan LI, Jianzhong LIU, Yongliao ZOU, Ziyuan OUYANG, Yongchun ZHENG, Zongyu YUE",
+  "year": 2011,
+  "doi": "10.1111/j.1755-6724.2011.00536.x",
+  "url": "https://doi.org/10.1111/j.1755-6724.2011.00536.x",
+  "reference_text": "Two Lunar Mare Soil Simulants",
+  "reference_type": "composition",
+  "local_path": "papers/agent-fetched/Crossref_metadata_Li_2011_Two_Lunar_Mare_Soil_Simulants_AGS_85_1016.json",
+  "reference_ids": [
+   "RN-S083-1"
+  ],
+  "simulants": [
+   "NAO-2"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D250",
+  "title": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices (keynote, International Workshop on Granular Materials & Regolith, Metz, 15 April 2025)",
+  "authors": "Oravec, H. (University of Akron at NASA Glenn Research Center)",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Regolith Simulants: Current Simulants, Use Cases, Selection Process, and Best Practices (keynote, International Workshop on Granular Materials & Regolith, Metz, 15 April 2025)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/Metz France_Keynote_April 2025_Final.pdf",
+  "reference_ids": [
+   "RN-S086-1"
+  ],
+  "simulants": [
+   "NU-LHT-2E"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D251",
+  "title": "Metz — France Keynote, April 2025",
+  "authors": "",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "Metz — France Keynote, April 2025",
+  "reference_type": "general",
+  "local_path": "papers/LRS/Metz France_Keynote_April 2025_Final.pdf",
+  "reference_ids": [
+   "RN-S087-1",
+   "RN-S089-3"
+  ],
+  "simulants": [
+   "NU-LHT-2EG",
+   "NU-LHT-4M"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D252",
+  "title": "2022 Lunar Simulants Assessment (Stockstill-Cahill et al.)",
+  "authors": "Stockstill-Cahill et al.",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "2022 Lunar Simulants Assessment (Stockstill-Cahill et al.)",
+  "reference_type": "geotechnical",
+  "local_path": "papers/LRS/2022 Lunar Simulants Assessment Final.pdf",
+  "reference_ids": [
+   "RN-S088-2",
+   "RN-S089-2"
+  ],
+  "simulants": [
+   "NU-LHT-3M",
+   "NU-LHT-4M"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D253",
+  "title": "ARES Exploration Science Projects — Simulants (catalog page)",
+  "authors": "NASA JSC ARES",
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "ARES Exploration Science Projects — Simulants (catalog page)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1646/simulants.html",
+  "reference_ids": [
+   "RN-S088-4"
+  ],
+  "simulants": [
+   "NU-LHT-3M"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D254",
+  "title": "Characterization of NUW-LHT-5M, A Lunar Highland Simulant (NASA/TP-20240007991)",
+  "authors": "Rickman, Archer, Kovtun, Barmatz, Creedon, Dotson, Donaldson Hanna, Long-Fox, Millwater, Effinger, Hutcheon, Kim, Patridge, Whittington",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Characterization of NUW-LHT-5M, A Lunar Highland Simulant (NASA/TP-20240007991)",
+  "reference_type": "composition",
+  "local_path": "papers/Rickman_etal_2024_Characterization_of_NUW-LHT-5M_NASA-TM-20240007991.pdf",
+  "reference_ids": [
+   "RN-S089-1"
+  ],
+  "simulants": [
+   "NU-LHT-4M"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D255",
+  "title": "Characterization of Lunar Dust Simulants by Automated Particle Analysis using Scanning Electron Microscopy (ICES-2025-177)",
+  "authors": "Bunker, Lersch, Fortenberry, Meyer",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "Characterization of Lunar Dust Simulants by Automated Particle Analysis using Scanning Electron Microscopy (ICES-2025-177)",
+  "reference_type": "composition",
+  "local_path": "papers/agent-fetched/Bunker_Lersch_Fortenberry_Meyer_2025_ICES-2025-177_Characterization_of_Lunar_Dust_Simulants_Automated_SEM.pdf",
+  "reference_ids": [
+   "RN-S089-4"
+  ],
+  "simulants": [
+   "NU-LHT-4M"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D256",
+  "title": "Cohesion and Shear Strength of Compacted Lunar and Martian Regolith Simulants",
+  "authors": "Dotson, B. et al.",
+  "year": 2024,
+  "doi": null,
+  "url": "https://arxiv.org/abs/2403.11029",
+  "reference_text": "Cohesion and Shear Strength of Compacted Lunar and Martian Regolith Simulants",
+  "reference_type": "geotechnical",
+  "local_path": "papers/agent-fetched/arXiv_2403.11029_Cohesion_Shear_Strength_Compacted_Lunar_Martian_Simulants.pdf",
+  "reference_ids": [
+   "RN-S091-2",
+   "RN-S093-1"
+  ],
+  "simulants": [
+   "LHS-1D",
+   "LHS-1-25A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D257",
+  "title": "Crowdfunding campaign lets you snag simulated moon dirt — but handle with care",
+  "authors": "Alan Boyle, GeekWire",
+  "year": 2018,
+  "doi": null,
+  "url": "https://www.geekwire.com/2018/crowdfunding-campaign-lets-snag-faux-moon-dirt-handle-care/",
+  "reference_text": "Crowdfunding campaign lets you snag simulated moon dirt — but handle with care",
+  "reference_type": "general",
+  "local_path": "papers/agent-fetched/GeekWire_2018_Crowdfunding_Faux_Moon_Dirt_OffPlanetResearch.html",
+  "reference_ids": [
+   "RN-S102-1"
+  ],
+  "simulants": [
+   "OPRFLCROSS1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D258",
+  "title": "The Unique Physical Characteristics Of Simulated Lunar Ice (LPSC 2019, abstract #2141)",
+  "authors": "Roux, V., Roth, M., Roux, E. (Off Planet Research, LLC)",
+  "year": 2019,
+  "doi": null,
+  "url": "https://www.hou.usra.edu/meetings/lpsc2019/eposter/2141.pdf",
+  "reference_text": "The Unique Physical Characteristics Of Simulated Lunar Ice (LPSC 2019, abstract #2141)",
+  "reference_type": "geotechnical",
+  "local_path": "papers/agent-fetched/Roux_Roth_Roux_2019_LPSC_Unique_Physical_Characteristics_Simulated_Lunar_Ice_OPRFLCROSS1_abs2141.pdf",
+  "reference_ids": [
+   "RN-S102-2"
+  ],
+  "simulants": [
+   "OPRFLCROSS1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D259",
+  "title": "Characterization of Lunar Dust Simulants using Automated SEM (ICES-2025-177)",
+  "authors": "Bunker, R.; Lersch, T.L.; Fortenberry, C.; Meyer, C.E.",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "Characterization of Lunar Dust Simulants using Automated SEM (ICES-2025-177)",
+  "reference_type": "composition",
+  "local_path": "papers/agent-fetched/Bunker_Lersch_Fortenberry_Meyer_2025_ICES-2025-177_Characterization_of_Lunar_Dust_Simulants_Automated_SEM.pdf",
+  "reference_ids": [
+   "RN-S103-3"
+  ],
+  "simulants": [
+   "CSM-LHT-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D260",
+  "title": "276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html (embedded preview of 'A Comprehensive Review of Lunar-based Manufacturing and Construction', Azami et al. 2024 preprint)",
+  "authors": "Azami, M. et al. (preview snippet, authors as shown on ResearchGate)",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html (embedded preview of 'A Comprehensive Review of Lunar-based Manufacturing and Construction', Azami et al. 2024 preprint)",
+  "reference_type": "review",
+  "local_path": "papers/LRS/DIRT project/files/1765/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html",
+  "reference_ids": [
+   "RN-S103-4",
+   "RN-S104-1",
+   "RN-S105-4",
+   "RN-S106-2"
+  ],
+  "simulants": [
+   "CSM-LHT-1",
+   "CSM-LHT-1G",
+   "CSM-LMT-1",
+   "CSM-CL-S"
+  ],
+  "values_citing": 6
+ },
+ {
+  "doc_id": "D261",
+  "title": "2024 Lunar Simulant Assessment (JHU-APL LSII Report v1.0)",
+  "authors": "Martin, A.; Wagoner, C.; Stockshill-Cahill, K.; Blewett, D.; Bobea Graziano, M.",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "2024 Lunar Simulant Assessment (JHU-APL LSII Report v1.0)",
+  "reference_type": "geotechnical",
+  "local_path": "papers/LRS/2024_Lunar_Simulant_Assessment_Report.pdf",
+  "reference_ids": [
+   "RN-S105-3"
+  ],
+  "simulants": [
+   "CSM-LMT-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D262",
+  "title": "ARES | Exploration Science Projects | Simulants (NASA JSC ARES simulants inventory page)",
+  "authors": "NASA ARES/JSC",
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "ARES | Exploration Science Projects | Simulants (NASA JSC ARES simulants inventory page)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1646/simulants.html",
+  "reference_ids": [
+   "RN-S106-1"
+  ],
+  "simulants": [
+   "CSM-CL-S"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D263",
+  "title": "Simulants at Mines - Space Resources Program (Colorado School of Mines official site)",
+  "authors": "Colorado School of Mines, Space Resources Program",
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "Simulants at Mines - Space Resources Program (Colorado School of Mines official site)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1637/simulants.html",
+  "reference_ids": [
+   "RN-S107-1"
+  ],
+  "simulants": [
+   "Mooncastle"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D264",
+  "title": "Lunar Simulant Assessment (JHU-APL LSII Report)",
+  "authors": "Denevi, B.W., Blewett, D.T., Cahill, J.T.S., Greenhagen, B.T., Hibbitts, K., Hurley, D.M., Klima, R.L., Martin, A.C., Montalbano, T.J., Patterson, G.W., Stickle, A.M., Stockstill-Cahill, K., Wagoner, C.M.",
+  "year": 2020,
+  "doi": null,
+  "url": null,
+  "reference_text": "Lunar Simulant Assessment (JHU-APL LSII Report)",
+  "reference_type": "report",
+  "local_path": "papers/Denevi_etal_2020_Lunar_Simulant_Assessment_JHUAPL_LSIC.pdf",
+  "reference_ids": [
+   "RN-S108-1",
+   "RN-S109-1"
+  ],
+  "simulants": [
+   "LMA-1",
+   "LHA-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D265",
+  "title": "2022 Lunar Simulant Assessment (JHU-APL LSII Report)",
+  "authors": "Stockstill-Cahill, K., Martin, A., Wagoner, C.",
+  "year": 2022,
+  "doi": null,
+  "url": null,
+  "reference_text": "2022 Lunar Simulant Assessment (JHU-APL LSII Report)",
+  "reference_type": "report",
+  "local_path": "papers/LRS/2022 Lunar Simulants Assessment Final.pdf",
+  "reference_ids": [
+   "RN-S108-2",
+   "RN-S109-2"
+  ],
+  "simulants": [
+   "LMA-1",
+   "LHA-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D266",
+  "title": "Characterization of NUW-LHT-5M (NASA/TM-20240007991)",
+  "authors": "Rickman, D. et al.",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Characterization of NUW-LHT-5M (NASA/TM-20240007991)",
+  "reference_type": "composition",
+  "local_path": "papers/Rickman_etal_2024_Characterization_of_NUW-LHT-5M_NASA-TM-20240007991.pdf",
+  "reference_ids": [
+   "RN-S111-1"
+  ],
+  "simulants": [
+   "MLS-1A"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D267",
+  "title": "Jurassic Diabase from Leesburg, VA: A Proposed Lunar Simulant",
+  "authors": "P. T. Taylor, P. D. Lowman, Seiichi Nagihara, M. B. Milam, Yosio Nakamura",
+  "year": 2008,
+  "doi": null,
+  "url": "https://www.lpi.usra.edu/meetings/nlsc2008/pdf/2054.pdf",
+  "reference_text": "Jurassic Diabase from Leesburg, VA: A Proposed Lunar Simulant",
+  "reference_type": "composition",
+  "local_path": "papers/agent-fetched/Taylor_et_al_2008_NLSI2054_GSC-1_Jurassic_diabase_Leesburg.pdf",
+  "reference_ids": [
+   "RN-S117-1"
+  ],
+  "simulants": [
+   "GSC-1"
+  ],
+  "values_citing": 7
+ },
+ {
+  "doc_id": "D268",
+  "title": "Manufacture of Lunar Regolith Simulants",
+  "authors": "D.L. Rickman, S.A. Wilson, D.B. Stoeser",
+  "year": 2013,
+  "doi": null,
+  "url": null,
+  "reference_text": "Manufacture of Lunar Regolith Simulants",
+  "reference_type": "report",
+  "local_path": "papers/LRS/DIRT project/files/1664/Rickman et al. - Manufacture of Lunar Regolith Simulants.pdf",
+  "reference_ids": [
+   "RN-S117-3"
+  ],
+  "simulants": [
+   "GSC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D269",
+  "title": "ResearchGate publication page: \"The Preparation and Characterization of NEU-1 Lunar Soil Simulants\" (related-works panel includes the BH-2 paper's own abstract and author/affiliation metadata)",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "ResearchGate publication page: \"The Preparation and Characterization of NEU-1 Lunar Soil Simulants\" (related-works panel includes the BH-2 paper's own abstract and author/affiliation metadata)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1712/330911730_The_Preparation_and_Characterization_of_NEU-1_Lunar_Soil_Simulants.html",
+  "reference_ids": [
+   "RN-S121-1"
+  ],
+  "simulants": [
+   "BH-2"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D270",
+  "title": "ScienceDirect 'Cited by' panel (excerpt from Additive manufacturing development of construction materials for a lunar base via spark plasma sintering of volcanic rocks..., Constr. Build. Mater., 2024) naming BH-2 in a list of simulants",
+  "authors": null,
+  "year": null,
+  "doi": null,
+  "url": null,
+  "reference_text": "ScienceDirect 'Cited by' panel (excerpt from Additive manufacturing development of construction materials for a lunar base via spark plasma sintering of volcanic rocks..., Constr. Build. Mater., 2024) naming BH-2 in a list of simulants",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1756/S0032063322001489.html",
+  "reference_ids": [
+   "RN-S121-5"
+  ],
+  "simulants": [
+   "BH-2"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D271",
+  "title": "Sintering of HUST-1 lunar regolith simulant",
+  "authors": "Han W., Ding L., Cai L., Zhu J., Luo H., Tang T.",
+  "year": 2022,
+  "doi": "10.1016/j.conbuildmat.2022.126655",
+  "url": "https://doi.org/10.1016/j.conbuildmat.2022.126655",
+  "reference_text": "Sintering of HUST-1 lunar regolith simulant",
+  "reference_type": "usage",
+  "local_path": "papers/agent-fetched/crossref_Han_2022_HUST-1_sintering.json",
+  "reference_ids": [
+   "RN-S126-2"
+  ],
+  "simulants": [
+   "HUST-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D272",
+  "title": "Physical, mechanical and thermal properties of vacuum sintered HUST-1 lunar regolith simulant",
+  "authors": "Han W., Zhou Y., Cai L., Zhou C., Ding L.",
+  "year": 2024,
+  "doi": "10.1016/j.ijmst.2024.06.004",
+  "url": "https://doi.org/10.1016/j.ijmst.2024.06.004",
+  "reference_text": "Physical, mechanical and thermal properties of vacuum sintered HUST-1 lunar regolith simulant",
+  "reference_type": "usage",
+  "local_path": "papers/agent-fetched/semanticscholar_Han_2024_HUST-1_vacuum_sintered.json",
+  "reference_ids": [
+   "RN-S126-3"
+  ],
+  "simulants": [
+   "HUST-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D273",
+  "title": "JLU-H: A novel lunar highland regolith simulant for use in large-scale engineering experiments (ScienceDirect landing page, 'Cited by' excerpt from a 2024 Construction and Building Materials article)",
+  "authors": "ScienceDirect citation excerpt",
+  "year": 2024,
+  "doi": null,
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0032063322001489",
+  "reference_text": "JLU-H: A novel lunar highland regolith simulant for use in large-scale engineering experiments (ScienceDirect landing page, 'Cited by' excerpt from a 2024 Construction and Building Materials article)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1756/S0032063322001489.html",
+  "reference_ids": [
+   "RN-S126-5"
+  ],
+  "simulants": [
+   "HUST-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D274",
+  "title": "Microstructural, mechanical, and thermal properties of microwave-sintered KLS-1 lunar regolith simulant (ScienceDirect landing page, 'Cited by' list)",
+  "authors": "ScienceDirect citing-article listing",
+  "year": 2024,
+  "doi": null,
+  "url": "https://www.sciencedirect.com/science/article/pii/S0272884221018423",
+  "reference_text": "Microstructural, mechanical, and thermal properties of microwave-sintered KLS-1 lunar regolith simulant (ScienceDirect landing page, 'Cited by' list)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1804/S0272884221018423.html",
+  "reference_ids": [
+   "RN-S126-6"
+  ],
+  "simulants": [
+   "HUST-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D275",
+  "title": "Properties of TJ-1 Lunar Soil Simulant (ResearchGate page; citing-articles sidebar quotes Zhou et al. 2024)",
+  "authors": "",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Properties of TJ-1 Lunar Soil Simulant (ResearchGate page; citing-articles sidebar quotes Zhou et al. 2024)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1765/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html",
+  "reference_ids": [
+   "RN-S130-2"
+  ],
+  "simulants": [
+   "IRSM-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D276",
+  "title": "Properties of TJ-1 Lunar Soil Simulant (ResearchGate page; citing-articles sidebar quotes a paper's introduction)",
+  "authors": "",
+  "year": 2024,
+  "doi": null,
+  "url": null,
+  "reference_text": "Properties of TJ-1 Lunar Soil Simulant (ResearchGate page; citing-articles sidebar quotes a paper's introduction)",
+  "reference_type": "general",
+  "local_path": "papers/LRS/DIRT project/files/1765/276962935_Properties_of_TJ-1_Lunar_Soil_Simulant.html",
+  "reference_ids": [
+   "RN-S136-1"
+  ],
+  "simulants": [
+   "QH-E"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D277",
+  "title": "Discrete Element Modelling of Triaxial Compression Test of QH-E Lunar Soil Simulant under Hydrostatic Compression",
+  "authors": "Yunli Li, Weilie Zou, Wenping Wu, Xihua Chu",
+  "year": 2019,
+  "doi": "10.7763/ijet.2019.v11.1148",
+  "url": "https://doi.org/10.7763/ijet.2019.v11.1148",
+  "reference_text": "Discrete Element Modelling of Triaxial Compression Test of QH-E Lunar Soil Simulant under Hydrostatic Compression",
+  "reference_type": "geotechnical",
+  "local_path": "papers/agent-fetched/Li_Zou_Wu_Chu_2019_DEM_Triaxial_Compression_QH-E_Lunar_Soil_Simulant_IJET_11_208.pdf",
+  "reference_ids": [
+   "RN-S136-2"
+  ],
+  "simulants": [
+   "QH-E"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D278",
+  "title": "From La Palma to Space: Green Moon Project's Experiment on Lunar Soil Simulant (LuSIC-1) for Crop Cultivation in Low Earth Orbit",
+  "authors": "Alberquilla, F. et al.",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "From La Palma to Space: Green Moon Project's Experiment on Lunar Soil Simulant (LuSIC-1) for Crop Cultivation in Low Earth Orbit",
+  "reference_type": "report",
+  "local_path": "papers/agent-fetched/CPESS-8_2025_Alberquilla_MIT_GreenMoon_LUSIC-1_abstract.pdf",
+  "reference_ids": [
+   "RN-S153-2"
+  ],
+  "simulants": [
+   "LZS-1"
+  ],
+  "values_citing": 1
+ },
+ {
+  "doc_id": "D279",
+  "title": "Modified model for shear stress distribution using TRI-1 lunar soil simulant",
+  "authors": "S. Jayalekshmi, Pala Gireesh Kumar",
+  "year": 2018,
+  "doi": "10.15632/jtam-pl.56.1.137",
+  "url": "https://doi.org/10.15632/jtam-pl.56.1.137",
+  "reference_text": "Modified model for shear stress distribution using TRI-1 lunar soil simulant",
+  "reference_type": "geotechnical",
+  "local_path": "papers/agent-fetched/Jayalekshmi_Kumar_2018_Modified_model_shear_stress_TRI-1_lunar_soil_simulant_JTAM_56_137.pdf",
+  "reference_ids": [
+   "RN-S155-2"
+  ],
+  "simulants": [
+   "TRI-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D280",
+  "title": "CPESS 8 (8th Spanish/Iberian Congress of Planetary Sciences and Solar System Exploration, Málaga, 26-30 May 2025) — Final programme / RIA meeting report",
+  "authors": "Conference organizers (Google Sheets export listing all sessions/authors)",
+  "year": 2025,
+  "doi": null,
+  "url": null,
+  "reference_text": "CPESS 8 (8th Spanish/Iberian Congress of Planetary Sciences and Solar System Exploration, Málaga, 26-30 May 2025) — Final programme / RIA meeting report",
+  "reference_type": "report",
+  "local_path": "papers/agent-fetched/CPESS-8_2025_Final_report_RIA_meeting.pdf",
+  "reference_ids": [
+   "RN-S158-1"
+  ],
+  "simulants": [
+   "LuSIC-1"
+  ],
+  "values_citing": 0
+ },
+ {
+  "doc_id": "D281",
+  "title": "First seismic in-situ characterization of regolith simulants in LUNA (EGU General Assembly 2026, EGU26-19748)",
+  "authors": "Knapmeyer-Endrun, B., et al.",
+  "year": 2026,
+  "doi": "10.5194/egusphere-egu26-19748",
+  "url": "https://meetingorganizer.copernicus.org/EGU26/EGU26-19748.html",
+  "reference_text": "First seismic in-situ characterization of regolith simulants in LUNA (EGU General Assembly 2026, EGU26-19748)",
+  "reference_type": "abstract",
+  "local_path": "datasheets/Lumina/EGU26-19748_Knapmeyer-Endrun_abstract.html",
+  "reference_ids": [
+   "RN-S160-2"
+  ],
+  "simulants": [
+   "Lunar250"
+  ],
+  "values_citing": 0
+ }
+]

@@ -27,6 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from moon import export_moon  # noqa: E402
+from source_policy import is_wiki_document, strip_wiki_links  # noqa: E402
 from provenance import ensure_provenance_schema  # noqa: E402
 
 ROOT = Path(__file__).parent.parent
@@ -77,8 +78,15 @@ def suppress_unsourced_extra(extra: list[dict], property_sources: list[dict]) ->
 
 def shown_references(references: list[dict]) -> list[dict]:
     """A reference a reader confirmed does not name the product is kept in the database, as the
-    record of that check, but not listed under the product (test 2: a reference must concern it)."""
-    return [r for r in references if r.get("names_simulant") != 0]
+    record of that check, but not listed under the product (test 2: a reference must concern it).
+    A wiki page is never listed (scripts/source_policy.py)."""
+    return [r for r in references if r.get("names_simulant") != 0 and not is_wiki_document(r)]
+
+
+def drop_wiki_citations(rows: list[dict], wiki_ids: set[str]) -> list[dict]:
+    """Rows citing a wiki page lose that citation entirely, so the value is shown only if
+    another document states it (the scalar gate then hides it)."""
+    return [r for r in rows if r.get("reference_id") not in wiki_ids]
 
 
 # Reference columns that exist for verification only and never leave the machine.
@@ -143,11 +151,12 @@ def run(db_path: Path, output: Path = OUTPUT, report_dir: Path = DOC_DIR, today:
         cur = con.execute(query)
         return [dict(row) for row in cur.fetchall()]
 
-    # --- property_sources: which scalar came from which document ---
-    property_sources = fetch("SELECT * FROM property_sources ORDER BY simulant_id, field")
+    # --- property_sources: which scalar came from which document; never a wiki page ---
+    wiki_ids = {r["reference_id"] for r in fetch("SELECT * FROM references_") if is_wiki_document(r)}
+    property_sources = drop_wiki_citations(fetch("SELECT * FROM property_sources ORDER BY simulant_id, field"), wiki_ids)
     # Figures of Merit: one cited score per (simulant, property, lunar reference).
     try:
-        figures_of_merit = fetch("SELECT * FROM figures_of_merit WHERE reference_id IS NOT NULL ORDER BY simulant_id, property, reference_sample")
+        figures_of_merit = drop_wiki_citations(fetch("SELECT * FROM figures_of_merit WHERE reference_id IS NOT NULL ORDER BY simulant_id, property, reference_sample"), wiki_ids)
     except sqlite3.OperationalError:
         figures_of_merit = []
 
@@ -181,10 +190,10 @@ def run(db_path: Path, output: Path = OUTPUT, report_dir: Path = DOC_DIR, today:
     sites = fetch("SELECT * FROM sites WHERE lat IS NOT NULL AND lon IS NOT NULL ORDER BY site_id")
 
     # --- chemical_compositions (reference_id rides along via SELECT *) ---
-    chemical_compositions = fetch("SELECT * FROM chemical_compositions ORDER BY composition_id")
+    chemical_compositions = drop_wiki_citations(fetch("SELECT * FROM chemical_compositions ORDER BY composition_id"), wiki_ids)
 
     # --- mineral_compositions (reference_id rides along via SELECT *) ---
-    compositions = fetch("SELECT * FROM mineral_compositions ORDER BY composition_id")
+    compositions = drop_wiki_citations(fetch("SELECT * FROM mineral_compositions ORDER BY composition_id"), wiki_ids)
 
     # --- mineral_groups ---
     mineral_groups = fetch("SELECT * FROM mineral_groups ORDER BY group_id")
@@ -206,6 +215,9 @@ def run(db_path: Path, output: Path = OUTPUT, report_dir: Path = DOC_DIR, today:
     # --- mineral_sourcing: restore booleans ---
     mineral_sourcing = fetch("SELECT * FROM mineral_sourcing ORDER BY mineral_name")
     for ms in mineral_sourcing:
+        for k, v in ms.items():
+            if isinstance(v, str):
+                ms[k] = strip_wiki_links(v)
         for field in ("mine_active", "available_france", "available_europe", "available_schengen"):
             if ms[field] is not None:
                 ms[field] = bool(ms[field])

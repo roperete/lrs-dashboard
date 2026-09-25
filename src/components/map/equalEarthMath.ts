@@ -17,8 +17,14 @@ export function project(lat: number, lng: number): [number, number] {
 }
 
 export function unproject(x: number, y: number): [number, number] {
-  const [lambda, phi] = raw.invert!(x / R, y / R);
-  return [phi / D, lambda / D];
+  // A point off the map (at low zoom the window is wider and taller than the map) becomes the
+  // nearest point on the outline at the same height, so it is still a real place. Inverted
+  // as it is, it gives longitudes like -3857°, and Leaflet's visible bounds then miss every pin.
+  const yc = Math.max(-Y_MAX, Math.min(Y_MAX, y));
+  const rowPhi = raw.invert!(0, yc / R)[1];
+  const xEdge = raw(Math.PI, rowPhi)[0] * R;
+  const [lambda, phi] = raw.invert!(Math.max(-xEdge, Math.min(xEdge, x)) / R, yc / R);
+  return [Math.max(-90, Math.min(90, phi / D)), Math.max(-180, Math.min(180, lambda / D))];
 }
 
 /** Half-width (at the equator) and half-height (at the poles) of the projected map. */

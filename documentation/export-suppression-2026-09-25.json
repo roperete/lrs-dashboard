@@ -530,8 +530,18 @@
     }
   ],
   "moon_rule": "A value of a lunar site or reference sample is exported only when lunar_sources has a row for (entity_id, field); a site without both coordinates sourced is left off the map.",
-  "moon_count": 116,
+  "moon_count": 160,
   "moon_suppressed": [
+    {
+      "entity_id": "A11",
+      "field": "lat",
+      "value": 0.67408
+    },
+    {
+      "entity_id": "A11",
+      "field": "lng",
+      "value": 23.47297
+    },
     {
       "entity_id": "A11",
       "field": "samples_returned",
@@ -559,6 +569,21 @@
     },
     {
       "entity_id": "A12",
+      "field": "lat",
+      "value": -3.01239
+    },
+    {
+      "entity_id": "A12",
+      "field": "lng",
+      "value": -23.42157
+    },
+    {
+      "entity_id": "A12",
+      "field": "samples_returned",
+      "value": "34.3 kg"
+    },
+    {
+      "entity_id": "A12",
       "field": "bulk_density",
       "value": 1.65
     },
@@ -576,6 +601,21 @@
       "entity_id": "A12",
       "field": "bearing_capacity",
       "value": 8.5
+    },
+    {
+      "entity_id": "A14",
+      "field": "lat",
+      "value": -3.6453
+    },
+    {
+      "entity_id": "A14",
+      "field": "lng",
+      "value": -17.47136
+    },
+    {
+      "entity_id": "A14",
+      "field": "samples_returned",
+      "value": "42.3 kg"
     },
     {
       "entity_id": "A14",
@@ -638,6 +678,106 @@
       "value": 0.6
     },
     {
+      "entity_id": "CE3",
+      "field": "date",
+      "value": "December 14, 2013"
+    },
+    {
+      "entity_id": "CE3",
+      "field": "lat",
+      "value": 44.1214
+    },
+    {
+      "entity_id": "CE3",
+      "field": "lng",
+      "value": -19.5116
+    },
+    {
+      "entity_id": "CE3",
+      "field": "description",
+      "value": "First Chinese lunar lander. Deployed Yutu rover on the Mare Imbrium."
+    },
+    {
+      "entity_id": "CE3",
+      "field": "bulk_density",
+      "value": 1.63
+    },
+    {
+      "entity_id": "CE4",
+      "field": "date",
+      "value": "January 3, 2019"
+    },
+    {
+      "entity_id": "CE4",
+      "field": "lat",
+      "value": -45.4446
+    },
+    {
+      "entity_id": "CE4",
+      "field": "lng",
+      "value": 177.5991
+    },
+    {
+      "entity_id": "CE4",
+      "field": "description",
+      "value": "First landing on the lunar far side. Deployed Yutu-2 rover in the South Pole-Aitken basin."
+    },
+    {
+      "entity_id": "CE5",
+      "field": "date",
+      "value": "December 1, 2020"
+    },
+    {
+      "entity_id": "CE5",
+      "field": "samples_returned",
+      "value": "1.73 kg"
+    },
+    {
+      "entity_id": "CE5",
+      "field": "description",
+      "value": "First Chinese sample return mission. Collected young volcanic rocks."
+    },
+    {
+      "entity_id": "CE6",
+      "field": "date",
+      "value": "1 June 2024, 22:23:16 UTC"
+    },
+    {
+      "entity_id": "CE6",
+      "field": "lat",
+      "value": -41.6385
+    },
+    {
+      "entity_id": "CE6",
+      "field": "lng",
+      "value": -153.9852
+    },
+    {
+      "entity_id": "CH3",
+      "field": "date",
+      "value": "August 23, 2023"
+    },
+    {
+      "entity_id": "CH3",
+      "field": "description",
+      "value": "First Indian lunar landing. Pragyan rover explored near the south pole."
+    },
+    {
+      "entity_id": "L13",
+      "field": "friction_angle",
+      "value": 32.0
+    },
+    {
+      "entity_id": "L13",
+      "field": "cohesion",
+      "value": 0.49
+    },
+    {
+      "entity_id": "L13",
+      "field": "bearing_capacity",
+      "value": 68.0
+    },
+    {
       "entity_id": "L16",
       "field": "friction_angle",
       "value": 26.7
@@ -646,6 +786,26 @@
       "entity_id": "L16",
       "field": "cohesion",
       "value": 3.81
+    },
+    {
+      "entity_id": "L17",
+      "field": "friction_angle",
+      "value": 22.5
+    },
+    {
+      "entity_id": "L17",
+      "field": "cohesion",
+      "value": 5.0
+    },
+    {
+      "entity_id": "L17",
+      "field": "bearing_capacity",
+      "value": 33.3
+    },
+    {
+      "entity_id": "L20",
+      "field": "samples_returned",
+      "value": "55 g"
     },
     {
       "entity_id": "L20",
@@ -673,9 +833,39 @@
       "value": "Deployed Lunokhod 2. Traversed 37 km across the lunar surface."
     },
     {
+      "entity_id": "L21",
+      "field": "friction_angle",
+      "value": 22.5
+    },
+    {
+      "entity_id": "L21",
+      "field": "cohesion",
+      "value": 5.0
+    },
+    {
+      "entity_id": "L21",
+      "field": "bearing_capacity",
+      "value": 40.0
+    },
+    {
       "entity_id": "L24",
       "field": "bulk_density",
       "value": 1.85
+    },
+    {
+      "entity_id": "S1",
+      "field": "lat",
+      "value": -2.474
+    },
+    {
+      "entity_id": "S1",
+      "field": "lng",
+      "value": -43.339
+    },
+    {
+      "entity_id": "S1",
+      "field": "description",
+      "value": "First US soft landing on the Moon. Conducted surface mechanics experiments."
     },
     {
       "entity_id": "S1",
@@ -686,6 +876,26 @@
       "entity_id": "S1",
       "field": "cohesion",
       "value": 4.52
+    },
+    {
+      "entity_id": "S3",
+      "field": "date",
+      "value": "April 20, 1967"
+    },
+    {
+      "entity_id": "S3",
+      "field": "lat",
+      "value": -3.01612
+    },
+    {
+      "entity_id": "S3",
+      "field": "lng",
+      "value": -23.41791
+    },
+    {
+      "entity_id": "S3",
+      "field": "description",
+      "value": "Equipped with soil mechanics surface sampler. Later visited by Apollo 12."
     },
     {
       "entity_id": "S3",
@@ -709,6 +919,11 @@
         "lat": 0.6875,
         "lon": 23.4333
       }
+    },
+    {
+      "entity_id": "10084",
+      "field": "type",
+      "value": "Mare (High-Ti Basalt)"
     },
     {
       "entity_id": "10084",
@@ -742,6 +957,11 @@
         "lat": -3.0128,
         "lon": -23.4219
       }
+    },
+    {
+      "entity_id": "12070",
+      "field": "type",
+      "value": "Mare (Low-Ti Basalt)"
     },
     {
       "entity_id": "12070",

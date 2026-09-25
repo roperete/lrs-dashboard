@@ -53,6 +53,7 @@ SCALAR_FIELDS = {
 
 from parse_value import COLUMN_UNITS, parse_number, to_column_unit  # noqa: E402
 from provenance import ensure_provenance_schema  # noqa: E402
+from source_policy import is_wiki
 
 _PLAIN_NUMBER = re.compile(r"[-+]?\d+(?:\.\d+)?")
 
@@ -149,6 +150,10 @@ def apply_group(db_path: Path | str, extractions: list[dict], verifications: lis
             title = (nr.get("title") or "").strip() or None
             if is_self_registry(title, local_path):
                 note(simulant_id=sid, reference_id=tid, outcome="refused: the project's own registry is not evidence",
+                     title=title, needs_review=True)
+                continue
+            if is_wiki(title, local_path, nr.get("url")):
+                note(simulant_id=sid, reference_id=tid, outcome="refused: a wiki page is not a source (cite the paper behind it)",
                      title=title, needs_review=True)
                 continue
             existing = None

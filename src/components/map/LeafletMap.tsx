@@ -106,18 +106,20 @@ interface LeafletMapProps {
   onSimulantClick: (id: string, lat: number, lon: number) => void;
   onLunarSiteClick: (id: string, lat: number, lng: number) => void;
   onMapClick: (e: L.LeafletMouseEvent) => void;
+  /** Called once the map is set up and can be drawn. */
+  onReady?: () => void;
 }
 
 export function LeafletMap({
   planet, mapCenter, mapZoom,
   filteredSimulants, siteBySimulant, lunarSites, countries,
-  onSimulantClick, onLunarSiteClick, onMapClick,
+  onSimulantClick, onLunarSiteClick, onMapClick, onReady,
 }: LeafletMapProps) {
   // The Earth map is drawn in Equal Earth (endorsed by the UN General Assembly, 4 Sep 2026) as
   // vectors, since map tiles exist only in Web Mercator; the Moon keeps its Mercator tiles.
   // A map's CRS cannot change after it is created, so each planet gets its own map (key).
   return (
-    <MapContainer key={planet} center={mapCenter} zoom={mapZoom}
+    <MapContainer key={planet} center={mapCenter} zoom={mapZoom} whenReady={onReady}
       crs={planet === 'earth' ? EqualEarthCRS : L.CRS.EPSG3857}
       minZoom={planet === 'earth' ? 1 : undefined} maxZoom={planet === 'earth' ? 8 : undefined}
       style={{ height: '100%', width: '100%', background: '#020617' }} zoomControl={false}>

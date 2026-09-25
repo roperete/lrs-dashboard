@@ -27,8 +27,8 @@ class MoonExportTests(unittest.TestCase):
         con.execute("INSERT INTO lunar_references (sample_id, mission, landing_site, coordinates, type, sample_description, "
                     "chemical_composition, mineral_composition, sources) VALUES ('10084','Apollo 11','Mare Tranquillitatis',"
                     "'{\"lat\": 0.67, \"lon\": 23.47}','Mare','Bulk soil','{\"SiO2\": 42.2, \"TiO2\": 7.5}','{\"Plagioclase\": 21.0}','[\"x\"]')")
-        con.execute("INSERT INTO lunar_documents (document_id, title, local_path) VALUES ('LD-001','Wagner et al. 2017','papers/lunar/w.pdf'),"
-                    "('LD-002','Lunar Sample Compendium 10084','papers/lunar/LSC_10084.pdf'),('LD-003','Unused','papers/lunar/u.pdf')")
+        con.execute("INSERT INTO lunar_documents (document_id, title, local_path, kind) VALUES ('LD-001','Wagner et al. 2017','papers/lunar/w.pdf','paper'),"
+                    "('LD-002','Lunar Sample Compendium 10084','papers/lunar/LSC_10084.pdf','primary_report'),('LD-003','Unused','papers/lunar/u.pdf','paper')")
         rows = [("A11", "lat", "LD-001", "Table 1", "Apollo 11 LM 0.67416 23.47314"),
                 ("A11", "lng", "LD-001", "Table 1", "Apollo 11 LM 0.67416 23.47314"),
                 ("A11", "bulk_density", "LD-002", "p. 3", "1.61 g/cm3"),

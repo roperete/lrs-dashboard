@@ -1,0 +1,287 @@
+[
+  {
+    "document_id": "LD-036",
+    "was": "web",
+    "now": "catalogue",
+    "action": "reclassified: the LROC 2016 coordinate table, an agency data table, not a web article"
+  },
+  {
+    "entity_id": "10084",
+    "field": "type",
+    "document_id": "LD-005",
+    "document": "Mare Basalt Volcanism - Lunar Petrographic Thin Section Set Study Guide",
+    "kind": "web",
+    "url": null,
+    "value_text": "high-Ti mare basalt",
+    "location": "main text",
+    "quote": "Samples from the Apollo 11 and 17 missions were exclusively from the high-Ti group",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "entity_id": "12070",
+    "field": "type",
+    "document_id": "LD-005",
+    "document": "Mare Basalt Volcanism - Lunar Petrographic Thin Section Set Study Guide",
+    "kind": "web",
+    "url": null,
+    "value_text": "low-Ti basalt",
+    "location": "main text",
+    "quote": "samples from the Apollo 12 and 15 and Luna 16 missions were from the low-Ti group",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "document_id": "LD-005",
+    "document": "Mare Basalt Volcanism - Lunar Petrographic Thin Section Set Study Guide",
+    "kind": "web",
+    "url": null,
+    "action": "document removed: outside the Moon line"
+  },
+  {
+    "document_id": "LD-011",
+    "document": "Apollo Lunar Surface Journal — Landing Site Coordinates (table)",
+    "kind": "compilation",
+    "url": "https://apollojournals.org/alsj/alsjcoords.html",
+    "action": "document removed: outside the Moon line"
+  },
+  {
+    "entity_id": "L13",
+    "field": "friction_angle",
+    "document_id": "LD-013",
+    "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+    "kind": "compilation",
+    "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+    "value_text": "32 (degrees)",
+    "location": "row: Mission=Luna 13, Test=Penetrometer",
+    "quote": "Luna 13;18.867N 62.050W;Mare;1966;Lander;Penetrometer;In-Situ;Vacuum ;0.8;32;0.49;68;...",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "entity_id": "L13",
+    "field": "cohesion",
+    "document_id": "LD-013",
+    "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+    "kind": "compilation",
+    "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+    "value_text": "0.49 (kPa)",
+    "location": "row: Mission=Luna 13, Test=Penetrometer",
+    "quote": "Luna 13;18.867N 62.050W;Mare;1966;Lander;Penetrometer;In-Situ;Vacuum ;0.8;32;0.49;68;...",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "entity_id": "L13",
+    "field": "bearing_capacity",
+    "document_id": "LD-013",
+    "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+    "kind": "compilation",
+    "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+    "value_text": "68 (kPa)",
+    "location": "row: Mission=Luna 13, Test=Penetrometer",
+    "quote": "Luna 13;18.867N 62.050W;Mare;1966;Lander;Penetrometer;In-Situ;Vacuum ;0.8;32;0.49;68;...",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "entity_id": "L13",
+    "field": "description",
+    "document_id": "LD-013",
+    "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+    "kind": "compilation",
+    "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+    "value_text": null,
+    "location": "row: Mission=Luna 13, Test=Penetrometer",
+    "quote": "Luna 13;18.867N 62.050W;Mare;1966;Lander;Penetrometer;In-Situ;Vacuum ;0.8;32;0.49;68;...;I. I. Cherkasov, V.V. Shvarev, Soviet investigations of the mechanics of lunar soils, 1973",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "entity_id": "L17",
+    "field": "friction_angle",
+    "document_id": "LD-013",
+    "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+    "kind": "compilation",
+    "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+    "value_text": "22.5 (degrees) [Cherkasov & Shvarev 1973, Penetrometer]",
+    "location": "row: Mission=Luna 17, Test=Penetrometer",
+    "quote": "Luna 17;38.2376N 35.00163W;Mare;1970;Rover;Penetrometer;In-Situ;Vacuum ;NA;22.5;5;33.34;...;I. I. Cherkasov, V.V. Shvarev, Soviet investigations of the mechanics of lunar soils, 1973",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "entity_id": "L17",
+    "field": "cohesion",
+    "document_id": "LD-013",
+    "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+    "kind": "compilation",
+    "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+    "value_text": "5 (kPa) [same Cherkasov & Shvarev 1973 Penetrometer row]",
+    "location": "row: Mission=Luna 17, Test=Penetrometer",
+    "quote": "Luna 17;38.2376N 35.00163W;Mare;1970;Rover;Penetrometer;In-Situ;Vacuum ;NA;22.5;5;33.34;...",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "entity_id": "L17",
+    "field": "bearing_capacity",
+    "document_id": "LD-013",
+    "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+    "kind": "compilation",
+    "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+    "value_text": "33.34 (kPa)",
+    "location": "row: Mission=Luna 17, Test=Penetrometer",
+    "quote": "Luna 17;38.2376N 35.00163W;Mare;1970;Rover;Penetrometer;In-Situ;Vacuum ;NA;22.5;5;33.34;...",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "entity_id": "L21",
+    "field": "friction_angle",
+    "document_id": "LD-013",
+    "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+    "kind": "compilation",
+    "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+    "value_text": "22.5 (degrees) [Cherkasov & Shvarev 1977, Rover tracks, 'General values obtained over the path of Lunokhod 2']",
+    "location": "row: Mission=Luna 21, Test=Rover tracks",
+    "quote": "Luna 21;25.9994N 30.4076E;Mare;1973;Rover;Rover tracks;In-Situ;Vacuum ;NA;22.5;5;40;4 -6;NA;0.8;...;I. I. Cherkasov, V. V. Shvarev, New Soviet investigations of lunar soil and its analogs, 1977;...;General values obtained over the path of Lunokhod 2",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "entity_id": "L21",
+    "field": "cohesion",
+    "document_id": "LD-013",
+    "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+    "kind": "compilation",
+    "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+    "value_text": "5 (kPa) [same row]",
+    "location": "row: Mission=Luna 21, Test=Rover tracks",
+    "quote": "Luna 21;25.9994N 30.4076E;Mare;1973;Rover;Rover tracks;In-Situ;Vacuum ;NA;22.5;5;40;4 -6;NA;0.8;...",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "entity_id": "L21",
+    "field": "bearing_capacity",
+    "document_id": "LD-013",
+    "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+    "kind": "compilation",
+    "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+    "value_text": "40 (kPa) [same row]",
+    "location": "row: Mission=Luna 21, Test=Rover tracks",
+    "quote": "Luna 21;25.9994N 30.4076E;Mare;1973;Rover;Rover tracks;In-Situ;Vacuum ;NA;22.5;5;40;4 -6;NA;0.8;...",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "entity_id": "CE3",
+    "field": "bulk_density",
+    "document_id": "LD-013",
+    "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+    "kind": "compilation",
+    "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+    "value_text": "1.63",
+    "location": "Row 177 (Chang'e 3)",
+    "quote": "Chang'e 3;44.1189N 340.487E;Mare;2013;Rover;Lunar Penetration Radar;In-Situ;Vacuum ;1.63;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;Zehua Donga, Guangyou Fang, Parameters and structure of lunar regolith in Chang E-3 landing area from lunar penetrating radar (LPR) data, 2016",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "document_id": "LD-013",
+    "document": "An Open Database of Lunar Regolith and Simulants Properties — Dataset_Regolith.csv",
+    "kind": "compilation",
+    "url": "https://github.com/leoniegasteiner/Lunar-Regolith-Database",
+    "action": "document removed: outside the Moon line"
+  },
+  {
+    "document_id": "LD-014",
+    "document": "Scientific Discoveries from the Apollo 11 Mission (PSRD)",
+    "kind": "web",
+    "url": "http://www.psrd.hawaii.edu/July19/Apollo11-discoveries.html",
+    "action": "document removed: outside the Moon line"
+  },
+  {
+    "entity_id": "A12",
+    "field": "samples_returned",
+    "document_id": "LD-015",
+    "document": "Celebrated Moon Rocks (PSRD) — mission sample-mass table",
+    "kind": "web",
+    "url": "http://www.psrd.hawaii.edu/Dec09/Apollo-lunar-samples.html",
+    "value_text": "34.3 kg",
+    "location": "PSRD 'Celebrated Moon Rocks' mission-mass table",
+    "quote": "Apollo 12 ... Weight in kilograms: 34.3",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "entity_id": "A14",
+    "field": "samples_returned",
+    "document_id": "LD-015",
+    "document": "Celebrated Moon Rocks (PSRD) — mission sample-mass table",
+    "kind": "web",
+    "url": "http://www.psrd.hawaii.edu/Dec09/Apollo-lunar-samples.html",
+    "value_text": "42.3 kg",
+    "location": "PSRD 'Celebrated Moon Rocks' mission-mass table",
+    "quote": "Apollo 14 ... Weight in kilograms: 42.3",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "document_id": "LD-015",
+    "document": "Celebrated Moon Rocks (PSRD) — mission sample-mass table",
+    "kind": "web",
+    "url": "http://www.psrd.hawaii.edu/Dec09/Apollo-lunar-samples.html",
+    "action": "document removed: outside the Moon line"
+  },
+  {
+    "entity_id": "A14",
+    "field": "description",
+    "document_id": "LD-019",
+    "document": "Trail of Discovery at Fra Mauro (LROC)",
+    "kind": "web",
+    "url": "https://lroc.im-ldi.com/images/105",
+    "value_text": null,
+    "location": "LROC 'Trail of Discovery at Fra Mauro' page",
+    "quote": "Nearly all of the Apollo 14 samples are breccias (or rocks formed from pieces of other rocks, often held together by an impact-melt matrix).",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "document_id": "LD-019",
+    "document": "Trail of Discovery at Fra Mauro (LROC)",
+    "kind": "web",
+    "url": "https://lroc.im-ldi.com/images/105",
+    "action": "document removed: outside the Moon line"
+  },
+  {
+    "document_id": "LD-020",
+    "document": "Apollo 14: Mission Details (NASA)",
+    "kind": "web",
+    "url": "https://www.nasa.gov/missions/apollo/apollo-14-mission-details/",
+    "action": "document removed: outside the Moon line"
+  },
+  {
+    "entity_id": "A17",
+    "field": "description",
+    "document_id": "LD-028",
+    "document": "Apollo 17 (NASA Lunar Petrographic Educational Thin Section Set)",
+    "kind": "web",
+    "url": "https://curator.jsc.nasa.gov/education/lpetss/apollo17.cfm",
+    "value_text": null,
+    "location": "JSC Curator LPETSS Apollo 17 page, figure 7 caption",
+    "quote": "Figure 7 - Sketch map of the Apollo 17 Taurus-Littrow landing site... One sample is a pristine norite (78235), one sample comes from a landslide off the highlands (72275), two samples are of the dark mantle (74220 and 70181), and another sample is of the mare surface (70017)... The valley floor was covered with mare basalts and a dark mantle. The landslide off the South Massif is a light mantle on top of the valley material.",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "document_id": "LD-028",
+    "document": "Apollo 17 (NASA Lunar Petrographic Educational Thin Section Set)",
+    "kind": "web",
+    "url": "https://curator.jsc.nasa.gov/education/lpetss/apollo17.cfm",
+    "action": "document removed: outside the Moon line"
+  },
+  {
+    "entity_id": "L20",
+    "field": "samples_returned",
+    "document_id": "LD-041",
+    "document": "NASA Solar System Exploration — Luna 20, In Depth",
+    "kind": "web",
+    "url": "https://solarsystem.nasa.gov/missions/luna-20/in-depth/",
+    "value_text": "The 2-ounce (55-gram) soil sample",
+    "location": "'Sample Return' section",
+    "quote": "The 2-ounce (55-gram) soil sample differed from that collected by Luna 16 in that the majority (50 to 60 percent) of the rock particles in the newer sample were ancient anorthosite (which consists largely of feldspar) rather than the basalt of the earlier one.",
+    "action": "source removed: outside the Moon line; value hidden until a paper or agency record states it"
+  },
+  {
+    "document_id": "LD-041",
+    "document": "NASA Solar System Exploration — Luna 20, In Depth",
+    "kind": "web",
+    "url": "https://solarsystem.nasa.gov/missions/luna-20/in-depth/",
+    "action": "document removed: outside the Moon line"
+  }
+]

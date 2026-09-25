@@ -5,6 +5,25 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.22 — 2026-09-25 (staging)
+
+No Wikipedia, and only papers or agency records on the Moon; the loading screen and the Find pane carry the sponsor again; the 2D map shows its pins.
+
+**Sources** (owner, 2026-09-25: "please dont reference wikipedia. If the data is not peer-reviewed, dont include it")
+- Wikipedia and other wikis are gone as sources: 13 Moon documents and the 31 values they carried, 3 simulant references (none carried a value), and the Wikipedia links in the mineral-sourcing list. The apply steps now refuse a wiki page, and the export never publishes one (scripts/source_policy.py).
+- The Moon keeps peer-reviewed papers, the flying agency's own records (mission and technical reports, the Lunar Sample Compendium, the NSSDCA catalogue, LROC coordinate tables) and the Lunar Sourcebook. Web articles, educational pages and compilations (PSRD, NASA education pages, the Gasteiner CSV) are gone: 18 more values.
+- The Moon now shows 11 of its 19 sites: Apollo 11, 12 and 14, Chang'e 3, 4 and 6, and Surveyor 1 and 3 had their coordinates only from wikis. Agents are tracing each removed value to the paper behind it, and the sites return as their values are confirmed.
+
+**Interface**
+- The loading screen shows the database, its version, and its sponsor (CNES) and developer (The Spring Institute), and stays up until the first view is drawn (at least 1.5 s, at most 12 s), instead of an empty "Loading the view…". Switching to a view that is still loading shows the same, inside the view.
+- The Find pane ends with "Send us feedback" (comments, suggestions, or a new simulant you have made) and the two logos.
+- "Ask AI about this simulant" is back under the references, with a note that its answers are not checked by the database.
+- The 2D Earth map shows its pins at the default zoom again. Since v2.9.19 a window wider than the map made Leaflet's visible bounds run to longitudes like −3857°, so every pin counted as off screen until one zoomed in.
+
+**Process**
+- Crash scenarios check that the loading screen clears, that the Find pane has the feedback link and the logos, that the map has pins at its default zoom, and that Ask AI is there. The scenario runner waits for the loading screen instead of a fixed time.
+- The projection check covers points off the map.
+
 ## v2.9.21 — 2026-09-25 (staging)
 
 Fixes to the tables, and the last three lunar samples checked.

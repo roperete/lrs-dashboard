@@ -74,5 +74,13 @@
  },
  {
   "key": "Escape"
+ },
+ {
+  "clickSel": "tbody tr[data-row]",
+  "after": 1500
+ },
+ {
+  "expect": "[...document.querySelectorAll('a')].some(a => a.textContent.includes('Ask AI about this simulant') && a.href.includes('google.com/search'))",
+  "why": "the pane's references end with Ask AI (owner, 2026-09-25)"
  }
 ]

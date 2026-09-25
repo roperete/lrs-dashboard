@@ -29,6 +29,7 @@ from pathlib import Path
 
 from parse_value import parse_number
 from provenance import ensure_provenance_schema
+from source_policy import is_wiki_document
 
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "lrs.sqlite"
@@ -120,6 +121,9 @@ def apply_entity(con: sqlite3.Connection, reading: dict, check: dict, checked_on
     for r in reading.get("references", []):
         if r["temp_id"] not in ref_ok:
             note(field=None, reference=r.get("title"), outcome="document not confirmed to name this site or sample")
+            continue
+        if is_wiki_document(r):
+            note(field=None, reference=r.get("title"), outcome="document refused: a wiki page is not a source (cite the paper behind it)")
             continue
         did = _document(con, r, checked_on)
         docs[r["temp_id"]] = did

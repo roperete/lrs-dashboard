@@ -44,7 +44,12 @@ const evaluate = async expr => {
 await send('Page.enable'); await send('Runtime.enable');
 await send('Emulation.setDeviceMetricsOverride', { width: 1440, height: 900, deviceScaleFactor: 1, mobile: false });
 await send('Page.navigate', { url });
-await sleep(Number(process.env.WAIT || 9000));
+await sleep(Number(process.env.WAIT || 3000));
+// then until the branded loading screen has cleared (it waits for the first view, at most 12 s)
+for (let t = 0; t < 30; t++) {
+  if (await evaluate(`!document.querySelector('.fixed.inset-0[role=status]') && !!document.querySelector('header')`)) break;
+  await sleep(500);
+}
 
 for (const [i, st] of steps.entries()) {
   const where = `step ${i + 1} ${JSON.stringify(st).slice(0, 80)}`;

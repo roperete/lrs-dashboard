@@ -13,6 +13,8 @@ from __future__ import annotations
 import json
 import sqlite3
 
+from source_policy import is_accepted_moon_document
+
 SITE_FIELDS = ("date", "lat", "lng", "samples_returned", "description")
 GEOTECHNICAL = ("bulk_density", "friction_angle", "cohesion", "bearing_capacity")
 SAMPLE_FIELDS = ("landing_site", "coordinates", "type", "sample_description")
@@ -26,7 +28,11 @@ def _rows(con: sqlite3.Connection, sql: str) -> list[dict]:
 
 
 def export_moon(con: sqlite3.Connection) -> dict:
-    sources = _rows(con, "SELECT entity_id, field, document_id, location, quote, value_text FROM lunar_sources ORDER BY entity_id, field, document_id")
+    # only papers and agency records are sources (scripts/source_policy.py); a value cited only
+    # to a wiki, a web article or a compilation counts as unsourced
+    refused = {d["document_id"] for d in _rows(con, "SELECT * FROM lunar_documents") if not is_accepted_moon_document(d)}
+    sources = [s for s in _rows(con, "SELECT entity_id, field, document_id, location, quote, value_text FROM lunar_sources ORDER BY entity_id, field, document_id")
+               if s["document_id"] not in refused]
     sourced = {(s["entity_id"], s["field"]) for s in sources}
     hidden: list[dict] = []
 

@@ -66,6 +66,22 @@ for (const lat of [0, 30, 60, 80]) {
 }
 check(X_MAX > 1.7e7 && Y_MAX > 8.3e6, `extent ±${(X_MAX / 1e3).toFixed(0)} km × ±${(Y_MAX / 1e3).toFixed(0)} km`);
 
+// A point off the map (a window wider or taller than the map at low zoom) must still turn into
+// a real place: the nearest point on the outline. v2.9.19-21 returned longitudes like -3857°,
+// the visible bounds missed every pin, and the 2D map showed none until zoomed in.
+{
+  let bad: string[] = [];
+  for (const fx of [-2, -1.3, -1.01, 1.01, 1.3, 2]) for (const fy of [-2, -1.2, -1.01, 0, 0.5, 1.01, 1.2, 2]) {
+    const [lat, lng] = unproject(fx * X_MAX, fy * Y_MAX);
+    if (!(Math.abs(lat) <= 90 && Math.abs(lng) <= 180)) bad.push(`(${fx}, ${fy}) -> ${lat.toFixed(1)}, ${lng.toFixed(1)}`);
+  }
+  const [la, ln] = unproject(1.5 * X_MAX, 0);
+  check(bad.length === 0 && Math.abs(la) < 1e-9 && Math.abs(ln - 180) < 1e-9,
+    `points off the map fall on its edge${bad.length ? ': ' + bad.slice(0, 3).join('; ') : ''}`);
+  const [ta, tn] = unproject(0.2 * X_MAX, 1.5 * Y_MAX);
+  check(Math.abs(ta - 90) < 1e-9 && Math.abs(tn) <= 180, 'above the top edge is the north pole');
+}
+
 // 5. every site stays in the same country outline
 type Ring = [number, number][];
 const geo = JSON.parse(readFileSync(new URL('../public/data/countries.geojson', import.meta.url), 'utf8'));

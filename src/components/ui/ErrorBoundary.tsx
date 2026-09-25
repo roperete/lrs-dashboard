@@ -6,6 +6,8 @@ interface Props {
   scope: string; children: React.ReactNode; hint?: React.ReactNode;
   /** 'page' fills the screen; 'area' centres the message in a view; 'inline' sits in a panel. */
   compact?: boolean; area?: boolean;
+  /** Told when this part fails, so the loading screen does not wait for a view that cannot draw. */
+  onError?: () => void;
 }
 
 /**
@@ -25,6 +27,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
 
   componentDidCatch(error: Error, info: React.ErrorInfo) {
     console.error(`[${this.props.scope}]`, error, info.componentStack);
+    this.props.onError?.();
   }
 
   render() {

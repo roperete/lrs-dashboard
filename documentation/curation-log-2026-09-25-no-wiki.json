@@ -1,0 +1,481 @@
+[
+  {
+    "entity_id": "A11",
+    "field": "lat",
+    "document_id": "LD-004",
+    "document": "Apollo 11 Site",
+    "url": "https://the-moon.us/wiki/Apollo_11_Site",
+    "value_text": "0.67408°N (Davies and Colvin, 2000)",
+    "location": "the-moon.us Apollo 11 Site page",
+    "quote": "the precise coordinates at which the Lunar Module landed are: 0.67408°N, 23.47297°E",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "A11",
+    "field": "lng",
+    "document_id": "LD-004",
+    "document": "Apollo 11 Site",
+    "url": "https://the-moon.us/wiki/Apollo_11_Site",
+    "value_text": "23.47297°E (Davies and Colvin, 2000)",
+    "location": "the-moon.us Apollo 11 Site page",
+    "quote": "the precise coordinates at which the Lunar Module landed are: 0.67408°N, 23.47297°E",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "document_id": "LD-004",
+    "document": "Apollo 11 Site",
+    "url": "https://the-moon.us/wiki/Apollo_11_Site",
+    "action": "document removed: wiki page"
+  },
+  {
+    "entity_id": "14163",
+    "field": "coordinates:lat",
+    "document_id": "LD-010",
+    "document": "Apollo 14 Site",
+    "url": "https://the-moon.us/wiki/Apollo_14_Site",
+    "value_text": "3.64530°S (Davies & Colvin, 2000)",
+    "location": "title line",
+    "quote": "Lat: 3.64530°S, Long: 17.47136°W",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "14163",
+    "field": "coordinates:lng",
+    "document_id": "LD-010",
+    "document": "Apollo 14 Site",
+    "url": "https://the-moon.us/wiki/Apollo_14_Site",
+    "value_text": "17.47136°W (Davies & Colvin, 2000)",
+    "location": "title line",
+    "quote": "Long: 17.47136°W",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "A14",
+    "field": "lat",
+    "document_id": "LD-010",
+    "document": "Apollo 14 Site",
+    "url": "https://the-moon.us/wiki/Apollo_14_Site",
+    "value_text": "3.64530°S (Davies and Colvin, 2000)",
+    "location": "the-moon.us Apollo 14 Site page, title line",
+    "quote": "Lat: 3.64530°S, Long: 17.47136°W",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "A14",
+    "field": "lng",
+    "document_id": "LD-010",
+    "document": "Apollo 14 Site",
+    "url": "https://the-moon.us/wiki/Apollo_14_Site",
+    "value_text": "17.47136°W (Davies and Colvin, 2000)",
+    "location": "the-moon.us Apollo 14 Site page, title line",
+    "quote": "Lat: 3.64530°S, Long: 17.47136°W",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "document_id": "LD-010",
+    "document": "Apollo 14 Site",
+    "url": "https://the-moon.us/wiki/Apollo_14_Site",
+    "action": "document removed: wiki page"
+  },
+  {
+    "entity_id": "A12",
+    "field": "lat",
+    "document_id": "LD-016",
+    "document": "Apollo 12 Site (wiki page, coordinates per Davies and Colvin, 2000)",
+    "url": "https://the-moon.us/wiki/Apollo_12_Site",
+    "value_text": "3.01239°S (Davies and Colvin, 2000)",
+    "location": "the-moon.us Apollo 12 Site page, title line",
+    "quote": "Lat: 3.01239°S, Long: 23.42157°W",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "A12",
+    "field": "lng",
+    "document_id": "LD-016",
+    "document": "Apollo 12 Site (wiki page, coordinates per Davies and Colvin, 2000)",
+    "url": "https://the-moon.us/wiki/Apollo_12_Site",
+    "value_text": "23.42157°W (Davies and Colvin, 2000)",
+    "location": "the-moon.us Apollo 12 Site page, title line",
+    "quote": "Lat: 3.01239°S, Long: 23.42157°W",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "document_id": "LD-016",
+    "document": "Apollo 12 Site (wiki page, coordinates per Davies and Colvin, 2000)",
+    "url": "https://the-moon.us/wiki/Apollo_12_Site",
+    "action": "document removed: wiki page"
+  },
+  {
+    "document_id": "LD-037",
+    "document": "Wikipedia — Luna 16 (raw wikitext)",
+    "url": "https://en.wikipedia.org/wiki/Luna_16",
+    "action": "document removed: wiki page"
+  },
+  {
+    "document_id": "LD-039",
+    "document": "Wikipedia — Luna 17 (raw wikitext)",
+    "url": "https://en.wikipedia.org/wiki/Luna_17",
+    "action": "document removed: wiki page"
+  },
+  {
+    "document_id": "LD-042",
+    "document": "Wikipedia — Luna 21 (raw wikitext)",
+    "url": "https://en.wikipedia.org/wiki/Luna_21",
+    "action": "document removed: wiki page"
+  },
+  {
+    "entity_id": "S1",
+    "field": "lat",
+    "document_id": "LD-045",
+    "document": "Surveyor 1",
+    "url": "https://en.wikipedia.org/wiki/Surveyor_1",
+    "value_text": "2.474°S",
+    "location": "Infobox, interplanetary lander component: location = Lunar coords 2.474 S 43.339 W",
+    "quote": "location = {{Lunar coords and quad cat|2.474|S|43.339|W}}",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "S1",
+    "field": "lng",
+    "document_id": "LD-045",
+    "document": "Surveyor 1",
+    "url": "https://en.wikipedia.org/wiki/Surveyor_1",
+    "value_text": "43.339°W",
+    "location": "Infobox, interplanetary lander component",
+    "quote": "location = {{Lunar coords and quad cat|2.474|S|43.339|W}}",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "S1",
+    "field": "description",
+    "document_id": "LD-045",
+    "document": "Surveyor 1",
+    "url": "https://en.wikipedia.org/wiki/Surveyor_1",
+    "value_text": null,
+    "location": "Science-instruments section",
+    "quote": "These spacecraft also acquired data on the radar reflectivity of the lunar surface, the load-bearing strength of the lunar surface, and the temperatures for use in the analysis of the lunar surface temperatures.",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "document_id": "LD-045",
+    "document": "Surveyor 1",
+    "url": "https://en.wikipedia.org/wiki/Surveyor_1",
+    "action": "document removed: wiki page"
+  },
+  {
+    "entity_id": "S3",
+    "field": "date",
+    "document_id": "LD-047",
+    "document": "Surveyor 3",
+    "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+    "value_text": "April 20, 1967, 00:04:53 UTC",
+    "location": "Infobox, interplanetary lander component",
+    "quote": "arrival_date = April 20, 1967, 00:04:53 UTC",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "S3",
+    "field": "lat",
+    "document_id": "LD-047",
+    "document": "Surveyor 3",
+    "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+    "value_text": "3.01612°S (Wikipedia); -3.0162 (LROC/Wagner et al. 2017, ME datum)",
+    "location": "Infobox, interplanetary lander component",
+    "quote": "location = {{Lunar coords and quad cat|3.01612|S|23.41791|W}}",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "S3",
+    "field": "lng",
+    "document_id": "LD-047",
+    "document": "Surveyor 3",
+    "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+    "value_text": "23.41791°W (Wikipedia); 336.5820°E = 23.4180°W (LROC/Wagner et al. 2017)",
+    "location": "Infobox, interplanetary lander component",
+    "quote": "location = {{Lunar coords and quad cat|3.01612|S|23.41791|W}}",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "S3",
+    "field": "description",
+    "document_id": "LD-047",
+    "document": "Surveyor 3",
+    "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+    "value_text": null,
+    "location": "Lead section",
+    "quote": "Surveyor 3 was visited by Apollo 12 astronauts Pete Conrad and Alan Bean in November 1969, and remains the only probe visited by humans on another world.",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "document_id": "LD-047",
+    "document": "Surveyor 3",
+    "url": "https://en.wikipedia.org/wiki/Surveyor_3",
+    "action": "document removed: wiki page"
+  },
+  {
+    "entity_id": "CE3",
+    "field": "date",
+    "document_id": "LD-048",
+    "document": "Chang'e 3",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_3",
+    "value_text": "2013-12-14, 13:11:07 UTC",
+    "location": "Infobox, lander component (arrival_date)",
+    "quote": "arrival_date = {{start date|df=yes|2013|12|14|13|11|7=Z}}",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "CE3",
+    "field": "lat",
+    "document_id": "LD-048",
+    "document": "Chang'e 3",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_3",
+    "value_text": "44.1214°N",
+    "location": "Infobox, lander component (location)",
+    "quote": "location = [[Mare Imbrium]] {{coords|44.1214|N|19.5116|W|globe:moon|...}}",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "CE3",
+    "field": "lng",
+    "document_id": "LD-048",
+    "document": "Chang'e 3",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_3",
+    "value_text": "19.5116°W",
+    "location": "Infobox, lander component (location)",
+    "quote": "location = [[Mare Imbrium]] {{coords|44.1214|N|19.5116|W|globe:moon|...}}",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "CE3",
+    "field": "description",
+    "document_id": "LD-048",
+    "document": "Chang'e 3",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_3",
+    "value_text": null,
+    "location": "Overview section",
+    "quote": "The planned landing site was Sinus Iridum, a lava-filled crater 249 km (155 mi) in diameter. The actual landing took place on Mare Imbrium.",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "document_id": "LD-048",
+    "document": "Chang'e 3",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_3",
+    "action": "document removed: wiki page"
+  },
+  {
+    "entity_id": "CE4",
+    "field": "date",
+    "document_id": "LD-049",
+    "document": "Chang'e 4",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_4",
+    "value_text": "3 January 2019, 02:26 UTC",
+    "location": "Infobox, interplanetary lander component (arrival_date)",
+    "quote": "arrival_date = 3 January 2019, 02:26 UTC",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "CE4",
+    "field": "lat",
+    "document_id": "LD-049",
+    "document": "Chang'e 4",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_4",
+    "value_text": "45.4446°S",
+    "location": "Landing-site section",
+    "quote": "The selenographic coordinates of the landing site are 177.5991°E, 45.4446°S, at an elevation of -5935 m.",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "CE4",
+    "field": "lng",
+    "document_id": "LD-049",
+    "document": "Chang'e 4",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_4",
+    "value_text": "177.5991°E",
+    "location": "Landing-site section",
+    "quote": "The selenographic coordinates of the landing site are 177.5991°E, 45.4446°S, at an elevation of -5935 m.",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "CE4",
+    "field": "description",
+    "document_id": "LD-049",
+    "document": "Chang'e 4",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_4",
+    "value_text": null,
+    "location": "Infobox location field; Landing-site section",
+    "quote": "location = Spatio Tianhe within Von Kármán crater in the South Pole-Aitken Basin. [...] The Yutu-2 rover was deployed about 12 hours after the landing.",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "document_id": "LD-049",
+    "document": "Chang'e 4",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_4",
+    "action": "document removed: wiki page"
+  },
+  {
+    "entity_id": "CE5",
+    "field": "date",
+    "document_id": "LD-050",
+    "document": "Chang'e 5",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_5",
+    "value_text": "1 December 2020, 15:11 UTC",
+    "location": "Infobox, interplanetary lander component (arrival_date)",
+    "quote": "arrival_date = 1 December 2020 15:11 UTC",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "CE5",
+    "field": "samples_returned",
+    "document_id": "LD-050",
+    "document": "Chang'e 5",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_5",
+    "value_text": "1731 g (1,731 grams)",
+    "location": "Infobox (sample_mass) and History section",
+    "quote": "sample_mass = {{cvt|1731|g}} ... title=China's Chang'e-5 retrieves 1,731 grams of moon samples",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "CE5",
+    "field": "description",
+    "document_id": "LD-050",
+    "document": "Chang'e 5",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_5",
+    "value_text": null,
+    "location": "Landing-site section",
+    "quote": "This area is characterized by some of the youngest mare basalts on the Moon (~1.21 billion years old), with elevated titanium, thorium, and olivine abundances, which have never been sampled by the American or Soviet missions.",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "document_id": "LD-050",
+    "document": "Chang'e 5",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_5",
+    "action": "document removed: wiki page"
+  },
+  {
+    "entity_id": "CE6",
+    "field": "date",
+    "document_id": "LD-051",
+    "document": "Chang'e 6",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_6",
+    "value_text": "1 June 2024, 22:23:16 UTC",
+    "location": "Infobox, lander component (arrival_date)",
+    "quote": "arrival_date = 1 June 2024 22:23:16 UTC",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "CE6",
+    "field": "lat",
+    "document_id": "LD-051",
+    "document": "Chang'e 6",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_6",
+    "value_text": "41.6385°S",
+    "location": "Infobox, lander component (location)",
+    "quote": "location = Southern mare of Apollo Basin {{Lunar coords|41.6385|S|153.9852|W}}",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "CE6",
+    "field": "lng",
+    "document_id": "LD-051",
+    "document": "Chang'e 6",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_6",
+    "value_text": "153.9852°W",
+    "location": "Infobox, lander component (location)",
+    "quote": "location = Southern mare of Apollo Basin {{Lunar coords|41.6385|S|153.9852|W}}",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "document_id": "LD-051",
+    "document": "Chang'e 6",
+    "url": "https://en.wikipedia.org/wiki/Chang%27e_6",
+    "action": "document removed: wiki page"
+  },
+  {
+    "entity_id": "CH3",
+    "field": "date",
+    "document_id": "LD-053",
+    "document": "Chandrayaan-3",
+    "url": "https://en.wikipedia.org/wiki/Chandrayaan-3",
+    "value_text": "August 23, 2023 (14:34 UTC per R2; 12:33 UTC per R1)",
+    "location": "Lead section",
+    "quote": "It entered lunar orbit on 5 August, and touched down near the lunar south pole, at 69°S, on 23 August 2023 at 18:04 IST (12:33 UTC).",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "entity_id": "CH3",
+    "field": "description",
+    "document_id": "LD-053",
+    "document": "Chandrayaan-3",
+    "url": "https://en.wikipedia.org/wiki/Chandrayaan-3",
+    "value_text": null,
+    "location": "Lead section",
+    "quote": "The mission consists of Vikram, a lunar lander, and Pragyan, a lunar rover, as replacements for the equivalents on Chandrayaan-2... and touched down near the lunar south pole, at 69°S.",
+    "action": "source removed: wiki page; value hidden until a paper states it"
+  },
+  {
+    "document_id": "LD-053",
+    "document": "Chandrayaan-3",
+    "url": "https://en.wikipedia.org/wiki/Chandrayaan-3",
+    "action": "document removed: wiki page"
+  },
+  {
+    "reference_id": "RN-S065-2",
+    "simulant_id": "S065",
+    "url": "https://en.wikipedia.org/wiki/Lunar_regolith_simulant",
+    "action": "reference removed: wiki page (no value cited it)"
+  },
+  {
+    "reference_id": "RN-S066-2",
+    "simulant_id": "S066",
+    "url": "https://en.wikipedia.org/wiki/Lunar_regolith_simulant",
+    "action": "reference removed: wiki page (no value cited it)"
+  },
+  {
+    "reference_id": "RN-S156-2",
+    "simulant_id": "S156",
+    "url": "https://en.wikipedia.org/wiki/Lunar_regolith_simulant",
+    "action": "reference removed: wiki page (no value cited it)"
+  },
+  {
+    "mineral": "Basalt (Glass-Rich)",
+    "column": "european_sources",
+    "was": "https://www.alexstrekeisen.it/english/vulc/palagonite.php; https://www.burg-stolpen.org/en/stolpen-castle/basalt/; https://de.wikipedia.org/wiki/Basalt#Mitteleuropa; https://www.steine-und-minerale.de/gesteine/b/basalt.html",
+    "now": "https://www.alexstrekeisen.it/english/vulc/palagonite.php; https://www.burg-stolpen.org/en/stolpen-castle/basalt/; https://www.steine-und-minerale.de/gesteine/b/basalt.html",
+    "action": "wiki links removed"
+  },
+  {
+    "mineral": "Hematite",
+    "column": "european_sources",
+    "was": "https://en.wikipedia.org/wiki/Kiruna_mine; https://www.mindat.org/locentries.php?p=292987&m=1856; https://lkab.com/en/what-we-do/our-products-and-services/#segment-676569fb-0c73-40d0-9206-cf9c8244f9c2",
+    "now": "https://www.mindat.org/locentries.php?p=292987&m=1856; https://lkab.com/en/what-we-do/our-products-and-services/#segment-676569fb-0c73-40d0-9206-cf9c8244f9c2",
+    "action": "wiki links removed"
+  },
+  {
+    "mineral": "Ilmenite",
+    "column": "european_sources",
+    "was": "Biggest producer in Europe is Norway (https://en.wikipedia.org/wiki/Tellnes_mine)",
+    "now": null,
+    "action": "wiki links removed"
+  },
+  {
+    "mineral": "Magnetite",
+    "column": "european_sources",
+    "was": "https://en.wikipedia.org/wiki/Kiruna_mine; https://www.mindat.org/min-2538.html",
+    "now": "https://www.mindat.org/min-2538.html",
+    "action": "wiki links removed"
+  },
+  {
+    "mineral": "Olivine",
+    "column": "european_sources",
+    "was": "https://greensand.com/en/pages/herkomst-olivijn?srsltid=AfmBOopZ7Gcb9JtDDJ_FulNBFs-w5o4TP1R9na_Z0USKo4wWz56q1XJw; https://en.wikipedia.org/wiki/Olivine#Norway; https://www.sibelco.com/en/materials/olivine",
+    "now": "https://greensand.com/en/pages/herkomst-olivijn?srsltid=AfmBOopZ7Gcb9JtDDJ_FulNBFs-w5o4TP1R9na_Z0USKo4wWz56q1XJw; https://www.sibelco.com/en/materials/olivine",
+    "action": "wiki links removed"
+  },
+  {
+    "mineral": "Pyrite",
+    "column": "european_sources",
+    "was": "https://en.wikipedia.org/wiki/Iberian_Pyrite_Belt; https://en.wikipedia.org/wiki/Pyh%C3%A4salmi_Mine; https://www.mindat.org/min-3314.html; https://www.mindat.org/min-3314.html; https://www.mindat.org/min-3314.html; https://www.mindat.org/min-3314.html",
+    "now": "https://www.mindat.org/min-3314.html; https://www.mindat.org/min-3314.html; https://www.mindat.org/min-3314.html; https://www.mindat.org/min-3314.html",
+    "action": "wiki links removed"
+  }
+]

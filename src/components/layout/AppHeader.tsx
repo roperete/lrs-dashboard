@@ -4,6 +4,7 @@ import {
   Map as MapIcon, Table2, PanelLeft, HelpCircle, MessageSquare,
 } from 'lucide-react';
 import { cn } from '../../utils/cn';
+import { FEEDBACK_URL } from '../brand/Credits';
 
 /** Height of the top bar; the side panes start below it (see TOP_BAR_OFFSET users). */
 export const TOP_BAR_HEIGHT = 'h-14';
@@ -79,7 +80,7 @@ export function AppHeader({
 
         {exportSlot}
 
-        <a href="https://thespringinstitute.com/contact-us/" target="_blank" rel="noopener noreferrer" aria-label="Feedback"
+        <a href={FEEDBACK_URL} target="_blank" rel="noopener noreferrer" aria-label="Feedback"
           className="hidden md:flex items-center justify-center w-10 h-10 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800" title="Feedback">
           <MessageSquare size={18} />
         </a>
