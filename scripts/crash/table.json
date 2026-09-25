@@ -1,0 +1,71 @@
+[
+ {
+  "click": "Table"
+ },
+ {
+  "eval": "(async () => { const heads = [...document.querySelectorAll('thead th button')]; for (const h of heads) { h.click(); await new Promise(r => setTimeout(r, 120)); h.click(); await new Promise(r => setTimeout(r, 120)); } return heads.length; })()",
+  "as": "sortsClicked"
+ },
+ {
+  "eval": "(() => { const r = [...document.querySelectorAll('tbody tr[data-row]')].find(r => r.children[1]?.innerText.trim() === \"Lunar90\"); r?.click(); return !!r; })()",
+  "as": "open_Lunar90"
+ },
+ {
+  "wait": 900
+ },
+ {
+  "eval": "(() => { const r = [...document.querySelectorAll('tbody tr[data-row]')].find(r => r.children[1]?.innerText.trim() === \"FEFU-1\"); r?.click(); return !!r; })()",
+  "as": "open_FEFU-1"
+ },
+ {
+  "wait": 900
+ },
+ {
+  "eval": "(() => { const r = [...document.querySelectorAll('tbody tr[data-row]')].find(r => r.children[1]?.innerText.trim() === \"GreenSpar\"); r?.click(); return !!r; })()",
+  "as": "open_GreenSpar"
+ },
+ {
+  "wait": 900
+ },
+ {
+  "eval": "(() => { const r = [...document.querySelectorAll('tbody tr[data-row]')].find(r => r.children[1]?.innerText.trim() === \"JSC-1A\"); r?.click(); return !!r; })()",
+  "as": "open_JSC-1A"
+ },
+ {
+  "wait": 900
+ },
+ {
+  "focus": "tbody tr[data-row]"
+ },
+ {
+  "key": "ArrowDown"
+ },
+ {
+  "key": "ArrowDown"
+ },
+ {
+  "key": "ArrowUp"
+ },
+ {
+  "key": "Enter"
+ },
+ {
+  "clickSel": "tbody tr[data-row] td:nth-child(16) button"
+ },
+ {
+  "eval": "(() => { const sel = document.querySelector('select'); if (!sel) return 'no select'; const set = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'value').set; const out = []; for (const o of sel.options) { set.call(sel, o.value); sel.dispatchEvent(new Event('change', { bubbles: true })); out.push(o.value || 'none'); } return out.join(','); })()",
+  "as": "lunarRefs"
+ },
+ {
+  "click": "Full comparison"
+ },
+ {
+  "wait": 1200
+ },
+ {
+  "key": "Escape"
+ },
+ {
+  "key": "Escape"
+ }
+]

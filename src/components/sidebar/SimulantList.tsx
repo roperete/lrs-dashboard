@@ -25,7 +25,7 @@ export function SimulantList({
 }: SimulantListProps) {
   if (planet === 'earth') {
     if (simulants.length === 0) {
-      return <div className="text-center py-8 text-slate-500 italic text-sm">No simulants found.</div>;
+      return <div className="text-center py-8 text-slate-400 italic text-sm">No simulants found.</div>;
     }
     return (
       <div className="space-y-2">
@@ -48,9 +48,9 @@ export function SimulantList({
                 <ArrowRightLeft size={14} />
               </button>
             </div>
-            <div className="flex items-center gap-2 text-xs text-slate-500">
+            <div className="flex items-center gap-2 text-xs text-slate-400">
               <MapPin size={12} /><span>{sim.country_code}</span>
-              <span className="text-slate-600">|</span>
+              <span className="text-slate-500">|</span>
               <span>{sim.type}</span>
             </div>
           </button>
@@ -60,7 +60,7 @@ export function SimulantList({
   }
 
   if (lunarSites.length === 0) {
-    return <div className="text-center py-8 text-slate-500 italic text-sm">No lunar missions found.</div>;
+    return <div className="text-center py-8 text-slate-400 italic text-sm">No lunar missions found.</div>;
   }
   return (
     <div className="space-y-2">
@@ -77,7 +77,7 @@ export function SimulantList({
               {site.mission}
             </h3>
           </div>
-          <div className="flex items-center gap-2 text-xs text-slate-500">
+          <div className="flex items-center gap-2 text-xs text-slate-400">
             <Rocket size={12} /><span>{site.date}</span>
           </div>
         </button>

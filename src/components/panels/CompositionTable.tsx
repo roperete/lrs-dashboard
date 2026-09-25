@@ -77,7 +77,7 @@ export function CompositionTable({ data, valueLabel, refLabel, decimals = 2, par
             <td className="py-2 px-3 text-slate-400" title={noTotalReason || (partial
               ? 'The source states only these components, or a table that does not add up to 100, so there is no total to show.'
               : 'Sum of the rows listed above')}>{noTotalReason ? 'No total' : partial ? 'Partial table' : 'Total'}</td>
-            <td className="py-2 px-3 text-right text-slate-500 font-mono">{partial ? '—' : <span className="text-slate-200">{fmt(total)}</span>}</td>
+            <td className="py-2 px-3 text-right text-slate-400 font-mono">{partial ? '—' : <span className="text-slate-200">{fmt(total)}</span>}</td>
             {refLabel && (
               <td className="py-2 px-3 text-right text-amber-400/70 font-mono">
                 {'\u2014'}

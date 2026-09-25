@@ -317,3 +317,35 @@ Left out, under "empty rather than wrong":
   Far Eastern Federal University, Vladivostok); GreenSpar sits in Anchorage, Alaska, filed
   under Hudson Resources, whose licence and deposit are in Greenland. Move them to a place a
   source states, or take them off the map?
+
+## Later on 2026-09-25: units, map sites, design, reference sites
+
+**Decided by the owner:** XP A16 is not added (only Lumina's own inquiry page mentions it, no
+data). Map sites "corrected to their source": GreenSpar moved to the White Mountain Anorthosite
+Project, Greenland (Gruener et al. 2020; EGDI record CRM25.MFO223). The design review was adopted
+as a whole ("I agree with the design agent; update the database accordingly").
+
+**FEFU-1 is off the map, for a decision.** The Moscow point was a placeholder that no document
+supports. The documents give three places, none stated as where FEFU-1 is made: the material
+comes from andesite-basalts of the **Gorely** (Kamchatka) and **Baranovskiy** (Primorsky Krai)
+volcanoes (Shichalin et al. 2024, the study the review cites for FEFU-1); the authors' address is
+the **Far Eastern Federal University, Russky Island, Vladivostok**. Place it at the university,
+at the volcanoes, or leave it off?
+
+**Lumina's country and map site stay empty.** Zémeny et al. mention visiting the Greenland mine
+but never say the products come from it (checker UNCERTAIN). Lumina's own site would settle it
+for the company, not for the product names.
+
+**Units check** (documentation/units-audit-2026-09-25.json; applied by
+scripts/curate_2026-09-25_units.py). Among the 35 composition findings the checker confirmed:
+several mineral tables are normative (calculated) rather than measured (CAS-1, EAC-1), or modal
+particle types (NU-LHT-1M/2M, OB-1); the tables now say so. Two cases need a source decision:
+JSC-1A and NU-LHT-1M give iron twice (total Fe and Fe(II)), shown as printed with no total; and
+EAC-1A's oxides now come from one batch only (a partial table).
+
+**Reference sites** (documentation/reference-sites-2026-09-25.md). The Streamlit "Lunar Regolith
+Database" is Gasteiner, Murdoch & D'Angelo (ISAE-SUPAERO, Toulouse; also CNES-funded;
+doi:10.1002/nag.70432; dataset doi:10.57745/NTSZ8G, Etalab 2.0) — the compilation this database
+imported early on. Worth contacting. Its best idea for us: citable releases (a DOI and licence
+per data version, CITATION.cff). Several of our old Moon soil values are averages of its rows
+that no document states; the Moon verification removes them.

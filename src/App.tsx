@@ -57,15 +57,11 @@ export default function App() {
   // The Find pane is open by default where there is room for it (review #5).
   const [isSidebarOpen, setIsSidebarOpen] = useState(() => window.innerWidth >= 1280);
   const [helpOpen, setHelpOpen] = useState(false);
-  const [isRotating, setIsRotating] = useState(true);
+  // Rotation makes thin points hard to click and ignores reduced-motion settings (review #15): off.
+  const [isRotating, setIsRotating] = useState(false);
   const isMobile = useIsMobile();
 
   // Ensure splash screen shows for at least 2 seconds
-  const [splashDone, setSplashDone] = useState(false);
-  useEffect(() => {
-    const timer = setTimeout(() => setSplashDone(true), 2000);
-    return () => clearTimeout(timer);
-  }, []);
 
   const mapState = useMapState();
   const panelState = usePanelState();
@@ -120,6 +116,18 @@ export default function App() {
     return lunarSites.filter(site => (programmes.length === 0 || programmes.includes(site.type))
       && (!q || `${site.name} ${site.mission}`.toLowerCase().includes(q)));
   }, [lunarSites, programmes, filterState.searchQuery]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape' || helpOpen) return;          // Help closes itself
+      if (panelState.showComparison) panelState.setShowComparison(false);
+      else if (panelState.showCrossComparison) panelState.setShowCrossComparison(false);
+      else if (panelState.panel1.open) panelState.closePanel();
+      else if (panelState.selectedLunarSiteId) panelState.setSelectedLunarSiteId(null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [helpOpen, panelState]);
 
   // A detail pane is open on the right (the table narrows and the toolbar moves left of it).
   const paneOpen = (!!selectedSimulant && panelState.panel1.open) || !!selectedLunarSite;
@@ -220,24 +228,24 @@ export default function App() {
   const handleSimulantClick = useCallback((id: string, lat: number, lon: number) => {
     panelState.selectSimulant(id);
     mapState.setMapCenter([lat, lon]);
-    mapState.setMapZoom(10);
+    mapState.setMapZoom(Math.max(mapState.mapZoom, 4));
     flyTo(lat, lon, 1.2);
   }, [panelState, mapState, flyTo]);
 
   const handleLunarSiteClick = useCallback((id: string, lat: number, lng: number) => {
     panelState.setSelectedLunarSiteId(id);
     mapState.setMapCenter([lat, lng]);
-    mapState.setMapZoom(6);
+    mapState.setMapZoom(Math.max(mapState.mapZoom, 4));
     flyTo(lat, lng, 1.2);
   }, [panelState, mapState, flyTo]);
 
+  // Switching planet keeps the view the user is in (review #14).
   const handlePlanetChange = useCallback((p: 'earth' | 'moon') => {
     mapState.setPlanet(p);
-    mapState.setViewMode('globe');
   }, [mapState]);
 
 
-  if (loading || !splashDone) return <LoadingScreen />;
+  if (loading) return <LoadingScreen />;
 
   return (
     <div className="h-dvh w-screen bg-slate-950 overflow-hidden relative font-sans text-slate-200">
@@ -298,7 +306,7 @@ export default function App() {
           <ErrorBoundary area key={`${mapState.viewMode}-${mapState.planet}`}
             scope={mapState.viewMode === 'globe' ? 'the 3D globe' : 'the 2D map'}
             hint={mapState.viewMode === 'globe' ? 'Your browser may not be able to draw 3D graphics (WebGL). The 2D map and the table work without it: switch view at the top.' : undefined}>
-          <Suspense fallback={<LoadingScreen />}>
+          <Suspense fallback={<div className="flex h-full items-center justify-center text-sm text-slate-400" role="status">Loading the view…</div>}>
             {mapState.viewMode === 'globe' ? (
               <GlobeView
                 ref={globeRef}
@@ -333,7 +341,7 @@ export default function App() {
           className="fixed z-[60] bg-slate-900/95 backdrop-blur-xl border border-slate-700 rounded-xl shadow-2xl p-2 min-w-[220px] max-h-[300px] overflow-y-auto"
           style={{ left: Math.min(clusterPopover.x + 12, window.innerWidth - 240), top: clusterPopover.y - 8 }}
         >
-          <div className="text-[10px] text-slate-500 uppercase tracking-wider font-bold px-2 py-1.5 border-b border-slate-800 mb-1">
+          <div className="text-[10px] text-slate-400 uppercase tracking-wider font-bold px-2 py-1.5 border-b border-slate-800 mb-1">
             {clusterPopover.simulants.length} simulants at this location
           </div>
           {clusterPopover.simulants.map((s: any) => (
@@ -341,7 +349,7 @@ export default function App() {
               className="w-full text-left px-2 py-2 rounded-lg hover:bg-slate-800 transition-colors flex items-center gap-2"
               onClick={() => { handleGlobePointClick(s); setClusterPopover(null); }}>
               <span className={`font-medium text-sm ${s.type?.toLowerCase().includes('highland') ? 'text-cyan-400' : 'text-emerald-400'}`}>{s.name}</span>
-              <span className="text-slate-500 text-xs ml-auto">{s.type}</span>
+              <span className="text-slate-400 text-xs ml-auto">{s.type}</span>
             </button>
           ))}
         </div>
@@ -426,9 +434,10 @@ export default function App() {
           }}
 
           onHome={() => {
-            mapState.setMapCenter([46.6, 2.3]); // France/Europe
-            mapState.setMapZoom(4);
-            flyTo(46.6, 2.3, 2.5);
+            // the whole globe, on Earth and the Moon alike
+            mapState.setMapCenter([20, 0]);
+            mapState.setMapZoom(2);
+            flyTo(20, 0, 2.5);
           }}
           isRotating={isRotating}
           onToggleRotate={() => setIsRotating(r => !r)}
@@ -466,7 +475,10 @@ export default function App() {
           />
         )}
         {selectedLunarSite && (
-          <LunarSitePanel site={selectedLunarSite} citations={lunarCitationsFor(selectedLunarSite.id)} onClose={() => panelState.setSelectedLunarSiteId(null)} />
+          <LunarSitePanel site={selectedLunarSite} citations={lunarCitationsFor(selectedLunarSite.id)}
+            replicas={simulants.filter(sim => new RegExp(`\\b${selectedLunarSite.mission.replace(/[.*+?^${}()|[\]\\']/g, '.?')}\\b`, 'i').test(sim.lunar_sample_reference || ''))}
+            onSelectSimulant={(id) => { panelState.setSelectedLunarSiteId(null); mapState.setPlanet('earth'); panelState.selectSimulant(id); }}
+            onClose={() => panelState.setSelectedLunarSiteId(null)} />
         )}
         {panelState.showComparison && compareSimulants.length >= 2 && (
           <ErrorBoundary scope="the comparison" compact key="comparison">

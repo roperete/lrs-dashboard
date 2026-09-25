@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from provenance import ensure_provenance_schema  # noqa: E402
-from apply_moon import apply_results  # noqa: E402
+from apply_moon import apply_results, to_moon_unit  # noqa: E402
 
 
 def ref(tid, title, path, quote="Apollo 11 landed", kind="paper"):
@@ -106,6 +106,16 @@ class ApplyMoonTests(unittest.TestCase):
         log = self.run_one("A11", vals, {v["field"]: ("CONFIRMED", {}) for v in vals})
         self.assertNotIn("description", self.sources("A11"))
         self.assertTrue(any(e["field"] == "description" and e.get("needs_review") for e in log))
+
+    def test_coordinates_and_units_as_documents_write_them(self):
+        self.assertEqual(to_moon_unit("lat", "26.13239 N latitude (Lunar Module; LRO-derived, DE 421)"), 26.13239)
+        self.assertEqual(to_moon_unit("lng", "3.63330 E longitude (Lunar Module)"), 3.6333)
+        self.assertEqual(to_moon_unit("lat", "8.9730 S"), -8.973)
+        self.assertEqual(to_moon_unit("lng", "-23.4219"), -23.4219)
+        self.assertIsNone(to_moon_unit("lat", "3.01612°S (Wikipedia); -3.0162 (LROC)"))     # two values: not one
+        self.assertEqual(to_moon_unit("bulk_density", "1940 ± 10 kg m⁻³"), 1.94)
+        self.assertEqual(to_moon_unit("cohesion", "0.17 kN/m2"), 0.17)
+        self.assertIsNone(to_moon_unit("friction_angle", "between 30° and 40°"))
 
     def test_applying_twice_changes_nothing_more(self):
         args = ("A11", [val("samples_returned", "21.5 kg", "differs", "21.55 kg")], {"samples_returned": ("CONFIRMED", {})})

@@ -51,12 +51,12 @@ export function MapToolbar({
       paneOpen ? "right-2 sm:right-[466px]" : "right-2 md:right-6")}>
       <div className="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-1.5 md:p-2 rounded-xl md:rounded-2xl flex flex-col gap-1.5 md:gap-2">
         <button onClick={toggleFullscreen}
-          className={btnClass} title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}>
+          className={btnClass} title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'} aria-label={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}>
           {isFullscreen ? <Minimize className="w-4 h-4 md:w-5 md:h-5" /> : <Maximize className="w-4 h-4 md:w-5 md:h-5" />}
         </button>
         {planet === 'earth' && viewMode === 'globe' && onToggleEarthTexture && (
           <button onClick={onToggleEarthTexture}
-            className={btnClass} title={earthTexture === 'night' ? 'Switch to Day' : 'Switch to Night'}>
+            className={btnClass} title={earthTexture === 'night' ? 'Switch to Day' : 'Switch to Night'} aria-label={earthTexture === 'night' ? 'Switch to Day' : 'Switch to Night'}>
             {earthTexture === 'night' ? <Sun className="w-4 h-4 md:w-5 md:h-5" /> : <Moon className="w-4 h-4 md:w-5 md:h-5" />}
           </button>
         )}
@@ -78,22 +78,22 @@ export function MapToolbar({
           </div>
         )}
         <button onClick={onHome}
-          className={btnClass} title="Reset View">
+          className={btnClass} title="Reset View" aria-label="Reset View">
           <Home className="w-4 h-4 md:w-5 md:h-5" />
         </button>
         {viewMode === 'globe' && onToggleRotate && (
           <button onClick={onToggleRotate}
             className={cn(btnClass, isRotating && 'text-emerald-400 bg-slate-700')}
-            title={isRotating ? 'Stop Rotation' : 'Auto-Rotate'}>
+            title={isRotating ? 'Stop Rotation' : 'Auto-Rotate'} aria-label={isRotating ? 'Stop Rotation' : 'Auto-Rotate'}>
             <Orbit className="w-4 h-4 md:w-5 md:h-5" />
           </button>
         )}
       </div>
       <div className="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-1.5 md:p-2 rounded-xl md:rounded-2xl flex flex-col gap-1.5 md:gap-2">
-        <button onClick={onZoomIn} className={btnClass} title="Zoom In">
+        <button onClick={onZoomIn} className={btnClass} title="Zoom In" aria-label="Zoom In">
           <Plus className="w-4 h-4 md:w-5 md:h-5" />
         </button>
-        <button onClick={onZoomOut} className={btnClass} title="Zoom Out">
+        <button onClick={onZoomOut} className={btnClass} title="Zoom Out" aria-label="Zoom Out">
           <Minus className="w-4 h-4 md:w-5 md:h-5" />
         </button>
       </div>

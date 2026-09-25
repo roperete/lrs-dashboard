@@ -36,9 +36,9 @@ export function MineralSourcingSection({ compositions, mineralSourcingByMineral 
                 className="w-full flex items-center justify-between p-2.5 hover:bg-slate-700/30 transition-colors text-left"
               >
                 <div className="flex items-center gap-2">
-                  {isOpen ? <ChevronDown size={14} className="text-slate-500" /> : <ChevronRight size={14} className="text-slate-500" />}
+                  {isOpen ? <ChevronDown size={14} className="text-slate-400" /> : <ChevronRight size={14} className="text-slate-400" />}
                   <span className="text-sm font-medium text-slate-200">{name}</span>
-                  <span className="text-xs text-slate-500">
+                  <span className="text-xs text-slate-400">
                     {composition.value_pct || composition.percentage}%
                   </span>
                 </div>
@@ -51,25 +51,25 @@ export function MineralSourcingSection({ compositions, mineralSourcingByMineral 
                 <div className="px-3 pb-3 pt-1 space-y-2 border-t border-slate-700/30">
                   {sourcing.source_mineral && (
                     <div>
-                      <p className="text-[10px] text-slate-500 uppercase font-bold">Source Mineral</p>
+                      <p className="text-[10px] text-slate-400 uppercase font-bold">Source Mineral</p>
                       <p className="text-xs text-slate-300">{sourcing.source_mineral}</p>
                     </div>
                   )}
                   {sourcing.chemistry && (
                     <div>
-                      <p className="text-[10px] text-slate-500 uppercase font-bold">Chemistry</p>
+                      <p className="text-[10px] text-slate-400 uppercase font-bold">Chemistry</p>
                       <p className="text-xs text-slate-300">{sourcing.chemistry}</p>
                     </div>
                   )}
                   {sourcing.description_simple && (
                     <div>
-                      <p className="text-[10px] text-slate-500 uppercase font-bold">Description</p>
+                      <p className="text-[10px] text-slate-400 uppercase font-bold">Description</p>
                       <p className="text-xs text-slate-300">{sourcing.description_simple}</p>
                     </div>
                   )}
                   {(sourcing.mining_locations || sourcing.mineral_locations) && (
                     <div>
-                      <p className="text-[10px] text-slate-500 uppercase font-bold flex items-center gap-1">
+                      <p className="text-[10px] text-slate-400 uppercase font-bold flex items-center gap-1">
                         <MapPin size={10} /> Mining Locations
                       </p>
                       <p className="text-xs text-slate-300">{sourcing.mining_locations || sourcing.mineral_locations}</p>
@@ -77,13 +77,13 @@ export function MineralSourcingSection({ compositions, mineralSourcingByMineral 
                   )}
                   {sourcing.supplier && (
                     <div>
-                      <p className="text-[10px] text-slate-500 uppercase font-bold">Supplier</p>
+                      <p className="text-[10px] text-slate-400 uppercase font-bold">Supplier</p>
                       <p className="text-xs text-emerald-400">{sourcing.supplier}</p>
                     </div>
                   )}
                   {sourcing.ethical_compliance && (
                     <div>
-                      <p className="text-[10px] text-slate-500 uppercase font-bold">Compliance</p>
+                      <p className="text-[10px] text-slate-400 uppercase font-bold">Compliance</p>
                       <p className="text-xs text-slate-300">{sourcing.ethical_compliance}</p>
                     </div>
                   )}

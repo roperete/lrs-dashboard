@@ -1,0 +1,51 @@
+[
+ {
+  "focus": "input[type=search]"
+ },
+ {
+  "type": "JSC"
+ },
+ {
+  "eval": "document.querySelectorAll('[aria-label=\"Find simulants\"] ul li').length",
+  "as": "afterJSC"
+ },
+ {
+  "focus": "input[type=search]"
+ },
+ {
+  "type": "(*[?\\\\"
+ },
+ {
+  "expect": "!!document.querySelector('header')",
+  "why": "odd characters in search"
+ },
+ {
+  "eval": "(() => { const i = document.querySelector('input[type=search]'); const set = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set; set.call(i, ''); i.dispatchEvent(new Event('input', { bubbles: true })); return true; })()",
+  "as": "cleared"
+ },
+ {
+  "eval": "(() => { let n = 0; for (const b of document.querySelectorAll('[aria-label=\"Find simulants\"] fieldset button')) { b.click(); n++; } return n; })()",
+  "as": "chipsOn"
+ },
+ {
+  "wait": 800
+ },
+ {
+  "eval": "(() => { for (const b of document.querySelectorAll('[aria-label=\"Find simulants\"] fieldset button[aria-pressed=true]')) b.click(); return true; })()",
+  "as": "chipsOff"
+ },
+ {
+  "eval": "(() => { const set = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set; let n = 0; for (const i of document.querySelectorAll('[aria-label=\"Find simulants\"] input[type=number]')) { set.call(i, n % 2 ? '99999' : '-5'); i.dispatchEvent(new Event('input', { bubbles: true })); n++; } return n; })()",
+  "as": "rangesSet"
+ },
+ {
+  "wait": 800
+ },
+ {
+  "expect": "!!document.querySelector('header')",
+  "why": "extreme ranges"
+ },
+ {
+  "click": "Clear all"
+ }
+]

@@ -33,10 +33,10 @@ export function ToggleButtonGroup({ options, value, onChange, size = 'sm' }: Tog
             "flex items-center gap-1 rounded-md transition-all",
             size === 'sm' ? "px-2 py-1 text-[10px]" : "px-3 py-1.5 text-xs",
             opt.disabled
-              ? "text-slate-600 cursor-not-allowed line-through decoration-slate-600"
+              ? "text-slate-500 cursor-not-allowed line-through decoration-slate-600"
               : value === opt.value
                 ? "bg-emerald-500/20 text-emerald-400 font-bold"
-                : "text-slate-500 hover:text-slate-300"
+                : "text-slate-400 hover:text-slate-300"
           )}>
           {opt.icon}
           {opt.label}

@@ -183,7 +183,7 @@ function ChartSection({ title, icon, rows, names }: { title: string; icon: React
 }
 
 function ValueCell({ cell }: { cell: Cell; key?: React.Key }) {
-  if (cell.value == null) return <td className="py-2 px-4 text-right font-mono text-slate-500">—</td>;
+  if (cell.value == null) return <td className="py-2 px-4 text-right font-mono text-slate-400">—</td>;
   return (
     <td className="py-2 px-4 text-right font-mono text-slate-200 whitespace-nowrap">
       {cell.value.toFixed(2)}
@@ -221,7 +221,7 @@ function ComparisonTable({ title, icon, rows, names }: { title: string; icon: Re
                   {row.cells.map((c, j) => <ValueCell key={j} cell={c} />)}
                   {pair && (
                     <td className={cn("py-2 px-4 text-right font-mono text-xs",
-                      diff == null ? "text-slate-500" : diff > 0 ? "text-emerald-400" : diff < 0 ? "text-blue-400" : "text-slate-400")}>
+                      diff == null ? "text-slate-400" : diff > 0 ? "text-emerald-400" : diff < 0 ? "text-blue-400" : "text-slate-400")}>
                       {diff == null ? '—' : `${diff > 0 ? '+' : diff < 0 ? '\u2212' : ''}${Math.abs(diff).toFixed(2)}`}
                     </td>
                   )}

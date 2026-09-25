@@ -37,7 +37,7 @@ export function CompareTray({ simulants, onRemove, onCompare, onExport, onClear,
           </span>
         ))}
         {simulants.length < MAX_COMPARE && (
-          <span className="text-[11px] text-slate-500">{ready ? `up to ${MAX_COMPARE}` : 'add one more'}</span>
+          <span className="text-[11px] text-slate-400">{ready ? `up to ${MAX_COMPARE}` : 'add one more'}</span>
         )}
         <button onClick={onCompare} disabled={!ready}
           className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-400 text-slate-950 rounded-lg text-xs font-semibold transition-colors">

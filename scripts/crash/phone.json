@@ -1,0 +1,32 @@
+[
+ {
+  "viewport": [
+   390,
+   844,
+   true
+  ]
+ },
+ {
+  "click": "Table"
+ },
+ {
+  "clickSel": "tbody tr[data-row] td:nth-child(2)",
+  "after": 1200
+ },
+ {
+  "click": "Globe"
+ },
+ {
+  "click": "Moon"
+ },
+ {
+  "click": "Earth"
+ },
+ {
+  "viewport": [
+   1440,
+   900,
+   false
+  ]
+ }
+]

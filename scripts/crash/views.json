@@ -1,0 +1,36 @@
+[
+ {
+  "click": "Map"
+ },
+ {
+  "click": "Table"
+ },
+ {
+  "click": "Globe"
+ },
+ {
+  "click": "Moon"
+ },
+ {
+  "click": "Map"
+ },
+ {
+  "click": "Table"
+ },
+ {
+  "click": "Globe"
+ },
+ {
+  "click": "Earth"
+ },
+ {
+  "click": "Help"
+ },
+ {
+  "key": "Escape"
+ },
+ {
+  "expect": "!document.querySelector('[aria-label=\"Quick guide\"]')",
+  "why": "Escape closed Help"
+ }
+]

@@ -123,7 +123,29 @@ export function SimulantTable({
 
   return (
     <div className="h-full overflow-auto scrollbar-thin relative">
-      <table className="w-full text-sm border-collapse">
+      {/* Phones: a list, not 16 columns scrolled sideways (review #23) */}
+      <ul className="sm:hidden divide-y divide-slate-800">
+        {sorted.map(s => {
+          const isSelected = s.simulant_id === selectedSimulantId;
+          const key = [['ρ', s.bulk_density, 'g/cm³'], ['D50', s.particle_size_d50, 'µm'], ['φ', s.friction_angle, '°']]
+            .filter(([, v]) => v != null && v !== '').map(([l, v, u]) => `${l} ${v} ${u}`).join(' · ');
+          return (
+            <li key={s.simulant_id} className={cn("flex items-center gap-3 px-3 py-2.5", isSelected && "bg-emerald-950")}>
+              <input type="checkbox" checked={compare.has(s.simulant_id)} onChange={() => onToggleCompare(s.simulant_id)}
+                aria-label={`Add ${s.name} to the comparison`} className="accent-emerald-500 w-5 h-5" />
+              <button onClick={() => onSelectSimulant(s.simulant_id)} className="flex-1 min-w-0 text-left">
+                <span className={cn("block text-sm font-medium", isSelected ? "text-emerald-400" : "text-slate-200")}>{s.name}</span>
+                <span className="block text-xs text-slate-400 truncate">{[s.type, getCountryDisplay(s.country_code)].filter(Boolean).join(' · ') || DASH}</span>
+                {key && <span className="block text-xs text-slate-300 font-mono truncate">{key}</span>}
+              </button>
+              <span className="text-[11px] text-slate-400 whitespace-nowrap">
+                {chemicalBySimulant.has(s.simulant_id) ? 'Chem ' : ''}{compositionBySimulant.has(s.simulant_id) ? 'Min' : ''}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+      <table className="hidden sm:table w-full text-sm border-collapse">
         <thead>
           <tr className="border-b border-slate-700/50">
             <th scope="col" className={cn(headBase, "left-0 z-30 w-10 px-2")}><span className="sr-only">Compare</span></th>
@@ -156,7 +178,7 @@ export function SimulantTable({
                   aria-label={`Open ${s.name}'s ${what} in the pane`} className="text-emerald-400 hover:text-emerald-300">
                   <Check size={16} className="inline" />
                 </button>
-              : <span className="text-slate-600">{DASH}</span>;
+              : <span className="text-slate-500">{DASH}</span>;
             return (
               <tr key={s.simulant_id} data-row tabIndex={0} aria-selected={isSelected}
                 onClick={() => onSelectSimulant(s.simulant_id)} onKeyDown={(e) => onRowKey(e, i)}
@@ -185,9 +207,9 @@ export function SimulantTable({
                   {refs.length > 0
                     ? <button type="button" onClick={(e) => { e.stopPropagation(); onSelectSimulant(s.simulant_id, 'references'); }}
                         aria-label={`Open ${s.name}'s references in the pane`} className="text-slate-300 hover:text-white">
-                        {refs.length} <span className="text-slate-500">· {named} named</span>
+                        {refs.length} <span className="text-slate-400">· {named} named</span>
                       </button>
-                    : <span className="text-slate-600">{DASH}</span>}
+                    : <span className="text-slate-500">{DASH}</span>}
                 </td>
               </tr>
             );

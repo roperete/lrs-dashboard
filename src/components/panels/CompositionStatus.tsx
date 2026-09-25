@@ -118,7 +118,7 @@ export function DataSourceLine({ simulant }: { simulant: Simulant }) {
               title
             )}
           </p>
-          <p className="text-xs text-slate-500 mt-0.5">
+          <p className="text-xs text-slate-400 mt-0.5">
             {kindLabel}
             {simulant.datasheet_document_id ? ` · ${simulant.datasheet_document_id}` : ''}
             {simulant.datasheet_date ? ` · ${simulant.datasheet_date}` : ''}
@@ -126,7 +126,7 @@ export function DataSourceLine({ simulant }: { simulant: Simulant }) {
           </p>
           {simulant.datasheet_notes && (
             <details className="mt-1">
-              <summary className="text-[11px] text-slate-500 cursor-pointer hover:text-slate-300">
+              <summary className="text-[11px] text-slate-400 cursor-pointer hover:text-slate-300">
                 Methods and caveats stated on the sheet
               </summary>
               <p className="text-xs text-slate-400 mt-1 leading-relaxed">{simulant.datasheet_notes}</p>

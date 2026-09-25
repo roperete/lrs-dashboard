@@ -63,7 +63,7 @@ function Chip({ active, count, onClick, children }: { active: boolean; count?: n
       className={cn('flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs transition-colors',
         active ? 'bg-emerald-500 border-emerald-500 text-slate-950 font-semibold' : 'border-slate-700 text-slate-300 hover:border-slate-500 hover:text-white',
         count === 0 && !active && 'opacity-50')}>
-      {children}{count != null && <span className={active ? 'text-slate-900' : 'text-slate-500'}>{count}</span>}
+      {children}{count != null && <span className={active ? 'text-slate-900' : 'text-slate-400'}>{count}</span>}
     </button>
   );
 }
@@ -156,13 +156,13 @@ export function Sidebar(props: SidebarProps) {
                     <span className="flex-1 text-slate-300">{r.label}</span>
                     <input type="number" inputMode="decimal" step={r.step} value={min} placeholder="min" aria-label={`${r.label} minimum`}
                       onChange={(e) => set(e.target.value, max)} className="w-16 bg-slate-800 border border-slate-700 rounded-md px-1.5 py-1 text-slate-200" />
-                    <span className="text-slate-500">–</span>
+                    <span className="text-slate-400">–</span>
                     <input type="number" inputMode="decimal" step={r.step} value={max} placeholder="max" aria-label={`${r.label} maximum`}
                       onChange={(e) => set(min, e.target.value)} className="w-16 bg-slate-800 border border-slate-700 rounded-md px-1.5 py-1 text-slate-200" />
                   </div>
                 );
               })}
-              <p className="text-[11px] text-slate-500">A range leaves out simulants with no value for it.</p>
+              <p className="text-[11px] text-slate-400">A range leaves out simulants with no value for it.</p>
             </fieldset>
             <div>
               <button onClick={() => setMoreOpen(o => !o)} aria-expanded={moreOpen}
@@ -250,7 +250,7 @@ export function Sidebar(props: SidebarProps) {
         </div>
       )}
 
-      <div className="mt-auto px-4 py-2 border-t border-slate-800 text-[11px] text-slate-500">{APP_VERSION}</div>
+      <div className="mt-auto px-4 py-2 border-t border-slate-800 text-[11px] text-slate-400">{APP_VERSION}</div>
     </motion.div>
   );
 }

@@ -73,7 +73,7 @@ export function SimulantProperties({ simulant, extra, sources, refNumber, refLab
       {simulant.notes && (
         <p className="text-sm text-slate-300 leading-relaxed"><span className="text-slate-400">Notes: </span>{simulant.notes}</p>
       )}
-      {unsourced && <p className="text-[11px] text-slate-500">Values without a mark are not yet traced to a document.</p>}
+      {unsourced && <p className="text-[11px] text-slate-400">Values without a mark are not yet traced to a document.</p>}
     </div>
   );
 }

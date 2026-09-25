@@ -39,32 +39,46 @@ SAMPLE_TEXT = ("landing_site", "type", "sample_description")
 
 # The unit each site column is shown in, and the factors that convert a stated unit into it.
 MOON_UNITS = {
-    "bulk_density": {"": 1.0, "g/cm3": 1.0, "g/cc": 1.0, "gcm-3": 1.0, "g·cm-3": 1.0, "kg/m3": 0.001, "t/m3": 1.0},
+    "bulk_density": {"": 1.0, "g/cm3": 1.0, "g/cc": 1.0, "gcm-3": 1.0, "g·cm-3": 1.0, "kg/m3": 0.001, "kgm-3": 0.001, "t/m3": 1.0},
     "friction_angle": {"": 1.0, "°": 1.0, "º": 1.0, "deg": 1.0, "degree": 1.0, "degrees": 1.0},
-    "cohesion": {"": 1.0, "kpa": 1.0, "pa": 0.001, "mpa": 1000.0, "n/cm2": 10.0, "psi": 6.894757},
-    "bearing_capacity": {"": 1.0, "kpa": 1.0, "pa": 0.001, "mpa": 1000.0, "n/cm2": 10.0, "psi": 6.894757},
+    "cohesion": {"": 1.0, "kpa": 1.0, "pa": 0.001, "mpa": 1000.0, "n/cm2": 10.0, "psi": 6.894757, "kn/m2": 1.0, "knm-2": 1.0},
+    "bearing_capacity": {"": 1.0, "kpa": 1.0, "pa": 0.001, "mpa": 1000.0, "n/cm2": 10.0, "psi": 6.894757, "kn/m2": 1.0, "knm-2": 1.0},
 }
 
 
+def _plain(text: str) -> str:
+    """Superscripts as documents print them (m⁻³, cm²) in plain form."""
+    return str(text or "").replace("²", "2").replace("³", "3").replace("⁻", "-").replace("−", "-")
+
+
 def _unit(text: str) -> str:
-    m = re.match(r"^\s*[~≈]?\s*-?\d+(?:\.\d+)?\s*(.*)$", text.replace("²", "2").replace("³", "3"))
+    m = re.match(r"^\s*[~≈]?\s*-?\d+(?:\.\d+)?(?:\s*±\s*\d+(?:\.\d+)?)?\s*([^(;,]*)", _plain(text))
     return re.sub(r"\s+", "", (m.group(1) if m else "")).lower().rstrip(".")
 
 
 def to_moon_unit(field: str, raw: str) -> float | None:
     """A stated single value converted to the column's unit; None for ranges or unknown units."""
-    text = str(raw or "").replace("²", "2").replace("³", "3").strip()
+    text = _plain(raw).strip()
     if field in ("lat", "lng"):
-        m = re.fullmatch(r"(-?\d+(?:\.\d+)?)\s*°?\s*([NSEWnsew])?", text)
+        # one coordinate, possibly followed by words ("26.13239 N latitude (Lunar Module; ...)");
+        # a text giving two values ("3.01612°S (Wikipedia); -3.0162 (LROC)") is not one value
+        if len(re.findall(r"-?\d+\.\d+", text)) != 1:
+            return None
+        m = re.match(r"^\s*(-?\d+(?:\.\d+)?)\s*°?\s*([NSEW])?(?![A-Za-z])", text)
         if not m:
             return None
         v = float(m.group(1))
         return -abs(v) if (m.group(2) or "").upper() in ("S", "W") else v
-    p = parse_number(text)
-    if p is None:
+    head = re.split(r"[(;,]", text, maxsplit=1)[0].strip()
+    m = re.match(r"^\s*[~≈]?\s*(-?\d+(?:\.\d+)?)(?:\s*±\s*\d+(?:\.\d+)?)?\s*(.*)$", head)
+    if not m:
         return None
-    factor = MOON_UNITS[field].get(_unit(text))
-    return None if factor is None else round(p.value * factor, 6)
+    rest = m.group(2)
+    # a second number that is not an exponent (m-3, cm2) makes it a range or a list, not a value
+    if re.search(r"(?:^|[\s–])[~≈]?\d", rest):
+        return None
+    factor = MOON_UNITS[field].get(re.sub(r"\s+", "", rest).lower().rstrip("."))
+    return None if factor is None else round(float(m.group(1)) * factor, 6)
 
 
 def _percent(raw: str) -> float | None:

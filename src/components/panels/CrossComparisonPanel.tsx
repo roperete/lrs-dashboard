@@ -69,7 +69,7 @@ export function CrossComparisonPanel({
           <div className="flex items-center gap-4">
             <ArrowRightLeft className="text-amber-400" size={28} />
             <div>
-              <h2 className="text-2xl font-bold text-white">Cross-Comparison</h2>
+              <h2 className="text-2xl font-bold text-white">Compared with a lunar sample</h2>
               <p className="text-slate-400 text-sm">
                 <span className="text-blue-400 font-semibold">{simulant.name}</span>
                 <span className="mx-2">vs</span>
@@ -101,7 +101,7 @@ export function CrossComparisonPanel({
         </div>
 
         {/* Metadata row */}
-        <div className="flex gap-4 mb-6 text-xs text-slate-500">
+        <div className="flex gap-4 mb-6 text-xs text-slate-400">
           {lunarRef.landing_site && <span>Landing site: <span className="text-slate-300">{lunarRef.landing_site}<LunarRefs cites={lunarCitations.cite('landing_site')} prefix="L" /></span></span>}
           {lunarRef.type && <span>Type: <span className="text-slate-300">{lunarRef.type}<LunarRefs cites={lunarCitations.cite('type')} prefix="L" /></span></span>}
           {simulant.lunar_sample_reference && (
@@ -208,10 +208,10 @@ function DeltaTable({ title, icon, data, simulantName, refName, cites }: {
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-slate-700/50">
-              <th className="py-2.5 px-4 text-left text-xs font-semibold text-slate-500">Component</th>
+              <th className="py-2.5 px-4 text-left text-xs font-semibold text-slate-400">Component</th>
               <th className="py-2.5 px-4 text-right text-xs font-semibold text-blue-400 truncate max-w-[120px]">{simulantName}</th>
               <th className="py-2.5 px-4 text-right text-xs font-semibold text-amber-400 truncate max-w-[120px]">{refName}</th>
-              <th className="py-2.5 px-4 text-right text-xs font-semibold text-slate-500">{'\u0394'}</th>
+              <th className="py-2.5 px-4 text-right text-xs font-semibold text-slate-400">{'\u0394'}</th>
             </tr>
           </thead>
           <tbody>
@@ -223,7 +223,7 @@ function DeltaTable({ title, icon, data, simulantName, refName, cites }: {
                   <td className="py-2 px-4 text-right font-mono text-slate-200">{row.simulant > 0 ? row.simulant.toFixed(2) : '\u2014'}</td>
                   <td className="py-2 px-4 text-right font-mono text-slate-200">{row.reference > 0 ? <>{row.reference.toFixed(2)}<LunarRefs cites={cites(row.name)} prefix="L" align="right" /></> : '\u2014'}</td>
                   <td className={cn("py-2 px-4 text-right font-mono text-xs",
-                    diff > 0 ? "text-blue-400" : diff < 0 ? "text-amber-400" : "text-slate-500"
+                    diff > 0 ? "text-blue-400" : diff < 0 ? "text-amber-400" : "text-slate-400"
                   )}>
                     {row.simulant > 0 && row.reference > 0 ? `${diff > 0 ? '+' : diff < 0 ? '\u2212' : ''}${Math.abs(diff).toFixed(2)}` : '\u2014'}
                   </td>
@@ -233,7 +233,7 @@ function DeltaTable({ title, icon, data, simulantName, refName, cites }: {
           </tbody>
         </table>
         {data.length === 0 && (
-          <div className="flex items-center justify-center h-20 text-slate-500 text-sm">No data available</div>
+          <div className="flex items-center justify-center h-20 text-slate-400 text-sm">No data available</div>
         )}
       </div>
     </section>

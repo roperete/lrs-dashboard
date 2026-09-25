@@ -18,7 +18,7 @@ export function LoadingScreen() {
         <h1 className="text-2xl font-bold tracking-tight text-white mb-1">
           Lunar Regolith Simulant <span className="text-emerald-500">Database</span>
         </h1>
-        <p className="text-xs text-slate-500 font-mono uppercase tracking-[0.2em]">
+        <p className="text-xs text-slate-400 font-mono uppercase tracking-[0.2em]">
           Interactive Research Tool
         </p>
         <p className="mt-2 text-xs font-mono text-emerald-400/80">{APP_VERSION}</p>
@@ -51,7 +51,7 @@ export function LoadingScreen() {
         <div className="flex items-center gap-8">
           {/* Sponsored by CNES */}
           <div className="flex flex-col items-center gap-2">
-            <span className="text-[10px] text-slate-600 uppercase tracking-wider">Sponsored by</span>
+            <span className="text-[10px] text-slate-500 uppercase tracking-wider">Sponsored by</span>
             <img src={import.meta.env.BASE_URL + 'assets/cnes-logo.png'} alt="CNES" className="h-12 w-auto object-contain" />
           </div>
 
@@ -59,7 +59,7 @@ export function LoadingScreen() {
 
           {/* Developed by The Spring Institute */}
           <div className="flex flex-col items-center gap-2">
-            <span className="text-[10px] text-slate-600 uppercase tracking-wider">Developed by</span>
+            <span className="text-[10px] text-slate-500 uppercase tracking-wider">Developed by</span>
             <img src={import.meta.env.BASE_URL + 'assets/spring-logo.png'} alt="The Spring Institute" className="h-12 w-auto object-contain" />
           </div>
         </div>

@@ -89,7 +89,7 @@ export function DynamicFilterPanel({
       {/* Add Filter button */}
       <div ref={menuRef} className="relative">
         <button onClick={() => setMenuOpen(!menuOpen)}
-          className="w-full flex items-center justify-center gap-1.5 py-2 bg-slate-800/40 hover:bg-slate-800/70 border border-dashed border-slate-700/50 hover:border-slate-600 rounded-xl text-xs text-slate-500 hover:text-slate-300 transition-all">
+          className="w-full flex items-center justify-center gap-1.5 py-2 bg-slate-800/40 hover:bg-slate-800/70 border border-dashed border-slate-700/50 hover:border-slate-600 rounded-xl text-xs text-slate-400 hover:text-slate-300 transition-all">
           <Plus size={14} />
           Add Filter
         </button>
@@ -101,7 +101,7 @@ export function DynamicFilterPanel({
                 onClick={() => { onAddFilter(p.property); setMenuOpen(false); }}
                 className="w-full text-left px-3 py-2 text-xs text-slate-300 hover:bg-slate-700/50 transition-colors flex items-center justify-between">
                 <span>{p.label}</span>
-                <span className="text-[10px] text-slate-600 uppercase">{p.type}</span>
+                <span className="text-[10px] text-slate-500 uppercase">{p.type}</span>
               </button>
             ))}
           </div>

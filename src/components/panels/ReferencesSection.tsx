@@ -128,7 +128,7 @@ function ReferenceCard({ reference, n }: { reference: Reference; n: number }) {
           })}
           <NamesMark reference={reference} />
           {reference.checked_on && (
-            <span className="text-[10px] text-slate-600">checked {reference.checked_on}</span>
+            <span className="text-[10px] text-slate-500">checked {reference.checked_on}</span>
           )}
         </div>
       </div>
@@ -160,12 +160,12 @@ export function ReferencesSection({ references, simulantName }: ReferencesSectio
       <div className="flex items-center gap-2 mb-4">
         <BookOpen size={18} className="text-amber-400" />
         <h3 className="text-lg font-semibold text-slate-200">References & Credits</h3>
-        <span className="text-xs text-slate-500 ml-auto">{references.length} source{references.length !== 1 ? 's' : ''}</span>
+        <span className="text-xs text-slate-400 ml-auto">{references.length} source{references.length !== 1 ? 's' : ''}</span>
       </div>
 
       {ordered.length > 0 && (
         <div>
-          <p className="text-[10px] text-slate-500 mb-2">
+          <p className="text-[10px] text-slate-400 mb-2">
             Numbers match the superscripts on values above. {named} of {ordered.length} confirmed to name {simulantName || 'this simulant'}.
           </p>
           <ol className="space-y-2 list-none p-0 m-0">
@@ -195,7 +195,7 @@ export function ReferencesSection({ references, simulantName }: ReferencesSectio
             </div>
             <div>
               <p className="text-sm font-medium text-emerald-400">Find Citing Sources</p>
-              <p className="text-[10px] text-slate-500">Search Google Scholar for papers citing {simulantName}</p>
+              <p className="text-[10px] text-slate-400">Search Google Scholar for papers citing {simulantName}</p>
             </div>
           </a>
         </div>

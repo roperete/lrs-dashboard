@@ -1,0 +1,35 @@
+[
+ {
+  "click": "Table"
+ },
+ {
+  "eval": "(() => { const boxes = [...document.querySelectorAll('tbody tr[data-row] input[type=checkbox]')].slice(0, 5); boxes.forEach(b => b.click()); return boxes.length; })()",
+  "as": "ticked5"
+ },
+ {
+  "eval": "document.querySelector('[aria-label=\"Compare tray\"]')?.innerText.includes('Compare 4')",
+  "as": "cappedAt4"
+ },
+ {
+  "eval": "(() => { const b = [...document.querySelectorAll('[aria-label=\"Compare tray\"] button')].find(b => /^Compare/.test(b.innerText.trim())); b?.click(); return !!b; })()",
+  "as": "compareOpened"
+ },
+ {
+  "wait": 1500
+ },
+ {
+  "click": "Chart"
+ },
+ {
+  "wait": 800
+ },
+ {
+  "click": "Table"
+ },
+ {
+  "key": "Escape"
+ },
+ {
+  "click": "Clear"
+ }
+]

@@ -73,7 +73,7 @@ function CategoricalInput({ filter, options, groups, onUpdate }: {
           {groups ? (
             groups.map(group => (
               <div key={group.label}>
-                <div className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-500 bg-slate-800/80 sticky top-0">
+                <div className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-800/80 sticky top-0">
                   {group.label}
                 </div>
                 {group.options.map(opt => (
@@ -122,7 +122,7 @@ function RangeInput({ filter, onUpdate }: { filter: DynamicFilter; onUpdate: (v:
       <input type="number" placeholder="Min" value={min}
         onChange={e => onUpdate([e.target.value, max])}
         className="w-full bg-slate-800/60 border border-slate-700/50 rounded-lg py-1.5 px-2 text-xs text-slate-300 focus:outline-none focus:ring-1 focus:ring-emerald-500/50" />
-      <span className="text-slate-600 text-xs">\u2013</span>
+      <span className="text-slate-500 text-xs">\u2013</span>
       <input type="number" placeholder="Max" value={max}
         onChange={e => onUpdate([min, e.target.value])}
         className="w-full bg-slate-800/60 border border-slate-700/50 rounded-lg py-1.5 px-2 text-xs text-slate-300 focus:outline-none focus:ring-1 focus:ring-emerald-500/50" />
@@ -142,8 +142,8 @@ export function FilterCard({ filter, meta, options, groups, onUpdate, onRemove }
   return (
     <div className="bg-slate-800/30 border border-slate-700/40 rounded-xl p-2.5 space-y-1.5">
       <div className="flex items-center justify-between">
-        <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">{meta.label}</span>
-        <button onClick={onRemove} className="p-0.5 hover:bg-slate-700 rounded text-slate-600 hover:text-slate-400 transition-colors">
+        <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">{meta.label}</span>
+        <button onClick={onRemove} className="p-0.5 hover:bg-slate-700 rounded text-slate-500 hover:text-slate-400 transition-colors">
           <X size={12} />
         </button>
       </div>

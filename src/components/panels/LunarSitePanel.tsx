@@ -23,16 +23,19 @@ function Label({ help, children, className }: { help: string; children: React.Re
     </Tooltip>
   );
 }
-import type { LunarSite } from '../../types';
+import type { LunarSite, Simulant } from '../../types';
 
 interface LunarSitePanelProps {
   site: LunarSite;
   /** Numbered sources of this site's values. */
   citations?: LunarCitations;
+  /** Simulants whose producers say they replicate this site's material. */
+  replicas?: Simulant[];
+  onSelectSimulant?: (id: string) => void;
   onClose: () => void;
 }
 
-export function LunarSitePanel({ site, citations = EMPTY_CITATIONS, onClose }: LunarSitePanelProps) {
+export function LunarSitePanel({ site, citations = EMPTY_CITATIONS, replicas = [], onSelectSimulant, onClose }: LunarSitePanelProps) {
   const refs = (...fields: string[]) => {
     const seen = new Set<number>();
     const cites = fields.flatMap(f => citations.cite(f)).filter(c => !seen.has(c.n) && !!seen.add(c.n));
@@ -95,12 +98,26 @@ export function LunarSitePanel({ site, citations = EMPTY_CITATIONS, onClose }: L
             </div>
           </div>
         )}
-        <div className="bg-amber-900/20 p-4 rounded-xl border border-amber-500/20">
-          <Label help={HELP.coordinates} className="text-[11px] text-amber-400 font-semibold mb-1">Coordinates</Label>
-          <p className="text-lg font-medium text-amber-200 font-mono">{site.lat}, {site.lng}{refs('lat', 'lng')}</p>
-        </div>
+        <p className="text-xs text-slate-400">
+          <Tooltip text={HELP.coordinates} align="left"><span className="border-b border-dotted border-slate-600">Coordinates</span></Tooltip>{' '}
+          <span className="font-mono text-slate-300">{site.lat}, {site.lng}</span>{refs('lat', 'lng')}
+        </p>
+        {replicas.length > 0 && (
+          <div>
+            <h3 className="text-sm font-semibold text-slate-300 mb-2">Simulants that replicate this site</h3>
+            <ul className="flex flex-wrap gap-1.5">
+              {replicas.map(r => (
+                <li key={r.simulant_id}>
+                  <button onClick={() => onSelectSimulant?.(r.simulant_id)}
+                    className="px-2.5 py-1 rounded-full border border-slate-700 text-xs text-slate-200 hover:border-emerald-500 hover:text-emerald-300">{r.name}</button>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-1 text-[11px] text-slate-400">As each producer states the lunar sample it replicates.</p>
+          </div>
+        )}
         <LunarSourceList citations={citations} />
-        <p className="text-[10px] text-slate-500">
+        <p className="text-[10px] text-slate-400">
           Each value is cited to the document that states it. A value no document confirms is not shown.
         </p>
       </div>
