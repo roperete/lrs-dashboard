@@ -3,6 +3,7 @@ import type { Simulant, SimulantExtra, PropertySource } from '../../types';
 import { getInstitutionUrl } from '../../utils/institutionUrls';
 import { getCountryDisplay } from '../../utils/countryUtils';
 import { RefSup } from '../ui/RefSup';
+import { GASTEINER } from '../../credits';
 
 interface SimulantPropertiesProps {
   simulant: Simulant;
@@ -35,25 +36,27 @@ export function SimulantProperties({ simulant, extra, sources, refNumber, refLab
     } catch { /* plain string */ }
   }
 
-  const rows: { label: string; value: string | number | null | undefined; field?: string }[] = [
+  // extended: the descriptive fields that came with the Lunar Regolith Database (credits.ts)
+  const rows: { label: string; value: string | number | null | undefined; field?: string; extended?: boolean }[] = [
     { label: 'Producer', value: simulant.institution, field: 'institution' },
     { label: 'Country', value: getCountryDisplay(simulant.country_code), field: 'country_code' },
     { label: 'Released', value: simulant.release_date, field: 'release_date' },
     { label: 'Lunar sample it replicates', value: lunarSampleRef, field: 'lunar_sample_reference' },
     { label: 'Product grade', value: simulant.product_grade, field: 'product_grade' },
     { label: 'Produced (t)', value: simulant.tons_produced_mt, field: 'tons_produced_mt' },
-    { label: 'Classification', value: extra?.classification },
-    { label: 'Application', value: extra?.application },
-    { label: 'Feedstock', value: extra?.feedstock },
-    { label: 'Petrographic class', value: petrographic },
+    { label: 'Classification', value: extra?.classification, extended: true },
+    { label: 'Application', value: extra?.application, extended: true },
+    { label: 'Feedstock', value: extra?.feedstock, extended: true },
+    { label: 'Petrographic class', value: petrographic, extended: true },
   ].filter(r => r.value != null && r.value !== '' && r.value !== 'N/A');
 
   const institutionUrl = simulant.institution ? getInstitutionUrl(simulant.institution) : null;
-  const unsourced = rows.some(r => !(r.field && sources?.get(r.field)));
+  const unsourced = rows.some(r => !r.extended && !(r.field && sources?.get(r.field)));
+  const extended = rows.some(r => r.extended);
 
   return (
     <div className="space-y-3">
-      <dl className="grid grid-cols-[auto,1fr] gap-x-4 gap-y-1.5 text-sm">
+      <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-sm">
         {rows.map(({ label, value, field }) => {
           const src = field ? sources?.get(field) : undefined;
           const n = src ? refNumber?.(src.reference_id) : undefined;
@@ -73,7 +76,14 @@ export function SimulantProperties({ simulant, extra, sources, refNumber, refLab
       {simulant.notes && (
         <p className="text-sm text-slate-300 leading-relaxed"><span className="text-slate-400">Notes: </span>{simulant.notes}</p>
       )}
-      {unsourced && <p className="text-[11px] text-slate-400">Values without a mark are not yet traced to a document.</p>}
+      {(unsourced || extended) && (
+        <p className="text-[11px] text-slate-400 leading-relaxed">
+          {unsourced && 'Entries without a mark have no source cited. '}
+          {extended && <>Classification, application, feedstock and petrographic class: from the{' '}
+            <a href={GASTEINER.datasetUrl} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300">{GASTEINER.short}</a>{' '}
+            (version of 27 August 2026, {GASTEINER.licence.split(' (')[0]}).</>}
+        </p>
+      )}
     </div>
   );
 }

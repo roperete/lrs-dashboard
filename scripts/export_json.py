@@ -76,11 +76,33 @@ def suppress_unsourced_extra(extra: list[dict], property_sources: list[dict]) ->
     return out, n
 
 
+CREDITS = {
+    "reused_data": [{
+        "title": "Mechanical Properties of Lunar Soil: Raw Dataset for the Lunar Regolith Database",
+        "authors": "Gasteiner, L., Murdoch, N., D'Angelo, O.",
+        "publisher": "Recherche Data Gouv",
+        "version": "2", "last_updated": "2026-08-27",
+        "doi": "https://doi.org/10.57745/NTSZ8G",
+        "licence": "Licence Ouverte / Open Licence 2.0 (etalab-2.0)",
+        "licence_url": "https://github.com/etalab/licence-ouverte/blob/master/LO.md",
+        "paper": "Gasteiner, L., Murdoch, N., D'Angelo, O. (2026). An Open Database of Lunar Regolith and Simulants Properties. "
+                 "International Journal for Numerical and Analytical Methods in Geomechanics. https://doi.org/10.1002/nag.70432",
+        "use": "Used to find the original sources of simulant and Moon values, and as the source of parts of the simulant "
+               "descriptions (classification, application, feedstock, petrographic class) and of the list of Moon landing sites. "
+               "Every value shown is cited to the original document that states it. The authors and ISAE-SUPAERO do not endorse "
+               "this database.",
+    }],
+    "maps": ["Country outlines: Natural Earth (public domain)", "Moon map tiles: OpenPlanetaryMap",
+             "Globe: three-globe and react-globe.gl (Vasco Asturiano) and their example textures"],
+}
+
+
 def shown_references(references: list[dict]) -> list[dict]:
-    """A reference a reader confirmed does not name the product is kept in the database, as the
-    record of that check, but not listed under the product (test 2: a reference must concern it).
-    A wiki page is never listed (scripts/source_policy.py)."""
-    return [r for r in references if r.get("names_simulant") != 0 and not is_wiki_document(r)]
+    """Only references a reader confirmed name the product are listed (owner, 2026-09-25: "Dont
+    show the Unchecked references, just the actual verified references"). The others stay in
+    the database, as the record of the check or for a later one. A wiki page is never listed
+    (scripts/source_policy.py)."""
+    return [r for r in references if r.get("names_simulant") == 1 and not is_wiki_document(r)]
 
 
 def drop_wiki_citations(rows: list[dict], wiki_ids: set[str]) -> list[dict]:
@@ -225,6 +247,8 @@ def run(db_path: Path, output: Path = OUTPUT, report_dir: Path = DOC_DIR, today:
     con.close()
 
     data = {
+        # the attribution the reused data's licence asks for travels with the data (see CREDITS.md)
+        "credits": CREDITS,
         "simulants": simulants,
         "sites": sites,
         "compositions": compositions,

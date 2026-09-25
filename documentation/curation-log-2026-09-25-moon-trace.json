@@ -1,0 +1,25 @@
+[
+  {
+    "entity_id": "CE6",
+    "field": "date",
+    "was": "06:24 on June 2, 2024 (Beijing time)",
+    "now": "June 1, 2024",
+    "action": "stated in UTC: the paper gives 06:24 on June 2, 2024, Beijing time (UTC+8): 22:24 UTC on June 1"
+  },
+  {
+    "entity_id": "S1",
+    "field": "description",
+    "was": "First US soft landing on the Moon. Conducted surface mechanics experiments.",
+    "now": "First US soft landing on the Moon.",
+    "document_id": "LD-039",
+    "action": "kept only the confirmed claim, cited to its document"
+  },
+  {
+    "entity_id": "CH3",
+    "field": "description",
+    "was": "First Indian lunar landing. Pragyan rover explored near the south pole.",
+    "now": "Pragyan rover explored near the south pole.",
+    "document_id": "LD-051",
+    "action": "kept only the confirmed claim, cited to its document"
+  }
+]

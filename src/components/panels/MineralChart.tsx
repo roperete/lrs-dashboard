@@ -104,9 +104,9 @@ export function MineralChart({ compositions, mineralGroups, lunarRef, lunarCitat
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <Activity size={18} className="text-emerald-400" />
-          <h3 className="text-lg font-semibold text-slate-200">Mineral Composition</h3>
+          <h3 className="text-base font-semibold text-slate-200">Mineral composition</h3>
         </div>
-        <div className="flex items-center gap-2">
+        {(detailedData.length > 0 || groupData.length > 0) && <div className="flex items-center gap-2">
           <ToggleButtonGroup
             options={[
               { label: 'Detailed', value: 'detailed' },
@@ -124,7 +124,7 @@ export function MineralChart({ compositions, mineralGroups, lunarRef, lunarCitat
             options={[{ label: 'Chart', value: 'chart' }, { label: 'Table', value: 'table' }]}
             value={displayMode} onChange={(v) => setDisplayMode(v as 'chart' | 'table')}
           />
-        </div>
+        </div>}
       </div>
 
       {!hasData ? (

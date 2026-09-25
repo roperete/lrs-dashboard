@@ -1,6 +1,7 @@
 import type { Simulant, Composition, ChemicalComposition, Reference, PropertySource, FigureOfMerit } from '../types';
 import { orderReferences } from './references';
 import { getCountryDisplay } from './countryUtils';
+import { creditLines } from '../credits';
 
 function escapeCSV(value: unknown): string {
   if (value === null || value === undefined) return '';
@@ -92,9 +93,11 @@ export function buildCSV(simulants: Simulant[], data: ExportData): string {
       push('figure_of_merit', `${f.property_label} vs ${f.reference_sample ?? '—'}`, f.score, f.scale ?? '', f.score_text ?? '', refCols(f.reference_id, f.location, f.quote));
     }
     refs.forEach((r, i) => rows.push([s.simulant_id, s.name, 'reference', `[${i + 1}]`,
-      r.title || r.reference_text || '', '', r.names_simulant === 1 ? 'names this simulant' : r.names_simulant === 0 ? 'does not name this simulant' : '',
+      r.title || r.reference_text || '', '', '',
       String(i + 1), r.reference_text || r.title || '', r.doi ? `https://doi.org/${r.doi}` : r.url || '', '', r.mention_quote || ''].map(escapeCSV)));
   }
+  // the attribution the reused data's licences ask for travels with every export (credits.ts)
+  for (const line of creditLines()) rows.push(['', '', 'credit', '', line, '', '', '', '', '', '', ''].map(escapeCSV));
   // a byte-order mark first, so spreadsheet programs read the file as UTF-8 (µ, °, ³)
   return '\uFEFF' + [HEADERS.join(','), ...rows.map(r => r.join(','))].join('\n');
 }

@@ -60,6 +60,26 @@
   "clickSel": "tbody tr[data-row] td:nth-child(16) button"
  },
  {
+  "wait": 900
+ },
+ {
+  "expect": "!document.querySelector('select') && [...document.querySelectorAll('p')].filter(p => /^Composition: /.test(p.textContent.trim())).length === 1",
+  "why": "a simulant with no composition shows one note, and no lunar comparison (AGK-2010)"
+ },
+ {
+  "expect": "[...document.querySelectorAll('tbody tr[data-row] td:nth-child(16) button')].every(b => /^\\d+ sources?View$/.test(b.textContent.trim()))",
+  "why": "the References column reads 'N sources' with a View link (owner, 2026-09-25)"
+ },
+ {
+  "clickSel": "tbody tr[data-row] td:nth-child(14) button",
+  "after": 1500,
+  "why": "the lunar comparison shows only for a simulant with a composition: open one through its chemistry mark"
+ },
+ {
+  "expect": "!!document.querySelector('select')",
+  "why": "a simulant with a composition offers the lunar comparison"
+ },
+ {
   "eval": "(() => { const sel = document.querySelector('select'); if (!sel) return 'no select'; const set = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'value').set; const out = []; for (const o of sel.options) { set.call(sel, o.value); sel.dispatchEvent(new Event('change', { bubbles: true })); out.push(o.value || 'none'); } return out.join(','); })()",
   "as": "lunarRefs"
  },

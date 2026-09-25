@@ -155,7 +155,10 @@ Please open an issue or submit a pull request.
 
 ## License
 
-This project is open source. Simulant data is compiled from publicly available sources.
+This project is open source. Simulant data is compiled from publicly available sources, each value
+cited to the document that states it. Reused datasets and their licences, including the Lunar
+Regolith Database of Gasteiner, Murdoch & D'Angelo (Licence Ouverte 2.0), are credited in
+[CREDITS.md](CREDITS.md).
 
 ## Acknowledgments
 

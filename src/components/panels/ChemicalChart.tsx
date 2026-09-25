@@ -58,12 +58,12 @@ export function ChemicalChart({ chemicalCompositions, lunarRef, lunarCitations =
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <FlaskConical size={18} className="text-blue-400" />
-          <h3 className="text-lg font-semibold text-slate-200">Chemical Composition</h3>
+          <h3 className="text-base font-semibold text-slate-200">Chemical composition</h3>
         </div>
-        <ToggleButtonGroup
+        {chemData.length > 0 && <ToggleButtonGroup
           options={[{ label: 'Chart', value: 'chart' }, { label: 'Table', value: 'table' }]}
           value={displayMode} onChange={(v) => setDisplayMode(v as 'chart' | 'table')}
-        />
+        />}
       </div>
 
       {chemData.length === 0 ? (

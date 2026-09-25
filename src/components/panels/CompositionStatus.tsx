@@ -1,4 +1,4 @@
-import { ShieldCheck, ShieldAlert, FileX2, HelpCircle, ExternalLink } from 'lucide-react';
+import { ShieldCheck, FileX2, FileText, HelpCircle, ExternalLink } from 'lucide-react';
 import type { Simulant } from '../../types';
 
 export type CompositionStatus =
@@ -7,34 +7,31 @@ export type CompositionStatus =
   | 'not_published'
   | 'not_extracted';
 
+// Shown where a composition table would be, when there is none to show. Worded for readers of
+// the database: what is known about this simulant's composition, not how the data was checked.
 const NOTICES: Record<CompositionStatus, { title: string; body: string; tone: string; Icon: typeof ShieldCheck }> = {
+  // the composition source gives the other table (chemistry without minerals, or the reverse)
   verified: {
-    title: 'Verified against source',
-    body: 'These values were read from the source cited below and independently re-checked against it.',
-    tone: 'text-emerald-400',
-    Icon: ShieldCheck,
+    title: 'Not given by the source',
+    body: 'The source of this simulant\'s composition does not give this table.',
+    tone: 'text-slate-400',
+    Icon: FileX2,
   },
   withheld_unverified: {
-    title: 'Composition withheld',
-    body:
-      'Values were previously listed here, but they could not be confirmed against a manufacturer data sheet or ' +
-      'the publication that characterised this simulant. They have been removed rather than shown unconfirmed.',
-    tone: 'text-amber-400',
-    Icon: ShieldAlert,
+    title: 'Not available',
+    body: 'We could not trace a composition for this simulant to its data sheet or to the paper that describes it, so none is shown.',
+    tone: 'text-slate-400',
+    Icon: HelpCircle,
   },
   not_published: {
-    title: 'Composition not published',
-    body:
-      'The producer and the publication that defines this simulant do not disclose a composition for it. ' +
-      'Nothing is being withheld here; the data does not exist in the public record.',
+    title: 'Not published',
+    body: 'The producer and the paper that describes this simulant do not publish a composition for it.',
     tone: 'text-slate-400',
     Icon: FileX2,
   },
   not_extracted: {
-    title: 'Composition not yet verified',
-    body:
-      'This simulant has not yet been through the source audit. A composition may well be published for it; ' +
-      'we have not confirmed one, so we do not show numbers.',
+    title: 'Not available yet',
+    body: 'We have not yet found a source for this simulant\'s composition.',
     tone: 'text-slate-400',
     Icon: HelpCircle,
   },
@@ -52,17 +49,17 @@ export function CompositionStatusNotice({
   kind,
 }: {
   status: CompositionStatus;
-  kind: 'mineral' | 'chemical';
+  kind: 'mineral' | 'chemical' | 'composition';
 }) {
   const n = NOTICES[status];
-  const what = kind === 'mineral' ? 'Mineral composition' : 'Chemical composition';
+  const what = kind === 'mineral' ? 'Mineral composition' : kind === 'chemical' ? 'Chemical composition' : 'Composition';
   return (
-    <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/30">
+    <div className="bg-slate-800/30 rounded-xl p-4 border border-slate-700/30">
       <div className="flex items-start gap-3">
         <n.Icon size={18} className={`${n.tone} mt-0.5 shrink-0`} aria-hidden />
         <div>
           <p className={`text-sm font-semibold ${n.tone}`}>
-            {what}: {n.title.toLowerCase()}
+            {what}: {n.title.charAt(0).toLowerCase() + n.title.slice(1)}
           </p>
           <p className="text-xs text-slate-400 mt-1 leading-relaxed">{n.body}</p>
         </div>
@@ -92,16 +89,16 @@ export function DataSourceLine({ simulant }: { simulant: Simulant }) {
         : simulant.composition_source_kind === 'agency_report'
           ? 'Agency report'
           : simulant.composition_source_kind === 'secondary_reproduction'
-            ? 'Reproduced in a later publication; the original paper could not be opened'
+            ? 'As reproduced in a later publication'
             : 'Source';
 
   return (
     <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl px-4 py-3">
       <div className="flex items-start gap-3">
-        <ShieldCheck size={16} className="text-emerald-400 mt-0.5 shrink-0" aria-hidden />
+        <FileText size={16} className="text-emerald-400 mt-0.5 shrink-0" aria-hidden />
         <div className="min-w-0">
           <p className="text-[10px] uppercase font-bold tracking-wider text-emerald-400/70">
-            Composition data source
+            Source of the composition
           </p>
           <p className="text-sm text-slate-200 mt-0.5 break-words">
             {url ? (
@@ -120,9 +117,7 @@ export function DataSourceLine({ simulant }: { simulant: Simulant }) {
           </p>
           <p className="text-xs text-slate-400 mt-0.5">
             {kindLabel}
-            {simulant.datasheet_document_id ? ` · ${simulant.datasheet_document_id}` : ''}
             {simulant.datasheet_date ? ` · ${simulant.datasheet_date}` : ''}
-            {simulant.composition_needs_review ? ' · flagged for a second human check' : ''}
           </p>
           {simulant.datasheet_notes && (
             <details className="mt-1">

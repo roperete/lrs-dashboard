@@ -1,5 +1,9 @@
 [
  {
+  "expect": "!!document.querySelector('button[aria-label=\"Stop Rotation\"]')",
+  "why": "the globe rotates by default (owner, 2026-09-25)"
+ },
+ {
   "expect": "!document.querySelector('.fixed.inset-0[role=status]')",
   "why": "the loading screen has cleared once the first view is drawn (at most 12 s)"
  },

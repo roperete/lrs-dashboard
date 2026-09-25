@@ -26,7 +26,7 @@ const COLUMN_HELP: Record<SortKey, string> = {
   density: 'Bulk density of the regolith at the site, in g/cm³: mass per volume including the pore space, from in-situ measurements or returned cores.',
   friction: 'Internal angle of friction of the regolith, in degrees, from in-situ soil-mechanics measurements. Governs slope stability and bearing capacity.',
   cohesion: 'Shear strength of the regolith at zero normal stress, in kPa: how much the grains hold together.',
-  sources: 'Documents the site\'s values are cited to. Click to open the site at its source list.',
+  sources: 'The papers and mission records the site\'s values come from. Click View to see them.',
 };
 
 interface LunarSampleTableProps {
@@ -40,6 +40,9 @@ interface LunarSampleTableProps {
 }
 
 export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, onOpenSources, citationsFor = () => EMPTY_CITATIONS }: LunarSampleTableProps) {
+  // a soil column shows only when a source gives a value at some site (none does for friction or cohesion yet)
+  const hasFriction = sites.some(x => x.geotechnical?.friction_angle != null);
+  const hasCohesion = sites.some(x => x.geotechnical?.cohesion != null);
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
 
@@ -116,8 +119,8 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, onOpenSo
             <TH col="date" label="Date" />
             <TH col="samples" label="Samples" />
             <TH col="density" label="Density (g/cm³)" />
-            <TH col="friction" label="Friction (°)" />
-            <TH col="cohesion" label="Cohesion (kPa)" />
+            {hasFriction && <TH col="friction" label="Friction (°)" />}
+            {hasCohesion && <TH col="cohesion" label="Cohesion (kPa)" />}
             <TH col="sources" label="Sources" />
           </tr>
         </thead>
@@ -145,14 +148,15 @@ export function LunarSampleTable({ sites, selectedSiteId, onSelectSite, onOpenSo
                 <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.date ? <>{s.date}{refs('date')}</> : '\u2014'}</td>
                 <td className="py-2 px-3 text-slate-300 whitespace-nowrap">{s.samples_returned ? <>{s.samples_returned}{refs('samples_returned')}</> : '\u2014'}</td>
                 <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.bulk_density != null ? <>{s.geotechnical.bulk_density}{refs('bulk_density')}</> : '\u2014'}</td>
-                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.friction_angle != null ? <>{`${s.geotechnical.friction_angle}\u00B0`}{refs('friction_angle')}</> : '\u2014'}</td>
-                <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.cohesion != null ? <>{`${s.geotechnical.cohesion} kPa`}{refs('cohesion')}</> : '\u2014'}</td>
+                {hasFriction && <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.friction_angle != null ? <>{`${s.geotechnical.friction_angle}\u00B0`}{refs('friction_angle')}</> : '\u2014'}</td>}
+                {hasCohesion && <td className="py-2 px-3 text-slate-400 text-right font-mono whitespace-nowrap">{s.geotechnical?.cohesion != null ? <>{`${s.geotechnical.cohesion} kPa`}{refs('cohesion')}</> : '\u2014'}</td>}
                 <td className="py-2 px-3 max-w-[260px]">
                   {c.documents.length > 0
                     ? <button type="button" onClick={(e) => { e.stopPropagation(); (onOpenSources ?? onSelectSite)(s.id); }}
-                        aria-label={`Open ${s.name}'s sources`} className="flex items-baseline gap-1.5 text-left text-slate-300 hover:text-white min-w-0">
-                        <span className="font-semibold text-amber-400/90 shrink-0">{c.documents.length}</span>
-                        <span className="truncate text-xs text-slate-400">{lunarDocumentLabel(c.documents[0])}{c.documents.length > 1 ? ' …' : ''}</span>
+                        aria-label={`View ${s.name}'s ${c.documents.length} sources`} className="group/ref flex items-baseline gap-1.5 text-left text-slate-300 hover:text-white min-w-0">
+                        <span className="shrink-0">{c.documents.length} source{c.documents.length === 1 ? '' : 's'}</span>
+                        <span className="shrink-0 text-xs text-emerald-400 group-hover/ref:underline">View</span>
+                        <span className="truncate text-xs text-slate-500">{lunarDocumentLabel(c.documents[0])}{c.documents.length > 1 ? ' …' : ''}</span>
                       </button>
                     : <span className="text-slate-500">{'\u2014'}</span>}
                 </td>

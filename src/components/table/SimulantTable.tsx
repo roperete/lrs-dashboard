@@ -18,17 +18,17 @@ const COLUMN_HELP: Record<SortKey, string> = {
   type: 'Lunar terrain the simulant is meant to stand in for: highlands, mare, or a general or engineering material.',
   country: 'Country of the producing institution.',
   institution: 'Organisation that produces, or produced, the simulant.',
-  availability: 'Whether the product can currently be obtained, as last recorded. Not yet audited.',
+  availability: 'Whether the product can currently be obtained, as last recorded.',
   lunar_sample_reference: 'The lunar material the producer says the simulant replicates, in the producer\'s own words.',
-  year: 'Year first produced or released, as recorded. Not yet audited; the sheets do not state it.',
-  specific_gravity: 'Grain density relative to water. Cleared wherever the value only repeated the bulk density.',
+  year: 'Year first produced or released.',
+  specific_gravity: 'Grain density relative to water.',
   bulk_density: 'Mass per unit volume, pore space included, in g/cm³, as the source states it: sources differ in packing (loose, compacted, optimal); the citation says which.',
   d50: 'Median particle size in micrometres: half the grains, by mass, are finer than this.',
   friction_angle: 'Internal angle of friction from shear testing, in degrees. Governs slope stability and bearing capacity.',
   cohesion: 'Shear strength at zero normal stress, in kPa. How much the grains hold together.',
-  has_chemistry: 'Oxide chemistry on record, each value cited. Click the mark to open it in the pane.',
-  has_mineralogy: 'Mineral or component composition on record, each value cited. Click the mark to open it in the pane.',
-  references: 'Documents on record for this simulant. "Unchecked": no reader has yet confirmed that the document names this simulant. Click to open them in the pane.',
+  has_chemistry: 'Oxide chemistry is available. Click the mark to see it.',
+  has_mineralogy: 'Mineral composition is available. Click the mark to see it.',
+  references: 'The papers, data sheets and reports about this simulant. Click View to see them.',
 };
 
 /** Display a sparse field, falling back to an em-dash when empty. */
@@ -179,7 +179,6 @@ export function SimulantTable({
             const isSelected = s.simulant_id === selectedSimulantId;
             const inTray = compare.has(s.simulant_id);
             const refs = referencesBySimulant.get(s.simulant_id) || [];
-            const named = refs.filter(r => r.names_simulant === 1).length;
             const rowBg = isSelected ? "bg-emerald-950" : i % 2 === 0 ? "bg-slate-900" : "bg-[#0d1424]";
             const dataMark = (has: boolean, what: string) => has
               ? <button type="button" onClick={(e) => { e.stopPropagation(); onSelectSimulant(s.simulant_id, 'composition'); }}
@@ -214,8 +213,10 @@ export function SimulantTable({
                 <td className="py-2 px-3 text-right whitespace-nowrap">
                   {refs.length > 0
                     ? <button type="button" onClick={(e) => { e.stopPropagation(); onSelectSimulant(s.simulant_id, 'references'); }}
-                        aria-label={`Open ${s.name}'s references in the pane`} className="text-slate-300 hover:text-white">
-                        {refs.length}{named < refs.length && <span className="text-amber-400/90"> · {refs.length - named} unchecked</span>}
+                        aria-label={`View ${s.name}'s ${refs.length} references`}
+                        className="group/ref inline-flex items-baseline gap-1.5 text-slate-300 hover:text-white">
+                        <span>{refs.length} source{refs.length === 1 ? '' : 's'}</span>
+                        <span className="text-xs text-emerald-400 group-hover/ref:underline">View</span>
                       </button>
                     : <span className="text-slate-500">{DASH}</span>}
                 </td>

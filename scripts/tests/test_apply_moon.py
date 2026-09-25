@@ -82,6 +82,16 @@ class ApplyMoonTests(unittest.TestCase):
         self.assertEqual(self.sources("A11"), {})
         self.assertEqual(self.con.execute("SELECT count(*) FROM lunar_documents").fetchone(), (0,))
 
+    def test_a_document_the_checker_puts_outside_the_line_is_refused(self):
+        results = {"results": [{"group": "g", "ids": ["A11"],
+            "reading": {"entities": [{"id": "A11", "references": [ref("R1", "PSRD article", "papers/lunar/psrd.html", kind="paper")],
+                                      "values": [val("lat", "0.67409", "supported", "0.67409")]}]},
+            "check": {"entities": [{"id": "A11", "reference_checks": [{"temp_id": "R1", "verdict": "CONFIRMED", "kind_ok": False}],
+                                    "value_checks": [{"field": "lat", "verdict": "CONFIRMED", "note": ""}]}]}}]}
+        apply_results(self.con, results, checked_on="2026-09-25")
+        self.assertEqual(self.sources("A11"), {})
+        self.assertEqual(self.con.execute("SELECT count(*) FROM lunar_documents").fetchone(), (0,))
+
     def test_one_document_is_stored_once_across_entities(self):
         r = [ref("R1", "Lunar Sourcebook", "papers/LRS/LunarSourceBook.pdf")]
         self.run_one("A11", [val("lat", "0.67409", "supported", "0.67409")], {"lat": ("CONFIRMED", {})}, refs=r)
@@ -117,6 +127,10 @@ class ApplyMoonTests(unittest.TestCase):
         self.assertEqual(to_moon_unit("lat", "-0.5137 (0.5137° S)"), -0.5137)
         self.assertEqual(to_moon_unit("lng", "15.5002 E longitude (Lunar Module; IAU system); 15.5011 in the 2016 table"), 15.5002)
         self.assertIsNone(to_moon_unit("lat", "between 3.0 and 3.1"))
+        # LROC tables give east longitude from 0 to 360: the same place, stored from -180 to 180
+        self.assertAlmostEqual(to_moon_unit("lng", "316.6602"), -43.3398, places=6)
+        self.assertAlmostEqual(to_moon_unit("lng", "336.5820 E"), -23.418, places=6)
+        self.assertEqual(to_moon_unit("lng", "180.0"), 180.0)
         self.assertEqual(to_moon_unit("bulk_density", "1940 ± 10 kg m⁻³"), 1.94)
         self.assertEqual(to_moon_unit("cohesion", "0.17 kN/m2"), 0.17)
         self.assertIsNone(to_moon_unit("friction_angle", "between 30° and 40°"))

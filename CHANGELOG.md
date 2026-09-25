@@ -5,6 +5,33 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.24 — 2026-09-25 (staging)
+
+Ready for users: the Moon's 19 sites back with papers behind them, the Gasteiner checks applied and credited, and the page cleared of review wording.
+
+**Moon**
+- The tracing run found the paper or agency record behind the values that had come from wikis and web pages: all 19 sites are on the map again, with 180 values cited to 44 documents (Davies & Colvin 2000 for the Apollo landers, LROC and Wagner et al. 2017, Chang'e and Chandrayaan-3 papers, the Surveyor mission reports).
+- Surveyor 1 and 3 longitudes are stored from −180 to 180 (the LROC table gives 0 to 360 °E); the Chang'e 6 date is given in UTC like the others (the paper states Beijing time).
+- Descriptions keep only confirmed claims: Surveyor 1 no longer "conducted surface mechanics experiments", which its mission report contradicts.
+- Friction and cohesion columns appear only when a site has a value (none does yet).
+
+**Simulants** (the values Gasteiner et al. list, read in the papers they name)
+- EAC-1A's bulk density is 1.45 g/cm³, as its paper states; the 1.95 was a compacted test specimen.
+- PolyU-1 gains its angle of repose (38.9°) and density range (1.22–1.83 g/cm³).
+- Nine values the papers do not state were cleared (none was shown): a density that belongs to TLS-01, OPRH2N's values under OPRH3N, midpoints and ends of ranges. Five stay hidden where the paper could not be opened.
+
+**Credits**
+- The Lunar Regolith Database (Gasteiner, Murdoch & D'Angelo 2026, Recherche Data Gouv, version of 27 August 2026, Licence Ouverte 2.0) is credited as its licence asks: in Help → Sources and credits, under each simulant's About, in every CSV export, in data.json and in CREDITS.md.
+
+**For users**
+- Only references confirmed to name the simulant are listed (27 unchecked ones are no longer shown; no value cited them).
+- The References column reads "7 sources · View"; the Moon table likewise.
+- Review wording is gone: "named in N documents", "confirmed by a reader", "verified against source", "flagged for a second human check", internal IDs. A simulant without a composition shows one short note and no lunar comparison.
+- References show authors and year, and a View link, or Find it (Google Scholar) when no link is known.
+- The globe turns by default (not with reduced motion) and pauses while a simulant or site is open.
+- The About list is two columns again; a pane opens at the top for each new simulant.
+- A page left open across a new release reloads itself instead of failing to open a view.
+
 ## v2.9.23 — 2026-09-25 (staging)
 
 Fixes from the second design review (documentation/ui-ux-review-2-2026-09-26.md).

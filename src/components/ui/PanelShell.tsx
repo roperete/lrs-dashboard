@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { X, Search, Download, ArrowRightLeft } from 'lucide-react';
 import { motion, useDragControls } from 'motion/react';
 import { clsx } from 'clsx';
@@ -30,16 +30,20 @@ interface PanelShellProps {
   onCompare?: () => void;
   compareActive?: boolean;
   accentColor?: string;
-  /** One line under the subtitle, e.g. how many documents name this simulant. */
+  /** One line under the subtitle. */
   headerNote?: React.ReactNode;
+  /** Changes when the pane shows another simulant or site: it then starts at the top. */
+  scrollKey?: string;
   children: React.ReactNode;
 }
 
 export function PanelShell({
   title, subtitle, onClose, onSearchSources, onDownload,
-  onCompare, compareActive, accentColor = 'text-emerald-400', headerNote, children,
+  onCompare, compareActive, accentColor = 'text-emerald-400', headerNote, scrollKey, children,
 }: PanelShellProps) {
   const side = useIsSideSheet();
+  const scroller = useRef<HTMLDivElement>(null);
+  useEffect(() => { if (scroller.current) scroller.current.scrollTop = 0; }, [scrollKey]);
   const drag = useDragControls();
   const hidden = side ? { x: '100%', y: 0 } : { x: 0, y: '100%' };
   return (
@@ -50,7 +54,7 @@ export function PanelShell({
       className="fixed right-0 bottom-0 h-[70vh] w-full sm:top-14 sm:bottom-0 sm:h-auto sm:w-[450px] bg-slate-900/95 backdrop-blur-xl border-l border-t sm:border-t-0 border-slate-800 z-[1000] shadow-2xl rounded-t-2xl sm:rounded-none"
     >
       <DragGrip direction={side ? 'right' : 'down'} controls={drag} onClose={onClose} />
-      <div className="h-full overflow-y-auto overflow-x-hidden p-6">
+      <div ref={scroller} className="h-full overflow-y-auto overflow-x-hidden p-6">
         <div className="flex justify-between items-start mb-6">
           <div className="flex-1 min-w-0">
             <h2 className={cn("text-2xl font-bold tracking-tight truncate", accentColor)}>{title}</h2>

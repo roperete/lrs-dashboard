@@ -41,6 +41,11 @@ class WikiIsNotASource(unittest.TestCase):
                          [{"reference_id": "R2"}, {"reference_id": None}])
 
 
+    def test_only_references_confirmed_to_name_the_simulant_are_listed(self):
+        refs = [{"reference_id": "R1", "names_simulant": 1}, {"reference_id": "R2", "names_simulant": None},
+                {"reference_id": "R3", "names_simulant": 0}]
+        self.assertEqual([r["reference_id"] for r in shown_references(refs)], ["R1"])
+
     def test_wiki_links_are_taken_out_of_a_link_list_and_nothing_else_changes(self):
         self.assertEqual(strip_wiki_links("https://en.wikipedia.org/wiki/Kiruna_mine; https://www.mindat.org/loc-1"), "https://www.mindat.org/loc-1")
         self.assertIsNone(strip_wiki_links("https://en.wikipedia.org/wiki/Tellnes_mine"))

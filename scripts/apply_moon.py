@@ -70,7 +70,9 @@ def to_moon_unit(field: str, raw: str) -> float | None:
         if not m:
             return None
         v = float(m.group(1))
-        return -abs(v) if (m.group(2) or "").upper() in ("S", "W") else v
+        v = -abs(v) if (m.group(2) or "").upper() in ("S", "W") else v
+        # east longitude from 0 to 360 (LROC tables) is the same place as -180 to 180
+        return round(v - 360, 6) if field == "lng" and 180 < v <= 360 else v
     head = re.split(r"[(;,]", text, maxsplit=1)[0].strip()
     m = re.match(r"^\s*[~≈]?\s*(-?\d+(?:\.\d+)?)(?:\s*±\s*\d+(?:\.\d+)?)?\s*(.*)$", head)
     if not m:
@@ -116,7 +118,9 @@ def apply_entity(con: sqlite3.Connection, reading: dict, check: dict, checked_on
         note(field=None, outcome="skipped: no site or sample with this id")
         return log
 
-    ref_ok = {c["temp_id"] for c in check.get("reference_checks", []) if c.get("verdict") == "CONFIRMED"}
+    # confirmed, and not marked by the checker as outside the source line (kind_ok false)
+    ref_ok = {c["temp_id"] for c in check.get("reference_checks", [])
+              if c.get("verdict") == "CONFIRMED" and c.get("kind_ok") is not False}
     docs: dict[str, str] = {}
     for r in reading.get("references", []):
         if r["temp_id"] not in ref_ok:

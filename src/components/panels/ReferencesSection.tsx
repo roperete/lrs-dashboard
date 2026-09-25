@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BookOpen, ExternalLink, Search, CircleCheck, TriangleAlert, Sparkles } from 'lucide-react';
-import { Tooltip } from '../ui/Tooltip';
+import { BookOpen, ExternalLink, Search, Sparkles } from 'lucide-react';
 import { orderReferences } from '../../utils/references';
 import type { Reference } from '../../types';
 
@@ -51,50 +50,24 @@ function typesOf(reference: Reference): string[] {
   const types = (reference.reference_type || 'general')
     .split(',')
     .map(t => t.trim().toLowerCase())
-    .filter(Boolean);
-  return types.length > 0 ? types : ['general'];
+    .filter(Boolean)
+    .filter(t => t !== 'general');   // "general" tells a reader nothing
+  return types;
 }
 
 function badgeFor(type: string): { label: string; className: string } {
   return TYPE_BADGES[type] ?? { label: type, className: TYPE_BADGES.general.className };
 }
 
-/** Whether a reader confirmed the document names this exact simulant. An unchecked
- *  reference (names_simulant null) shows no mark either way. */
-function NamesMark({ reference }: { reference: Reference }) {
-  if (reference.names_simulant === 1) {
-    return (
-      <Tooltip
-        text={reference.mention_quote ? `"${reference.mention_quote}"` : 'A reader confirmed this document names the simulant'}
-        align="left"
-      >
-        <span className="inline-flex items-center gap-1 text-[10px] text-emerald-400">
-          <CircleCheck size={11} aria-hidden />
-          names this simulant
-        </span>
-      </Tooltip>
-    );
-  }
-  if (reference.names_simulant === 0) {
-    return (
-      <Tooltip
-        text="A reader checked this document and did not find this simulant named in it. It stays listed for the owner's decision."
-        align="left"
-      >
-        <span className="inline-flex items-center gap-1 text-[10px] text-amber-400">
-          <TriangleAlert size={11} aria-hidden />
-          does not name this simulant
-        </span>
-      </Tooltip>
-    );
-  }
-  return null;
-}
-
 function ReferenceCard({ reference, n }: { reference: Reference; n: number }) {
   // Normalize: new-schema refs have title/authors/year instead of reference_text
-  const refText = reference.reference_text
-    || [reference.authors, `(${reference.year})`, `"${reference.title}"`, reference.doi ? `https://doi.org/${reference.doi}` : ''].filter(Boolean).join(', ');
+  // The stored citation is often the title alone; then authors and year come first, as a
+  // reader expects a reference to read.
+  const titleOnly = !!reference.title && (!reference.reference_text || reference.reference_text.trim() === reference.title.trim());
+  const composed = reference.authors
+    ? [reference.authors, reference.year ? `(${reference.year}).` : '', reference.title].filter(Boolean).join(' ')
+    : [reference.title, reference.year ? `(${reference.year})` : ''].filter(Boolean).join(' ');
+  const refText = titleOnly ? composed : reference.reference_text || composed;
   const { url, cleanText } = extractUrl(refText);
   // the stored DOI field first; the citation text only when there is none
   const doi = reference.doi ? `https://doi.org/${reference.doi.trim()}` : extractDoi(refText);
@@ -111,11 +84,18 @@ function ReferenceCard({ reference, n }: { reference: Reference; n: number }) {
       <div className="flex-1 min-w-0">
         <p className="text-sm text-slate-300 leading-relaxed">{cleanText}</p>
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2">
-          {linkUrl && (
+          {linkUrl ? (
             <a href={linkUrl} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-xs text-emerald-400 hover:text-emerald-300 transition-colors">
               <ExternalLink size={11} />
-              {doi && !url ? 'DOI' : 'Source'}
+              {doi && !url ? 'View (DOI)' : 'View'}
+            </a>
+          ) : (reference.title || cleanText) && (
+            <a href={`https://scholar.google.com/scholar?q=${encodeURIComponent('"' + (reference.title || cleanText).slice(0, 200) + '"')}`}
+              target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-xs text-emerald-400 hover:text-emerald-300 transition-colors">
+              <Search size={11} />
+              Find it
             </a>
           )}
           {typesOf(reference).map(type => {
@@ -126,10 +106,6 @@ function ReferenceCard({ reference, n }: { reference: Reference; n: number }) {
               </span>
             );
           })}
-          <NamesMark reference={reference} />
-          {reference.checked_on && (
-            <span className="text-[10px] text-slate-500">checked {reference.checked_on}</span>
-          )}
         </div>
       </div>
     </div>
@@ -142,7 +118,6 @@ export function ReferencesSection({ references, simulantName }: ReferencesSectio
   // Every reference is listed, whatever its type, numbered in reference_id order: the
   // same order utils/references.ts uses for the superscripts on values above.
   const ordered = orderReferences(references);
-  const named = references.filter(r => r.names_simulant === 1).length;
   // The first five, then "Show all"; a citation mark pointing further down expands the list.
   const [showAll, setShowAll] = useState(false);
   useEffect(() => {
@@ -166,7 +141,7 @@ export function ReferencesSection({ references, simulantName }: ReferencesSectio
       {ordered.length > 0 && (
         <div>
           <p className="text-[10px] text-slate-400 mb-2">
-            Numbers match the superscripts on values above. {named} of {ordered.length} confirmed to name {simulantName || 'this simulant'}.
+            The numbers match the [n] marks on the values above.
           </p>
           <ol className="space-y-2 list-none p-0 m-0">
             {shown.map((r, i) => (

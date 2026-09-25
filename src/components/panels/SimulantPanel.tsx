@@ -1,7 +1,6 @@
 import React, { useMemo, useEffect } from 'react';
-import { ArrowRightLeft, Moon, FileCheck } from 'lucide-react';
+import { ArrowRightLeft, Moon } from 'lucide-react';
 import { PanelShell } from '../ui/PanelShell';
-import { Tooltip } from '../ui/Tooltip';
 import { SimulantProperties } from './SimulantProperties';
 import { PhysicalPropertiesSection } from './PhysicalPropertiesSection';
 import { FigureOfMeritSection } from './FigureOfMeritSection';
@@ -9,7 +8,7 @@ import { PurchaseSection } from './PurchaseSection';
 import { MineralChart } from './MineralChart';
 import { ChemicalChart } from './ChemicalChart';
 import { ReferencesSection } from './ReferencesSection';
-import { DataSourceLine } from './CompositionStatus';
+import { DataSourceLine, CompositionStatusNotice, statusOf } from './CompositionStatus';
 import { downloadSimulantCSV } from '../../utils/csv';
 import { referenceNumbers, referenceHoverLabel } from '../../utils/references';
 import { LunarSourceList } from '../ui/LunarRefs';
@@ -54,6 +53,8 @@ export function SimulantPanel({
   const lunarCites = lunarRef && lunarCitationsFor ? lunarCitationsFor(lunarRef.sample_id) : EMPTY_CITATIONS;
   // App passes only samples with shown values (utils/lunarRef hasLunarValues)
   const missionsWithChem = lunarReferences;
+  const hasComposition = compositions.length > 0 || mineralGroups.length > 0
+    || chemicalCompositions.some(c => c.component_type === 'oxide' && c.component_name !== 'sum');
 
   useEffect(() => {
     if (!focusSection) return;
@@ -65,27 +66,11 @@ export function SimulantPanel({
   // Reference numbers are derived here from the reference list, never stored.
   const refNumbers = useMemo(() => referenceNumbers(references), [references]);
   const refLabel = (referenceId: string) => referenceHoverLabel(references.find(r => r.reference_id === referenceId));
-  // Existence line: how many documents on file a reader confirmed to name this simulant.
-  const namedIn = references.filter(r => r.names_simulant === 1).length;
-  const existenceNote = (
-    <Tooltip
-      text={namedIn === 0
-        ? 'No document on file has been confirmed by a reader to name this exact simulant. Its references may still be awaiting verification.'
-        : `${namedIn} of ${references.length} reference${references.length === 1 ? '' : 's'} on file ${namedIn === 1 ? 'was' : 'were'} confirmed by a reader to name this exact simulant.`}
-      align="left"
-    >
-      <span className={`inline-flex items-center gap-1.5 text-xs mt-1 border-b border-dotted ${namedIn === 0 ? 'text-amber-400 border-amber-400/40' : 'text-slate-400 border-slate-600'}`}>
-        <FileCheck size={12} aria-hidden />
-        named in {namedIn} document{namedIn === 1 ? '' : 's'}
-      </span>
-    </Tooltip>
-  );
-
   return (
     <PanelShell
       title={simulant.name}
       subtitle={simulant.type || extra?.classification || undefined}
-      headerNote={existenceNote}
+      scrollKey={simulant.simulant_id}
       accentColor={simulant.type?.toLowerCase().includes('highland') ? 'text-cyan-400' : 'text-emerald-400'}
       onClose={onClose}
       onDownload={() => downloadSimulantCSV(simulant, { compositions, chemicalCompositions, references, propertySources: propertySources ? [...propertySources.values()] : [], figuresOfMerit })}
@@ -121,8 +106,8 @@ export function SimulantPanel({
         )}
 
         <section id="pane-composition" className="scroll-mt-14 space-y-6">
-          {/* Lunar reference selector */}
-          {missionsWithChem.length > 0 && (
+          {/* Lunar reference selector: only when there is a composition to set against it */}
+          {hasComposition && missionsWithChem.length > 0 && (
             <div className="bg-amber-500/5 border border-amber-500/20 rounded-xl p-3 space-y-2">
               <div className="flex items-center gap-2">
                 <Moon size={14} className="text-amber-400" />
@@ -156,7 +141,10 @@ export function SimulantPanel({
             </div>
           )}
   
-            <DataSourceLine simulant={simulant} />
+          <DataSourceLine simulant={simulant} />
+          {!hasComposition ? (
+            <CompositionStatusNotice status={statusOf(simulant)} kind="composition" />
+          ) : (<>
           <MineralChart
             compositions={compositions}
             mineralGroups={mineralGroups}
@@ -174,6 +162,7 @@ export function SimulantPanel({
             simulant={simulant}
             references={references}
           />
+          </>)}
         </section>
 
         {figuresOfMerit.length > 0 && (

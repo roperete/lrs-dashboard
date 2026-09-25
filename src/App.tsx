@@ -57,8 +57,9 @@ export default function App() {
   // The Find pane is open by default where there is room for it (review #5).
   const [isSidebarOpen, setIsSidebarOpen] = useState(() => window.innerWidth >= 1280);
   const [helpOpen, setHelpOpen] = useState(false);
-  // Rotation makes thin points hard to click and ignores reduced-motion settings (review #15): off.
-  const [isRotating, setIsRotating] = useState(false);
+  // The globe turns by default (owner, 2026-09-25), unless the system asks for reduced motion;
+  // it pauses while a simulant or site is open, so the point just clicked stays in view.
+  const [isRotating, setIsRotating] = useState(() => !window.matchMedia?.('(prefers-reduced-motion: reduce)').matches);
   const isMobile = useIsMobile();
 
   // The branded loading screen stays up until the first view is drawn (the globe's texture
@@ -345,7 +346,7 @@ export default function App() {
                   setClusterPopover({ x: event.clientX, y: event.clientY, simulants: cluster.simulants });
                 }}
                 onAltitudeChange={handleAltitudeChange}
-                autoRotate={isRotating}
+                autoRotate={isRotating && !paneOpen}
                 onReady={markViewDrawn}
               />
             ) : (

@@ -44,7 +44,7 @@ export function LunarSitePanel({ site, citations = EMPTY_CITATIONS, replicas = [
   const geo = site.geotechnical || {};
   const hasGeo = Object.values(geo).some(v => v != null);
   return (
-    <PanelShell title={site.name} subtitle={site.mission} onClose={onClose} accentColor="text-amber-400">
+    <PanelShell title={site.name} subtitle={site.mission} onClose={onClose} accentColor="text-amber-400" scrollKey={site.id}>
       <div className="space-y-6">
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
@@ -118,7 +118,7 @@ export function LunarSitePanel({ site, citations = EMPTY_CITATIONS, replicas = [
         )}
         <LunarSourceList citations={citations} id="pane-sources" />
         <p className="text-[10px] text-slate-400">
-          Each value is cited to the document that states it. A value no document confirms is not shown.
+          Each value is cited to the document that states it.
         </p>
       </div>
     </PanelShell>

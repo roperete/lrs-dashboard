@@ -1,11 +1,11 @@
 {
   "generated": "2026-09-25",
   "rule": "A scalar on simulants is exported only when property_sources has a row for (simulant_id, field). These values remain in lrs.sqlite and are written as null in public/data/data.json.",
-  "count": 79,
+  "count": 69,
   "by_field": {
-    "bulk_density": 21,
-    "friction_angle": 18,
-    "cohesion": 13,
+    "bulk_density": 17,
+    "friction_angle": 15,
+    "cohesion": 10,
     "particle_size_distribution": 7,
     "particle_morphology": 5,
     "specific_gravity": 5,
@@ -19,21 +19,16 @@
     "S132": 5,
     "S051": 4,
     "S121": 4,
-    "S012": 3,
     "S028": 3,
-    "S038": 3,
     "S043": 3,
     "S064": 3,
     "S067": 3,
     "S075": 3,
-    "S120": 3,
     "S138": 3,
     "S013": 2,
     "S017": 2,
-    "S018": 2,
-    "S027": 2,
     "S032": 2,
-    "S058": 2,
+    "S038": 2,
     "S081": 2,
     "S082": 2,
     "S097": 2,
@@ -41,7 +36,9 @@
     "S003": 1,
     "S006": 1,
     "S008": 1,
+    "S018": 1,
     "S019": 1,
+    "S027": 1,
     "S037": 1,
     "S040": 1,
     "S041": 1,
@@ -51,7 +48,8 @@
     "S069": 1,
     "S089": 1,
     "S103": 1,
-    "S105": 1
+    "S105": 1,
+    "S120": 1
   },
   "suppressed": [
     {
@@ -71,24 +69,6 @@
       "name": "CHENOBI",
       "field": "particle_morphology",
       "value": "very high particle angularity"
-    },
-    {
-      "simulant_id": "S012",
-      "name": "CUG-1A",
-      "field": "bulk_density",
-      "value": "1.45"
-    },
-    {
-      "simulant_id": "S012",
-      "name": "CUG-1A",
-      "field": "cohesion",
-      "value": "5.0"
-    },
-    {
-      "simulant_id": "S012",
-      "name": "CUG-1A",
-      "field": "friction_angle",
-      "value": "21.0"
     },
     {
       "simulant_id": "S013",
@@ -117,24 +97,12 @@
     {
       "simulant_id": "S018",
       "name": "EAC-1A",
-      "field": "bulk_density",
-      "value": "1.95"
-    },
-    {
-      "simulant_id": "S018",
-      "name": "EAC-1A",
       "field": "particle_size_distribution",
       "value": "d50=181"
     },
     {
       "simulant_id": "S019",
       "name": "FJS-1",
-      "field": "bulk_density",
-      "value": "1.065"
-    },
-    {
-      "simulant_id": "S027",
-      "name": "JSC-1",
       "field": "bulk_density",
       "value": "1.065"
     },
@@ -179,12 +147,6 @@
       "name": "LMS-1",
       "field": "specific_gravity",
       "value": 3.0
-    },
-    {
-      "simulant_id": "S038",
-      "name": "LSS-ISAC-1",
-      "field": "bulk_density",
-      "value": "1.065"
     },
     {
       "simulant_id": "S038",
@@ -269,18 +231,6 @@
       "name": "OB-1A",
       "field": "bulk_density",
       "value": "1.57"
-    },
-    {
-      "simulant_id": "S058",
-      "name": "OPRH3N",
-      "field": "cohesion",
-      "value": "12.0"
-    },
-    {
-      "simulant_id": "S058",
-      "name": "OPRH3N",
-      "field": "friction_angle",
-      "value": "36.0"
     },
     {
       "simulant_id": "S064",
@@ -395,18 +345,6 @@
       "name": "CSM-LMT-1",
       "field": "bulk_density",
       "value": "1.63"
-    },
-    {
-      "simulant_id": "S120",
-      "name": "PolyU-1",
-      "field": "cohesion",
-      "value": "6.75"
-    },
-    {
-      "simulant_id": "S120",
-      "name": "PolyU-1",
-      "field": "friction_angle",
-      "value": "38.0"
     },
     {
       "simulant_id": "S120",
@@ -530,18 +468,8 @@
     }
   ],
   "moon_rule": "A value of a lunar site or reference sample is exported only when lunar_sources has a row for (entity_id, field); a site without both coordinates sourced is left off the map.",
-  "moon_count": 160,
+  "moon_count": 129,
   "moon_suppressed": [
-    {
-      "entity_id": "A11",
-      "field": "lat",
-      "value": 0.67408
-    },
-    {
-      "entity_id": "A11",
-      "field": "lng",
-      "value": 23.47297
-    },
     {
       "entity_id": "A11",
       "field": "samples_returned",
@@ -569,21 +497,6 @@
     },
     {
       "entity_id": "A12",
-      "field": "lat",
-      "value": -3.01239
-    },
-    {
-      "entity_id": "A12",
-      "field": "lng",
-      "value": -23.42157
-    },
-    {
-      "entity_id": "A12",
-      "field": "samples_returned",
-      "value": "34.3 kg"
-    },
-    {
-      "entity_id": "A12",
       "field": "bulk_density",
       "value": 1.65
     },
@@ -601,21 +514,6 @@
       "entity_id": "A12",
       "field": "bearing_capacity",
       "value": 8.5
-    },
-    {
-      "entity_id": "A14",
-      "field": "lat",
-      "value": -3.6453
-    },
-    {
-      "entity_id": "A14",
-      "field": "lng",
-      "value": -17.47136
-    },
-    {
-      "entity_id": "A14",
-      "field": "samples_returned",
-      "value": "42.3 kg"
     },
     {
       "entity_id": "A14",
@@ -679,88 +577,8 @@
     },
     {
       "entity_id": "CE3",
-      "field": "date",
-      "value": "December 14, 2013"
-    },
-    {
-      "entity_id": "CE3",
-      "field": "lat",
-      "value": 44.1214
-    },
-    {
-      "entity_id": "CE3",
-      "field": "lng",
-      "value": -19.5116
-    },
-    {
-      "entity_id": "CE3",
-      "field": "description",
-      "value": "First Chinese lunar lander. Deployed Yutu rover on the Mare Imbrium."
-    },
-    {
-      "entity_id": "CE3",
       "field": "bulk_density",
       "value": 1.63
-    },
-    {
-      "entity_id": "CE4",
-      "field": "date",
-      "value": "January 3, 2019"
-    },
-    {
-      "entity_id": "CE4",
-      "field": "lat",
-      "value": -45.4446
-    },
-    {
-      "entity_id": "CE4",
-      "field": "lng",
-      "value": 177.5991
-    },
-    {
-      "entity_id": "CE4",
-      "field": "description",
-      "value": "First landing on the lunar far side. Deployed Yutu-2 rover in the South Pole-Aitken basin."
-    },
-    {
-      "entity_id": "CE5",
-      "field": "date",
-      "value": "December 1, 2020"
-    },
-    {
-      "entity_id": "CE5",
-      "field": "samples_returned",
-      "value": "1.73 kg"
-    },
-    {
-      "entity_id": "CE5",
-      "field": "description",
-      "value": "First Chinese sample return mission. Collected young volcanic rocks."
-    },
-    {
-      "entity_id": "CE6",
-      "field": "date",
-      "value": "1 June 2024, 22:23:16 UTC"
-    },
-    {
-      "entity_id": "CE6",
-      "field": "lat",
-      "value": -41.6385
-    },
-    {
-      "entity_id": "CE6",
-      "field": "lng",
-      "value": -153.9852
-    },
-    {
-      "entity_id": "CH3",
-      "field": "date",
-      "value": "August 23, 2023"
-    },
-    {
-      "entity_id": "CH3",
-      "field": "description",
-      "value": "First Indian lunar landing. Pragyan rover explored near the south pole."
     },
     {
       "entity_id": "L13",
@@ -854,21 +672,6 @@
     },
     {
       "entity_id": "S1",
-      "field": "lat",
-      "value": -2.474
-    },
-    {
-      "entity_id": "S1",
-      "field": "lng",
-      "value": -43.339
-    },
-    {
-      "entity_id": "S1",
-      "field": "description",
-      "value": "First US soft landing on the Moon. Conducted surface mechanics experiments."
-    },
-    {
-      "entity_id": "S1",
       "field": "friction_angle",
       "value": 41.7
     },
@@ -876,26 +679,6 @@
       "entity_id": "S1",
       "field": "cohesion",
       "value": 4.52
-    },
-    {
-      "entity_id": "S3",
-      "field": "date",
-      "value": "April 20, 1967"
-    },
-    {
-      "entity_id": "S3",
-      "field": "lat",
-      "value": -3.01612
-    },
-    {
-      "entity_id": "S3",
-      "field": "lng",
-      "value": -23.41791
-    },
-    {
-      "entity_id": "S3",
-      "field": "description",
-      "value": "Equipped with soil mechanics surface sampler. Later visited by Apollo 12."
     },
     {
       "entity_id": "S3",

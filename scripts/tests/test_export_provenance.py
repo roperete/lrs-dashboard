@@ -151,9 +151,10 @@ class GrainSizeGateTests(unittest.TestCase):
 
 
 class NotAboutItTests(unittest.TestCase):
-    """A reference a reader confirmed does not name the product is not shown in its list."""
+    """Only a reference a reader confirmed names the product is shown in its list (owner,
+    2026-09-25: unchecked references are not shown either)."""
 
-    def test_only_references_not_confirmed_absent_are_exported(self):
+    def test_only_confirmed_references_are_exported(self):
         import export_json
         refs = [{"reference_id": "R1", "names_simulant": 1}, {"reference_id": "R2", "names_simulant": 0}, {"reference_id": "R3", "names_simulant": None}]
-        self.assertEqual([r["reference_id"] for r in export_json.shown_references(refs)], ["R1", "R3"])
+        self.assertEqual([r["reference_id"] for r in export_json.shown_references(refs)], ["R1"])

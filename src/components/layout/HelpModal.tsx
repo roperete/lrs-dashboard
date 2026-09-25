@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
 import { APP_VERSION } from '../../version';
+import { Credits } from '../brand/Credits';
+import { GASTEINER, MAP_CREDITS } from '../../credits';
 
 /** Quick guide and About, opened from the top bar. */
 export function HelpModal({ onClose }: { onClose: () => void }) {
@@ -35,16 +37,28 @@ export function HelpModal({ onClose }: { onClose: () => void }) {
           {section('Compare', <>Tick simulants in the table or the list, or use <b>Add to compare</b> in a pane. They collect in the tray at the bottom; compare two to four at once. <b>Compare with a lunar sample</b> in the pane sets a simulant against an Apollo or Chang'e sample.</>)}
           {section('Export', <>The <b>Export</b> button in the top bar downloads the current simulant, the filtered set or the whole database as CSV.</>)}
           {section('Map controls', <>The toolbar on the right: full screen, day or night (globe), reset the view, auto-rotate (globe), zoom, and <b>Go to</b> a place on the map.</>)}
+          <div id="help-credits" className="pt-3 border-t border-slate-800 space-y-2">
+            <h4 className="text-emerald-400 font-semibold">Sources and credits</h4>
+            <p>Every value is cited to the paper, data sheet or mission record that states it: the mark next to the value names the document, the page and the quoted sentence.</p>
+            <dl className="text-xs text-slate-400 space-y-1.5">
+              <div><dt className="text-slate-300 font-medium">Reused data</dt>
+                <dd>{GASTEINER.dataset}{' '}<a href={GASTEINER.datasetUrl} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 underline-offset-2 break-words">{GASTEINER.datasetUrl.replace('https://', '')}</a></dd></div>
+              <div><dt className="text-slate-300 font-medium">Licence</dt>
+                <dd><a href={GASTEINER.licenceUrl} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 underline-offset-2 break-words">{GASTEINER.licence}</a></dd></div>
+              <div><dt className="text-slate-300 font-medium">How it is used</dt>
+                <dd>{GASTEINER.use}</dd></div>
+              <div><dt className="text-slate-300 font-medium">Described in</dt>
+                <dd>{GASTEINER.paper}{' '}<a href={GASTEINER.paperUrl} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 underline-offset-2 break-words">{GASTEINER.paperUrl.replace('https://', '')}</a></dd></div>
+            </dl>
+            <ul className="text-xs text-slate-400 space-y-0.5">
+              {MAP_CREDITS.map(c => (
+                <li key={c.what}>{c.what}: <a href={c.url} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 underline-offset-2 break-words">{c.who}</a></li>
+              ))}
+            </ul>
+          </div>
           <div className="pt-3 border-t border-slate-800 space-y-3">
             <p className="text-slate-400">An initiative of <b className="text-slate-300">The Spring Institute for Forests on the Moon</b>, sponsored by <b className="text-slate-300">CNES</b>. {APP_VERSION}.</p>
-            <div className="flex items-center gap-6">
-              <a href="https://cnes.fr" target="_blank" rel="noopener noreferrer" aria-label="CNES">
-                <img src={import.meta.env.BASE_URL + 'assets/cnes-logo.png'} alt="CNES" className="h-10 w-auto object-contain" />
-              </a>
-              <a href="https://thespringinstitute.com" target="_blank" rel="noopener noreferrer" aria-label="The Spring Institute">
-                <img src={import.meta.env.BASE_URL + 'assets/spring-logo.png'} alt="The Spring Institute" className="h-10 w-auto object-contain" />
-              </a>
-            </div>
+            <Credits variant="pane" />
           </div>
         </div>
       </div>
