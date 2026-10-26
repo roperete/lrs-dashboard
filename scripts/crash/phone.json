@@ -1,20 +1,73 @@
 [
  {
   "viewport": [
+   360,
+   780,
+   true
+  ]
+ },
+ {
+  "eval": "(setTimeout(() => location.reload(), 300), 1)",
+  "why": "load at phone width, as a phone would"
+ },
+ {
+  "wait": 6000
+ },
+ {
+  "expect": "(() => { const r = [...document.querySelectorAll('header button, header a, header div.shrink-0')].map(e => e.getBoundingClientRect()).filter(b => b.width > 0); return r.every(b => b.left >= 0 && b.right <= innerWidth) && !r.some((a, i) => r.some((b, j) => j > i && a.left < b.right - 1 && b.left < a.right - 1)); })()",
+  "why": "on a 360 px phone every top-bar button fits and none covers another"
+ },
+ {
+  "expect": "[...document.querySelectorAll('button[aria-expanded]')].find(b => b.textContent.trim() === 'Map Legend')?.getAttribute('aria-expanded') === 'false'",
+  "why": "on a phone the legend starts closed"
+ },
+ {
+  "click": "Map Legend"
+ },
+ {
+  "expect": "[...document.querySelectorAll('button[aria-expanded]')].find(b => b.textContent.trim() === 'Map Legend')?.getAttribute('aria-expanded') === 'true' && document.body.innerText.includes('Highlands Simulant')",
+  "why": "tapping the legend opens it"
+ },
+ {
+  "expect": "!document.querySelector('[aria-label=\"Zoom In\"]')?.offsetParent && !document.querySelector('[aria-label=Fullscreen]')?.offsetParent",
+  "why": "no zoom or fullscreen buttons on a phone"
+ },
+ {
+  "clickSel": "button[aria-label='Open the Find pane']",
+  "after": 800
+ },
+ {
+  "expect": "!document.querySelector('[aria-label=\"Reset View\"]')?.offsetParent && ![...document.querySelectorAll('button')].some(b => b.textContent.trim() === 'Map Legend' && b.offsetParent)",
+  "why": "the open Find pane hides the map buttons and the legend"
+ },
+ {
+  "clickSel": "button[aria-label='Close the Find pane']",
+  "after": 600
+ },
+ {
+  "viewport": [
    390,
    844,
    true
   ]
  },
  {
+  "expect": "(() => { const r = [...document.querySelectorAll('header button, header a, header div.shrink-0')].map(e => e.getBoundingClientRect()).filter(b => b.width > 0); return r.every(b => b.left >= 0 && b.right <= innerWidth) && !r.some((a, i) => r.some((b, j) => j > i && a.left < b.right - 1 && b.left < a.right - 1)); })()",
+  "why": "on a 390 px phone every top-bar button fits and none covers another"
+ },
+ {
   "click": "Table"
  },
  {
-  "wait": 800
+  "wait": 1000
  },
  {
-  "expect": "(() => { const spans = [...document.querySelectorAll('ul.sm\\\\:hidden li .font-mono')]; return spans.length > 0 && spans.every(s => s.querySelectorAll('sup').length === s.textContent.split(' \u00b7 ').length); })()",
-  "why": "on a phone every value in the list carries its reference number"
+  "expect": "(() => { const t = document.querySelector('table'); const c = t?.parentElement; if (!t?.offsetParent || c.scrollWidth <= c.clientWidth) return false; c.scrollLeft = 600; const box = document.querySelector('tbody td'), name = document.querySelector('tbody td:nth-child(2)'); return Math.round(box.getBoundingClientRect().right) === Math.round(name.getBoundingClientRect().left) && name.getBoundingClientRect().left - c.getBoundingClientRect().left < 60; })()",
+  "why": "a phone gets the whole table, scrolling sideways with the checkbox and Name columns held at the left edge, no gap between them"
+ },
+ {
+  "expect": "document.documentElement.scrollWidth <= innerWidth",
+  "why": "the page itself never scrolls sideways"
  },
  {
   "clickSel": "tbody tr[data-row] td:nth-child(2)",

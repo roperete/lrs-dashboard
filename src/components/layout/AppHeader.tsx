@@ -32,13 +32,13 @@ export function AppHeader({
   onToggleSidebar, onPlanetChange, onViewModeChange, onOpenHelp, exportSlot,
 }: AppHeaderProps) {
   const seg = (active: boolean, activeClass: string) => cn(
-    'flex items-center gap-1.5 px-3 h-9 rounded-lg text-sm font-medium transition-colors',
+    'flex items-center gap-1.5 px-2 sm:px-3 h-9 rounded-lg text-sm font-medium transition-colors',
     active ? activeClass : 'text-slate-300 hover:text-white hover:bg-slate-800',
   );
   return (
     <header className={cn('fixed top-0 inset-x-0 z-[1200] flex items-center gap-2 md:gap-3 px-2 md:px-4 bg-slate-950/95 backdrop-blur-md border-b border-slate-800', TOP_BAR_HEIGHT)}>
       <button onClick={onToggleSidebar} aria-label={sidebarOpen ? 'Close the Find pane' : 'Open the Find pane'} aria-pressed={sidebarOpen}
-        className={cn('relative flex items-center justify-center w-10 h-10 rounded-lg transition-colors',
+        className={cn('relative flex shrink-0 items-center justify-center w-10 h-10 rounded-lg transition-colors',
           sidebarOpen ? 'bg-slate-800 text-emerald-400' : 'text-slate-300 hover:text-white hover:bg-slate-800')}>
         <PanelLeft size={20} />
         {!sidebarOpen && filterCount > 0 && (
@@ -48,11 +48,12 @@ export function AppHeader({
         )}
       </button>
 
-      <div className="flex items-center gap-2 min-w-0">
+      {/* Below lg the switches need the room: the name would be cut to nothing and the logo covered.
+          The loading screen and the Find pane's footer carry the branding there. */}
+      <div className="hidden lg:flex items-center gap-2 min-w-0">
         <div className="p-1.5 bg-emerald-500 rounded-lg shrink-0"><Database size={18} className="text-slate-950" /></div>
         <h1 className="text-base font-bold tracking-tight text-white truncate">
-          <span className="hidden lg:inline">Lunar Regolith Simulant <span className="text-emerald-400">Database</span></span>
-          <span className="lg:hidden">LRS <span className="text-emerald-400">Database</span></span>
+          Lunar Regolith Simulant <span className="text-emerald-400">Database</span>
         </h1>
       </div>
 

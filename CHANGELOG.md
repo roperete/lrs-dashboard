@@ -5,6 +5,15 @@ the sidebar label and the section below it; `scripts/push_staging.sh` refuses to
 sidebar still shows the version already deployed. Data changes are logged per field under
 `documentation/`.
 
+## v2.9.26 — 2026-10-26 (staging)
+
+Phones: less on the screen, nothing overlapping.
+
+- The top bar fits a phone: the switches no longer cover the logo. Below laptop width the name and logo are left out of the bar; the loading screen and the Find pane's footer carry them.
+- The map legend can be closed. On phones it starts closed, as a "Map Legend" button.
+- On phones the map buttons are day/night, go to, home and rotate: no fullscreen (iPhones do not support it) and no zoom buttons (pinch zooms). The open Find pane hides the map buttons and the legend.
+- Phones get the whole table, scrolling sideways, with the checkbox and Name columns held at the left edge. It replaces the short list.
+
 ## v2.9.25 — 2026-09-25 (staging)
 
 The database is live. The public address, roperete.github.io/lrs-dashboard, serves the app instead of the maintenance page, with the same content as this staging release (v2.9.24). The page now has a description for search results and link previews.

@@ -123,37 +123,8 @@ export function SimulantTable({
 
   return (
     <div className="h-full overflow-auto scrollbar-thin relative">
-      {/* Phones: a list, not 16 columns scrolled sideways (review #23) */}
-      <ul className="sm:hidden divide-y divide-slate-800">
-        {sorted.map(s => {
-          const isSelected = s.simulant_id === selectedSimulantId;
-          // each value with its reference number; plain text here (the row is one button), and
-          // tapping the row opens the pane, where the marks show the document and the quote
-          const key = ([['ρ', 'bulk_density', 'g/cm³'], ['D50', 'particle_size_d50', 'µm'], ['φ', 'friction_angle', '°']] as const)
-            .filter(([, f]) => s[f] != null && s[f] !== '')
-            .map(([l, f, u]) => {
-              const src = propertySourcesBySimulant?.get(s.simulant_id)?.get(f);
-              const n = src ? refNumber?.(s.simulant_id, src.reference_id) : undefined;
-              return <React.Fragment key={f}>{l} {String(s[f])} {u}{n != null && <sup className="ml-0.5 text-[9px] text-amber-400/90">[{n}]</sup>}</React.Fragment>;
-            })
-            .reduce<React.ReactNode[]>((acc, el, i) => (i ? [...acc, ' · ', el] : [el]), []);
-          return (
-            <li key={s.simulant_id} className={cn("flex items-center gap-3 px-3 py-2.5", isSelected && "bg-emerald-950")}>
-              <input type="checkbox" checked={compare.has(s.simulant_id)} onChange={() => onToggleCompare(s.simulant_id)}
-                aria-label={`Add ${s.name} to the comparison`} className="accent-emerald-500 w-5 h-5" />
-              <button onClick={() => onSelectSimulant(s.simulant_id)} className="flex-1 min-w-0 text-left">
-                <span className={cn("block text-sm font-medium", isSelected ? "text-emerald-400" : "text-slate-200")}>{s.name}</span>
-                <span className="block text-xs text-slate-400 truncate">{[s.type, getCountryDisplay(s.country_code)].filter(Boolean).join(' · ') || DASH}</span>
-                {key.length > 0 && <span className="block text-xs text-slate-300 font-mono truncate">{key}</span>}
-              </button>
-              <span className="text-[11px] text-slate-400 whitespace-nowrap">
-                {chemicalBySimulant.has(s.simulant_id) ? 'Chem ' : ''}{compositionBySimulant.has(s.simulant_id) ? 'Min' : ''}
-              </span>
-            </li>
-          );
-        })}
-      </ul>
-      <table className="hidden sm:table w-full text-sm border-collapse">
+      {/* Phones get the whole table too, scrolled sideways (owner, 2026-10-26) */}
+      <table className="w-full text-sm border-collapse">
         <thead>
           <tr className="border-b border-slate-700/50">
             <th scope="col" className={cn(headBase, "left-0 z-30 w-10 px-2")}><span className="sr-only">Compare</span></th>
@@ -192,9 +163,12 @@ export function SimulantTable({
                 className={cn("cursor-pointer border-b border-slate-800/50 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-emerald-500",
                   rowBg, "hover:brightness-125")}>
                 <td className={cn("py-2 px-2 text-center", stickyBox, rowBg)}>
-                  <input type="checkbox" checked={inTray} aria-label={`Add ${s.name} to the comparison`}
-                    onChange={() => onToggleCompare(s.simulant_id)} onClick={(e) => e.stopPropagation()}
-                    className="accent-emerald-500 cursor-pointer" />
+                  {/* a fixed width: the Name column sticks at left-10, so this column must be exactly that wide */}
+                  <span className="inline-flex w-6 justify-center">
+                    <input type="checkbox" checked={inTray} aria-label={`Add ${s.name} to the comparison`}
+                      onChange={() => onToggleCompare(s.simulant_id)} onClick={(e) => e.stopPropagation()}
+                      className="accent-emerald-500 cursor-pointer" />
+                  </span>
                 </td>
                 <td className={cn("py-2 px-3 font-medium whitespace-nowrap", stickyName, rowBg, isSelected ? "text-emerald-400" : "text-slate-200")}>{s.name}</td>
                 <td className="py-2 px-3 text-slate-400 whitespace-nowrap">{s.type || DASH}</td>
