@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { cn } from '../../utils/cn';
 
 interface LegendWidgetProps {
   planet: 'earth' | 'moon';
@@ -6,13 +8,20 @@ interface LegendWidgetProps {
 }
 
 export function LegendWidget({ planet, sidebarOpen }: LegendWidgetProps) {
+  // Open where there is room for it; on phones it starts as a button (owner, 2026-10-26)
+  const [open, setOpen] = useState(() => window.innerWidth >= 640);
+  const title = planet === 'earth' ? 'Map Legend' : 'Lunar Missions';
   return (
-    <div className={`absolute bottom-6 z-[30] pointer-events-none transition-[left] duration-300 ${sidebarOpen ? 'left-[21rem]' : 'left-6'}`}>
-      <div className="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-4 rounded-xl pointer-events-auto">
-        <h4 className="text-xs font-semibold text-slate-300 mb-3">
-          {planet === 'earth' ? 'Map Legend' : 'Lunar Missions'}
-        </h4>
-        <div className="space-y-2">
+    // on phones the open Find pane covers the map, so the legend goes with it
+    <div className={cn('absolute bottom-6 z-[30] pointer-events-none transition-[left] duration-300',
+      sidebarOpen ? 'left-[21rem] max-sm:hidden' : 'left-4 sm:left-6')}>
+      <div className={cn('bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-xl pointer-events-auto', open ? 'p-4' : 'p-0')}>
+        <button type="button" onClick={() => setOpen(o => !o)} aria-expanded={open}
+          className={cn('flex w-full items-center justify-between gap-3 text-xs font-semibold text-slate-300 hover:text-white', open ? 'mb-3' : 'px-3 py-2')}>
+          {title}
+          {open ? <ChevronDown size={14} /> : <ChevronUp size={14} />}
+        </button>
+        {open && <div className="space-y-2">
           {planet === 'earth' ? (
             <>
               <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#d4915c] shadow-[0_0_8px_rgba(212,145,92,0.5)]" /><span className="text-xs text-slate-300">Mare Simulant</span></div>
@@ -28,7 +37,7 @@ export function LegendWidget({ planet, sidebarOpen }: LegendWidgetProps) {
               <div className="flex items-center gap-3"><div className="w-3 h-3 rounded-full bg-[#a855f7] shadow-[0_0_8px_#a855f7]" /><span className="text-xs text-slate-300">Other</span></div>
             </>
           )}
-        </div>
+        </div>}
       </div>
     </div>
   );

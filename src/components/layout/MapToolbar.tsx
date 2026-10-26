@@ -14,6 +14,8 @@ interface MapToolbarProps {
   onToggleRotate?: () => void;
   /** A pane is open on the right: the toolbar moves left of it. */
   paneOpen?: boolean;
+  /** The Find pane is open: on phones it covers the map, so the toolbar hides. */
+  sidebarOpen?: boolean;
   /** "Go to" a place (Earth): the query and its submit. */
   geocodingQuery?: string;
   onGeocodingQueryChange?: (q: string) => void;
@@ -23,7 +25,7 @@ interface MapToolbarProps {
 export function MapToolbar({
   planet, viewMode, earthTexture,
   onToggleEarthTexture, onZoomIn, onZoomOut, onHome,
-  isRotating, onToggleRotate, paneOpen, geocodingQuery = '', onGeocodingQueryChange, onGeocode,
+  isRotating, onToggleRotate, paneOpen, sidebarOpen, geocodingQuery = '', onGeocodingQueryChange, onGeocode,
 }: MapToolbarProps) {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [goToOpen, setGoToOpen] = useState(false);
@@ -48,10 +50,11 @@ export function MapToolbar({
 
   return (
     <div className={cn("absolute top-[4.5rem] z-[30] flex flex-col items-end gap-2 md:gap-4 transition-[right] duration-300",
-      paneOpen ? "right-2 sm:right-[466px]" : "right-2 md:right-6")}>
+      paneOpen ? "right-2 sm:right-[466px]" : "right-2 md:right-6", sidebarOpen && "max-sm:hidden")}>
       <div className="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-1.5 md:p-2 rounded-xl md:rounded-2xl flex flex-col gap-1.5 md:gap-2">
+        {/* Phones: no fullscreen (iPhones do not support it) and no zoom buttons (pinch does it) */}
         <button onClick={toggleFullscreen}
-          className={btnClass} title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'} aria-label={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}>
+          className={cn(btnClass, "max-sm:hidden")} title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'} aria-label={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}>
           {isFullscreen ? <Minimize className="w-4 h-4 md:w-5 md:h-5" /> : <Maximize className="w-4 h-4 md:w-5 md:h-5" />}
         </button>
         {planet === 'earth' && viewMode === 'globe' && onToggleEarthTexture && (
@@ -89,7 +92,7 @@ export function MapToolbar({
           </button>
         )}
       </div>
-      <div className="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-1.5 md:p-2 rounded-xl md:rounded-2xl flex flex-col gap-1.5 md:gap-2">
+      <div className="max-sm:hidden bg-slate-900/80 backdrop-blur-md border border-slate-800 p-1.5 md:p-2 rounded-xl md:rounded-2xl flex flex-col gap-1.5 md:gap-2">
         <button onClick={onZoomIn} className={btnClass} title="Zoom In" aria-label="Zoom In">
           <Plus className="w-4 h-4 md:w-5 md:h-5" />
         </button>

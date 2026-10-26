@@ -444,7 +444,7 @@ export default function App() {
       {/* Right toolbar (hidden in table mode) */}
       {mapState.viewMode !== 'table' && (
         <MapToolbar
-          planet={mapState.planet} viewMode={mapState.viewMode}
+          planet={mapState.planet} viewMode={mapState.viewMode} sidebarOpen={isSidebarOpen}
           earthTexture={earthTexture}
           onToggleEarthTexture={toggleEarthTexture}
           onZoomIn={() => {
